@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.02023v1",
+  "arxivId": "2610.02023",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.02023v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hyeonmin Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zheng Wei"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kyungmin Kwon"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jumin Seo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jiwon Park"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hayoung Oh"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.02023v1",
+  "originalTitle": "SPHERE: Adaptive VR Indoor Scene Generation via LLM-Enhanced Spatial Preference Learning and Human-in-the-Loop RL",
+  "pdfUrl": "https://arxiv.org/pdf/2610.02023v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

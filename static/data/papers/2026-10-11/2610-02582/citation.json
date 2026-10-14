@@ -1,0 +1,20 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.02582v1",
+  "arxivId": "2610.02582",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.02582v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Peyman Jahanbin"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.02582v1",
+  "originalTitle": "Acoustic gap placement in second-language read speech production",
+  "pdfUrl": "https://arxiv.org/pdf/2610.02582v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

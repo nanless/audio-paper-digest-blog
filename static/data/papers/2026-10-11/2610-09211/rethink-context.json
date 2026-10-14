@@ -1,0 +1,96 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.09211v1",
+  "abstract": "We present a recipe for adapting English-pretrained autoregressive TTS foundation models to underrepresented languages, demonstrated on Bangladeshi Bangla. Existing Bangla TTS corpora are small and single-speaker, and to our knowledge no open zero-shot voice-cloning system is available for the Bangladeshi register. We contribute a phonetically- and gender-balanced two-tier Bangladeshi Bangla corpus balanced via a tiered Jensen-Shannon divergence objective over conjunct clusters (juktakkhor), together with three fine-tuning changes: a merge-consistent tokenizer extension, Bangla text normalization, and a prompt-masked dual-loss objective. These changes preserve zero-shot cloning across the language switch. Our BanglaEval protocol applies Wilcoxon signed-rank tests with Bonferroni correction over native-speaker ratings. BanglaBox attains near-natural Naturalness, outperforms commercial and open-source baselines on Naturalness, Speaker Similarity, and Clarity, and reaches speaker similarity comparable to prior few-shot results while using approximately 7x less Bangla fine-tuning audio. We further validate the recipe beyond our own test split using a seven-category stress set of difficult real-world text, the public BnTTS evaluation benchmarks, and naturally occurring Bangla that no language model wrote. All artifacts, including the corpus, weights, code, and complete evaluation materials, are released publicly and unconditionally.",
+  "abstractSha256": "97595d05ed674d92ac1f9ccab8de409d1b1f238e7eb07521ea16d8da79d8214e",
+  "arxivId": "2610.09211",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.09211v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "SFT",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前50%",
+    "score": 6.7,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.sft",
+          "label": "SFT"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "task",
+          "id": "task.voice-cloning",
+          "label": "语音克隆"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.zero-shot",
+          "label": "零样本"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "SFT",
+      "primaryMethodId": "method.sft",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Emtiaz Uddin Ahmed"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Araf Mahmud"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sajib Hossain"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tarikul Islam Tamiti"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sajid Fardin Dipto"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Anomadarshi Barua"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文针对孟加拉语合成数据少且难以做零样本声音克隆的问题，用两层均衡语料加三步适配改造英语自回归语音基础模型，并用母语人评测证明自然度和克隆保真度的提升与适用边界。",
+  "originalTitle": "BanglaBox: A Phonetically-Balanced Corpus and Data-Efficient Foundation-Model Adaptation for Bangla Text-to-Speech with Zero-Shot Voice Cloning",
+  "pdfUrl": "https://arxiv.org/pdf/2610.09211v1.pdf",
+  "readerTitle": "BanglaBox：面向孟加拉语的语音均衡语料与基础模型适配",
+  "schemaVersion": 2
+}

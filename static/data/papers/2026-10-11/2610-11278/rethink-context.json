@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.11278v1",
+  "abstract": "An online speaker diarizer maintains a growing inventory of speakers, and applications read it directly: a live transcript enumerates them as they appear. Existing systems either fix the inventory's size in advance, so speakers beyond that size are merged, or grow it on distance alone, so noise and turn boundaries split speakers. Scored on speaker count over nine public datasets, both failures appear where DER reports neither: on VoxSRC-23 the fixed-capacity systems return 44-46% too few speakers and the unbounded tracker with the lowest DER 63% too many. We build on that embedding-based tracker and change only what triggers a registration. A candidate speaker pool keeps unregistered embeddings apart and registers a speaker only once one candidate has gathered enough mutually compatible embeddings; commit-gated label assignment holds an output while its candidate is undecided, so no speaker appears in the output before it is confirmed. Across the nine datasets the macro speaker-count error falls from 225% to 21% of the reference and macro DER from 17.59% to 15.95%, at a mean added latency of 0.109s over all outputs; on VoxSRC-23 the tracker obtains both the lowest DER and the most accurate speaker count of the systems compared.",
+  "abstractSha256": "cca5f6494628d04c0b64128b9609d8f3e3c5046f917c9c545990a73ec613eb2c",
+  "arxivId": "2610.11278",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.11278v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "说话人分离标注",
+    "rankBucket": "前50%",
+    "score": 6.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.diarization",
+          "label": "说话人分离标注"
+        },
+        {
+          "facet": "task",
+          "id": "task.speaker-counting",
+          "label": "说话人计数"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "说话人分离标注",
+      "primaryTaskId": "task.diarization",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Youngki Kwon"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hee-Soo Heo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Minjae Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bong-Jin Lee"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对在线日志人数偏多偏少都看不出来的问题，该文只改基线跟踪器何时注册新说话人，用候选池积累证据加确认后才输出，在九个数据集上把宏观人数误差从 225% 降到 21% 并降低宏观 DER，代价是全部输出平均多等 0.109 秒。",
+  "originalTitle": "Toward accurate speaker inventories for online speaker diarization",
+  "pdfUrl": "https://arxiv.org/pdf/2610.11278v1.pdf",
+  "readerTitle": "在线说话人日志如何数准人数：候选池与确认后输出",
+  "schemaVersion": 2
+}

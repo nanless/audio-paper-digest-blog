@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.11507v1",
+  "abstract": "Source-to-microphone distance enables speaker-independent speech extraction without prior enrollment. We propose a monaural continuous-radius regional speech extraction method that directly models the cumulative speech target within a queried radius. To realize continuous region control, the query radius is encoded as a continuous scalar and injected into a time-frequency extraction network, allowing a single model to operate over arbitrary radii within the trained range. Exploiting the nested structure of target-speaker sets across query radii, we introduce cross-radius consistency learning to stabilize predictions for adjacent radii sharing the same nonempty target-speaker set. Experiments on measured RIRs show that continuous-radius conditioning improves selective extraction over discrete conditioning. The proposed method achieves 29.25~dB SI-SDR, 4.40~dB SI-SDRi, 62.01~dB attenuation, and 0.46\\% RCE, outperforming fixed-threshold and local-range baselines. It also remains effective with more speakers and additive noise.",
+  "abstractSha256": "fc7a0a746de32f9c4a970523bf7174925893a2837a4c304c64289a3d6c7dc5ad",
+  "arxivId": "2610.11507",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.11507v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "正则化",
+    "primaryTask": "目标说话人提取",
+    "rankBucket": "前50%",
+    "score": 6.9,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.target-speaker",
+          "label": "目标说话人提取"
+        },
+        {
+          "facet": "method",
+          "id": "method.regularization",
+          "label": "正则化"
+        },
+        {
+          "facet": "method",
+          "id": "method.time-frequency",
+          "label": "时频分析"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.single-channel",
+          "label": "单通道"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "正则化",
+      "primaryMethodId": "method.regularization",
+      "primaryTask": "目标说话人提取",
+      "primaryTaskId": "task.target-speaker",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Biao Dong"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jie Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jianwei Fang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wei Xiao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jiqing Han"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yongjun He"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文把查询半径以内的说话人累加和作为直接目标，用连续半径调制和相邻半径一致性约束实现单模型连续区域提取，在实测混响上给出 29.25 dB 等结果，结论限定在两说话人训练和 0 到 4 米查询范围内。",
+  "originalTitle": "Monaural Continuous-Radius Regional Speech Extraction with Cross-Radius Consistency Learning",
+  "pdfUrl": "https://arxiv.org/pdf/2610.11507v1.pdf",
+  "readerTitle": "用一个可连续调节的半径从单通道混合中取出近处语音",
+  "schemaVersion": 2
+}

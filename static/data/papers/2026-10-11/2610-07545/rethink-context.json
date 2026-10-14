@@ -1,0 +1,71 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.07545v1",
+  "abstract": "We present a fully offline speech-to-speech translation pipeline that runs on a Jetson Nano (4 GB) and corrects its own weak translations without retraining. A Whisper-tiny ASR feeds an Opus-MT translator; multilingual BERT cosine similarity acts as a Quality Estimation (QE) gate, triggering a secondary-pass correction when confidence falls below a pre-defined threshold $τ$. We compare three correction methods: QE reranking (M1), Minimum Bayes-Risk decoding (M2), and constrained beam search (M3). On 1,012 FLORES-200 sentences (English-Spanish), M2 at $τ=0.90$ produces statistically significant improvements over greedy decoding on BLEU (+0.67, p<0.001), ChrF (+0.51, p<0.001), and COMET (+0.0020 at N=3, p=0.002); M1 yields no significant gains, and M3 is significantly worse than baseline (p>0.99). Our central finding is that QE functions effectively as a gate but poorly as a ranker: removing the QE model from candidate selection (M1$\\to$M2) does not hurt quality and frees 680 MB from the critical path. Using a gain-to-edit ratio adapted from the post-editing-effort literature, we further show that smaller candidate pools (N=3) yield more surgical corrections with better semantic adequacy, while larger pools (N=10) maximise lexical reward. We release the system and demonstrate live translation across six language pairs.",
+  "abstractSha256": "a8a0a2305a14bb7f4208b58683baa2f58c13c0ef6d357655439e4b56d5032a65",
+  "arxivId": "2610.07545",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.07545v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "模型集成",
+    "primaryTask": "语音翻译",
+    "rankBucket": "前50%",
+    "score": 5.9,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-translation",
+          "label": "语音翻译"
+        },
+        {
+          "facet": "method",
+          "id": "method.model-ensemble",
+          "label": "模型集成"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.on-device",
+          "label": "端侧运行"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "模型集成",
+      "primaryMethodId": "method.model-ensemble",
+      "primaryTask": "语音翻译",
+      "primaryTaskId": "task.speech-translation",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "School of CS and EE",
+        "University of Surrey",
+        "United Kingdom"
+      ],
+      "name": "Zubair Ajmal Farooq"
+    },
+    {
+      "affiliations": [
+        "Institute for People-Centred AI",
+        "University of Surrey",
+        "United Kingdom"
+      ],
+      "name": "Diptesh Kanojia"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "该论文在 4 GB Jetson Nano 上用 Whisper 加 Opus-MT 加多语言 BERT 门限加 MBR 二遍修正研究英西语音翻译，在 tau 为 0.90 时 N 为 10 带来 BLEU 加 0.67 的显著词汇提升而 N 为 3 带来 COMET 加 0.0020 的语义提升，代价是常驻约 3.6 GB 和数十秒级延迟。",
+  "originalTitle": "Quality-Aware Self-Correcting Speech Translation on an Edge Device",
+  "pdfUrl": "https://arxiv.org/pdf/2610.07545v1.pdf",
+  "readerTitle": "离线语音翻译如何在边缘设备上自己发现并修正弱翻译",
+  "schemaVersion": 2
+}

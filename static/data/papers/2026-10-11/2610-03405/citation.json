@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.03405v1",
+  "arxivId": "2610.03405",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.03405v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "David Braun"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Adam Finkelstein"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.03405v1",
+  "originalTitle": "PEACE: Joint Embeddings of DSP Effects Code and Audio",
+  "pdfUrl": "https://arxiv.org/pdf/2610.03405v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

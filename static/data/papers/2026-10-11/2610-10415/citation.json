@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.10415v1",
+  "arxivId": "2610.10415",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.10415v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Afsara Benazir"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Darius Pétermann"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Felix Xiaozhu Lin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Salar Rahili"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.10415v1",
+  "originalTitle": "Steerspeech: Activation Steering For Emotion Control In Generated Speech",
+  "pdfUrl": "https://arxiv.org/pdf/2610.10415v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

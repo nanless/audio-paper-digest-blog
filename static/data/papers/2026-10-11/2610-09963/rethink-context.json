@@ -1,0 +1,102 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.09963v1",
+  "abstract": "Generative speech enhancement (SE) is prone to linguistic hallucination when semantic constraint is unreliable under severe noise and reverberation. Moreover, approaches that generate discrete codec tokens are bounded by the quantization error of the codec decoder, regardless of token-prediction accuracy. We propose LIFT-SE, a two-stage generative framework that decouples linguistic inference from acoustic synthesis within QRes-Codec, which exposes a quantized latent and its residual-completed continuous form. The first stage predicts clean codec tokens autoregressively, conditioned on frame-aligned features from a self-supervised front-end distilled toward clean speech. The second stage applies conditional flow matching to transport Gaussian noise to the continuous latent conditioned on the predicted tokens, and the frozen decoder reconstructs the enhanced waveform. Discrete generation provides naturalness, while continuous refinement restores signal fidelity. Experiments on the DNS1 and URGENT benchmarks show that LIFT-SE attains favorable linguistic consistency under reverberant conditions together with competitive perceptual quality, and systematic ablations verify the necessity of both stages. Code will be released in the future.",
+  "abstractSha256": "47f2780d3e92d779e27d85c2a8cbe511d22e5761ab3fbf69a477a758a78d9568",
+  "arxivId": "2610.09963",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.09963v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "自回归模型",
+    "primaryTask": "语音增强",
+    "rankBucket": "前50%",
+    "score": 6.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-enhancement",
+          "label": "语音增强"
+        },
+        {
+          "facet": "task",
+          "id": "task.dereverberation",
+          "label": "去混响"
+        },
+        {
+          "facet": "method",
+          "id": "method.autoregressive",
+          "label": "自回归模型"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "method",
+          "id": "method.neural-codec",
+          "label": "神经编解码与离散单元"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "自回归模型",
+      "primaryMethodId": "method.autoregressive",
+      "primaryTask": "语音增强",
+      "primaryTaskId": "task.speech-enhancement",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Haoyin Yan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chengwei Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zheng Xue"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiaotao Liang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jifa Cai"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zeyu Zhao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jingjing Wang"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "LIFT-SE 用自回归模型先预测干净编解码器令牌锁定语言内容，再用条件流匹配把量化隐变量修正为连续隐变量，代价是需要两步串行推理和约 193M 可训练参数。",
+  "originalTitle": "LIFT-SE: Linguistic Inference Followed by Flow Transformation for Generative Speech Enhancement",
+  "pdfUrl": "https://arxiv.org/pdf/2610.09963v1.pdf",
+  "readerTitle": "先猜出说了什么，再补回声音细节的两阶段生成式语音增强",
+  "schemaVersion": 2
+}

@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.04757v1",
+  "arxivId": "2610.04757",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.04757v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Vasily Zadorozhnyy"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Can Goksen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kazuhito Koishida"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Dung Tran"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.04757v1",
+  "originalTitle": "Prompt-Consistency Inference for Zero-Shot Flow-Matching Text-to-Speech Models",
+  "pdfUrl": "https://arxiv.org/pdf/2610.04757v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

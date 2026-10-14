@@ -1,0 +1,102 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.05055v1",
+  "abstract": "Learning-based acoustic sound source localization and detection (SSLD) requires large labeled datasets covering diverse acoustic conditions. Since obtaining measured data is costly, training commonly uses simulated data, while practical devices must operate under real-world conditions. However, higher simulation complexity increases data-generation cost, and the complexity required for reliable generalization remains unclear. In practice, SSLD methods often rely on efficient geometrical acoustic simulation, typically the image-source method. This work investigates how geometrical acoustic simulation complexity affects the real-world performance of a common multi-source SSLD model. We train the model with simulators ranging from anechoic conditions to high-order image-source simulations, optionally including diffuse reverberation, array simulation, and randomized image-source positions, and evaluate them on three measurement-based test datasets. Results show that anechoic simulation is insufficient, while medium-complexity image-source simulations already provide strong real-world performance. Further increases in complexity yield only marginal gains, with the best performance obtained using the highest tested image-source order, array simulation, and randomized image-source positions. For this configuration, measured-domain performance approaches within-domain simulated performance, suggesting limited benefit from further increasing simulation complexity. These findings show how the complexity-performance trade-off can be exploited in future data-driven SSLD, and highlight image-source randomization as an efficient way to improve generalization.",
+  "abstractSha256": "1fc4b3010fd969b019e9871489d0c12dea3c07bb9884d0711016ec14077967b2",
+  "arxivId": "2610.05055",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.05055v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "评测协议",
+    "primaryTask": "联合声音事件检测定位",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.seld",
+          "label": "联合声音事件检测定位"
+        },
+        {
+          "facet": "task",
+          "id": "task.localization",
+          "label": "声源定位"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.microphone-array",
+          "label": "麦克风阵列"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.spatial-audio",
+          "label": "空间音频信号"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "评测协议",
+      "primaryMethodId": "method.evaluation-protocol",
+      "primaryTask": "联合声音事件检测定位",
+      "primaryTaskId": "task.seld",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Fabian Staub"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nils Meyer-Kahlen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Thomas Deppisch"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sergio de las Heras"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Florian Klein"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Stephan Werner"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Johannes M. Arend"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文用从消声到 12 阶镜像声源加扩散混响和阵列仿真的 20 种几何仿真训练同一多声源定位模型，在三个实测数据集上发现中等复杂度已能强泛化而更高阶与镜像源随机扰动只带来小幅提升，但阵列精细仿真代价很高。",
+  "originalTitle": "Influence of Geometrical Acoustic Simulator Complexity on a Trained Multisource Localizer",
+  "pdfUrl": "https://arxiv.org/pdf/2610.05055v1.pdf",
+  "readerTitle": "几何声学仿真做多复杂才够：多声源定位模型的仿真复杂度实验",
+  "schemaVersion": 2
+}

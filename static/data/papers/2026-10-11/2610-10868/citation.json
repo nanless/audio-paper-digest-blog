@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.10868v1",
+  "arxivId": "2610.10868",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.10868v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xilin Jiang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shun Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tejas Jayashankar"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yinghao Aaron Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Osama Hanna"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.10868v1",
+  "originalTitle": "Conversational Voice Aesthetic Model with Reinforcement Learning from Human Listeners",
+  "pdfUrl": "https://arxiv.org/pdf/2610.10868v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

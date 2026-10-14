@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.05737v2",
+  "abstract": "This paper revisits frame-wise saliency for audio moment retrieval (AMR). We show that the frame-wise saliency sequence, conventionally used only as an auxiliary output in DETR-based AMR models, can itself serve as an effective source of moment predictions. We convert the saliency sequence into ranked moments using a simple SED-inspired segmentation rule with no learned parameters, enabling moment retrieval directly from frame-wise temporal information. On the CASTELLA dataset, saliency-based prediction consistently outperforms decoder-based prediction from the same model across all 18 runs of QD-DETR and CG-DETR. For QD-DETR, simply replacing the inference output improves R1@0.7 from 21.0 to 36.1. The advantage remains 7-15 points when the two outputs are evaluated at their independently selected best epochs. The same tendency extends to TaskWeave and UVCOM, whereas TR-DETR shows the opposite behavior, suggesting that how saliency construction may matter. The performance gap is especially pronounced for short moments: for queries whose annotated moments average at most 2 s, R1@0.7 improves from 6.3 to 27.8 with QD-DETR. Decoder supervision nevertheless benefits saliency-based prediction, indicating that its role during training differs from the utility of its inference output.",
+  "abstractSha256": "b17104544d4f93ec38ea6817af24592c9e1316707a367390c3f8e70427e8c63a",
+  "arxivId": "2610.05737",
+  "arxivVersion": 2,
+  "arxivVersionedId": "2610.05737v2",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "音频时间定位",
+    "rankBucket": "前50%",
+    "score": 6.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.temporal-grounding",
+          "label": "音频时间定位"
+        },
+        {
+          "facet": "task",
+          "id": "task.event-detection",
+          "label": "音频事件检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.transformer",
+          "label": "Transformer"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "音频时间定位",
+      "primaryTaskId": "task.temporal-grounding",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tatsuya Komatsu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hokuto Munakata"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "本文针对音频时刻检索中解码器预测不准短时刻的问题，对比同一模型的两路输出，发现用无学习参数的峰相对切分把帧级显著性序列直接转成时刻，在 CASTELLA 上显著优于解码器，而训练仍需要解码器监督，实验基于已披露的 200 轮、批量 32、AdamW 学习率 1e-4 等配置。",
+  "originalTitle": "Revisiting Frame-Wise Saliency for Audio Moment Retrieval",
+  "pdfUrl": "https://arxiv.org/pdf/2610.05737v2.pdf",
+  "readerTitle": "帧级显著性也能直接给出音频时刻：重访 AMR 的解码器与显著性之争",
+  "schemaVersion": 2
+}

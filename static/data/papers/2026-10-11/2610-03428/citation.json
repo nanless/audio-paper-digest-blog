@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.03428v1",
+  "arxivId": "2610.03428",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.03428v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Fernando Azeredo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "António Sá Pinto"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.03428v1",
+  "originalTitle": "LayerIt: Towards a Framework for Time-Aligned, Composable Music Visualizations",
+  "pdfUrl": "https://arxiv.org/pdf/2610.03428v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

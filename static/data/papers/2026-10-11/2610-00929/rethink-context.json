@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.00929v2",
+  "abstract": "Distinct pre-trained models specialized for the same task converge to closely similar behavior, yet the parameter updates that produce it share no common coordinate system. Weight-space task arithmetic is therefore confined to a single model, and transporting an update between models requires a structural correspondence. Drawing on Plato's allegory of the cave, we hypothesize that these model-specific updates are shadows cast by one shared, model-agnostic object, the platonic task vector. To make it operational across models of different architectures, we introduce Universal Task Descriptors, matrices whose shape is independent of architecture and embedding dimension, which record a task's functional effect and admit addition and negation as ordinary matrix operations, and we transfer a descriptor into a target in two ways. A single least-squares solve returns a linear operator folded into the target's last layer, and a bank of such operators, one per source and task, realizes any composition as a signed sum of its entries. Alternatively, a low-rank adapter of the target's encoder is trained on the same objective at the price of one optimization per edit. Despite a model-specific residual comparable in norm to the shared component, transfer from another model retains 74 to 80 percent of the gain the target's own descriptors attain. Experiments across six model families, eight tasks and audio-text models confirm both realizations.",
+  "abstractSha256": "af988d661c62ee69cbb9db18a18f5c80354054ef18b8404c27256a7c5bfee824",
+  "arxivId": "2610.00929",
+  "arxivVersion": 2,
+  "arxivVersionedId": "2610.00929v2",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "迁移学习",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 6.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.transfer",
+          "label": "迁移学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.lora",
+          "label": "LoRA"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "迁移学习",
+      "primaryMethodId": "method.transfer",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "TelePIX"
+      ],
+      "name": "Junghwan Park"
+    },
+    {
+      "affiliations": [
+        "TelePIX"
+      ],
+      "name": "Woojin Cho"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "该文研究不同结构的图文模型之间如何搬运任务能力，用与结构无关的亲和力改变量记录任务，再以最小二乘算子或低秩适配器写入目标，在加法上保留目标自身增益的七到八成，代价是控制集精度下降和在部分任务上几乎无效。",
+  "originalTitle": "Platonic Task Arithmetic",
+  "pdfUrl": "https://arxiv.org/pdf/2610.00929v2.pdf",
+  "readerTitle": "跨模型任务向量：把微调改变量搬到另一个模型上",
+  "schemaVersion": 2
+}

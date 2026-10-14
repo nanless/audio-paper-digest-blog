@@ -1,0 +1,90 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.09225v1",
+  "abstract": "Electromyography-to-Speech (ETS) synthesis is typically a non-linear, chaotic dynamical system. However, no prior work has studied the chaotic behavior of ETS synthesis to date. Yet, prior works strictly rely on standard reconstruction metrics with parameter-heavy transformers that systematically over-smooth natural acoustic dynamics. To close this gap, for the first time, we propose a chaos-inspired Lyapunov-derived activation function (LyRIC) with two novel chaotic loss functions, Lyapunov Exponent Regularization and Multi-Scale Detrended Fluctuation Analysis, to explicitly capture the deterministic chaos of human phonation. In addition, we introduce a compressed novel encoder, GLAME, which synergizes global Mamba state-space modeling with localized GLARE attention. We comprehensively perform frame-level acoustic evaluation in a multilingual and multi-speaker setup using English and Mandarin datasets. The proposed system outperforms the established baseline with a 4.69x increase in objective intelligibility (STOI: 0.61 vs. 0.13) and a 2.08x improvement in spectral reconstruction (LSD: 1.08 vs. 2.25). Importantly, this improvement is achieved with 73.49% fewer parameters (14.34M vs. 54.10M), establishing a new baseline for ETS synthesis. To the best of our knowledge, this is the first work demonstrating that integrating non-linear chaotic physics into neural networks yields superior yet compact inductive biases for real-time ETS synthesis.",
+  "abstractSha256": "461cee880e26a9788874aaf721f298cf717d85a4b75a638ee84a6a3876339082",
+  "arxivId": "2610.09225",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.09225v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "状态空间模型",
+    "primaryTask": "静默语音接口",
+    "rankBucket": "前50%",
+    "score": 6.4,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.silent-speech",
+          "label": "静默语音接口"
+        },
+        {
+          "facet": "method",
+          "id": "method.state-space",
+          "label": "状态空间模型"
+        },
+        {
+          "facet": "method",
+          "id": "method.attention",
+          "label": "注意力机制"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.biosignal",
+          "label": "生理信号"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "状态空间模型",
+      "primaryMethodId": "method.state-space",
+      "primaryTask": "静默语音接口",
+      "primaryTaskId": "task.silent-speech",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sajid Fardin Dipto"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tarikul Islam Tamiti"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Luke Baja-Ricketts"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "David Vergano"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Anomadarshi Barua"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文针对肌电到语音合成中过度平滑与模型臃肿问题，提出融合局部注意力与状态空间的轻量编码器并用混沌损失约束时序动态，在英汉数据上以更少参数改善频谱重建与可懂度，但混沌计算只在训练时付出代价且主观差异未达显著水平。",
+  "originalTitle": "Lyapunov-Inspired LyRIC Activation and GLARE Attention in Chaos-Guided State Space Modeling for EMG-To-Speech (ETS) Synthesis",
+  "pdfUrl": "https://arxiv.org/pdf/2610.09225v1.pdf",
+  "readerTitle": "从肌肉电信号合成语音：混沌约束与轻量状态空间如何分工",
+  "schemaVersion": 2
+}

@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.04570v1",
+  "abstract": "In this article, we present a method of spectral serialization envisioned by G. Mahler and A. Schoenberg between the late 19th and early 20th centuries that enables the selection of timbres rooted in musical structure. Based on information geometry, we evaluate the Wasserstein distance between polyphonic timbre spectra, as demonstrated in our previous paper, in terms of the second moment of spectral chords comprising three or more notes, expressed in squared hertz. By embedding these quantities in a Banach space, we analyze specific passages from works by R. Strauss, Mahler, A. Berg, and A. Webern from the perspective of timbre, showing how the same chord exhibits different affinities and divergences depending on orchestration. Taking the wah wah mute as an example, we propose a model that treats instrumental timbre and speech within the same Banach space, and we attempt to quantify the \"vowel triangle\" in Hz. These efforts constitute a partial but integrated solution to the historical three problems of Schoenberg. Serialism, Klangfarbenmelodie, and Sprechgesang which neither Mahler nor Schoenberg in their lifetimes, nor the postwar generation of composers including Nono, Boulez, and Stockhausen, was able to resolve fully. We aim to reconsider musical thought as a whole from the perspective of timbre and to open new possibilities for interpretation, performance, and composition. All tools are publicly available on GitHub, so that anyone can reproduce and extend these analyses.",
+  "abstractSha256": "232c1dfabb22fd31a2f1c1c2d8b44a540fbf4eed905056117bd7a63422c6ab5b",
+  "arxivId": "2610.04570",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.04570v1",
+  "assessment": {
+    "documentType": "理论研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "音乐分析",
+    "rankBucket": "前50%",
+    "score": 6.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-understanding",
+          "label": "音乐分析"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-attributes",
+          "label": "语音属性识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "method",
+          "id": "method.formal-analysis",
+          "label": "形式化分析"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "音乐分析",
+      "primaryTaskId": "task.music-understanding",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Yusei TAMURA"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Shigekazu ISHIHARA"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Ken ITO"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文把归一化频谱看成概率分布，用瓦瑟斯坦距离度量马勒与韦伯恩段落在加弱音器前后的音色差异，并用三音二阶矩与塞萨雷斯不协和度做并列比较，再把哈蒙弱音器的开口变化与女高音元音放在同一巴拿赫空间中对照，最有力的证据是同一音高与同一和弦在音色改变后几何量与听感指标成倍变化，代价是样本少、只覆盖有限元音且未建模空间听觉。",
+  "originalTitle": "\"Spectral Harmony\" Towards the Unification of Timbre and Speech: Resolution of the Young Mahler Schoenberg Dream",
+  "pdfUrl": "https://arxiv.org/pdf/2610.04570v1.pdf",
+  "readerTitle": "用频谱搬运距离把和声、音色和元音放进同一个空间",
+  "schemaVersion": 2
+}

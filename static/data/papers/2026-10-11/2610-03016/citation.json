@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.03016v1",
+  "arxivId": "2610.03016",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.03016v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Guangdong University of Technology, Guangzhou, China"
+      ],
+      "name": "Wei Wang"
+    },
+    {
+      "affiliations": [
+        "Guangdong University of Technology, Guangzhou, China"
+      ],
+      "name": "Zhaowu Li"
+    },
+    {
+      "affiliations": [
+        "Guangdong University of Technology, Guangzhou, China"
+      ],
+      "name": "Jianjie Luo"
+    },
+    {
+      "affiliations": [
+        "Hong Kong Metropolitan University, Hong Kong, China"
+      ],
+      "name": "Fu Lee Wang"
+    },
+    {
+      "affiliations": [
+        "Hong Kong Metropolitan University, Hong Kong, China"
+      ],
+      "name": "Lap-Kei Lee"
+    },
+    {
+      "affiliations": [
+        "Guangdong University of Technology, Guangzhou, China"
+      ],
+      "name": "Zhenguo Yang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.03016v1",
+  "originalTitle": "From Expression to Reaction: Role-aware Visual Transfer and Stimulus-guided Reasoning for Interlocutor Emotion Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2610.03016v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.08284v1",
+  "abstract": "Music Source Restoration (MSR) seeks to recover original, unprocessed instrument stems from mixed, mastered, and possibly degraded recordings. Unlike conventional source separation, which treats the mixture as a linear sum of clean sources, MSR must additionally invert nonlinear production effects, such as equalization and compression, and transmission-related degradations, such as codec artifacts. We propose a three-stage framework built around this distinction: (1) a mixture restoration model that addresses degradation before separation, (2) a single model that separates the restored mixture into eight target stems (vocals, guitars, keyboards, synthesizers, bass, drums, percussion, and orchestra), and (3) stem-specific restoration experts fine-tuned on the separator's own residual artifacts. Each stage improves restoration quality over the previous one on the MSR Challenge test set. We release code and models to support future research in MSR at https://github.com/theMoro/music_source_restoration.",
+  "abstractSha256": "39b46f8d1d4acf84db9316e16e98396a3f6da185af4a23b92124f3a4e9cabfef",
+  "arxivId": "2610.08284",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.08284v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "生成对抗网络",
+    "primaryTask": "音频修复",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-restoration",
+          "label": "音频修复"
+        },
+        {
+          "facet": "task",
+          "id": "task.music-separation",
+          "label": "音乐源分离"
+        },
+        {
+          "facet": "method",
+          "id": "method.gan",
+          "label": "生成对抗网络"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-quality",
+          "label": "音频质量评估"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "生成对抗网络",
+      "primaryMethodId": "method.gan",
+      "primaryTask": "音频修复",
+      "primaryTaskId": "task.audio-restoration",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tobias Morocutti"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Emmanouil Karystinaios"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Gerhard Widmer"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "该论文把音乐源复原拆成混合级修复、八轨分离和逐轨修复三步，用直接预测频谱的修复模型配合掩蔽式分离模型，在挑战赛测试集上验证每步的分工与代价，并指出验证集筛选的逐轨修复增益并不能稳定迁移到测试集。",
+  "originalTitle": "Restore, Separate, Restore: A Modular Framework for Music Source Restoration",
+  "pdfUrl": "https://arxiv.org/pdf/2610.08284v1.pdf",
+  "readerTitle": "先修复混合再分离最后逐轨修复的音乐源复原框架",
+  "schemaVersion": 2
+}

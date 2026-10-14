@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.07966v1",
+  "arxivId": "2610.07966",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.07966v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Louis McCallum"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mick Grierson"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.07966v1",
+  "originalTitle": "Feature Encoding in VAE-based Audio Decoders: Effects of Input, Depth and Distribution",
+  "pdfUrl": "https://arxiv.org/pdf/2610.07966v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

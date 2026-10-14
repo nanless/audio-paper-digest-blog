@@ -1,0 +1,81 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.11196v1",
+  "abstract": "Large audio-language models (LALMs) exploit multimodal evidence, yet task-irrelevant audio can alter text-reasoning decisions when listening is unnecessary. Aggregate Accuracy can hide this paired drift because audio-induced repairs and damages may cancel. Paired drift analysis and targeted interventions identify architecture-specific, intervention-sensitive late audio pathways as actionable control points. We introduce ICAP-Gate, which applies mechanism-guided, task-conditioned control to each model's pathway. Across four LALMs, two reasoning benchmarks, and environmental-sound and natural-speech interference, ICAP-Gate has lower point estimates for Influence Rate and Answer Flip than ungated inference in all 16 full-split model--condition evaluations. Fixed suppression degrades automatic speech recognition (ASR) across all four models, whereas ICAP-Gate matches ungated ASR performance by preserving the pathway for explicit audio-demand instructions. ICAP-Gate has lower paired-drift point estimates than mitigation prompting in all four evaluated settings and provides competitive stabilization relative to eight-sample Self-Consistency while using one generation per query; in controlled ARC measurements, Self-Consistency incurs $7.0$--$9.2\\times$ ungated latency. These results establish selective modality influence control as a design principle for robust multimodal reasoning.",
+  "abstractSha256": "d59428110ce21e14906898650c6d7c50d68dc312841c2d0ce41eff72f914f0f6",
+  "arxivId": "2610.11196",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.11196v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "测试时自适应",
+    "primaryTask": "音频理解",
+    "rankBucket": "前50%",
+    "score": 6.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-understanding",
+          "label": "音频理解"
+        },
+        {
+          "facet": "method",
+          "id": "method.test-time-adaptation",
+          "label": "测试时自适应"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.audio-language",
+          "label": "音频大模型"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.environmental",
+          "label": "环境声"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "测试时自适应",
+      "primaryMethodId": "method.test-time-adaptation",
+      "primaryTask": "音频理解",
+      "primaryTaskId": "task.audio-understanding",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "College of Computer Science and Technology, National University of Defense Technology",
+        "State Key Laboratory of Complex & Critical Software Environment"
+      ],
+      "name": "Yulin Sun"
+    },
+    {
+      "affiliations": [
+        "College of Computer Science and Technology, National University of Defense Technology",
+        "State Key Laboratory of Complex & Critical Software Environment"
+      ],
+      "name": "Kele Xu"
+    },
+    {
+      "affiliations": [
+        "College of Computer Science and Technology, National University of Defense Technology",
+        "State Key Laboratory of Complex & Critical Software Environment"
+      ],
+      "name": "Yong Dou"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对文字可解但配了无关音频时大音频语言模型会改变答案的问题，论文用配对漂移度量暴露不稳定，用后期音频通路缩放定位可控点，再用按指令开关的 ICAP-Gate 在四模型十六组全量评测中降低漂移点估计，同时在所测语音识别任务上保持原有词错误率，代价是单次生成加一次路由判断。",
+  "originalTitle": "Selective Listening: Mechanism-Guided Control of Audio Influence in Large Audio-Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2610.11196v1.pdf",
+  "readerTitle": "无关音频为何改变文字推理：配对漂移定位与按需门控",
+  "schemaVersion": 2
+}

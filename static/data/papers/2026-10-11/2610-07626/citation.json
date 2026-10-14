@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.07626v1",
+  "arxivId": "2610.07626",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.07626v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tien-Hong Lo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Fong-Chun Tsai"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ting-An Hung"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yu-Hsuan Hsieh"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yao-Ting Sung"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Berlin Chen"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.07626v1",
+  "originalTitle": "A Novel Sentence Stress Detection Framework Leveraging Auxiliary Word-Stress Modeling and Loss Optimization",
+  "pdfUrl": "https://arxiv.org/pdf/2610.07626v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

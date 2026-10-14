@@ -1,0 +1,80 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.02188v1",
+  "arxivId": "2610.02188",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.02188v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Zhengming Yu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Junkun Yuan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Haotian Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Gordon Guocheng Qian"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Yizhi Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Angtian Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Yiding Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Bo Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Xin Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Wenping Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Chongyang Ma"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.02188v1",
+  "originalTitle": "DMAD: Distribution Matching as Adversarial Distillation for Fast Visual Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.02188v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

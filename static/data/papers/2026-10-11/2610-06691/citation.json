@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.06691v1",
+  "arxivId": "2610.06691",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.06691v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Seunghwan Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jinyong Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sooyoung Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Youngjin Ko"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Myungjoo Kang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.06691v1",
+  "originalTitle": "Revisiting Label-Free Speaker Embedding Enhancement with vMF Profile Likelihood",
+  "pdfUrl": "https://arxiv.org/pdf/2610.06691v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

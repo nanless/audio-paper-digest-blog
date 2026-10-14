@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.07524v1",
+  "arxivId": "2610.07524",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.07524v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Haoqi Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shivam Mehta"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ravi Teja Gadde"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yinghong Lan"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.07524v1",
+  "originalTitle": "Region-Aware Masking for Accent-Robust Cross-Lingual Text-to-Speech",
+  "pdfUrl": "https://arxiv.org/pdf/2610.07524v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

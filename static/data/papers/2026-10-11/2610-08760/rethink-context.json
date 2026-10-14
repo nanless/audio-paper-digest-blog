@@ -1,0 +1,134 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.08760v1",
+  "abstract": "Recent advances in world models have enabled increasingly realistic visual synthesis. However, these generated environments remain largely silent. Bringing sound to world models poses three core challenges: real-time generation to keep pace with interactive video streams, interactive control to respond to mid-stream sound instructions, and spatially aligned stereo to reflect scene geometry and camera motion. To address these demands, we introduce WorldSonus, an interactive video-to-audio framework designed for real-time spatial sound synthesis in world models. For real-time generation, WorldSonus employs a streaming causal autoregressive diffusion architecture that synthesizes audio chunks at a low real-time factor (RTF) of 0.41. For interactive control, we incorporate an audio-centric captioning pipeline with chunk-indexed prompt scheduling, enabling dynamic manipulation of sound events during generation. For spatial alignment, we leverage high-quality stereo supervision curated from diverse stereo and ambisonic data. Extensive experiments demonstrate that while tailored for world models, WorldSonus generalizes effectively to open-domain video-to-audio benchmarks, matching or outperforming state-of-the-art bidirectional models in both acoustic quality and spatial alignment. Project page: https://noizai.github.io/WorldSonus/",
+  "abstractSha256": "14b644e875c5f59006a2d06dc63e988f5f27a8814b271b2bb399437684a2ca22",
+  "arxivId": "2610.08760",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.08760v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "自回归模型",
+    "primaryTask": "视频到声音生成",
+    "rankBucket": "前25%",
+    "score": 8.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.video-to-audio",
+          "label": "视频到声音生成"
+        },
+        {
+          "facet": "task",
+          "id": "task.av-synchronization",
+          "label": "音画同步"
+        },
+        {
+          "facet": "method",
+          "id": "method.autoregressive",
+          "label": "自回归模型"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "自回归模型",
+      "primaryMethodId": "method.autoregressive",
+      "primaryTask": "视频到声音生成",
+      "primaryTaskId": "task.video-to-audio",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "The Hong Kong University of Science and Technology",
+        "Noiz AI"
+      ],
+      "name": "Pengjun Fang"
+    },
+    {
+      "affiliations": [
+        "MetaX"
+      ],
+      "name": "Jingyi Fa"
+    },
+    {
+      "affiliations": [
+        "The Hong Kong University of Science and Technology",
+        "Noiz AI"
+      ],
+      "name": "Kam Man Wu"
+    },
+    {
+      "affiliations": [
+        "Noiz AI"
+      ],
+      "name": "Jiaming Wang"
+    },
+    {
+      "affiliations": [
+        "Noiz AI"
+      ],
+      "name": "Haoyuan Huang"
+    },
+    {
+      "affiliations": [
+        "MetaX"
+      ],
+      "name": "Yaguang Wu"
+    },
+    {
+      "affiliations": [
+        "MetaX"
+      ],
+      "name": "Xiangjun Huang"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Ziyang Ma"
+    },
+    {
+      "affiliations": [
+        "Noiz AI"
+      ],
+      "name": "Weijia Chen"
+    },
+    {
+      "affiliations": [
+        "The Hong Kong University of Science and Technology"
+      ],
+      "name": "Hongyu Liu"
+    },
+    {
+      "affiliations": [
+        "Noiz AI"
+      ],
+      "name": "Zeyue Tian"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Qifeng Chen"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "WorldSonus 针对无声世界模型，用 100 ms 因果分块的自回归扩散同时解决实时跟播、中途改提示词和视角对齐立体声问题，在只看过去与当前帧的条件下取得可比双向模型的音质与更强的左右一致性，代价是单块 41.2 ms 计算与对高质量立体声数据的依赖。",
+  "originalTitle": "WorldSonus: Bringing Sound to Worlds",
+  "pdfUrl": "https://arxiv.org/pdf/2610.08760v1.pdf",
+  "readerTitle": "WorldSonus：给动态世界模型实时配上可控立体声",
+  "schemaVersion": 2
+}

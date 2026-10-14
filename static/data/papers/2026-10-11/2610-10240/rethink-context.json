@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.10240v1",
+  "abstract": "In this work, we present a comprehensive analysis of classification performance for distinguishing child-directed speech (CDS) from adult-directed speech (ADS) using speech data from corpora containing natural in-lab and in-the-wild CDS and ADS. We establish classification benchmarks for these datasets using self-supervised learning (SSL) representations, along with a range of time-pooled representations that go beyond first- and second-order statistics by incorporating cross-channel covariances in high-dimensional embeddings. In addition, we probe these representations to examine how different pooling methods capture prosodic information using linear probes. Overall, SSL-based representations prove particularly effective, achieving the best performance, while different pooling methods offer complementary advantages for the task.",
+  "abstractSha256": "a5f871cca803bdaf55a0de5682afcb9fa5a8b9252524a80bab2eda199c4b4e0b",
+  "arxivId": "2610.10240",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.10240v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "自监督学习",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 5.9,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.self-supervised",
+          "label": "自监督学习"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.prosody",
+          "label": "韵律"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.interpretability",
+          "label": "可解释性"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "自监督学习",
+      "primaryMethodId": "method.self-supervised",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Signal Processing Research Centre Tampere University Tampere, Finland"
+      ],
+      "name": "Sofoklis Kakouros"
+    },
+    {
+      "affiliations": [
+        "Signal Processing Research Centre Tampere University Tampere, Finland"
+      ],
+      "name": "Daniil Kocharov"
+    },
+    {
+      "affiliations": [
+        "Signal Processing Research Centre Tampere University Tampere, Finland"
+      ],
+      "name": "Okko Räsänen"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文用同一分类器比较手工韵律特征与冻结自监督表示在两套语料上区分对儿童说话和对成人说话的能力，最强证据是实验室语料上大模型达到约 91.7% 准确率而日常语料仅约 64.4%，代价是协方差池化首层参数膨胀到约 150.8 百万却没有带来对应提升。",
+  "originalTitle": "Benchmarking Adult Addressee Classification Across Child- and Adult-Directed Speech Datasets",
+  "pdfUrl": "https://arxiv.org/pdf/2610.10240v1.pdf",
+  "readerTitle": "在实验室和日常录音中区分对儿童和对成人说话",
+  "schemaVersion": 2
+}

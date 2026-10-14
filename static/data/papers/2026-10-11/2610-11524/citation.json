@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.11524v1",
+  "arxivId": "2610.11524",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.11524v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Biao Dong"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jiajun Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Binzhen Zhu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mingwei Yi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tong Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuanhao Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jiqing Han"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yongjun He"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.11524v1",
+  "originalTitle": "Reference-Free Singing Pitch Correction via Music-Constrained Sequence Editing",
+  "pdfUrl": "https://arxiv.org/pdf/2610.11524v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

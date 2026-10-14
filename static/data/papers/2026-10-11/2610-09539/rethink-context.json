@@ -1,0 +1,115 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.09539v1",
+  "abstract": "Understanding how the brain selectively follows relevant speech amid competing voices is a central challenge in auditory neuroscience and a key step toward neuro-steered hearing technologies. However, most open-source Electroencephalography (EEG) datasets for Auditory Attention Decoding (AAD) use idealized single-competing-talker paradigms that oversimplify the acoustic, spatial, and semantic structure of everyday communication. To capture this ecological complexity, we introduce the SoundBubble-EEG dataset: a high-density 128-channel EEG resource comprising more than 25 hours of recordings from 30 participants. The paradigm requires listeners to selectively attend to a dynamic target speaker group, a designated \"sound bubble\", amid competing multi-speaker distractor bubbles across three realistic scenarios: a restaurant, a home TV viewing, and a meeting discussion. By bridging the gap between constrained laboratory protocols and real-world auditory scenes, this dataset enables investigations of multi-talker speech comprehension, neural speech tracking, and cross-scenario generalization. It also provides a benchmark for AAD algorithms under realistic acoustic and semantic variability and may support auditory neuroscience and the development of neuro-steered hearing technologies.",
+  "abstractSha256": "1275141c995e7045d2fbd99b69fae7e14cb43c54d720a3914520bae81a1106f4",
+  "arxivId": "2610.09539",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.09539v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "数据集构建",
+    "primaryTask": "言语神经解码",
+    "rankBucket": "前25%",
+    "score": 7.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.neural-speech-decoding",
+          "label": "言语神经解码"
+        },
+        {
+          "facet": "method",
+          "id": "method.dataset-curation",
+          "label": "数据集构建"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "数据集构建",
+      "primaryMethodId": "method.dataset-curation",
+      "primaryTask": "言语神经解码",
+      "primaryTaskId": "task.neural-speech-decoding",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Data Science and Artificial Intelligence, The Hong Kong Polytechnic University, Hong Kong SAR, China"
+      ],
+      "name": "Shu Peng"
+    },
+    {
+      "affiliations": [
+        "Department of Data Science and Artificial Intelligence, The Hong Kong Polytechnic University, Hong Kong SAR, China"
+      ],
+      "name": "Rui Liu"
+    },
+    {
+      "affiliations": [
+        "Department of Data Science and Artificial Intelligence, The Hong Kong Polytechnic University, Hong Kong SAR, China"
+      ],
+      "name": "Yufei Zhang"
+    },
+    {
+      "affiliations": [
+        "Department of Data Science and Artificial Intelligence, The Hong Kong Polytechnic University, Hong Kong SAR, China"
+      ],
+      "name": "Wenlong You"
+    },
+    {
+      "affiliations": [
+        "Department of Data Science and Artificial Intelligence, The Hong Kong Polytechnic University, Hong Kong SAR, China"
+      ],
+      "name": "Zhige Chen"
+    },
+    {
+      "affiliations": [
+        "Department of Data Science and Artificial Intelligence, The Hong Kong Polytechnic University, Hong Kong SAR, China"
+      ],
+      "name": "Jiachen Xi"
+    },
+    {
+      "affiliations": [
+        "Department of Data Science and Artificial Intelligence, The Hong Kong Polytechnic University, Hong Kong SAR, China"
+      ],
+      "name": "Qiyuan Sun"
+    },
+    {
+      "affiliations": [
+        "Department of Computing, The Hong Kong Polytechnic University, Hong Kong SAR, China"
+      ],
+      "name": "Yan Liu"
+    },
+    {
+      "affiliations": [
+        "Department of Data Science and Artificial Intelligence, The Hong Kong Polytechnic University, Hong Kong SAR, China"
+      ],
+      "name": "Kay Chen Tan"
+    },
+    {
+      "affiliations": [
+        "Department of Data Science and Artificial Intelligence, The Hong Kong Polytechnic University, Hong Kong SAR, China"
+      ],
+      "name": "Jibin Wu"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "该论文用 30 人 128 通道、超 25 小时的三场景“声音气泡” 听觉注意脑电数据集，把传统单干扰人范式扩展到多人群组竞争，并用行为、信号质量、Alpha 节律与 mTRF 包络重建验证了数据可用性，最强证据是注意语音重建优势 Δr 为 0.0196、单试次准确率 0.717，但绝对相关仅约 0.026 且会议场景样本更少。",
+  "originalTitle": "A multi-scenario EEG dataset for auditory attention decoding in naturalistic multi-talker environments",
+  "pdfUrl": "https://arxiv.org/pdf/2610.09539v1.pdf",
+  "readerTitle": "在真实多人对话里听清目标：SoundBubble-EEG 数据集解读",
+  "schemaVersion": 2
+}

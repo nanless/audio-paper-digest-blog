@@ -1,0 +1,66 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.02836v1",
+  "abstract": "A single compact encoder for both speech and music removes the need to maintain a separate model per domain. A practical recipe distils a speech teacher and a music teacher into two small students, then merges them into one model. Two merging algorithms exist: interpolating the student weights from a shared initialisation, or permuting their channels into alignment before averaging. Prior work fixed the distillation loss in both, leaving open whether the loss itself affects how well the students merge. We show that it does. Holding architecture and evaluation fixed, we replace the DistilHuBERT loss \\Lkd{} with a correlation-based loss \\Lcl{}. Under weight interpolation, \\Lcl{} students stay closer to their own better endpoint in $17$ of $18$ comparisons and lead on the speech tasks at every interpolated weight. Under activation permutation, they need fewer channels rearranged at three layers, their matched channels correlate more strongly, and they again lead on speech. The two merging algorithms share no mechanism, yet both improve under the same loss substitution. This suggests that the gain lies in the representation \\Lcl{} produces rather than in either algorithm.",
+  "abstractSha256": "bac8410d54f4f064e2bfe962464628216278b19ad03c0dbf58c52ef41eb2282e",
+  "arxivId": "2610.02836",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.02836v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "知识蒸馏",
+    "primaryTask": "音频理解",
+    "rankBucket": "前50%",
+    "score": 6.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-understanding",
+          "label": "音频理解"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        },
+        {
+          "facet": "method",
+          "id": "method.model-combination",
+          "label": "模型融合"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "知识蒸馏",
+      "primaryMethodId": "method.distillation",
+      "primaryTask": "音频理解",
+      "primaryTaskId": "task.audio-understanding",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Fabian Ritter-Gutierrez"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文固定结构和评测，只把蒸馏损失从 DistilHuBERT 损失换成相关性损失，比较权重插值和激活排列两种合并，发现后者在语音侧更稳、需要搬动的通道更少，但在标准宽度音乐侧仍是旧损失更好。",
+  "originalTitle": "Correlation-Based Distillation Yields More Mergeable Speech-Music Encoders",
+  "pdfUrl": "https://arxiv.org/pdf/2610.02836v1.pdf",
+  "readerTitle": "蒸馏损失如何改变语音音乐小模型的合并效果",
+  "schemaVersion": 2
+}

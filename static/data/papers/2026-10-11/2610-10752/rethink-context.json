@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.10752v1",
+  "abstract": "Audio deepfake detectors remain vulnerable to adversarial perturbations that suppress the acoustic cues used for detection, allowing manipulated utterances to evade the detector. Although existing defenses can improve robustness, they require retraining the detector or introduce additional distortion. Diffusion-based purification instead leaves the pretrained detector unchanged, but existing methods use the same purification strength for all inputs, creating a trade-off between removing adversarial perturbations and preserving the subtle spoofing cues needed for detection. In this paper, we propose Detection-Guided Adaptive Purification (DGAP), a diffusion-based defense that adjusts purification strength per input. Building on the observation that a light purification perturbs the detector score of an adversarial input far more than that of a benign one, the framework uses the resulting score shift as a reference-free indicator of adversarial manipulation. Inputs with small shifts are passed unchanged, whereas flagged inputs undergo stronger purification before final detection. We evaluate the framework against three adversarial attack settings across three deepfake detectors, and compare it with nine existing defenses. Our results show that DGAP achieves the best defense performance across all detectors while leaving benign inputs nearly unaffected, and remains effective under the defense-aware adaptive attack.",
+  "abstractSha256": "43d0982705d7fafa5a1eaf16af673a3c9278c9cf7363dc67c7738201e660bc1a",
+  "arxivId": "2610.10752",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.10752v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "扩散模型",
+    "primaryTask": "音频深度伪造检测",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-deepfake",
+          "label": "音频深度伪造检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.diffusion",
+          "label": "扩散模型"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.adversarial-robustness",
+          "label": "对抗鲁棒性"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "扩散模型",
+      "primaryMethodId": "method.diffusion",
+      "primaryTask": "音频深度伪造检测",
+      "primaryTaskId": "task.audio-deepfake",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Muhammed Salih Kayhan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Qiben Yan"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对伪造语音加微小扰动即可骗过检测器的问题，该文用轻净化前后检测分数的变化来判断风险，只对高风险输入做强扩散净化，在三个检测器和三种攻击下取得最优综合误差，而干净输入几乎不受影响，代价是每次都要做轻探针净化且自适应攻击下存在绕门风险。",
+  "originalTitle": "Detection-Guided Adaptive Purification with Diffusion Models for Robust Audio Deepfake Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2610.10752v1.pdf",
+  "readerTitle": "按输入风险分配净化强度的音频伪造检测防御",
+  "schemaVersion": 2
+}

@@ -1,0 +1,126 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.11106v1",
+  "abstract": "Autism spectrum disorder (ASD) is a neurodevelopmental condition characterized by differences in social communication and by restricted interests and repetitive behaviors. Treatment interventions often target social-communication skills, creating a need for reliable measures of behavioral change. The Brief Observation of Social Communication Change (BOSCC) is a validated treatment-response measure based on brief play and social-communication interactions between a child and trained examiner. The BOSCC coding process is resource-intensive and requires trained experts, motivating the automation of coding in order to improve scalability and accessibility. In this work, we evaluate general-purpose large language models (LLMs) for predicting speech-related BOSCC codes from different input representations. We compare transcript, diarized-transcript, and targeted audio conditions across 163 in-house recordings. LLMs are able to perform well in assessing verbal exchange, but do not perform as well when identifying atypical speech patterns. Additionally, performance varies considerably across scoring decisions, with no consistent pattern across diagnosis groups. An audit of model predictions indicates that applying the BOSCC coding criteria and interpreting ambiguous speech evidence remain challenges.",
+  "abstractSha256": "c3cb8e3f615bf4590c3b1e48348deecfe438c4fcdf82b5e0310525e37914814e",
+  "arxivId": "2610.11106",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.11106v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "评测协议",
+    "primaryTask": "语音属性识别",
+    "rankBucket": "前50%",
+    "score": 5.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-attributes",
+          "label": "语音属性识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.llm",
+          "label": "大语言模型"
+        },
+        {
+          "facet": "application",
+          "id": "application.medical",
+          "label": "医疗音频"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.zero-shot",
+          "label": "零样本"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "评测协议",
+      "primaryMethodId": "method.evaluation-protocol",
+      "primaryTask": "语音属性识别",
+      "primaryTaskId": "task.speech-attributes",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jordan Prescott"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Aditya Kommineni"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tiantian Feng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Megan Micheletti"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Alyssa Viggiano"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Luis Angeles"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Anfeng Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lynn Perry"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Catherine Lord"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Daniel Messinger"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shrikanth Narayanan"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文用 163 段儿童临床互动录音检验通用大语言模型能否沿 BOSCC 决策树答题复刻两项语音编码，最强零样本平衡准确率超随机 19.3 个百分点，而说话人角色标注是最稳定的增益，音频与示例增益不一致且不足以独立使用。",
+  "originalTitle": "Towards Automated Clinical Behavioral Coding with Large Language Models: A Case study Using BOSCC recordings of Children",
+  "pdfUrl": "https://arxiv.org/pdf/2610.11106v1.pdf",
+  "readerTitle": "用通用大语言模型复刻 BOSCC 语音行为编码：输入、决策树与误差来源",
+  "schemaVersion": 2
+}

@@ -1,0 +1,20 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.06817v1",
+  "arxivId": "2610.06817",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.06817v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sahil Mahendrakar"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.06817v1",
+  "originalTitle": "Paradee: Distilling Kokoro-82M into an 8M-Parameter Single-Voice Text-to-Speech Model",
+  "pdfUrl": "https://arxiv.org/pdf/2610.06817v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

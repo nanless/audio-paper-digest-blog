@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.03352v1",
+  "arxivId": "2610.03352",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.03352v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mahdi Amiri"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hatef Otroshi Shahreza"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Pascal Frossard"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ina Kodrasi"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.03352v1",
+  "originalTitle": "Augmenting Large Audio Language Models with Low-Level Acoustic Features for Dysarthric Speech Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2610.03352v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

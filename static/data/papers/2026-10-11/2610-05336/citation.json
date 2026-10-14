@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.05336v1",
+  "arxivId": "2610.05336",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.05336v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Junyan Jiang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ruibin Yuan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jiahao Pan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wei Xue"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yike Guo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Gus Xia"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yann LeCun"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.05336v1",
+  "originalTitle": "SheetSage2: Coherent Lead-Sheet Transcription with Synthetic Supervision",
+  "pdfUrl": "https://arxiv.org/pdf/2610.05336v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

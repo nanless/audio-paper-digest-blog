@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.09831v1",
+  "abstract": "Instruction text-to-speech (ITTS) systems systematically encode acoustic gender skews from descriptive style prompts, such as occupations or personas, even when demographic attributes are left unspecified. Calibrating the implicit gender distribution of the synthesized voices, across heterogeneous architectures and without model retraining or overriding explicit user prompts, is an open problem. In this work, we propose \\textit{model-adaptive steering}, a training-free bias calibration method that steers post-encoder conditioning representations using a group deviation vector paired with a coarse-to-fine strength search on a development set. A deterministic lexical gate bypasses intervention whenever explicit gender keywords are detected, preserving intended prompt semantics. Evaluated on a 12,800-prompt held-out benchmark across four ITTS models (three architectures), the proposed method reduces aggregate calibration error from 11.5--28.1 to 0.8--5.9 percentage points (e.g., shifting Parler-TTS Mini from 78.1\\% and PromptTTS++ from 27.3\\% female to 50.8--52.4\\%). Output rates stay within 0.9 pp across anchor set sizes at fixed operating points, while UTMOS decreases by at most 0.08 and WER degrades by at most 3.3 pp.",
+  "abstractSha256": "a4b95dbfd0d201cab77f6fcb520e93a7d3aaac6d86cdedfcf7ded7cca22c8dc5",
+  "arxivId": "2610.09831",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.09831v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "测试时自适应",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前50%",
+    "score": 6.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.test-time-adaptation",
+          "label": "测试时自适应"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.fairness",
+          "label": "公平性"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "测试时自适应",
+      "primaryMethodId": "method.test-time-adaptation",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kuan-Yu Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yi-Cheng Lin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jeng-Lin Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jian-Jiun Ding"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对无性别限定的风格提示导致合成语音性别偏斜的问题，论文用冻结模型上的组偏差向量加开发集强度搜索做推理时校准，在 12800 条 held-out 提示上把聚合校准误差降到 0.80–5.86 百分点，代价是自然度最多下降 0.076、可懂度变化在 -4.13 至 +3.26 百分点之间。",
+  "originalTitle": "Training-Free Instruction TTS Gender Bias Calibration Using Model-Adaptive Steering",
+  "pdfUrl": "https://arxiv.org/pdf/2610.09831v1.pdf",
+  "readerTitle": "不训练模型也能校准指令语音的性别分布",
+  "schemaVersion": 2
+}

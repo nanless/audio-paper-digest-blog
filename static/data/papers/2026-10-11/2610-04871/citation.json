@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.04871v1",
+  "arxivId": "2610.04871",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.04871v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Yuliang Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Nan Nan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Meilian Gu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Xiaohong Guan"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.04871v1",
+  "originalTitle": "A Multidimensional Model for Quantifying Tonal Strength: A Continuous Framework of Analyzing Tonal Evolution Beyond Tonal-Atonal Binary Classification",
+  "pdfUrl": "https://arxiv.org/pdf/2610.04871v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

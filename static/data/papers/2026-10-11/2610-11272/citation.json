@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.11272v1",
+  "arxivId": "2610.11272",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.11272v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hee-Soo Heo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Minjae Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Youngki Kwon"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bong-Jin Lee"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.11272v1",
+  "originalTitle": "Using the enrollment gallery as evidence: affine-invariant score calibration for target speaker tagging",
+  "pdfUrl": "https://arxiv.org/pdf/2610.11272v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

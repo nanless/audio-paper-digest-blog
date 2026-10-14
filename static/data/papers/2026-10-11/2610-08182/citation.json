@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.08182v1",
+  "arxivId": "2610.08182",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.08182v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Geonung Jo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jongeun Choi"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.08182v1",
+  "originalTitle": "CTAG-FX: Reinterpreting Synthesizer Parameter Spaces for Expressive Tone-Shaping Audio FX Design",
+  "pdfUrl": "https://arxiv.org/pdf/2610.08182v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

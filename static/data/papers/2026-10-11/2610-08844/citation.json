@@ -1,0 +1,33 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.08844v1",
+  "arxivId": "2610.08844",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.08844v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Computational Linguistics, University of Zurich, Switzerland"
+      ],
+      "name": "Aref Farhadipour"
+    },
+    {
+      "affiliations": [
+        "Department of Computational Linguistics, University of Zurich, Switzerland"
+      ],
+      "name": "Teodora Vukovic"
+    },
+    {
+      "affiliations": [
+        "Idiap Research Institute, Switzerland",
+        "Brno University of Technology, Czech Republic"
+      ],
+      "name": "Petr Motlicek"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.08844v1",
+  "originalTitle": "UZH-CL at ArA-DF 2026: Prompt-Tuned Foundation Models and Track-Adaptive Score Fusion for Arabic Speech Deepfake Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2610.08844v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

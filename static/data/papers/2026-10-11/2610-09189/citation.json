@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.09189v1",
+  "arxivId": "2610.09189",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.09189v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tarikul Islam Tamiti"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sajid Fardin Dipto"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Luke Baja-Ricketts"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "David Vergano"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Anomadarshi Barua"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.09189v1",
+  "originalTitle": "SwinDS-BWE: A Parameter-Efficient Swin-1D Lattice Generator with Decision-Science Discriminators for Speech Bandwidth Extension",
+  "pdfUrl": "https://arxiv.org/pdf/2610.09189v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

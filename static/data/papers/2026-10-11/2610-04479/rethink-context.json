@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.04479v1",
+  "abstract": "Partial-spoof detectors must reject synthetic content while accepting benign edits. We diagnose temporal anchors and boundary-consistency training using frozen WavLM features, nonlinguistic unit controls, and source-locked evaluation. Genuine-genuine and genuine-fake splices contrast editing false alarms with synthetic-content misses; they do not isolate a unique causal artifact. With layer-6 features, phone units have higher PartialSpoof evaluation frame EER than soft frames (11.18% versus 9.59%). In 500 retrospective PS-eval cases, augmentation reduces genuine-splice false alarms; synthetic-core misses increase at 5% PS-development FPR but not demonstrably at 1%. A 200-case Llama A follow-up retains the false-alarm reduction but does not establish a miss-rate increase. Constructed-case ranking can improve while fixed-threshold misses rise. Consistency gives no uniform gain, and encoder-layer rankings change across corpora. We report frame and event localization with three seeds, including word units, and treat PS evaluation as retrospective. Audit code, selected training scripts, and result summaries are available at https://github.com/mysxs/partial-spoof-diagnostics.",
+  "abstractSha256": "8cc5b415a27e29e6dc253f63cf2e8b80facf5414fd09e094f2103b0e4ee60c10",
+  "arxivId": "2610.04479",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.04479v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "评测协议",
+    "primaryTask": "伪造片段定位",
+    "rankBucket": "前50%",
+    "score": 5.7,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.forgery-localization",
+          "label": "伪造片段定位"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "method",
+          "id": "method.augmentation",
+          "label": "数据增强"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "评测协议",
+      "primaryMethodId": "method.evaluation-protocol",
+      "primaryTask": "伪造片段定位",
+      "primaryTaskId": "task.forgery-localization",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiaosu Su"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yun Cao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yiping Ni"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiaowei Yi"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文用冻结声学特征与配对拼接对照检验音素词锚点与边界一致性训练，发现锚点损害短事件定位，增强降低良性编辑误报但在部分阈值下增加合成漏检且一致性无统一增益。",
+  "originalTitle": "Temporal Anchors and Editing Sensitivity in Partial Speech Spoofing: A Controlled Study",
+  "pdfUrl": "https://arxiv.org/pdf/2610.04479v1.pdf",
+  "readerTitle": "部分伪造语音里的时间锚点与编辑敏感性：一项受控诊断",
+  "schemaVersion": 2
+}

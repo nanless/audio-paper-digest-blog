@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.09655v1",
+  "abstract": "We propose a hybrid framework that combines deep learning with adaptive filtering for acoustic echo cancellation (AEC) and suppression. It integrates a multi-output neural network to jointly update filter parameters and perform post-processing. A learnable variant of the normalized least mean squares (NLMS) filter is introduced, incorporating a variable step size and a variable transition factor that are recursively updated for dynamic adaptation. In addition, an enhanced near-end speech estimate is generated from the filter output to suppress the residual echoes. To ensure training stability, we propose a constrained recursive training strategy that aligns with the adaptive nature of the filter, where an upper-bound constraint is introduced on the filter output. For efficiency, the framework adopts a lightweight implementation with only 253 k parameters. Experimental results show that the framework outperforms the baselines in terms of both signal quality and speech intelligibility.",
+  "abstractSha256": "1d2200235c3dec2866e5fc20e7f55e0344ccb2b7d4c8834e4103ecf3a3fe2843",
+  "arxivId": "2610.09655",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.09655v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "自适应滤波",
+    "primaryTask": "回声消除",
+    "rankBucket": "前50%",
+    "score": 6.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.echo-cancellation",
+          "label": "回声消除"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-enhancement",
+          "label": "语音增强"
+        },
+        {
+          "facet": "method",
+          "id": "method.adaptive-filtering",
+          "label": "自适应滤波"
+        },
+        {
+          "facet": "method",
+          "id": "method.rnn",
+          "label": "RNN"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "自适应滤波",
+      "primaryMethodId": "method.adaptive-filtering",
+      "primaryTask": "回声消除",
+      "primaryTaskId": "task.echo-cancellation",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Huawei Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Rilin Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hao Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Meng Yu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Dong Yu"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "该文针对麦克风信号中回声、近端语音和噪声混叠的问题，用一个多输出网络同时估计可变步长与转移因子的滤波器参数并做残留回声后处理，在约束递归训练下以 253 k 参数在仿真验证集和 AEC 挑战评估集上提升了信号质量与可懂度。",
+  "originalTitle": "A Lightweight Hybrid Framework for Acoustic Echo Cancellation and Suppression via Constrained Recursive Training",
+  "pdfUrl": "https://arxiv.org/pdf/2610.09655v1.pdf",
+  "readerTitle": "用一个网络同时管滤波器和后处理：轻量回声消除与抑制框架解读",
+  "schemaVersion": 2
+}

@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.08844v1",
+  "abstract": "Detecting synthetic and voice-converted speech remains difficult for low-resource languages with dialectal diversity, where systems must generalize across regional dialects and unseen acoustic channels. We present the UZH-CL submission to the ArA-DF 2026 Shared Task on Arabic speech deepfake detection, covering Track~1 (dialect generalization) and Track~2 (acoustic robustness). We freeze a W2V-BERT-2.0 backbone and adapt it with \\emph{Wavelet Prompt Tuning}, updating under 1% of parameters, and aggregate multi-layer representations with cross-layer attention and a general attentive-statistics pooling head rather than a specialized graph backend. Complementary detectors are obtained by varying adaptation strategy, training data, augmentation, and encoder family. We find that the two shift types require different fusion regimes: a broad multi-window ensemble for dialect generalization, and a compact, channel-matched, center-crop ensemble for acoustic robustness. Official evaluation yields 1.96% EER on Track~1 (6th place) and 1.04% EER on Track~2 (3rd place), corresponding to 87% and 96% relative reductions over the XLS-R+AASIST baselines.",
+  "abstractSha256": "33ed5ce3221f4a6adf5d08096eee615aa9a85438d50c0b751661e8db1585bb41",
+  "arxivId": "2610.08844",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.08844v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "参数高效微调",
+    "primaryTask": "音频深度伪造检测",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-deepfake",
+          "label": "音频深度伪造检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.peft",
+          "label": "参数高效微调"
+        },
+        {
+          "facet": "method",
+          "id": "method.model-ensemble",
+          "label": "模型集成"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "参数高效微调",
+      "primaryMethodId": "method.peft",
+      "primaryTask": "音频深度伪造检测",
+      "primaryTaskId": "task.audio-deepfake",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Computational Linguistics, University of Zurich, Switzerland"
+      ],
+      "name": "Aref Farhadipour"
+    },
+    {
+      "affiliations": [
+        "Department of Computational Linguistics, University of Zurich, Switzerland"
+      ],
+      "name": "Teodora Vukovic"
+    },
+    {
+      "affiliations": [
+        "Idiap Research Institute, Switzerland",
+        "Brno University of Technology, Czech Republic"
+      ],
+      "name": "Petr Motlicek"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对阿拉伯语方言泛化和声学信道鲁棒两类偏移，论文冻结 W2V-BERT-2.0 并用小波提示微调加跨层聚合得到多个检测器，再按赛道分别做多窗口大融合与中心截断小融合，在官方终测上取得 Track1 1.96% 和 Track2 1.04% 的等错误率，代价是融合分数依赖整个评测集做标准化因而不能逐文件独立复现。",
+  "originalTitle": "UZH-CL at ArA-DF 2026: Prompt-Tuned Foundation Models and Track-Adaptive Score Fusion for Arabic Speech Deepfake Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2610.08844v1.pdf",
+  "readerTitle": "方言与信道偏移下的阿拉伯语语音伪造检测：冻结大模型加分赛道融合",
+  "schemaVersion": 2
+}

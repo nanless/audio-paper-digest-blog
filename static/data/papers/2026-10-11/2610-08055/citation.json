@@ -1,0 +1,30 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.08055v1",
+  "arxivId": "2610.08055",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.08055v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Chair for Human-Centered",
+        "Artificial Intelligence",
+        "University of Augsburg"
+      ],
+      "name": "Tobias Hallmen"
+    },
+    {
+      "affiliations": [
+        "Chair for Human-Centered",
+        "Artificial Intelligence",
+        "University of Augsburg"
+      ],
+      "name": "Elisabeth André"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.08055v1",
+  "originalTitle": "Language Carries the Expert's Impression: Instrument-Anchored LLM Judges Transfer Counseling-Quality Assessment and Beat In-Domain Training",
+  "pdfUrl": "https://arxiv.org/pdf/2610.08055v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

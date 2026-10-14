@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.03352v1",
+  "abstract": "Automatic dysarthric speech detection approaches can support traditional clinical diagnosis, which relies on costly and time-consuming evaluation by a speech and language pathologist. Existing automatic approaches predominantly rely on deep learning (DL). More recently, Large Audio Language Models (LALMs) have emerged as a promising alternative given their strong performance across various tasks, but their application to dysarthric speech detection has not yet been established. We propose a framework that fine-tunes LALMs for dysarthric speech detection on speech recordings combined with textual information comprising low-level acoustic features and speaker demographics. Across two LALMs, our framework outperforms DL-based baselines, with Qwen2-Audio-Instruct achieving state-of-the-art performance. An ablation study shows that incorporating acoustic features and speaker demographics during fine-tuning improves LALM performance, while LALMs alone exhibit only chance-level zero-shot performance. These findings establish an effective approach for adapting LALMs to dysarthric speech detection.",
+  "abstractSha256": "95fd8f114366600c99531b50309530208870cc650e1e767eb91199f9bda2447f",
+  "arxivId": "2610.03352",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.03352v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "SFT",
+    "primaryTask": "病理语音评估",
+    "rankBucket": "前50%",
+    "score": 5.7,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.pathological-speech",
+          "label": "病理语音评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.sft",
+          "label": "SFT"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.audio-language",
+          "label": "音频大模型"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "SFT",
+      "primaryMethodId": "method.sft",
+      "primaryTask": "病理语音评估",
+      "primaryTaskId": "task.pathological-speech",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mahdi Amiri"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hatef Otroshi Shahreza"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Pascal Frossard"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ina Kodrasi"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文研究只给语音波形时大音频语言模型难以直接判断构音障碍的问题，提出把用 OpenSMILE 算出的音高、响度、谐噪比和语速等数值连同性别语言信息写进提示词再做监督微调，在 PC-GITA 西班牙语料上以说话人级准确率超过 wav2vec2 与 XLS-R 基线，但增益依赖微调与特定划分且特征顺序是事后按单特征效果排定的。",
+  "originalTitle": "Augmenting Large Audio Language Models with Low-Level Acoustic Features for Dysarthric Speech Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2610.03352v1.pdf",
+  "readerTitle": "给低层声学数值补上文字说明，让大音频语言模型直接判断构音障碍",
+  "schemaVersion": 2
+}

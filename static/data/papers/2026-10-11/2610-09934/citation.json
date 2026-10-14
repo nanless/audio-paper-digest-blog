@@ -1,0 +1,20 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.09934v1",
+  "arxivId": "2610.09934",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.09934v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Independent Researcher"
+      ],
+      "name": "Ibrahim Almajai"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.09934v1",
+  "originalTitle": "Itgan at NADI 2026 shared task: Parameter-Efficient Whisper Adaptation for Robust, Mixed-Dialect and Code-Switched Arabic ASR",
+  "pdfUrl": "https://arxiv.org/pdf/2610.09934v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

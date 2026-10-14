@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.06430v1",
+  "arxivId": "2610.06430",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.06430v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Paula A. Perez-Toro"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tomas Arias-Vergara"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Annette Schwarz"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Abner Hernandez"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Andreas Horr"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Cornelia Kristen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Andreas Maier"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.06430v1",
+  "originalTitle": "Do Speech Representations Preserve Regional Accent Across Read and Spontaneous Speech?",
+  "pdfUrl": "https://arxiv.org/pdf/2610.06430v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

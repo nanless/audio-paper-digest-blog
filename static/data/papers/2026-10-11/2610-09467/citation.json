@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.09467v1",
+  "arxivId": "2610.09467",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.09467v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Muhammad Huzaifah"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yu Pan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zachary Yeo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ningjie Bai"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Guangzhao Yang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.09467v1",
+  "originalTitle": "Boundary-Free Contextual Biasing: Depth-Adaptive Gating and Reading-Space Matching for Unsegmented Languages",
+  "pdfUrl": "https://arxiv.org/pdf/2610.09467v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

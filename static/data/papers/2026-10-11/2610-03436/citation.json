@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.03436v1",
+  "arxivId": "2610.03436",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.03436v1",
+  "authors": [
+    {
+      "affiliations": [
+        "New Jersey Institute of Technology, USA"
+      ],
+      "name": "Danzel Serrano"
+    },
+    {
+      "affiliations": [
+        "New Jersey Institute of Technology, USA"
+      ],
+      "name": "Przemyslaw Musialski"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.03436v1",
+  "originalTitle": "The Shape of Speech: A Geometric Measure of Coarticulation for Speech-Driven 3D Facial Animation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.03436v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

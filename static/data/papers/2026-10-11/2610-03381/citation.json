@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.03381v1",
+  "arxivId": "2610.03381",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.03381v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mahdi Amiri"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sayantan Biswas"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mingchi Hou"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Pascal Frossard"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ina Kodrasi"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.03381v1",
+  "originalTitle": "Multiclass Speech Classification Under Noise Disparity",
+  "pdfUrl": "https://arxiv.org/pdf/2610.03381v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

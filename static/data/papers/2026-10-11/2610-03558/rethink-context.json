@@ -1,0 +1,144 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.03558v1",
+  "abstract": "Cephalonauts One is a whole-brain 3 Tesla (3T) functional magnetic resonance imaging (fMRI) dataset recorded while subjects listened to audio podcasts. Three healthy subjects underwent multiple scanning sessions, each consisting of five 15-minute runs, while listening to podcasts in their native language. With 30 hours of fMRI data per subject, the current release is the deepest available fMRI dataset using naturalistic speech stimuli. The dataset pairs brain activity with the corresponding podcast audio, transcript annotations, and derived stimulus embeddings. Furthermore, we introduce a brain decoding benchmark formulated as audio segment retrieval: given fMRI activity from a held-out session, the decoder must identify the corresponding time-aligned podcast audio segment among candidate segments. We provide standardized splits, evaluation metrics, and baseline decoders for this task. Finally, a scaling analysis shows that decoding performance improves continuously with the amount of training data per subject.",
+  "abstractSha256": "eb21fc91904cd673ffd2cf1f34da36c63f53df0c49a3323825ea1b304810f7b2",
+  "arxivId": "2610.03558",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.03558v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "数据集构建",
+    "primaryTask": "言语神经解码",
+    "rankBucket": "前50%",
+    "score": 6.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.neural-speech-decoding",
+          "label": "言语神经解码"
+        },
+        {
+          "facet": "method",
+          "id": "method.dataset-curation",
+          "label": "数据集构建"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.neural",
+          "label": "脑信号"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "数据集构建",
+      "primaryMethodId": "method.dataset-curation",
+      "primaryTask": "言语神经解码",
+      "primaryTaskId": "task.neural-speech-decoding",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Karavela"
+      ],
+      "name": "Antoine Collas"
+    },
+    {
+      "affiliations": [
+        "Karavela; UNICOG, CNRS, INSERM, CEA, Paris-Saclay University; LSCP, EHESS, ENS, CNRS, PSL University"
+      ],
+      "name": "Louis Jalouzot"
+    },
+    {
+      "affiliations": [
+        "Karavela"
+      ],
+      "name": "Géraud Ilinca"
+    },
+    {
+      "affiliations": [
+        "Karavela"
+      ],
+      "name": "Corentin Caris"
+    },
+    {
+      "affiliations": [
+        "Centre de NeuroImagerie de Recherche (CENIR), Sorbonne Université, ICM, Paris, France"
+      ],
+      "name": "Romain Valabrègue"
+    },
+    {
+      "affiliations": [
+        "Karavela"
+      ],
+      "name": "Ahmed Hassayoune"
+    },
+    {
+      "affiliations": [
+        "Karavela"
+      ],
+      "name": "David Goncalves"
+    },
+    {
+      "affiliations": [
+        "Karavela"
+      ],
+      "name": "Madeleine Hueber"
+    },
+    {
+      "affiliations": [
+        "Karavela"
+      ],
+      "name": "Thaddée Delebarre"
+    },
+    {
+      "affiliations": [
+        "Department of Radiology, Hôpital Fondation Adolphe de Rothschild, Paris, France"
+      ],
+      "name": "Julien Savatovsky"
+    },
+    {
+      "affiliations": [
+        "Karavela"
+      ],
+      "name": "Clara Fonteneau"
+    },
+    {
+      "affiliations": [
+        "Karavela"
+      ],
+      "name": "Charles Maussion"
+    },
+    {
+      "affiliations": [
+        "Karavela; Inria, CEA, Paris-Saclay University, Palaiseau, France"
+      ],
+      "name": "Bertrand Thirion"
+    },
+    {
+      "affiliations": [
+        "Karavela"
+      ],
+      "name": "Alexis Thual"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文用三名被试每人约三十小时听法语播客的全脑功能磁共振数据，把解码做成在未见会话中用脑活动检索对应音频片段的任务，基线解码器随被试内训练量持续变好但只在三人单站点法语叙事条件下成立。",
+  "originalTitle": "Cephalonauts One: A deep fMRI dataset for decoding naturalistic speech in the human brain",
+  "pdfUrl": "https://arxiv.org/pdf/2610.03558v1.pdf",
+  "readerTitle": "每人三十小时听播客：从全脑信号中找回刚才那段声音",
+  "schemaVersion": 2
+}

@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.10094v1",
+  "abstract": "Speech deepfake detectors often lose accuracy when the distribution of the test data differs from that of the training data. Meta-learning for domain generalization (MLDG) shows promise by simulating domain shifts with episodic meta-train and meta-test splits. However, the MLDG meta-objective considers only a single clean adaptation trajectory and does not account for the local loss landscape around its endpoints. To address this limitation, we first propose an explicit worst-case MLDG variant, dubbed WC-MLDG-4P, which perturbs both the meta-train and meta-test states but requires four gradient evaluations per episode. We then introduce WC-MLDG-2P, a source-directed alternative to the explicit robust objective. It shifts the clean MLDG endpoint toward a locally higher source-loss state and evaluates the meta-test gradient there, retaining the two-evaluation cost of the first-order MLDG. A first-order expansion relates the resulting gradient change to meta-test directional curvature along the source gradient without explicitly computing a Hessian. Relative to MLDG, WC-MLDG-2P achieves relative mean-EER reductions of 23.4% with XLSR-AASIST and 7.6% with XLSR-Conformer-TCM, respectively.",
+  "abstractSha256": "cc509ba57d8fb30b24af67fac002ffc856e2146df16c74294579b4d026201bda",
+  "arxivId": "2610.10094",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.10094v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "元学习",
+    "primaryTask": "音频深度伪造检测",
+    "rankBucket": "前50%",
+    "score": 5.9,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-deepfake",
+          "label": "音频深度伪造检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.meta-learning",
+          "label": "元学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.domain-generalization",
+          "label": "域泛化"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "元学习",
+      "primaryMethodId": "method.meta-learning",
+      "primaryTask": "音频深度伪造检测",
+      "primaryTaskId": "task.audio-deepfake",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Siqing Qin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kong Aik Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Youzhi Tu"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文针对语音伪造检测中训练攻击与未知生成器、编码器和录音条件不一致导致失准的问题，用一次源梯度同时完成虚拟适应和向高损失方向的端点偏移，只做两次梯度计算就在四个未见测试集上一致改进 MLDG，但结论只在 19LA 训练、两种 XLSR 后端和固定扰动半径下成立。",
+  "originalTitle": "Source-Directed Trajectory Perturbation at First-Order Cost for Domain Generalization in Speech Deepfake Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2610.10094v1.pdf",
+  "readerTitle": "把一次跨域模拟走得更稳：源方向轨迹扰动的语音伪造检测域泛化",
+  "schemaVersion": 2
+}

@@ -1,0 +1,97 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.09109v1",
+  "abstract": "Many organizations fine-tune publicly available pretrained Automatic Speech Recognition (ASR) models and deploy them in black-box settings, assuming limited access provides protection. We show this assumption is fragile: adversarial perturbations crafted on the public base model transfer effectively to fine-tuned target models, severely degrading performance and posing concerns for safety-critical applications. We propose TransferBreaker, a unified fine-tuning framework that suppresses adversarial transfer by integrating Base Adversarial Fine-Tuning, which restricts adversarial training to base-effective perturbations; Latent Jacobian Regularization, which enforces latent-space invariance by suppressing adversarially sensitive directions; and HybridGrad-AFT, which improves robustness against adaptive attacks by interpolating transferable perturbations from base and target gradients. We theoretically justify all components and evaluate TransferBreaker across three languages and four large ASR models, reducing adversarial WER from 92.6 to 27.8. Our code is publicly available at https://github.com/rohban-lab/TransferBreaker.",
+  "abstractSha256": "208b9f11846f7e49b0abcc748f6e31a411577cccd683bdcf31d6a1a3fe5b559b",
+  "arxivId": "2610.09109",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.09109v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "对抗训练",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.adversarial-training",
+          "label": "对抗训练"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.adversarial-robustness",
+          "label": "对抗鲁棒性"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "对抗训练",
+      "primaryMethodId": "method.adversarial-training",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Idiap Research Institute",
+        "École Polytechnique Fédérale de Lausanne (EPFL)"
+      ],
+      "name": "Mojtaba Nafez"
+    },
+    {
+      "affiliations": [
+        "Department of Computer Engineering",
+        "Sharif University of Technology"
+      ],
+      "name": "Aref Mousavi"
+    },
+    {
+      "affiliations": [
+        "Department of Computer Engineering",
+        "University of Isfahan"
+      ],
+      "name": "Mohammad Ebrahim Mahdavi"
+    },
+    {
+      "affiliations": [
+        "Department of Computer Engineering",
+        "Sharif University of Technology"
+      ],
+      "name": "Mobina Poulaei"
+    },
+    {
+      "affiliations": [
+        "Department of Computer Engineering",
+        "Sharif University of Technology"
+      ],
+      "name": "Kiarash Kiani Feriz"
+    },
+    {
+      "affiliations": [
+        "Department of Computer Engineering",
+        "Sharif University of Technology"
+      ],
+      "name": "Mohammad Hossein Rohban"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对公开基座上算出的扰动能直接拖垮私有微调语音识别的问题，论文把防御集中到基座来源的可迁移方向上，用基座扰动训练、隐层位移约束和混合梯度扰动，把平均对抗词错误率从 92.6 降到 27.8，干净词错误率则从 16.4 升到 18.9。",
+  "originalTitle": "Breaking Adversarial Transferability in Fine-Tuned Speech Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2610.09109v1.pdf",
+  "readerTitle": "公开语音基座打得到自家微调模型：TransferBreaker 怎样切断对抗迁移",
+  "schemaVersion": 2
+}

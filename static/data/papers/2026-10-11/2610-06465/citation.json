@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.06465v1",
+  "arxivId": "2610.06465",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.06465v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Paula A. Perez-Toro"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "David Gimeno-Gómez"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Daniel Rückert"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Andreas Maier"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.06465v1",
+  "originalTitle": "When Layer Selection Misleads Speech Depression Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2610.06465v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

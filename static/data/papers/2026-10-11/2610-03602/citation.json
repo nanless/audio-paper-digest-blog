@@ -1,0 +1,45 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.03602v1",
+  "arxivId": "2610.03602",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.03602v1",
+  "authors": [
+    {
+      "affiliations": [
+        "New Jersey Institute of Technology, Newark NJ, USA",
+        "Mitsubishi Electric Research Laboratories (MERL), Cambridge, MA, USA"
+      ],
+      "name": "Sripathi Sridhar"
+    },
+    {
+      "affiliations": [
+        "Mitsubishi Electric Research Laboratories (MERL), Cambridge, MA, USA"
+      ],
+      "name": "Gordon Wichern"
+    },
+    {
+      "affiliations": [
+        "Mitsubishi Electric Research Laboratories (MERL), Cambridge, MA, USA"
+      ],
+      "name": "Yoshiki Masuyama"
+    },
+    {
+      "affiliations": [
+        "New Jersey Institute of Technology, Newark NJ, USA"
+      ],
+      "name": "Mark Cartwright"
+    },
+    {
+      "affiliations": [
+        "Mitsubishi Electric Research Laboratories (MERL), Cambridge, MA, USA"
+      ],
+      "name": "Jonathan Le Roux"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.03602v1",
+  "originalTitle": "Evaluating Inference-time Algorithms for Semantic Sound Scene Segmentation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.03602v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

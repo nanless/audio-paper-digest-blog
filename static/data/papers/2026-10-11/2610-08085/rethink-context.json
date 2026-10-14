@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.08085v1",
+  "abstract": "Speech-LLMs often exhibit prompt overfitting, where models solely trained on automatic speech recognition (ASR) instruction fail to generalize to new instructions such as speech translation and continue to behave primarily as ASR system. We propose DirectSpeech2LLM, a simple end-to-end framework that preserves the instruction-following ability of the LLM on unseen tasks when conditioned on speech. It computes distance-based CTC loss over the frozen LLM embedding matrix and uses greedy CTC labels to derive geometrically and temporally aligned speech embeddings respectively as an input to the LLM. Trained solely on 960 hours of LibriSpeech ASR data, DirectSpeech2LLM outperforms the cascaded system on ASR (seen task) and generalizes zero-shot to speech translation and emotion recognition (two unseen tasks), closely matching the cascaded system upper bound on these two new instructions despite seeing neither during training. We also find that geometric alignment strength plays a smaller role than previously assumed, as our modified CTC loss is shown to provide sufficient implicit geometric grounding without requiring an explicit regression loss. Results are consistent across two LLM families and scale with both more training data and model capacity.",
+  "abstractSha256": "7a02236d2f40089f3950aadfa4ac849c5c9f024a1bdb25cb515ad9e660f196c5",
+  "arxivId": "2610.08085",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.08085v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "CTC",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-translation",
+          "label": "语音翻译"
+        },
+        {
+          "facet": "task",
+          "id": "task.emotion-recognition",
+          "label": "语音情感识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.ctc",
+          "label": "CTC"
+        },
+        {
+          "facet": "method",
+          "id": "method.end-to-end-learning",
+          "label": "端到端学习"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "CTC",
+      "primaryMethodId": "method.ctc",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "IIIT Delhi, India"
+      ],
+      "name": "Hemant Yadav"
+    },
+    {
+      "affiliations": [
+        "Microsoft Research, India"
+      ],
+      "name": "Sunayana Sitaram"
+    },
+    {
+      "affiliations": [
+        "National University of Singapore"
+      ],
+      "name": "Roger Zimmermann"
+    },
+    {
+      "affiliations": [
+        "IIIT Delhi, India"
+      ],
+      "name": "Rajiv Ratn Shah"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文把冻结大模型词向量当几何锚点，用距离 CTC 统一时间压缩和几何约束，只在 960 小时英语转写上训练就在未见翻译和情绪任务上接近级联系统，同时保留独立 CTC 解码能力，代价是空白符位置敏感和长语音退化。",
+  "originalTitle": "DirectSpeech2LLM: A Simple End-to-End Framework to Mitigate Prompt Overfitting in Speech-LLMs",
+  "pdfUrl": "https://arxiv.org/pdf/2610.08085v1.pdf",
+  "readerTitle": "只用英语转写训练，语音大模型为何还能跟住翻译和情绪指令",
+  "schemaVersion": 2
+}

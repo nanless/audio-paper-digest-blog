@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.07216v1",
+  "abstract": "Existing audio deepfake detection (ADD) datasets and detectors are primarily built for vocoder-based synthesis, evaluated against traditional post-hoc perturbations such as MP3/AAC compression or additive noise, applied independently of generation. However, recent speech synthesizers, particularly ALM-based systems, use neural audio codecs both for compression and as the resynthesis reconstructing waveforms from generated tokens, producing artifacts distinct from post-hoc compression. Neural codecs thus play a dual role: some are designed for pure compression under low-bandwidth communication, while others serve as resynthesis components. Despite this dual role, robustness to codec-based compression, unlike post-hoc compression, remains largely unexplored. We expose this gap, showing that state-of-the-art (SOTA) ADD models degrade drastically on codec-compressed speech; in particular, systems trained on Codec Resynthesized data as a proxy for codec-based generation prove most vulnerable, with legitimately compressed bona fide speech often misclassified as fake. To investigate this, we construct the Audio Neural Codec-Spoof dataset by applying seven neural codec algorithms to existing ADD benchmarks, isolating codec-induced resynthesis artifacts as a controlled proxy for codec-based generation. As baseline mitigation, we propose PCL-NET (Pairwise Consistency Learned Network), fine-tuning a pretrained XLS-R (300M) encoder with a pairwise consistency objective that minimizes the representation distance between an utterance's uncompressed and codec-compressed versions, disentangling codec artifacts from the real-versus-fake decision. As a result, PCL-NET reduces average EER under neural codec compression from 28.67% to 12.77%, while preserving competitive CoSG-based deepfake detection performance. We will also make the dataset publicly available on Hugging Face upon acceptance.",
+  "abstractSha256": "b6812d28af7a58c8dd66e28923650dcc8b0c024c27a1785249fd5c7b0f5a49d2",
+  "arxivId": "2610.07216",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.07216v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "正则化",
+    "primaryTask": "音频深度伪造检测",
+    "rankBucket": "前50%",
+    "score": 6.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-deepfake",
+          "label": "音频深度伪造检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.regularization",
+          "label": "正则化"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "正则化",
+      "primaryMethodId": "method.regularization",
+      "primaryTask": "音频深度伪造检测",
+      "primaryTaskId": "task.audio-deepfake",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Abdullah"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Awais Khan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Khalid Mahmood Malik"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文揭示合法神经编解码压缩会让现有音频伪造检测大幅退化且基于编解码重合成训练的模型更脆弱，并用成对一致性微调在保持编解码生成检测的同时把压缩下的平均等错误率从 28.67% 降到 12.77%，代价是需多编解码增强训练与推理前只用单次前向。",
+  "originalTitle": "Exposing and Mitigating Neural Codec Vulnerabilities in Audio Deepfake Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2610.07216v1.pdf",
+  "readerTitle": "神经编解码压缩下音频伪造检测为何失效与如何缓解",
+  "schemaVersion": 2
+}

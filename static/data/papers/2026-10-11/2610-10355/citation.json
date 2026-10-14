@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.10355v1",
+  "arxivId": "2610.10355",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.10355v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zekai Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhilin Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xuzheng He"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yu Cheng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yang Yang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.10355v1",
+  "originalTitle": "MIRA: A Musical Intent Refinement Agent for Aligning Text-to-Music Generation with User Intent",
+  "pdfUrl": "https://arxiv.org/pdf/2610.10355v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.07046v1",
+  "abstract": "Visual speech promises noise-robust keyword spotting, yet a visual stream is not necessarily used. On a tri-modal query-by-example keyword spotting (QbyE-KWS) benchmark, we find that a system with a task-trained visual encoder comes within 2 percentage points of a text-and-audio system in equal error rate (EER) at -10 dB, and link this gap to the encoder's lack of phonemic information. We present GIVE-KWS, whose fusion stage, GIVE (Gated Injection of Visual Evidence), conditions query audio on lip motion through gated cross-attention. We show that visual robustness depends on two interacting conditions: a phoneme-bearing visual representation, and fusion that injects visual evidence rather than rescaling audio features. Under a phoneme-bearing encoder, injection yields an effective SNR gain of 4.0-9.3 dB over masking at -10 dB, whereas under a phoneme-poor one it nearly vanishes. Relative to the benchmark system, GIVE-KWS reduces unseen-keyword EER by 72.9% at -10 dB and 62.8% on average.",
+  "abstractSha256": "011706d9211ed95c19c3123c7100803d42e9f601ed53278b0e961e10fd60c046",
+  "arxivId": "2610.07046",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.07046v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "关键词检测",
+    "rankBucket": "前25%",
+    "score": 8.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.keyword-detection",
+          "label": "关键词检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "关键词检测",
+      "primaryTaskId": "task.keyword-detection",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ming-Hsiang Hu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kuan-Tang Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hung-Shin Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Berlin Chen"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文研究强噪声下用 spoken 示例指定关键词的检测问题，用门控交叉注意力把唇动证据加进查询音频，并在 MISP-QEKS 上证明只有音素承载的视觉表示配合注入式融合才能在 -10 dB 取得大幅等误率下降，但增益依赖编码器与干净注册条件且训练需约 72 小时单卡成本。",
+  "originalTitle": "GIVE-KWS: Gated Injection of Visual Evidence for Noise-Robust Query-by-Example Keyword Spotting",
+  "pdfUrl": "https://arxiv.org/pdf/2610.07046v1.pdf",
+  "readerTitle": "查询示例关键词检测中唇动视觉证据如何被注入音频",
+  "schemaVersion": 2
+}

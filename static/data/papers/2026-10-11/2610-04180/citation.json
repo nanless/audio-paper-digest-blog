@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.04180v1",
+  "arxivId": "2610.04180",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.04180v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiaomin He"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Vishal Choudhari"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tristan J. Spratt"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Aarya Raghavan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Richard T. Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nima Mesgarani"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.04180v1",
+  "originalTitle": "MOV-AAD: A Large-Scale Multimodal Dataset for Auditory Attention Decoding During Moving Conversations",
+  "pdfUrl": "https://arxiv.org/pdf/2610.04180v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

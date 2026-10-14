@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.12201v1",
+  "arxivId": "2610.12201",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.12201v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Haolong Zheng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Maike Züfle"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Dominik Macháček"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Peter Polák"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xulin Fan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xavier Sumba"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Siyin Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ondřej Klejch"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mark Hasegawa-Johnson"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.12201v1",
+  "originalTitle": "SteerablePlex: Can We Steer Full-Duplex Models?",
+  "pdfUrl": "https://arxiv.org/pdf/2610.12201v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

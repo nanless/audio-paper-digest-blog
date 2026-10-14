@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.11520v1",
+  "arxivId": "2610.11520",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.11520v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Minnie Kabra"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Benjamin Lecouteux"
+    },
+    {
+      "affiliations": [
+        "Univ. Grenoble Alpes, CNRS, Grenoble INP, LIG, 38000 Grenoble, France"
+      ],
+      "name": "Maximin Coavoux"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.11520v1",
+  "originalTitle": "When Can You Prune Your Network? A Study of Intermediate Neurons in Multilingual Speech Parsing",
+  "pdfUrl": "https://arxiv.org/pdf/2610.11520v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

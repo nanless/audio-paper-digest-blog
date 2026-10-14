@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.11237v1",
+  "abstract": "Group dance generation aims to synthesize coordinated multi-dancer choreography from music, with broad applications in animation and interactive content creation. This task requires modeling dense inter-person dependencies to ensure spatial coordination, while naturally preserving individual dancer identities. Existing approaches model all dancers jointly with end-to-end transformers, which tie the architecture to a fixed group size and entangle per-dancer identities across frames. We propose ChainDance, a scalable framework that reformulates group dance generation as a Chain-of-Dancers: a sequential decomposition over per-dancer conditional distributions, allowing a single model to scale across variable group sizes without retraining and naturally preserving per-dancer identity. Built on a frozen single-dancer diffusion backbone, ChainDance introduces two lightweight modules: a Role-Aware Text Encoder (RATE) for per-dancer semantic conditioning, and a Group-Aware Motion Encoder (GAME) that aggregates previously generated dancers via a distance-weighted graph convolutional network, and incorporates a training-free noise optimization procedure at inference time to enforce global spatial coherence. Experiments on AIOZ-GDance demonstrate that ChainDance achieves state-of-the-art motion quality and group coordination while structurally preserving per-dancer identity, with $3$-$4\\times$ fewer parameters and requiring $3$-$6\\times$ less training time compared to prior approaches.",
+  "abstractSha256": "cbeba71070f3965a22218e5ae65b3b6f96a6c713b26eb49c60debf4c9c417f31",
+  "arxivId": "2610.11237",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.11237v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "参数高效微调",
+    "primaryTask": "音视频生成",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-generation",
+          "label": "音视频生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.peft",
+          "label": "参数高效微调"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "method",
+          "id": "method.gnn",
+          "label": "图神经网络"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "参数高效微调",
+      "primaryMethodId": "method.peft",
+      "primaryTask": "音视频生成",
+      "primaryTaskId": "task.av-generation",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jing Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Cunjian Chen"
+    },
+    {
+      "affiliations": [
+        "Department of Data Science and Artificial Intelligence,",
+        "Monash University, Australia"
+      ],
+      "name": "Qiuhong Ke"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对音乐生成多人协调舞蹈时固定人数与身份混淆问题，ChainDance 把联合生成改写为沿舞者的条件链，用冻结单人扩散主干加两个轻量编码器与推理时噪声优化，在 AIOZ-GDance 三人组上报告 GMR 为 11.63 与 GMC 为 83.74，代价是全局优化把推理从 0:06 拉长到 0:15。",
+  "originalTitle": "Breaking the Group Size Barrier: Parameter-Efficient Group Dance Generation with Chain-of-Dancers",
+  "pdfUrl": "https://arxiv.org/pdf/2610.11237v1.pdf",
+  "readerTitle": "ChainDance：把群舞拆成一个接一个的单人条件生成",
+  "schemaVersion": 2
+}

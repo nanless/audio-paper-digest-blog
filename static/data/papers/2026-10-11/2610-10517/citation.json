@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.10517v1",
+  "arxivId": "2610.10517",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.10517v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ali M Ali"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ziyi Tang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nurdaulet Nazarbay"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hashim A. Hashim"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.10517v1",
+  "originalTitle": "Unsupervised Maneuver-Aware Acoustic Fault Detection for Autonomous Drones",
+  "pdfUrl": "https://arxiv.org/pdf/2610.10517v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

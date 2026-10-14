@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.04826v1",
+  "arxivId": "2610.04826",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.04826v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Dingdong Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shujie Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yayue Deng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuxuan Hu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yunrui Cai"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jincenzi Wu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jianwei Yu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jinyu Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Helen Meng"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.04826v1",
+  "originalTitle": "EchoChat: Structured Cognitive Reasoning in Empathetic Spoken Dialogue",
+  "pdfUrl": "https://arxiv.org/pdf/2610.04826v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

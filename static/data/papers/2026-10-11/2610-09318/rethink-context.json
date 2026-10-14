@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.09318v1",
+  "abstract": "In music beat tracking, model-predicted activations must be decoded into a discrete, musically coherent event sequence. Direct peak picking closely follows local evidence but can retain spurious peaks or miss weak beats. Dynamic Bayesian networks (DBNs), a widely used structured post-processor, improve sequence consistency under predefined global tempo, meter, and transition constraints, but their behavior can depend strongly on these settings. We introduce CASM, a context-aware semi-Markov decoder that instead conditions its temporal constraint on local activation evidence. CASM also accounts for ambiguity among competing periodic interpretations, including half- and double-tempo alternatives. Deterministic safeguards prevent implausible outputs and preserve beat-downbeat consistency. Applied to fixed activations from three neural beat trackers (BeatThis, MSCNN, and TCN), CASM improves temporal continuity while preserving event-level F1 across the GTZAN and SMC datasets, without backbone retraining or dataset-specific retuning. Further analysis shows that CASM is less sensitive than the DBN baseline to the composition of the calibration data.",
+  "abstractSha256": "677cb8ae1b5241953f41071df19e314f55589a1986fef4e95a97151807e3e207",
+  "arxivId": "2610.09318",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.09318v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "节拍跟踪",
+    "rankBucket": "前50%",
+    "score": 7.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.beat-tracking",
+          "label": "节拍跟踪"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.offline-inference",
+          "label": "离线推理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "节拍跟踪",
+      "primaryTaskId": "task.beat-tracking",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhanhong He"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hanyu Meng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yaolong Ju"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "CASM 在冻结的节拍激活上做离线半马尔可夫解码，用局部周期及其竞争间隔的分离程度调节时间正则强度，在 GTZAN 和 SMC 上以同一套参数提升连续性并保持 F1，代价是仍需阈值、音符数兜底和拍号解码等确定性规则。",
+  "originalTitle": "CASM: Context-Aware Semi-Markov Post-Processor for Beat Tracking",
+  "pdfUrl": "https://arxiv.org/pdf/2610.09318v1.pdf",
+  "readerTitle": "CASM：用局部周期清晰度调节约束的节拍后处理",
+  "schemaVersion": 2
+}

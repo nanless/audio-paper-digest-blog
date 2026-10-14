@@ -1,0 +1,20 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.12248v1",
+  "arxivId": "2610.12248",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.12248v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Department of AI, University of Seoul"
+      ],
+      "name": "Heeseung Kim"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.12248v1",
+  "originalTitle": "EgoVoice: Proactive Spoken Assistance from Egocentric Multimodal Streams",
+  "pdfUrl": "https://arxiv.org/pdf/2610.12248v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

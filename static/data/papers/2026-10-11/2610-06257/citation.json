@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.06257v1",
+  "arxivId": "2610.06257",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.06257v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yishan Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ran Piao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mathias Funk"
+    },
+    {
+      "affiliations": [
+        "Eindhoven University of Technology"
+      ],
+      "name": "Aaqib Saeed"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.06257v1",
+  "originalTitle": "SimAuthor: Harnessing Foundation Models for Persistent Scientific Simulator Authoring",
+  "pdfUrl": "https://arxiv.org/pdf/2610.06257v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

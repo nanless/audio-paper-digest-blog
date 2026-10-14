@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.08579v1",
+  "abstract": "Speech understanding in noise remains challenging for hearing-aid users, particularly in the presence of competing speakers. Conventional hearing aids typically perform speech enhancement (SE) and hearing-loss compensation in separate stages, which may cause enhancement errors and signal distortions to carry over to the amplification stage. Moreover, audio-only SE often provides limited benefits under competing-speech conditions because the target and interfering speech share similar acoustic characteristics, making them difficult to separate. To address these limitations, we propose AV-NeuroAMP, an end-to-end audiovisual framework that integrates noisy speech, target-talker video, and the listener's audiogram to jointly perform SE, personalized amplification, and dynamic-range compression. We further introduce audiogram-conditioned feature-wise linear modulation (AC-FiLM) to effectively incorporate listener-specific hearing profiles. Objective evaluations showed that AV-NeuroAMP outperformed conventional amplification, the audio-only NeuroAMP model, and two-stage systems on an in-domain English test set, and that these improvements were retained on an unseen Mandarin test set. Listening tests involving normal-hearing participants under simulated hearing loss and listeners with hearing loss further demonstrated improvements in speech quality and intelligibility, with the greatest benefits observed under competing-speech conditions. These findings support end-to-end audiovisual personalized amplification as a promising approach for improving hearing-aid performance in challenging acoustic environments.",
+  "abstractSha256": "34b452bc43d2690a7be68c87478eb152c2e5c3b239acfcd737c600c7220af0e4",
+  "arxivId": "2610.08579",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.08579v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "端到端学习",
+    "primaryTask": "目标说话人提取",
+    "rankBucket": "前50%",
+    "score": 7.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.target-speaker",
+          "label": "目标说话人提取"
+        },
+        {
+          "facet": "method",
+          "id": "method.end-to-end-learning",
+          "label": "端到端学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "application",
+          "id": "application.hearing-aids",
+          "label": "助听器"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "端到端学习",
+      "primaryMethodId": "method.end-to-end-learning",
+      "primaryTask": "目标说话人提取",
+      "primaryTaskId": "task.target-speaker",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Graduate Institute of Communication Engineering, National Taiwan University, Taipei, Taiwan"
+      ],
+      "name": "You-Jin Li"
+    },
+    {
+      "affiliations": [
+        "Research Center for Information Technology Innovation, Academia Sinica, Taipei, Taiwan"
+      ],
+      "name": "Yu Tsao"
+    },
+    {
+      "affiliations": [
+        "Graduate Institute of Communication Engineering, National Taiwan University, Taipei, Taiwan"
+      ],
+      "name": "Borching Su"
+    },
+    {
+      "affiliations": [
+        "Department of Otolaryngology-Head and Neck Surgery, Taipei Veterans General Hospital, Taipei, Taiwan",
+        "School of Medicine, National Yang Ming Chiao Tung University, Taipei, Taiwan"
+      ],
+      "name": "Kuan-Chung Ting"
+    },
+    {
+      "affiliations": [
+        "Center for Hearing Research, University of California, Irvine, California, USA"
+      ],
+      "name": "Fan-Gang Zeng"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文要解决竞争说话人下目标难分离且分阶段放大易放大残留干扰的问题，用目标说话人视频加听力图端到端估计 NAL-R 与 WDRC 目标，最强证据是噪声下客观与听感在竞争语音条件提升最大，代价是整句离线处理与视觉编码器带来约 232 GMACs 计算量。",
+  "originalTitle": "Audiovisual joint learning for end-to-end hearing aids",
+  "pdfUrl": "https://arxiv.org/pdf/2610.08579v1.pdf",
+  "readerTitle": "看得见说话人脸的助听放大：AV-NeuroAMP 一次做完增强与个性化补偿",
+  "schemaVersion": 2
+}

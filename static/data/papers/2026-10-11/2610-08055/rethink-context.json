@@ -1,0 +1,76 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.08055v1",
+  "abstract": "Automatic assessment of communication quality in dyadic counseling conversations is bottlenecked by data: expert-rated corpora are small and expensive to grow. We study cross-domain transfer of expert overall-impression prediction across three German corpora of simulated counseling (two general-practice medical, one school-related parent-teacher; $n=195$ expert-rated sessions, one corpus after scale equating). Training on the other domains beats training in-domain: leave-one-domain-out transfer reaches nested Spearman $ρ= 0.54$ against $\\le 0.48$ within the target domain, a paired session-level gap of $+0.15$ that holds at $+0.12$ when the training-set sizes are matched, so it is not simply data volume. The decisive features are session-level construct scores from small open-weight LLMs reading the two-speaker transcript, with the constructs largely derived from the experts' rating instruments: the instrument-derived battery lifts a single judge from $0.32$ to $0.41$ over generic dialogue qualities, judges from three model families ensemble to $0.51$ language-only, and a nonverbal-dyadic block adds $+0.03$ more, not separable from noise at this sample size. We also price the recording setup: one corpus lost its per-speaker audio, 16% of its diarised segments carry the wrong speaker, and repair is worth $+0.07$ there. At practically attainable corpus sizes, the expert's overall impression is carried by what is said, and by other communication programs' data more than by one's own.",
+  "abstractSha256": "d7481daed93622fb3e309dea6db06556fdde888db5c59474cfd17311b0618b79",
+  "arxivId": "2610.08055",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.08055v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "领域适应",
+    "primaryTask": "口语理解",
+    "rankBucket": "前50%",
+    "score": 5.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.spoken-understanding",
+          "label": "口语理解"
+        },
+        {
+          "facet": "method",
+          "id": "method.domain-adaptation",
+          "label": "领域适应"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.llm",
+          "label": "大语言模型"
+        },
+        {
+          "facet": "method",
+          "id": "method.model-ensemble",
+          "label": "模型集成"
+        },
+        {
+          "facet": "application",
+          "id": "application.education",
+          "label": "教育"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "领域适应",
+      "primaryMethodId": "method.domain-adaptation",
+      "primaryTask": "口语理解",
+      "primaryTaskId": "task.spoken-understanding",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Chair for Human-Centered",
+        "Artificial Intelligence",
+        "University of Augsburg"
+      ],
+      "name": "Tobias Hallmen"
+    },
+    {
+      "affiliations": [
+        "Chair for Human-Centered",
+        "Artificial Intelligence",
+        "University of Augsburg"
+      ],
+      "name": "Elisabeth André"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "用两个外域模拟咨询数据预测未见过第三个项目的专家总体印象，基于专家量表构念的本地小模型文本打分达到嵌套留一域 Spearman 0.54，超过域内训练，代价是需要一批无标签目标会话做按域特征校准且输出只支持排序。",
+  "originalTitle": "Language Carries the Expert's Impression: Instrument-Anchored LLM Judges Transfer Counseling-Quality Assessment and Beat In-Domain Training",
+  "pdfUrl": "https://arxiv.org/pdf/2610.08055v1.pdf",
+  "readerTitle": "跨项目迁移的咨询质量评估：量表锚定的文本打分如何胜过域内训练",
+  "schemaVersion": 2
+}

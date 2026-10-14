@@ -1,0 +1,31 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.10213v1",
+  "arxivId": "2610.10213",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.10213v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Institute for Data Processing and Electronics (IPE)",
+        "Karlsruhe Institute of Technology (KIT)",
+        "Karlsruhe, Germany"
+      ],
+      "name": "Nicholas Tan Jerome"
+    },
+    {
+      "affiliations": [
+        "Institute for Thermal Energy Technology",
+        "and Safety (ITES)",
+        "Karlsruhe Institute of Technology (KIT)",
+        "Karlsruhe, Germany"
+      ],
+      "name": "Fangnian Wang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.10213v1",
+  "originalTitle": "Edge Accuracy Is Not Enough: Why Dynamics-Learned Structure Fails to Transfer to Inverse Problems",
+  "pdfUrl": "https://arxiv.org/pdf/2610.10213v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

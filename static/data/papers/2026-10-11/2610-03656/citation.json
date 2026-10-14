@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.03656v2",
+  "arxivId": "2610.03656",
+  "arxivVersion": 2,
+  "arxivVersionedId": "2610.03656v2",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Junyoung Koh"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hao-Wen Dong"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.03656v2",
+  "originalTitle": "Revisiting Input Time-frequency Representations in Multi-pitch Estimation for Vocal Ensembles",
+  "pdfUrl": "https://arxiv.org/pdf/2610.03656v2.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

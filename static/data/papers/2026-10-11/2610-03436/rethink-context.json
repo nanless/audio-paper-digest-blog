@@ -1,0 +1,72 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.03436v1",
+  "abstract": "Speech-driven 3D facial animation can reproduce recognizable mouth poses. However, it can simplify the motion between them, and that motion carries coarticulation, the way the sounds around each sound shape its articulation. We introduce a geometric measure of this trajectory shaping: lip-path length compared with the shortest route through the vowel, consonant and vowel positions of a speech segment. In contrast to the endpoint chord, this consonant-aware route accounts for obligatory transit and avoids degeneracy, while preserving invariance to uniform motion gain. The measure needs only a forced alignment, so it applies where no ground truth exists. We demonstrate it on four state-of-the-art methods, one per architectural family, real-time and offline. All four trace flatter lip trajectories than captured speech. Against frame-rate-matched ground truth, DiffPoseTalk, ARTalk and FaceFormer show clear deficits, equivalent on this measure to removing 15-60% of real speech's fast articulatory component. CodeTalker is marginal on the primary measure and clear on a companion measure. A pre-registered study with 97 viewers and 3,523 judgments underpins the measured direction: controlled damping of real motion lowers the score and is penalized, whereas exaggeration shows no detected penalty over the tested range. Viewers also prefer real speech in 73.4% of sentence comparisons and, in the aggregate, on single words. Together, the measure, its calibration and the study identify a perceptually relevant loss of trajectory shaping and a concrete target for improving synthesized articulation.",
+  "abstractSha256": "77167d0d362899a1849331222de685889bb11be93990a6771da41603e0af2aaf",
+  "arxivId": "2610.03436",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.03436v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "统计分析",
+    "primaryTask": "音视频生成",
+    "rankBucket": "前50%",
+    "score": 5.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-generation",
+          "label": "音视频生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        },
+        {
+          "facet": "method",
+          "id": "method.subjective-evaluation",
+          "label": "主观评测"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.phonation",
+          "label": "发声与构音"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.speech-perception",
+          "label": "言语感知"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "统计分析",
+      "primaryMethodId": "method.statistical-analysis",
+      "primaryTask": "音视频生成",
+      "primaryTaskId": "task.av-generation",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "New Jersey Institute of Technology, USA"
+      ],
+      "name": "Danzel Serrano"
+    },
+    {
+      "affiliations": [
+        "New Jersey Institute of Technology, USA"
+      ],
+      "name": "Przemyslaw Musialski"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文针对语音驱动三维人脸动画中口型到位但过渡太平的问题，提出经过辅音途经点的唇部路径比度量，在四个方法上发现相对真实语音的整形缺失，并用受控阻尼校准与感知试验说明削弱是可感知的。",
+  "originalTitle": "The Shape of Speech: A Geometric Measure of Coarticulation for Speech-Driven 3D Facial Animation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.03436v1.pdf",
+  "readerTitle": "嘴唇路径的形状：语音驱动三维人脸动画中协同发音的几何度量",
+  "schemaVersion": 2
+}

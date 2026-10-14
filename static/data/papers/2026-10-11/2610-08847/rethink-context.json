@@ -1,0 +1,72 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.08847v1",
+  "abstract": "Time accurate speech transcription is essential in critical appli- cations, such as medical conversation transcription, reading as- sessment, and atypical speech recognition. Encoder-decoder auto- matic speech recognition models, such as Whisper, do not produce word-level timestamps out-of-the-box for all languages. Existing approaches to word-level time stamp estimation either use an exter- nal CTC model capable of frame level phoneme/character prediction which is computationally expensive, or use the cross attention scores internal to the model which gives coarse time stamps. We consider timestamped speech transcription for Hindi in this paper. We pro- pose a CTC-based approach, in which we train a low-complexity character level CTC head directly on the Whisper encoder output, to address the complexity and granularity limitations of existing works. We evaluate the system using manually-annotated word-level times- tamps. Experiments show that the proposed internal-CTC based approach performs similar to using an external CTC model and better than the cross attention score-based approaches. Further, we study the usage of CTC-head output to detect and mitigate hallu- cinations in conversational speech. Our results show that a simple token length criterion derived from the CTC output can improve the transcription quality for short segments where hallucinations are more probable.",
+  "abstractSha256": "c7c29b921ba192f9951bfe628e10285e9703ec86e092845ed027161d2c5e33b3",
+  "arxivId": "2610.08847",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.08847v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "CTC",
+    "primaryTask": "强制对齐",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.forced-alignment",
+          "label": "强制对齐"
+        },
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.ctc",
+          "label": "CTC"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.low-resource",
+          "label": "低资源"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "CTC",
+      "primaryMethodId": "method.ctc",
+      "primaryTask": "强制对齐",
+      "primaryTaskId": "task.forced-alignment",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sanat Kumar Agrawal"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Srikanth Raj Chetupalli"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对印地语带时间戳转写问题，论文在 Whisper 编码器输出上加一个字符级线性 CTC 头做强制对齐，时间戳精度与依赖外部模型的 WhisperX 相当，并用 CTC 输出长度约束缓解短语音幻觉，但结论只在原文四个测试集和人工标注条件下成立。",
+  "originalTitle": "Timestamped Hindi speech transcription using Whisper",
+  "pdfUrl": "https://arxiv.org/pdf/2610.08847v1.pdf",
+  "readerTitle": "给印地语语音加上词级时间戳：Whisper 编码器上的轻量 CTC 头",
+  "schemaVersion": 2
+}

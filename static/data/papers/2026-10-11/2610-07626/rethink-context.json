@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.07626v1",
+  "abstract": "Prosodic stress is a crucial aspect of automatic pronunciation assessment (APA), encompassing both sentence stress detection (SSD) and word stress detection (WSD). SSD highlights semantically salient words that shape discourse meaning, while WSD identifies the primary stressed syllable within each word to ensure lexical clarity. However, most prior work treats SSD and WSD as independent tasks, overlooking their shared reliance on prosodic cues such as pitch, duration, and intensity. To address this gap, we propose an effective SSD approach combining SSD with auxiliary WSD via a novel modeling paradigm. In addition, we introduce a word-span stress regularizer (WSR) that concentrates token-level SSD probabilities within each stressed word span. Experiments on the TinyStress-15K benchmark show that the proposed method outperforms strong baselines, with the complete configuration achieving the best SSD result.",
+  "abstractSha256": "7691d07133d5e86e34e4d13e097736a47ac8f8c886fd65a7090c7e224680ad4a",
+  "arxivId": "2610.07626",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.07626v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多任务学习",
+    "primaryTask": "发音评估",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.pronunciation-assessment",
+          "label": "发音评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.multitask",
+          "label": "多任务学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.regularization",
+          "label": "正则化"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.prosody",
+          "label": "韵律"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "多任务学习",
+      "primaryMethodId": "method.multitask",
+      "primaryTask": "发音评估",
+      "primaryTaskId": "task.pronunciation-assessment",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tien-Hong Lo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Fong-Chun Tsai"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ting-An Hung"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yu-Hsuan Hsieh"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yao-Ting Sung"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Berlin Chen"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文针对句子重读检测受子词切分影响而概率分散的问题，用冻结 Whisper 加句子级与音素级两个分支和词跨度正则项，在 TinyStress-15K 合成语料上把句子重读 F1 做到 0.934，代价是只在合成朗读条件下验证且两分支仍无直接交互。",
+  "originalTitle": "A Novel Sentence Stress Detection Framework Leveraging Auxiliary Word-Stress Modeling and Loss Optimization",
+  "pdfUrl": "https://arxiv.org/pdf/2610.07626v1.pdf",
+  "readerTitle": "句子重读与单词重读如何放在同一框架里联合建模",
+  "schemaVersion": 2
+}

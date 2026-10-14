@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.05256v1",
+  "arxivId": "2610.05256",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.05256v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shuanglin Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ruxiao Qian"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jian Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Haijun Lin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wenwu Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Siyang Song"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.05256v1",
+  "originalTitle": "Learning from imperfect teachers for low-resource acoustic generalization",
+  "pdfUrl": "https://arxiv.org/pdf/2610.05256v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

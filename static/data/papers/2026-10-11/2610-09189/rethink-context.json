@@ -1,0 +1,90 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.09189v1",
+  "abstract": "We propose SwinDS-BWE, a decision-science-inspired bandwidth extension (BWE) model with two coupled contributions: (1) Swin Transformers with lattice-style cross-stream interaction yield locality-aware modeling with linear-in-sequence per-window attention cost and reduce the prior AP-BWE generator size 0.5x from 33M to 17M. (2) Three novel lightweight decision-science-inspired discriminators augment AP-BWE's performance: a CVaR discriminator tail-pools activations to emphasize worst high-frequency (HF) segments, a Chance-Constraint HF discriminator penalizes excessive HF energy via a differentiable barrier, and a Multi-Criteria Utility discriminator learns convex style weights over spectral criteria. SwinDS-BWE surpasses prior AP-BWE with a 30x smaller discriminator (42.3M vs. 1.36M) and higher fidelity on English and French datasets. This work shows that decision-science-inspired critics can supervise BWE to reduce discriminator size.",
+  "abstractSha256": "9d0dac89d71b5663a142d4f4f5d809637f47d2ecb1eaf40f1e73c8991ed155fd",
+  "arxivId": "2610.09189",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.09189v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "生成对抗网络",
+    "primaryTask": "带宽扩展",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.bandwidth-extension",
+          "label": "带宽扩展"
+        },
+        {
+          "facet": "method",
+          "id": "method.gan",
+          "label": "生成对抗网络"
+        },
+        {
+          "facet": "method",
+          "id": "method.transformer",
+          "label": "Transformer"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "生成对抗网络",
+      "primaryMethodId": "method.gan",
+      "primaryTask": "带宽扩展",
+      "primaryTaskId": "task.bandwidth-extension",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tarikul Islam Tamiti"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sajid Fardin Dipto"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Luke Baja-Ricketts"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "David Vergano"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Anomadarshi Barua"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对高频重建局部难、平均型监督易漏掉稀疏失败的问题，该工作用 Swin-1D 格型生成器做幅度相位精修，并用三个轻量决策科学判别器补尾部与过亮监督，在 VCTK 与 MLS 法语上以更少参数取得更高的 NISQA-MOS，但 SI-SDR 等能量指标并未全面占优且实时因子略有增加。",
+  "originalTitle": "SwinDS-BWE: A Parameter-Efficient Swin-1D Lattice Generator with Decision-Science Discriminators for Speech Bandwidth Extension",
+  "pdfUrl": "https://arxiv.org/pdf/2610.09189v1.pdf",
+  "readerTitle": "SwinDS-BWE：用局部窗口生成器与尾部事件判别器做语音带宽扩展",
+  "schemaVersion": 2
+}

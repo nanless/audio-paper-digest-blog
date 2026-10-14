@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.04235v1",
+  "abstract": "Modern TTS systems increasingly generate synthetic speech at scale for diverse users. This setting calls for content-level provenance that can verify the origin of released speech and attribute it to the requesting user, which generative watermarking can support by embedding multi-bit identifiers directly into synthesized speech. Once released, however, speech may undergo heterogeneous learned transformations during distribution and editing, with reconstruction objectives that can preserve speech utility while affecting watermark recoverability differently. We find that no single watermark carrier remains consistently reliable across reconstruction models, as its survival depends jointly on the embedded structure, reconstruction mechanism, and observation representation. To this end, we propose Thrive, a multi-bit generative speech watermarking framework for modern autoregressive TTS, covering both discrete-token and continuous-representation generation under reconstruction attacks. Specifically, Rise synchronizes watermark injection into intermediate representations with its continued integration into subsequent generation, while Care combines waveform and spectral experts using bit-wise reliability selection. Experiments on both autoregressive paradigms show that Thrive preserves synthesis fidelity, achieves 87.6% average recovery accuracy under reconstruction attacks, and supports source attribution over candidate sets of up to 10,000 identities.",
+  "abstractSha256": "107ae4e4946917686e5dea77c2b5b6061a9dcd9a2f6e35365175f956aac31b55",
+  "arxivId": "2610.04235",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.04235v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "生成模型",
+    "primaryTask": "音频水印",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.watermarking",
+          "label": "音频水印"
+        },
+        {
+          "facet": "method",
+          "id": "method.generative",
+          "label": "生成模型"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        },
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "生成模型",
+      "primaryMethodId": "method.generative",
+      "primaryTask": "音频水印",
+      "primaryTaskId": "task.watermarking",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "East China Normal University, Shanghai, China"
+      ],
+      "name": "Weizhi Liu"
+    },
+    {
+      "affiliations": [
+        "Huaqiao University, Xiamen, China"
+      ],
+      "name": "Yue Li"
+    },
+    {
+      "affiliations": [
+        "Huaqiao University, Xiamen, China"
+      ],
+      "name": "Hui Tian"
+    },
+    {
+      "affiliations": [
+        "East China Normal University, Shanghai, China"
+      ],
+      "name": "Zhaoxia Yin"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文针对发布语音会被神经编解码、声码器和增强模型重建而抹掉水印的问题，提出在生成全程参与嵌入并在波形与频谱两路按比特选可靠恢复的 Thrive 框架，在两种自回归合成器上无攻击时比特准确率达 0.999，重建攻击下平均约 87.6%，代价是需要两阶段训练与双专家恢复结构。",
+  "originalTitle": "Learning to Watermark Speech Synthesis Against Model-Driven Reconstruction",
+  "pdfUrl": "https://arxiv.org/pdf/2610.04235v1.pdf",
+  "readerTitle": "在模型重建攻击下为自回归语音合成加多比特水印",
+  "schemaVersion": 2
+}

@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.11948v1",
+  "arxivId": "2610.11948",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.11948v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shuoyang Sun"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kerui Gu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hao Fang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shaoli Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bin Chen"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.11948v1",
+  "originalTitle": "When History Helps and Hurts: Selective History Use across Multimodal Turns",
+  "pdfUrl": "https://arxiv.org/pdf/2610.11948v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

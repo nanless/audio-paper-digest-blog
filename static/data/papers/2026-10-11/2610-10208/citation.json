@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.10208v1",
+  "arxivId": "2610.10208",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.10208v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Marcel Gibier"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Thomas Thebaud"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Olivier Boëffard"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jean-François Bonastre"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.10208v1",
+  "originalTitle": "CARES: A Controlled Synthetic Benchmark of Speaker Reactions to Sound",
+  "pdfUrl": "https://arxiv.org/pdf/2610.10208v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

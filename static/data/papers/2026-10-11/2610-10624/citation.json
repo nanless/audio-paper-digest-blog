@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.10624v1",
+  "arxivId": "2610.10624",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.10624v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yu Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ruihang Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yangguang Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xinyue Jiang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mohammed Bennamoun"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Farid Boussaid"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xinyuan Qian"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Qiuhong Ke"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.10624v1",
+  "originalTitle": "SAVU-BENCH: A Real-World Benchmark for Spatial Audio-Visual Understanding",
+  "pdfUrl": "https://arxiv.org/pdf/2610.10624v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

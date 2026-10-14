@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.05264v1",
+  "arxivId": "2610.05264",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.05264v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Miao He"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Peng Cheng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhongjie Ba"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Qing Wen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Li Lu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xin Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kui Ren"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.05264v1",
+  "originalTitle": "Task-Aware Joint Pruning and Distillation for Efficient Audio Deepfake Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2610.05264v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

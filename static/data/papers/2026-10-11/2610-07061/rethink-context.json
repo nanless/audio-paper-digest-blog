@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.07061v2",
+  "abstract": "Impact sound rendering synthesizes the sound produced when a 3D object is struck, but practical renderers often rely on fixed material presets such as wood, plastic, or steel. These presets limit the range of impact sounds a renderer can express, while manually adjusting the underlying material parameters remains difficult without expertise in material acoustics. We therefore study inverse impact sound rendering: predicting material parameters from a reference impact sound so that a simulator can recreate a similar material response. To support this task, we introduce ImpactMat, a dataset and benchmark of single and blended material impact sounds paired with ground-truth material parameters. We further propose a feed-forward model that predicts these parameters from one or more recordings, using blended materials to learn smooth transitions between material types. Experiments show that our method outperforms competitive baselines and enables re-rendering from real recordings without manual parameter tuning. The project page is available https://material-from-impact.github.io/material-from-impact/.",
+  "abstractSha256": "20d1ee773a6bd950bc24c93c8f85adbc2074e2e3f7d36afac6a74e18d0879793",
+  "arxivId": "2610.07061",
+  "arxivVersion": 2,
+  "arxivVersionedId": "2610.07061v2",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "数据集构建",
+    "primaryTask": "音频理解",
+    "rankBucket": "前50%",
+    "score": 6.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-understanding",
+          "label": "音频理解"
+        },
+        {
+          "facet": "method",
+          "id": "method.dataset-curation",
+          "label": "数据集构建"
+        },
+        {
+          "facet": "method",
+          "id": "method.cnn",
+          "label": "CNN"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "数据集构建",
+      "primaryMethodId": "method.dataset-curation",
+      "primaryTask": "音频理解",
+      "primaryTaskId": "task.audio-understanding",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hyebin Cho"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bumsoo Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Joon Son Chung"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文把逆向撞击声渲染做成从参考录音直接回归仿真器可用的连续材质参数，用单材质加混合材质合成数据训练集合聚合模型，在合成测试上误差和单查询耗时低于可比基线，并能把真实录音转成新网格的重渲染声音。",
+  "originalTitle": "ImpactMat: Continuous Material Estimation for Inverse Impact Sound Rendering",
+  "pdfUrl": "https://arxiv.org/pdf/2610.07061v2.pdf",
+  "readerTitle": "从敲击声反推材质参数：连续估计与重渲染",
+  "schemaVersion": 2
+}

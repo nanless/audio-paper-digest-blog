@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.04651v1",
+  "abstract": "Neural audio codecs compress waveforms into compact discrete tokens that underpin speech language models, real-time communication, and large-scale audio storage. Almost every dominant design, including residual vector quantization, finite scalar quantization, and single-codebook variants, follows the VQ-VAE template by partitioning the encoder latent through a learned codebook or a fixed scalar grid. We ask whether this partition is necessary. We introduce GS-Codec, a neural speech codec whose bottleneck is a parametric signal decomposition rather than a quantizer. We adapt Gaussian splatting from 3D scene reconstruction to one-dimensional latents. An inner optimization loop fits each encoder segment as a weighted sum of 1D Gaussian primitives. The decoder then reconstructs the waveform from the rendered sum. To avoid the cost of this iterative inner loop at inference time, we additionally train a lightweight GS Predictor Net that regresses the primitive parameters in a single forward pass. The encoder and decoder are trained end-to-end through the inner loop, with no quantizer anywhere in the training pipeline: the bottleneck is the decomposition itself, and scalar quantization is applied only post-training to the fitted parameters. Rather than relying on discrete codebook stages for bitrate control, our representation exposes a fine-grained rate-quality tradeoff: a single trained checkpoint supports post-training bitrate control by varying the number of primitives and the per-parameter bit depth, with no retraining required. GS-Codec matches or exceeds well-established open-source codecs such as EnCodec and DAC on speaker similarity (SIM), intelligibility (STOI), and perceptual quality (UTMOS) at comparable bitrates, while achieving comparable semantic performance (WER). Code and audio samples are available at https://ronaluf.github.io/gs-codec/",
+  "abstractSha256": "b4e9c1a8ba6d94d43d5809caa15bf3e10ad186f1fb0a47043f3df2a1484d5fc5",
+  "arxivId": "2610.04651",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.04651v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "神经编解码与离散单元",
+    "primaryTask": "语音编码",
+    "rankBucket": "前25%",
+    "score": 8.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-coding",
+          "label": "语音编码"
+        },
+        {
+          "facet": "method",
+          "id": "method.neural-codec",
+          "label": "神经编解码与离散单元"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "神经编解码与离散单元",
+      "primaryMethodId": "method.neural-codec",
+      "primaryTask": "语音编码",
+      "primaryTaskId": "task.speech-coding",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "School of Electrical and Computer Engineering"
+      ],
+      "name": "Ron Aluf"
+    },
+    {
+      "affiliations": [
+        "Ben-Gurion University of the Negev"
+      ],
+      "name": "Alon Canfi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Eliya Nachmani"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "GS-Codec 把编码器隐变量拟合成加权一维高斯基函数之和再做标量量化，用单检查点实现基元数与位深控制的码率调节，在 3 到 6 kbps 附近达到与 EnCodec 和 DAC 可比的重建质量，代价是迭代拟合的编码耗时需用预测网络摊销。",
+  "originalTitle": "GS-Codec: A Gaussian-Splatting Bottleneck for Neural Audio Coding",
+  "pdfUrl": "https://arxiv.org/pdf/2610.04651v1.pdf",
+  "readerTitle": "GS-Codec：用一维高斯溅射代替量化器的神经语音编码",
+  "schemaVersion": 2
+}

@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.01418v2",
+  "abstract": "Spiking Neural Networks (SNNs) enable event-driven computation through biologically inspired dynamics at the neuronal scale, while Mixture-of-Experts (MoE) perform conditional computation through expert selection at the model scale. Integrating their strengths offers potential for flexible neural architectures. A key challenge, however, lies in designing an expert selection mechanism based on spiking activity. To address this, we introduce a spike-based k-WTA Router inspired by competition-inhibition observed in the hippocampal CA1 region. The router incorporates lateral inhibition and refractory period to select Top-K experts according to discrete spike counts. Building on this, we present SpikeMoE, a framework that integrates neuronal-scale spiking dynamics with model-scale expert selection. To address incomplete multisensory inputs in multimodal tasks, we further equip SpikeMoE with a two-stage missing-modality modeling module that combines empirical prototypes from an observed-modality pool with modality-specific learnable embeddings to construct missing-modality representations. Experiments on vision, language, and multimodal benchmarks demonstrate that SpikeMoE achieves state-of-the-art performance among the SNN baselines, matches or exceeds the performance of ANN counterparts, and maintains robustness across diverse missing-modality conditions. These results demonstrate a favorable trade-off between performance and energy efficiency, validating the integration of spiking dynamics with sparse expert computation and highlighting SpikeMoE as a promising approach to energy-efficient brain-inspired computing.",
+  "abstractSha256": "30a7c16baffa994b206bbfe54ba18bb0e480262627df4cf010fb101a480f6e5f",
+  "arxivId": "2610.01418",
+  "arxivVersion": 2,
+  "arxivVersionedId": "2610.01418v2",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "混合专家模型",
+    "primaryTask": "语音情感识别",
+    "rankBucket": "前50%",
+    "score": 5.9,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.emotion-recognition",
+          "label": "语音情感识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.moe",
+          "label": "混合专家模型"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "混合专家模型",
+      "primaryMethodId": "method.moe",
+      "primaryTask": "语音情感识别",
+      "primaryTaskId": "task.emotion-recognition",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiaoli Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yujie Liang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jialin Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chenxiao Dou"
+    },
+    {
+      "affiliations": [
+        "School of Computer Science and Engineering,",
+        "University of Electronic Science and Technology of China"
+      ],
+      "name": "Malu Zhang"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文针对传统 softmax 门控与脉冲计算不兼容以及多模态输入缺失时选路脆弱的问题，提出基于侧抑制与不应期的 k-WTA 路由器和两阶段缺失模态补全，在视觉、语言与情感分析任务上以较低理论能耗达到与人工网络可比的精度，但结论依赖特定编码器、缺失模拟方式与理论能耗估计。",
+  "originalTitle": "SpikeMoE: Brain-Inspired Competitive Routing for Flexible Spiking Mixture-of-Experts",
+  "pdfUrl": "https://arxiv.org/pdf/2610.01418v2.pdf",
+  "readerTitle": "用脉冲竞争选专家：SpikeMoE 如何兼顾稀疏计算与缺失模态",
+  "schemaVersion": 2
+}

@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.04871v1",
+  "abstract": "Tonality is a fundamental organizing principle of Western music. However, the gradual transition from common-practice tonality to atonality around the turn of the twentieth century cannot be captured by binary labels. To characterize intermediate tonal states and trace this evolution, we propose a multidimensional framework for quantifying tonal strength, grounded in tonal theory and mechanisms underlying tonal dissolution. This framework operationalizes the global statistical regularity, temporal coherence, and local perceptual alignment of tonal organization through three complementary features: pitch-class distribution uniformity, temporal stability of tonal centers, and local tonal clarity, respectively. To validate the model, we introduce two new datasets: a binary dataset comprising 196 tonal and atonal pieces, and a historical MIDI corpus of 1,561 compositions by 21 composers spanning the Baroque era to the early twentieth century. The proposed model achieves high discriminative performance on the binary classification task (F_1=0.985), and quantitatively reveals a continuous historical trajectory from established tonality through progressive weakening to eventual dissolution. Computational analysis of representative composers further confirms significant declines in tonal strength throughout the careers of late-Romantic and modernist figures. Additionally, analysis of EMOPIA dataset reveals a weak but statistically significant positive correlation between higher tonal strength values and positive emotional valence. This work establishes a unified quantitative model for analyzing tonal evolution and provides a continuous measure for future behavioral and neurophysiological investigations of the relationships among tonal organization, musical emotion, and cognition.",
+  "abstractSha256": "4216459119dc1264f957663e8af79f6cf8b74f59f1d1cf631b13708e39d72c32",
+  "arxivId": "2610.04871",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.04871v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "统计分析",
+    "primaryTask": "音乐分析",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-understanding",
+          "label": "音乐分析"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.music-information",
+          "label": "音乐信息检索"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.auditory-cognition",
+          "label": "听觉与音乐认知"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "统计分析",
+      "primaryMethodId": "method.statistical-analysis",
+      "primaryTask": "音乐分析",
+      "primaryTaskId": "task.music-understanding",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Yuliang Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Nan Nan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Meilian Gu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Xiaohong Guan"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "该文针对二十世纪之交调性向无调性渐变无法用二标签描述的问题，用整体分布、时间延续和局部贴合三个特征经因子分析合成连续调性程度值，在 196 首二分类基准上达到 F1 约 0.985，并在 1561 首历史语料中呈现连续渐弱轨迹，但情绪关联很弱且只在特定语料条件下成立。",
+  "originalTitle": "A Multidimensional Model for Quantifying Tonal Strength: A Continuous Framework of Analyzing Tonal Evolution Beyond Tonal-Atonal Binary Classification",
+  "pdfUrl": "https://arxiv.org/pdf/2610.04871v1.pdf",
+  "readerTitle": "从二分类到连续量：多维调性强度如何刻画调性渐弱与瓦解",
+  "schemaVersion": 2
+}

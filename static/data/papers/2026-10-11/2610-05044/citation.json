@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.05044v1",
+  "arxivId": "2610.05044",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.05044v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shammur Absar Chowdhury"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zien Sheikh Ali"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Houssam Eddine-Othman Lachemat"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hamdy Mubarak"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.05044v1",
+  "originalTitle": "AraYoungVoices: A Diverse L1/L2 Corpus of Arabic Child and Adolescent Speech",
+  "pdfUrl": "https://arxiv.org/pdf/2610.05044v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

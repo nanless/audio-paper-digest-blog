@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.06465v1",
+  "abstract": "Pretrained speech representations are increasingly used for depression detection, but selecting the best encoder layer on the same data used for evaluation biases reported performance. On DAIC-WOZ, with repeated nested cross-validation across five deep encoder families, naive best-of-25-layer probing inflates AUC by up to $0.09$. On shuffled labels over the \\emph{real} latent representations, naive best-of-25 still reaches AUC $0.59$ versus $0.50$ under nested selection, and this bias grows with the number of probed layers and with smaller samples, isolating selection, not signal, as the cause. The effect replicates on a second clinical corpus and language (Androids, Italian). Under leakage-free selection, a fair comparison across representation families identifies a compact, task-aligned affect--prosody model as competitive with substantially more complex SSL, deep-learning, audio-LLM, and codec-based approaches, while using $\\sim\\!10^{3}\\times$ fewer trainable downstream parameters. Extending the analysis to individual PHQ-8 symptoms shows that the same selection bias persists at this finer-grained level. We argue nested model-selection protocols should be standard when probing encoder layer representations on small clinical speech datasets.",
+  "abstractSha256": "c758154987c579fd48fab24866d24683dfd60bced11204a9f5f76ff487d8faa0",
+  "arxivId": "2610.06465",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.06465v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "评测协议",
+    "primaryTask": "病理语音评估",
+    "rankBucket": "前50%",
+    "score": 5.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.pathological-speech",
+          "label": "病理语音评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        },
+        {
+          "facet": "application",
+          "id": "application.mental-health",
+          "label": "精神健康筛查"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "评测协议",
+      "primaryMethodId": "method.evaluation-protocol",
+      "primaryTask": "病理语音评估",
+      "primaryTaskId": "task.pathological-speech",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Paula A. Perez-Toro"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "David Gimeno-Gómez"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Daniel Rückert"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Andreas Maier"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文针对用同一折选编码器层又报性能导致的乐观偏差，用朴素与嵌套选择对照、打乱标签与纯噪声控制加以量化，并在无泄漏比较下发现紧凑情感韵律特征与大模型表示相当，而代价是下游可训练参数约少一千倍。",
+  "originalTitle": "When Layer Selection Misleads Speech Depression Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2610.06465v1.pdf",
+  "readerTitle": "选层为什么会误导语音抑郁检测：一次嵌套评估审计",
+  "schemaVersion": 2
+}

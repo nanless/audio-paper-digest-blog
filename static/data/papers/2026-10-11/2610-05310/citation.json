@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.05310v1",
+  "arxivId": "2610.05310",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.05310v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Aref Mousavi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shahab Sherafat"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kiarash Kiani Feriz"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Amirparsa Safari"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Raoof Zare Moayedi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mohammad Hossein Rohban"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mohammad Sabokrou"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.05310v1",
+  "originalTitle": "Transferable Adversarial Robustness for Speech Foundation Models via Hierarchical Stabilization",
+  "pdfUrl": "https://arxiv.org/pdf/2610.05310v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

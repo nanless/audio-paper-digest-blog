@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.07524v1",
+  "abstract": "Accent leakage remains a critical challenge in cross-lingual zero-shot text-to-speech (TTS), where models inadvertently transfer both the speaker's timbre and source-language accent into the target-language output. In mask-reconstruction TTS this is amplified by a train--inference mismatch: training reconstructs from same-language context, while inference conditions on cross-lingual context. We close this gap by concatenating utterances from two languages and placing the reconstruction mask relative to the language boundary, so training presents the cross-lingual prompting pattern the model encounters at inference. This requires no language IDs, accent labels, parallel same-speaker recordings, or architectural changes---only the mask geometry differs. In a listening study with native speakers, region-aware masking reduces perceived accent from 4.3 to 0.5 on a 0-5 scale against the unadapted baseline, and by 18-51\\% in seen regimes and 35-55\\% on unseen source languages against bilingual adaptation alone, with no measurable loss in intelligibility or naturalness. Comparing mask geometries shows that placement, not the amount masked, governs the balance between accent suppression and speaker preservation: masks confined to the reconstruction region suppress accent most but retain the reference speaker least reliably, whereas two-region masking achieves both. Mask geometry is thus a simple, effective lever for accent robustness.",
+  "abstractSha256": "964e2934d9201cd93409297e9dd8cc0507ba6912fabed70a6e6ea25deaa4d191",
+  "arxivId": "2610.07524",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.07524v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "流匹配",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前50%",
+    "score": 7.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "task",
+          "id": "task.voice-cloning",
+          "label": "语音克隆"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.cross-lingual",
+          "label": "跨语言"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.zero-shot",
+          "label": "零样本"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "流匹配",
+      "primaryMethodId": "method.flow-matching",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Haoqi Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shivam Mehta"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ravi Teja Gadde"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yinghong Lan"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对跨语言零样本合成把参考音频的源语言口音带进目标英语的问题，该文用双语拼接加区域感知掩码让训练见到推理时的跨语言提示模式，母语人听辨显示口音明显下降，但掩码位置决定了口音抑制与音色保持的折中。",
+  "originalTitle": "Region-Aware Masking for Accent-Robust Cross-Lingual Text-to-Speech",
+  "pdfUrl": "https://arxiv.org/pdf/2610.07524v1.pdf",
+  "readerTitle": "把两种语言拼在一起训练，为什么能减轻跨语言合成的口音串味",
+  "schemaVersion": 2
+}

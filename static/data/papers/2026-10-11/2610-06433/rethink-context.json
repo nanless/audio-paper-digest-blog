@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.06433v1",
+  "abstract": "Low-power speech recognition requires reducing audio acquisition and feature-processing costs as well as neural inference. We present Lyric, a speech-recognition front end that uses wave-domain computing to extract features before digitization. Our proposed system uses passive acoustic resonators to separate speech by frequency and supplies their slowly varying envelopes to a compact temporal neural network. This moves spectral filtering into the acoustic structure, reducing the data and processing needed for recognition. We build a prototype and evaluate spoken-digit recognition on a speakerdisjoint AudioMNIST split across nine classifier families. The front end acquires 32 times fewer scalar samples than a 16-kHz waveform. In the EdgeSpeechNet-A comparison on a Raspberry Pi 4, we reduce preprocessing-plus-inference latency and estimated processor energy per inference by 98.6%, with a 3.58-percentage-point decrease in accuracy to 95.70%.",
+  "abstractSha256": "e3c274ee2f57811980158885180eb5d1ebcf84f88b74ea5bfeacbf59d02b0c66",
+  "arxivId": "2610.06433",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.06433v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "信号处理",
+    "primaryTask": "关键词检测",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.keyword-detection",
+          "label": "关键词检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.real-time",
+          "label": "实时处理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "关键词检测",
+      "primaryTaskId": "task.keyword-detection",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jeeven Balasubramaniam"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nakul Garg"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "Lyric 针对小设备上音频采集与频谱特征计算开销大的问题，用五个无源声学共振通道加低速包络做输入，在说话人互斥的 AudioMNIST 实测中以 EdgeSpeechNet-A 达到 95.70% 准确率，代价是相对对数梅尔基线下降 3.58 个百分点并大幅降低处理器计算延迟。",
+  "originalTitle": "Lyric: Wave-Domain Computing for Efficient Spoken-Digit Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2610.06433v1.pdf",
+  "readerTitle": "Lyric：把频率分选搬进声波域的低功耗口语数字识别",
+  "schemaVersion": 2
+}

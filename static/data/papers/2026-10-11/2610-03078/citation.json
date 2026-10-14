@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.03078v1",
+  "arxivId": "2610.03078",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.03078v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hanlu He"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Harald Vilhelm Skat-Rørdam"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ingvi Örnólfsson"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ivana Konvalinka"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.03078v1",
+  "originalTitle": "An automated pipeline for standardised speech-unit annotation in spontaneous dialogue",
+  "pdfUrl": "https://arxiv.org/pdf/2610.03078v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,77 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.10749v1",
+  "abstract": "Large audio-language models (LALMs) fuse an audio encoder into a large language model (LLM) through multi-stage training. This coupling means that a new domain or a stronger LLM requires retraining, and their answers cannot be traced to what the model heard: a chain-of-thought is a post-hoc account. We propose Listen-to-Reason (L2R), an interpretable-by-design pipeline that passes audio to the LLM through an explicit, human-readable tree: small heads on frozen expert encoders map each chunk of a clip to semantically meaningful nodes on the tree (for speech, music and environmental sound), and a frozen text-only LLM answers from these nodes and an ASR transcript without hearing the clip. Every answer can therefore be traced to the nodes and transcript it read, and the nodes are causal: replacing the deciding node with a distractor overturns 78% of correct answers on SAKURA. With a 7B reader, L2R outperforms all LALMs we compare against on SAKURA and trails them by 6-12 points on MMAU and MMAR, despite training about 1,400x fewer parameters on orders of magnitude less audio data. However, because any LLM can serve as the reader, we show that a stronger reader narrows this gap without retraining any audio component. A new domain is added with one small head: with five labelled clips per species, it outperforms QLoRA fine-tuning of an LALM on the same clips by 13-26 points.",
+  "abstractSha256": "2830dfd285d403f39fe8f85f65e342abaf88390b18e8feddcef2a2b33fbb3e0f",
+  "arxivId": "2610.10749",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.10749v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "检索增强",
+    "primaryTask": "音频推理",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-reasoning",
+          "label": "音频推理"
+        },
+        {
+          "facet": "method",
+          "id": "method.retrieval-augmented",
+          "label": "检索增强"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.interpretability",
+          "label": "可解释性"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.few-shot",
+          "label": "少样本"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "检索增强",
+      "primaryMethodId": "method.retrieval-augmented",
+      "primaryTask": "音频推理",
+      "primaryTaskId": "task.audio-reasoning",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Concordia University",
+        "Mila – Quebec AI Institute"
+      ],
+      "name": "Pooneh Mousavi"
+    },
+    {
+      "affiliations": [
+        "Concordia University",
+        "Mila – Quebec AI Institute"
+      ],
+      "name": "Mirco Ravanelli"
+    },
+    {
+      "affiliations": [
+        "Concordia University",
+        "Mila – Quebec AI Institute",
+        "Laval University"
+      ],
+      "name": "Cem Subakan"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文把音频问答拆成命名树节点加语音转写文本再由冻结文本大模型作答，在 SAKURA 上超过所比音频大模型并用干预证明节点有因果作用，代价是计数排序与细粒度场景题仍落后且推理端需要跑多个编码器与转写模型。",
+  "originalTitle": "Listen-to-Reason: Listen with Experts, Retrieve over a Graph, Reason with LLMs",
+  "pdfUrl": "https://arxiv.org/pdf/2610.10749v1.pdf",
+  "readerTitle": "把音频变成可读文字再推理：Listen-to-Reason 的树、路由与冻结阅读器",
+  "schemaVersion": 2
+}

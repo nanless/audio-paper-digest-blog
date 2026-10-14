@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.03381v1",
+  "abstract": "We investigate noise disparity in multi-class speech classification tasks and develop a strategy to prevent classifiers from exploiting class-dependent noise characteristics. Building on our previous work for binary classification, we introduce a multi-class cross-augmentation scheme that exposes each class to the noise characteristics of the other classes, thereby removing the association between individual noise conditions and class labels. We compare this training-based approach with speech enhancement (SE) as a preprocessing strategy, which aims to suppress noise-related cues directly from the input. Experiments on multi-class emotion recognition show that cross-augmentation effectively mitigates the effect of noise disparity across a range of signal-to-noise-ratios, while SE has a detrimental effect on model performance.",
+  "abstractSha256": "2290d927c7784f057e059e0d2ae1f4d9409c643d614d77559ec586c361ba2dcf",
+  "arxivId": "2610.03381",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.03381v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "数据增强",
+    "primaryTask": "语音情感识别",
+    "rankBucket": "前50%",
+    "score": 5.7,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.emotion-recognition",
+          "label": "语音情感识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.augmentation",
+          "label": "数据增强"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-enhancement",
+          "label": "语音增强"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "数据增强",
+      "primaryMethodId": "method.augmentation",
+      "primaryTask": "语音情感识别",
+      "primaryTaskId": "task.emotion-recognition",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mahdi Amiri"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sayantan Biswas"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mingchi Hou"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Pascal Frossard"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ina Kodrasi"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文研究训练集中噪声类型与类别标签系统绑定的多类情绪识别问题，对比每次叠加其余所有类噪声的全量交叉增强与语音增强预处理，发现只有前者在可控信噪比下消除噪声捷径，而增强会引入新的可判别伪影，但全量叠加要付出有效信噪比下降的代价。",
+  "originalTitle": "Multiclass Speech Classification Under Noise Disparity",
+  "pdfUrl": "https://arxiv.org/pdf/2610.03381v1.pdf",
+  "readerTitle": "类别相关噪声下的多类语音分类：交叉增强与语音增强的对照解读",
+  "schemaVersion": 2
+}

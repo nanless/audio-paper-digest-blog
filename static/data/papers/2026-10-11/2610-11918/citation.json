@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.11918v1",
+  "arxivId": "2610.11918",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.11918v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Hefei University of Technology"
+      ],
+      "name": "Jia Li"
+    },
+    {
+      "affiliations": [
+        "Hefei University of Technology"
+      ],
+      "name": "Yichao He"
+    },
+    {
+      "affiliations": [
+        "Hefei University of Technology"
+      ],
+      "name": "Yangchen Yu"
+    },
+    {
+      "affiliations": [
+        "Nanyang Technological University"
+      ],
+      "name": "Qiankun Li"
+    },
+    {
+      "affiliations": [
+        "Hefei University of Technology"
+      ],
+      "name": "Xinyi Li"
+    },
+    {
+      "affiliations": [
+        "Hefei University of Technology"
+      ],
+      "name": "Baiyi Ye"
+    },
+    {
+      "affiliations": [
+        "Hefei University of Technology"
+      ],
+      "name": "Zhenzhen Hu"
+    },
+    {
+      "affiliations": [
+        "Hefei University of Technology"
+      ],
+      "name": "Richang Hong"
+    },
+    {
+      "affiliations": [
+        "Nanyang Technological University"
+      ],
+      "name": "Erik Cambria"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.11918v1",
+  "originalTitle": "From Surface to Depth: Towards Cognitive Appraisal Reasoning in Multimodal Emotion Understanding",
+  "pdfUrl": "https://arxiv.org/pdf/2610.11918v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

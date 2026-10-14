@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.11310v1",
+  "abstract": "While 3D spatial reasoning in dynamic egocentric environments is crucial for embodied intelligence, audio-visual large language models (AV-LLMs) lack explicit mechanisms to process and internalize global geometry directly from raw sensory streams. Existing approaches either require costly fine-tuning or underutilize the model's cross-modal reasoning capacities. In this paper, we propose FloorSAV, a novel framework that explicitly grounds spatial audio-visual context by rendering a dynamic 2D floormap. By integrating 3D point clouds, camera trajectories, spatial audio cues, and semantically grounded object landmarks, we inject this floormap into the AV-LLM as a synchronized stream with an egocentric video. AV-LLMs utilize their multi-modal capabilities to jointly reason over visual, auditory, and geometric cues in a single inference with floormap interpretation guidance. We further introduce SAVED-Bench (Spatial Audio-Visual Egocentric Benchmark with Dynamic Agents), constructing essential tasks of spatial capability in real-world scenarios: dynamic relativity, regional, and path reasoning QAs. FloorSAV improves AV-LLMs' spatial reasoning on various tasks from both SAVED-Bench and SAVVY-Bench. Studies with ground-truth floormaps demonstrate the substantial potential of FloorSAV with accurate spatial information.",
+  "abstractSha256": "09ae489b944f6341f305b58d8159beb457fe91a14ba585fbc67a0478620e1f82",
+  "arxivId": "2610.11310",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.11310v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "音视频问答",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-question-answering",
+          "label": "音视频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.spatial-audio",
+          "label": "空间音频信号"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "音视频问答",
+      "primaryTaskId": "task.av-question-answering",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Korea Advanced Institute of Science and Technology"
+      ],
+      "name": "Kyeong-Rae Kim"
+    },
+    {
+      "affiliations": [
+        "Korea Advanced Institute of Science and Technology"
+      ],
+      "name": "Sungnyun Kim"
+    },
+    {
+      "affiliations": [
+        "Korea Advanced Institute of Science and Technology"
+      ],
+      "name": "Tae-Hyun Oh"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "FloorSAV 针对第一视角窄视野加移动声源难定位的问题，把点云、相机轨迹、声源估计和物体标注画成与视频同步的二维俯视图小视频送给音频视觉大模型做单次联合推理，在 SAVED-Bench 整体从 58.3% 提到 65.3%，代价是依赖高质量点云位姿和多通道音频且地图读数仍受模型能力限制。",
+  "originalTitle": "FloorSAV: Elucidating Spatial Audio-Visual Context with 2D Floormap for AV-LLMs",
+  "pdfUrl": "https://arxiv.org/pdf/2610.11310v1.pdf",
+  "readerTitle": "用俯视小地图帮第一视角模型认路：FloorSAV 解读",
+  "schemaVersion": 2
+}

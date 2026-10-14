@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.10517v1",
+  "abstract": "This paper presents a maneuver-aware acoustic fault detection framework for autonomous drones that integrates Noise2Noise-inspired deep learning denoising with maneuver-conditioned reconstruction. A key practical constraint motivating this work is that labeled faulty-flight data are difficult and potentially unsafe to collect; the proposed framework therefore follows an unsupervised learning paradigm in which only nominal flight recordings are required for training. In flight environments, acoustic signals acquired from unmanned aerial vehicles are subject to variability arising both from environmental noise and from structured, maneuver-dependent aerodynamic effects. To address these challenges simultaneously, a two-stage learning architecture is developed. In the first stage, a Noise2Noise-inspired denoising model attenuates stochastic acoustic noise while preserving fault-relevant spectral-temporal structures, without requiring clean reference signals. In the second stage, a maneuver-Conditioned Convolutional AutoEncoder (maneuver-CCAE) is trained using maneuver-related labels including drone type and flight direction to model nominal acoustic behavior under varying operating conditions. Fault detection is subsequently performed using reconstruction error as an anomaly score. Experimental results demonstrate that the proposed maneuver-aware conditioning raises the area under the ROC curve (AUC) from $\\AUCaeOnly$ (unconditioned baseline) to $\\AUCfull$ (full model), validating the critical role of maneuver-dependent modeling. The complete framework is deployed on an NVIDIA Jetson Orin Nano Super embedded platform within a ROS2 pipeline, achieving an end-to-end fault detection latency of approximately $20\\,\\text{ms}$ per audio segment with a TensorRT half-precision (FP16) backend, confirming real-time viability for onboard UAV health monitoring.",
+  "abstractSha256": "cb8569830a3ad8ae86d06ff925190c30d0294250b76a9dbebef2f2074e6cbb5f",
+  "arxivId": "2610.10517",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.10517v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "无监督学习",
+    "primaryTask": "异常声音检测",
+    "rankBucket": "前50%",
+    "score": 5.9,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.anomaly-detection",
+          "label": "异常声音检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.unsupervised",
+          "label": "无监督学习"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.real-time",
+          "label": "实时处理"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.on-device",
+          "label": "端侧运行"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "无监督学习",
+      "primaryMethodId": "method.unsupervised",
+      "primaryTask": "异常声音检测",
+      "primaryTaskId": "task.anomaly-detection",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ali M Ali"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ziyi Tang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nurdaulet Nazarbay"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hashim A. Hashim"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对健康机动与故障在声音上容易混淆的问题，该工作用去噪加机动条件重构只学习健康声音，用重构误差做异常分，在同一划分下完整模型 AUC 达到 0.884，但误报率上升到 0.296 且端到端延迟约 20 ms 主要来自去噪网络。",
+  "originalTitle": "Unsupervised Maneuver-Aware Acoustic Fault Detection for Autonomous Drones",
+  "pdfUrl": "https://arxiv.org/pdf/2610.10517v1.pdf",
+  "readerTitle": "只用健康飞行声音发现无人机故障：机动感知的两阶段声学检测",
+  "schemaVersion": 2
+}

@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.06074v1",
+  "abstract": "Voice anonymization (VA) is used to conceal the voice identities in speech data. Performance is usually estimated using automatic speaker verification (ASV) as a proxy to judge the capability of an attacker to re-identify speakers after anonymization. The defender anonymizes test utterances; the attacker compares them to equally anonymized reference utterances to infer voice identity, with degraded ASV performance indicating successful anonymization. Thus, the defender's protection is one-sided and only applied to test utterances via VA. Though unexplored so far, there is an opportunity to enhance anonymization by protecting reference utterances too. We present a new, preemptive VA paradigm: reference utterances are protected using adversarial noise to degrade their potential to infer voice identity. Preemptive protection does not degrade the perceived quality of reference utterances and is independent of the specific ASV system used for identity inference. By combining preemptive protection and regular test-side VA, ASV equal error rates can be increased from 14\\% to 45\\% (near-perfect privacy).",
+  "abstractSha256": "275c4878115ea82226ea2e5ea5be6828f37345af0d2d1dae7a6a7b43a4797774",
+  "arxivId": "2610.06074",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.06074v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "对抗训练",
+    "primaryTask": "说话人匿名化",
+    "rankBucket": "前25%",
+    "score": 8.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.anonymization",
+          "label": "说话人匿名化"
+        },
+        {
+          "facet": "method",
+          "id": "method.adversarial-training",
+          "label": "对抗训练"
+        },
+        {
+          "facet": "task",
+          "id": "task.speaker-verification",
+          "label": "说话人验证"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.privacy",
+          "label": "隐私保护"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "对抗训练",
+      "primaryMethodId": "method.adversarial-training",
+      "primaryTask": "说话人匿名化",
+      "primaryTaskId": "task.anonymization",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Michele Panariello"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yibo Bai"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Massimiliano Todisco"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nicholas Evans"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对只匿名测试语音而参考语音仍可被对齐利用的问题，该文在参考端提前加入针对匿名系统量化瓶颈的对抗噪声，使等错误率从 14% 左右升到 45% 左右，而加噪后的参考语音本身在有界条件下仍保持可用。",
+  "originalTitle": "Preemptive defense against re-identification attacks on voice anonymization via adversarial perturbation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.06074v1.pdf",
+  "readerTitle": "提前保护参考语音：用对抗扰动阻止匿名语音的重识别",
+  "schemaVersion": 2
+}

@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.09211v1",
+  "arxivId": "2610.09211",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.09211v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Emtiaz Uddin Ahmed"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Araf Mahmud"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sajib Hossain"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tarikul Islam Tamiti"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sajid Fardin Dipto"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Anomadarshi Barua"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.09211v1",
+  "originalTitle": "BanglaBox: A Phonetically-Balanced Corpus and Data-Efficient Foundation-Model Adaptation for Bangla Text-to-Speech with Zero-Shot Voice Cloning",
+  "pdfUrl": "https://arxiv.org/pdf/2610.09211v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.03656v2",
+  "abstract": "Multi-pitch estimation in vocal ensembles is challenging because singers occupy overlapping pitch ranges and often sing at closely spaced fundamental frequencies, causing their harmonics to overlap in time-frequency representations. Existing models commonly use harmonic constant-Q transform (HCQT)-based representations to provide frequency-adaptive resolution, at the cost of expensive feature extraction when training mixtures are generated on the fly. We revisit this design and compare HCQT with a linear short-time Fourier transform (STFT), whose frequency bins are directly provided as model inputs. Despite its fixed frequency resolution and the absence of a pitch-aligned input grid, the linear STFT outperforms HCQT while substantially reducing feature-extraction cost. Further analysis shows that a longer analysis window or broader spectral coverage provides no additional improvement, while restricting the input to the predicted pitch range reduces the advantage of the linear STFT. These results suggest that finer frequency resolution does not necessarily improve vocal-ensemble MPE, and that shorter analysis windows can be more effective for time-varying vocal pitches.",
+  "abstractSha256": "08bb278af7be70ee94296e2d3dc3b8fec5320d36082a5c4fb780a4fcabd2193d",
+  "arxivId": "2610.03656",
+  "arxivVersion": 2,
+  "arxivVersionedId": "2610.03656v2",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "时频分析",
+    "primaryTask": "音高与旋律提取",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.pitch-melody",
+          "label": "音高与旋律提取"
+        },
+        {
+          "facet": "method",
+          "id": "method.time-frequency",
+          "label": "时频分析"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "method",
+          "id": "method.cnn",
+          "label": "CNN"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "时频分析",
+      "primaryMethodId": "method.time-frequency",
+      "primaryTask": "音高与旋律提取",
+      "primaryTaskId": "task.pitch-melody",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Junyoung Koh"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hao-Wen Dong"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "该文比较固定分辨率线性短时傅里叶变换与谐波常数 Q 变换作为人声合唱多音高估计输入，在同一编码器下线性表示精度更高且每轮特征提取更快，但加长窗和扩大频带并无增益且结论受自动参考音高与同期录音条件限制。",
+  "originalTitle": "Revisiting Input Time-frequency Representations in Multi-pitch Estimation for Vocal Ensembles",
+  "pdfUrl": "https://arxiv.org/pdf/2610.03656v2.pdf",
+  "readerTitle": "人声合唱多音高估计要不要用谐波常数 Q 变换",
+  "schemaVersion": 2
+}

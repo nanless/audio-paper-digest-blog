@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.05155v1",
+  "arxivId": "2610.05155",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.05155v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jiachen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Fulin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhong-Qiu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.05155v1",
+  "originalTitle": "UltraM2M: Leveraging Text Transcripts and Mixture Constraints for Weakly-Supervised Speech Enhancement",
+  "pdfUrl": "https://arxiv.org/pdf/2610.05155v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

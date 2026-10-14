@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.07026v1",
+  "abstract": "The Offline AI Modules workstream enables practical, low-power, and community-accessible deployment of voice-first AI systems that operate fully offline. Designed for African language communities where speech is the dominant mode of interaction and internet connectivity is unreliable or absent, the workstream delivers three reinforcing components: a modular voice-first offline architecture, a low-cost hardware reference bill of materials, and a reproducible quantization and a reproducible quantization and benchmarking pipeline for instruction-tuned language models in the 2-5B parameter class. This paper presents the first end-to-end benchmark evaluation of the stack across two hardware tiers: an NVIDIA Jetson Orin NX (TierB) and a Raspberry Pi5 (TierA). Three instruction-tuned models are evaluated across four quantization formats, assessed for deployment metrics (decode throughput, chat latency, memory, power) and multilingual quality (topic classification accuracy on MasakhaNEWS across English, Hausa, Igbo, Nigerian Pidgin, and Yoruba; per-language perplexity drift). Speech recognition is evaluated using Ethio-ASR on Amharic and Oromo across both tiers. The principal finding is that Q4_K_M quantization represents the best size-to-quality trade-off for deployment on both tiers: gemma-4-E2B-it achieves 28.8t/s decode throughput and 89.2% topic classification accuracy at Q4_K_M on TierB, while all three models run within the 16GB memory budget on TierA.",
+  "abstractSha256": "fd4e200a9d372bfc23e6cddeb8cbee512d24ad1d335318615dce1e7c3c5b5844",
+  "arxivId": "2610.07026",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.07026v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "模型量化",
+    "primaryTask": "语音交互",
+    "rankBucket": "前50%",
+    "score": 6.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-interaction",
+          "label": "语音交互"
+        },
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.quantization",
+          "label": "模型量化"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "模型量化",
+      "primaryMethodId": "method.quantization",
+      "primaryTask": "语音交互",
+      "primaryTaskId": "task.speech-interaction",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Awarri Technologies Limited"
+      ],
+      "name": "Sunday Afariogun"
+    },
+    {
+      "affiliations": [
+        "Awarri Technologies Limited"
+      ],
+      "name": "Odunolaoluwa Jenrola"
+    },
+    {
+      "affiliations": [
+        "GSM Association"
+      ],
+      "name": "Zeinab Nezami"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文为无网或弱网的非洲语言社区设计了一套离线语音交互流水线与两档硬件清单，并用三款 2-5B 指令模型在四种量化精度下的吞吐、内存、功耗与多语言分类准确率证明 Q4_K_M 是最兼顾速度与质量的部署选择，但树莓派首字延迟与奥罗莫语识别仍是短板。",
+  "originalTitle": "Offline AI Modules: Voice-First Offline Architecture, Hardware Reference Stack, Quantization and Benchmarking",
+  "pdfUrl": "https://arxiv.org/pdf/2610.07026v1.pdf",
+  "readerTitle": "完全离线的语音交互如何在树莓派和 Jetson 上跑起小语言模型",
+  "schemaVersion": 2
+}

@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.05737v2",
+  "arxivId": "2610.05737",
+  "arxivVersion": 2,
+  "arxivVersionedId": "2610.05737v2",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tatsuya Komatsu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hokuto Munakata"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.05737v2",
+  "originalTitle": "Revisiting Frame-Wise Saliency for Audio Moment Retrieval",
+  "pdfUrl": "https://arxiv.org/pdf/2610.05737v2.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

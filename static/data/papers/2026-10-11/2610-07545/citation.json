@@ -1,0 +1,30 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.07545v1",
+  "arxivId": "2610.07545",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.07545v1",
+  "authors": [
+    {
+      "affiliations": [
+        "School of CS and EE",
+        "University of Surrey",
+        "United Kingdom"
+      ],
+      "name": "Zubair Ajmal Farooq"
+    },
+    {
+      "affiliations": [
+        "Institute for People-Centred AI",
+        "University of Surrey",
+        "United Kingdom"
+      ],
+      "name": "Diptesh Kanojia"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.07545v1",
+  "originalTitle": "Quality-Aware Self-Correcting Speech Translation on an Edge Device",
+  "pdfUrl": "https://arxiv.org/pdf/2610.07545v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

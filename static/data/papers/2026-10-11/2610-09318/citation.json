@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.09318v1",
+  "arxivId": "2610.09318",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.09318v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhanhong He"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hanyu Meng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yaolong Ju"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.09318v1",
+  "originalTitle": "CASM: Context-Aware Semi-Markov Post-Processor for Beat Tracking",
+  "pdfUrl": "https://arxiv.org/pdf/2610.09318v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

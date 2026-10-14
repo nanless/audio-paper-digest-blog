@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.11275v1",
+  "arxivId": "2610.11275",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.11275v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Moran Yanuka"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Raja Giryes"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Moris Alper"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.11275v1",
+  "originalTitle": "Phonological Interference in Multilingual Speech Models",
+  "pdfUrl": "https://arxiv.org/pdf/2610.11275v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

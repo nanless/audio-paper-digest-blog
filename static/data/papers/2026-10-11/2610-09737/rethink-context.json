@@ -1,0 +1,86 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.09737v1",
+  "abstract": "When does distribution alignment help a frozen foundation-model embedding generalize across acoustic domains? For cross-domain mosquito-species classification we report a strength-monotonic law: the stronger an encoder is on the target task, the more its unseen-domain generalization relies on a distribution-alignment (MMD) term, and the more it is harmed by domain-rebalanced sampling. Across four encoder families and a within-encoder HuBERT layer sweep (n=8), the rebalancing leg orders exactly with encoder strength (Spearman -1.000), while the MMD-benefit leg is monotonic within each stream and -0.857 pooled; fixing architecture and varying only representation strength flips the rebalancing effect from benefit to collapse. The law is actionable: a single MMD term is the sole lever on a strong encoder, so we reduce the field's default recipe to a frozen Perch 2.0 embedding, a lightweight probe, cross-entropy, one MMD, and input augmentation. The reduced recipe stays within seed noise of the full composite (BA_unseen 0.299+/-0.006 vs. 0.307+/-0.014). As boundary conditions of the same law, three community defaults (backbone fine-tuning, multi-modal fusion, and domain rebalancing) each hurt unseen-domain accuracy under a leave-domain protocol, shown with single-variable, multi-seed evidence. We present a mechanism and the recipe it explains, not a leaderboard entry.",
+  "abstractSha256": "c4436ea72b9fa813b1e5336bb1081cac8ab568cf99dd30bd6e3b6488a58ac188",
+  "arxivId": "2610.09737",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.09737v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "域泛化",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "application",
+          "id": "application.bioacoustics",
+          "label": "生物声学监测"
+        },
+        {
+          "facet": "method",
+          "id": "method.domain-generalization",
+          "label": "域泛化"
+        },
+        {
+          "facet": "method",
+          "id": "method.augmentation",
+          "label": "数据增强"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "域泛化",
+      "primaryMethodId": "method.domain-generalization",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yucheng Gong"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Rui Zhou"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Binbin Zeng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Qiang Ren"
+    },
+    {
+      "affiliations": [
+        "Department of Software Engineering, School of Software, Chongqing Finance and Economics College",
+        "Chongqing Key Laboratory of Data Mining and Integrated Application for Ecological Environment"
+      ],
+      "name": "Hongjin Hui"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "在跨域蚊种分类中论文报告编码器越强越依赖单个 MMD 对齐项且越被域重平衡采样伤害，并用四编码器族加 HuBERT 五层扫描合并八个表示验证后给出只保留交叉熵加单个 MMD 加增强的精简方案，其代价是该结论只在留域划分和多种子区间下成立。",
+  "originalTitle": "A Strength-Monotonic Law for Domain Alignment in Frozen-Embedding Bioacoustic Classification",
+  "pdfUrl": "https://arxiv.org/pdf/2610.09737v1.pdf",
+  "readerTitle": "冻结声学嵌入上对齐与重采样的强度单调规律",
+  "schemaVersion": 2
+}

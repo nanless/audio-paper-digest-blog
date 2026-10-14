@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.11272v1",
+  "abstract": "Target speaker tagging (TST) assigns enrolled speaker identities to diarized segments of multi-speaker recordings. The enrollment utterances of the other registered speakers are an attractive source of evidence for calibrating each verification decision: they share the deployment domain of the test material and require no external cohort set. We show, however, that they cannot serve as the cohort of conventional score normalization. Enrollments tend to cluster by recording session, so the per-speaker cohort statistics reflect enrollment proximity to the rest of the gallery rather than impostor behavior, and normalization then rejects entire speakers. We propose gallery affinity verification, a cohort-free calibration that exploits the gallery through two affine-invariant terms, score dispersion and enrollment-profile deviance, and is therefore immune to such per-speaker shifts. On a synthetic benchmark and an in-house meeting corpus, it improves tagging accuracy with and without conventional score normalization and adds further gains when combined with it.",
+  "abstractSha256": "5b4a316f47c106e5ad9a5a3689c01dc7e0f1c58386ae762b0217497ff8d243fc",
+  "arxivId": "2610.11272",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.11272v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "不确定性估计与校准",
+    "primaryTask": "说话人识别",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speaker-identification",
+          "label": "说话人识别"
+        },
+        {
+          "facet": "task",
+          "id": "task.speaker-verification",
+          "label": "说话人验证"
+        },
+        {
+          "facet": "method",
+          "id": "method.uncertainty-estimation",
+          "label": "不确定性估计与校准"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "不确定性估计与校准",
+      "primaryMethodId": "method.uncertainty-estimation",
+      "primaryTask": "说话人识别",
+      "primaryTaskId": "task.speaker-identification",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hee-Soo Heo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Minjae Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Youngki Kwon"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bong-Jin Lee"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对目标说话人标注中注册库不能直接当归一化 cohort 的问题，论文提出只看分数分布形状的双项校准，在合成与会议语料上都提升了标注准确率，且不依赖外部数据。",
+  "originalTitle": "Using the enrollment gallery as evidence: affine-invariant score calibration for target speaker tagging",
+  "pdfUrl": "https://arxiv.org/pdf/2610.11272v1.pdf",
+  "readerTitle": "用注册语音库做证据：目标说话人标注的仿射不变校准",
+  "schemaVersion": 2
+}

@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.08295v1",
+  "abstract": "Morphing has recently gained renewed interest with the emergence of generative models, particularly in audio and image generation. In musical sound synthesis, morphing can generate intermediate sounds between two targets, helping musicians and sound engineers explore new sounds with interesting perceptual properties. As morphing is inherently defined in perceptual terms, evaluating this task is challenging. In this work, we introduce Sobolev Distances to Ideal Morphing (SDIM), a novel objective metric to quantify the regularity of audio morphing trajectories in perceptually relevant audio embedding spaces. Leveraging a physics-based sound synthesizer, we evaluate the discriminative power of SDIM on controlled morphing trajectories with varying degrees of regularity and compare it with that of existing audio morphing metrics. Results show that, contrary to state-of-the-art metrics, the proposed metric reliably discriminates desirable trajectories from adversarial ones.",
+  "abstractSha256": "16dc79d7265a33317b7cea32bc71968ca654b1dafdd4c16c83966836bd0b79dc",
+  "arxivId": "2610.08295",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.08295v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "评测协议",
+    "primaryTask": "音频生成",
+    "rankBucket": "前50%",
+    "score": 7.4,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-generation",
+          "label": "音频生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.evaluation",
+          "label": "模型评估"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "评测协议",
+      "primaryMethodId": "method.evaluation-protocol",
+      "primaryTask": "音频生成",
+      "primaryTaskId": "task.audio-generation",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Théo Chasle Cauchy"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Modan Tailleur"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Barbara Pascal"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Fanny Roche"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mathieu Lagrange"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文针对音频渐变轨迹是否在感知嵌入空间中又直又均匀的问题，提出与理想线性均匀轨迹比较的索博列夫距离，并用木材到金属的物理合成控制实验说明它能区分已有指标误判的非均匀与偏离路径情形。",
+  "originalTitle": "Sobolev Norms in Neural Embeddings Measure Audio Morphing Regularity",
+  "pdfUrl": "https://arxiv.org/pdf/2610.08295v1.pdf",
+  "readerTitle": "用索博列夫距离衡量音频渐变的规则程度",
+  "schemaVersion": 2
+}

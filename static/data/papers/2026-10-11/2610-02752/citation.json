@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.02752v1",
+  "arxivId": "2610.02752",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.02752v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhiyuan Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jingyuan Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yiming Tang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Liu Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Dan Guo"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.02752v1",
+  "originalTitle": "GAANet: Global-guided Asymmetric Attention Network for Audio-Visual Speech Separation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.02752v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

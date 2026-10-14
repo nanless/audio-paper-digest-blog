@@ -1,0 +1,88 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.08760v1",
+  "arxivId": "2610.08760",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.08760v1",
+  "authors": [
+    {
+      "affiliations": [
+        "The Hong Kong University of Science and Technology",
+        "Noiz AI"
+      ],
+      "name": "Pengjun Fang"
+    },
+    {
+      "affiliations": [
+        "MetaX"
+      ],
+      "name": "Jingyi Fa"
+    },
+    {
+      "affiliations": [
+        "The Hong Kong University of Science and Technology",
+        "Noiz AI"
+      ],
+      "name": "Kam Man Wu"
+    },
+    {
+      "affiliations": [
+        "Noiz AI"
+      ],
+      "name": "Jiaming Wang"
+    },
+    {
+      "affiliations": [
+        "Noiz AI"
+      ],
+      "name": "Haoyuan Huang"
+    },
+    {
+      "affiliations": [
+        "MetaX"
+      ],
+      "name": "Yaguang Wu"
+    },
+    {
+      "affiliations": [
+        "MetaX"
+      ],
+      "name": "Xiangjun Huang"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Ziyang Ma"
+    },
+    {
+      "affiliations": [
+        "Noiz AI"
+      ],
+      "name": "Weijia Chen"
+    },
+    {
+      "affiliations": [
+        "The Hong Kong University of Science and Technology"
+      ],
+      "name": "Hongyu Liu"
+    },
+    {
+      "affiliations": [
+        "Noiz AI"
+      ],
+      "name": "Zeyue Tian"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Qifeng Chen"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.08760v1",
+  "originalTitle": "WorldSonus: Bringing Sound to Worlds",
+  "pdfUrl": "https://arxiv.org/pdf/2610.08760v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

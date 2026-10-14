@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.05256v1",
+  "abstract": "Knowledge distillation (KD) improves low-resource acoustic learning by enriching one-hot supervision with the softened predictive distribution of a fixed teacher network. However, a teacher trained with limited or imbalanced annotations may produce a biased distribution whose components are not uniformly reliable. Although this distribution can still encode useful knowledge, direct full-distribution matching may also transfer teacher-induced biases, thereby distorting the student's decision boundary and degrading its generalization performance. To address this limitation, we propose Boundary-Anchored Mass-Partitioned Distillation (BA-MPD), a logit-based distillation objective composed of Boundary-Anchored Correction (BAC) and Mass-Partitioned Distillation (MPD). BAC addresses missing ground-truth labels in the set of the teacher's top predictions by swapping the true label for the lowest-ranked entry of the set, thus keeping the mass and uncertainty of the set unchanged. MPD then distills this corrected distribution through separate losses that enforce relational consistency within the set, balance the mass between high- and low-confidence groups, and weight lower-confidence dependencies. Ultimately, BAC and MPD together suppress harmful ranking errors and noisy low-confidence details, while retaining all useful teacher information. Experiments on two acoustic benchmarks under multiple label budgets show that BA-MPD consistently improves over supervised-learning baselines and vanilla KD while remaining competitive with strong logit-based KD baselines. Cross-budget results further show that BA-MPD remains effective when the teacher and student models use mismatched label budgets, demonstrating its ability to exploit imperfect teachers across supervision gaps. Implementation available at https://github.com/ShuanglinLi/BA-MPD.",
+  "abstractSha256": "6f97fc8f44fbc6e84327fead96149467215d253f2a185ae3629e1519d4e2442a",
+  "arxivId": "2610.05256",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.05256v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "知识蒸馏",
+    "primaryTask": "声学场景分类",
+    "rankBucket": "前50%",
+    "score": 7.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.scene-classification",
+          "label": "声学场景分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.low-resource",
+          "label": "低资源"
+        },
+        {
+          "facet": "application",
+          "id": "application.bioacoustics",
+          "label": "生物声学监测"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "知识蒸馏",
+      "primaryMethodId": "method.distillation",
+      "primaryTask": "声学场景分类",
+      "primaryTaskId": "task.scene-classification",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shuanglin Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ruxiao Qian"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jian Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Haijun Lin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wenwu Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Siyang Song"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文针对标注很少且教师本身也在同样少标注下训练的声音分类，提出先把真值换回前 k 高置信集合再把支撑内关系、支撑与补集质量、补集内关系分开蒸馏，在城市声场景和鸟鸣两个基准上稳定优于独热基线和常规全分布蒸馏，但对其他强蒸馏基线的相对优势随任务、预算和指标而变化。",
+  "originalTitle": "Learning from imperfect teachers for low-resource acoustic generalization",
+  "pdfUrl": "https://arxiv.org/pdf/2610.05256v1.pdf",
+  "readerTitle": "不完美教师下的低资源声音蒸馏",
+  "schemaVersion": 2
+}

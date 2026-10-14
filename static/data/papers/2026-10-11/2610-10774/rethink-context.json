@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.10774v1",
+  "abstract": "Audio generation models can translate natural-language descriptions into sound, but their outputs are typically waveforms. Their audio quality is constrained by audio compression, and their outputs do not readily support direct edits to notes, timbral parameters, or modulation relationships. We present AutoSynth, which represents MIDI performance events, fixed synthesizer parameters, and variable-length modulation routes as a unified sequence for a synthesizer, and learns their dependencies with an audio-conditioned autoregressive model. A single model supports both tasks. Given reference audio, the model directly predicts a synthesizer program; given text, it uses a pretrained audio generation model and converts the generated audio into a program. Training consists of two stages: supervised learning on large-scale audio-program pairs automatically constructed from a small set of native presets, followed by group-relative policy optimization with a mixed reward combining semantic similarity, pitch-related features, acoustic similarity, and sound usefulness. The pipeline requires neither paired text-target-program annotations nor a differentiable synthesizer. Experiments show that AutoSynth produces complete, editable synthesizer programs and achieves competitive results in both synthesizer inversion and text-driven generation. Audio demos and source code are available at https://auto-synth.github.io/.",
+  "abstractSha256": "ab24af8f24859f7991ffb0ebcae707de1e872fe625b768dee44979ebf8b84abe",
+  "arxivId": "2610.10774",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.10774v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "自回归模型",
+    "primaryTask": "音频生成",
+    "rankBucket": "前25%",
+    "score": 8.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-generation",
+          "label": "音频生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.autoregressive",
+          "label": "自回归模型"
+        },
+        {
+          "facet": "method",
+          "id": "method.reinforcement",
+          "label": "强化学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "自回归模型",
+      "primaryMethodId": "method.autoregressive",
+      "primaryTask": "音频生成",
+      "primaryTaskId": "task.audio-generation",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "The Hong Kong University of Science and Technology (Guangzhou)"
+      ],
+      "name": "Tristan Wu"
+    },
+    {
+      "affiliations": [
+        "New York University Shanghai"
+      ],
+      "name": "Daniel Chin"
+    },
+    {
+      "affiliations": [
+        "New York University Shanghai"
+      ],
+      "name": "Liwei Lin"
+    },
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong, Shenzhen"
+      ],
+      "name": "Junan Zhang"
+    },
+    {
+      "affiliations": [
+        "Mohamed bin Zayed University of Artificial Intelligence"
+      ],
+      "name": "Gus Xia"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "AutoSynth 把演奏事件、固定音色参数和可变长度调制连接组织成统一序列，用音频条件的自回归模型预测可在 Helm 中直接执行的程序，并用两阶段学习把文本经由生成音频转成可编辑控制，代价是合成器表达范围与渲染反馈开销限制了适用声音。",
+  "originalTitle": "AutoSynth: Learning to Generate Editable Synthesizer Programs from Audio and Text",
+  "pdfUrl": "https://arxiv.org/pdf/2610.10774v1.pdf",
+  "readerTitle": "AutoSynth：从音频和文本生成可编辑的合成器程序",
+  "schemaVersion": 2
+}

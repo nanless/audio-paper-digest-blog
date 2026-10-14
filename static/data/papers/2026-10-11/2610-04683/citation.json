@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.04683v1",
+  "arxivId": "2610.04683",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.04683v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Séverin Baroudi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yanis Labrak"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Pierfrancesco Melucci"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sergio Burdisso"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Petr Motlicek"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hervé Bredin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mirco Ravanelli"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ricard Marxer"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.04683v1",
+  "originalTitle": "Steering Speech-Language Models: Training-Free Task Specialization via Contrastive Activation Addition",
+  "pdfUrl": "https://arxiv.org/pdf/2610.04683v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

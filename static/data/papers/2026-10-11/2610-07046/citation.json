@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.07046v1",
+  "arxivId": "2610.07046",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.07046v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ming-Hsiang Hu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kuan-Tang Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hung-Shin Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Berlin Chen"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.07046v1",
+  "originalTitle": "GIVE-KWS: Gated Injection of Visual Evidence for Noise-Robust Query-by-Example Keyword Spotting",
+  "pdfUrl": "https://arxiv.org/pdf/2610.07046v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

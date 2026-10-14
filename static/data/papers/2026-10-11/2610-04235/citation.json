@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.04235v1",
+  "arxivId": "2610.04235",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.04235v1",
+  "authors": [
+    {
+      "affiliations": [
+        "East China Normal University, Shanghai, China"
+      ],
+      "name": "Weizhi Liu"
+    },
+    {
+      "affiliations": [
+        "Huaqiao University, Xiamen, China"
+      ],
+      "name": "Yue Li"
+    },
+    {
+      "affiliations": [
+        "Huaqiao University, Xiamen, China"
+      ],
+      "name": "Hui Tian"
+    },
+    {
+      "affiliations": [
+        "East China Normal University, Shanghai, China"
+      ],
+      "name": "Zhaoxia Yin"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.04235v1",
+  "originalTitle": "Learning to Watermark Speech Synthesis Against Model-Driven Reconstruction",
+  "pdfUrl": "https://arxiv.org/pdf/2610.04235v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

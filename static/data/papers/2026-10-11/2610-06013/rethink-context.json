@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.06013v1",
+  "abstract": "A dubbed character keeps its identity while the voice actor changes, so character identity and speaker identity are distinct properties of one recording, yet speaker verification measures only the latter. To address this gap, we propose KyaraBench, a benchmark that scores character voice directly instead of speaker voice, built from 85 human-audited identities in a dubbed anime corpus. It poses two challenging conditions: one that swaps the performer under a fixed character, and one that fixes the performer under changing characters. Listening studies with 78 participants provide human reference scores for cross-performer verification and same-actor discrimination. Speaker-verification baselines show increased errors under these character-specific conditions. We then train KyaraEmbed, a compact encoder using multilingual character supervision, same-actor negatives, and a language-alignment term. The model achieves the best performance on all character-specific conditions in the main comparison. We release the benchmark, protocol, and encoder publicly.",
+  "abstractSha256": "232965f8a7378cdff6c22d6aeb287cf1c843dfc88b6963dae22e37a42e00ea0d",
+  "arxivId": "2610.06013",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.06013v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "对比学习",
+    "primaryTask": "说话人验证",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speaker-verification",
+          "label": "说话人验证"
+        },
+        {
+          "facet": "method",
+          "id": "method.contrastive",
+          "label": "对比学习"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "对比学习",
+      "primaryMethodId": "method.contrastive",
+      "primaryTask": "说话人验证",
+      "primaryTaskId": "task.speaker-verification",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Joonyong Park"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jerry Li"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文把同一角色换演员和同一演员演多角两种混淆拆成可评分的验证条件，用 85 个经人审核的配音角色建成 KyaraBench，并用跨演员正样本加同演员难负样本训练 KyaraEmbed，在角色相关条件下取得表中最好成绩，但结论只限于日本动画及英配范围。",
+  "originalTitle": "Character Identity is not Speaker Identity: KyaraBench and KyaraEmbed for Character Verification",
+  "pdfUrl": "https://arxiv.org/pdf/2610.06013v1.pdf",
+  "readerTitle": "角色声音不是说话人声音：KyaraBench 如何考角色一致性",
+  "schemaVersion": 2
+}

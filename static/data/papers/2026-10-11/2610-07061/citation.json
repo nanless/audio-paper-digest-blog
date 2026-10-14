@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.07061v2",
+  "arxivId": "2610.07061",
+  "arxivVersion": 2,
+  "arxivVersionedId": "2610.07061v2",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hyebin Cho"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bumsoo Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Joon Son Chung"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.07061v2",
+  "originalTitle": "ImpactMat: Continuous Material Estimation for Inverse Impact Sound Rendering",
+  "pdfUrl": "https://arxiv.org/pdf/2610.07061v2.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

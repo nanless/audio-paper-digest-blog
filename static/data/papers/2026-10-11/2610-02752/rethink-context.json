@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.02752v1",
+  "abstract": "Multi-scale design is crucial for efficient audio-visual speech separation, yet effectively modeling multi-scale information for audio-visual feature fusion remains challenging. We argue that the limited capacity of existing approaches primarily arises from: 1) treating features from different modalities in the same manner, and 2) overlooking the role of global features. To address these issues, we propose a Global-guided Asymmetric Attention Network (GAANet). Our model introduces two core innovations: first, an asymmetric multi-scale fusion framework that allows audio and visual streams to extract and interact with features at their respective optimal temporal resolutions, removing the need for symmetric temporal downsampling; second, a global-guided attention mechanism that compresses each modality into a compact global token with a temporal dimension of one, which then provides high-level semantic cues to guide both intra- and inter-modal fusion across scales. Experiments on LRS2 and VoxCeleb2 demonstrate that GAANet achieves state-of-the-art performance, reaching 16.5 dB SI-SNRi on LRS2 and 14.0 dB on VoxCeleb2, while maintaining a lightweight computational profile with only 3.3M parameters and 19.8G MACs. These results highlight the strong potential of asymmetric temporal modeling and global guidance for efficient and robust multimodal fusion. The source code is publicly accessible at https://github.com/redizzy/GAANet",
+  "abstractSha256": "366b48eaee736550e0c323b6e843db516018575e3e222b18fa6926261bc49b14",
+  "arxivId": "2610.02752",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.02752v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "注意力机制",
+    "primaryTask": "音视频语音分离",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-speech-separation",
+          "label": "音视频语音分离"
+        },
+        {
+          "facet": "method",
+          "id": "method.attention",
+          "label": "注意力机制"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "注意力机制",
+      "primaryMethodId": "method.attention",
+      "primaryTask": "音视频语音分离",
+      "primaryTaskId": "task.av-speech-separation",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhiyuan Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jingyuan Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yiming Tang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Liu Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Dan Guo"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对双人混合语音加目标说话人唇部视频的分离任务，GAANet 让音频做逐级降采样而视频保持原时间分辨率，并用压缩到单时间点的全局令牌回头调制各尺度特征，在 LRS2 上达到 16.5 dB SI-SNRi，代价是 3.3M 参数和 19.8G MACs。",
+  "originalTitle": "GAANet: Global-guided Asymmetric Attention Network for Audio-Visual Speech Separation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.02752v1.pdf",
+  "readerTitle": "GAANet：用非对称时间尺度和全局语义引导做视听语音分离",
+  "schemaVersion": 2
+}

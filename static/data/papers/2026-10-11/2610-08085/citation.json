@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.08085v1",
+  "arxivId": "2610.08085",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.08085v1",
+  "authors": [
+    {
+      "affiliations": [
+        "IIIT Delhi, India"
+      ],
+      "name": "Hemant Yadav"
+    },
+    {
+      "affiliations": [
+        "Microsoft Research, India"
+      ],
+      "name": "Sunayana Sitaram"
+    },
+    {
+      "affiliations": [
+        "National University of Singapore"
+      ],
+      "name": "Roger Zimmermann"
+    },
+    {
+      "affiliations": [
+        "IIIT Delhi, India"
+      ],
+      "name": "Rajiv Ratn Shah"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.08085v1",
+  "originalTitle": "DirectSpeech2LLM: A Simple End-to-End Framework to Mitigate Prompt Overfitting in Speech-LLMs",
+  "pdfUrl": "https://arxiv.org/pdf/2610.08085v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

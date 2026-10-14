@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.11884v1",
+  "arxivId": "2610.11884",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.11884v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hoyeol Sohn"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wonil Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Keunhyoung Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sangeun Kum"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Taehyoung Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Dongjoo Moon"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Theerasak Charoenchob"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Teeratep Weerapang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jongpil Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Juhan Nam"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.11884v1",
+  "originalTitle": "STEMMA: Song-to-Stem Multi-Audio Reasoning for Large Audio Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2610.11884v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

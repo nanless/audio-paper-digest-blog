@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.04887v1",
+  "abstract": "Audio large language models (ALLMs) can understand speech content, yet their ability to use speaker identity for verification remains limited. We propose TS-SP (Two-Stage Speaker Preservation), a parameter-efficient framework for learning speaker-preserving representations and making them accessible to an ALLM's language-model component. We instantiate and evaluate TS-SP on Qwen2.5-Omni-7B. First, we adapt the audio encoder with speaker identity supervision. We then freeze the adapted encoder and train the language model to compare speakers. Both stages use low-rank adaptation (LoRA), keeping the pretrained base weights fixed. On Vox1-O, TS-SP reduces the equal error rate (EER) from 7.01\\% for the Paired Loss Adaptation Baseline to 4.37\\%. EER remains within 4.31--4.79\\% under unseen prompts. Cross-domain evaluation on CN-Celeb yields a similar EER to the baseline, but lower accuracy at the native decision threshold. These findings support two-stage adaptation for improving speaker verification on the evaluated backbone.",
+  "abstractSha256": "517f1c5fcc392d0e47167e2955f428db8ebb8b326f5ba4fce099c3d920444f27",
+  "arxivId": "2610.04887",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.04887v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "LoRA",
+    "primaryTask": "说话人验证",
+    "rankBucket": "前50%",
+    "score": 5.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speaker-verification",
+          "label": "说话人验证"
+        },
+        {
+          "facet": "method",
+          "id": "method.lora",
+          "label": "LoRA"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.audio-language",
+          "label": "音频大模型"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "LoRA",
+      "primaryMethodId": "method.lora",
+      "primaryTask": "说话人验证",
+      "primaryTaskId": "task.speaker-verification",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Junjie Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zheng Liang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhe Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tianchi Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kong Aik Lee"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对音频大语言模型能听懂内容却难分辨说话人的问题，论文提出先在音频编码器做说话人监督、再冻结编码器训练语言模型做成对判断的两阶段低秩适配方法，在 VoxCeleb 同域上把等错率从 7.01% 降到 4.37%，但跨域到 CN-Celeb 时未带来额外增益。",
+  "originalTitle": "TS-SP: Learning Speaker-Preserving Representations in Audio Large Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2610.04887v1.pdf",
+  "readerTitle": "让音频大语言模型留住说话人信息：两阶段说话人保持",
+  "schemaVersion": 2
+}

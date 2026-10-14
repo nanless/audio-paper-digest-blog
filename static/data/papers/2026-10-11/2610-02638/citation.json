@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.02638v1",
+  "arxivId": "2610.02638",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.02638v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jie Jin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ziyin Ma"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Min Yin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jinyu Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Haigang Song"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhikun Pang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiaowen Zhang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.02638v1",
+  "originalTitle": "Batched Speech Decisions Without Decoding: Single-Token Supervision Lets a Frozen LLM Hear Beyond the Transcript",
+  "pdfUrl": "https://arxiv.org/pdf/2610.02638v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

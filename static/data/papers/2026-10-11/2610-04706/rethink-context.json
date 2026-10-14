@@ -1,0 +1,115 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.04706v1",
+  "abstract": "People write and sketch while speaking to explain, organize, and develop content together. Inspired by these practices, we investigate how voice agents can use a canvas alongside speech in multi-turn conversations with users. We conducted a two-part formative study: an observational study of how pairs coordinated speech and boardwork, followed by a design workshop that informed a design space for speech-canvas interaction with voice agents. Building on these insights, we developed VoCa, a voice agent that coordinates speech with visual object creation, annotation, and attention guidance. A five-day deployment with 18 participants examined usability, experiences of speech-canvas interaction, patterns of use, and desired improvements. Participants' experiences highlighted opportunities for speech-canvas interaction in learning, work, and daily life, alongside challenges in coordinating what agents say and show in ways users can follow and influence. These findings inform how voice agents can use a canvas alongside speech in conversation.",
+  "abstractSha256": "eae8bf5b3f9b0663790d65e5244d31e565d5a1fe9c2ac8f0a6bf36058eb301ee",
+  "arxivId": "2610.04706",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.04706v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "用户研究",
+    "primaryTask": "语音代理规划与工具使用",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.voice-agent-planning",
+          "label": "语音代理规划与工具使用"
+        },
+        {
+          "facet": "method",
+          "id": "method.user-study",
+          "label": "用户研究"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.software",
+          "label": "软件工具"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "用户研究",
+      "primaryMethodId": "method.user-study",
+      "primaryTask": "语音代理规划与工具使用",
+      "primaryTaskId": "task.voice-agent-planning",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Tongji University, Shanghai, China"
+      ],
+      "name": "Yate Ge"
+    },
+    {
+      "affiliations": [
+        "Tongji University, Shanghai, China"
+      ],
+      "name": "Run Yuan"
+    },
+    {
+      "affiliations": [
+        "Grinnell College, Grinnell, Iowa, United States"
+      ],
+      "name": "Yueran Qi"
+    },
+    {
+      "affiliations": [
+        "Tongji University, Shanghai, China"
+      ],
+      "name": "Wenjie He"
+    },
+    {
+      "affiliations": [
+        "Tongji University, Shanghai, China"
+      ],
+      "name": "Jiaqi Mo"
+    },
+    {
+      "affiliations": [
+        "Hunan University, Changsha, Hunan, China"
+      ],
+      "name": "Yangshuo Chen"
+    },
+    {
+      "affiliations": [
+        "Tongji University, Shanghai, China"
+      ],
+      "name": "Wenbin Zuo"
+    },
+    {
+      "affiliations": [
+        "Southern University of Science and Technology, Shenzhen, Guangdong, China"
+      ],
+      "name": "Xiaohua Sun"
+    },
+    {
+      "affiliations": [
+        "Tongji University, Shanghai, China"
+      ],
+      "name": "Weiwei Guo"
+    },
+    {
+      "affiliations": [
+        "Tongji University, Shanghai, China"
+      ],
+      "name": "Qi Wang"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "VoCa 针对多轮语音对话中纯语音难回看、难指代、难修订的问题，用语音与画布动作协同规划的方案组织讲解与留痕，五天 18 人实地使用显示易用但跟随与修订仍受限。",
+  "originalTitle": "VoCa: Designing Speech-Canvas Interaction for Voice-Based Conversational Agents",
+  "pdfUrl": "https://arxiv.org/pdf/2610.04706v1.pdf",
+  "readerTitle": "VoCa：让语音助手边说边在画布上写画的交互设计",
+  "schemaVersion": 2
+}

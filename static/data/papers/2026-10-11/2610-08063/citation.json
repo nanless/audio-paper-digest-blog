@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.08063v1",
+  "arxivId": "2610.08063",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.08063v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Takanori Ashihara"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kohei Matsuura"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Masato Mimura"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.08063v1",
+  "originalTitle": "HINTT Submission to the 2nd MLC-SLM Challenge: Comparing Cascaded and Unified Approaches to Diarization and ASR",
+  "pdfUrl": "https://arxiv.org/pdf/2610.08063v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

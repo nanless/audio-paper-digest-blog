@@ -1,0 +1,93 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.12081v1",
+  "abstract": "Continuing the Perception Test challenge series, we organised the fourth edition as a workshop at the European Conference on Computer Vision (ECCV) 2026 in Malmö, Sweden. This edition focused on spatial intelligence and featured four different tracks: unified multiple-choice videoQA and grounded videoQA from the original Perception Test benchmark, alongside two new tracks based on city-scale walking-tour videos (KilometerAudio and KilometerVision). In this report, we describe the new benchmarks used for the city-scale tracks and summarise the winning solutions across all tracks, including a generalist model that competed across all tracks with satisfactory performance. The winning solutions in the newly added city-scale tracks demonstrated that complex spatial and multimodal reasoning can be solved by expensive agentic pipelines, but remains difficult for multimodal models used standalone.",
+  "abstractSha256": "0fcb568be59cc5f581dabcc905ea64bb3d38e5c0044e9f34476982e859470dfe",
+  "arxivId": "2610.12081",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.12081v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "音视频问答",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-question-answering",
+          "label": "音视频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "音视频问答",
+      "primaryTaskId": "task.av-question-answering",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Google DeepMind"
+      ],
+      "name": "Fedor Kitashov"
+    },
+    {
+      "affiliations": [
+        "Google DeepMind"
+      ],
+      "name": "João Carreira"
+    },
+    {
+      "affiliations": [
+        "Toyota Technological Institute at Chicago"
+      ],
+      "name": "Shiry Ginosar"
+    },
+    {
+      "affiliations": [
+        "Google DeepMind",
+        "University of Bristol"
+      ],
+      "name": "Dima Damen"
+    },
+    {
+      "affiliations": [
+        "Google DeepMind",
+        "University of Oxford"
+      ],
+      "name": "Andrew Zisserman"
+    },
+    {
+      "affiliations": [
+        "Google DeepMind"
+      ],
+      "name": "Viorica Pătrăucean"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文用桌面尺度问答加城市步行长视频两类新赛道考查空间与听视觉推理，获胜方案多为多模型智能体管线而单一通用模型仍落后，代价是大量工具调用与计算开销。",
+  "originalTitle": "Perception Test 2026: Challenge Summary and Extension to City-scale Audio-Visual Reasoning",
+  "pdfUrl": "https://arxiv.org/pdf/2610.12081v1.pdf",
+  "readerTitle": "城市尺度步行视频里的空间与声音推理：Perception Test 2026 四赛道总结",
+  "schemaVersion": 2
+}

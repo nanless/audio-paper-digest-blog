@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.11197v1",
+  "arxivId": "2610.11197",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.11197v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Haiwen Xia"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chao Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Qiuqiang Kong"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.11197v1",
+  "originalTitle": "Randomized Scores and Diverse Timbres: Augmenting Automatic Music Transcription with Online-Generated Data",
+  "pdfUrl": "https://arxiv.org/pdf/2610.11197v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

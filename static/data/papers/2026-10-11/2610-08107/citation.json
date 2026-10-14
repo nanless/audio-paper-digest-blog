@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.08107v1",
+  "arxivId": "2610.08107",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.08107v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ridwan Arefeen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ze Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Rong Tong"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ming Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiaoxiao Miao"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.08107v1",
+  "originalTitle": "Exploiting Acoustic and Content-Oriented Speaker Verification Attacks Against Multilingual Voice Anonymization",
+  "pdfUrl": "https://arxiv.org/pdf/2610.08107v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

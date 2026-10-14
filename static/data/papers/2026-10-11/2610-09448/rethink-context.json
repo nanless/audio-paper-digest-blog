@@ -1,0 +1,90 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.09448v1",
+  "abstract": "Unlike autoregressive models, discrete diffusion-based models for zero-shot text-to-speech generate speech tokens in parallel and can revisit earlier predictions. Mask-and-replace training extends mask-only training by randomly replacing some tokens, and its gains are commonly attributed to self-correction, the ability to revise previously generated tokens. However, exposure to randomly perturbed context during training may itself improve generation, raising the question of whether these gains require inference-time token revision. To investigate this question, we use DeMaR, which combines mask-and-replace training with confidence-ranked mask-only sampling while preserving the total training corruption probability. Trained from scratch on LibriTTS, DeMaR achieves lower word error rates (WER) than autoregressive and mask-only diffusion baselines using the same speech tokenizer. This advantage persists when each token remains unchanged after first being unmasked. Matched training conditions on two heterogeneous speech tokenizers show that both noisy-context augmentation and replacement supervision improve WER under this restriction. These findings demonstrate training-side benefits of replacement beyond enabling inference-time token revision.",
+  "abstractSha256": "c3f2544c301fc0d5a75ad1d3a85e88c82ad41eb9e5b5e218922821b46ca7ea6c",
+  "arxivId": "2610.09448",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.09448v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "扩散模型",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前50%",
+    "score": 6.7,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.diffusion",
+          "label": "扩散模型"
+        },
+        {
+          "facet": "method",
+          "id": "method.augmentation",
+          "label": "数据增强"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.zero-shot",
+          "label": "零样本"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "扩散模型",
+      "primaryMethodId": "method.diffusion",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hounsu Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Joonyong Park"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuki Saito"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Satoru Fukayama"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Juhan Nam"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文用只在训练加替换、采样只用掩码的 DeMaR 检验零样本语音合成，发现字错率下降在不再改写已定词元时依然保留，而两种解码运行方式不同且原文未报告延迟对比。",
+  "originalTitle": "Beyond Token Revision: Investigating Mask-and-Replace Diffusion for Zero-Shot Text-to-Speech",
+  "pdfUrl": "https://arxiv.org/pdf/2610.09448v1.pdf",
+  "readerTitle": "掩码与替换扩散做零样本语音合成：增益是否必须改写已生成的词元",
+  "schemaVersion": 2
+}

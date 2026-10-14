@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.03035v1",
+  "abstract": "Multimodal learning often suffers from modality imbalance, where the joint optimization process is dominated by a single modality. Existing methods typically estimate modality imbalance from score disparities derived from prediction uncertainty or optimization statistics. However, due to distinct prediction uncertainty and learning dynamics across modalities, direct comparison of such scores may misinterpret intrinsic modality differences as progress gaps, leading to biased imbalance estimation. In this paper, we propose Function-Space Guided Multimodal Optimization (FGMO), which leverages a function-space progress signal to assess modality-wise optimization progress and coordinate optimization across modalities to alleviate modality imbalance. Specifically, we introduce Functional Progress Estimation (FPE) to measure each modality's update-induced function-space response and calibrate it against a loss-aligned unimodal reference, producing a comparable progress signal. Based on this signal, Functional Response Control (FRC) redistributes modality-level function-space budgets and realizes the target responses through tensor-wise learning-rate adjustment. Theoretical analysis establishes a one-step target-contraction property of FRC under bounded controller-state mismatch, and extensive experiments demonstrate the effectiveness of FGMO across multiple multimodal benchmarks.",
+  "abstractSha256": "7db5dc02a99867ebbe9143363769433b72017d51f2207e71a7ad588c637b9cf2",
+  "arxivId": "2610.03035",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.03035v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "音视频理解",
+    "rankBucket": "前50%",
+    "score": 6.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-understanding",
+          "label": "音视频理解"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.formal-analysis",
+          "label": "形式化分析"
+        },
+        {
+          "facet": "method",
+          "id": "method.regularization",
+          "label": "正则化"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "音视频理解",
+      "primaryTaskId": "task.av-understanding",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhongjing Gu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Fengqiang Wan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yiming Cui"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yufa Feng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yang Yang"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对联合训练中某一模态主导而其他模态欠优化的问题，论文用相对函数进度校准跨模态比较，并通过重分配响应预算与张量级学习率进行闭环调节，在六个数据集上报告了准确率提升，但额外参考构造与探测开销需要分开评估。",
+  "originalTitle": "Balancing Multimodal Learning via Functional Progress",
+  "pdfUrl": "https://arxiv.org/pdf/2610.03035v1.pdf",
+  "readerTitle": "用函数空间进度衡量并平衡多模态学习",
+  "schemaVersion": 2
+}

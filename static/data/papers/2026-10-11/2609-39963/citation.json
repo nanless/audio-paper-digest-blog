@@ -1,0 +1,45 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.39963",
+  "arxivId": "2609.39963",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Zhejiang University, Hangzhou, Zhejiang, China",
+        "Singapore University of Technology and Design, Singapore"
+      ],
+      "name": "Chongjun Zhong"
+    },
+    {
+      "affiliations": [
+        "Singapore University of Technology and Design, Singapore"
+      ],
+      "name": "Abhinaba Roy"
+    },
+    {
+      "affiliations": [
+        "Singapore University of Technology and Design, Singapore"
+      ],
+      "name": "Archishman Ghosh"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University, Hangzhou, Zhejiang, China"
+      ],
+      "name": "Kejun Zhang"
+    },
+    {
+      "affiliations": [
+        "Singapore University of Technology and Design, Singapore"
+      ],
+      "name": "Dorien Herremans"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.39963",
+  "originalTitle": "Diptych: Scoped, AI-Interpreted Comparison for Reference Listening in Music Production",
+  "pdfUrl": "https://arxiv.org/pdf/2609.39963.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

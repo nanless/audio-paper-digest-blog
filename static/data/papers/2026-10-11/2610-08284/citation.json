@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.08284v1",
+  "arxivId": "2610.08284",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.08284v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tobias Morocutti"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Emmanouil Karystinaios"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Gerhard Widmer"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.08284v1",
+  "originalTitle": "Restore, Separate, Restore: A Modular Framework for Music Source Restoration",
+  "pdfUrl": "https://arxiv.org/pdf/2610.08284v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.06226v1",
+  "abstract": "Prior audio-visual self-supervised learning methods rely on mechanisms such as EMA target encoders, prediction heads, reconstruction decoders, and contrastive losses. We introduce LeAVJEPA, the first audio-visual encoder trained under LeJEPA's collapse-free objective. A single early-fusion Vision Transformer processes audio, video, and joint audio-video inputs. Modality dropout treats a missing modality as another view of the same event, making cross-modal alignment implicit in the objective. The model aligns global embeddings with modality-specific local embeddings, and SIGReg prevents representational collapse. A controlled ablation identifies modality dropout as the key mechanism for audio-visual alignment. Despite the architectural simplicity, LeAVJEPA reaches 36.0 mAP on AudioSet-20K and 91.3% accuracy on ESC-50 under frozen evaluation. After fine-tuning, it reaches 61.1% accuracy on VGGSound, and its embeddings support zero-shot audio-visual retrieval.",
+  "abstractSha256": "d642428348178d7fb83848f3abd8768a081a90b81e1ccd469bdaf7aa2bd4b868",
+  "arxivId": "2610.06226",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.06226v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "自监督学习",
+    "primaryTask": "音视频理解",
+    "rankBucket": "前50%",
+    "score": 6.4,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-understanding",
+          "label": "音视频理解"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-retrieval",
+          "label": "音频检索"
+        },
+        {
+          "facet": "method",
+          "id": "method.self-supervised",
+          "label": "自监督学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "自监督学习",
+      "primaryMethodId": "method.self-supervised",
+      "primaryTask": "音视频理解",
+      "primaryTaskId": "task.av-understanding",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Benjamin Robson"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Santeri Mentu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wenshuai Zhao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Arno Solin"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "LeAVJEPA 用单个早期融合 Transformer 把音频、视频和联合输入映射到同一嵌入，以模态缺失局部视图匹配联合中心加 SIGReg 防坍缩，在冻结 AudioSet-20K 上得 36.0 mAP、ESC-50 上得 91.3%、微调 VGGSound 上得 61.1%，代价是冻结与检索仍落后于带显式对齐的最强基线。",
+  "originalTitle": "LeAVJEPA: A Minimalist Architecture for Audio-Visual Self-Supervised Learning",
+  "pdfUrl": "https://arxiv.org/pdf/2610.06226v1.pdf",
+  "readerTitle": "只用一个编码器对齐声音和画面：LeAVJEPA 的模态缺失视图学习",
+  "schemaVersion": 2
+}

@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.12250v1",
+  "abstract": "Pretrained audio encoders are reused for downstream tasks that are often unknown when the encoder is trained, so their usefulness depends partly on which signal properties survive the pretext objective. We study this retained information through paired source reconstruction. Using a shared Stable Audio Open latent diffusion decoder, we reconstruct five-second, 44.1-kHz stereo music from frozen representations produced by supervised classifiers (VGGish, ConvNeXt), an audio-text contrastive model (CLAP), and a waveform-reconstruction model (EnCodec). These objectives impose different pressures to preserve source detail, while their exposed interfaces vary substantially in temporal and spectral resolution. Evaluating on the Million Song Dataset (MSD), we find clear differences in reconstructability across encoder families, while within encoder comparisons show improved recovery when finer temporal or spectral structure is exposed. Even compressed task oriented embeddings support reconstructions that preserve measurable source specificity and high level musical content.",
+  "abstractSha256": "bd2fd8e97d17fc5a07dc11e44e46038b3136b51aa25c7abb8b82dfe9d8858472",
+  "arxivId": "2610.12250",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.12250v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "扩散模型",
+    "primaryTask": "音频隐私攻击与防御",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.privacy-attack-defense",
+          "label": "音频隐私攻击与防御"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-generation",
+          "label": "音频生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.diffusion",
+          "label": "扩散模型"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "扩散模型",
+      "primaryMethodId": "method.diffusion",
+      "primaryTask": "音频隐私攻击与防御",
+      "primaryTaskId": "task.privacy-attack-defense",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Marios Glytsos"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Brian McFee"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文把冻结的分类、对齐与重建类音频嵌入接到同一个预训练扩散解码器上做配对音乐重建，用声学距离、生成空间相似度、配对检索与标签重合度量保留了多少源信息，并发现接口越细恢复越好但压缩嵌入仍保留可测的源特异性与高层音乐内容，代价是每种接口约 36 小时的微调与重建失败不能等同于信息不存在。",
+  "originalTitle": "How Much Audio Is Left In An Embedding? An Inversion Audit Of Audio Encoders",
+  "pdfUrl": "https://arxiv.org/pdf/2610.12250v1.pdf",
+  "readerTitle": "音频嵌入里还剩多少声音：用统一生成探针审计音频编码器",
+  "schemaVersion": 2
+}

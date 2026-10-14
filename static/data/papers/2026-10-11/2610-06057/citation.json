@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.06057v1",
+  "arxivId": "2610.06057",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.06057v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yunus Emre Ozkose"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Alperen Kahraman"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ali Haznedaroglu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.06057v1",
+  "originalTitle": "A Comprehensive Objective Evaluation of Modern Text-to-Speech for Turkish Using Speech Quality Assessment Models",
+  "pdfUrl": "https://arxiv.org/pdf/2610.06057v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

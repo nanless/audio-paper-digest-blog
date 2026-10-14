@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.10774v1",
+  "arxivId": "2610.10774",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.10774v1",
+  "authors": [
+    {
+      "affiliations": [
+        "The Hong Kong University of Science and Technology (Guangzhou)"
+      ],
+      "name": "Tristan Wu"
+    },
+    {
+      "affiliations": [
+        "New York University Shanghai"
+      ],
+      "name": "Daniel Chin"
+    },
+    {
+      "affiliations": [
+        "New York University Shanghai"
+      ],
+      "name": "Liwei Lin"
+    },
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong, Shenzhen"
+      ],
+      "name": "Junan Zhang"
+    },
+    {
+      "affiliations": [
+        "Mohamed bin Zayed University of Artificial Intelligence"
+      ],
+      "name": "Gus Xia"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.10774v1",
+  "originalTitle": "AutoSynth: Learning to Generate Editable Synthesizer Programs from Audio and Text",
+  "pdfUrl": "https://arxiv.org/pdf/2610.10774v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.03405v1",
+  "abstract": "This paper introduces PEACE, the first joint embedding of audio effect code and output audio. Building on SLAP's multimodal objective, we pair an AFx-Rep audio encoder with two code encoders for Faust, a functional language for audio signal processing. First, we evaluate a fine-tuned T5 transformer over Faust source code. Second, we evaluate a message-passing graph neural network over an intermediate representation of the Faust compiler, capturing both topology and UI parameters. We evaluate on audio-to-code retrieval, where masking UI parameters at inference yields embeddings that encode effect chain topology alone. When parameters are visible, the two code encoders tie on retrieval of mixed-length chains but have tradeoffs on single-effect galleries. With parameters fully masked, PEACE recovers ordered chain topology far above chance without the limitations of supervised methods. PEACE outperforms pretrained models on an out-of-distribution reverb retrieval benchmark and can improve frozen audio-only representations. Its dual understanding of topology and parameters lays the groundwork for music information retrieval systems that search, generate, and condition on DSP code.",
+  "abstractSha256": "cf496ff279f376fb504f2225fe39031f107215093873680cc5d09e9bc68d118f",
+  "arxivId": "2610.03405",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.03405v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "音频检索",
+    "rankBucket": "前50%",
+    "score": 6.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-retrieval",
+          "label": "音频检索"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.music-information",
+          "label": "音乐信息检索"
+        },
+        {
+          "facet": "method",
+          "id": "method.gnn",
+          "label": "图神经网络"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "音频检索",
+      "primaryTaskId": "task.audio-retrieval",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "David Braun"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Adam Finkelstein"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "PEACE 用 SLAP 配对音频编码器与两种 Faust 代码编码器，在 1-3 个效果串联的检索上打平并在外部混响库上远超已有音频表示，代价是长链泛化和弱效果上的不均衡。",
+  "originalTitle": "PEACE: Joint Embeddings of DSP Effects Code and Audio",
+  "pdfUrl": "https://arxiv.org/pdf/2610.03405v1.pdf",
+  "readerTitle": "PEACE：把效果器代码和处理后的音频放进同一个向量空间",
+  "schemaVersion": 2
+}

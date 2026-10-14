@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.11437v1",
+  "arxivId": "2610.11437",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.11437v1",
+  "authors": [
+    {
+      "affiliations": [
+        "National University of Singapore"
+      ],
+      "name": "Junchuan Zhao"
+    },
+    {
+      "affiliations": [
+        "LIGHTSPEED"
+      ],
+      "name": "Chenglin Xu"
+    },
+    {
+      "affiliations": [
+        "National University of Singapore"
+      ],
+      "name": "Wei Zeng"
+    },
+    {
+      "affiliations": [
+        "Nanyang Technological University"
+      ],
+      "name": "Haoyang Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yiwen Guo"
+    },
+    {
+      "affiliations": [
+        "National University of Singapore"
+      ],
+      "name": "Ye Wang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.11437v1",
+  "originalTitle": "Edit Who Speaks, Control How They Speak: Global Timbre Editing and Local Instruction Control for TTS",
+  "pdfUrl": "https://arxiv.org/pdf/2610.11437v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,61 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.08236v1",
+  "abstract": "We review the notion of representing music using point sets and argue that such representations are better adapted than sequential representations for matching patterns in unvoiced, polyphonic music, such as keyboard music. Musical transformations such as transposition, inversion, diminution, augmentation and retrograde can be modelled by geometric transformations in pitch-time representations that combine translation with scaling parallel to and reflection in the time axis. We identify eight types of geometric pitch-time representation that use chromatic pitch, morphetic pitch, morph or chroma to represent pitch and either onset time or midtime to represent time. We illustrate how these types of representation allow us to characterise different types of musical transformation. For example, by using midtime instead of onset time, we can precisely characterise certain retrograde relationships; and by using morph and chroma pitch representations we can characterise transformations involving octave displacements and duplications. We present the concept of a transformation class and consider the three specific classes, $F_{\\mathrm{2STR}}$, $F_{\\mathrm{2STRMod7}}$ and $F_{\\mathrm{2STRMod12}}$. We introduce the notion of an inter-pattern transformation graph for a set of patterns, $S$, and a transformation class, $F$. Each vertex in such a graph represents a pattern in $S$ and there is an edge in the graph from pattern $P_1$ to pattern $P_2$ if and only if $P_1$ can be mapped onto $P_2$ by a transformation in $F$. We show, with the aid of such graphs, that the musical relationships between the occurrences of the HAYDN theme in Ravel's Menuet sur le nom d'Haydn can be precisely described in terms of transformations in $F_{\\mathrm{2STR}}$, $F_{\\mathrm{2STRMod7}}$ and $F_{\\mathrm{2STRMod12}}$ within the pitch-time representations considered.",
+  "abstractSha256": "44eecedef8408e87fda263d57f3ab71108d4cf940c2f83cb65af4dad836dd3d4",
+  "arxivId": "2610.08236",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.08236v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "音乐检索",
+    "rankBucket": "后50%",
+    "score": 5.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-retrieval",
+          "label": "音乐检索"
+        },
+        {
+          "facet": "task",
+          "id": "task.music-understanding",
+          "label": "音乐分析"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "method",
+          "id": "method.formal-analysis",
+          "label": "形式化分析"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "音乐检索",
+      "primaryTaskId": "task.music-retrieval",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "David Meredith"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文把无声部分配信息的复调乐谱表示成音高—时间点集，用平移、反射和时间轴缩放刻画移调、逆行、倒影与压成和弦等变换，并在拉威尔 Menuet sur le nom d'Haydn 的 31 个 HAYDN 主题出现之间用变换图验证了八种表示的分工与代价。",
+  "originalTitle": "Geometric Representations for Transformed Pattern Matching in Music",
+  "pdfUrl": "https://arxiv.org/pdf/2610.08236v1.pdf",
+  "readerTitle": "把音符看成点：拉威尔小步舞曲中的 HAYDN 主题如何被几何变换找到",
+  "schemaVersion": 2
+}

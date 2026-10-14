@@ -1,0 +1,135 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.10663v1",
+  "arxivId": "2610.10663",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.10663v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Earth Species Project",
+        "Queen Mary University of London"
+      ],
+      "name": "Christos Plachouras"
+    },
+    {
+      "affiliations": [
+        "Earth Species Project"
+      ],
+      "name": "David Robinson"
+    },
+    {
+      "affiliations": [
+        "Earth Species Project"
+      ],
+      "name": "Marius Miron"
+    },
+    {
+      "affiliations": [
+        "Earth Species Project"
+      ],
+      "name": "Gagan Narula"
+    },
+    {
+      "affiliations": [
+        "Earth Species Project"
+      ],
+      "name": "Paul Laisné"
+    },
+    {
+      "affiliations": [
+        "Earth Species Project"
+      ],
+      "name": "Anthony L. T. Fine"
+    },
+    {
+      "affiliations": [
+        "Earth Species Project"
+      ],
+      "name": "Benno Weck"
+    },
+    {
+      "affiliations": [
+        "Earth Species Project"
+      ],
+      "name": "Ellen Gilsenan-McMahon"
+    },
+    {
+      "affiliations": [
+        "Earth Species Project"
+      ],
+      "name": "Diane Kim"
+    },
+    {
+      "affiliations": [
+        "Earth Species Project"
+      ],
+      "name": "Laura Hay Mack"
+    },
+    {
+      "affiliations": [
+        "Earth Species Project"
+      ],
+      "name": "Maddie Cusimano"
+    },
+    {
+      "affiliations": [
+        "Earth Species Project"
+      ],
+      "name": "Sara Keen"
+    },
+    {
+      "affiliations": [
+        "Earth Species Project"
+      ],
+      "name": "Lukas Rauch"
+    },
+    {
+      "affiliations": [
+        "Earth Species Project"
+      ],
+      "name": "Benjamin Hoffman"
+    },
+    {
+      "affiliations": [
+        "Earth Species Project"
+      ],
+      "name": "Emmanuel Chemla"
+    },
+    {
+      "affiliations": [
+        "Queen Mary University of London"
+      ],
+      "name": "Emmanouil Benetos"
+    },
+    {
+      "affiliations": [
+        "Queen Mary University of London"
+      ],
+      "name": "Johan Pauwels"
+    },
+    {
+      "affiliations": [
+        "Earth Species Project"
+      ],
+      "name": "Milad Alizadeh"
+    },
+    {
+      "affiliations": [
+        "Earth Species Project"
+      ],
+      "name": "Matthieu Geist"
+    },
+    {
+      "affiliations": [
+        "Earth Species Project"
+      ],
+      "name": "Olivier Pietquin"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.10663v1",
+  "originalTitle": "BEANS-Next and ROOTS: Broadening Audio-Language Capabilities for Bioacoustics",
+  "pdfUrl": "https://arxiv.org/pdf/2610.10663v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

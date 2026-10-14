@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.04071v1",
+  "abstract": "Articulatory entrainment, the adaptation of vocal tract coordination to facilitate interaction remains underexplored in spontaneous dialogue, particularly among autistic speakers. Many prior studies have utilized task-based, phoneme-level analyses with invasive measurement techniques. Here, we introduce a speaker-independent framework to quantify articulatory entrainment in spontaneous dyadic conversations among autistic and non-autistic adults using acoustic-to-articulatory inversion and coordination complexity metrics. We examine temporal changes in articulatory coordination across interaction. Non-autistic dyads exhibit increasing coordination complexity and stronger entrainment over time, autistic dyads show moderate effects, and mixed dyads demonstrate the least alignment. Greater articulatory entrainment correlates with higher self-reported conversational success, indicating increase in coordination complexity as a marker of effective social interaction.",
+  "abstractSha256": "ca468f4d6dba6daf6b03e02d374ae90329d97d14454b7d0cdc799b26ac96a2e1",
+  "arxivId": "2610.04071",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.04071v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "语音属性识别",
+    "rankBucket": "前50%",
+    "score": 5.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-attributes",
+          "label": "语音属性识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.pragmatics-discourse",
+          "label": "语用与话语"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.phonation",
+          "label": "发声与构音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "语音属性识别",
+      "primaryTaskId": "task.speech-attributes",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Thanushi Withanage"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Carol Espy-Wilson"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Elizabeth Redcay"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Desi Jones"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Noah Sasson"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文用声学到发音反演得到声道变量并以特征谱度量协调复杂度与趋同，证据显示非自闭配对随时间更复杂且趋同更强并与自评会话成功相关，混合配对趋同最弱。",
+  "originalTitle": "Articulatory Entrainment and Coordination Complexity in Spontaneous Autistic and Non-autistic Dialogue",
+  "pdfUrl": "https://arxiv.org/pdf/2610.04071v1.pdf",
+  "readerTitle": "自发对话中声道协调如何随时间变化与趋同",
+  "schemaVersion": 2
+}

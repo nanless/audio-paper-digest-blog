@@ -1,0 +1,22 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.12214v1",
+  "arxivId": "2610.12214",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.12214v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Artificial Intelligence",
+        "University of Seoul",
+        "Seoul, Republic of Korea"
+      ],
+      "name": "Heeseung Kim"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.12214v1",
+  "originalTitle": "DiffuPlex: Accelerating Full-Duplex Spoken Dialog Models via Rolling Masked Diffusion",
+  "pdfUrl": "https://arxiv.org/pdf/2610.12214v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

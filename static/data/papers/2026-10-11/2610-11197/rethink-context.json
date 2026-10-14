@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.11197v1",
+  "abstract": "Automatic music transcription (AMT) is limited by the scarcity of audio recordings paired with precise symbolic annotations. Synthetic data can provide supervision at scale, but it remains unclear whether effective transfer depends on realistic score structure or broad timbral coverage. We study these factors separately through an online sampler--renderer pipeline. A unified corruption sampler ranges from unmodified MIDI clips through partial corruption to deeply randomized note-event distributions. The renderer converts these events to audio while independently controlling instrument and timbral coverage. A fixed transcription model is trained jointly on offline recordings and newly rendered examples. Controlled ablations reveal an asymmetry between the two factors: moderate corruption of the note-event distribution does not impair transfer and can improve it, whereas broader renderer-side timbral support consistently improves out-of-domain generalization under a fixed note-event distribution. Finally, online-rendered examples complement real and existing synthetic data in a strong combined-data regime. These results suggest that synthetic AMT data should prioritize coverage of note-level attributes and their timbral realizations over realistic joint score structure.",
+  "abstractSha256": "e937f7ecb42059d4fdfa7989faaba3a0b0855cee96e62db200b6a83071792987",
+  "arxivId": "2610.11197",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.11197v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "数据增强",
+    "primaryTask": "音乐转录",
+    "rankBucket": "前25%",
+    "score": 7.7,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.transcription",
+          "label": "音乐转录"
+        },
+        {
+          "facet": "method",
+          "id": "method.augmentation",
+          "label": "数据增强"
+        },
+        {
+          "facet": "method",
+          "id": "method.domain-generalization",
+          "label": "域泛化"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "数据增强",
+      "primaryMethodId": "method.augmentation",
+      "primaryTask": "音乐转录",
+      "primaryTaskId": "task.transcription",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Haiwen Xia"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chao Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Qiuqiang Kong"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "该论文用在线采样器加渲染器分离乐谱结构与音色覆盖来生成转录训练数据，发现适度打乱音符事件仍可迁移而扩大音色覆盖能单调提升域外转录，联合离线与在线数据后互补但增益与领域有关。",
+  "originalTitle": "Randomized Scores and Diverse Timbres: Augmenting Automatic Music Transcription with Online-Generated Data",
+  "pdfUrl": "https://arxiv.org/pdf/2610.11197v1.pdf",
+  "readerTitle": "随机乐谱与多样音色：在线生成数据如何帮助自动音乐转录",
+  "schemaVersion": 2
+}

@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.07107v1",
+  "abstract": "Speech-pretrained models have shown promise in animal bioacoustics, but the factors governing their cross-species transfer remain poorly understood. We evaluate 15 frozen encoders spanning monolingual and multilingual speech, speaker verification, animal bioacoustics, and general audio on caller identification across four species and call-type classification across three. Differences between the strongest speech- and animal-pretrained representations range from $-0.027$ to $+0.119$ UAR; speech is significantly better in three of seven settings ($p<0.01$) and not significantly different in the remaining four. Controlled comparisons show no systematic advantage from increased language coverage or animal-domain pretraining, while frozen speaker-verification embeddings transfer poorly. The results also show that transfer is strongly layer-dependent: raw-waveform models peak early, whereas patch-spectrogram models peak deeper.",
+  "abstractSha256": "2f9b92ed2865ec6edae4e467215cea8afea1f33a9cf01c13ebfd4d751b2a63cf",
+  "arxivId": "2610.07107",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.07107v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "迁移学习",
+    "primaryTask": "说话人识别",
+    "rankBucket": "前50%",
+    "score": 5.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speaker-identification",
+          "label": "说话人识别"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.transfer",
+          "label": "迁移学习"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.bioacoustics",
+          "label": "生物声学"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "迁移学习",
+      "primaryMethodId": "method.transfer",
+      "primaryTask": "说话人识别",
+      "primaryTaskId": "task.speaker-identification",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tomás Arias-Vergara"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Christopher Hauer"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Héloïse Brotier"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Elmar Nöth"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Andreas Maier"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lee Koren"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文用冻结编码器加逻辑回归比较 15 种语音、说话人验证、动物声学与通用音频表示在四个物种个体识别和三个物种叫声类型分类上的迁移效果，发现最强语音表示在七组设置中三组显著更好、四组无显著差异，而语言覆盖与动物域预训练均无系统优势，且可迁移信息高度依赖网络层与前端类型。",
+  "originalTitle": "Neural Representations, Natural Connections: What Transfers From Human Speech Foundation Models to Animal Vocalizations?",
+  "pdfUrl": "https://arxiv.org/pdf/2610.07107v1.pdf",
+  "readerTitle": "人类语音预训练表示能迁移到动物发声吗：个体识别与叫声类型分类的对照评估",
+  "schemaVersion": 2
+}

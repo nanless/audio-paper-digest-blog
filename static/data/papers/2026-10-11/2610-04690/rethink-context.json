@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.04690v1",
+  "abstract": "Self-supervised learning (SSL) is standard for speech representation learning, but mainstream models are designed around single-speaker audio, limiting their usefulness in multi-speakers scenarios. We present SepRQ, an open-source SSL framework that replaces masked prediction with a pseudo-source-separation objective over frozen random-projection codebooks. By adopting a novel mask-free, multiresolution approach, SepRQ achieves state-of-the-art performance in Speaker Diarization and Speech Separation on the SUPERB benchmark, surpassing WavLM and other cocktail-party derived SSLs at both Base and Large scales, while requiring only 85.68M inference parameters. SepRQ also demonstrates strong performance across target-speaker tasks requiring enrollment (such as Target-Speaker Automatic Speech Recognition), and on the challenging multi-domain DIHARD 3 diarization dataset. Notably, we report strong separation capabilities on three-speaker mixtures (WSJ0-3Mix), where current SSL literature struggles. While cocktail-party SSLs remain scarce and closed-source, limited to C-HuBERT and the enrollment-based SA-WavLM, we open-source SepRQ to the community.",
+  "abstractSha256": "fa448e8f736cf69a348dd5bfa886f470004c0a0ddf08fa8519b5dfb6aff34d85",
+  "arxivId": "2610.04690",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.04690v1",
+  "assessment": {
+    "documentType": "模型报告",
+    "primaryMethod": "自监督学习",
+    "primaryTask": "语音分离",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-separation",
+          "label": "语音分离"
+        },
+        {
+          "facet": "task",
+          "id": "task.diarization",
+          "label": "说话人分离标注"
+        },
+        {
+          "facet": "method",
+          "id": "method.self-supervised",
+          "label": "自监督学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.vector-quantization",
+          "label": "向量量化"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "自监督学习",
+      "primaryMethodId": "method.self-supervised",
+      "primaryTask": "语音分离",
+      "primaryTaskId": "task.speech-separation",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Séverin Baroudi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hervé Bredin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ricard Marxer"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "SepRQ 针对多人混合语音的表示学习问题，用无掩码的多分辨率伪源分离预测冻结随机码本序列，在 SUPERB 分离与日志任务上取得较强结果，代价是保留 85.68M 推理参数的编码器并在预训练时承担多层分离头开销，且单说话人任务仍受限。",
+  "originalTitle": "SepRQ : Self-Supervised Speech Mixture Representation Learning via Mask-Free, Multi-Scale Source Separation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.04690v1.pdf",
+  "readerTitle": "混合语音里学出可分离的表示：SepRQ 的多分辨率伪源分离",
+  "schemaVersion": 2
+}

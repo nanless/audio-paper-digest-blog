@@ -1,0 +1,109 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.11792v1",
+  "abstract": "We present AuraLuxMuse, a novel system for automated aesthetic stage lighting design that integrates expert knowledge, representation learning, and preference-adaptive modeling. Lighting design in live performance settings requires the seamless translation of musical features into dynamic lighting behaviors. However, traditional workflows remain time-consuming, labor-intensive, and difficult to transfer. AuraLuxMuse encodes music and professional cue sequences into a shared retrieval space, estimates cue-event density, and retargets selected fixture commands to the destination stage. It assists pre-production authoring by returning editable cues rather than replacing the designer with an unconstrained generator. At the heart of AuraLuxMuse are two key modules: Lighting-Aligned Music Pretraining (LAMP), which performs contrastive learning between audio and lighting cues for alignment, and Preference-Adaptive Mixture of Experts (PAMoE), which conditions preference-aware cue retrieval and adaptation on designers' intent through a gated ensemble of style-specific expert networks. To support training and evaluation, we introduce Musilux, the first dataset of paired musical audio and professional lighting cue sequences under diverse performance scenarios. We evaluate AuraLuxMuse across both virtual simulation environments and professional-grade laboratories. Experimental results, including objective and subjective evaluation, demonstrate that AuraLuxMuse retrieves and adapts stage-lighting cues that are visually cohesive, semantically meaningful, and artistically expressive, showing its potential for AI-assisted aesthetic stage design.",
+  "abstractSha256": "6f0b89767542f0a025dbf63d39b1e3ecd42e7361abe892aeaf52babc6df42ad2",
+  "arxivId": "2610.11792",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.11792v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "检索增强",
+    "primaryTask": "音乐分析",
+    "rankBucket": "前50%",
+    "score": 5.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-understanding",
+          "label": "音乐分析"
+        },
+        {
+          "facet": "method",
+          "id": "method.retrieval-augmented",
+          "label": "检索增强"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "method",
+          "id": "method.moe",
+          "label": "混合专家模型"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "检索增强",
+      "primaryMethodId": "method.retrieval-augmented",
+      "primaryTask": "音乐分析",
+      "primaryTaskId": "task.music-understanding",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Fudan University, Shanghai, China"
+      ],
+      "name": "Junyu Deng"
+    },
+    {
+      "affiliations": [
+        "Fudan University, Shanghai, China"
+      ],
+      "name": "Jiale Cao"
+    },
+    {
+      "affiliations": [
+        "Fudan University, Shanghai, China",
+        "Shanghai Film Academy, Shanghai University, Shanghai, China"
+      ],
+      "name": "Mengtian Li"
+    },
+    {
+      "affiliations": [
+        "Shanghai Theatre Academy, Shanghai, China"
+      ],
+      "name": "Zhongxia Ji"
+    },
+    {
+      "affiliations": [
+        "Shanghai Theatre Academy, Shanghai, China"
+      ],
+      "name": "Ruhua Chen"
+    },
+    {
+      "affiliations": [
+        "Nanjing University of the Arts, Nanjing, China"
+      ],
+      "name": "Yiyi He"
+    },
+    {
+      "affiliations": [
+        "Fudan University, Shanghai, China"
+      ],
+      "name": "Guangnan Ye"
+    },
+    {
+      "affiliations": [
+        "Shanghai Theatre Academy, Shanghai, China"
+      ],
+      "name": "Zuo Hu"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "AuraLuxMuse 用音乐与灯光的对比对齐检索专家灯光序列并按偏好适配，证据是演唱会与综艺场景专家评分占优而戏剧场景不显著，代价是依赖固定语料库且单次推理约 7.65 秒。",
+  "originalTitle": "AuraLuxMuse: Adaptive Fusion Modeling for Aesthetic Stage Lighting Design with Music and Expert Guidance",
+  "pdfUrl": "https://arxiv.org/pdf/2610.11792v1.pdf",
+  "readerTitle": "AuraLuxMuse：把音乐变成可上台的灯光线索",
+  "schemaVersion": 2
+}

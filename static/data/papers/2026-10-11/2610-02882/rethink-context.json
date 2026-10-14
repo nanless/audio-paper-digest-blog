@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.02882v1",
+  "abstract": "Large-scale foundation models achieve strong performance across diverse tasks, but their size makes inference costly, largely due to dense matrix multiplications. Prior work reduces this cost by replacing dense weight matrices with efficient structured forms such as low-rank factorizations. However, these methods approximate weights rather than the output activations that determine inference accuracy. Consequently, small weight-space errors can be amplified by input activations, producing large output errors. In this work, we propose DyRA, an input-adaptive method that improves structured matrix multiplication approximation by correcting residual output errors during inference. We show that matrix multiplication can be approximated more effectively by directly optimizing low-rank factors of the output. DyRA builds on this insight by dynamically approximating and correcting the output error introduced by structured weight approximations. This combines efficient structured computation with input-dependent correction, yielding a more faithful approximation of full matrix multiplication under the same computational budget. Across vision, speech, and language models, DyRA consistently improves the accuracy-efficiency trade-off over structured weight approximations alone. Notably, DyRA achieves a 1.5$\\times$ end-to-end GPU speedup for DINOv3 while reducing accuracy degradation by more than 3$\\times$ relative to weight-only baselines.",
+  "abstractSha256": "987201c08783fd1c7741e7a62c131e25e6f9507bd8d9e135dc4c71f995e18269",
+  "arxivId": "2610.02882",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.02882v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "低秩压缩",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.9,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.low-rank-compression",
+          "label": "低秩压缩"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "低秩压缩",
+      "primaryMethodId": "method.low-rank-compression",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Department of EECS, University of Michigan"
+      ],
+      "name": "Daewon Chae"
+    },
+    {
+      "affiliations": [
+        "Department of EECS, University of Michigan"
+      ],
+      "name": "Hyunwon Chung"
+    },
+    {
+      "affiliations": [
+        "Qualcomm AI Research"
+      ],
+      "name": "Changwoo Lee"
+    },
+    {
+      "affiliations": [
+        "Department of EECS, University of Michigan"
+      ],
+      "name": "Hun-Seok Kim"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "DyRA 针对稠密矩阵乘法太贵的问题，在静态结构化权重近似之外增加随输入变化的低秩残差修正，在视觉、语音和语言模型上用同等计算预算保留更多输出精度，但其加速主要适用于矩阵-矩阵乘法充足的场景。",
+  "originalTitle": "DyRA: Dynamic Residual Approximation for Efficient Matrix Multiplication in DNNs",
+  "pdfUrl": "https://arxiv.org/pdf/2610.02882v1.pdf",
+  "readerTitle": "DyRA：用输入相关的残差修正加速大模型的矩阵乘法",
+  "schemaVersion": 2
+}

@@ -1,0 +1,61 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.02582v1",
+  "abstract": "Speakers can differ not only in how much silence they produce but also in where interruptions fall, information that global pause counts obscure. We analyzed 115 publicly available Speech Accent Archive recordings of the same read passage: 57 speakers whose archive metadata listed Mandarin as their first language and a mainland-China birthplace, and 58 American English first-language speakers born in the U.S. Midwest. Word-level forced alignment was used to extract interword acoustic gaps and classify each position as punctuation-marked or unpunctuated. At a 250 ms threshold, punctuation-marked gaps were similar for the Mandarin and English groups (means 5.56 and 5.47), whereas unpunctuated-position gaps were more frequent in the Mandarin group (means 3.67 and 0.43; adjusted rate ratio 11.98, 95% confidence interval 6.53-22.00). A crossed-effects logistic model with random intercepts for speakers and passage positions confirmed that the contrast was disproportionately concentrated at unpunctuated positions (interaction odds ratio 9.44, 95% confidence interval 5.23-17.02). The pattern persisted at a 500 ms threshold, after removing positions adjacent to punctuation, after excluding severe transcript-deviation cases, and when analysis was restricted to acoustically confirmed silence. Nearly half of the Mandarin group's unpunctuated gaps occurred at positions classified as within-phrase in an exploratory single-coder annotation. In this fixed-passage corpus, acoustic gap placement relative to textual and syntactic structure distinguished the groups more clearly than punctuation-marked pausing. The results support placement-sensitive measurement as a reproducible dimension of breakdown fluency while not establishing a causal mechanism, proficiency difference, or perceptual consequence.",
+  "abstractSha256": "310288ade3851e6c2a715482b5fee738b24006ebe075d937aad2153100fb79b1",
+  "arxivId": "2610.02582",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.02582v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "统计分析",
+    "primaryTask": "发音评估",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.pronunciation-assessment",
+          "label": "发音评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.language-acquisition",
+          "label": "语言习得"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "统计分析",
+      "primaryMethodId": "method.statistical-analysis",
+      "primaryTask": "发音评估",
+      "primaryTaskId": "task.pronunciation-assessment",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Peyman Jahanbin"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文用同一篇 69 词朗读比较两组人的词间声学间隙落在标点处还是非标点处，最强证据是非标点处计数差异大而标点处相近，代价是结论只限这批录音和这篇短文。",
+  "originalTitle": "Acoustic gap placement in second-language read speech production",
+  "pdfUrl": "https://arxiv.org/pdf/2610.02582v1.pdf",
+  "readerTitle": "朗读中停顿落在哪里：同一篇短文里的声学间隙位置比较",
+  "schemaVersion": 2
+}

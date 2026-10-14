@@ -1,0 +1,104 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.11363v1",
+  "arxivId": "2610.11363",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.11363v1",
+  "authors": [
+    {
+      "affiliations": [
+        "The Hong Kong University of Science and Technology"
+      ],
+      "name": "Jiaqi Tang"
+    },
+    {
+      "affiliations": [
+        "ATH, Alibaba Group"
+      ],
+      "name": "Yi-Feng Wu"
+    },
+    {
+      "affiliations": [
+        "The Hong Kong University of Science and Technology (Guangzhou)"
+      ],
+      "name": "Yuting Zhang"
+    },
+    {
+      "affiliations": [
+        "The Hong Kong University of Science and Technology (Guangzhou)"
+      ],
+      "name": "Hao Lu"
+    },
+    {
+      "affiliations": [
+        "Northwestern Polytechnical University"
+      ],
+      "name": "Bowen Fu"
+    },
+    {
+      "affiliations": [
+        "ATH, Alibaba Group"
+      ],
+      "name": "Qing-Guo Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiaogang Xu"
+    },
+    {
+      "affiliations": [
+        "ATH, Alibaba Group"
+      ],
+      "name": "Yuwei Hu"
+    },
+    {
+      "affiliations": [
+        "ATH, Alibaba Group"
+      ],
+      "name": "Shiyin Lu"
+    },
+    {
+      "affiliations": [
+        "Northwestern Polytechnical University"
+      ],
+      "name": "Wei Wei"
+    },
+    {
+      "affiliations": [
+        "Northwestern Polytechnical University"
+      ],
+      "name": "Lei Zhang"
+    },
+    {
+      "affiliations": [
+        "ATH, Alibaba Group"
+      ],
+      "name": "Zhao Xu"
+    },
+    {
+      "affiliations": [
+        "ATH, Alibaba Group"
+      ],
+      "name": "Weihua Luo"
+    },
+    {
+      "affiliations": [
+        "The Hong Kong University of Science and Technology"
+      ],
+      "name": "Qifeng Chen"
+    },
+    {
+      "affiliations": [
+        "The Hong Kong University of Science and Technology (Guangzhou)"
+      ],
+      "name": "Ying-Cong Chen"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.11363v1",
+  "originalTitle": "UniData: Universal Multimodal Instruction Generation Pipeline",
+  "pdfUrl": "https://arxiv.org/pdf/2610.11363v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

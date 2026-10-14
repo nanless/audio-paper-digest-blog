@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.11520v1",
+  "abstract": "End-to-end speech parsing, a task recently proposed, consists in predicting both the transcription and the syntactic tree for a spoken utterance. Existing architectures for speech parsing often utilise intermediate neural networks. In this work, we examine the effectiveness of intermediate neural networks (NN) for parsing, and, specifically, what role do they play. We introduce a simpler end-to-end architecture for speech parsing, where we remove these intermediate NN units, reducing the parameters by 12%, while achieving comparable or better performance than prior method on both automatic speech recognition (ASR) and parsing. We demonstrate that intermediate NN units help reduce the representational gap when the pre-trained encoder is frozen. We do a comprehensive evaluation of speech parsing on French, and medium-low resource languages Slovenian and Naija. We further investigate the impact of the training data size and intermediate layers of the pretrained speech encoder on speech parsing.",
+  "abstractSha256": "14d6b08408341e77e3309b642b984378880a21fcffa45c160baf339b6bcfd664",
+  "arxivId": "2610.11520",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.11520v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "模型剪枝",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.pruning",
+          "label": "模型剪枝"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        },
+        {
+          "facet": "method",
+          "id": "method.end-to-end-learning",
+          "label": "端到端学习"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "模型剪枝",
+      "primaryMethodId": "method.pruning",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Minnie Kabra"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Benjamin Lecouteux"
+    },
+    {
+      "affiliations": [
+        "Univ. Grenoble Alpes, CNRS, Grenoble INP, LIG, 38000 Grenoble, France"
+      ],
+      "name": "Maximin Coavoux"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文研究端到端语音依存句法分析中连接语音编码器与句法分析器的三段中间神经网络是否必要，提出去掉它们的简化结构，在法语、斯洛文尼亚语和奈贾语上达到相当或更好的分析准确率并减少约 12% 参数，代价和结论都只在联合微调与冻结编码器等明确条件下成立。",
+  "originalTitle": "When Can You Prune Your Network? A Study of Intermediate Neurons in Multilingual Speech Parsing",
+  "pdfUrl": "https://arxiv.org/pdf/2610.11520v1.pdf",
+  "readerTitle": "什么时候可以剪掉语音句法分析里的中间神经网络",
+  "schemaVersion": 2
+}

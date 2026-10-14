@@ -1,0 +1,20 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.02836v1",
+  "arxivId": "2610.02836",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.02836v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Fabian Ritter-Gutierrez"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.02836v1",
+  "originalTitle": "Correlation-Based Distillation Yields More Mergeable Speech-Music Encoders",
+  "pdfUrl": "https://arxiv.org/pdf/2610.02836v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

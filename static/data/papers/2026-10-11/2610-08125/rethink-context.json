@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.08125v1",
+  "abstract": "Full-duplex spoken dialogue models listen and speak at the same time, enabling voice agents to have natural, low-latency interactions that turn-based systems cannot offer. However, they are commonly evaluated against single-sided interlocutors: pre-recorded audio that cannot react, or an automated examiner that reacts in real time but only administers a fixed sequence of tests and is never graded. These single-sided frameworks evaluate only half of a two-body problem, where turn-taking, overlap, and interruption are joint products of two coupled speakers. We propose DyaFDB, a framework that evaluates full-duplex models in a dyadic setup: two models converse directly under assigned roles with cooperative or conflicting goals, and both sides are scored offline with an external judge. DyaFDB probes how the two models behave toward each other, such as how they take turns or carry an assigned role under different interests. We instantiate four tasks as 140 scenarios and record 7,560 conversations, covering six self- and cross-play pairings. Throughout the experiments, we observe that how a model behaves continually reshapes its partner. We thus demonstrate that each model must be both the examiner and examinee of the other, and no single fixed interlocutor can play both parts. We will release the scenarios, role prompts, and recording protocols between two full-duplex models, without any pre-recorded audio.",
+  "abstractSha256": "163c1215fd07e2e9dbe56073ac192e65418a09f4555930f48eea30965503f744",
+  "arxivId": "2610.08125",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.08125v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "全双工语音交互",
+    "rankBucket": "前25%",
+    "score": 7.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.full-duplex",
+          "label": "全双工语音交互"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "task",
+          "id": "task.turn-taking",
+          "label": "轮次切换"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "全双工语音交互",
+      "primaryTaskId": "task.full-duplex",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Korea Advanced Institute of Science and Technology"
+      ],
+      "name": "Sungnyun Kim"
+    },
+    {
+      "affiliations": [
+        "Korea Advanced Institute of Science and Technology"
+      ],
+      "name": "Sungwoo Cho"
+    },
+    {
+      "affiliations": [
+        "Korea Advanced Institute of Science and Technology"
+      ],
+      "name": "Jihwan Oh"
+    },
+    {
+      "affiliations": [
+        "Korea Advanced Institute of Science and Technology"
+      ],
+      "name": "Se-Young Yun"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文针对全双工语音模型边听边说的耦合互动难以用固定考官评价的问题，提出让两个模型直接对话并都被离线打分的 DyaFDB 框架，用 140 个场景 7560 段对话证明分数是两人共同决定的，代价是需要成对录制与离线评判。",
+  "originalTitle": "Conversation Is a Two-Body Problem: Dyadic Evaluation of Full-Duplex Dialogue Models",
+  "pdfUrl": "https://arxiv.org/pdf/2610.08125v1.pdf",
+  "readerTitle": "两个人一起说话才算数：全双工对话模型的双人评估",
+  "schemaVersion": 2
+}

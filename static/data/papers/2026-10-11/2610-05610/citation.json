@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.05610v2",
+  "arxivId": "2610.05610",
+  "arxivVersion": 2,
+  "arxivVersionedId": "2610.05610v2",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sonal Kumar"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sinan Hersek"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Artem Dementyev"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mengzhen Pan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ishan Chatterjee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Anurag Kumar"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ramani Duraiswami"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Dinesh Manocha"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Andrea Colaco"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.05610v2",
+  "originalTitle": "SEA-LM: Egocentric Spatial Audio Understanding for Wearable Microphone Arrays",
+  "pdfUrl": "https://arxiv.org/pdf/2610.05610v2.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

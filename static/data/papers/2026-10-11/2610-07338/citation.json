@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.07338v1",
+  "arxivId": "2610.07338",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.07338v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kwanghee Choi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Suwon Shon"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Dmitriy Serdyuk"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Guitang Lan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chao-Wei Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mohammad Sadegh Rasooli"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sangeeta Srivastava"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhaojiang Lin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Saurabh Adya"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ming Sun"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.07338v1",
+  "originalTitle": "Logbook: Extremely Long-form Audio Event Understanding",
+  "pdfUrl": "https://arxiv.org/pdf/2610.07338v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

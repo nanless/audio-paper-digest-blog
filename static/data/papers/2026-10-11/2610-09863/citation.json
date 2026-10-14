@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.09863v1",
+  "arxivId": "2610.09863",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.09863v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bill Psomas"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mohammad Mahdi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Michalis Thomas"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Danda Pani Paudel"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Giorgos Tolias"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Giorgos Kordopatis-Zilos"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.09863v1",
+  "originalTitle": "Global Average Precision for Representation Learning",
+  "pdfUrl": "https://arxiv.org/pdf/2610.09863v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

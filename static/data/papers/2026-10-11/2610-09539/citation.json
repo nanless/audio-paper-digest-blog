@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.09539v1",
+  "arxivId": "2610.09539",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.09539v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Data Science and Artificial Intelligence, The Hong Kong Polytechnic University, Hong Kong SAR, China"
+      ],
+      "name": "Shu Peng"
+    },
+    {
+      "affiliations": [
+        "Department of Data Science and Artificial Intelligence, The Hong Kong Polytechnic University, Hong Kong SAR, China"
+      ],
+      "name": "Rui Liu"
+    },
+    {
+      "affiliations": [
+        "Department of Data Science and Artificial Intelligence, The Hong Kong Polytechnic University, Hong Kong SAR, China"
+      ],
+      "name": "Yufei Zhang"
+    },
+    {
+      "affiliations": [
+        "Department of Data Science and Artificial Intelligence, The Hong Kong Polytechnic University, Hong Kong SAR, China"
+      ],
+      "name": "Wenlong You"
+    },
+    {
+      "affiliations": [
+        "Department of Data Science and Artificial Intelligence, The Hong Kong Polytechnic University, Hong Kong SAR, China"
+      ],
+      "name": "Zhige Chen"
+    },
+    {
+      "affiliations": [
+        "Department of Data Science and Artificial Intelligence, The Hong Kong Polytechnic University, Hong Kong SAR, China"
+      ],
+      "name": "Jiachen Xi"
+    },
+    {
+      "affiliations": [
+        "Department of Data Science and Artificial Intelligence, The Hong Kong Polytechnic University, Hong Kong SAR, China"
+      ],
+      "name": "Qiyuan Sun"
+    },
+    {
+      "affiliations": [
+        "Department of Computing, The Hong Kong Polytechnic University, Hong Kong SAR, China"
+      ],
+      "name": "Yan Liu"
+    },
+    {
+      "affiliations": [
+        "Department of Data Science and Artificial Intelligence, The Hong Kong Polytechnic University, Hong Kong SAR, China"
+      ],
+      "name": "Kay Chen Tan"
+    },
+    {
+      "affiliations": [
+        "Department of Data Science and Artificial Intelligence, The Hong Kong Polytechnic University, Hong Kong SAR, China"
+      ],
+      "name": "Jibin Wu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.09539v1",
+  "originalTitle": "A multi-scenario EEG dataset for auditory attention decoding in naturalistic multi-talker environments",
+  "pdfUrl": "https://arxiv.org/pdf/2610.09539v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

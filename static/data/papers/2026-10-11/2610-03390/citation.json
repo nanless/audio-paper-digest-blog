@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.03390v1",
+  "arxivId": "2610.03390",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.03390v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mohammad Nur Hossain Khan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Subrata Biswas"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bashima Islam"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.03390v1",
+  "originalTitle": "DriftTTS: Few-Step Text-to-Speech Without Distillation via Distribution-Matching Drift",
+  "pdfUrl": "https://arxiv.org/pdf/2610.03390v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

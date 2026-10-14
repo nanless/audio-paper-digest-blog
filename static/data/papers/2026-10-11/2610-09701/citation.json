@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.09701v1",
+  "arxivId": "2610.09701",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.09701v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Huawei Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jihui Aimee Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Huiyuan June Sun"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Prasanga Samarasinghe"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.09701v1",
+  "originalTitle": "Direction-preserving Spatial Audio Signal Enhancement in The Spherical Harmonic Domain",
+  "pdfUrl": "https://arxiv.org/pdf/2610.09701v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

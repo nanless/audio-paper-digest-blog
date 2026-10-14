@@ -1,0 +1,90 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.03125v1",
+  "abstract": "Speech delivery varies with both the requested paralinguistic attribute and the linguistic content. We introduce ParaGeo, a matched-content decomposition of paralinguistic variation in a frozen speech language model. Synthesized audio tokens are replayed with a fixed listening prompt; pooled key/value (K/V) representations are centered and projected into a shared low-dimensional space. Our GLM-4-Voice probe spans 80 requested controls from 12 benchmark families across eight sentences. With a globally fitted calibration basis, content-held-out centroid accuracy using this basis is 9.49% versus a 1.25% permutation baseline; same-label cross-content cosine similarity is 0.285 versus 0.017, and both conditional permutation tests yield p = 0.001. A separate ten-scenario, six-style probe reveals reproducible contrast directions across scenarios. Static, additive, and temporal interventions produce attribute-, layer-, and schedule-dependent response profiles. These results provide a shared coordinate representation for measuring paralinguistic structure and an empirical starting point for latent speech control. Code is available at https://github.com/yuhanlydia/ParaGeo.",
+  "abstractSha256": "bb9fbd12727e5061eea9d646282eba2e81723e6b62fff3c6fd80ab8f3403f935",
+  "arxivId": "2610.03125",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.03125v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "低秩压缩",
+    "primaryTask": "韵律与风格控制",
+    "rankBucket": "前50%",
+    "score": 6.9,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.prosody-style-control",
+          "label": "韵律与风格控制"
+        },
+        {
+          "facet": "method",
+          "id": "method.low-rank-compression",
+          "label": "低秩压缩"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.interpretability",
+          "label": "可解释性"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.speech",
+          "label": "语音大模型"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "低秩压缩",
+      "primaryMethodId": "method.low-rank-compression",
+      "primaryTask": "韵律与风格控制",
+      "primaryTaskId": "task.prosody-style-control",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuhan Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuxuan Ou"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ruoxi Su"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mohamed Ahmed Zaki"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yunbo Long"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文用匹配内容合成与固定提示回放在冻结 GLM-4-Voice 中检验请求式副语言是否跨内容复现，以 16 维共享坐标刻画结构，最强表示证据是内容留出下 9.49% 对 1.25% 与余弦 0.285 对 0.017，而生成干预只在部分属性与层组有效并伴随文本保真代价。",
+  "originalTitle": "ParaGeo: Decomposing Paralinguistic Variation into a Shared Latent Geometry",
+  "pdfUrl": "https://arxiv.org/pdf/2610.03125v1.pdf",
+  "readerTitle": "ParaGeo：把副语言变化拆进共享低维坐标",
+  "schemaVersion": 2
+}

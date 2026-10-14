@@ -1,0 +1,72 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.10213v1",
+  "abstract": "A natural strategy for inverse problems with scarce labelled data is to transfer relational structure learned from abundant forward-simulation data. We show this strategy fails systematically, even when it satisfies the standard theoretical justification for why structure should help. We prove that approximate structure provides estimation-error benefits whenever the edge error satisfies $Δ< n^2 - kn$, reducing sample complexity from $O(n^2)$ to $O(kn+Δ)$. Structure learned via Neural Relational Inference (NRI) from dynamics prediction satisfies this condition, yet on a source-localisation task across 180 CFD-simulated hydrogen-leak scenarios and 180 acoustic scenarios, it degrades performance by 116% and 201% relative to a flexible, task-optimised attention baseline, while a physics-based prior (Green's function) degrades by only 69-72%. Four independent lines of evidence show this is not a tuning failure: NRI improves only 0.5% when given 18x more training data (versus 16.6% for the task-optimised baseline, $p<0.001$); performance is insensitive to the NRI edge threshold across a wide range; the dynamics-learned graph overlaps the task-optimal graph on only 6% of edges; and two further dynamics-derived structure estimators (correlation- and mutual-information-based) show no measurable benefit over a structure-free baseline, with the correlation-based estimator performing markedly worse. We formalise this gap as a statement about approximation error that the edge-accuracy condition cannot control, and we provide a lightweight transferability test (Jaccard similarity against a partially-observed target-task graph) that separates successful from failed transfer in all four domain/structure pairs we evaluate, using under an hour of computation and 15-20% of target-domain data; we present this as a heuristic calibrated on few cases, not a validated general threshold.",
+  "abstractSha256": "8774e900bf8df221ae851fc058694e7a705e2b835690657ce0a58d78520bff32",
+  "arxivId": "2610.10213",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.10213v1",
+  "assessment": {
+    "documentType": "理论研究",
+    "primaryMethod": "迁移学习",
+    "primaryTask": "声源定位",
+    "rankBucket": "前50%",
+    "score": 6.7,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.localization",
+          "label": "声源定位"
+        },
+        {
+          "facet": "method",
+          "id": "method.transfer",
+          "label": "迁移学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.attention",
+          "label": "注意力机制"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.theory",
+          "label": "理论分析"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "迁移学习",
+      "primaryMethodId": "method.transfer",
+      "primaryTask": "声源定位",
+      "primaryTaskId": "task.localization",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Institute for Data Processing and Electronics (IPE)",
+        "Karlsruhe Institute of Technology (KIT)",
+        "Karlsruhe, Germany"
+      ],
+      "name": "Nicholas Tan Jerome"
+    },
+    {
+      "affiliations": [
+        "Institute for Thermal Energy Technology",
+        "and Safety (ITES)",
+        "Karlsruhe Institute of Technology (KIT)",
+        "Karlsruhe, Germany"
+      ],
+      "name": "Fangnian Wang"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文研究把前向仿真学到的传感器关系图用于稀疏源定位逆任务是否有效，通过定理证明边误差容忍条件并用氢气泄漏 CFD 与声学两类 180 场景实验证明满足边准确仍因任务目标错位而失效，且给出基于 Jaccard 重叠的轻量可迁移性检验及其代价。",
+  "originalTitle": "Edge Accuracy Is Not Enough: Why Dynamics-Learned Structure Fails to Transfer to Inverse Problems",
+  "pdfUrl": "https://arxiv.org/pdf/2610.10213v1.pdf",
+  "readerTitle": "边准确也不够：前向动力学学到的结构为何难以迁移到逆问题",
+  "schemaVersion": 2
+}

@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.11544v1",
+  "abstract": "While predicting prosody from text is an established task in the field, the opposite direction, predicting text that fits a given prosodic pattern, remains largely overlooked. We find this unfortunate, because this opposite direction could lead to some very interesting use cases. Therefore, in this paper, we make the first steps in the prosody-to-text direction by inves- tigating how much of the original sentence can be recovered from its prosodic pattern. To this end, we fine-tune the Whis- per model using only the 12 lowest Mel bins (low-pass filter with approximately 450Hz cutoff), and obtain surprisingly accurate results (WER 36%), with 10% of utterances be- ing recovered perfectly, and 40% of utterances having Word Error Rate at or below 25%. We also find that, given the correct prefix, the next token was predicted correctly in 79% of cases. Our results suggest that the relationship between low-frequency speech features and lexical content is much stronger than previously thought, and we believe that direct- ing more attention to this topic might open the door to new applications, such as using prosody to guide text generation of modern LLMs",
+  "abstractSha256": "8fd335888cca724fc78d61861905ba7f9f985a1955221b82ff7cb11beeffee37",
+  "arxivId": "2610.11544",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.11544v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "SFT",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 5.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.sft",
+          "label": "SFT"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.prosody",
+          "label": "韵律"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "SFT",
+      "primaryMethodId": "method.sft",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "David Porteš"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Aleš Horák"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文用只保留最低 12 个梅尔频带的低通语音微调 Whisper-Medium 来估计能恢复多少词，在 Yodas 上得到约 36% 词错误率、在 AnimeVox 上得到约 60% 词错误率，再用只由基频和能量重建的频谱做对照发现误差升至约 69%，说明低频与词内容联系比预想强但尚不能归因于纯韵律。",
+  "originalTitle": "Prosody-to-Text: Predicting text from low-pass filtered speech",
+  "pdfUrl": "https://arxiv.org/pdf/2610.11544v1.pdf",
+  "readerTitle": "只剩低频还能读出文字吗：韵律到文本的初探",
+  "schemaVersion": 2
+}

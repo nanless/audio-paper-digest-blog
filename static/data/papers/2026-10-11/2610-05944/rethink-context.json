@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.05944v1",
+  "abstract": "Dysarthric speech reconstruction (DSR) typically relies on linguistic or phonetic representations extracted from impaired speech to generate a more intelligible waveform. We investigate a complementary approach that instead intervenes in a representation related to speech production. Starting from a neural analysis--synthesis framework, we introduce a residual mapper that modifies an articulatory-aligned latent space while preserving speaker and prosodic information. The mapper is pretrained on parallel synthetic healthy and artificially dysarthric speech, then adapted to natural dysarthric speech using phoneme-guided and adversarial objectives. We further compare the articulatory bottleneck with a dimension-matched unsupervised representation to assess the benefit of explicit articulatory supervision.",
+  "abstractSha256": "a176fb2b917d14d21a901439a3e648eacd172dcb4323ac281f504756b37314ee",
+  "arxivId": "2610.05944",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.05944v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "CNN",
+    "primaryTask": "语音增强",
+    "rankBucket": "前50%",
+    "score": 5.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-enhancement",
+          "label": "语音增强"
+        },
+        {
+          "facet": "task",
+          "id": "task.pathological-speech",
+          "label": "病理语音评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.cnn",
+          "label": "CNN"
+        },
+        {
+          "facet": "method",
+          "id": "method.adversarial-training",
+          "label": "对抗训练"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.phonation",
+          "label": "发声与构音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "CNN",
+      "primaryMethodId": "method.cnn",
+      "primaryTask": "语音增强",
+      "primaryTaskId": "task.speech-enhancement",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ailín Pollio San Pedro"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Olivier Perrotin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Thomas Hueber"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "该文把构音障碍语音增强做成紧凑发音瓶颈上的残差修正，在合成平行数据上预训练再用音素和对抗目标适配自然病理语音，合成数据上错误率明显下降而自然语音上仍未超过原始录音，且发音瓶颈保留了可解释的轨迹含义。",
+  "originalTitle": "Enhancing Pathological Speech through Articulatory Bottlenecks",
+  "pdfUrl": "https://arxiv.org/pdf/2610.05944v1.pdf",
+  "readerTitle": "在发音表示里直接修正病理语音",
+  "schemaVersion": 2
+}

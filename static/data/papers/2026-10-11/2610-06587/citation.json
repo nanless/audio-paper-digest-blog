@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.06587v1",
+  "arxivId": "2610.06587",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.06587v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Aadam Haq"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Oggi Rudovic"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Malcolm Chadwick"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jay Rainey"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shucong Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ricardo Guerrero"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sourav Bhattacharya"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Maja Pantic"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.06587v1",
+  "originalTitle": "Mind the Accent Gap: British Accent Robustness in Speech-Driven Financial Voice Assistants",
+  "pdfUrl": "https://arxiv.org/pdf/2610.06587v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.07426v1",
+  "arxivId": "2610.07426",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.07426v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mu-Ruei Tseng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Waris Quamer"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ghady Nasrallah"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ricardo Gutierrez-Osuna"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.07426v1",
+  "originalTitle": "AccentCL: Robust Accent Classification with Incremental Expansion",
+  "pdfUrl": "https://arxiv.org/pdf/2610.07426v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

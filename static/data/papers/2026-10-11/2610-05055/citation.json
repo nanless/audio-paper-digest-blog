@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.05055v1",
+  "arxivId": "2610.05055",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.05055v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Fabian Staub"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nils Meyer-Kahlen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Thomas Deppisch"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sergio de las Heras"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Florian Klein"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Stephan Werner"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Johannes M. Arend"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.05055v1",
+  "originalTitle": "Influence of Geometrical Acoustic Simulator Complexity on a Trained Multisource Localizer",
+  "pdfUrl": "https://arxiv.org/pdf/2610.05055v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

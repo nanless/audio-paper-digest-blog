@@ -1,0 +1,52 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.12081v1",
+  "arxivId": "2610.12081",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.12081v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Google DeepMind"
+      ],
+      "name": "Fedor Kitashov"
+    },
+    {
+      "affiliations": [
+        "Google DeepMind"
+      ],
+      "name": "João Carreira"
+    },
+    {
+      "affiliations": [
+        "Toyota Technological Institute at Chicago"
+      ],
+      "name": "Shiry Ginosar"
+    },
+    {
+      "affiliations": [
+        "Google DeepMind",
+        "University of Bristol"
+      ],
+      "name": "Dima Damen"
+    },
+    {
+      "affiliations": [
+        "Google DeepMind",
+        "University of Oxford"
+      ],
+      "name": "Andrew Zisserman"
+    },
+    {
+      "affiliations": [
+        "Google DeepMind"
+      ],
+      "name": "Viorica Pătrăucean"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.12081v1",
+  "originalTitle": "Perception Test 2026: Challenge Summary and Extension to City-scale Audio-Visual Reasoning",
+  "pdfUrl": "https://arxiv.org/pdf/2610.12081v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

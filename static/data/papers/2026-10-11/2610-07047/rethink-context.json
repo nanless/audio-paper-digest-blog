@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.07047v1",
+  "abstract": "Compact time-frequency separators that mask the mixture and refine through a shared cell face two limits. First, a bounded multiplicative mask only scales a mixture bin, so where overlapping components cancel, the estimate stays small. Second, a shared cell applies the same weights to every time-frequency token at every step, so enlarging it adds compute everywhere. We present SEAL (Sparse Expert routing with Additive Latent reconstruction) to address both. For reconstruction, a zero-sum additive residual bounded by the local mixture amplitude lets estimates be nonzero where components cancel yet still sum to the mixture. For routing, a query built from acoustic and inter-step evidence sends each token to one of six residual experts, and a norm cap keeps the step cue from overriding clear acoustic evidence. On EchoSet, SEAL (small) surpasses TIGER (small) by 0.31 dB SI-SDRi with 28% fewer parameters and 2.9 times fewer MACs, and SEAL (large) is within 0.07 dB SI-SDRi of TIGER (large) at 3.1 times fewer MACs.",
+  "abstractSha256": "e6702c2dbb3aa99b4b600ae0c22297418b284ced76d026a9c831fd118bc979a3",
+  "arxivId": "2610.07047",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.07047v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "混合专家模型",
+    "primaryTask": "语音分离",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-separation",
+          "label": "语音分离"
+        },
+        {
+          "facet": "method",
+          "id": "method.moe",
+          "label": "混合专家模型"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "混合专家模型",
+      "primaryMethodId": "method.moe",
+      "primaryTask": "语音分离",
+      "primaryTaskId": "task.speech-separation",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shao-Chun Hu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zi-Xiang Lin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jeih-Weih Hung"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hung-Shin Lee"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "SEAL 针对紧凑时频分离器在抵消频点估计受限和共享单元处处计算的问题，用混合闭合加性残差恢复抵消处的非零估计，用细化感知稀疏路由为每个时频令牌选一个残差专家，在 EchoSet 上以更少参数和运算量达到与 TIGER 相当或更好的分离质量。",
+  "originalTitle": "SEAL: Mixture-Closed Additive Reconstruction and Refinement-Aware Expert Routing for Efficient Speech Separation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.07047v1.pdf",
+  "readerTitle": "SEAL：混合闭合加性重建与细化感知专家路由的紧凑语音分离",
+  "schemaVersion": 2
+}

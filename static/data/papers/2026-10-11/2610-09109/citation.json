@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.09109v1",
+  "arxivId": "2610.09109",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.09109v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Idiap Research Institute",
+        "École Polytechnique Fédérale de Lausanne (EPFL)"
+      ],
+      "name": "Mojtaba Nafez"
+    },
+    {
+      "affiliations": [
+        "Department of Computer Engineering",
+        "Sharif University of Technology"
+      ],
+      "name": "Aref Mousavi"
+    },
+    {
+      "affiliations": [
+        "Department of Computer Engineering",
+        "University of Isfahan"
+      ],
+      "name": "Mohammad Ebrahim Mahdavi"
+    },
+    {
+      "affiliations": [
+        "Department of Computer Engineering",
+        "Sharif University of Technology"
+      ],
+      "name": "Mobina Poulaei"
+    },
+    {
+      "affiliations": [
+        "Department of Computer Engineering",
+        "Sharif University of Technology"
+      ],
+      "name": "Kiarash Kiani Feriz"
+    },
+    {
+      "affiliations": [
+        "Department of Computer Engineering",
+        "Sharif University of Technology"
+      ],
+      "name": "Mohammad Hossein Rohban"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.09109v1",
+  "originalTitle": "Breaking Adversarial Transferability in Fine-Tuned Speech Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2610.09109v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

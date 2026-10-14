@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.04004v1",
+  "arxivId": "2610.04004",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.04004v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bebe Cosgrove"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Aaron Isidore Grace"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Weiran Wang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.04004v1",
+  "originalTitle": "Hallucination Reduction for LLM-Based Audio Understanding via Multimodal Direct Preference Optimization",
+  "pdfUrl": "https://arxiv.org/pdf/2610.04004v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

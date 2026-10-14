@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.10283v1",
+  "arxivId": "2610.10283",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.10283v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ken Nakahara"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Aleksei Buvailik"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Prokhor Kotov"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Roberto Calandra"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.10283v1",
+  "originalTitle": "Temporal Visuo-Tactile Learning for Dexterous Grasp Stability",
+  "pdfUrl": "https://arxiv.org/pdf/2610.10283v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

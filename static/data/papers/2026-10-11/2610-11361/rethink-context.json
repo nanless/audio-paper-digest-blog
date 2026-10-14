@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.11361v1",
+  "abstract": "A 4D audio-visual scene comprises a video, the dynamic geometry it depicts, and the sound sources that populate it, each with its own position and trajectory. Rendering such a scene from a novel viewpoint requires that every source be available as an individual waveform, so that it can be localized in the scene and propagated to the observer before the signals are mixed. Joint audio-video generators can synthesize the video and its soundtrack, but the soundtrack is emitted as a single audio-mix in which the sources are not individually accessible. We present SepGen, which extends a pretrained audio-video generator to emit the video, the mixed soundtrack, and one waveform per captioned source in one joint sampling run. SepGen supports two complementary modes: generation and separation. In generation mode, each source caption specifies what its stem contains. A two-speaker dialogue, for example, comes out as one stem per speaker in the original turn order. In separation mode, the input audio-mix remains clean while the captions specify what to extract, so the model can decompose a recording from a free-text description. We evaluate generation on scenes synthesized from text, and separation on scenes rendered by other generators and on real recordings of speech, music, and sound effects. Given an audio-mix and captions that carry the spoken lines, SepGen outperforms language-conditioned separators, most clearly on speech, and it keeps the lead when the lines are removed from the captions. Code, checkpoints, and datasets are available at https://sepgen.github.io/",
+  "abstractSha256": "439de5d33d96ddb0a87bcc1916b33630e4d0b564457df866f3edcb5d20d7e453",
+  "arxivId": "2610.11361",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.11361v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "LoRA",
+    "primaryTask": "音视频生成",
+    "rankBucket": "前25%",
+    "score": 8.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-generation",
+          "label": "音视频生成"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-separation",
+          "label": "音频分离"
+        },
+        {
+          "facet": "method",
+          "id": "method.lora",
+          "label": "LoRA"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "LoRA",
+      "primaryMethodId": "method.lora",
+      "primaryTask": "音视频生成",
+      "primaryTaskId": "task.av-generation",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Tel Aviv University"
+      ],
+      "name": "Aviad Dahan"
+    },
+    {
+      "affiliations": [
+        "Tel Aviv University"
+      ],
+      "name": "Rajaei Khatib"
+    },
+    {
+      "affiliations": [
+        "Google"
+      ],
+      "name": "Yonatan Bitton"
+    },
+    {
+      "affiliations": [
+        "Google"
+      ],
+      "name": "Idan Szpektor"
+    },
+    {
+      "affiliations": [
+        "Tel Aviv University"
+      ],
+      "name": "Lior Wolf"
+    },
+    {
+      "affiliations": [
+        "Tel Aviv University"
+      ],
+      "name": "Raja Giryes"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "SepGen 要解决的是联合音频视频生成只有一条混合声、无法逐声源定位与重渲染的问题，它用受保护的混合声通道加两条分轨通道实现生成与分离两种模式，最强证据是真实录音与跨生成器场景上的分离与听感对比，代价是固定两条分轨与额外的去噪与引导计算。",
+  "originalTitle": "SepGen: Multi-Stem Audio-Video Separation and Generation in a Single Model",
+  "pdfUrl": "https://arxiv.org/pdf/2610.11361v1.pdf",
+  "readerTitle": "一次采样同时给出视频、混合声与每条分轨的音频视频模型",
+  "schemaVersion": 2
+}

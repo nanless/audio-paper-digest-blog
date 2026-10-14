@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.09701v1",
+  "abstract": "Spatial audio signal enhancement (SASE) aims to separate a desired soundfield from interference and noise while preserving its spatial cues. However, existing algorithms pay limited attention to preserving the spatial cues of the residual interference, which reduces their effectiveness in practical applications. In this paper, we propose a direction-preserving SASE algorithm based on multi-output beamforming. The proposed algorithm extracts the desired soundfield while preserving the spatial cues of both the desired soundfield and the residual interference soundfield. The simulation study shows that the proposed algorithm achieves performance comparable to the existing SASE algorithm in terms of estimation error, while it better preserves the spatial cues of the residual interference within a region of interest, in a noisy and reverberant environment.",
+  "abstractSha256": "8f85340ef2257c74bcdc25ed6659284aaef64a0c82c5f7050b7a67f3126d4573",
+  "arxivId": "2610.09701",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.09701v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "波束成形",
+    "primaryTask": "声场重建",
+    "rankBucket": "前50%",
+    "score": 5.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.sound-field",
+          "label": "声场重建"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-enhancement",
+          "label": "语音增强"
+        },
+        {
+          "facet": "method",
+          "id": "method.beamforming",
+          "label": "波束成形"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.spatial-audio",
+          "label": "空间音频信号"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "波束成形",
+      "primaryMethodId": "method.beamforming",
+      "primaryTask": "声场重建",
+      "primaryTaskId": "task.sound-field",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Huawei Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jihui Aimee Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Huiyuan June Sun"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Prasanga Samarasinghe"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "本文针对带混响和噪声的球形阵列录音，用基于相对谐波系数的多输出波束形成同时提取目标声场并约束残留干扰的空间分布，仿真显示目标声场相似度保持在 0.99 而干扰相似度优于现有方法，但结论只在给定仿真房间和先验条件下成立。",
+  "originalTitle": "Direction-preserving Spatial Audio Signal Enhancement in The Spherical Harmonic Domain",
+  "pdfUrl": "https://arxiv.org/pdf/2610.09701v1.pdf",
+  "readerTitle": "在球谐域里既增强目标声场又保留残留干扰方向",
+  "schemaVersion": 2
+}

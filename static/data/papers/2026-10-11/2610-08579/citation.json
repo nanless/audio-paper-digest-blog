@@ -1,0 +1,45 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.08579v1",
+  "arxivId": "2610.08579",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.08579v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Graduate Institute of Communication Engineering, National Taiwan University, Taipei, Taiwan"
+      ],
+      "name": "You-Jin Li"
+    },
+    {
+      "affiliations": [
+        "Research Center for Information Technology Innovation, Academia Sinica, Taipei, Taiwan"
+      ],
+      "name": "Yu Tsao"
+    },
+    {
+      "affiliations": [
+        "Graduate Institute of Communication Engineering, National Taiwan University, Taipei, Taiwan"
+      ],
+      "name": "Borching Su"
+    },
+    {
+      "affiliations": [
+        "Department of Otolaryngology-Head and Neck Surgery, Taipei Veterans General Hospital, Taipei, Taiwan",
+        "School of Medicine, National Yang Ming Chiao Tung University, Taipei, Taiwan"
+      ],
+      "name": "Kuan-Chung Ting"
+    },
+    {
+      "affiliations": [
+        "Center for Hearing Research, University of California, Irvine, California, USA"
+      ],
+      "name": "Fan-Gang Zeng"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.08579v1",
+  "originalTitle": "Audiovisual joint learning for end-to-end hearing aids",
+  "pdfUrl": "https://arxiv.org/pdf/2610.08579v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

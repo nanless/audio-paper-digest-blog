@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.11361v1",
+  "arxivId": "2610.11361",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.11361v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Tel Aviv University"
+      ],
+      "name": "Aviad Dahan"
+    },
+    {
+      "affiliations": [
+        "Tel Aviv University"
+      ],
+      "name": "Rajaei Khatib"
+    },
+    {
+      "affiliations": [
+        "Google"
+      ],
+      "name": "Yonatan Bitton"
+    },
+    {
+      "affiliations": [
+        "Google"
+      ],
+      "name": "Idan Szpektor"
+    },
+    {
+      "affiliations": [
+        "Tel Aviv University"
+      ],
+      "name": "Lior Wolf"
+    },
+    {
+      "affiliations": [
+        "Tel Aviv University"
+      ],
+      "name": "Raja Giryes"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.11361v1",
+  "originalTitle": "SepGen: Multi-Stem Audio-Video Separation and Generation in a Single Model",
+  "pdfUrl": "https://arxiv.org/pdf/2610.11361v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

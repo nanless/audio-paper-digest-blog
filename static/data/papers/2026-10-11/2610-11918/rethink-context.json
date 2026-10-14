@@ -1,0 +1,114 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.11918v1",
+  "abstract": "Recent multimodal large language models (MLLMs) increasingly incorporate explainable reasoning for emotion understanding. However, reasoning based mainly on observable affective cues can reduce emotion understanding to superficial cue-label associations, giving rise to the Clever Hans effect. Such shortcuts become unreliable when affective cues are implicit, conflicting across modalities, linguistically misleading, or obscured by redundant details. In contrast, human emotions are shaped by how individuals interpret and evaluate surrounding events beyond observable cues. Inspired by appraisal theories of emotion, we formulate multimodal emotion understanding as a progression from perception to cognitive appraisal, and introduce a dataset, a model, and a benchmark to support this novel paradigm. CogEmo-40K is a large-scale instruction-tuning dataset constructed through a perception-to-appraisal pipeline to elicit evidence-grounded reasoning across six cognitive appraisal dimensions underlying emotion. CogEmo-MoE is a compact sparse MLLM that introduces interleaved MoE blocks for appraisal-specific adaptation, enabling effective appraisal reasoning at a substantially smaller scale than typical emotion MLLMs. CogEmo-Bench introduces an Appraisal Evidence Quality Score (AEQS) to assess cognitive-affective understanding across six complementary appraisal dimensions, addressing the limitation of conventional emotion metrics that evaluate what emotion is predicted but not why it arises. Extensive experiments show that our paradigm not only leads CogEmo-Bench, but also exhibits strong cross-domain generalization. Our findings suggest that perception-to-appraisal reasoning can move beyond surface-level cue-label associations toward more reliable multimodal emotion understanding and closer cognitive alignment between MLLMs and humans.",
+  "abstractSha256": "258ee57870652acee748ce762cfe95ad7d79c3f4abb1c74a0d4e10607101852c",
+  "arxivId": "2610.11918",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.11918v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "混合专家模型",
+    "primaryTask": "语音情感识别",
+    "rankBucket": "前50%",
+    "score": 6.4,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.emotion-recognition",
+          "label": "语音情感识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.moe",
+          "label": "混合专家模型"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "混合专家模型",
+      "primaryMethodId": "method.moe",
+      "primaryTask": "语音情感识别",
+      "primaryTaskId": "task.emotion-recognition",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Hefei University of Technology"
+      ],
+      "name": "Jia Li"
+    },
+    {
+      "affiliations": [
+        "Hefei University of Technology"
+      ],
+      "name": "Yichao He"
+    },
+    {
+      "affiliations": [
+        "Hefei University of Technology"
+      ],
+      "name": "Yangchen Yu"
+    },
+    {
+      "affiliations": [
+        "Nanyang Technological University"
+      ],
+      "name": "Qiankun Li"
+    },
+    {
+      "affiliations": [
+        "Hefei University of Technology"
+      ],
+      "name": "Xinyi Li"
+    },
+    {
+      "affiliations": [
+        "Hefei University of Technology"
+      ],
+      "name": "Baiyi Ye"
+    },
+    {
+      "affiliations": [
+        "Hefei University of Technology"
+      ],
+      "name": "Zhenzhen Hu"
+    },
+    {
+      "affiliations": [
+        "Hefei University of Technology"
+      ],
+      "name": "Richang Hong"
+    },
+    {
+      "affiliations": [
+        "Nanyang Technological University"
+      ],
+      "name": "Erik Cambria"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文把多模态情绪理解改写为从感知到认知评估再到情绪的推理链，用 CogEmo-40K 做监督、用稀疏 CogEmo-MoE 做适配、用 AEQS 做评估，在自建基准上得到 70.60 分 AEQS 与 71.43% 准确率，但结论只在给定数据分布和评测流程下成立。",
+  "originalTitle": "From Surface to Depth: Towards Cognitive Appraisal Reasoning in Multimodal Emotion Understanding",
+  "pdfUrl": "https://arxiv.org/pdf/2610.11918v1.pdf",
+  "readerTitle": "从看到表情到读懂评估：多模态情绪理解的认知评估推理",
+  "schemaVersion": 2
+}

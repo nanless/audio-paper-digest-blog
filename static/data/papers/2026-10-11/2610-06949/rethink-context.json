@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.06949v1",
+  "abstract": "Large audio language models answer questions about speech, sound, and music, yet their accuracy drops sharply on tasks that need fine-grained acoustic analysis. Judging which of two speakers has the higher pitch demands iterative signal-level reasoning that a content question does not. Current models spend the same computational depth on both. We introduce AdaLoop, a lightweight recurrent module that learns how many latent refinement steps a given audio--question pair requires. A shared transformer block iterates over the audio representation, guided by the question, while a learned halting mechanism exits the loop once the representation is ready. AdaLoop adds fewer than 3\\% of the base model's parameters and plugs into any audio encoder--language model pair without modifying either component. Evaluated on three architecturally distinct models across MMSU, MMAU-Pro, and MMAR, AdaLoop raises the average accuracy by 2.9 to 3.8 points, with the largest gains on perception-heavy subtasks where the model learns to apply deeper reasoning.",
+  "abstractSha256": "6e5690d923afca9d9842a7cda09e4c254b8a8829ab1a21b7c2e82b7865a6a46f",
+  "arxivId": "2610.06949",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.06949v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "动态计算与早退",
+    "primaryTask": "音频问答",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-question-answering",
+          "label": "音频问答"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-reasoning",
+          "label": "音频推理"
+        },
+        {
+          "facet": "method",
+          "id": "method.dynamic-computation",
+          "label": "动态计算与早退"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.audio-language",
+          "label": "音频大模型"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "动态计算与早退",
+      "primaryMethodId": "method.dynamic-computation",
+      "primaryTask": "音频问答",
+      "primaryTaskId": "task.audio-question-answering",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lee Seung-woo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bowen Qi"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对音频语言模型感知细节弱且所有问题都用同样计算深度的问题，AdaLoop 在音频编码器与语言模型之间插入共享权重的循环精炼模块并按音频与问题自适应停机，在三个模型与三个基准上平均准确率提升 2.9 到 3.8 个百分点，代价是最多 8 步循环与不足 3% 的额外参数。",
+  "originalTitle": "AdaLoop: Adaptive-Depth Latent Reasoning for Audio Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2610.06949v1.pdf",
+  "readerTitle": "AdaLoop：让音频语言模型按题目难度决定思考步数",
+  "schemaVersion": 2
+}

@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.11219v1",
+  "abstract": "Suikinkutsu are partially concealed acoustic devices traditionally installed adjacent to stone water basins (tsukubai) in Japanese temple gardens. While previous research has examined their physical acoustics and cultural significance, computational methods for documenting and comparing their acoustic characteristics remain underexplored. This exploratory study introduces a computational framework for analyzing suikinkutsu using spectral and temporal audio features extracted from field recordings. Rather than estimating the physical geometry of individual suikinkutsu, the framework characterizes their acoustic profiles using a multidimensional set of computational descriptors, enabling systematic comparisons between recordings across different sites and installations. Audio recordings from nine suikinkutsu located at temples, shrines, and gardens in the Kansai region of Japan were analyzed using a feature-extraction pipeline that incorporates Fast Fourier Transform (FFT), Mel-Frequency Cepstral Coefficients (MFCCs), Root Mean Square (RMS) energy, spectral centroid, spectral bandwidth, and spectral contrast. The extracted features indicate that, although the suikinkutsu share broadly similar spectral and timbral characteristics, each exhibits a measurably distinct acoustic profile; a supplementary analysis of within-site and between-site variability suggests these profiles reflect a bounded range of characteristic resonant behaviour rather than a fixed acoustic signature. The proposed framework provides one of the first computational approaches for systematically characterizing and comparing suikinkutsu, contributing a practical foundation for future research and the digital preservation of this distinctive form of Japanese environmental design.",
+  "abstractSha256": "aaf4cab1153bc23ada36cb485bcd25858ffba86b7521a7d2cf6e7ee7ad7ccc10",
+  "arxivId": "2610.11219",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.11219v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "时频分析",
+    "primaryTask": "音频理解",
+    "rankBucket": "后50%",
+    "score": 4.9,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-understanding",
+          "label": "音频理解"
+        },
+        {
+          "facet": "method",
+          "id": "method.time-frequency",
+          "label": "时频分析"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.environmental",
+          "label": "环境声"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "时频分析",
+      "primaryMethodId": "method.time-frequency",
+      "primaryTask": "音频理解",
+      "primaryTaskId": "task.audio-understanding",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Paul Haimes"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Alarith Uhde"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Daniel Moritz Marutschke"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对野外难以测量水琴窟几何尺寸的问题，论文用同一套频谱与时域描述子对关西 9 处录音做归一化比较，发现整体音色高度相似但各有可测差异，且同地点多次录音相似度高于跨地点，代价是环境噪声无法分离、结论只限录音层面的探索性描述。",
+  "originalTitle": "A computational framework for the acoustic characterization of Suikinkutsu (water harp cave)",
+  "pdfUrl": "https://arxiv.org/pdf/2610.11219v1.pdf",
+  "readerTitle": "水琴窟的声音如何被计算描述与比较",
+  "schemaVersion": 2
+}

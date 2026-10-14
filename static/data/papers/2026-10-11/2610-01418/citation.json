@@ -1,0 +1,45 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.01418v2",
+  "arxivId": "2610.01418",
+  "arxivVersion": 2,
+  "arxivVersionedId": "2610.01418v2",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiaoli Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yujie Liang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jialin Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chenxiao Dou"
+    },
+    {
+      "affiliations": [
+        "School of Computer Science and Engineering,",
+        "University of Electronic Science and Technology of China"
+      ],
+      "name": "Malu Zhang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.01418v2",
+  "originalTitle": "SpikeMoE: Brain-Inspired Competitive Routing for Flexible Spiking Mixture-of-Experts",
+  "pdfUrl": "https://arxiv.org/pdf/2610.01418v2.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.11544v1",
+  "arxivId": "2610.11544",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.11544v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "David Porteš"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Aleš Horák"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.11544v1",
+  "originalTitle": "Prosody-to-Text: Predicting text from low-pass filtered speech",
+  "pdfUrl": "https://arxiv.org/pdf/2610.11544v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

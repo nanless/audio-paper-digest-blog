@@ -1,0 +1,145 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.11363v1",
+  "abstract": "Multimodal Large Language Models (MLLMs) are increasingly being applied in a wider range of real-world scenarios. However, due to the substantial labor cost, creating high-quality multimodal instruction datasets for MLLMs remains a significant challenge. Although some methods propose to generate instruction data, they often face limitations in modality support and struggle with generating multi-round instructions. To address these problems, we introduce UniData, a universal instruction generation pipeline, to transform simple user requirements into multi-round, multimodal instructions. Specifically, UniData first expands user requirements into multiple diverse events. Using these events, UniData then integrates an any-to-any large model for multimodal instruction generation. Finally, UniData enhances data quality by correcting irrelevant and redundant inference flow, leveraging correlations between instruction rounds. To train this pipeline, we also build UniDataset, a dataset comprising 20,000 entries across nine modalities for improved multimodal generation. Our experiments demonstrate that UniData achieves SOTA performance in data quality and can also enhance the understanding and generation capabilities of other multimodal models.",
+  "abstractSha256": "11389d7e6f670e66575db8c0c8998df5350dd9e426bf094642d44e2d2f76261c",
+  "arxivId": "2610.11363",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.11363v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "数据集构建",
+    "primaryTask": "音乐生成",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-generation",
+          "label": "音乐生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.dataset-curation",
+          "label": "数据集构建"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "method",
+          "id": "method.tool-augmentation",
+          "label": "工具增强与约束解码"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "数据集构建",
+      "primaryMethodId": "method.dataset-curation",
+      "primaryTask": "音乐生成",
+      "primaryTaskId": "task.music-generation",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "The Hong Kong University of Science and Technology"
+      ],
+      "name": "Jiaqi Tang"
+    },
+    {
+      "affiliations": [
+        "ATH, Alibaba Group"
+      ],
+      "name": "Yi-Feng Wu"
+    },
+    {
+      "affiliations": [
+        "The Hong Kong University of Science and Technology (Guangzhou)"
+      ],
+      "name": "Yuting Zhang"
+    },
+    {
+      "affiliations": [
+        "The Hong Kong University of Science and Technology (Guangzhou)"
+      ],
+      "name": "Hao Lu"
+    },
+    {
+      "affiliations": [
+        "Northwestern Polytechnical University"
+      ],
+      "name": "Bowen Fu"
+    },
+    {
+      "affiliations": [
+        "ATH, Alibaba Group"
+      ],
+      "name": "Qing-Guo Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiaogang Xu"
+    },
+    {
+      "affiliations": [
+        "ATH, Alibaba Group"
+      ],
+      "name": "Yuwei Hu"
+    },
+    {
+      "affiliations": [
+        "ATH, Alibaba Group"
+      ],
+      "name": "Shiyin Lu"
+    },
+    {
+      "affiliations": [
+        "Northwestern Polytechnical University"
+      ],
+      "name": "Wei Wei"
+    },
+    {
+      "affiliations": [
+        "Northwestern Polytechnical University"
+      ],
+      "name": "Lei Zhang"
+    },
+    {
+      "affiliations": [
+        "ATH, Alibaba Group"
+      ],
+      "name": "Zhao Xu"
+    },
+    {
+      "affiliations": [
+        "ATH, Alibaba Group"
+      ],
+      "name": "Weihua Luo"
+    },
+    {
+      "affiliations": [
+        "The Hong Kong University of Science and Technology"
+      ],
+      "name": "Qifeng Chen"
+    },
+    {
+      "affiliations": [
+        "The Hong Kong University of Science and Technology (Guangzhou)"
+      ],
+      "name": "Ying-Cong Chen"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "UniData 把用户的一句简单需求先扩展成多样事件，再用文本为中心的多模态指令生成器逐轮生成九种模态的对话，并用轮间相似度校正重复与偏题，在 GPT 评测的四维质量上高于对照方法，但多轮增益与跨模型迁移都依赖评测集与微调条件。",
+  "originalTitle": "UniData: Universal Multimodal Instruction Generation Pipeline",
+  "pdfUrl": "https://arxiv.org/pdf/2610.11363v1.pdf",
+  "readerTitle": "从一句话需求到多轮多模态指令：UniData 流水线解读",
+  "schemaVersion": 2
+}

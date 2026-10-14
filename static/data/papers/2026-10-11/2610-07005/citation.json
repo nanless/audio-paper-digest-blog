@@ -1,0 +1,58 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.07005v1",
+  "arxivId": "2610.07005",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.07005v1",
+  "authors": [
+    {
+      "affiliations": [
+        "eBRAIN Lab, Division of Engineering, New York University Abu Dhabi, UAE",
+        "Tandon School of Engineering, New York University, NY, USA"
+      ],
+      "name": "Boyuan Chen"
+    },
+    {
+      "affiliations": [
+        "eBRAIN Lab, Division of Engineering, New York University Abu Dhabi, UAE"
+      ],
+      "name": "Minseok Kim"
+    },
+    {
+      "affiliations": [
+        "eBRAIN Lab, Division of Engineering, New York University Abu Dhabi, UAE"
+      ],
+      "name": "Sohaila Abdulsattar"
+    },
+    {
+      "affiliations": [
+        "eBRAIN Lab, Division of Engineering, New York University Abu Dhabi, UAE",
+        "Tandon School of Engineering, New York University, NY, USA"
+      ],
+      "name": "Minghao Shao"
+    },
+    {
+      "affiliations": [
+        "Tandon School of Engineering, New York University, NY, USA"
+      ],
+      "name": "Siddharth Garg"
+    },
+    {
+      "affiliations": [
+        "Tandon School of Engineering, New York University, NY, USA"
+      ],
+      "name": "Ramesh Karri"
+    },
+    {
+      "affiliations": [
+        "eBRAIN Lab, Division of Engineering, New York University Abu Dhabi, UAE"
+      ],
+      "name": "Muhammad Shafique"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.07005v1",
+  "originalTitle": "Where Does the Audio Jailbreak Live? A Controlled Frequency-Depth Audit of AdvWave-P on Qwen2-Audio",
+  "pdfUrl": "https://arxiv.org/pdf/2610.07005v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.08229v1",
+  "arxivId": "2610.08229",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.08229v1",
+  "authors": [
+    {
+      "affiliations": [
+        "KTH"
+      ],
+      "name": "Xinyu Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sichao Liu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.08229v1",
+  "originalTitle": "Confidence-Ordering Reversal under Contextual Priors in Neural Decoding",
+  "pdfUrl": "https://arxiv.org/pdf/2610.08229v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

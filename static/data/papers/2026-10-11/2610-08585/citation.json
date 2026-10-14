@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.08585v2",
+  "arxivId": "2610.08585",
+  "arxivVersion": 2,
+  "arxivVersionedId": "2610.08585v2",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Krithik Vishwanath"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Brandon Ye"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Anton Alyakin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "John E. Markert"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Aaron Hsieh"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Michał Mańkowski"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Eric K. Oermann"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.08585v2",
+  "originalTitle": "Large language models are vulnerable to incidental information in clinical documentation and reasoning",
+  "pdfUrl": "https://arxiv.org/pdf/2610.08585v2.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

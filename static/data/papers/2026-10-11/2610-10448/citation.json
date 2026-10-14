@@ -1,0 +1,92 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.10448v1",
+  "arxivId": "2610.10448",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.10448v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Duy-Cat Can"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mau Minh Phuc Le"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tuan-Khoa Hoang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hai-Dang Nguyen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Trung-Hieu Do"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Dang Minh Ly"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Minh-Duc Nguyen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nghia TT Hoang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Linh-Trung Nguyen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Huy-Hieu Pham"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Huong Ha"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Binh T. Nguyen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Oliver Y. Chén"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.10448v1",
+  "originalTitle": "MemoCare: An Interactive Multimodal Mobile System for Automated Cognitive Screening",
+  "pdfUrl": "https://arxiv.org/pdf/2610.10448v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.07902v1",
+  "arxivId": "2610.07902",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.07902v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shengyu Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jinting Wang"
+    },
+    {
+      "affiliations": [
+        "The Hong Kong University of Science and Technology (Guangzhou)"
+      ],
+      "name": "Li Liu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.07902v1",
+  "originalTitle": "ARIA: Audio-Driven Melody-Tone Relation Modeling for Cantonese Lyric Authoring",
+  "pdfUrl": "https://arxiv.org/pdf/2610.07902v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

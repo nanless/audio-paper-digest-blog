@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.12250v1",
+  "arxivId": "2610.12250",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.12250v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Marios Glytsos"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Brian McFee"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.12250v1",
+  "originalTitle": "How Much Audio Is Left In An Embedding? An Inversion Audit Of Audio Encoders",
+  "pdfUrl": "https://arxiv.org/pdf/2610.12250v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,133 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.10448v1",
+  "abstract": "MemoCare is an interactive mobile system for automated multimodal cognitive screening. A React Native application combines spoken responses, temporal and spatial orientation, touchscreen actions, and visuoconstruction in complete English and Vietnamese workflows. Speech is transcribed by Google Speech-to-Text and scored locally with deterministic task-specific natural language processing rules; GPS coordinates are resolved by the MemoCare spatial module before answer matching; touch tasks are scored from interaction events; and the drawing task uses a three-model convolutional neural network consensus with separate visual interpretation. Software tests pass 151/151 predefined cases across speech/language, spatial-answer, and touch-interaction scoring, while spatial regression passes 48/48 four-country coordinate-resolution cases. For the drawing module, validation-selected ShuffleNetV2 x1.5 achieved 91.33% mean balanced accuracy and 78.87% exact three-criterion accuracy on a locked 71-image test set. Four clinician co-authors additionally inspected the end-to-end workflow, yielding a pooled median rating of 4/5 across eight criteria, with item-level medians ranging from 3 to 4.5. At MMM, attendees can directly try a shortened multimodal screening workflow and inspect automatic item-level and total scoring.",
+  "abstractSha256": "e826c350317b1d4fa0a6d9505090879cebed54fd545c738d4254e9c192c46142",
+  "arxivId": "2610.10448",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.10448v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "CNN",
+    "primaryTask": "病理语音评估",
+    "rankBucket": "前50%",
+    "score": 5.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.pathological-speech",
+          "label": "病理语音评估"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-interaction",
+          "label": "语音交互"
+        },
+        {
+          "facet": "method",
+          "id": "method.cnn",
+          "label": "CNN"
+        },
+        {
+          "facet": "application",
+          "id": "application.medical",
+          "label": "医疗音频"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "CNN",
+      "primaryMethodId": "method.cnn",
+      "primaryTask": "病理语音评估",
+      "primaryTaskId": "task.pathological-speech",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Duy-Cat Can"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mau Minh Phuc Le"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tuan-Khoa Hoang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hai-Dang Nguyen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Trung-Hieu Do"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Dang Minh Ly"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Minh-Duc Nguyen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nghia TT Hoang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Linh-Trung Nguyen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Huy-Hieu Pham"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Huong Ha"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Binh T. Nguyen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Oliver Y. Chén"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "MemoCare 针对 MMSE 式异构交互难在手机上自动评分的问题，用语音转写加任务规则、GPS 加历史地名库、触屏事件校验和轻量视觉模型四路分工处理，并在 151 例软件用例、71 张锁定画图和 4 名临床医生检查中给出有条件的技术验证结论。",
+  "originalTitle": "MemoCare: An Interactive Multimodal Mobile System for Automated Cognitive Screening",
+  "pdfUrl": "https://arxiv.org/pdf/2610.10448v1.pdf",
+  "readerTitle": "MemoCare：把说话、定位、触屏和画图装进一部手机的认知筛查流程",
+  "schemaVersion": 2
+}

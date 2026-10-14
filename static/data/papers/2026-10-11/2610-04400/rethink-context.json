@@ -1,0 +1,115 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.04400v1",
+  "abstract": "General turn-taking behavior in real-time dialogue systems requires deciding whether to keep listening or start responding while listening, and whether to continue or stop while speaking. Existing turn detectors use heterogeneous, task-specific label spaces and are often trained on limited annotations or evaluated on isolated utterances, making them difficult to use as a unified causal controller with comprehensive context. We propose XTurnix, a compact text-based model that formulates turn control as two binary decisions conditioned on the AI's current listening or speaking state and predicts a single control token from the complete dialogue history. XTurnix is pretrained on 5.5 million causal action examples automatically derived from timestamped two-speaker transcripts, then fine-tuned on synthetic multi-turn examples with a flatter distribution across the four state-action labels. We evaluate XTurnix on four public benchmarks and a balanced self-curated benchmark. Across the public benchmarks, XTurnix achieves the best results on all SemanticVAD and LiveKit splits, ties the native Smart-Turn model on Smart-Turn Bench, and achieves the highest incomplete-turn accuracy on Easy-Turn. On the self-curated benchmark, it reaches 89.06% accuracy, more than 20 percentage points above the strongest third-party baseline at 68.75%, while maintaining F1 scores between 84.21% and 90.63% across all four categories. These results demonstrate unified listening- and speaking-state turn control in a single compact model. Code is available at https://github.com/xcc-zach/xturnix, with an interactive demo at https://huggingface.co/spaces/xcczach/xturnix-demo.",
+  "abstractSha256": "32b9b79dfb082606edb34db9063f8937fb32ee719cb7da35925a78ea63a79508",
+  "arxivId": "2610.04400",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.04400v1",
+  "assessment": {
+    "documentType": "模型报告",
+    "primaryMethod": "自监督学习",
+    "primaryTask": "轮次切换",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.turn-taking",
+          "label": "轮次切换"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-dialogue",
+          "label": "语音对话系统"
+        },
+        {
+          "facet": "method",
+          "id": "method.self-supervised",
+          "label": "自监督学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.dataset-curation",
+          "label": "数据集构建"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "自监督学习",
+      "primaryMethodId": "method.self-supervised",
+      "primaryTask": "轮次切换",
+      "primaryTaskId": "task.turn-taking",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhanxun Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yifan Duan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hengtao Wu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chen Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Qinyuan Cheng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kun Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xingyu Zeng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xipeng Qiu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chaochao Lu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xie Chen"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "XTurnix 把听与说两种状态下的轮转控制归纳为每次只输出一个控制记号的二分类问题，用带时间戳的双人转写大规模自监督预训练再加合成多轮微调，在公开基准和自建平衡基准上验证了统一控制的可行性与分布依赖性。",
+  "originalTitle": "XTurnix: Large-Scale Self-Supervised Turn Control through Two-State Binary Decisions",
+  "pdfUrl": "https://arxiv.org/pdf/2610.04400v1.pdf",
+  "readerTitle": "XTurnix：用两个状态下的二选一决定统一管理说话权",
+  "schemaVersion": 2
+}

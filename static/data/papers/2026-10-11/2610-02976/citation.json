@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.02976v1",
+  "arxivId": "2610.02976",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.02976v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Sungkyunkwan University"
+      ],
+      "name": "Hyunjae Ra"
+    },
+    {
+      "affiliations": [
+        "Sungkyunkwan University"
+      ],
+      "name": "Aecheon Jung"
+    },
+    {
+      "affiliations": [
+        "Daegu Gyeongbuk Institute of Science and Technology (DGIST)"
+      ],
+      "name": "Jungin Park"
+    },
+    {
+      "affiliations": [
+        "Sungkyunkwan University"
+      ],
+      "name": "Sungeun Hong"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.02976v1",
+  "originalTitle": "Relevant Evidence Decoding for Audio-Visual Hallucination Mitigation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.02976v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

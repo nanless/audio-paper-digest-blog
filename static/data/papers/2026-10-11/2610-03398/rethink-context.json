@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.03398v1",
+  "abstract": "This paper presents a web-based application for navigating and composing microtonal harmony, built on the Harmonic Eigenspace, a four-dimensional psychoacoustically grounded space in which tetrad chord types are located by their spectral dissonance profiles, computed with Sethares's roughness/dissonance model. The coordinate system is transposition-invariant: a coordinate triple (α, \\b{eta}, γ) locates the three upper notes in relation to the root, so a chord quality corresponds to a direction in the space, the invariant ray along which transposition acts, while the root frequency sets the scale. The dissonance field over these coordinates can be computed at any register; the locations of its local minima are register-invariant, as they arise from partial-coincidence ratio conditions. The dissonance volume contains 100 local minima that align with just-intonation intervals and act as landmarks, organising the space into basins around the most consonant tetrads. We embed tetrads from three tonal equal temperaments as discrete lattices within this continuous volume. The application presents this space through two components: the Harmonic Eigenspace as a navigable 3D visualisation of the dissonance volume in which all nodes are playable, and a Modal Studio that extends modal interchange logic to the ten-gradation interval vocabulary of 53-TET. The application also functions as a MIDI controller with MIDI Polyphonic Expression support, usable in any digital audio workstation that supports this format. A listening study with 31 participants used both scenes of the application: listeners first rated isolated 53-TET chords alongside chords familiar from Western practice, such as the maj7 and the m7; they then rated chord progressions composed in the Modal Studio, measuring their acceptance or rejection of microtonal progressions heard for the first time.",
+  "abstractSha256": "60e624b95ebff9fec816cb9445ee40c8f7f49bf534249efdee3f2b5dec8249f8",
+  "arxivId": "2610.03398",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.03398v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "音乐生成",
+    "rankBucket": "前25%",
+    "score": 7.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-generation",
+          "label": "音乐生成"
+        },
+        {
+          "facet": "task",
+          "id": "task.music-understanding",
+          "label": "音乐分析"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "method",
+          "id": "method.psychoacoustic-experiment",
+          "label": "心理声学实验"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "音乐生成",
+      "primaryTaskId": "task.music-generation",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "David Dalmazzo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ken Déguernel"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文用 Sethares 粗糙度模型算出四音和弦的不协和度体，把 12、31、53 平均律的 192 种七和弦放进同一坐标系做可听导航，再用调式互换作曲并以 31 人听辨检验感知是否与模型一致，代价是只适用于谐波音色且样本与锚定条件限制结论外推。",
+  "originalTitle": "Harmonic Eigenspace: A Web-based Application for Navigating and Composing Microtonal Harmony",
+  "pdfUrl": "https://arxiv.org/pdf/2610.03398v1.pdf",
+  "readerTitle": "用不协和度地形安放微分音七和弦：谐波特征空间与作曲应用",
+  "schemaVersion": 2
+}

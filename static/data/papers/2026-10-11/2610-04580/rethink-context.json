@@ -1,0 +1,93 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.04580v1",
+  "abstract": "Multi-modal large language models (MLLMs) achieve strong modality understanding by pairing a large language model (LLM) with an encoder for a target modality such as vision, video, or audio. However, improving an MLLM's capability for a given modality typically requires additional training on large modality-specific datasets, incurring substantial data collection and compute costs. Model merging offers an alternative, but it is often infeasible for data-scarce, large per-sample size, or domain-specific modalities (\\textit{e.g.}, audio and video), where same-modality model variants are rarely available. In this work, we characterize an intriguing asymmetric phenomenon: merging a well-aligned, data-rich source-modality MLLM into a data-scarce target-modality MLLM substantially improves the target on its own benchmarks. Our theoretical and empirical analyses show that this gain stems from enhanced alignment between modality-specific and textual tokens, induced by the stronger donor modality. Specifically, we derive a mutual-information lower bound that is monotonic in alignment-related quantities and strongly correlated with downstream MLLM performance. Building on this principle, we propose Directional Cross-modal Alignment Transfer (DCAT), a novel framework that transfers textual alignment from a strong, well-aligned source (donor) modality to a weak target (recipient) modality, boosting target-modality performance without further fine-tuning. We further show that the alignment-enhancing objective admits a closed-form weight-space solution computed from only a small calibration set. DCAT outperforms existing model-merging methods, offering an efficient path toward cross-modal alignment transfer. Project page with code is available at \\url{https://seohoiki3215.github.io/DCAT_project_page}",
+  "abstractSha256": "2b2fd48b4f1f7fc86e0c7e539bf7c1a708fd4cdf264b63e4b3538cb09a8f7f39",
+  "arxivId": "2610.04580",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.04580v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "迁移学习",
+    "primaryTask": "音频问答",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-question-answering",
+          "label": "音频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.transfer",
+          "label": "迁移学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.formal-analysis",
+          "label": "形式化分析"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.multimodal",
+          "label": "多模态模型"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "迁移学习",
+      "primaryMethodId": "method.transfer",
+      "primaryTask": "音频问答",
+      "primaryTaskId": "task.audio-question-answering",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hoigi Seo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Byung Hyun Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Minjun Kim"
+    },
+    {
+      "affiliations": [
+        "Dept. of ECE"
+      ],
+      "name": "Dohyun Mah"
+    },
+    {
+      "affiliations": [
+        "Dept. of ECE",
+        "INMC & AIIS"
+      ],
+      "name": "Jongho Lee"
+    },
+    {
+      "affiliations": [
+        "Dept. of ECE",
+        "INMC & AIIS"
+      ],
+      "name": "Se Young Chun"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文发现视觉等多模态大模型合并可提升音频与视频模型的本模态成绩，提出只用 256 个校准样本求闭式权重更新的方向性跨模态对齐迁移方法，在音频平均提升 29.55%、视频平均提升 24.92%，代价是视觉端性能可能受损且结论限于共享基座的权重可合并结构。",
+  "originalTitle": "Strong Helps Weak: Directional Cross-Modal Alignment Transfer in Multi-modal LLMs",
+  "pdfUrl": "https://arxiv.org/pdf/2610.04580v1.pdf",
+  "readerTitle": "强模态帮弱模态：跨模态对齐的方向性迁移",
+  "schemaVersion": 2
+}

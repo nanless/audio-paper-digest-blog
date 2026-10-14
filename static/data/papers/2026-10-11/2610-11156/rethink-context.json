@@ -1,0 +1,138 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.11156v1",
+  "abstract": "Large audio-language models (LALMs) have achieved strong performance in general audio understanding, yet most are designed for monaural input and discard the inter-channel cues essential for spatial perception. In contrast, existing spatial audio-language models are purpose-built for spatial tasks and fail to capitalize on the general understanding capabilities of monaural LALMs. We present MiDashengLM-Spatial, the first open-source end-to-end unified audio-language model, to our knowledge, which supports both general audio understanding and spatial awareness within a single architecture. It extends MiDashengLM with a spatial audio encoder, Spatial-Dasheng, integrated through a hierarchical semantic-to-spatial conditioning module that injects intermediate semantic representations into the spatial branch at multiple depths while preserving the original semantic pathway. To provide spatial audio-language supervision at scale, we develop a data synthesis pipeline that renders diverse spatial acoustic scenes with scene-level spatial descriptions and question-answer pairs. Experiments show that Spatial-Dasheng achieves strong performance on sound event localization and detection in real-world scenes, and that MiDashengLM-Spatial substantially outperforms existing LALMs on spatial understanding and reasoning benchmarks. Meanwhile, it remains competitive with state-of-the-art 8B-scale LALMs on diverse monaural benchmarks, demonstrating that spatial awareness can be acquired without compromising general audio understanding. The source code and model checkpoint are available at https://github.com/xiaomi-research/midashenglm-spatial and https://huggingface.co/mispeech/midashenglm-spatial.",
+  "abstractSha256": "360e584fee6dc9f10d17a40c0cde67e670e0d603e155ec4beb12d2e3d3c48091",
+  "arxivId": "2610.11156",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.11156v1",
+  "assessment": {
+    "documentType": "模型报告",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "音频问答",
+    "rankBucket": "前25%",
+    "score": 8.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-question-answering",
+          "label": "音频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "task",
+          "id": "task.seld",
+          "label": "联合声音事件检测定位"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.spatial-audio",
+          "label": "空间音频信号"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.audio-language",
+          "label": "音频大模型"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "音频问答",
+      "primaryTaskId": "task.audio-question-answering",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jinbo Hu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hang Su"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lichun Fan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Heinrich Dinkel"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Gang Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhanchen Dai"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yiru Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chang Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Peng Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Junnan Wu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jian Luan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Cong Zou"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Heng Qu"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文针对单耳大模型丢掉双耳方位线索、专用空间模型又缺乏通用理解的问题，用语义分支加空间分支的双分支编码器和分层语义到空间调制，在大规模合成双耳场景上训练，实测在真实空间推理上大幅领先且通用单耳任务基本不下降，但细粒度轨迹和多源计数仍明显变难。",
+  "originalTitle": "MiDashengLM-Spatial: Unifying General Audio Understanding and Spatial Awareness",
+  "pdfUrl": "https://arxiv.org/pdf/2610.11156v1.pdf",
+  "readerTitle": "同时听懂内容和方位：MiDashengLM-Spatial 如何统一语义理解与空间感知",
+  "schemaVersion": 2
+}

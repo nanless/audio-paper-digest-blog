@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.11057v1",
+  "abstract": "Multimodal classification processes and relates information from multiple modalities to achieve more accurate predictions. However, existing methods typically rely on high-quality ground-truth labels, which are difficult to obtain in real-world scenarios. While sample-selection methods for learning with noisy labels aim to identify correctly labeled examples from noisy data, traditional methods primarily focus on unimodal settings and fail to exploit multimodal information fully. This motivates us to build a more reliable noise detector in multimodal learning. To this end, we theoretically analyze the relationship between representation structure and noise detection capability. Based on this analysis, we propose REFINE, which is a multimodal label-noise detection framework that jointly uses fused and unimodal representations for label-noise detection. Specifically, REFINE constructs discriminative eigenvectors through discriminative analysis of the target and background classes and selects trusted representation spaces with better noise detection capability for each class. Within each trusted space, REFINE measures the alignment between each instance representation and the discriminative eigenvectors. It then combines the subsets selected from these spaces. The combined set provides cleaner supervision for updating the multimodal classifier, thereby reducing the influence of mislabeled examples during training and improving model generalization. Extensive experiments across diverse tasks demonstrate REFINE's superiority compared to baseline methods. The source code will be publicly available.",
+  "abstractSha256": "c226cc3a4bfcc3b1544053f022a40abef65e2baf219f050431ca7c8ce85adc99",
+  "arxivId": "2610.11057",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.11057v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 6.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.weak-supervised",
+          "label": "弱监督学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jiashuo Zou"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiaobo Xia"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对多模态分类中观测标签含噪时难以判断样本是否可信的问题，REFINE 用目标与背景判别分析构造判别特征向量并按类挑选可信表示空间再做标签一致筛选，在七个数据集的多类噪声下提升了分类精度，但结论只在原文的融合结构与筛选节律下成立且个别噪声设置下并未全面领先。",
+  "originalTitle": "Learning What to Trust in Multimodal Learning under Noisy Supervision",
+  "pdfUrl": "https://arxiv.org/pdf/2610.11057v1.pdf",
+  "readerTitle": "多模态噪声标签下该信哪个表示空间：REFINE 的可信样本筛选",
+  "schemaVersion": 2
+}

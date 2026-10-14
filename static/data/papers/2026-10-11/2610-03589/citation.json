@@ -1,0 +1,51 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.03589v2",
+  "arxivId": "2610.03589",
+  "arxivVersion": 2,
+  "arxivVersionedId": "2610.03589v2",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ping Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Guang Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shao-Rong Su"
+    },
+    {
+      "affiliations": [
+        "Department of Electrical and Computer Engineering, University of Washington"
+      ],
+      "name": "Junkai Wu"
+    },
+    {
+      "affiliations": [
+        "Paul G. Allen School of Computer Science & Engineering, University of Washington"
+      ],
+      "name": "Pang Wei Koh"
+    },
+    {
+      "affiliations": [
+        "Paul G. Allen School of Computer Science & Engineering, University of Washington",
+        "Allen Institute for AIEqual contribution"
+      ],
+      "name": "Noah A. Smith"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.03589v2",
+  "originalTitle": "Rubric-Based Optimization for Text-to-Music Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.03589v2.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

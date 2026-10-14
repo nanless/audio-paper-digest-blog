@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.08229v1",
+  "abstract": "Contextual priors improve neural-to-language decoding by reshaping candidate scores. However, confidence is read from the same reshaped scores, so the errors a prior leaves behind can become more confident with no change in accuracy to reveal it. We study how a prior shapes confidence in speech retrieval on MEG-MASC and MOUS using local decoding scores, a contextual prior combined by additive shallow fusion, and the fused top-two margin as confidence. Among initially incorrect predictions, we find a confidence-ordering reversal: a larger margin makes a repair more likely when the correct candidate starts near the top of the local ranking, but less likely when it starts lower. On MEG-MASC, pooled correctness AUROC is 0.87, yet AUROC separating repairs from residual errors falls from 0.70 at initial ranks 2-3 to 0.39 at ranks 21-50. Errors starting beyond rank 20, inside the reversed region, make up 46.6% of all post-fusion errors. We propose a score-level account: a repair must first close the correct candidate's initial deficit, limiting its final margin, whereas a residual error can build a large margin between two incorrect candidates. A causal intervention that changes only the fusion weight moves the reversal to deeper ranks as predicted. Under a word-level LM prior, it keeps moving after accuracy gain peaks, so a weight chosen for accuracy does not settle confidence. Reading local and prior scores separately improves selective decoding: the decoder answers on 74.5% of windows instead of 56.7%, while 92% of output sets still contain the correct candidate. Confidence after contextual fusion should retain the local and contextual evidence behind each prediction, not just the fused scores. Project website: https://confidencereversal.github.io/; Code: https://github.com/AmadeusFake/NeuDecodingConfReversal",
+  "abstractSha256": "0cb62e5672d6effcfe94f3c8c75ffcf7515361d252878e12193449c051a5bd03",
+  "arxivId": "2610.08229",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.08229v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "不确定性估计与校准",
+    "primaryTask": "言语神经解码",
+    "rankBucket": "前50%",
+    "score": 6.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.neural-speech-decoding",
+          "label": "言语神经解码"
+        },
+        {
+          "facet": "method",
+          "id": "method.uncertainty-estimation",
+          "label": "不确定性估计与校准"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.neural",
+          "label": "脑信号"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "不确定性估计与校准",
+      "primaryMethodId": "method.uncertainty-estimation",
+      "primaryTask": "言语神经解码",
+      "primaryTaskId": "task.neural-speech-decoding",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "KTH"
+      ],
+      "name": "Xinyu Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sichao Liu"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "本文在脑磁语音检索中发现融合后前二分差越大在局部排名靠前时更可能是被修正的错误、靠后时反而更可能是修不好的错误，并用只改变融合权重的干预和保留局部与先验分数的选择性输出证明了该反转的机制与代价。",
+  "originalTitle": "Confidence-Ordering Reversal under Contextual Priors in Neural Decoding",
+  "pdfUrl": "https://arxiv.org/pdf/2610.08229v1.pdf",
+  "readerTitle": "上下文先验让神经解码更准，也让剩下的错误更自信",
+  "schemaVersion": 2
+}

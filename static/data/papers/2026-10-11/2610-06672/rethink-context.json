@@ -1,0 +1,100 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.06672v1",
+  "abstract": "Long-video understanding places substantial demands on memory, as answering questions often requires retrieving information distributed across extended temporal spans. Existing approaches broadly follow two paradigms: query-driven exploration, which is sensitive to localization errors, and query-independent memory construction, which may omit question-specific details. We introduce VideoTapestry, a training-free multi-agent framework that adapts a preconstructed hierarchical video memory through coarse-to-fine, query-driven refinement. The preconstructed memory organizes video content into three levels, capturing global narrative context, event-level temporal structure, and fine-grained relational evidence, respectively. To support coarse-to-fine localization and observation, we assign a specialized agent to each level, keeping retrieval and refinement within a scale-specific context. Guided by the query, these agents revisit relevant video regions and enrich layer-wise memories with targeted multimodal observations. Their refinements are assembled according to the original hierarchy into a composite query-adaptive memory, preserving global context in a compact form while retaining fine-grained evidence along query-relevant branches for final reasoning. Compared with direct GPT-5.5 inference, VideoTapestry achieves absolute accuracy gains of 17.2%, 14.9%, 9.8%, and 7.0% on LVBench, LongVideoBench (Long), Video-MME (Long), and EgoSchema, respectively, achieving the state-of-the-art results among all competitors.",
+  "abstractSha256": "1d0ec08cffdd1c3d04170245204953c8c2bdc8952fc49184ef304b5117163dd0",
+  "arxivId": "2610.06672",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.06672v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "工具增强与约束解码",
+    "primaryTask": "音视频问答",
+    "rankBucket": "前50%",
+    "score": 5.9,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-question-answering",
+          "label": "音视频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.tool-augmentation",
+          "label": "工具增强与约束解码"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "method",
+          "id": "method.retrieval-augmented",
+          "label": "检索增强"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.long-context",
+          "label": "长上下文"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "工具增强与约束解码",
+      "primaryMethodId": "method.tool-augmentation",
+      "primaryTask": "音视频问答",
+      "primaryTaskId": "task.av-question-answering",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "University of Science and Technology of China",
+        "Jilin University"
+      ],
+      "name": "Yucheng Liu"
+    },
+    {
+      "affiliations": [
+        "Hangzhou Dianzi University"
+      ],
+      "name": "Yufei Yin"
+    },
+    {
+      "affiliations": [
+        "Institute of Artificial Intelligence, Hefei Comprehensive National Science Center"
+      ],
+      "name": "Mingxiao Feng"
+    },
+    {
+      "affiliations": [
+        "University of Science and Technology of China",
+        "Institute of Artificial Intelligence, Hefei Comprehensive National Science Center"
+      ],
+      "name": "Jiajun Deng"
+    },
+    {
+      "affiliations": [
+        "University of Science and Technology of China",
+        "Institute of Artificial Intelligence, Hefei Comprehensive National Science Center"
+      ],
+      "name": "Wengang Zhou"
+    },
+    {
+      "affiliations": [
+        "University of Science and Technology of China",
+        "Institute of Artificial Intelligence, Hefei Comprehensive National Science Center"
+      ],
+      "name": "Houqiang Li"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对长视频中证据分散且预建记忆易缺问题细节的矛盾，VideoTapestry 用固定三层记忆加三智能体由粗到细重看视频并组装复合记忆，在四个长视频基准上相对同底座直接推理提升 7.0 到 17.2 个百分点，代价是离线建记忆与多次查询时模型调用。",
+  "originalTitle": "VideoTapestry: Query-Adaptive Memory Refinement for Multi-Agent Long-Video Understanding",
+  "pdfUrl": "https://arxiv.org/pdf/2610.06672v1.pdf",
+  "readerTitle": "长视频问答中全局覆盖与问题相关细节如何兼得：VideoTapestry 的分层记忆细化解读",
+  "schemaVersion": 2
+}

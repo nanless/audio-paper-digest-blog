@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.04757v1",
+  "abstract": "In recent years, flow-matching models have produced significant improvements in zero-shot text-to-speech synthesis. Conditioned on an audio prompt and text, these models learn a velocity field and generate speech by iteratively solving an ODE. During inference, the solver evolves a single state spanning both the prompt and the region to be generated, although only the generated region is ultimately retained. The discarded prompt state, however, still matters; its intermediate values influence generation through the velocity field that couples the two regions. As sampling continues, this state can drift away from the prescribed conditional path, introducing a discrepancy into subsequent generation updates. Unlike the unknown generated trajectory, the prompt path is available in closed form from the reference audio and the initial noise. We exploit this observation with Prompt-Consistency Inference (PCI), a training-free rule that restores the prompt block to its analytic value before each velocity evaluation, while leaving the generated block unchanged. PCI improves speaker similarity and intelligibility across the evaluated flow-matching TTS backbones without additional network evaluations. Our ablation studies further show that PCI keeps post-step prompt discrepancies smaller and that corrections covering the later sampling stages recover much of the observed similarity gain.",
+  "abstractSha256": "c292e488be831ec4fdd1747d1b36b0e6f0d444a378348d3bfc376173a4ec3514",
+  "arxivId": "2610.04757",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.04757v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "流匹配",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前50%",
+    "score": 6.7,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.zero-shot",
+          "label": "零样本"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "流匹配",
+      "primaryMethodId": "method.flow-matching",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Vasily Zadorozhnyy"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Can Goksen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kazuhito Koishida"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Dung Tran"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对音频填充式零样本合成在联合求解常微分方程时提示块偏离训练插值路径的问题，论文提出每次计算速度场前把提示块恢复为解析值的提示一致推理，并在冻结的 E2 TTS、F5-TTS 和 ZipVoice 系列上验证了说话人相似度和可懂度的改善，且不增加网络前向次数。",
+  "originalTitle": "Prompt-Consistency Inference for Zero-Shot Flow-Matching Text-to-Speech Models",
+  "pdfUrl": "https://arxiv.org/pdf/2610.04757v1.pdf",
+  "readerTitle": "提示一致推理如何修正零样本流匹配语音合成的采样输入",
+  "schemaVersion": 2
+}

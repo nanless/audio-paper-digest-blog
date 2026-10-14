@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.11219v1",
+  "arxivId": "2610.11219",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.11219v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Paul Haimes"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Alarith Uhde"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Daniel Moritz Marutschke"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.11219v1",
+  "originalTitle": "A computational framework for the acoustic characterization of Suikinkutsu (water harp cave)",
+  "pdfUrl": "https://arxiv.org/pdf/2610.11219v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

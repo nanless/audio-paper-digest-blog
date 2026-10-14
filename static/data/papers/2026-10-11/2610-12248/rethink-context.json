@@ -1,0 +1,61 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.12248v1",
+  "abstract": "Wearable augmented reality (AR) assistants are moving toward continuous real-world interaction, where they perceive the user's activity through first-person video and audio and provide timely spoken guidance without being explicitly asked. While proactive video assistants, spoken dialog systems, and egocentric task understanding have each advanced rapidly, existing systems do not address the joint problem of deciding when to speak and what to say from continuous first-person streams. We introduce EgoVoice, a framework for training and evaluating proactive egocentric spoken assistants. From HoloAssist video recordings of real human instructors, we construct clean audio streams through source separation and speech resynthesis, and convert each video session into a format where the model must decide at each moment whether to remain silent or provide spoken guidance. We fine-tune an omni-modal LLM with our data, and further improve its proactive intervention behavior with direct preference optimization. Experiments across closed and open-source models show that existing systems rarely produce well-timed, meaningful proactive interventions, while EgoVoice yields clear improvements in intervention timing, content relevance, and human preference over the zero-shot backbone.",
+  "abstractSha256": "a576878efca6f84773687ffa3eeaa37a27bc4ecfcd85e0daa6250b7485b157f7",
+  "arxivId": "2610.12248",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.12248v1",
+  "assessment": {
+    "documentType": "模型报告",
+    "primaryMethod": "偏好优化",
+    "primaryTask": "语音交互",
+    "rankBucket": "前50%",
+    "score": 6.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-interaction",
+          "label": "语音交互"
+        },
+        {
+          "facet": "method",
+          "id": "method.preference-optimization",
+          "label": "偏好优化"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "偏好优化",
+      "primaryMethodId": "method.preference-optimization",
+      "primaryTask": "语音交互",
+      "primaryTaskId": "task.speech-interaction",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Department of AI, University of Seoul"
+      ],
+      "name": "Heeseung Kim"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对第一视角视频音频流中何时说话与说什么的联合问题，论文用分离与重合成清洗指导录像，再经监督微调学听或说、经偏好优化调时机，在 170 段基准上以起始 F1 与内容相似度为最强证据，代价是召回仍低且内容略有回落。",
+  "originalTitle": "EgoVoice: Proactive Spoken Assistance from Egocentric Multimodal Streams",
+  "pdfUrl": "https://arxiv.org/pdf/2610.12248v1.pdf",
+  "readerTitle": "第一视角下何时开口说什么的主动语音助手",
+  "schemaVersion": 2
+}

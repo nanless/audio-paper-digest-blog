@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.06569v1",
+  "abstract": "Objective audio quality metrics typically provide point estimates, whereas listening tests yield score distributions from which mean opinion scores (MOS), confidence intervals (CIs), and significance decisions are derived. We propose a lightweight intrusive metric that combines a PEAQ-style perceptual front-end (ITU-R BS.1387) with a bagging ensemble of regressors. Calibration with subjective data aligns ensemble outputs with listener scores. The resulting item-dependent score distributions enable uncertainty assessment, panel-size-matched CIs, and identification of less conclusive predictions. Calibration improves agreement with subjective distributions and CI coverage across all evaluated datasets while preserving MOS accuracy. Using only 11 fixed PEAQ features, low-capacity regressors, and public training data, the method performs comparably to more data-intensive end-to-end approaches. Its output can support uncertainty-aware assessment and target listening tests towards uncertain conditions. The distributions also enable approximate pairwise comparisons, but not yet reliable significance inference.",
+  "abstractSha256": "272e97d4a4bc854ad48d0c142091add0ca3bdd4bede252227d9c70c3864f3711",
+  "arxivId": "2610.06569",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.06569v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "集成学习",
+    "primaryTask": "音频质量评估",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-quality",
+          "label": "音频质量评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.ensemble-learning",
+          "label": "集成学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.uncertainty-estimation",
+          "label": "不确定性估计与校准"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "集成学习",
+      "primaryMethodId": "method.ensemble-learning",
+      "primaryTask": "音频质量评估",
+      "primaryTaskId": "task.audio-quality",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Pablo M. Delgado"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Andreas Brendel"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Konstantin Schmidt"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jürgen Herre"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对客观音质只给单点平均分而听音试验给出分数分布的问题，用 11 个 PEAQ 特征加 50 个自举 MARS 回归器加全局均值宽度校准来模拟听众分数，校准后在所有数据集上提高了区间覆盖和分布一致性但仍低于名义水平，且成对显著性判断还不可靠。",
+  "originalTitle": "Ensemble-Based Perceptual Audio Quality Assessment with Confidence Intervals",
+  "pdfUrl": "https://arxiv.org/pdf/2610.06569v1.pdf",
+  "readerTitle": "用自举集成模拟听音小组：同时给出平均分、分布与区间",
+  "schemaVersion": 2
+}

@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.00929v2",
+  "arxivId": "2610.00929",
+  "arxivVersion": 2,
+  "arxivVersionedId": "2610.00929v2",
+  "authors": [
+    {
+      "affiliations": [
+        "TelePIX"
+      ],
+      "name": "Junghwan Park"
+    },
+    {
+      "affiliations": [
+        "TelePIX"
+      ],
+      "name": "Woojin Cho"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.00929v2",
+  "originalTitle": "Platonic Task Arithmetic",
+  "pdfUrl": "https://arxiv.org/pdf/2610.00929v2.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

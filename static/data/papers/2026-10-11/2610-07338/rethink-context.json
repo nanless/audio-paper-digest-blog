@@ -1,0 +1,120 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.07338v1",
+  "abstract": "Audio benchmarks are built around short, pre-segmented clips, limiting model design to brief inputs or fixed vocabularies. To close this gap, we introduce Logbook, a benchmark for hour-scale audio understanding, with recordings ranging from ten minutes to six days. Given a continuous audio recording and an event label vocabulary, a system must predict a gap-free segmentation with an event label and a description per segment. We compare 52 systems, end-to-end and cascaded, and ablate fine-tuning, context length, and reasoning budget. We find the task tractable, though the best systems remain below the human reference. Also, over-segmentation is pervasive, and fine-tuning partially mitigates it. Finally, end-to-end are often better than cascaded systems, but degrades with longer context.",
+  "abstractSha256": "a13f581fdfcc897af757d392538b9d3d3903a215c3e43aa47a59dd0156a97d6f",
+  "arxivId": "2610.07338",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.07338v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "音频事件检测",
+    "rankBucket": "前50%",
+    "score": 6.9,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.event-detection",
+          "label": "音频事件检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.long-audio",
+          "label": "长音频处理"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-captioning",
+          "label": "音频字幕生成"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "音频事件检测",
+      "primaryTaskId": "task.event-detection",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kwanghee Choi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Suwon Shon"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Dmitriy Serdyuk"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Guitang Lan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chao-Wei Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mohammad Sadegh Rasooli"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sangeeta Srivastava"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhaojiang Lin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Saurabh Adya"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ming Sun"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "Logbook 把小时级音频理解定义为无空隙切分加每段事件标签与描述，用三套数据比较 52 种级联与端到端系统，发现任务可行但普遍过分割，微调能缓解而端到端在更长窗口上会退化。",
+  "originalTitle": "Logbook: Extremely Long-form Audio Event Understanding",
+  "pdfUrl": "https://arxiv.org/pdf/2610.07338v1.pdf",
+  "readerTitle": "Logbook：把十几分钟到几天的不间断录音切成无空隙事件日志",
+  "schemaVersion": 2
+}

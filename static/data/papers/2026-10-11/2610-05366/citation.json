@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.05366v2",
+  "arxivId": "2610.05366",
+  "arxivVersion": 2,
+  "arxivVersionedId": "2610.05366v2",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kola Tubosun"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Aanuoluwapo Aremu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tolulope Ogunremi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Iroro Orife"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "David Ifeoluwa Adelani"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.05366v2",
+  "originalTitle": "The ÌròyìnSpeech Text Corpus: 24,905 Curated Yorùbá Sentences for Speech and Language Technology",
+  "pdfUrl": "https://arxiv.org/pdf/2610.05366v2.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

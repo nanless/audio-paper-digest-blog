@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.11787v1",
+  "abstract": "Multimodal depression assessment offers a promising approach to analyzing behavioral patterns associated with depression. However, existing methods often rely on dense and opaque multimodal representations, making it difficult to interpret the behavioral patterns underlying their predictions. In this work, we introduce BehavDep, a sparse factor-based framework that decomposes multimodal behavioral representations into sparse latent factors and associates them with behaviorally meaningful concepts through a semantic bridge. To address the mismatch between user-level annotations and heterogeneous video-level behaviors, BehavDep further learns video-level depression tendency scores under weak supervision and aggregates information across multiple observations for user-level assessment. Extensive experiments demonstrate that BehavDep achieves the best overall assessment performance while revealing complementary modality contributions, heterogeneous behavioral patterns across observations, and prediction responses to concept-level editing. These results show that BehavDep provides a structured and interpretable approach to analyzing multimodal behavioral representations for depression assessment.",
+  "abstractSha256": "81b8b13894820252ab1c2af65b4d243fe9c8c6e471f99c1496009acde275cc84",
+  "arxivId": "2610.11787",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.11787v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "音视频理解",
+    "rankBucket": "前50%",
+    "score": 6.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-understanding",
+          "label": "音视频理解"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "application",
+          "id": "application.mental-health",
+          "label": "精神健康筛查"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.interpretability",
+          "label": "可解释性"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "音视频理解",
+      "primaryTaskId": "task.av-understanding",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Guangdong University of Technology"
+      ],
+      "name": "Guimin Hu"
+    },
+    {
+      "affiliations": [
+        "Guangdong University of Technology"
+      ],
+      "name": "Zihao Song"
+    },
+    {
+      "affiliations": [
+        "Queen Mary University of London"
+      ],
+      "name": "Jiachen Luo"
+    },
+    {
+      "affiliations": [
+        "The Hong Kong Polytechnic University"
+      ],
+      "name": "Jiayuan Xie"
+    },
+    {
+      "affiliations": [
+        "Guangdong University of Technology"
+      ],
+      "name": "Ruichu Cai"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对用户级标注与视频级行为异质性不一致的问题，BehavDep 用 TopK 稀疏自编码器拆分视频表征并对齐抑郁行为概念，再学视频级倾向分数做加权聚合，在 MUD3 和 DAIC-WOZ 上取得最高准确率与 F1，代价是两阶段训练与概念集依赖文献先验。",
+  "originalTitle": "From Sparse Representations to Behavioral Insights for Multimodal Depression Assessment",
+  "pdfUrl": "https://arxiv.org/pdf/2610.11787v1.pdf",
+  "readerTitle": "把稠密多模态表征拆成稀疏因子再做抑郁评估",
+  "schemaVersion": 2
+}

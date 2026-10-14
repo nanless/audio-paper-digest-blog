@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.03320v1",
+  "arxivId": "2610.03320",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.03320v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nityanand Mathur"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hamees Sayed"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ayush Pratap Singh"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.03320v1",
+  "originalTitle": "Refinement Buys Intelligibility, Search Buys Identity: What Test-Time Compute Buys in Masked-Diffusion TTS",
+  "pdfUrl": "https://arxiv.org/pdf/2610.03320v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

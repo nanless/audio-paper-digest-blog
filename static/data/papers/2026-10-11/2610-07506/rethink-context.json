@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.07506v1",
+  "abstract": "Speech agents are reactive and dyadic: they speak when spoken to, and to one person at a time. We ask what it takes for a speech agent to instead take part in a conversation among several people and speak up only when it can help. We introduce Jarvis, a real-time proactive speech agent that audibly participates in multi-party human conversations. Grounded in a document shared beforehand, Jarvis follows the discussion and intervenes when the group misses or misstates a fact and does not correct itself within a few turns. We make three contributions: a problem setting based on epistemic breakdowns that makes proactive intervention measurable, realized as CHI-180-proactive, a synthetic multi-party dataset seeded with known gaps, errors, and self-corrections; a proactive backbone that harnesses a small, open-weight model with deterministic checks and grounds every claim in a source sentence; and interaction techniques for taking the floor in live speech and showing the cited evidence on screen. On CHI-180-proactive, Jarvis is correct on most events it addresses and stays silent 97% of the time when the group resolves an issue itself. A live study with 23 participants confirms these trends with real-time interventions.",
+  "abstractSha256": "44dcd2682ba5e4c99554cbabbdcea4cb4ac0d72c556732abd3ad7311f5af801d",
+  "arxivId": "2610.07506",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.07506v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "检索增强",
+    "primaryTask": "语音对话系统",
+    "rankBucket": "前50%",
+    "score": 7.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-dialogue",
+          "label": "语音对话系统"
+        },
+        {
+          "facet": "method",
+          "id": "method.retrieval-augmented",
+          "label": "检索增强"
+        },
+        {
+          "facet": "task",
+          "id": "task.turn-taking",
+          "label": "轮次切换"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "检索增强",
+      "primaryMethodId": "method.retrieval-augmented",
+      "primaryTask": "语音对话系统",
+      "primaryTaskId": "task.speech-dialogue",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Seunghyun Oh"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hirotaka Hiraki"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shuyue Stella Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yulia Tsvetkov"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shyamnath Gollakota"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "Jarvis 针对共享文档的多人讨论，用小型模型的检测加规则门限决定是否纠正遗漏或说错的事实，并用等候空档与举手加屏幕引证来进入对话，在合成与真实会议中验证了时机与正确性，但结论只在文档可查证的范围内成立。",
+  "originalTitle": "Jarvis: A Proactive Speech Agent for Multi-Party Conversations",
+  "pdfUrl": "https://arxiv.org/pdf/2610.07506v1.pdf",
+  "readerTitle": "Jarvis：在多人会议里何时开口、如何开口的主动语音智能体",
+  "schemaVersion": 2
+}

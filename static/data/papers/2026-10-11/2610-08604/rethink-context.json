@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.08604v1",
+  "abstract": "Automatic Speech Recognition (ASR) systems often show uneven performance across demographic groups, and errors can be especially difficult to address for speakers belonging to multiple demographic groups. This work studies demographic-aware model merging for fair Speech-LLM-based ASR. Starting from a SLAM-ASR-based model, we fine-tune only the connector on demographic-specific subsets and merge the resulting subgroup-adapted connectors into a global model. We then identify critical cross-axis demographic pairs using subgroup WER and task-vector conflict, and apply intersection-specific correction vectors to the global merged model. Experiments on Fair-Speech show that global demographic merging improves overall WER over the base model, while intersection correction provides additional gains for several merging strategies. In particular, TIES with WER-based correction achieves the best overall WER, reducing it from 7.38\\% to 5.13\\%. Subgroup and disparity analyses further show that the proposed approach improves performance across demographic axes, while highlighting that lower average WER does not always imply reduced subgroup disparity.",
+  "abstractSha256": "afb2ffe56af48260133f07e10406853313ac21196693908be075921ddeaafb3a",
+  "arxivId": "2610.08604",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.08604v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "模型融合",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 5.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.model-combination",
+          "label": "模型融合"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.fairness",
+          "label": "公平性"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "模型融合",
+      "primaryMethodId": "method.model-combination",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ashley E. Bravo-Bravo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuchen Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Haralambos Mouratidis"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ravi Shekhar"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Monorama Swain"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对多人口属性交叉说话人识别偏弱的问题，论文先在冻结语音编码器和大语言模型下为 18 个人口子组分别微调连接器再合并为全局模型，然后对跨轴交叉对估计修正向量并加回全局模型，在 Fair-Speech 上把总体词错误率从 7.38% 降到 5.13%，但平均提升并不总能缩小同轴内最大最小差距。",
+  "originalTitle": "InterCorrect: Intersection-Aware Correction of Demographic Model Merging for Fair ASR",
+  "pdfUrl": "https://arxiv.org/pdf/2610.08604v1.pdf",
+  "readerTitle": "人口交叉情况下的语音识别模型合并与修正：InterCorrect 解读",
+  "schemaVersion": 2
+}

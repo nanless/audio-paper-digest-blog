@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.03078v1",
+  "abstract": "Quantifying conversational dynamics requires reliable identification of interactional units and their temporal boundaries, but speech activity alone does not distinguish conversational turns from listener feedback or within-turn pauses. We present an automated pipeline for extracting turns and backchannels from separate-channel recordings of spontaneous dyadic conversation, designed to provide a consistent first-pass annotation for subsequent human review. The pipeline combines voice activity detection, channel-energy filtering, temporal merging, automatic speech recognition, and context-based post-processing. We evaluated the pipeline on 99 ten-minute Danish conversations from 33 dyads using segment-level detection reliability and temporal boundary error. Conversations were recorded under both normal and asymmetric listening conditions. In the latter, speech-shaped noise was delivered to one participant through bone-conduction headphones. Overall detection reliability was F1=0.621, with similar performance for turns F1=0.624 and backchannels F1=0.618. For successfully matched segments, median absolute onset and offset errors were 0.150 and 0.160s for turns and 0.130 and 0.180s for backchannels, respectively. Mean errors were substantially larger for turn boundaries, indicating a smaller number of large boundary mismatches. Performance did not differ significantly across the two experimental listening conditions. In a four-conversation case study, pipeline-human agreement was lower and more variable than human inter-annotator agreement and varied across parameter settings. These results support the pipeline as an automated first pass within a semi-automated annotation workflow, providing a consistent basis for more standardised and reproducible annotation of conversational dynamics.",
+  "abstractSha256": "8314d7ef45135b91908d5406ffd277b7f051fd3f739bc5cdbd7bbb6350f9d772",
+  "arxivId": "2610.03078",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.03078v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "轮次切换",
+    "rankBucket": "前50%",
+    "score": 5.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.turn-taking",
+          "label": "轮次切换"
+        },
+        {
+          "facet": "task",
+          "id": "task.vad",
+          "label": "语音活动检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "method",
+          "id": "method.data-annotation",
+          "label": "数据标注"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "轮次切换",
+      "primaryTaskId": "task.turn-taking",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hanlu He"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Harald Vilhelm Skat-Rørdam"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ingvi Örnólfsson"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ivana Konvalinka"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "该研究解决在分通道自然对话录音中把语音活动还原为轮次和反馈两类交互单元的问题，用语音检测加能量过滤加合并加转写加上下文后处理得到初版标注，在 99 段丹麦语对话上检出 F1 约 0.62 且匹配段的中位边界误差约零点十几秒，代价是仍需人工复核且对参数敏感。",
+  "originalTitle": "An automated pipeline for standardised speech-unit annotation in spontaneous dialogue",
+  "pdfUrl": "https://arxiv.org/pdf/2610.03078v1.pdf",
+  "readerTitle": "从双通道录音到轮次与反馈标注：一条先自动后人工的会话切分流水线",
+  "schemaVersion": 2
+}

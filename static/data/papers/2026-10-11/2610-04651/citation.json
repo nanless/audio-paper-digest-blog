@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.04651v1",
+  "arxivId": "2610.04651",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.04651v1",
+  "authors": [
+    {
+      "affiliations": [
+        "School of Electrical and Computer Engineering"
+      ],
+      "name": "Ron Aluf"
+    },
+    {
+      "affiliations": [
+        "Ben-Gurion University of the Negev"
+      ],
+      "name": "Alon Canfi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Eliya Nachmani"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.04651v1",
+  "originalTitle": "GS-Codec: A Gaussian-Splatting Bottleneck for Neural Audio Coding",
+  "pdfUrl": "https://arxiv.org/pdf/2610.04651v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.05932v1",
+  "arxivId": "2610.05932",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.05932v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Gaoxiang Cong"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Liang Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jianwei Wen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhedong Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zheng-Jun Zha"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Qingming Huang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.05932v1",
+  "originalTitle": "UltraDub: Towards Authentic Dubbing by Unifying Visually-Steered Flow Learning and Trajectory Guidance",
+  "pdfUrl": "https://arxiv.org/pdf/2610.05932v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

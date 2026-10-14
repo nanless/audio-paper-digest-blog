@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.04570v1",
+  "arxivId": "2610.04570",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.04570v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Yusei TAMURA"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Shigekazu ISHIHARA"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Ken ITO"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.04570v1",
+  "originalTitle": "\"Spectral Harmony\" Towards the Unification of Timbre and Speech: Resolution of the Young Mahler Schoenberg Dream",
+  "pdfUrl": "https://arxiv.org/pdf/2610.04570v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

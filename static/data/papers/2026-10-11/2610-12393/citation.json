@@ -1,0 +1,75 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.12393v1",
+  "arxivId": "2610.12393",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.12393v1",
+  "authors": [
+    {
+      "affiliations": [
+        "School of Computing and Artificial Intelligence, Southwestern University of Finance and Economics"
+      ],
+      "name": "Qun Dai"
+    },
+    {
+      "affiliations": [
+        "School of Computing and Artificial Intelligence, Southwestern University of Finance and Economics"
+      ],
+      "name": "Liangjian Wen"
+    },
+    {
+      "affiliations": [
+        "School of Computing and Artificial Intelligence, Southwestern University of Finance and Economics",
+        "Chengdu Everimaging Science and Technology Co., Ltd"
+      ],
+      "name": "Jiang Duan"
+    },
+    {
+      "affiliations": [
+        "X-Humanoid"
+      ],
+      "name": "Yong Dai"
+    },
+    {
+      "affiliations": [
+        "School of Computing and Artificial Intelligence, Southwestern University of Finance and Economics"
+      ],
+      "name": "Dongkai Wang"
+    },
+    {
+      "affiliations": [
+        "Hong Kong Institute of AI for Science, City University of Hong Kong"
+      ],
+      "name": "Maolin Wang"
+    },
+    {
+      "affiliations": [
+        "Zhejiang Sci-Tech University"
+      ],
+      "name": "Mingjie Wang"
+    },
+    {
+      "affiliations": [
+        "Shenzhen Institutes of Advanced Technology, Chinese Academy of Sciences"
+      ],
+      "name": "Jianzhuang Liu"
+    },
+    {
+      "affiliations": [
+        "Chengdu Everimaging Science and Technology Co., Ltd"
+      ],
+      "name": "He Yan"
+    },
+    {
+      "affiliations": [
+        "University of Electronic Science and Technology of China"
+      ],
+      "name": "Zhao Kang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.12393v1",
+  "originalTitle": "HRIL: Learning Multimodal Synergy via Higher-Order Tensor Modeling",
+  "pdfUrl": "https://arxiv.org/pdf/2610.12393v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

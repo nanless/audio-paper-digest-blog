@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.05633v1",
+  "abstract": "This paper presents GENAI4IDN Benchmark 3.0, the third iteration of an evaluation framework to assess Generative AI tools for creating Interactive Digital Narratives (IDNs). Moving beyond manual testing, this iteration introduces AI-assisted evaluation through a publicly accessible web application (https://genai4idn.com), enabling the community to run benchmarks on demand, add new models, and propose new tasks. The revised evaluation framework is \"blinded\" to avoid model-bias, and can handle complex media such as music, videos, and full IDNs that previously required human raters. A significant addition - responding to concerns raised during ICIDS 2025 - is the addition of fact-checking and bias detection with dedicated tasks and rubrics, validated by human raters with lived experience in the depicted contexts. Findings from a diverse range of models report on maturing creative capabilities while observing runaway thinking and overzealous safety filters as limitations. Fact-checking reliably caught subtle historical inaccuracies, anachronisms, and fabricated claims while the bias rater consistently exposed structural assumptions, tropes, and marginalized group erasures.",
+  "abstractSha256": "887f4ba8b7f84fa9bb066f71dde7eec7979eb9153f6cdc0ae004df39421b2819",
+  "arxivId": "2610.05633",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.05633v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "音乐生成",
+    "rankBucket": "前50%",
+    "score": 5.9,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-generation",
+          "label": "音乐生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.fairness",
+          "label": "公平性"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "音乐生成",
+      "primaryTaskId": "task.music-generation",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Södertörn University, Alfred Nobels allé 7, 141 89 Huddinge, Sweden"
+      ],
+      "name": "Hartmut Koenitz"
+    },
+    {
+      "affiliations": [
+        "Saint Martin’s Institute of Higher Education, Hamrun, Malta"
+      ],
+      "name": "Jonathan Barbara"
+    },
+    {
+      "affiliations": [
+        "Stockholm University, SE-106 91 Stockholm, Sweden"
+      ],
+      "name": "Mirjam Palosaari Eladhari"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文把原来手工测试的互动叙事生成评估做成公开网页平台，用去标识评分、自动试玩与事实和偏见检查来测文本代码图像音频视频与完整游戏，报告前沿模型整体分数更高但交互结构仍弱且出现无限思考与过度拒答的代价。",
+  "originalTitle": "The GenAI4IDN Benchmark 3.0 - a Public Tool to Assess Generative AI Tools for the Design of Interactive Digital Narratives",
+  "pdfUrl": "https://arxiv.org/pdf/2610.05633v1.pdf",
+  "readerTitle": "把互动叙事设计变成可重复跑分的公开基准",
+  "schemaVersion": 2
+}

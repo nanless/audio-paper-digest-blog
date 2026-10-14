@@ -1,0 +1,61 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.09682v1",
+  "abstract": "Broadband in-air sonar sensors with a sparse microphone array form images through delay-and-sum beamforming, which leaves high sidelobes and an angular resolution that degrades strongly towards the sides of the field of view. Deconvolving these images requires access to the point-spread function of the complete imaging chain, including the emitter spectrum and directivity and the array imperfections. In practice, these aspects are hard to calibrate for. In this letter, we propose a self-supervised method that learns a deconvolution network together with a physics-structured model of the point-spread function, requiring only the sonar data itself and the odometry of a moving robot on which the sensor is mounted. Using acoustic flow warping, the internal representation of the model is warped and subsequently rendered through the learned point-spread function. This is then compared to the measured images under a speckle likelihood in accordance with the statistical model of image formation. In simulation, the learned model recovers the unknown emitter directivity, and the deconvolved images reach a constant angular resolution of 5 to 6 degrees over the full field of view, against 12 to 30 degrees for delay-and-sum and 7 to 23 degrees for delay-multiply-and-sum with coherence factor. The method outperforms classical deconvolution with the nominal point-spread function, and even outperforms CLEAN with the true one.",
+  "abstractSha256": "52224b1393f0fc3f13bfe50a9a4a6f084409df36e6d5f72d639bd2801d51d276",
+  "arxivId": "2610.09682",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.09682v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "自监督学习",
+    "primaryTask": "声源定位",
+    "rankBucket": "前50%",
+    "score": 5.9,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.localization",
+          "label": "声源定位"
+        },
+        {
+          "facet": "method",
+          "id": "method.self-supervised",
+          "label": "自监督学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.beamforming",
+          "label": "波束成形"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.microphone-array",
+          "label": "麦克风阵列"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "自监督学习",
+      "primaryMethodId": "method.self-supervised",
+      "primaryTask": "声源定位",
+      "primaryTaskId": "task.localization",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jan Steckel"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对稀疏麦克风阵列延迟求和图像旁瓣高、两侧变宽且发射器指向性难标定的问题，该文用里程计驱动的声流预测同时学习去卷积网络与物理结构点扩散函数，在仿真中把全视场分辨率稳定到 5 到 6 度，代价是依赖运动、里程计和仿真验证。",
+  "originalTitle": "Self-Supervised Deconvolution of In-Air Sonar Images Using Sensor Ego-Motion",
+  "pdfUrl": "https://arxiv.org/pdf/2610.09682v1.pdf",
+  "readerTitle": "靠自身运动学会去卷积：空中声呐图像如何变清晰",
+  "schemaVersion": 2
+}

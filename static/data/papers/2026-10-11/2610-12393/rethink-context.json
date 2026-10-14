@@ -1,0 +1,116 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.12393v1",
+  "abstract": "Self-supervised multimodal representation learning has achieved remarkable success across diverse domains, yet capturing synergistic information remains challenging due to the complexity of cross-modal interactions. Unlike the shared information across individual modalities, synergy arises when task-relevant signals emerge only from the joint configuration of multiple modalities and cannot be recovered from any modality in isolation. This work focuses on how to preserve the information capacity for such synergistic signals in multimodal representations. The key observation is that synergistic information is reflected in higher-order statistical dependence among modalities, which provides a principled target for explicitly modeling joint interactions. Motivated by this insight, we propose Higher-order Representation and Information Learning (HRIL), which constructs an empirical cross-moment tensor over modality embeddings to represent multi-way interactions. HRIL employs Tucker decomposition to obtain a core tensor, complemented by a synergy-aware regularizer that prevents energy concentration and preserves higher-order coupling capacity for synergistic information capture. Experiments on the controlled synergy task and real-world benchmarks demonstrate consistent improvements over existing multimodal contrastive methods, with notable gains on tasks dominated by synergistic interactions. Code is released at https://github.com/brightest66/HRIL.",
+  "abstractSha256": "9e015a9bb9c5457831f9246c1737c52fbbf4830a598b139d0d3091d0f8b116e3",
+  "arxivId": "2610.12393",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.12393v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "音视频理解",
+    "rankBucket": "前50%",
+    "score": 6.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-understanding",
+          "label": "音视频理解"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.contrastive",
+          "label": "对比学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "音视频理解",
+      "primaryTaskId": "task.av-understanding",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "School of Computing and Artificial Intelligence, Southwestern University of Finance and Economics"
+      ],
+      "name": "Qun Dai"
+    },
+    {
+      "affiliations": [
+        "School of Computing and Artificial Intelligence, Southwestern University of Finance and Economics"
+      ],
+      "name": "Liangjian Wen"
+    },
+    {
+      "affiliations": [
+        "School of Computing and Artificial Intelligence, Southwestern University of Finance and Economics",
+        "Chengdu Everimaging Science and Technology Co., Ltd"
+      ],
+      "name": "Jiang Duan"
+    },
+    {
+      "affiliations": [
+        "X-Humanoid"
+      ],
+      "name": "Yong Dai"
+    },
+    {
+      "affiliations": [
+        "School of Computing and Artificial Intelligence, Southwestern University of Finance and Economics"
+      ],
+      "name": "Dongkai Wang"
+    },
+    {
+      "affiliations": [
+        "Hong Kong Institute of AI for Science, City University of Hong Kong"
+      ],
+      "name": "Maolin Wang"
+    },
+    {
+      "affiliations": [
+        "Zhejiang Sci-Tech University"
+      ],
+      "name": "Mingjie Wang"
+    },
+    {
+      "affiliations": [
+        "Shenzhen Institutes of Advanced Technology, Chinese Academy of Sciences"
+      ],
+      "name": "Jianzhuang Liu"
+    },
+    {
+      "affiliations": [
+        "Chengdu Everimaging Science and Technology Co., Ltd"
+      ],
+      "name": "He Yan"
+    },
+    {
+      "affiliations": [
+        "University of Electronic Science and Technology of China"
+      ],
+      "name": "Zhao Kang"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对两两对比表示在三个以上模态下会丢掉必须联合观察才能出现的协同信号的问题，HRIL 用跨模态经验交叉矩张量加 Tucker 分解刻画多路交互，并用防止核心能量集中的协同正则保留高阶容量，在受控合成任务和多模态基准上做线性探测评估，代价是训练每步要多算张量构造与分解的时间。",
+  "originalTitle": "HRIL: Learning Multimodal Synergy via Higher-Order Tensor Modeling",
+  "pdfUrl": "https://arxiv.org/pdf/2610.12393v1.pdf",
+  "readerTitle": "HRIL：用高阶张量为多模态协同信息保留表示容量",
+  "schemaVersion": 2
+}

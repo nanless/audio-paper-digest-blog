@@ -1,0 +1,176 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.10663v1",
+  "abstract": "Bioacoustics and ethology encompass a wide range of audio understanding tasks, many of which stand to benefit from recent advances in large audio-language models. However, progress in the field has so far been assessed on a narrow set of tasks, primarily centered on label-centric biological category recognition, such as species and call-type classification. In this work, we introduce BEANS-Next, a benchmark grounded in a taxonomy of bioacoustics tasks spanning acoustic perception, biological category recognition, scene understanding, and in-context learning. Using BEANS-Next, we show that existing models exhibit limited performance beyond the task families emphasized by existing evaluations, constraining their usefulness for broader bioacoustic applications. To support progress on this broader task space, we also introduce ROOTS, a large-scale training resource built from expanded curated real-world data and previously underused behavioral and acoustic metadata, supplemented by audio-derived information and scalable synthetic generation where labeling is insufficient. We demonstrate that training on this dataset yields substantial progress across all task groups of BEANS-Next, moving audio-language models closer to their potential as general-purpose assistants for bioacoustics and ethology. To accelerate progress in the field, we open-source our benchmark, dataset, and data pipelines.",
+  "abstractSha256": "09964ba339eb127f43508b997526fecfe703830267de785382ac08964f012605",
+  "arxivId": "2610.10663",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.10663v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "数据集构建",
+    "primaryTask": "音频理解",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-understanding",
+          "label": "音频理解"
+        },
+        {
+          "facet": "method",
+          "id": "method.dataset-curation",
+          "label": "数据集构建"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "数据集构建",
+      "primaryMethodId": "method.dataset-curation",
+      "primaryTask": "音频理解",
+      "primaryTaskId": "task.audio-understanding",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Earth Species Project",
+        "Queen Mary University of London"
+      ],
+      "name": "Christos Plachouras"
+    },
+    {
+      "affiliations": [
+        "Earth Species Project"
+      ],
+      "name": "David Robinson"
+    },
+    {
+      "affiliations": [
+        "Earth Species Project"
+      ],
+      "name": "Marius Miron"
+    },
+    {
+      "affiliations": [
+        "Earth Species Project"
+      ],
+      "name": "Gagan Narula"
+    },
+    {
+      "affiliations": [
+        "Earth Species Project"
+      ],
+      "name": "Paul Laisné"
+    },
+    {
+      "affiliations": [
+        "Earth Species Project"
+      ],
+      "name": "Anthony L. T. Fine"
+    },
+    {
+      "affiliations": [
+        "Earth Species Project"
+      ],
+      "name": "Benno Weck"
+    },
+    {
+      "affiliations": [
+        "Earth Species Project"
+      ],
+      "name": "Ellen Gilsenan-McMahon"
+    },
+    {
+      "affiliations": [
+        "Earth Species Project"
+      ],
+      "name": "Diane Kim"
+    },
+    {
+      "affiliations": [
+        "Earth Species Project"
+      ],
+      "name": "Laura Hay Mack"
+    },
+    {
+      "affiliations": [
+        "Earth Species Project"
+      ],
+      "name": "Maddie Cusimano"
+    },
+    {
+      "affiliations": [
+        "Earth Species Project"
+      ],
+      "name": "Sara Keen"
+    },
+    {
+      "affiliations": [
+        "Earth Species Project"
+      ],
+      "name": "Lukas Rauch"
+    },
+    {
+      "affiliations": [
+        "Earth Species Project"
+      ],
+      "name": "Benjamin Hoffman"
+    },
+    {
+      "affiliations": [
+        "Earth Species Project"
+      ],
+      "name": "Emmanuel Chemla"
+    },
+    {
+      "affiliations": [
+        "Queen Mary University of London"
+      ],
+      "name": "Emmanouil Benetos"
+    },
+    {
+      "affiliations": [
+        "Queen Mary University of London"
+      ],
+      "name": "Johan Pauwels"
+    },
+    {
+      "affiliations": [
+        "Earth Species Project"
+      ],
+      "name": "Milad Alizadeh"
+    },
+    {
+      "affiliations": [
+        "Earth Species Project"
+      ],
+      "name": "Matthieu Geist"
+    },
+    {
+      "affiliations": [
+        "Earth Species Project"
+      ],
+      "name": "Olivier Pietquin"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文用四层任务分类同时做评测集 BEANS-Next 和训练集 ROOTS，证明按层补充整理元数据、语言模型合成文本和合成音频能提升已有基座在声学感知、类别识别、场景理解和示例学习上的表现，但计数和开放描述仍弱且结论只在给定划分和指标下成立。",
+  "originalTitle": "BEANS-Next and ROOTS: Broadening Audio-Language Capabilities for Bioacoustics",
+  "pdfUrl": "https://arxiv.org/pdf/2610.10663v1.pdf",
+  "readerTitle": "从叫声测量到场景推理：BEANS-Next 与 ROOTS 如何拓宽生物声学音频语言能力",
+  "schemaVersion": 2
+}

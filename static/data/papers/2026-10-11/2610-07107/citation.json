@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.07107v1",
+  "arxivId": "2610.07107",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.07107v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tomás Arias-Vergara"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Christopher Hauer"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Héloïse Brotier"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Elmar Nöth"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Andreas Maier"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lee Koren"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.07107v1",
+  "originalTitle": "Neural Representations, Natural Connections: What Transfers From Human Speech Foundation Models to Animal Vocalizations?",
+  "pdfUrl": "https://arxiv.org/pdf/2610.07107v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

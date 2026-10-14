@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.02976v1",
+  "abstract": "Audio-Visual Large Language Models (AV-LLMs) remain prone to cross-modal hallucinations, where one modality incorrectly affects predictions about another. Although contrastive decoding reduces hallucinations in vision-language models, its direct extension to AV-LLMs overlooks a key challenge: different questions require different perceptual evidence, including audio, video, or their interaction. Notably, we observe that joint audio-visual inference can weaken the prediction even when a model can recover the correct answer from a single informative modality. For example, when asked which instrument is heard, a model may correctly predict violin from the audio alone. Once a video showing a guitar is added, its confidence in violin may drop. In this paper, we introduce Relevant Evidence Decoding (RED), a training-free method that identifies question-relevant evidence and selectively strengthens its contribution. RED uses pointwise mutual information to quantify the predictive support provided by audio and video beyond the question alone. It decomposes their joint contribution into audio, video, and residual interaction components. A question-only inference pass determines the required evidence type, after which the model augments the original audio-visual prediction with the corresponding PMI contribution. Across three audio-visual hallucination benchmarks and three AV-LLMs, RED improves accuracy over standard decoding by up to 7% on CMM, 6.3% on AVHBench, and 3.8% on SVHalluc, with an average relative time to first token of 1.5x standard decoding.",
+  "abstractSha256": "eeb221b78e710809866004584452393a2933b730f40560bd27173f4179bda7ec",
+  "arxivId": "2610.02976",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.02976v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "工具增强与约束解码",
+    "primaryTask": "音视频问答",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-question-answering",
+          "label": "音视频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.tool-augmentation",
+          "label": "工具增强与约束解码"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.hallucination-faithfulness",
+          "label": "幻觉与忠实度"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "工具增强与约束解码",
+      "primaryMethodId": "method.tool-augmentation",
+      "primaryTask": "音视频问答",
+      "primaryTaskId": "task.av-question-answering",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Sungkyunkwan University"
+      ],
+      "name": "Hyunjae Ra"
+    },
+    {
+      "affiliations": [
+        "Sungkyunkwan University"
+      ],
+      "name": "Aecheon Jung"
+    },
+    {
+      "affiliations": [
+        "Daegu Gyeongbuk Institute of Science and Technology (DGIST)"
+      ],
+      "name": "Jungin Park"
+    },
+    {
+      "affiliations": [
+        "Sungkyunkwan University"
+      ],
+      "name": "Sungeun Hong"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对音频视觉大模型中另一模态干扰问题所需证据的判断失准，RED 用问题选择证据类型并用逐点互信息增强对应贡献，在三个幻觉基准上提升准确率而首次 token 时间约为标准解码的 1.5 倍。",
+  "originalTitle": "Relevant Evidence Decoding for Audio-Visual Hallucination Mitigation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.02976v1.pdf",
+  "readerTitle": "按问题所需证据做解码修正的音频视觉幻觉缓解",
+  "schemaVersion": 2
+}

@@ -1,0 +1,86 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.03602v1",
+  "abstract": "Spatial semantic segmentation of sound scenes (S5) involves the detection and extraction of target sound events in audio files. However, in typical detection-extraction pipelines, errors in the detection module propagate to the extraction module, degrading overall performance. In this work, we develop a multichannel detection-extraction model and evaluate inference-time algorithms to improve the class detection and target sound extraction in a multi-stage setup. We evaluate two fitness functions: binary cross entropy and mixture consistency; two relabeling strategies: naive and conditional confusion matrix relabeling; and three source estimate evaluation models: a multi-label classifier, a fine-tuned single-source classifier, and an off-the-shelf audio judge. We thoroughly evaluate the impact of these design choices on the DCASE 2025 Task 4 dataset, and validate entropy-based gating of inference-time updates on the held-out evaluation set, laying the groundwork for inference-time updates of S5 systems in real-world scenarios.",
+  "abstractSha256": "60f220ad40b052e8a36117614d2638ab98943e7134159d990a8c4b0aa46ed16b",
+  "arxivId": "2610.03602",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.03602v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "测试时自适应",
+    "primaryTask": "音频分离",
+    "rankBucket": "前50%",
+    "score": 5.9,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-separation",
+          "label": "音频分离"
+        },
+        {
+          "facet": "method",
+          "id": "method.test-time-adaptation",
+          "label": "测试时自适应"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multichannel",
+          "label": "多通道"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "测试时自适应",
+      "primaryMethodId": "method.test-time-adaptation",
+      "primaryTask": "音频分离",
+      "primaryTaskId": "task.audio-separation",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "New Jersey Institute of Technology, Newark NJ, USA",
+        "Mitsubishi Electric Research Laboratories (MERL), Cambridge, MA, USA"
+      ],
+      "name": "Sripathi Sridhar"
+    },
+    {
+      "affiliations": [
+        "Mitsubishi Electric Research Laboratories (MERL), Cambridge, MA, USA"
+      ],
+      "name": "Gordon Wichern"
+    },
+    {
+      "affiliations": [
+        "Mitsubishi Electric Research Laboratories (MERL), Cambridge, MA, USA"
+      ],
+      "name": "Yoshiki Masuyama"
+    },
+    {
+      "affiliations": [
+        "New Jersey Institute of Technology, Newark NJ, USA"
+      ],
+      "name": "Mark Cartwright"
+    },
+    {
+      "affiliations": [
+        "Mitsubishi Electric Research Laboratories (MERL), Cambridge, MA, USA"
+      ],
+      "name": "Jonathan Le Roux"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文针对空间语义分割中检测错误会拖累提取的问题，比较重标注器、适应函数与评估模型的推理时更新组合，发现只在基线较差的片段上有改善，而不加筛选地全量更新会降低整体指标。",
+  "originalTitle": "Evaluating Inference-time Algorithms for Semantic Sound Scene Segmentation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.03602v1.pdf",
+  "readerTitle": "推理时改标签能不能救回声音场景分割：检测与提取流水线的更新实验",
+  "schemaVersion": 2
+}

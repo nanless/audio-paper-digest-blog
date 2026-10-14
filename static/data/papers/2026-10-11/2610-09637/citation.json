@@ -1,0 +1,92 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.09637v1",
+  "arxivId": "2610.09637",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.09637v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Neutune, Seoul, South Korea"
+      ],
+      "name": "Taejun Kim"
+    },
+    {
+      "affiliations": [
+        "Neutune, Seoul, South Korea"
+      ],
+      "name": "Wonil Kim"
+    },
+    {
+      "affiliations": [
+        "Neutune, Seoul, South Korea"
+      ],
+      "name": "Jongmin Jung"
+    },
+    {
+      "affiliations": [
+        "Neutune, Seoul, South Korea"
+      ],
+      "name": "Hyeongseok Wi"
+    },
+    {
+      "affiliations": [
+        "Neutune, Seoul, South Korea"
+      ],
+      "name": "Sangeun Kum"
+    },
+    {
+      "affiliations": [
+        "Neutune, Seoul, South Korea"
+      ],
+      "name": "Keunhyoung Luke Kim"
+    },
+    {
+      "affiliations": [
+        "Neutune, Seoul, South Korea"
+      ],
+      "name": "Taehyoung Kim"
+    },
+    {
+      "affiliations": [
+        "Neutune, Seoul, South Korea"
+      ],
+      "name": "Dongjoo Moon"
+    },
+    {
+      "affiliations": [
+        "Neutune, Seoul, South Korea"
+      ],
+      "name": "Seungsoon Park"
+    },
+    {
+      "affiliations": [
+        "Neutune, Seoul, South Korea"
+      ],
+      "name": "Taewan Kim"
+    },
+    {
+      "affiliations": [
+        "Neutune, Seoul, South Korea"
+      ],
+      "name": "Virginie Berger"
+    },
+    {
+      "affiliations": [
+        "KAIST, Daejeon, South Korea"
+      ],
+      "name": "Juhan Nam"
+    },
+    {
+      "affiliations": [
+        "Neutune, Seoul, South Korea"
+      ],
+      "name": "Jongpil Lee"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.09637v1",
+  "originalTitle": "Tracing Inputs, Verifying Outputs: Validating Attribution in Music Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.09637v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

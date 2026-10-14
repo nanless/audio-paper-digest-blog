@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.08683v1",
+  "arxivId": "2610.08683",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.08683v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lichen Zhu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yueqian Lin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yiheng Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hai \"Helen\" Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yiran Chen"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.08683v1",
+  "originalTitle": "Coupled but Late: Turn-Taking Between Full-Duplex Speech Models in Unscripted Dialogue",
+  "pdfUrl": "https://arxiv.org/pdf/2610.08683v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

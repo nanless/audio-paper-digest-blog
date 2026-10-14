@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.07506v1",
+  "arxivId": "2610.07506",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.07506v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Seunghyun Oh"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hirotaka Hiraki"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shuyue Stella Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yulia Tsvetkov"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shyamnath Gollakota"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.07506v1",
+  "originalTitle": "Jarvis: A Proactive Speech Agent for Multi-Party Conversations",
+  "pdfUrl": "https://arxiv.org/pdf/2610.07506v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

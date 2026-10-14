@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.02774v1",
+  "arxivId": "2610.02774",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.02774v1",
+  "authors": [
+    {
+      "affiliations": [
+        "School of Computer Science",
+        "The University of Sydney",
+        "Sydney, NSW, Australia"
+      ],
+      "name": "Xuanchen Wang"
+    },
+    {
+      "affiliations": [
+        "School of Computer Science",
+        "The University of Sydney",
+        "Sydney, NSW, Australia"
+      ],
+      "name": "Heng Wang"
+    },
+    {
+      "affiliations": [
+        "School of Computer Science",
+        "The University of Sydney",
+        "Sydney, NSW, Australia"
+      ],
+      "name": "Weidong Cai"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.02774v1",
+  "originalTitle": "LatticeSMC: Where to Spend Inference-Time Compute in Chunked Sequence Generators",
+  "pdfUrl": "https://arxiv.org/pdf/2610.02774v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

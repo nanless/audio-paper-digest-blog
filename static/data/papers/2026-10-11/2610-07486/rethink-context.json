@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.07486v1",
+  "abstract": "We report a small-data case study in adapting a pretrained latent audio diffusion model to the guqin, the seven-string Chinese zither, aiming at an \"AI radio\" that plays guqin-style music without end. From a library of historical recordings we curate 412 solo performances (42.5 h, 61 performers) and split them by composition. We fine-tune a rank-16 DoRA adapter on Stable Audio 3 Medium using its continuous latents, masking weighted towards continuation, captions that combine researched notes on each piece with mood tags and an automatically estimated pentatonic mode, and random-length crops, stopping when held-out loss stops improving. Seven blind listening studies by one expert listener guided every decision. The final adapter was rated highest for continuing unseen pieces (3.9/5, against 3.4 for the best earlier adapter) and 4.6/5 for generating from free-written scene descriptions. Negative results are equally informative: a from-scratch autoregressive model over the same latents produced no recognisable timbre, a signal-level friction-noise measure correlated with the listener's complaints in the wrong direction, and a pentatonic-fit measure tracked ratings overall but barely within a group of candidates. Chaining continuations for long playback exposed a silent tail on every generated clip and a loudness feedback loop, both with simple fixes. With one listener and at most ten clips per condition, no paired difference is statistically significant; we present an exploratory record of what helped, what did not, and why.",
+  "abstractSha256": "9645212a2f7fff53a0b929f82a7d9a189d15adf6b9055b549a1ea6e3d31dc913",
+  "arxivId": "2610.07486",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.07486v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "LoRA",
+    "primaryTask": "音乐生成",
+    "rankBucket": "后50%",
+    "score": 5.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-generation",
+          "label": "音乐生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.lora",
+          "label": "LoRA"
+        },
+        {
+          "facet": "method",
+          "id": "method.diffusion",
+          "label": "扩散模型"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.low-resource",
+          "label": "低资源"
+        },
+        {
+          "facet": "method",
+          "id": "method.subjective-evaluation",
+          "label": "主观评测"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "LoRA",
+      "primaryMethodId": "method.lora",
+      "primaryTask": "音乐生成",
+      "primaryTaskId": "task.music-generation",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Division of Speech, Music and Hearing (TMH)",
+        "KTH Royal Institute of Technology, Stockholm, Sweden"
+      ],
+      "name": "Huanchen Cai"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文用 42.5 小时历史古琴独奏适配 Stable Audio 3 Medium 的 DoRA 小参数，以一位专家的七轮盲听驱动决策，最终续弹和场景生成得分最高，但样本小且随机性大，只能作探索性记录。",
+  "originalTitle": "Adapting a Latent Audio Diffusion Model to Historical Guqin Recordings: A Listening-Driven Case Study",
+  "pdfUrl": "https://arxiv.org/pdf/2610.07486v1.pdf",
+  "readerTitle": "把预训练潜在扩散模型适配到古琴历史录音",
+  "schemaVersion": 2
+}

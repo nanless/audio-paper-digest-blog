@@ -1,0 +1,97 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.03589v2",
+  "abstract": "Post-training text-to-music generation requires reward signals that capture multiple aspects of musical quality beyond what any single automatic metric can measure. We study structured, rubric-based rewards from pretrained audio-language models (ALMs) as training signals for both autoregressive and diffusion-based music generators. An ALM scores each generated clip against the rubric; we rank candidates generated for the same text prompt by their scores and convert these rankings into preference pairs for DPO on both MusicGen-small and ACE-Step v1, and additionally use the rubric scores directly as scalar rewards for DiffusionNFT on ACE-Step v1. On MusicCaps, rubric-based optimization improves CLAP, SongEval, and Audiobox-Aesthetics simultaneously, with the strongest gains obtained by DiffusionNFT on ACE-Step. By contrast, on MusicGen-small, building preferences from any one of these automatic evaluators produces clear cross-metric trade-offs: the targeted evaluator improves while other independent evaluators deteriorate. We further study tempo, key, and instrumentation, where precise objective rewards are available. Directly optimizing these specialized rewards reliably improves the target attributes, whereas ALM rubrics provide only partial transfer for tempo and instrumentation and no measurable improvement for key. Together, these results suggest a practical division of labor: ALM rubrics are effective for broad perceptual qualities that are difficult to formalize, while specialized objective rewards remain preferable when reliable measurements are available.",
+  "abstractSha256": "5b7a913a2ce621f06dd8430fe07e940fdbbaee67e7a2d404c5d287f999b2f840",
+  "arxivId": "2610.03589",
+  "arxivVersion": 2,
+  "arxivVersionedId": "2610.03589v2",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "偏好优化",
+    "primaryTask": "音乐生成",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-generation",
+          "label": "音乐生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.preference-optimization",
+          "label": "偏好优化"
+        },
+        {
+          "facet": "method",
+          "id": "method.reinforcement",
+          "label": "强化学习"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.post-training",
+          "label": "后训练"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "偏好优化",
+      "primaryMethodId": "method.preference-optimization",
+      "primaryTask": "音乐生成",
+      "primaryTaskId": "task.music-generation",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ping Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Guang Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shao-Rong Su"
+    },
+    {
+      "affiliations": [
+        "Department of Electrical and Computer Engineering, University of Washington"
+      ],
+      "name": "Junkai Wu"
+    },
+    {
+      "affiliations": [
+        "Paul G. Allen School of Computer Science & Engineering, University of Washington"
+      ],
+      "name": "Pang Wei Koh"
+    },
+    {
+      "affiliations": [
+        "Paul G. Allen School of Computer Science & Engineering, University of Washington",
+        "Allen Institute for AIEqual contribution"
+      ],
+      "name": "Noah A. Smith"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "该文用预训练音频语言模型按显式评分细则打分来优化音乐生成，在 MusicCaps 上同时提升三个独立评价指标，而速度、调性、乐器等可精确测量的属性则仍需直接优化专用测量，代价是打分器与提问方式选择不当会失效。",
+  "originalTitle": "Rubric-Based Optimization for Text-to-Music Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.03589v2.pdf",
+  "readerTitle": "用评分细则训练文本生成音乐：多维度奖励与专用测量的分工",
+  "schemaVersion": 2
+}

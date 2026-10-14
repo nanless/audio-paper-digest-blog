@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.05366v2",
+  "abstract": "ÌròyìnSpeech is a 42-hour, 80-speaker Yorùbá read-speech corpus whose audio has been distributed by ELRA since 2024. This paper describes the release of its text component: 24,905 unique, hand-verified, tone-marked Yorùbá sentences (275,897 tokens; 15,687 types), curated in 2022 as recording prompts. Roughly 11,000 sentences were adapted from openly licensed news material; the remainder were written in-house to broaden coverage beyond the religious translation that dominates existing Yorùbá corpora. Every sentence was checked by hand for tone-mark accuracy, edited for read-aloud clarity and a neutral register, and localised so that non-Yorùbá personal and place names appear in Yorùbá form. Preparing the text for release surfaced systematic Unicode normalisation failures affecting more than 60% of lines (with precomposed and decomposed forms of the same letter co-occurring within single sentences) which we document and correct. The corpus supports diacritic restoration, grapheme-to-phoneme conversion, TTS front-end development and orthographic research, and serves as a validated prompt set for new recording.",
+  "abstractSha256": "6dc141e9e73acc0787e9a7a5ddce5571d2a2613302a10872171da271eff55486",
+  "arxivId": "2610.05366",
+  "arxivVersion": 2,
+  "arxivVersionedId": "2610.05366v2",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "数据集构建",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.dataset-curation",
+          "label": "数据集构建"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.low-resource",
+          "label": "低资源"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "数据集构建",
+      "primaryMethodId": "method.dataset-curation",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kola Tubosun"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Aanuoluwapo Aremu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tolulope Ogunremi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Iroro Orife"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "David Ifeoluwa Adelani"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "该文发布为录制 42 小时约鲁巴语语音而准备的 24905 句带声调符号文本，讲清来源改写与 Unicode 清洗过程，其复用价值只在标准约鲁巴语朗读新闻语域内成立。",
+  "originalTitle": "The ÌròyìnSpeech Text Corpus: 24,905 Curated Yorùbá Sentences for Speech and Language Technology",
+  "pdfUrl": "https://arxiv.org/pdf/2610.05366v2.pdf",
+  "readerTitle": "为朗读录制而修的约鲁巴语句子：ÌròyìnSpeech 文本部分是怎么来的",
+  "schemaVersion": 2
+}

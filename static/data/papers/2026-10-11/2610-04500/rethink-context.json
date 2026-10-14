@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.04500v1",
+  "abstract": "Adding expressive and environmental controls to a speech generator requires learning heterogeneous attributes without losing earlier capabilities. VoiceWeaver addresses this problem with structured label prefixes and staged emotion-tone-event training in a shared text-audio model. Replay-based distillation retains earlier predictions, while embedding decorrelation and attribute dropout regularize conditioning. Evaluation separates single-attribute correctness, joint emotion-event generation, and three-attribute correctness. Rounded to whole percentage points, emotion accuracy is 86% in Chinese and 83% in English. Chinese emotion-event joint accuracy is about 70%, versus 56% for mixed-task training and 48% for Ming-omni-tts; English joint accuracy is 66%. Three-attribute accuracy is 59% in Chinese and 55% in English on 500 samples each (57% pooled). Text error rates exceed those of the external TTS baselines. Audio samples are available at https://anonymous.4open.science/api/repo/VoiceWeaver1-4D88/file/index.html.",
+  "abstractSha256": "03affdd80d1c3553974242652881577d9bfaddba332fc7478983d30ab88b9ee9",
+  "arxivId": "2610.04500",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.04500v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "持续学习",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前50%",
+    "score": 5.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "task",
+          "id": "task.prosody-style-control",
+          "label": "韵律与风格控制"
+        },
+        {
+          "facet": "method",
+          "id": "method.continual",
+          "label": "持续学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        },
+        {
+          "facet": "method",
+          "id": "method.curriculum",
+          "label": "课程学习"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "持续学习",
+      "primaryMethodId": "method.continual",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiaosu Su"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yun Cao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yiping Ni"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiaowei Yi"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "VoiceWeaver 用结构化标签前缀把情感、语气和声音事件拼进同一文本音频序列，再按情感到语气再到事件的顺序分阶段学习并用回放蒸馏保持旧能力，在中英文封闭标签测试中情感事件联合正确率达到约 70% 和 66%，代价是文本错误率高于外部大体量语音合成基线。",
+  "originalTitle": "VoiceWeaver: Staged Learning of Structured Controls for Expressive Speech and Sound-Event Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.04500v1.pdf",
+  "readerTitle": "分阶段学会情感语气和环境音的语音生成",
+  "schemaVersion": 2
+}

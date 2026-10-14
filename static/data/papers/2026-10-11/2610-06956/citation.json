@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.06956v1",
+  "arxivId": "2610.06956",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.06956v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Zhejiang University, Hangzhou, China"
+      ],
+      "name": "Jianan Pan"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University, Hangzhou, China"
+      ],
+      "name": "Yiwen Gu"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University, Hangzhou, China"
+      ],
+      "name": "Xinze Li"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University, Hangzhou, China"
+      ],
+      "name": "Rui Wang"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University, Hangzhou, China"
+      ],
+      "name": "Kejie Huang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.06956v1",
+  "originalTitle": "EMODE: Dynamic Para-Semantic Experts for Emotion-Aware Speech Language Modeling",
+  "pdfUrl": "https://arxiv.org/pdf/2610.06956v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

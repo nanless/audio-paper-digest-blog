@@ -1,0 +1,104 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.07005v1",
+  "abstract": "We audit frequency and decoder-depth claims for AdvWave-P, an additive audio jailbreak, on Qwen2-Audio. The protocol masks frequency components of the perturbation in the short-time Fourier transform (STFT) domain and measures attack success and audio-span representations. On 520 AdvBench prompts, the primary judge labels 76.7% of adversarial inputs as jailbreaks. A condition-blind, single-annotator validation yields a Rogan-Gladen sensitivity estimate of 0.87 for this condition (about 0.83-0.95 with validation-rate uncertainty); this correction is not applied to masked conditions. The apparent frequency ranking depends on the partition: energy share alone predicts the standard eight-band ranking (Spearman's rho = 0.95), and equal-Hz and equal-energy partitions show that masking any tested band can sharply reduce attack success. At a finer 16-band equal-energy resolution, however, masking the narrow 7520-7960 Hz band leaves ASR at 0.10, which remains unresolved without a matched control. Matched-energy scattered-removal tests show that contiguous removal is more damaging in lower bands, while both forms approach the floor in upper bands. Global rescaling leaves ASR near baseline but tests amplitude sensitivity rather than frequency location. In a re-optimization pilot (n = 20), tested single- and two-band supports reach ASRs of 0.00, 0.25, and 0.40, while random supports covering about half the STFT bins reach a mean of 0.86. In a prompt- and energy-adjusted model, audio-span divergence is associated with band necessity, with the coefficient rising from +0.63 at the projector output to +0.93 at layer 30 (contrast +0.293, 95% CI [0.11, 0.51]). This association is not a causal localization, and single-layer patching does not establish a causal layer. The results support partition-aware auditing of frequency claims, leaving the fine-resolution top-band result and broader generality open.",
+  "abstractSha256": "f79a63119c2080835fc8452f0378653a257538065dddabe5abba70de5eb3faf8",
+  "arxivId": "2610.07005",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.07005v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "音频问答",
+    "rankBucket": "前50%",
+    "score": 5.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-question-answering",
+          "label": "音频问答"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.adversarial-robustness",
+          "label": "对抗鲁棒性"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.interpretability",
+          "label": "可解释性"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "音频问答",
+      "primaryTaskId": "task.audio-question-answering",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "eBRAIN Lab, Division of Engineering, New York University Abu Dhabi, UAE",
+        "Tandon School of Engineering, New York University, NY, USA"
+      ],
+      "name": "Boyuan Chen"
+    },
+    {
+      "affiliations": [
+        "eBRAIN Lab, Division of Engineering, New York University Abu Dhabi, UAE"
+      ],
+      "name": "Minseok Kim"
+    },
+    {
+      "affiliations": [
+        "eBRAIN Lab, Division of Engineering, New York University Abu Dhabi, UAE"
+      ],
+      "name": "Sohaila Abdulsattar"
+    },
+    {
+      "affiliations": [
+        "eBRAIN Lab, Division of Engineering, New York University Abu Dhabi, UAE",
+        "Tandon School of Engineering, New York University, NY, USA"
+      ],
+      "name": "Minghao Shao"
+    },
+    {
+      "affiliations": [
+        "Tandon School of Engineering, New York University, NY, USA"
+      ],
+      "name": "Siddharth Garg"
+    },
+    {
+      "affiliations": [
+        "Tandon School of Engineering, New York University, NY, USA"
+      ],
+      "name": "Ramesh Karri"
+    },
+    {
+      "affiliations": [
+        "eBRAIN Lab, Division of Engineering, New York University Abu Dhabi, UAE"
+      ],
+      "name": "Muhammad Shafique"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文用短时傅里叶域遮蔽加对照审计 AdvWave-P 在 Qwen2-Audio 上的表现，发现八频段排序几乎被扰动能量解释，深层音频表示差异与遮蔽必要性正相关但不能定位因果层。",
+  "originalTitle": "Where Does the Audio Jailbreak Live? A Controlled Frequency-Depth Audit of AdvWave-P on Qwen2-Audio",
+  "pdfUrl": "https://arxiv.org/pdf/2610.07005v1.pdf",
+  "readerTitle": "音频越狱住在哪一层频率？AdvWave-P 在 Qwen2-Audio 上的受控频率-深度审计",
+  "schemaVersion": 2
+}

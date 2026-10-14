@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.05549v1",
+  "abstract": "We formulate joint estimation of common-slope decay rates and amplitudes from room impulse responses (RIRs) as parameterized nonnegative matrix factorization with the Itakura--Saito divergence as the loss function (IS-NMF). Estimation at each short-time Fourier transform frequency bin produces detailed reverberation time (RT) curves directly from RIR powers with no backward integration needed. Standard space-alternating generalized expectation-maximization (SAGE) algorithm yields closed-form amplitude updates and a convex subproblem for each decay rate update. To accelerate estimation, we introduce contribution-weighted SAGE, which emphasizes observations where each component contributes strongly to the modeled power. Experiments with synthetic data show accurate recovery of well-separated decays and faster loss reduction than standard SAGE. Application to measured coupled-room RIRs yields frequency-dependent RT curves and reveals complementary space-time contributions of the shared decay components.",
+  "abstractSha256": "e34bcbd3d2a9aa6e9f70f82a799ffc91d85397d93a49776ed94ad0f137ecd90f",
+  "arxivId": "2610.05549",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.05549v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "房间脉冲响应估计",
+    "rankBucket": "前50%",
+    "score": 5.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.rir-estimation",
+          "label": "房间脉冲响应估计"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multichannel",
+          "label": "多通道"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.spatial-audio",
+          "label": "空间音频"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "房间脉冲响应估计",
+      "primaryTaskId": "task.rir-estimation",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jeremy B. Bai"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Filip Elvander"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sebastian J. Schlecht"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文把同一空间内多位置房间脉冲响应的短时傅里叶功率写成衰减率参数化的非负矩阵分解，用 Itakura-Saito 散度做损失并提出贡献加权 SAGE 来加速衰减率更新，在真值分离较好的合成双衰减上恢复准确、在耦合房间实测中得到平滑的频率相关混响时间曲线，代价是分量数需预先给定且相距很近的衰减仍难分辨。",
+  "originalTitle": "Joint Estimation of Common-Slope Decay Rates and Spatial Amplitudes Using Parameterized Nonnegative Matrix Factorization",
+  "pdfUrl": "https://arxiv.org/pdf/2610.05549v1.pdf",
+  "readerTitle": "多条房间脉冲响应如何联合估计共享衰减与空间幅度",
+  "schemaVersion": 2
+}

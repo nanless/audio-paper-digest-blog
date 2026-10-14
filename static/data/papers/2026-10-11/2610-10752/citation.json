@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.10752v1",
+  "arxivId": "2610.10752",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.10752v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Muhammed Salih Kayhan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Qiben Yan"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.10752v1",
+  "originalTitle": "Detection-Guided Adaptive Purification with Diffusion Models for Robust Audio Deepfake Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2610.10752v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

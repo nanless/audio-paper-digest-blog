@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.03058v1",
+  "abstract": "Knowledge-driven neural vocoders struggle to learn reliable fundamental frequency end-to-end, because spectral objectives provide weak supervision of periodic structure and lack phase information. We address this with a source-filter model whose alias-free additive source makes the instantaneous phase of the glottal cycle explicit; differentiating it yields the instantaneous frequency, and thus $F_0$, without an external tracker. Waveform error supervises only the deterministic harmonic path, while a spectral loss covers the full signal. On M4Singer and LM-SSD, the reconstruction is phase-aligned, reaching a signal-to-reconstruction-error ratio of 8.1 dB, while neural baselines remain negative. However, GOLF, given an external $F_0$, still reaches lower spectral distortion. On LM-SSD, the recovered $F_0$ attains the highest overall accuracy of any method tested, including supervised neural pitch trackers applied off the shelf, and the glottal closure instants come within 0.53 points of REAPER's identification rate, without any $F_0$ label.",
+  "abstractSha256": "6b2d542916101f122cd190a629e50854f657ed4963679a7e5a13590d331ff656",
+  "arxivId": "2610.03058",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.03058v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "无监督学习",
+    "primaryTask": "音高与旋律提取",
+    "rankBucket": "前50%",
+    "score": 7.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.pitch-melody",
+          "label": "音高与旋律提取"
+        },
+        {
+          "facet": "method",
+          "id": "method.unsupervised",
+          "label": "无监督学习"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-synthesis",
+          "label": "语音合成"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "无监督学习",
+      "primaryMethodId": "method.unsupervised",
+      "primaryTask": "音高与旋律提取",
+      "primaryTaskId": "task.pitch-melody",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chin-Yun Yu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "György Fazekas"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对幅度谱损失丢掉相位、难以端到端学准基频的问题，GOLF-inv 用加性声门源加状态空间格型声道滤波器做可微合成，以谐波支路波形误差加全信号谱损失做无监督训练，在歌声上实现相位对齐重建并直接读出瞬时频率与声门闭合时刻，但频谱失真仍不及使用外部基频的 GOLF。",
+  "originalTitle": "Unsupervised Instantaneous Phase and Frequency Tracking by Inverse Voice Synthesis",
+  "pdfUrl": "https://arxiv.org/pdf/2610.03058v1.pdf",
+  "readerTitle": "不用基频标注学会跟随声门相位：逆向语音合成如何同时做重建与分析",
+  "schemaVersion": 2
+}

@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.05215v1",
+  "abstract": "Speech watermarking offers proactive traceability for synthetic speech, yet most existing models operate only after text-to-speech (TTS) synthesis by adding a watermark perturbation to the generated waveform. This post-hoc design leaves watermarking as an external step that can be omitted or bypassed and restricts the watermark to a shallow waveform representation. We propose NeuMark-Native, a TTS-native watermarking framework for neural codec-based synthesis. It embeds payload information into every generated codec-latent layer before waveform decoding, improving watermark persistence under downstream digital signal processing (DSP) and neural codec resynthesis. NeuMark-Native keeps the pretrained TTS model and the neural codec frozen, while optimizing only the watermark modules on generated codec tokens. Experiments on two corpora under 11 DSP attacks and 9 neural-codec attacks demonstrate robust watermark detection while preserving naturalness, intelligibility, and speech quality close to synthetic speech.",
+  "abstractSha256": "13e640f02470a9202c42e19e0aa3788fbbcf24b025472c9c127628c550f730ed",
+  "arxivId": "2610.05215",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.05215v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "神经编解码与离散单元",
+    "primaryTask": "音频水印",
+    "rankBucket": "前50%",
+    "score": 6.9,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.watermarking",
+          "label": "音频水印"
+        },
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.neural-codec",
+          "label": "神经编解码与离散单元"
+        },
+        {
+          "facet": "method",
+          "id": "method.adversarial-training",
+          "label": "对抗训练"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "神经编解码与离散单元",
+      "primaryMethodId": "method.neural-codec",
+      "primaryTask": "音频水印",
+      "primaryTaskId": "task.watermarking",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Annan Wu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wen-Chin Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tomoki Toda"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对合成语音事后加水印易被绕过和易被神经编解码重合成抹除的问题，NeuMark-Native 把 16 比特信息嵌入冻结的 VALL-E 与 SpeechTokenizer 每一层 RVQ 隐表示后再解码，在两套语料 11 种信号处理与 9 种编解码攻击下取得更强的整体检出，尤其在编解码攻击下优势明显，代价是只训练水印模块并需离线预合成配对数据。",
+  "originalTitle": "NeuMark-Native: Robust Text-to-Speech-Native Watermarking Through Full Utilization of Neural Audio Codec Latent Space",
+  "pdfUrl": "https://arxiv.org/pdf/2610.05215v1.pdf",
+  "readerTitle": "把水印写进语音合成中间过程：NeuMark-Native 解读",
+  "schemaVersion": 2
+}

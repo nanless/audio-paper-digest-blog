@@ -1,0 +1,61 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.06545v1",
+  "abstract": "We present Empirical Variational Autoencoder, a general generative framework for continuous-valued (i.e., non-vector-quantized) sequences. EVA is based on the evidence lower bound of the Variational Autoencoder (VAE) but learns autoregressive latent priors empirically from training data, which can be implemented only by an additional single linear layer on top of VAEs. By replacing the conventional standard-Gaussian constraint with the self-predicted priors, EVA significantly alleviates the latent distribution gap between prior and posterior which is typically observed in conventional VAEs, and leads to high-fidelity ancestral sampling for sequential data generation. Extensive experiments on image and sound synthesis demonstrate that EVA achieves competitive generation quality with autoregressive diffusion baselines despite its much faster inference time.",
+  "abstractSha256": "bcd9a29c39fa4b9389d5e3548107d149f992c270c7cb01a8bcbbca408cc55ba7",
+  "arxivId": "2610.06545",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.06545v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "变分自编码器",
+    "primaryTask": "音频生成",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-generation",
+          "label": "音频生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.vae",
+          "label": "变分自编码器"
+        },
+        {
+          "facet": "method",
+          "id": "method.autoregressive",
+          "label": "自回归模型"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "变分自编码器",
+      "primaryMethodId": "method.vae",
+      "primaryTask": "音频生成",
+      "primaryTaskId": "task.audio-generation",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "The University of Tokyo"
+      ],
+      "name": "Kaede Shiohara"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "EVA 针对连续序列的下一时刻多峰预测问题，用编码器、因果解码器和自回归潜变量预测器三部分学习与后验对齐的先验，在 ImageNet 上以更少推理参数和更快祖先采样达到与自回归扩散基线可比的生成质量。",
+  "originalTitle": "Empirical Variational Autoencoder",
+  "pdfUrl": "https://arxiv.org/pdf/2610.06545v1.pdf",
+  "readerTitle": "EVA：用自预测自回归先验做连续序列生成的变分自编码器",
+  "schemaVersion": 2
+}

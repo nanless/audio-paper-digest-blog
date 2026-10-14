@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.08850v1",
+  "abstract": "Musical-instrument recognition is a fundamental music information retrieval (MIR) task supporting transcription, source separation, and audio understanding. Despite significant algorithmic progress, there is still room for improvement in recognizing acoustically similar instruments, particularly in polyphonic mixtures. We examine the contribution of ultrasonic components, i.e., frequencies above the audible 0-20 kHz range. Although most of this content cannot be represented at conventional 44.1/48-kSPS sampling rates under the Nyquist criterion, it is available in high-quality 96-kSPS recordings. Using a 96-kSPS multitrack corpus covering 15 classes across performers, instruments, studios, and sessions, we compare full-band, low-pass, and ultrasonic-only inputs using classical machine-learning and deep-learning classifiers. Our results show that source-dependent ultrasonic extensions and broadband transients contain instrument-specific information that significantly improves isolated and polyphonic recognition and motivates wider-bandwidth studies of other MIR tasks.",
+  "abstractSha256": "19901b6f65f13f92ced23e7d84158ca310e41002758c7d204de36a7fdf98f1e0",
+  "arxivId": "2610.08850",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.08850v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "数据集构建",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 6.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.dataset-curation",
+          "label": "数据集构建"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.music-information",
+          "label": "音乐信息检索"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "数据集构建",
+      "primaryMethodId": "method.dataset-curation",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Izhak Kapash"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Uri Rom"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ram Zamir"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文用同一批 96 千次每秒录音比较全频带、低通和只留超声三种输入，发现 22.05 千赫兹以上的超声带能把孤立乐器识别和复音检测提高约 4 到 6 个百分点，但代价是需要 2.18 倍存储和宽带采集链路，且结论只在录音室隔离分轨和留出完整录音的划分下成立。",
+  "originalTitle": "Unheard but Recognizable: Ultrasonic Signatures for Musical Instrument Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2610.08850v1.pdf",
+  "readerTitle": "听不见的超声为什么能帮助识别乐器",
+  "schemaVersion": 2
+}

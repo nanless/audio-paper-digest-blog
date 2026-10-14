@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.06478v1",
+  "arxivId": "2610.06478",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.06478v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Annie Chu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hugo Flores García"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Johannes Imort"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Oriol Nieto"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bryan Pardo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jordan Rudess"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Prem Seetharaman"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Justin Salamon"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.06478v1",
+  "originalTitle": "Smorph: Playable Sound Morphing with Diffusion Models",
+  "pdfUrl": "https://arxiv.org/pdf/2610.06478v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

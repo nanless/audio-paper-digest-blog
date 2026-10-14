@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.02882v1",
+  "arxivId": "2610.02882",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.02882v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Department of EECS, University of Michigan"
+      ],
+      "name": "Daewon Chae"
+    },
+    {
+      "affiliations": [
+        "Department of EECS, University of Michigan"
+      ],
+      "name": "Hyunwon Chung"
+    },
+    {
+      "affiliations": [
+        "Qualcomm AI Research"
+      ],
+      "name": "Changwoo Lee"
+    },
+    {
+      "affiliations": [
+        "Department of EECS, University of Michigan"
+      ],
+      "name": "Hun-Seok Kim"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.02882v1",
+  "originalTitle": "DyRA: Dynamic Residual Approximation for Efficient Matrix Multiplication in DNNs",
+  "pdfUrl": "https://arxiv.org/pdf/2610.02882v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

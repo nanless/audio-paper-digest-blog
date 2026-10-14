@@ -1,0 +1,63 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.12214v1",
+  "abstract": "Recent full-duplex spoken dialog models enable simultaneous listening and speaking, but fine-grained models still advance their backbone autoregressively at every interaction frame. We introduce DiffuPlex, a rolling masked diffusion framework that reduces this sequential computation by predicting multiple future user and assistant frames in a single backbone wake. DiffuPlex consumes only a confident prefix of each predicted future while interaction continues at the original frame rate. As user speech arrives, it checks the corresponding user predictions and, when the interaction diverges, preserves already played assistant content while revising only the unplayed future. We consider two inference policies over the same predictor: DiffuPlex-LISTEN consumes multiple future frames when they predict assistant silence, whereas DiffuPlex-SPEAK can also consume predicted assistant speech. Across full-duplex interaction and spoken-language evaluations, DiffuPlex substantially reduces sequential backbone computation while largely preserving interaction behavior and general capability. DiffuPlex-LISTEN and DiffuPlex-SPEAK achieve $1.46\\times$ and $1.59\\times$ deployment-path wall-clock speedups and $1.61\\times$ and $1.80\\times$ Core LM speedups, with all measured backbone invocations completing within the 80ms interaction interval. Human evaluation shows that LISTEN preserves speech naturalness and conversational quality, while SPEAK retains conversational quality with some degradation in speech naturalness.",
+  "abstractSha256": "3cd3df668a09f35416d09620effe2a4223b01f70397515791562c52d9b79295b",
+  "arxivId": "2610.12214",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.12214v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "扩散模型",
+    "primaryTask": "全双工语音交互",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.full-duplex",
+          "label": "全双工语音交互"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-dialogue",
+          "label": "语音对话系统"
+        },
+        {
+          "facet": "method",
+          "id": "method.diffusion",
+          "label": "扩散模型"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.real-time",
+          "label": "实时处理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "扩散模型",
+      "primaryMethodId": "method.diffusion",
+      "primaryTask": "全双工语音交互",
+      "primaryTaskId": "task.full-duplex",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Artificial Intelligence",
+        "University of Seoul",
+        "Seoul, Republic of Korea"
+      ],
+      "name": "Heeseung Kim"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对每 80 ms 都要唤醒主干的全双工对话开销，DiffuPlex 一次预测 16 帧未来并只消费可信前缀，在保持打断与轮转行为的条件下把主干调用降到约一半，代价是单次唤醒更贵且激进消费语音未来会损失自然度。",
+  "originalTitle": "DiffuPlex: Accelerating Full-Duplex Spoken Dialog Models via Rolling Masked Diffusion",
+  "pdfUrl": "https://arxiv.org/pdf/2610.12214v1.pdf",
+  "readerTitle": "DiffuPlex：用滚动掩码预测减少全双工对话的逐帧计算",
+  "schemaVersion": 2
+}

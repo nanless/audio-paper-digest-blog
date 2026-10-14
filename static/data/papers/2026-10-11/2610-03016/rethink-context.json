@@ -1,0 +1,96 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.03016v1",
+  "abstract": "In this paper, we propose a Role-aware Stimulus-guided (RASG) framework for interlocutor emotion recognition, which predicts listener emotions from listener-only videos and speaker-only audios. RASG consists of Role-aware Visual Transfer (RVT) and Stimulus-guided Boundary Reasoning (SBR) modules, which address supervision mismatch due to the lack of labeled listener data and ambiguity among visually similar listener reactions whose interpretation depends on speaker context, respectively. More specifically, RVT selects speaker samples whose facial expressions support their emotion labels. It then filters listener tracks and uses reliable pseudo-labels to train a listener-centric visual expert. SBR uses a two-class language reasoner only when the visual model is uncertain. It treats speaker audio and text as context rather than direct emotion evidence to distinguish similar listener reactions. Experiments conducted on MER-Cross dataset shows that RASG achieves 76.25\\% on MER-Cross and improves the performance of the baseline over 17\\%. Our team ranks second in Track 1 (MER-Cross) of the MER Grand Challenge at ACM MM 2026.",
+  "abstractSha256": "2dac3a725a12cad7dc4f41391de617796d6582314f06f59c3dbd4969a468f5a2",
+  "arxivId": "2610.03016",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.03016v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "领域适应",
+    "primaryTask": "语音情感识别",
+    "rankBucket": "前50%",
+    "score": 5.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.emotion-recognition",
+          "label": "语音情感识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.domain-adaptation",
+          "label": "领域适应"
+        },
+        {
+          "facet": "method",
+          "id": "method.semi-supervised",
+          "label": "半监督学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.llm",
+          "label": "大语言模型"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "领域适应",
+      "primaryMethodId": "method.domain-adaptation",
+      "primaryTask": "语音情感识别",
+      "primaryTaskId": "task.emotion-recognition",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Guangdong University of Technology, Guangzhou, China"
+      ],
+      "name": "Wei Wang"
+    },
+    {
+      "affiliations": [
+        "Guangdong University of Technology, Guangzhou, China"
+      ],
+      "name": "Zhaowu Li"
+    },
+    {
+      "affiliations": [
+        "Guangdong University of Technology, Guangzhou, China"
+      ],
+      "name": "Jianjie Luo"
+    },
+    {
+      "affiliations": [
+        "Hong Kong Metropolitan University, Hong Kong, China"
+      ],
+      "name": "Fu Lee Wang"
+    },
+    {
+      "affiliations": [
+        "Hong Kong Metropolitan University, Hong Kong, China"
+      ],
+      "name": "Lap-Kei Lee"
+    },
+    {
+      "affiliations": [
+        "Guangdong University of Technology, Guangzhou, China"
+      ],
+      "name": "Zhenguo Yang"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "该文要从听者视频加说话人音频文本推断听者六类情绪，用视觉对齐的说话人筛选加无标注听者自举训练视觉专家，再只对低置信样本用说话内容作诱因做二选一推理，在 MER-Cross 上报告 76.25% 加权平均 F1，代价是多阶段筛选与受限的大语言模型调用。",
+  "originalTitle": "From Expression to Reaction: Role-aware Visual Transfer and Stimulus-guided Reasoning for Interlocutor Emotion Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2610.03016v1.pdf",
+  "readerTitle": "只看听者脸、只听说话声：如何推断听者的情绪反应",
+  "schemaVersion": 2
+}

@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.08182v1",
+  "abstract": "Recent text-guided audio FX research has focused on translating natural-language descriptions into parameters or chain configurations within existing FX systems. However, comparatively little attention has been paid to how the internal control space of an individual FX processor can itself be constructed. To address this gap, we propose CTAG-FX, which functionally reinterprets the roles of 78 parameters in a text-conditioned synthesizer configuration as controls of a tone-shaping FX processor. Each synthesizer configuration defines a fixed tone-shaping processor that can be repeatedly applied to new audio inputs rather than producing only a one-off rendered output. The text-conditioned synthesizer configurations are generated using A&R-CTAG, a retrieval-enhanced extension of CTAG. We evaluate CTAG-FX through signal-level analysis, together with a scrambled-mapping ablation in which parameter-to-control assignments are randomly permuted to assess the contribution of the proposed role assignment. Role-based mapping produces prompt-distinct spectral and nonlinear behavior, whereas scrambling reduces this prompt-specific differentiation and yields a more prompt-insensitive nonlinear profile. Overall, these results suggest that synthesizer parameter spaces can serve not only as sound-generation spaces but also as design resources for constructing new audio-FX control spaces. Audio samples are available at https://taylor3527eg-hub.github.io/ctag-fx-platform-demo/.",
+  "abstractSha256": "259177d6065d1c5643782a94a6a229925170565cfc44a9eda6d279a9962c96e7",
+  "arxivId": "2610.08182",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.08182v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "音频生成",
+    "rankBucket": "前50%",
+    "score": 5.9,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-generation",
+          "label": "音频生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "method",
+          "id": "method.retrieval-augmented",
+          "label": "检索增强"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "音频生成",
+      "primaryTaskId": "task.audio-generation",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Geonung Jo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jongeun Choi"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文把文本条件合成器得到的 78 维配置经由基于角色的映射固定为可复用的音色塑形效果器，用四种吉他音色提示的频谱与非线性测量加打乱映射消融证明结构化分工带来提示可区分性，并用检索增强的合成器生成器提升表示的文本相似度，代价是映射为启发式且评估只限单段吉他演奏与信号级指标。",
+  "originalTitle": "CTAG-FX: Reinterpreting Synthesizer Parameter Spaces for Expressive Tone-Shaping Audio FX Design",
+  "pdfUrl": "https://arxiv.org/pdf/2610.08182v1.pdf",
+  "readerTitle": "把合成器参数空间 reinterpret 为音色塑形效果器控制空间",
+  "schemaVersion": 2
+}

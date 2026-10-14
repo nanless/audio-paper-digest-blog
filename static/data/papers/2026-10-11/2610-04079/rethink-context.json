@@ -1,0 +1,100 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.04079v1",
+  "abstract": "Human-agent teams are collaborative systems where humans and agents work interdependently to achieve shared goals. The success of such teams is associated with the human's perception of the agent as a legitimate teammate. This perception is thought to depend not only on the agent's capabilities and reliability but also on social factors. We explore whether simple changes in an agent's communicative behavior can influence the human's perception of the agent's teammate-likeness. To this end, we developed a protocol based on a collaborative game requiring spoken interaction, in which a human subject and a virtual agent collaborate to identify a target object and place it on a board. Each subject interacted with two agents which provided the same task-relevant information but differed in behavior. While one was a neutral tool-like agent, the other was a team-building agent that used simple social strategies such as empathy, politeness, and positivity. Our analysis shows that the team-building agent was perceived as significantly more teammate-like, even in terms of its ability, despite both agents having identical capabilities for game-solving. Further, subjects with a higher propensity to trust automated systems and lower neuroticism tended to have a more favorable perception of the agent. Finally, we found that subjects tended to change their prosodic patterns when talking to the team-building agent, as a classifier based on prosodic features was able to predict the type of agent with better-than-random performance. A practically relevant conclusion is that minimal changes in spoken communication behavior of the agent, easily implemented in a variety of scenarios, can have a significant positive impact on the human's perception of its teammate-likeness.",
+  "abstractSha256": "25b5261b3669c60e46196394d13fdf77ee69e6c31c709aa2e4701c8f9e85d568",
+  "arxivId": "2610.04079",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.04079v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "用户研究",
+    "primaryTask": "语音交互",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-interaction",
+          "label": "语音交互"
+        },
+        {
+          "facet": "method",
+          "id": "method.user-study",
+          "label": "用户研究"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "用户研究",
+      "primaryMethodId": "method.user-study",
+      "primaryTask": "语音交互",
+      "primaryTaskId": "task.speech-interaction",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lara Gauder"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Martin Bernardo Meza"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Javier Krick"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Alejandro Masin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Luciana Benotti"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Marcos Luis Pietto"
+    },
+    {
+      "affiliations": [
+        "organization=Instituto de Investigación en Ciencias de la Computación, UBA-CONICET, addressline=Pabellón Cero+Infinito, Ciudad Universitaria, city=Buenos Aires, postcode=C1428EGA, country=Argentina",
+        "organization=Departamento de Computación, Facultad de Ciencias Exactas y Naturales, Universidad de Buenos Aires, addressline=Pabellón Cero+Infinito, Ciudad Universitaria, city=Buenos Aires, postcode=C1428EGA, country=Argentina",
+        "organization=Universidad Nacional de Córdoba, addressline=Pabellón Argentina, Av. Haya de la Torre s/n, Ciudad Universitaria, city=Córdoba, postcode=X5000HUA, country=Argentina",
+        "organization=Instituto de Educación, Universidad Nacional de Hurlingham, UNAHUR-CONICET, addressline=Tte. Origone 101, Villa Tesei, city=Hurlingham, postcode=B1688, state=Buenos Aires, country=Argentina"
+      ],
+      "name": "Luciana Ferrer"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "该研究用口语找物放物游戏比较中性工具型与团队建设型智能体，发现后者在队友感知上显著更高但游戏成绩无差异，且人的信任倾向和神经质影响总体评分，韵律特征还能弱但显著地分辨对话对象。",
+  "originalTitle": "A study on human-agent teaming through spoken interaction: the impact of human individual traits and agent characteristics",
+  "pdfUrl": "https://arxiv.org/pdf/2610.04079v1.pdf",
+  "readerTitle": "说话方式不变任务信息也能更像队友：口语人机组队实验解读",
+  "schemaVersion": 2
+}

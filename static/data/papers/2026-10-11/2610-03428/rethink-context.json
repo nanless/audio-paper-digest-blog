@@ -1,0 +1,72 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.03428v1",
+  "abstract": "Music information retrieval often relates signal-derived, algorithmic, and symbolic information across different coordinate systems. Existing visualizations typically leave notation separate from physical time, while composites that combine them are assembled by hand. We present LayerIt, an open-source Python library for composing independent representations with notation on a shared performance-time axis. Given a score warped into performance time and a note-level alignment, LayerIt emits a single SVG that preserves the score's MEI structure and keeps added components identifiable and restylable. We demonstrate this through a challenging beat-tracking analysis, in which tracker output, signal representations, and notation can be inspected together to locate metrical disagreement and other errors against both notated structure and performed time.",
+  "abstractSha256": "5480a87214037ff67f22472a0b164349f21785b559d90291b8267b0181c5bbc5",
+  "arxivId": "2610.03428",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.03428v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "信号处理",
+    "primaryTask": "节拍跟踪",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.beat-tracking",
+          "label": "节拍跟踪"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.open-source-tool",
+          "label": "开源工具"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.music-information",
+          "label": "音乐信息检索"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "节拍跟踪",
+      "primaryTaskId": "task.beat-tracking",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Fernando Azeredo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "António Sá Pinto"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "LayerIt 要解决的是乐谱、录音与算法输出时间坐标不一致且手工拼图不可复现的问题，它用统一演奏时间比例加分层拼图的方法，在德彪西《月光》前六小节的拍点跟踪实例上展示了定位节拍误读的能力，代价是依赖外部对齐与乐谱质量且频谱场只能内嵌位图。",
+  "originalTitle": "LayerIt: Towards a Framework for Time-Aligned, Composable Music Visualizations",
+  "pdfUrl": "https://arxiv.org/pdf/2610.03428v1.pdf",
+  "readerTitle": "把乐谱、波形与算法输出放在同一演奏时间轴上：LayerIt 解读",
+  "schemaVersion": 2
+}

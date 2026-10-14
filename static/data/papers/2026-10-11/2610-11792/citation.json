@@ -1,0 +1,63 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.11792v1",
+  "arxivId": "2610.11792",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.11792v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Fudan University, Shanghai, China"
+      ],
+      "name": "Junyu Deng"
+    },
+    {
+      "affiliations": [
+        "Fudan University, Shanghai, China"
+      ],
+      "name": "Jiale Cao"
+    },
+    {
+      "affiliations": [
+        "Fudan University, Shanghai, China",
+        "Shanghai Film Academy, Shanghai University, Shanghai, China"
+      ],
+      "name": "Mengtian Li"
+    },
+    {
+      "affiliations": [
+        "Shanghai Theatre Academy, Shanghai, China"
+      ],
+      "name": "Zhongxia Ji"
+    },
+    {
+      "affiliations": [
+        "Shanghai Theatre Academy, Shanghai, China"
+      ],
+      "name": "Ruhua Chen"
+    },
+    {
+      "affiliations": [
+        "Nanjing University of the Arts, Nanjing, China"
+      ],
+      "name": "Yiyi He"
+    },
+    {
+      "affiliations": [
+        "Fudan University, Shanghai, China"
+      ],
+      "name": "Guangnan Ye"
+    },
+    {
+      "affiliations": [
+        "Shanghai Theatre Academy, Shanghai, China"
+      ],
+      "name": "Zuo Hu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.11792v1",
+  "originalTitle": "AuraLuxMuse: Adaptive Fusion Modeling for Aesthetic Stage Lighting Design with Music and Expert Guidance",
+  "pdfUrl": "https://arxiv.org/pdf/2610.11792v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

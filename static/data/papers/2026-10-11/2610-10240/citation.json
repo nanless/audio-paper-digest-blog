@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.10240v1",
+  "arxivId": "2610.10240",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.10240v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Signal Processing Research Centre Tampere University Tampere, Finland"
+      ],
+      "name": "Sofoklis Kakouros"
+    },
+    {
+      "affiliations": [
+        "Signal Processing Research Centre Tampere University Tampere, Finland"
+      ],
+      "name": "Daniil Kocharov"
+    },
+    {
+      "affiliations": [
+        "Signal Processing Research Centre Tampere University Tampere, Finland"
+      ],
+      "name": "Okko Räsänen"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.10240v1",
+  "originalTitle": "Benchmarking Adult Addressee Classification Across Child- and Adult-Directed Speech Datasets",
+  "pdfUrl": "https://arxiv.org/pdf/2610.10240v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

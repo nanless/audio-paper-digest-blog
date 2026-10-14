@@ -1,0 +1,45 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.09737v1",
+  "arxivId": "2610.09737",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.09737v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yucheng Gong"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Rui Zhou"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Binbin Zeng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Qiang Ren"
+    },
+    {
+      "affiliations": [
+        "Department of Software Engineering, School of Software, Chongqing Finance and Economics College",
+        "Chongqing Key Laboratory of Data Mining and Integrated Application for Ecological Environment"
+      ],
+      "name": "Hongjin Hui"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.09737v1",
+  "originalTitle": "A Strength-Monotonic Law for Domain Alignment in Frozen-Embedding Bioacoustic Classification",
+  "pdfUrl": "https://arxiv.org/pdf/2610.09737v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

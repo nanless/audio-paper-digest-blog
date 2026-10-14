@@ -1,0 +1,54 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.06672v1",
+  "arxivId": "2610.06672",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.06672v1",
+  "authors": [
+    {
+      "affiliations": [
+        "University of Science and Technology of China",
+        "Jilin University"
+      ],
+      "name": "Yucheng Liu"
+    },
+    {
+      "affiliations": [
+        "Hangzhou Dianzi University"
+      ],
+      "name": "Yufei Yin"
+    },
+    {
+      "affiliations": [
+        "Institute of Artificial Intelligence, Hefei Comprehensive National Science Center"
+      ],
+      "name": "Mingxiao Feng"
+    },
+    {
+      "affiliations": [
+        "University of Science and Technology of China",
+        "Institute of Artificial Intelligence, Hefei Comprehensive National Science Center"
+      ],
+      "name": "Jiajun Deng"
+    },
+    {
+      "affiliations": [
+        "University of Science and Technology of China",
+        "Institute of Artificial Intelligence, Hefei Comprehensive National Science Center"
+      ],
+      "name": "Wengang Zhou"
+    },
+    {
+      "affiliations": [
+        "University of Science and Technology of China",
+        "Institute of Artificial Intelligence, Hefei Comprehensive National Science Center"
+      ],
+      "name": "Houqiang Li"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.06672v1",
+  "originalTitle": "VideoTapestry: Query-Adaptive Memory Refinement for Multi-Agent Long-Video Understanding",
+  "pdfUrl": "https://arxiv.org/pdf/2610.06672v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

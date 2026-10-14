@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.11310v1",
+  "arxivId": "2610.11310",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.11310v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Korea Advanced Institute of Science and Technology"
+      ],
+      "name": "Kyeong-Rae Kim"
+    },
+    {
+      "affiliations": [
+        "Korea Advanced Institute of Science and Technology"
+      ],
+      "name": "Sungnyun Kim"
+    },
+    {
+      "affiliations": [
+        "Korea Advanced Institute of Science and Technology"
+      ],
+      "name": "Tae-Hyun Oh"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.11310v1",
+  "originalTitle": "FloorSAV: Elucidating Spatial Audio-Visual Context with 2D Floormap for AV-LLMs",
+  "pdfUrl": "https://arxiv.org/pdf/2610.11310v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.10415v1",
+  "abstract": "Pretrained text-to-speech (TTS) models can generate expressive speech, but reliable inference-time emotion control remains challenging: prompts and reference audio offer coarse, inconsistent control, whereas specialized conditioning and model adaptation require costly training. We present SteerSpeech, a lightweight activation-steering framework that controls emotion by injecting steering vectors into hidden activations. For each target emotion we train a lightweight low-rank transform, using a multi-expert objective that encourages monotonic emotion control while preserving speaker identity and linguistic content, constraining steering drift, and keeping the TTS backbone frozen. To optimize through discrete speech tokens, we introduce a two-pass generation-and-replay pipeline using a straight-through estimator to backpropagate expert supervision through sampled tokens. At inference, a target-emotion steering direction is optimized with its respective transform and injected into the base TTS model. Objective and subjective evaluations with Qwen3-TTS across seen, unseen, and accented speakers show stronger continuous emotion control with limited speaker and content degradation. SteerSpeech achieves 1.08x-7.12x baseline target-emotion scores and for a representative emotion subjectively, it receives 78.1%-96.8% intensity preference and 1.43x-1.46x speaker-identity preservation at high steering strengths.",
+  "abstractSha256": "4e1be61f1295cafe29c9d5a67b7cd4dd4cf44047a349d4912bcfbfc3a5baab9a",
+  "arxivId": "2610.10415",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.10415v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "参数高效微调",
+    "primaryTask": "韵律与风格控制",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.prosody-style-control",
+          "label": "韵律与风格控制"
+        },
+        {
+          "facet": "method",
+          "id": "method.peft",
+          "label": "参数高效微调"
+        },
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.subjective-evaluation",
+          "label": "主观评测"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "参数高效微调",
+      "primaryMethodId": "method.peft",
+      "primaryTask": "韵律与风格控制",
+      "primaryTaskId": "task.prosody-style-control",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Afsara Benazir"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Darius Pétermann"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Felix Xiaozhu Lin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Salar Rahili"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "SteerSpeech 针对推理时情感控制粗糙不稳定的问题，在冻结 Qwen3-TTS 的条件下为每种目标情感学习一个低秩残差变换来优化 steering 方向，并用情感、说话人和转写三类专家在多档强度上联合监督，在愤怒等情感上把目标情感分数提升到基线的 1.08 倍到 7.12 倍，代价是快乐和悲伤的说话人漂移略有上升且高强度下仍存在情感与身份的权衡。",
+  "originalTitle": "Steerspeech: Activation Steering For Emotion Control In Generated Speech",
+  "pdfUrl": "https://arxiv.org/pdf/2610.10415v1.pdf",
+  "readerTitle": "SteerSpeech：用激活 steering 控制合成语音的情感强度",
+  "schemaVersion": 2
+}

@@ -1,0 +1,36 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.10749v1",
+  "arxivId": "2610.10749",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.10749v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Concordia University",
+        "Mila – Quebec AI Institute"
+      ],
+      "name": "Pooneh Mousavi"
+    },
+    {
+      "affiliations": [
+        "Concordia University",
+        "Mila – Quebec AI Institute"
+      ],
+      "name": "Mirco Ravanelli"
+    },
+    {
+      "affiliations": [
+        "Concordia University",
+        "Mila – Quebec AI Institute",
+        "Laval University"
+      ],
+      "name": "Cem Subakan"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.10749v1",
+  "originalTitle": "Listen-to-Reason: Listen with Experts, Retrieve over a Graph, Reason with LLMs",
+  "pdfUrl": "https://arxiv.org/pdf/2610.10749v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

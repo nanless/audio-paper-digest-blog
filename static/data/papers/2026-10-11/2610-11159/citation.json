@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.11159v1",
+  "arxivId": "2610.11159",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.11159v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xinnian Zhao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chia-Hua Wu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Pu Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hugo Van Hamme"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.11159v1",
+  "originalTitle": "Local Prototype Reconstruction for Text-Compatible Speech-to-LLM Bridge Pretraining",
+  "pdfUrl": "https://arxiv.org/pdf/2610.11159v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.05155v1",
+  "abstract": "We propose UltraM2M, a weakly-supervised speech enhancement algorithm building upon the recent unsupervised mixture-to-mixture (M2M) algorithm. M2M realizes unsupervised speech enhancement by training deep neural networks on a set of real-recorded noisy-reverberant multi-channel mixture signals to estimate target speech and non-target signals. The two estimated signals are penalized by a so-called mixture-constraint (MC) loss, which constrains them to reconstruct the observed mixture signals. Although shown to be effective, the mixture constraint may be too weak to enable sufficient noise reduction. To deal with this, UltraM2M extends M2M by further leveraging text transcripts of real-recorded mixtures to design an automatic speech recognition (ASR) loss to penalize the estimated speech signal. The ASR loss can be viewed as a form of weak supervision that could help unsupervised enhancement. Evaluation results on the CHiME-4 dataset show the effectiveness of UltraM2M.",
+  "abstractSha256": "454a97ae092f2d2a23b8461825a622431ac1d7726be3ee1e85e4edc6d6d19272",
+  "arxivId": "2610.05155",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.05155v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "弱监督学习",
+    "primaryTask": "语音增强",
+    "rankBucket": "前50%",
+    "score": 6.4,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-enhancement",
+          "label": "语音增强"
+        },
+        {
+          "facet": "method",
+          "id": "method.weak-supervised",
+          "label": "弱监督学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.multitask",
+          "label": "多任务学习"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.microphone-array",
+          "label": "麦克风阵列"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "弱监督学习",
+      "primaryMethodId": "method.weak-supervised",
+      "primaryTask": "语音增强",
+      "primaryTaskId": "task.speech-enhancement",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jiachen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Fulin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhong-Qiu"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对仿真训练在真实远场混合上泛化不足的问题，UltraM2M 用同一增强网络同时接受仿真监督、混合重构约束和冻结语音识别损失的弱监督，在 CHiME-4 真实集上降低词错误率，多通道时还提升感知质量，但结论只在该数据集和给定评测识别器条件下成立。",
+  "originalTitle": "UltraM2M: Leveraging Text Transcripts and Mixture Constraints for Weakly-Supervised Speech Enhancement",
+  "pdfUrl": "https://arxiv.org/pdf/2610.05155v1.pdf",
+  "readerTitle": "用文字标注和混合约束在真实录音上训练语音增强",
+  "schemaVersion": 2
+}

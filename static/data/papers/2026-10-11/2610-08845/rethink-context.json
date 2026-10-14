@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.08845v1",
+  "abstract": "Spoofing-aware speaker verification (SASV) must confirm who is speaking and that the speech is genuine, but current systems gain one at the expense of the other. Modular cascades are accurate yet run two large self-supervised encoders, whereas end-to-end models are efficient but lose accuracy when a single embedding has to serve two conflicting objectives. We show that this trade-off between efficiency and specialization is avoidable. A single frozen W2V-BERT~2.0 backbone is adapted per task by deep hybrid Wavelet Prompt Tuning (WPT), so each branch obtains its own view of the shared encoder through dedicated prompts and a task head, and the scores are combined only at inference. Training only about 7M parameters, a small fraction of those a strong two-encoder cascade requires, the system surpasses it on SpoofCeleb evaluation with 0.03% CM-EER and 0.038 min a-DCF against 0.16% and 0.047. Because the backbone is shared and frozen, new branches attach without retraining the heads and prompts already in place. On ASVspoof5, with adversarial attacks and codec distortions, it reaches 0.092 min a-DCF and 3.60% CM-EER using only the provided data, indicating that the design holds under realistic in-the-wild threats.",
+  "abstractSha256": "1e5415094cd27890617cfef7f037f6d00c128ae7cc5309684dac6781def0d7c3",
+  "arxivId": "2610.08845",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.08845v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "前缀微调",
+    "primaryTask": "说话人验证",
+    "rankBucket": "前25%",
+    "score": 7.9,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speaker-verification",
+          "label": "说话人验证"
+        },
+        {
+          "facet": "method",
+          "id": "method.prefix-tuning",
+          "label": "前缀微调"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-spoofing",
+          "label": "语音伪造检测"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "前缀微调",
+      "primaryMethodId": "method.prefix-tuning",
+      "primaryTask": "说话人验证",
+      "primaryTaskId": "task.speaker-verification",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Aref Farhadipour"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Srikanth Madikeri"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Teodora Vukovic"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Volker Dellwo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Petr Motlicek"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文用冻结的 W2V-BERT 2.0 加两套混合小波提示分别适配说话人验证与伪造检测分支，仅训练约 7M 参数就在 SpoofCeleb 评测上得到 0.03% 伪造检测等错率与 0.038 最小 a-DCF，代价是推理时要做两次提示条件前向。",
+  "originalTitle": "Unified Shared Encoder in Spoof-Aware Speaker Verification with Hybrid Wavelet Prompt Tuning",
+  "pdfUrl": "https://arxiv.org/pdf/2610.08845v1.pdf",
+  "readerTitle": "一个冻结编码器如何同时做说话人确认与伪造检测",
+  "schemaVersion": 2
+}

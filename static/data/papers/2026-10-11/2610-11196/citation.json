@@ -1,0 +1,35 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.11196v1",
+  "arxivId": "2610.11196",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.11196v1",
+  "authors": [
+    {
+      "affiliations": [
+        "College of Computer Science and Technology, National University of Defense Technology",
+        "State Key Laboratory of Complex & Critical Software Environment"
+      ],
+      "name": "Yulin Sun"
+    },
+    {
+      "affiliations": [
+        "College of Computer Science and Technology, National University of Defense Technology",
+        "State Key Laboratory of Complex & Critical Software Environment"
+      ],
+      "name": "Kele Xu"
+    },
+    {
+      "affiliations": [
+        "College of Computer Science and Technology, National University of Defense Technology",
+        "State Key Laboratory of Complex & Critical Software Environment"
+      ],
+      "name": "Yong Dou"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.11196v1",
+  "originalTitle": "Selective Listening: Mechanism-Guided Control of Audio Influence in Large Audio-Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2610.11196v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.07026v1",
+  "arxivId": "2610.07026",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.07026v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Awarri Technologies Limited"
+      ],
+      "name": "Sunday Afariogun"
+    },
+    {
+      "affiliations": [
+        "Awarri Technologies Limited"
+      ],
+      "name": "Odunolaoluwa Jenrola"
+    },
+    {
+      "affiliations": [
+        "GSM Association"
+      ],
+      "name": "Zeinab Nezami"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.07026v1",
+  "originalTitle": "Offline AI Modules: Voice-First Offline Architecture, Hardware Reference Stack, Quantization and Benchmarking",
+  "pdfUrl": "https://arxiv.org/pdf/2610.07026v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

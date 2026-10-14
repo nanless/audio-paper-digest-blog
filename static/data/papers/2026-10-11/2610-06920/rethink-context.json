@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.06920v1",
+  "abstract": "Automatic music annotation is typically tackled under the assumption of a fixed annotation schema. In practice, commercial music catalogs often need to accommodate new musical attributes as needs evolve. Given that expert music annotation is expensive, it is not evident which methodological approach is most effective at accommodating new attributes and backfilling existing tracks; audio-language models promise zero-shot prediction, but at what annotation budget does supervised adaptation become more compelling?   We propose a benchmark based on the MGPHot popular music annotation dataset for simulating music schema extension across different annotation budgets. We investigate zero-shot prediction with audio-language models, learning new attributes from pretrained representations, and adapting models trained on existing annotations. Our results suggest that supervised adaptation is more effective than zero-shot prediction even with small annotation budgets, while frozen representation reuse remains the most effective approach for modest budgets without the tuning required by deeper adaptation.",
+  "abstractSha256": "05254934d07cede1b95a32d3964bc92858a3d2e78124d8ecf7de276daf37a10e",
+  "arxivId": "2610.06920",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.06920v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "迁移学习",
+    "primaryTask": "音乐分析",
+    "rankBucket": "前50%",
+    "score": 6.4,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-understanding",
+          "label": "音乐分析"
+        },
+        {
+          "facet": "method",
+          "id": "method.transfer",
+          "label": "迁移学习"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.few-shot",
+          "label": "少样本"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.zero-shot",
+          "label": "零样本"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "迁移学习",
+      "primaryMethodId": "method.transfer",
+      "primaryTask": "音乐分析",
+      "primaryTaskId": "task.music-understanding",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Christos Plachouras"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Emmanouil Benetos"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Johan Pauwels"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文在 MGPHot 上模拟新增 7 个属性的模式扩展，比较零样本音频语言预测与 8、32、128 首标注下的有监督复用，发现冻结表征上训练线性头在小预算下最有效，而更深的网络更新收益小且不稳定。",
+  "originalTitle": "Extending Music Annotation Schemas: Zero-Shot Prediction or Few-Shot Adaptation?",
+  "pdfUrl": "https://arxiv.org/pdf/2610.06920v1.pdf",
+  "readerTitle": "音乐标注模式扩展：零样本预测还是小样本适应",
+  "schemaVersion": 2
+}

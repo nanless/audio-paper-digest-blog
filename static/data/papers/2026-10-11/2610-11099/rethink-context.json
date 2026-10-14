@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.11099v1",
+  "abstract": "Speaker verification (SV) performance degrades under language mismatch due to the entanglement of speaker identity with language-specific acoustic cues. To address this problem, we leverage large-scale self-supervised pre-trained models (PTMs) to learn language-agnostic speaker representations. We utilize PTMs as robust front-end feature extractors, capitalizing on their rich acoustic and linguistic knowledge acquired from vast, diverse audio data. These generalized features are then used to train a downstream speaker embedding network, effectively disentangling speaker identity from language-specific characteristics. We validate our approach on the TidyVoice2026 benchmark, which benchmarks SV under language mismatch. Our proposed system (team T02) achieves equal error rates (EERs) of 2.21% on tv26_eval-A and 2.99% on tv26_eval-U.",
+  "abstractSha256": "223590d606d4c2281da731a913161ad7e8292504e785dc360328bdc64ddb06ab",
+  "arxivId": "2610.11099",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.11099v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "自监督学习",
+    "primaryTask": "说话人验证",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speaker-verification",
+          "label": "说话人验证"
+        },
+        {
+          "facet": "method",
+          "id": "method.self-supervised",
+          "label": "自监督学习"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.cross-lingual",
+          "label": "跨语言"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "自监督学习",
+      "primaryMethodId": "method.self-supervised",
+      "primaryTask": "说话人验证",
+      "primaryTaskId": "task.speaker-verification",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jinghan Peng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yu Zheng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Weiqiang Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jian Liu"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对注册与测试语言不一致时声纹会混入语言线索的问题，该工作用 w2v-BERT 2.0 做前端提取多层特征并聚合为说话人嵌入，在 TidyVoice2026 上融合后达到评测 A 等误率 2.21% 与评测 U 等误率 2.99%，代价是 580M 以上参数与 58.43 GMACs 的计算量。",
+  "originalTitle": "Cross-Lingual Speaker Verification with Self-Supervised Pre-Trained Models",
+  "pdfUrl": "https://arxiv.org/pdf/2610.11099v1.pdf",
+  "readerTitle": "跨语言说话人确认：用自监督预训练模型提取与语言无关的声纹",
+  "schemaVersion": 2
+}

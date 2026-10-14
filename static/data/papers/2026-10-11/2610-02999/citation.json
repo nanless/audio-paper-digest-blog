@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.02999v2",
+  "arxivId": "2610.02999",
+  "arxivVersion": 2,
+  "arxivVersionedId": "2610.02999v2",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Huiqiang Rong"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Haoran Luo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hui Feng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhonghong Ou"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kaiwen Xue"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Guoxin Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yifan Zhu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.02999v2",
+  "originalTitle": "OmniConfess: Eliciting Token Confessions to Mitigate Omni-Modal Hallucination",
+  "pdfUrl": "https://arxiv.org/pdf/2610.02999v2.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

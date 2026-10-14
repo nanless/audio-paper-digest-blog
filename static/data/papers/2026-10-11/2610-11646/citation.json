@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.11646v1",
+  "arxivId": "2610.11646",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.11646v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Christopher Witzl"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tobias Bocklet"
+    },
+    {
+      "affiliations": [
+        "Technische Hochschule Nürnberg Georg Simon Ohm, Nürnberg, Germany"
+      ],
+      "name": "Korbinian Riedhammer"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.11646v1",
+  "originalTitle": "Phonologically Informed Tokenization for German Speech Recognition: A Cross-Domain Study",
+  "pdfUrl": "https://arxiv.org/pdf/2610.11646v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

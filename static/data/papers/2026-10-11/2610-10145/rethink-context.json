@@ -1,0 +1,90 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.10145v1",
+  "abstract": "We present InterView-C, a German multimodal corpus of 27 survey interviews conducted entirely in virtual reality, with both interlocutors represented by avatars. The corpus aligns spoken interaction with synchronized behavioral data, including gaze, head and body movement, facial behavior, hand and finger tracking. Its reference transcripts and linguistic annotations provide a reliable interface between this multimodal spoken interaction and predominantly text-based NLP methods. This interface is important because automatically transcribing speech can distort linguistically relevant information, while downstream models trained on existing resources may additionally face transfer challenges when applied to transcribed spoken data. InterView-C therefore provides word-timed and manually post-edited verbatim transcripts for all 54 recordings, interview-item timings, questionnaire responses and negation cue and scope annotations for 1,422 sentences, 1,398 of them doubly annotated (α=0.87 for cues; α=0.81 for scopes). We demonstrate both challenges empirically: nine open-weight ASR systems disproportionately misrecognize short closed answers and number words, while negation models trained on existing corpora show lower and highly variable performance on our transcribed interviews than a model trained on the InterView-C annotations. InterView-C thus enables linguistic analyses of spoken interaction while retaining their alignment with rich multimodal behavior.",
+  "abstractSha256": "743df316efc9e9552f732c166e4166f5a0d490aeeb881e4d9e9277b2ee3d6957",
+  "arxivId": "2610.10145",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.10145v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "数据集构建",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.dataset-curation",
+          "label": "数据集构建"
+        },
+        {
+          "facet": "method",
+          "id": "method.data-annotation",
+          "label": "数据标注"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "数据集构建",
+      "primaryMethodId": "method.dataset-curation",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Patrick Schrottenbacher"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Leon Hammerla"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lydia Kleine"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Doris Stingl"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Alexander Mehler"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "InterView-C 用 27 场德语 VR 化身问卷访谈把双人眼动头部脸部手部追踪与逐词转写问卷时间窗对齐到同一时钟，并用人工校对转写和 1422 句否定标注证明短回答数字词易被语音识别丢掉而域内训练更适合转写对话的否定检测。",
+  "originalTitle": "InterView-C: A Synchronized Multimodal Corpus of VR Avatar-Mediated Survey Interviews",
+  "pdfUrl": "https://arxiv.org/pdf/2610.10145v1.pdf",
+  "readerTitle": "化身访谈里的说话与行为如何对齐：InterView-C 语料库解读",
+  "schemaVersion": 2
+}

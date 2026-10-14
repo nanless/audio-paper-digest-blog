@@ -1,0 +1,72 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.09866v1",
+  "abstract": "We introduce MUNITE, a latent-variable framework for flexible any-to-any multimodal generation that treats encoding and latent generation as the same inference problem under different amounts of observed evidence. Given any subset of modalities, MUNITE models the conditional distribution over the latent representation associated with the complete observation. Full observation recovers deterministic encoding, no observation recovers the latent marginal, and intermediate subsets define conditional latent inference, all within a single conditional flow model. A shared latent sample captures variation that must remain consistent across generated targets, while modality-specific generative decoders model the remaining uncertainty independently. To learn these conditional distributions from incomplete training examples, we extend conditional flow matching through self-distillation: predictions conditioned on richer available observations supervise the same model conditioned on smaller subsets at the same intermediate latent state. When the richer-evidence trajectory follows the exact conditional flow, this provides the same expected learning signal as full-target denoising. Across PolyMNIST-D-Q, FFHQ64, and image-text-audio, MUNITE achieves competitive or better generation quality and source-target alignment, with higher joint-generation coherence. In particular, it attains the highest coherence in all one-to-many and unconditional image-text-audio comparisons, showing the effectiveness of unified latent inference across diverse multimodal settings.",
+  "abstractSha256": "8b24ac521abc320cdf95bdfd9ebd347324c18b5ad1253f367c784f5d8381259b",
+  "arxivId": "2610.09866",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.09866v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "流匹配",
+    "primaryTask": "音视频生成",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-generation",
+          "label": "音视频生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        },
+        {
+          "facet": "method",
+          "id": "method.contrastive",
+          "label": "对比学习"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "流匹配",
+      "primaryMethodId": "method.flow-matching",
+      "primaryTask": "音视频生成",
+      "primaryTaskId": "task.av-generation",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "KAIST"
+      ],
+      "name": "Kyeongmin Yeo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Minhyuk Sung"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "MUNITE 用一个随观测子集变化的完整观测潜变量条件分布统一编码与生成，用共享潜变量样本加各模态独立解码器保持联合一致，并用更丰富观测的自蒸馏从不完整样本中学习，在三个基准上主要提升一对多与无条件联合一致性，单目标质量保持可比。",
+  "originalTitle": "MUNITE: Unified Multimodal Latent Inference for Any-to-Any Multimodal Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.09866v1.pdf",
+  "readerTitle": "把编码和生成看成同一种潜变量推断：MUNITE 的任意模态组合生成",
+  "schemaVersion": 2
+}

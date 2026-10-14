@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.05111v1",
+  "abstract": "Multimodal inputs are inherently heterogeneous, not only across modalities but also in the information pathways required for effective prediction. To address this limitation, we propose InstMoE, an adaptive expert routing framework for multimodal learning. InstMoE dynamically routes each input to specialized unimodal and cross-modal experts, allowing the model to adapt its information pathways to the characteristics of the input. However, routing can be misled when modality-specific variations obscure task-relevant semantics. Such irrelevant variations may distort routing decisions, causing inputs to be assigned to inappropriate experts. We therefore introduce a Contrastive Semantic Alignment module, which encourages semantically similar inputs to share task-relevant representations while suppressing irrelevant modality-specific variations. Experiments on multimodal sentiment analysis benchmarks demonstrate that InstMoE achieves state-of-the-art performance on CMU-MOSEI and CH-SIMS v2 while using substantially fewer parameters than competitive baselines. Further analysis shows that different inputs exhibit distinct expert preferences, demonstrating that InstMoE moves beyond fixed fusion toward adaptive multimodal computation.",
+  "abstractSha256": "5e9291597b1b402bac90b0121c73317a2c38e0801f06ca3227bb15f3d61e1e38",
+  "arxivId": "2610.05111",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.05111v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "混合专家模型",
+    "primaryTask": "语音情感识别",
+    "rankBucket": "前50%",
+    "score": 6.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.emotion-recognition",
+          "label": "语音情感识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.moe",
+          "label": "混合专家模型"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.contrastive",
+          "label": "对比学习"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "混合专家模型",
+      "primaryMethodId": "method.moe",
+      "primaryTask": "语音情感识别",
+      "primaryTaskId": "task.emotion-recognition",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Guangdong University of Technology"
+      ],
+      "name": "Guimin Hu"
+    },
+    {
+      "affiliations": [
+        "University of Copenhagen"
+      ],
+      "name": "Xiang He"
+    },
+    {
+      "affiliations": [
+        "Pengcheng Laboratory"
+      ],
+      "name": "Yingjian Li"
+    },
+    {
+      "affiliations": [
+        "Tongji University"
+      ],
+      "name": "Zheng Lian"
+    },
+    {
+      "affiliations": [
+        "Guangdong University of Technology"
+      ],
+      "name": "Boyan Xu"
+    },
+    {
+      "affiliations": [
+        "Guangdong University of Technology"
+      ],
+      "name": "Ruichu Cai"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对同一融合通路难以适应不同输入证据组合的问题，InstMoE 用五个单模态与跨模态专家加实例路由和对比语义对齐，在 CMU-MOSEI 与 CH-SIMS v2 上以 3.49M 至 3.53M 参数取得有竞争力的情感预测结果，但结论只在固定预提取特征与官方划分条件下成立。",
+  "originalTitle": "InstMoE: Adaptive Multimodal Routing with Specialized Experts",
+  "pdfUrl": "https://arxiv.org/pdf/2610.05111v1.pdf",
+  "readerTitle": "InstMoE：按输入特点选择证据通路的多模态情感分析",
+  "schemaVersion": 2
+}

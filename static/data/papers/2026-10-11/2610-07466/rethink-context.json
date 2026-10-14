@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.07466v1",
+  "abstract": "Multimodal systems often encode every available input, even when a subset suffices for prediction. Adaptive acquisition can reduce this cost by using predictions from incrementally fused evidence to decide which modality to encode next and when to stop. However, sequential fusion makes these predictions order-dependent, so decisions based on them may need to distinguish factorially many histories of the same acquired set. We introduce SemARC, which couples a Sequential Modality Aggregator (SeMA) with an Adaptive Runtime Controller (ARC) and uses acquired evidence to select each modality before its encoder runs. SeMA executes only selected encoder and fusion branches, updates a fixed-size state, and predicts after each acquisition without recomputing earlier branches. We supervise every acquisition prefix under randomized modality subsets and orders to encourage consistent predictions across acquisition orders. ARC combines a set-dependent marginal-utility prior with residual fitted-Q learning to select the next available modality or stop, without inspecting unacquired inputs or retaining acquisition order. Across six multimodal classification datasets and eleven baselines, SemARC achieves 3.2% higher macro-F1 and 61.4% lower total inference GFLOPs on average relative to each dataset's most accurate baseline. End-to-end latency falls by 44.0% across GPU and CPU and by 47.2% on Android INT8 relative to the fastest measured baseline, on average. Under varying runtime modality missingness, SemARC still skips available modalities, matching or exceeding the best baseline macro-F1 in 21 of 24 conditions with 14.8% lower total GFLOPs on average. SemARC thus offers a practical path toward efficient multimodal inference across heterogeneous devices.",
+  "abstractSha256": "a01543aa2c6de50b62ac7e41b4592fc1956ffa0ff28c407e3bd3fb852fbb4b5b",
+  "arxivId": "2610.07466",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.07466v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "动态计算与早退",
+    "primaryTask": "音视频理解",
+    "rankBucket": "前50%",
+    "score": 5.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-understanding",
+          "label": "音视频理解"
+        },
+        {
+          "facet": "method",
+          "id": "method.dynamic-computation",
+          "label": "动态计算与早退"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "动态计算与早退",
+      "primaryMethodId": "method.dynamic-computation",
+      "primaryTask": "音视频理解",
+      "primaryTaskId": "task.av-understanding",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Arm Inc., USA"
+      ],
+      "name": "Payal Mohapatra"
+    },
+    {
+      "affiliations": [
+        "Northwestern University, USA"
+      ],
+      "name": "Haodong Yang"
+    },
+    {
+      "affiliations": [
+        "Northwestern University, USA"
+      ],
+      "name": "Yueyuan Sui"
+    },
+    {
+      "affiliations": [
+        "Northwestern University, USA"
+      ],
+      "name": "Stephen Xia"
+    },
+    {
+      "affiliations": [
+        "Arm Inc., USA"
+      ],
+      "name": "Benjamin Lundell"
+    },
+    {
+      "affiliations": [
+        "Northwestern University, USA"
+      ],
+      "name": "Qi Zhu"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对多模态推理中全量编码浪费算力的问题，SeMARC 用增量融合器 SeMA 逐个执行被选分支并给出前缀预测，再用控制器 ARC 决定下一个取哪个模态或停止，在六个分类数据集上以更少算力保持或提升宏 F1，但结论只在跨被试划分、批量为 1 和原文成本口径下成立。",
+  "originalTitle": "Efficient Multimodal Inference through Adaptive Acquisition and Sequential Fusion",
+  "pdfUrl": "https://arxiv.org/pdf/2610.07466v1.pdf",
+  "readerTitle": "逐个按需取模态：SeMARC 如何边融合边决定算什么、何时停",
+  "schemaVersion": 2
+}

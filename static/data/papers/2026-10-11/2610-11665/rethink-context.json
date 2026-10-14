@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.11665v1",
+  "abstract": "Online platforms contain growing numbers of bots, deceptive reviewers, and scam accounts that imitate legitimate users. Such camouflage blurs graph neighborhoods and behavioral attributes, making it difficult for graph neural networks (GNNs) to distinguish both well-disguised fraudsters and legitimate users. Across diverse GNNs, we observe overlapping errors on a shared hard region, suggesting the presence of latent fraud evidence that graph topologies and standard features fail to capture. Fraud-specific GNNs can mitigate particular graph pathologies, yet they still make limited use of heterogeneous evidence such as structured records, text, images, and audio; uniform multimodal fusion may also disturb nodes already handled reliably by the graph. We propose Evi-VN to learn and correct these shared blind spots rather than build another fraud detector. To our knowledge, Evi-VN is the first graph fraud detection framework to use feature isolated evidence chains to correct hard regions shared across GNNs. Its evidence chains connect behavior, content, and context across structured, textual, visual, and acoustic sources, helping expose camouflage that graph neighborhoods may miss. Crucially, Evi-VN selectively applies this evidence only to likely hard samples via virtual class nodes, preserving both the reliable predictions and the input design of existing GNNs. Shared hard regions also let Evi-VN enhance generic, fraud-specific, and unseen GNNs even with imperfect evidence models. Experiments across bot, fake-review, refund-evidence, and telecom-fraud tasks validate these advantages.",
+  "abstractSha256": "588c5b8384958f5eb2575ea81537bac23dc758186deb48494c43263152d9fe8f",
+  "arxivId": "2610.11665",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.11665v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "图神经网络",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.gnn",
+          "label": "图神经网络"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "图神经网络",
+      "primaryMethodId": "method.gnn",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jiran Tao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yifan Wu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Binyan Jiang"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "Evi-VN 针对多种图神经网络共有的难分节点，用路由器筛选后再以两类虚拟节点注入校准后的外部证据，在 MGTAB 等六个任务上提升配对基线，但增益依赖路由与证据质量且部分数据集存在可分性偏强等限定。",
+  "originalTitle": "Evi-VN: Hard Region Guided Virtual Node Evidence Injection for GNN-Based Fraud Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2610.11665v1.pdf",
+  "readerTitle": "Evi-VN：只给难样本补证据的图欺诈检测增强框架",
+  "schemaVersion": 2
+}

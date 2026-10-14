@@ -1,0 +1,96 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.04180v1",
+  "abstract": "Auditory attention decoding (AAD) is often evaluated on static, simplified speech scenes that poorly match everyday listening. We introduce MOV-AAD, a large-scale dataset for studying auditory attention under moving, naturalistic conversations. MOV-AAD combines 64-channel EEG with synchronized physiological recordings, including eye tracking, respiration, galvanic skin response, heart rate, peripheral oxygen saturation, body temperature, body motion, and photoplethysmography, enabling analysis of cross-modal neural and physiological markers of attention and listening effort. This dataset uses a more ecologically valid listening paradigm with dynamically moving conversational speech sources and behavioral measures of attentional engagement. MOV-AAD supports research on robust AAD in realistic spatial dynamics, multimodal attention modeling, listening effort, and intersubject neural responses, providing a resource for benchmarking selective auditory attention in naturalistic listening.",
+  "abstractSha256": "bfe23459533225c83dda510f96ad3aed658e96ee692e8088d03bcdb63888d2b3",
+  "arxivId": "2610.04180",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.04180v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "数据集构建",
+    "primaryTask": "言语神经解码",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.neural-speech-decoding",
+          "label": "言语神经解码"
+        },
+        {
+          "facet": "method",
+          "id": "method.dataset-curation",
+          "label": "数据集构建"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.biosignal",
+          "label": "生理信号"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.listening-effort",
+          "label": "听觉努力与认知负荷"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "数据集构建",
+      "primaryMethodId": "method.dataset-curation",
+      "primaryTask": "言语神经解码",
+      "primaryTaskId": "task.neural-speech-decoding",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiaomin He"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Vishal Choudhari"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tristan J. Spratt"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Aarya Raghavan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Richard T. Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nima Mesgarani"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "MOV-AAD 用 50 人、64 通道脑电加眼动和外周生理同步记录移动双人对话下的注意选择，验证了包络重建和注意分类的可行性，但轨迹解码只在 Alpha 频段有限成立。",
+  "originalTitle": "MOV-AAD: A Large-Scale Multimodal Dataset for Auditory Attention Decoding During Moving Conversations",
+  "pdfUrl": "https://arxiv.org/pdf/2610.04180v1.pdf",
+  "readerTitle": "在移动对话中解码听觉注意：MOV-AAD 数据集做了什么",
+  "schemaVersion": 2
+}

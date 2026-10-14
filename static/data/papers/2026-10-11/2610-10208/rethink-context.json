@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.10208v1",
+  "abstract": "Automatic audio scene description turns a recording into a text account of a situation. One difficulty is deciding which elements of the audio should be kept, since a description cannot include them all. Annotators disagree about this, making a ground truth hard to obtain. In this work, we first define the ground truth, then generate the data. We focus on audio events and define sound salience with a simple rule: a sound is salient when a speaker audibly reacts to it. For scale and variety, a controlled set of scenarios fixes the ground truth, and a language model writes the dialogues. The resulting corpus, CARES, contains 10,000 two-speaker scenes. We then benchmark six audio-language models on three tasks: identifying the scene, tagging the sounds present, and classifying reactions. We show that these models hear the sounds but miss how the speakers react to them.",
+  "abstractSha256": "844b9b67b1ec9de65230c1345c16c7ed5f1458ddfa2c7f449654b4f3314c9256",
+  "arxivId": "2610.10208",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.10208v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "音频推理",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-reasoning",
+          "label": "音频推理"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.audio-language",
+          "label": "音频大模型"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "音频推理",
+      "primaryTaskId": "task.audio-reasoning",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Marcel Gibier"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Thomas Thebaud"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Olivier Boëffard"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jean-François Bonastre"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "CARES 先把声音显著性定义为说话人是否可听地做出反应，再用受控流程生成 10000 个双人场景，证明六个音频语言模型能认出声音和地点，却在判断反应类型上不超越只看文字的对照系统，且总结时很少提及未被说出的声音。",
+  "originalTitle": "CARES: A Controlled Synthetic Benchmark of Speaker Reactions to Sound",
+  "pdfUrl": "https://arxiv.org/pdf/2610.10208v1.pdf",
+  "readerTitle": "先定好什么算重要，再生成声音：CARES 如何检验模型是否听懂说话人反应",
+  "schemaVersion": 2
+}

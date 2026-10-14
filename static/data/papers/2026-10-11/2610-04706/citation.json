@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.04706v1",
+  "arxivId": "2610.04706",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.04706v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Tongji University, Shanghai, China"
+      ],
+      "name": "Yate Ge"
+    },
+    {
+      "affiliations": [
+        "Tongji University, Shanghai, China"
+      ],
+      "name": "Run Yuan"
+    },
+    {
+      "affiliations": [
+        "Grinnell College, Grinnell, Iowa, United States"
+      ],
+      "name": "Yueran Qi"
+    },
+    {
+      "affiliations": [
+        "Tongji University, Shanghai, China"
+      ],
+      "name": "Wenjie He"
+    },
+    {
+      "affiliations": [
+        "Tongji University, Shanghai, China"
+      ],
+      "name": "Jiaqi Mo"
+    },
+    {
+      "affiliations": [
+        "Hunan University, Changsha, Hunan, China"
+      ],
+      "name": "Yangshuo Chen"
+    },
+    {
+      "affiliations": [
+        "Tongji University, Shanghai, China"
+      ],
+      "name": "Wenbin Zuo"
+    },
+    {
+      "affiliations": [
+        "Southern University of Science and Technology, Shenzhen, Guangdong, China"
+      ],
+      "name": "Xiaohua Sun"
+    },
+    {
+      "affiliations": [
+        "Tongji University, Shanghai, China"
+      ],
+      "name": "Weiwei Guo"
+    },
+    {
+      "affiliations": [
+        "Tongji University, Shanghai, China"
+      ],
+      "name": "Qi Wang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.04706v1",
+  "originalTitle": "VoCa: Designing Speech-Canvas Interaction for Voice-Based Conversational Agents",
+  "pdfUrl": "https://arxiv.org/pdf/2610.04706v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

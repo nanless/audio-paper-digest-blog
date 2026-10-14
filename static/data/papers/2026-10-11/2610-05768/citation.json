@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.05768v1",
+  "arxivId": "2610.05768",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.05768v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Keren Shao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ayaka Kawano"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shlomo Dubnov"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.05768v1",
+  "originalTitle": "Relational Synthesis: Structure-Mediated Concatenative Synthesis for Foley and Retrieval-Augmented Audio Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.05768v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

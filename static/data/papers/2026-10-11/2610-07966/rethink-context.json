@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.07966v1",
+  "abstract": "Neural audio synthesis models like the Realtime Audio Variational autoEncoder (RAVE) achieve impressive genera tion quality, yet how their internal representations encode musical features remains poorly understood. We present a systematic layer-wise and cross-layer cluster analysis of RAVE decoder activations across three models trained on different musical domains, tested with four stimulus types. We then evaluate architectural generalization with a general purpose EnCodec model. For RAVE, we find that synthetic stimuli are encoded well across models and audio features (pitch |\\r{ho}|=0.45, 5.1x the null, BPM |\\r{ho}| = 0.76, 8.6x the null). These results are reduced but still substantively apparent when using natural audio (mean across features |\\r{ho}|=0.25, 2.8x the null). Natural audio sees a stronger encoding when nonlinear probes are used (mean across features R2=0.56, 18x the null, +0.152 nonlinear gain over the linear probe R2). Encoding strength varies throughout the layers of the decoder and an increased ability to joint-encode in the middle layers is seen across all audio features (\\b{eta}2 all negative, p < 0.05). The general purpose EnCodec decoder also sees similar strong synthetic responses across audio features, similar nonlinear gains for natural audio joint encoding and similar depth profiles. We find the best cross-layer cluster improves the strength (r = 0.65, p = 0.006) and prevalence (r = 0.75, p = 0.001) of BPM encoding when compared against the best whole layers within the same section, with no effect for joint encoding. These findings advance the interpretability of neural audio models and inform targeted control strategies for neural synthesis.",
+  "abstractSha256": "d9d93c634ce31090fcba696ea7b7c2e98e18c34e185f2732d3ff59fdbedec45f",
+  "arxivId": "2610.07966",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.07966v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "统计分析",
+    "primaryTask": "音乐分析",
+    "rankBucket": "前50%",
+    "score": 5.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-understanding",
+          "label": "音乐分析"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.interpretability",
+          "label": "可解释性"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "统计分析",
+      "primaryMethodId": "method.statistical-analysis",
+      "primaryTask": "音乐分析",
+      "primaryTaskId": "task.music-understanding",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Louis McCallum"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mick Grierson"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文用三套 RAVE 模型与 EnCodec 对照，沿解码器逐层测量音高、速度与频谱特征的单神经元相关、超随机比例与联合探针可恢复性，发现合成音编码最强最线性、自然音频需非线性联合读取、联合编码在中间层最强，并只有速度能从跨层聚类中获益。",
+  "originalTitle": "Feature Encoding in VAE-based Audio Decoders: Effects of Input, Depth and Distribution",
+  "pdfUrl": "https://arxiv.org/pdf/2610.07966v1.pdf",
+  "readerTitle": "RAVE 解码器里藏着音高与速度吗：输入、深度与跨层分组的影响",
+  "schemaVersion": 2
+}

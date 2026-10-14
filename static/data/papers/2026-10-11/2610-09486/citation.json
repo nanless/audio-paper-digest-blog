@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.09486v1",
+  "arxivId": "2610.09486",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.09486v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Minu Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jihwan Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "David R. Mortensen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shrikanth Narayanan"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.09486v1",
+  "originalTitle": "Mitigating Accent-Language Confusion in Self-Supervised Speech Representations for Language Identification",
+  "pdfUrl": "https://arxiv.org/pdf/2610.09486v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

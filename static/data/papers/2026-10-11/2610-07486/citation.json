@@ -1,0 +1,21 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.07486v1",
+  "arxivId": "2610.07486",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.07486v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Division of Speech, Music and Hearing (TMH)",
+        "KTH Royal Institute of Technology, Stockholm, Sweden"
+      ],
+      "name": "Huanchen Cai"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.07486v1",
+  "originalTitle": "Adapting a Latent Audio Diffusion Model to Historical Guqin Recordings: A Listening-Driven Case Study",
+  "pdfUrl": "https://arxiv.org/pdf/2610.07486v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

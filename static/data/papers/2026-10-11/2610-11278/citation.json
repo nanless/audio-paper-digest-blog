@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.11278v1",
+  "arxivId": "2610.11278",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.11278v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Youngki Kwon"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hee-Soo Heo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Minjae Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bong-Jin Lee"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.11278v1",
+  "originalTitle": "Toward accurate speaker inventories for online speaker diarization",
+  "pdfUrl": "https://arxiv.org/pdf/2610.11278v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

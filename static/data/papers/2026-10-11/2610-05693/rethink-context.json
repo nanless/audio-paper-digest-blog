@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.05693v1",
+  "abstract": "Speaker tracking is the task of separating and following multiple speakers over time. It must address overlapped speech, speech onset and offset, talker identity, and time-varying speaker count. We propose a segment-online, modular framework for single- and multi-channel speaker tracking. The proposed system first performs speaker separation in each segment and computes speech activity via voice activity detection (VAD). To generate speaker tracks over time, we introduce a two-stage sequential organization strategy: Overlap-based stitching for continuous grouping and memory-based speaker verification for discontinuous grouping. For speaker separation, we employ complex spectral mapping to estimate the real and imaginary spectrograms of underlying speakers. The proposed system achieves state-of-the-art segment-online tracking performance on the LibriCSS and AMI datasets. Our framework significantly reduces diarization error rate (DER) and concatenated minimum-permutation word error rate (cpWER) compared to other methods.",
+  "abstractSha256": "f6d75822d858565da56ebf8c07f2a7452ae2e98fdc6ac9f9a61a4ac2d9ba9a03",
+  "arxivId": "2610.05693",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.05693v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "时频分析",
+    "primaryTask": "说话人分离标注",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.diarization",
+          "label": "说话人分离标注"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-separation",
+          "label": "语音分离"
+        },
+        {
+          "facet": "task",
+          "id": "task.speaker-verification",
+          "label": "说话人验证"
+        },
+        {
+          "facet": "method",
+          "id": "method.time-frequency",
+          "label": "时频分析"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "时频分析",
+      "primaryMethodId": "method.time-frequency",
+      "primaryTask": "说话人分离标注",
+      "primaryTaskId": "task.diarization",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Vahid A. Kalkhorani"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Daniel Wong"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jacob Donley"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ashutosh Pandey"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Buye Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "DeLiang Wang"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "该文把说话人跟踪拆成段内分离加跨段两阶段组织，用重叠拼接接续连续语音、用工作记忆做说话人验证来连接中断语音，在 LibriCSS 和 AMI 上验证了在线跟踪效果与说话人增多时的代价。",
+  "originalTitle": "Speaker Tracking: Segment-online Multi-talker Organization with a Varying Number of Speakers",
+  "pdfUrl": "https://arxiv.org/pdf/2610.05693v1.pdf",
+  "readerTitle": "说话人跟踪：按段在线组织重叠与中断语音",
+  "schemaVersion": 2
+}

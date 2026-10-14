@@ -1,0 +1,72 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.10899v1",
+  "abstract": "Speech quality predictors are increasingly used as rewards, yet no agreed measure of their hackability exists. The usual measurement has two flaws. First, the perturbation reaches the predictor through a processing chain -- here a neural codec -- that shifts the score on its own, which scoring against the raw input charges to the attack. Referencing the unperturbed round trip instead changes measured hackability by up to a factor of four (0.31 to 0.08 for one defence). Second, one trained attacker is a sample, not a measurement: five attackers differing only in random seed reach success rates from 0.00 to 0.38 against one fixed predictor, so a defence claim needs the worst case over several. Under this protocol, four published predictors differ widely: NISQA is hacked on 90% of utterances, SSL-MOS on 21%, DNSMOS on 14% and UTMOS on 6%. We then audit a closed attack-detect-patch loop. It hardens the predictor only in its own attack space, by less than the spread between attackers; a random-perturbation baseline matches it; and it costs up to 0.30 system SRCC out of domain. Enhancers post-trained against patched predictors hack them far less (PESQ -0.03 versus -0.23). Code, preregistration and run outputs are released.",
+  "abstractSha256": "fe7e855ce3a63a28532239fceda9fea47c2dc262c9175b899f96878eae3821be",
+  "arxivId": "2610.10899",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.10899v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "对抗训练",
+    "primaryTask": "语音质量评估",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-quality",
+          "label": "语音质量评估"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-enhancement",
+          "label": "语音增强"
+        },
+        {
+          "facet": "method",
+          "id": "method.adversarial-training",
+          "label": "对抗训练"
+        },
+        {
+          "facet": "method",
+          "id": "method.reinforcement",
+          "label": "强化学习"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "对抗训练",
+      "primaryMethodId": "method.adversarial-training",
+      "primaryTask": "语音质量评估",
+      "primaryTaskId": "task.speech-quality",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ali Alavi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Donald S. Williamson"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "该文把刷分定义为扰动带来的加分并以编解码往返输出为基准，用五个攻击者取最坏情况做测量，发现四个常用预测器可攻击率差一个数量级以上，而闭环打补丁只在自家攻击空间内有效且随机扰动基线就能持平，还伴随域外一致性下降。",
+  "originalTitle": "How Hackable Is Your Speech Quality Metric? A Corrected Protocol, a Benchmark, and What Patching Buys",
+  "pdfUrl": "https://arxiv.org/pdf/2610.10899v1.pdf",
+  "readerTitle": "语音质量预测器有多容易被刷分：修正测量口径、横向比较与打补丁的效果",
+  "schemaVersion": 2
+}

@@ -1,0 +1,70 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.02941v1",
+  "abstract": "Real-time conversational agents require speaker diarization that streams and runs on a CPU. Most systems apply an utterance-level speaker encoder to short, heavily overlapping chunks, which wastes computation and leaves the model optimized for the wrong task. We instead turn a state-of-the-art speaker recognition architecture into a causal frame-level encoder that reads the stream once and emits one embedding every 80~ms from a bounded two-second window of past audio, and pair it with online clustering that gates every update on the self-similarity of the stream. Trained only by distillation from an utterance-level teacher on simulated and out-of-domain mixtures, and evaluated with one fixed set of hyperparameters, the system is the most accurate streaming diarizer on low-overlap benchmarks at sub-second latency, degrades far less than cache-based systems as the number of speakers grows, and runs five times faster than real time on a single CPU thread.",
+  "abstractSha256": "fbed13b944443c595dbd753090888e63680d306ad96212eb27d7b5302da6bbbd",
+  "arxivId": "2610.02941",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.02941v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "知识蒸馏",
+    "primaryTask": "说话人分离标注",
+    "rankBucket": "前25%",
+    "score": 8.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.diarization",
+          "label": "说话人分离标注"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.real-time",
+          "label": "实时处理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "知识蒸馏",
+      "primaryMethodId": "method.distillation",
+      "primaryTask": "说话人分离标注",
+      "primaryTaskId": "task.diarization",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Speech, Music and Hearing",
+        "KTH Royal Institute of Technology",
+        "Stockholm, Sweden"
+      ],
+      "name": "Nikita Torgashov"
+    },
+    {
+      "affiliations": [
+        "Microsoft",
+        "Munich, Germany"
+      ],
+      "name": "Okan Köpüklü"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对 CPU 上低延迟流式说话人日志问题，论文把说话人识别网络改成因果帧级编码器并配以置信度门控在线聚类，在低重叠数据上取得领先但重叠语音仍是主要代价。",
+  "originalTitle": "FASTDIAR: Frame-level speaker encoder for Streaming Diarization",
+  "pdfUrl": "https://arxiv.org/pdf/2610.02941v1.pdf",
+  "readerTitle": "FASTDIAR：一次读取音频流的帧级说话人编码与在线聚类",
+  "schemaVersion": 2
+}

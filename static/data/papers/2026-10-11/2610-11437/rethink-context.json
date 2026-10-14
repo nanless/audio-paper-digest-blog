@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.11437v1",
+  "abstract": "Instruction-based text-to-speech (TTS) offers control over voice characteristics and speech expression through interfaces including voice cloning and text-based voice design. Voice cloning reproduces a reference voice, whereas text-based voice design creates a voice from a natural-language description. However, neither interface directly enables users to modify the timbre of a given reference and synthesize speech with the modified voice. Meanwhile, utterance-level expressive instructions leave changes across individual text segments underspecified. We introduce \\textbf{EDICT}, a framework that unifies global timbre editing and local expressive control by using an edited acoustic reference to anchor voice identity across segments. To enable synthesis with an instruction-edited voice, EDICT combines reference audio with structured timbre edits to generate an edited reference in codec-token space. This representation serves as a shared voice anchor for a frozen TTS backbone, allowing segment-specific natural-language instructions to guide expression. To accommodate instruction changes while supporting acoustic continuity, EDICT rebuilds the KV cache at each segment boundary, refreshing instruction conditioning while retaining bounded acoustic context from previously generated speech. Evaluations on our proposed TimbreEdit-Bench and IntraTTS-Bench demonstrate improved timbre editing and a favorable balance between local instruction adherence, speaker consistency, and transition quality. Audio demos are available.",
+  "abstractSha256": "1f067ddea92e3d29297c1963bb3aa4afbb0bf074e639dc1c7f306e22c62b1037",
+  "arxivId": "2610.11437",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.11437v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "偏好优化",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "task",
+          "id": "task.prosody-style-control",
+          "label": "韵律与风格控制"
+        },
+        {
+          "facet": "method",
+          "id": "method.preference-optimization",
+          "label": "偏好优化"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "偏好优化",
+      "primaryMethodId": "method.preference-optimization",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "National University of Singapore"
+      ],
+      "name": "Junchuan Zhao"
+    },
+    {
+      "affiliations": [
+        "LIGHTSPEED"
+      ],
+      "name": "Chenglin Xu"
+    },
+    {
+      "affiliations": [
+        "National University of Singapore"
+      ],
+      "name": "Wei Zeng"
+    },
+    {
+      "affiliations": [
+        "Nanyang Technological University"
+      ],
+      "name": "Haoyang Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yiwen Guo"
+    },
+    {
+      "affiliations": [
+        "National University of Singapore"
+      ],
+      "name": "Ye Wang"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "EDICT 用可训练的音色编辑器先产生共享的已编辑编解码参考，再用冻结语音合成主干分段生成并在边界重建 KV 缓存，TimbreEdit 与 IntraTTS 评测显示其编辑准确率和局部指令跟随更好，但内容误识率和未提及属性保持存在代价。",
+  "originalTitle": "Edit Who Speaks, Control How They Speak: Global Timbre Editing and Local Instruction Control for TTS",
+  "pdfUrl": "https://arxiv.org/pdf/2610.11437v1.pdf",
+  "readerTitle": "先改音色再分段导演：EDICT 如何兼顾全局音色编辑与句内表达控制",
+  "schemaVersion": 2
+}

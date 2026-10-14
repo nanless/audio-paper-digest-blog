@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.10121v1",
+  "abstract": "Previous speech deepfake detectors can adaptively capture spectro-temporal dependencies through graph attention, yet they largely overlook the co-variation between spectral and temporal representations. To address this gap, we construct a normalized affinity graph from their joint covariance and apply polynomial graph filtering to capture higher-order covariance-induced dependencies. We first develop Cov-ST to isolate the contribution of covariance-based relational modeling. Although it improves detection performance, its sensitivity to the polynomial order suggests limited robustness when covariance relations are modeled alone. We therefore propose DuRe-ST, which jointly exploits covariance-induced and graph-attention-induced relations to capture complementary second-order co-variation and adaptive spectro-temporal dependencies. Experiments show that DuRe-ST achieves an average relative EER reduction of 25.9% over XLSR-AASIST on the ASVspoof benchmarks and 28.4% across four cross-dataset benchmarks with only 4-8k additional trainable back-end parameters. It further outperforms the strongest publicly available comparison models by 2.2-13.2% in relative EER on four benchmarks, while remaining smaller than the publicly available models considered.",
+  "abstractSha256": "d6fdc13018b7e52f89825940b2f7296cf4b325d67925474c8e3e8190c17ac9de",
+  "arxivId": "2610.10121",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.10121v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "图神经网络",
+    "primaryTask": "音频深度伪造检测",
+    "rankBucket": "前50%",
+    "score": 6.4,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-deepfake",
+          "label": "音频深度伪造检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.gnn",
+          "label": "图神经网络"
+        },
+        {
+          "facet": "method",
+          "id": "method.attention",
+          "label": "注意力机制"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "图神经网络",
+      "primaryMethodId": "method.gnn",
+      "primaryTask": "音频深度伪造检测",
+      "primaryTaskId": "task.audio-deepfake",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shaole Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Siqing Qin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Youzhi Tu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kong Aik Lee"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对合成语音破坏自然频谱-时间协同变化的问题，论文用频谱节点和时间节点之间的联合协方差建图并做多项式图滤波，再与图注意力分支互补融合，在 ASVspoof 与四个跨数据集上降低等错误率，代价是只增加约 4 至 8k 的后端可训练参数和高阶滤波可能引入冗余关系。",
+  "originalTitle": "DuRe-ST: Dual-Relation Spectro-Temporal Modeling for Speech Deepfake Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2610.10121v1.pdf",
+  "readerTitle": "同时看频谱和时间如何一起变化：DuRe-ST 的语音伪造检测",
+  "schemaVersion": 2
+}

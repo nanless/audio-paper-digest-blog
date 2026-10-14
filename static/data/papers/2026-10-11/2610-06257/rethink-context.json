@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.06257v1",
+  "abstract": "Foundation models can generate scientific code, but authoring a scientific simulator (an executable program encoding hypotheses about how mechanisms generate observable signals) requires iterative refinement. Scientific adequacy rarely admits a unique implementation or exact test, so simulators must instead be judged against limited real observations. We study this setting as scientific simulator authoring under weak empirical feedback, where distributional comparisons between simulated and real signals guide revision, and the target is the simulator itself rather than only its generated samples. We introduce SimAuthor, a persistent authoring harness that retains and revises executable simulators, separates scalar search scores from structured discrepancy feedback, and accumulates reusable implementation mechanisms. We evaluate SimAuthor on six biomedical tasks spanning cardiac and respiratory audio, photoplethysmography (PPG), and electrocardiography (ECG). Under a fixed 100-attempt budget, SimAuthor outperforms PUCT score search on all six tasks, generally outperforms textual-strategy optimization, and achieves the highest endpoint score on five of six. The authored simulators also improve on unseen recordings, transfer to independent pretrained representations, and yield substantial out-of-distribution gains in downstream ECG classification. Finally, 111 of 138 audited revisions alter program structure and account for 86.1% of the signed score improvement. These results suggest that persistent revision can progressively convert foundation-model knowledge into better executable scientific simulators from limited empirical evidence.",
+  "abstractSha256": "0e99a80e11d349c4108b67bb846ee086826cde26b6ad52e8045fb45699eb1dda",
+  "arxivId": "2610.06257",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.06257v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "工具增强与约束解码",
+    "primaryTask": "音频生成",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-generation",
+          "label": "音频生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.tool-augmentation",
+          "label": "工具增强与约束解码"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.biosignal",
+          "label": "生理信号"
+        },
+        {
+          "facet": "application",
+          "id": "application.medical",
+          "label": "医疗音频"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "工具增强与约束解码",
+      "primaryMethodId": "method.tool-augmentation",
+      "primaryTask": "音频生成",
+      "primaryTaskId": "task.audio-generation",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yishan Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ran Piao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mathias Funk"
+    },
+    {
+      "affiliations": [
+        "Eindhoven University of Technology"
+      ],
+      "name": "Aaqib Saeed"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "SimAuthor 把一次写出的仿真器当作可保留改写的对象，用标量搜索分数选改谁、用结构化差异报告指导改什么并复用机制库，在 100 次尝试内在六个心脏呼吸光电心电任务上提升分布相似度，但代价是约 3.8 倍词元开销且结论只在固定评估器和有限参考集下成立。",
+  "originalTitle": "SimAuthor: Harnessing Foundation Models for Persistent Scientific Simulator Authoring",
+  "pdfUrl": "https://arxiv.org/pdf/2610.06257v1.pdf",
+  "readerTitle": "SimAuthor：在微弱实证反馈下持续改写可执行生物医学仿真器",
+  "schemaVersion": 2
+}

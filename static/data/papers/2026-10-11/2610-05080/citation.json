@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.05080v1",
+  "arxivId": "2610.05080",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.05080v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hongfei Du"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jiacheng Shi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yanfu Zhang"
+    },
+    {
+      "affiliations": [
+        "Department of Computer Science, William & Mary, Williamsburg, USA"
+      ],
+      "name": "Ye Gao"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.05080v1",
+  "originalTitle": "Tracing a Sparse Emotion-Control Circuit in LLM-Based Text-to-Speech",
+  "pdfUrl": "https://arxiv.org/pdf/2610.05080v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

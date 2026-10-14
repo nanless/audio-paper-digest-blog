@@ -1,0 +1,59 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.04079v1",
+  "arxivId": "2610.04079",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.04079v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lara Gauder"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Martin Bernardo Meza"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Javier Krick"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Alejandro Masin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Luciana Benotti"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Marcos Luis Pietto"
+    },
+    {
+      "affiliations": [
+        "organization=Instituto de Investigación en Ciencias de la Computación, UBA-CONICET, addressline=Pabellón Cero+Infinito, Ciudad Universitaria, city=Buenos Aires, postcode=C1428EGA, country=Argentina",
+        "organization=Departamento de Computación, Facultad de Ciencias Exactas y Naturales, Universidad de Buenos Aires, addressline=Pabellón Cero+Infinito, Ciudad Universitaria, city=Buenos Aires, postcode=C1428EGA, country=Argentina",
+        "organization=Universidad Nacional de Córdoba, addressline=Pabellón Argentina, Av. Haya de la Torre s/n, Ciudad Universitaria, city=Córdoba, postcode=X5000HUA, country=Argentina",
+        "organization=Instituto de Educación, Universidad Nacional de Hurlingham, UNAHUR-CONICET, addressline=Tte. Origone 101, Villa Tesei, city=Hurlingham, postcode=B1688, state=Buenos Aires, country=Argentina"
+      ],
+      "name": "Luciana Ferrer"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.04079v1",
+  "originalTitle": "A study on human-agent teaming through spoken interaction: the impact of human individual traits and agent characteristics",
+  "pdfUrl": "https://arxiv.org/pdf/2610.04079v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

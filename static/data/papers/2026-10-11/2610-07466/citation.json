@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.07466v1",
+  "arxivId": "2610.07466",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.07466v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Arm Inc., USA"
+      ],
+      "name": "Payal Mohapatra"
+    },
+    {
+      "affiliations": [
+        "Northwestern University, USA"
+      ],
+      "name": "Haodong Yang"
+    },
+    {
+      "affiliations": [
+        "Northwestern University, USA"
+      ],
+      "name": "Yueyuan Sui"
+    },
+    {
+      "affiliations": [
+        "Northwestern University, USA"
+      ],
+      "name": "Stephen Xia"
+    },
+    {
+      "affiliations": [
+        "Arm Inc., USA"
+      ],
+      "name": "Benjamin Lundell"
+    },
+    {
+      "affiliations": [
+        "Northwestern University, USA"
+      ],
+      "name": "Qi Zhu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.07466v1",
+  "originalTitle": "Efficient Multimodal Inference through Adaptive Acquisition and Sequential Fusion",
+  "pdfUrl": "https://arxiv.org/pdf/2610.07466v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

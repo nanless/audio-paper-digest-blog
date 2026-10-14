@@ -1,0 +1,108 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.11524v1",
+  "abstract": "Existing singing pitch correction approaches rely on target melodies or accompaniment tracks, which may be unavailable in practice. We formulate reference-free singing pitch correction as a music-constrained sequence editing task that determines whether and how each note should be corrected from the input performance alone. A pretrained symbolic music encoder with lightweight singing-domain adapters produces contextual representations of the singing MIDI. Based on these representations, two lightweight correction heads jointly model correction necessity and signed pitch modification through a factorized pitch-editing distribution. An input-dependent tonal prior derived from the estimated key distribution then reranks the candidate offsets, favoring tonally compatible corrections without target melodies or ground-truth key annotations. Experiments on real paired amateur and professional singing recordings show that the method improves note-level pitch accuracy from 73.25 to 83.43, outperforming a context-based baseline by 3.99 percentage points while balancing error correction and preservation of correctly performed notes.",
+  "abstractSha256": "a46db2bf6d3237af257204728db0e0dc495524a75233efad6e63de0830c00c86",
+  "arxivId": "2610.11524",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.11524v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "Adapter",
+    "primaryTask": "语音编辑",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-editing",
+          "label": "语音编辑"
+        },
+        {
+          "facet": "method",
+          "id": "method.adapter",
+          "label": "Adapter"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "task",
+          "id": "task.pitch-melody",
+          "label": "音高与旋律提取"
+        },
+        {
+          "facet": "method",
+          "id": "method.subjective-evaluation",
+          "label": "主观评测"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "Adapter",
+      "primaryMethodId": "method.adapter",
+      "primaryTask": "语音编辑",
+      "primaryTaskId": "task.speech-editing",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Biao Dong"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jiajun Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Binzhen Zhu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mingwei Yi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tong Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuanhao Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jiqing Han"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yongjun He"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "该文把无参考修音做成逐音符序列编辑，用冻结 MusicBERT 加歌唱适配器理解上下文、两个修正头分开判断修不修和修多少、再用输入自身估计的调性先验重排候选，在真实业余对专业配对上把音高准确率从 73.25% 提到 83.43%，代价是 3.19% 的原本正确音符被误改。",
+  "originalTitle": "Reference-Free Singing Pitch Correction via Music-Constrained Sequence Editing",
+  "pdfUrl": "https://arxiv.org/pdf/2610.11524v1.pdf",
+  "readerTitle": "无参考清唱跑调修正：只听自己如何判断该不该修、修几度",
+  "schemaVersion": 2
+}

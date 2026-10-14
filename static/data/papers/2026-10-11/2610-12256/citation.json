@@ -1,0 +1,45 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.12256v1",
+  "arxivId": "2610.12256",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.12256v1",
+  "authors": [
+    {
+      "affiliations": [
+        "KAIST",
+        "Sony Group Corporation"
+      ],
+      "name": "Youngtaek Oh"
+    },
+    {
+      "affiliations": [
+        "Sony Group Corporation"
+      ],
+      "name": "Qiyu Wu"
+    },
+    {
+      "affiliations": [
+        "Sony Group Corporation"
+      ],
+      "name": "Hiromi Wakaki"
+    },
+    {
+      "affiliations": [
+        "KAIST"
+      ],
+      "name": "Junmo Kim"
+    },
+    {
+      "affiliations": [
+        "Sony Group Corporation"
+      ],
+      "name": "Yuki Mitsufuji"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.12256v1",
+  "originalTitle": "Syn-Omni: Structured Specialization and Progressive Collaboration for Omnimodal Embeddings",
+  "pdfUrl": "https://arxiv.org/pdf/2610.12256v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

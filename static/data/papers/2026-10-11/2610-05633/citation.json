@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.05633v1",
+  "arxivId": "2610.05633",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.05633v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Södertörn University, Alfred Nobels allé 7, 141 89 Huddinge, Sweden"
+      ],
+      "name": "Hartmut Koenitz"
+    },
+    {
+      "affiliations": [
+        "Saint Martin’s Institute of Higher Education, Hamrun, Malta"
+      ],
+      "name": "Jonathan Barbara"
+    },
+    {
+      "affiliations": [
+        "Stockholm University, SE-106 91 Stockholm, Sweden"
+      ],
+      "name": "Mirjam Palosaari Eladhari"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.05633v1",
+  "originalTitle": "The GenAI4IDN Benchmark 3.0 - a Public Tool to Assess Generative AI Tools for the Design of Interactive Digital Narratives",
+  "pdfUrl": "https://arxiv.org/pdf/2610.05633v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

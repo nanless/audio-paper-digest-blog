@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.06956v1",
+  "abstract": "Large speech language models have demonstrated strong capabilities in unified cross-modal understanding and generation, yet paralinguistic cues, especially emotion, remain difficult to preserve. Existing systems typically rely on entangled acoustic representations, which allow the underlying language model to depend excessively on recovered lexical content instead of grounding its behavior in acoustic-prosodic evidence. We address this limitation with EMODE, an emotion-aware speech language model built around \\textbf{Dynamic Para-Semantic Experts (DPSE)}. DPSE decomposes continuous speech features into semantic and paralinguistic pathways, routes them dynamically, and fuses them before integration into the language model. To turn this structural decomposition into functional specialization, EMODE is trained with a three-stage curriculum consisting of semantic warm-up, paralinguistic activation, and joint refinement, guided by Orthogonal Expert Guidance (OEG), Semantic-to-Acoustic Alignment (SAA), and Gating Diversity Regularization (GDR). Experiments on SER test, empathetic response evaluation, and the newly constructed bilingual MEPA benchmark show that EMODE improves the balance between lexical fidelity and emotional sensitivity, strengthens affect-grounded response generation, and exposes the value of explicit para-semantic factorization for robust cross-corpus emotion understanding.",
+  "abstractSha256": "e745c8fb335f7efc980e7031e2df8b53168845d97f35adb872229d8c31e24d3c",
+  "arxivId": "2610.06956",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.06956v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "混合专家模型",
+    "primaryTask": "语音情感识别",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.emotion-recognition",
+          "label": "语音情感识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.moe",
+          "label": "混合专家模型"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-dialogue",
+          "label": "语音对话系统"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "混合专家模型",
+      "primaryMethodId": "method.moe",
+      "primaryTask": "语音情感识别",
+      "primaryTaskId": "task.emotion-recognition",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Zhejiang University, Hangzhou, China"
+      ],
+      "name": "Jianan Pan"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University, Hangzhou, China"
+      ],
+      "name": "Yiwen Gu"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University, Hangzhou, China"
+      ],
+      "name": "Xinze Li"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University, Hangzhou, China"
+      ],
+      "name": "Rui Wang"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University, Hangzhou, China"
+      ],
+      "name": "Kejie Huang"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "EMODE 针对语音大模型容易只看文字内容而忽略韵律情感的问题，用语义和副语言两条专家通路加三阶段训练做情感语音建模，在九个数据集平均准确率 72.10% 上最高，但合成可控测试显示中文组级别稳定性仍明显弱于英文。",
+  "originalTitle": "EMODE: Dynamic Para-Semantic Experts for Emotion-Aware Speech Language Modeling",
+  "pdfUrl": "https://arxiv.org/pdf/2610.06956v1.pdf",
+  "readerTitle": "EMODE：用两条专家通路同时保住说了什么和怎么说",
+  "schemaVersion": 2
+}

@@ -1,0 +1,72 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.08846v1",
+  "abstract": "Contrastive Language--Audio Pretraining (CLAP) learns a joint text--audio representation space, which enables zero-shot audio understanding from natural-language descriptions. However, its English-only text encoder restricts CLAP to tasks and datasets expressed in English. We present Indic-CLAP, a multilingual text--audio model that extends CLAP to nine Indic languages spoken by over a billion people. Exploiting CLAP's dual-encoder structure, we propose to train only an Indic text encoder by distillation while keeping the audio encoder frozen, using machine-translated AudioCaps captions. We compare distillation from CLAP's text encoder, audio encoder, and a novel hybrid objective combining both. Our evaluation shows that the Indic-CLAP encoder inherits the cross-modal alignment from the CLAP teacher, as evidenced by the performance on cross-modal retrieval and zero-shot classification tasks. Further, we study the cross-modal alignment using modality gap analysis, which explains the performance trends.",
+  "abstractSha256": "5a75475cb2c368af6a86235ca5ca94a58e76e7cc3e382e84265b4defaa188950",
+  "arxivId": "2610.08846",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.08846v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "知识蒸馏",
+    "primaryTask": "音频检索",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-retrieval",
+          "label": "音频检索"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.cross-lingual",
+          "label": "跨语言"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "知识蒸馏",
+      "primaryMethodId": "method.distillation",
+      "primaryTask": "音频检索",
+      "primaryTaskId": "task.audio-retrieval",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sanat Kumar Agrawal"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Srikanth Raj Chetupalli"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文要解决英文 CLAP 无法理解印度语言描述的问题，只训练一个基于 XLM-RoBERTa 的多语言文本编码器去对齐冻结的 CLAP 空间，最强证据是混合目标在 AudioCaps 检索上超过教师而翻译质量和模态间隙决定了结论成立的边界。",
+  "originalTitle": "Indic-CLAP: Text--Audio Understanding in Indic Languages via Cross-Lingual Distillation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.08846v1.pdf",
+  "readerTitle": "把英文声音理解模型搬到九种印度语言：只训练文本编码器",
+  "schemaVersion": 2
+}

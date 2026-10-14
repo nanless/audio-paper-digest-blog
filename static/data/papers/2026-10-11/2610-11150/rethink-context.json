@@ -1,0 +1,121 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.11150v1",
+  "abstract": "Recent advances in large audio language models (LALMs) have driven the development of natural and intelligent speech interaction systems. Such systems need to model complex conversational behaviors, including turn-taking, overlapping speech, and speaker coordination. Multi-party conversations provide a realistic setting for studying these behaviors, yet existing Mandarin conversational corpora often lack synchronized participant-level speech tracks and comprehensive annotations. In this work, we introduce SmoothConv and DuplexConv, two complementary Mandarin multi-party conversational speech corpora totaling 2,100 hours. SmoothConv provides human-verified conversations for reliable analysis and evaluation, while DuplexConv offers large-scale automatically annotated conversations through a scalable pipeline for model training. Both corpora provide synchronized participant-level speech tracks and multi-dimensional fine-grained annotations. We further release the SmoothConv Benchmark and evaluate these resources on speech separation, multi-speaker automatic speech recognition (MSASR), and turn detection tasks. Experimental results demonstrate the utility of the proposed resources for multi-party speech interaction modeling. The datasets, benchmark, and related resources are publicly available.",
+  "abstractSha256": "82e027b0d45cc96c385e44d31d031df9d44818fe56666d684189539f26ce2895",
+  "arxivId": "2610.11150",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.11150v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "数据集构建",
+    "primaryTask": "语音交互",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-interaction",
+          "label": "语音交互"
+        },
+        {
+          "facet": "method",
+          "id": "method.dataset-curation",
+          "label": "数据集构建"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "数据集构建",
+      "primaryMethodId": "method.dataset-curation",
+      "primaryTask": "语音交互",
+      "primaryTaskId": "task.speech-interaction",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chengyou Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mingchen Shao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chunjiang He"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zeyu Zhu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jierui Guo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bingshen Mu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zikai Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hanke Xie"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuhang Dai"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhou Zhu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lei Xie"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "该工作用 100 小时人工核验对话做可靠评测、用 2000 小时自动标注对话做大规模训练，两路都保留同步的分人音轨和多维标注，并在分离、识别与轮次检测上验证了互补价值，但跨域远场与合成等待样本仍有限制。",
+  "originalTitle": "SmoothConv and DuplexConv: Complementary Mandarin Multi-Party Conversational Speech Corpora for Speech Interaction",
+  "pdfUrl": "https://arxiv.org/pdf/2610.11150v1.pdf",
+  "readerTitle": "多人自然对话怎么录下来、标清楚并用来做交互",
+  "schemaVersion": 2
+}

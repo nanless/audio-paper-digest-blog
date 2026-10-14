@@ -1,0 +1,86 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.39963",
+  "abstract": "Reference listening is a common strategy in music production, but current comparison tools often obscure a key human judgment: deciding what should be compared. We present Diptych, an AI-assisted system that lets users define comparison scope across whole tracks or independently selected segments, while inspecting structured audio features and scope-specific AI interpretations. We evaluated Diptych in a within-participants study with 12 musicians, complemented by source-blinded ratings from four expert listeners. Participants used the system to surface additional differences, nine of ten of which received at least partial expert support, and reported good usability and greater clarity about possible next steps. These findings suggest that AI support for creative comparison should prioritize user-defined scope, inspectable evidence, and actionable guidance, while avoiding authoritative judgments that exceed what the evidence can support.",
+  "abstractSha256": "3a8e6007998c239294858b0303062983e214d5547a2a4516b4daeb45223e4bec",
+  "arxivId": "2609.39963",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "用户研究",
+    "primaryTask": "音乐分析",
+    "rankBucket": "前50%",
+    "score": 6.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-understanding",
+          "label": "音乐分析"
+        },
+        {
+          "facet": "method",
+          "id": "method.user-study",
+          "label": "用户研究"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.llm",
+          "label": "大语言模型"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "用户研究",
+      "primaryMethodId": "method.user-study",
+      "primaryTask": "音乐分析",
+      "primaryTaskId": "task.music-understanding",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Zhejiang University, Hangzhou, Zhejiang, China",
+        "Singapore University of Technology and Design, Singapore"
+      ],
+      "name": "Chongjun Zhong"
+    },
+    {
+      "affiliations": [
+        "Singapore University of Technology and Design, Singapore"
+      ],
+      "name": "Abhinaba Roy"
+    },
+    {
+      "affiliations": [
+        "Singapore University of Technology and Design, Singapore"
+      ],
+      "name": "Archishman Ghosh"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University, Hangzhou, Zhejiang, China"
+      ],
+      "name": "Kejun Zhang"
+    },
+    {
+      "affiliations": [
+        "Singapore University of Technology and Design, Singapore"
+      ],
+      "name": "Dorien Herremans"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对参考试听中先要决定比哪两段的问题，Diptych 让用户自定整曲或自选片段的比较范围，再用 59 个结构化音频特征加语言模型解释差异，12 名音乐人单会话实验显示新增 10 条判断中有 9 条获双专家至少部分支持，但原有 38 对判断的双专家完全支持数从 24 变为 23，可用性均分 74.79 分而判断正确率并未整体提升。",
+  "originalTitle": "Diptych: Scoped, AI-Interpreted Comparison for Reference Listening in Music Production",
+  "pdfUrl": "https://arxiv.org/pdf/2609.39963.pdf",
+  "readerTitle": "Diptych：让用户决定比什么，再让 AI 解释差异的参考试听",
+  "schemaVersion": 2
+}

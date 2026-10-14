@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.11015v1",
+  "arxivId": "2610.11015",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.11015v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Dialpad Inc."
+      ],
+      "name": "Riqiang Wang"
+    },
+    {
+      "affiliations": [
+        "Dialpad Inc."
+      ],
+      "name": "Elena Khasanova"
+    },
+    {
+      "affiliations": [
+        "Dialpad Inc."
+      ],
+      "name": "Harsh Saini"
+    },
+    {
+      "affiliations": [
+        "Dialpad Inc."
+      ],
+      "name": "Lex Konnelly"
+    },
+    {
+      "affiliations": [
+        "Dialpad Inc."
+      ],
+      "name": "Parsa Kavehzadeh"
+    },
+    {
+      "affiliations": [
+        "Dialpad Inc."
+      ],
+      "name": "Matthias Lee"
+    },
+    {
+      "affiliations": [
+        "Dialpad Inc."
+      ],
+      "name": "Mohamed Attia"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.11015v1",
+  "originalTitle": "Prompts versus Rules: Auditing and Controlling Speech Naturalness Behaviors in Voice User Simulators",
+  "pdfUrl": "https://arxiv.org/pdf/2610.11015v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

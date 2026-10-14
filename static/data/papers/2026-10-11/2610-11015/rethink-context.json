@@ -1,0 +1,97 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.11015v1",
+  "abstract": "As voice agents gain more popularity commercially, the user simulators used to evaluate the deployed agents are also being developed to include more realistic, variable, and diverse speech naturalness behaviors -- disfluency, interruption and backchanneling. The quality of the user simulator directly affects the validity of agent evaluation results. However, we find that most studies so far have not examined in detail whether the intended configuration for these behaviors is realized in the simulation. In this study, we audit the realized naturalness behaviors of tau-Voice, our own LLM-based prompting approach across three models, and our rule-based injection algorithm for disfluency, interruption, and backchanneling. We find that prompting for these behaviors is unreliable and produces speech inconsistent with the instructions, placed and distributed less naturally than the instruction implies. In contrast, our rule-based, model-free algorithm produces controllable and diverse naturalness behaviors more aligned with natural speech. Our results suggest that LLMs not purpose-trained for user simulation are not sufficient on their own to represent authentic user behavior, and that linguistically informed deterministic approaches or specialized models are needed to close the gap; auditing and reporting realized naturalness behaviors, rather than configured settings, is what makes that gap visible.",
+  "abstractSha256": "e44389cb078273f70df4c4e9bb62aa4f20a37c87f28cafeeb406fc5c7b25cc9c",
+  "arxivId": "2610.11015",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.11015v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "评测协议",
+    "primaryTask": "轮次切换",
+    "rankBucket": "前50%",
+    "score": 6.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.turn-taking",
+          "label": "轮次切换"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.llm",
+          "label": "大语言模型"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "评测协议",
+      "primaryMethodId": "method.evaluation-protocol",
+      "primaryTask": "轮次切换",
+      "primaryTaskId": "task.turn-taking",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Dialpad Inc."
+      ],
+      "name": "Riqiang Wang"
+    },
+    {
+      "affiliations": [
+        "Dialpad Inc."
+      ],
+      "name": "Elena Khasanova"
+    },
+    {
+      "affiliations": [
+        "Dialpad Inc."
+      ],
+      "name": "Harsh Saini"
+    },
+    {
+      "affiliations": [
+        "Dialpad Inc."
+      ],
+      "name": "Lex Konnelly"
+    },
+    {
+      "affiliations": [
+        "Dialpad Inc."
+      ],
+      "name": "Parsa Kavehzadeh"
+    },
+    {
+      "affiliations": [
+        "Dialpad Inc."
+      ],
+      "name": "Matthias Lee"
+    },
+    {
+      "affiliations": [
+        "Dialpad Inc."
+      ],
+      "name": "Mohamed Attia"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文审计了语音用户模拟器中口吃停顿、打断和应答声三种自然度行为的设定值与实际发生值的差距，对比了提示词控制与规则注入控制的可控性、分布形态与交互代价。",
+  "originalTitle": "Prompts versus Rules: Auditing and Controlling Speech Naturalness Behaviors in Voice User Simulators",
+  "pdfUrl": "https://arxiv.org/pdf/2610.11015v1.pdf",
+  "readerTitle": "提示词与规则：语音用户模拟器自然度行为的审计与控制",
+  "schemaVersion": 2
+}

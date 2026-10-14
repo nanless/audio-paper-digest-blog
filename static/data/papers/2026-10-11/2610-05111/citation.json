@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.05111v1",
+  "arxivId": "2610.05111",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.05111v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Guangdong University of Technology"
+      ],
+      "name": "Guimin Hu"
+    },
+    {
+      "affiliations": [
+        "University of Copenhagen"
+      ],
+      "name": "Xiang He"
+    },
+    {
+      "affiliations": [
+        "Pengcheng Laboratory"
+      ],
+      "name": "Yingjian Li"
+    },
+    {
+      "affiliations": [
+        "Tongji University"
+      ],
+      "name": "Zheng Lian"
+    },
+    {
+      "affiliations": [
+        "Guangdong University of Technology"
+      ],
+      "name": "Boyan Xu"
+    },
+    {
+      "affiliations": [
+        "Guangdong University of Technology"
+      ],
+      "name": "Ruichu Cai"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.05111v1",
+  "originalTitle": "InstMoE: Adaptive Multimodal Routing with Specialized Experts",
+  "pdfUrl": "https://arxiv.org/pdf/2610.05111v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

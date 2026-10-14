@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.02823v1",
+  "abstract": "Self-supervised learning (SSL) speech models are accurate but large. Knowledge distillation compresses them, but the student loses the teacher's noise robustness. Correlation-based distillation addresses this with two terms: cross-correlation aligning student and teacher's representations, and self-correlation decorrelating the student's features. Both the original method and De'HuBERT credited the self-correlation term without isolating it. We show the opposite. On LibriSpeech-100 distillation with held-out CHiME-3 noise at 10\\,dB, an unbiased full-dimensional probe, a Pearson-variance decomposition, a same-noise causal control, and a per-dimension analysis identify the cross-correlation diagonal as the mechanism that encourages noise invariance, lowering noise-classification accuracy from 76.98\\% to 55.02\\%, whereas adding the self-correlation term back leaves it at 55.55\\%. The self-correlation term instead reorganises the feature space and improves accuracy on the clean downstream tasks, but removes essentially no noise. Across nine speech and music tasks this yields a concrete design rule for distillation: weight the cross-correlation term for noise robustness, tune the self-correlation term for better downstream performance, and sample teacher and student noise independently.",
+  "abstractSha256": "134c3b152fba8f528b037f45b300309c4d7c5f852dd2b264bb565e2dc4f11c27",
+  "arxivId": "2610.02823",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.02823v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "知识蒸馏",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "知识蒸馏",
+      "primaryMethodId": "method.distillation",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Fabian Ritter-Gutierrez"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nancy F. Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Eng Siong Chng"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "该文用探针偏差诊断和同噪声对照证明互相关对角项在独立噪声下抑制噪声方差，而自相关项只重排特征空间以提升干净下游任务准确率，但音乐中依赖音高音色的任务仍会受损。",
+  "originalTitle": "What Actually Makes Correlation-Based SSL Distillation Noise-Robust? A Mechanistic Correction",
+  "pdfUrl": "https://arxiv.org/pdf/2610.02823v1.pdf",
+  "readerTitle": "相关性蒸馏的噪声鲁棒性到底来自哪一项",
+  "schemaVersion": 2
+}

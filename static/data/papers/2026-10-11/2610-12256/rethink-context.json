@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.12256v1",
+  "abstract": "Omnimodal embeddings naturally involve both shared representations and modality-specific features across heterogeneous inputs. However, existing omnimodal embedding methods often rely on a single shared parameter space over mixed-modality data, limiting structural separation between universal and modality-specific representations. To address this, we propose Syn-Omni, a unified framework for structured omnimodal adaptation with modality specialization and controlled cross-modal collaboration. Specifically, we introduce Orthogonal Modality-Expert LoRA (OME-LoRA), which decomposes adaptation into a shared LoRA path for universal semantics and modality-expert LoRA paths for modality-aware specialization. Furthermore, Progressive Synergy Routing (PSR) enables experts to first establish modality-specific priors, then gradually interact with other modality-experts for cross-modal synergy. Evaluated across 81 diverse tasks spanning image, video, audio, and audiovisual modalities, Syn-Omni consistently outperforms omnimodal baselines, demonstrating the effectiveness of structured specialization and cross-modal progressive collaboration.",
+  "abstractSha256": "0b0fb8309fb4b0000c4d70f7472bdd0d8029af26b78035d5792986ac4ffc57ad",
+  "arxivId": "2610.12256",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.12256v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "混合专家模型",
+    "primaryTask": "音频检索",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-retrieval",
+          "label": "音频检索"
+        },
+        {
+          "facet": "task",
+          "id": "task.av-question-answering",
+          "label": "音视频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.moe",
+          "label": "混合专家模型"
+        },
+        {
+          "facet": "method",
+          "id": "method.contrastive",
+          "label": "对比学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.lora",
+          "label": "LoRA"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "混合专家模型",
+      "primaryMethodId": "method.moe",
+      "primaryTask": "音频检索",
+      "primaryTaskId": "task.audio-retrieval",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "KAIST",
+        "Sony Group Corporation"
+      ],
+      "name": "Youngtaek Oh"
+    },
+    {
+      "affiliations": [
+        "Sony Group Corporation"
+      ],
+      "name": "Qiyu Wu"
+    },
+    {
+      "affiliations": [
+        "Sony Group Corporation"
+      ],
+      "name": "Hiromi Wakaki"
+    },
+    {
+      "affiliations": [
+        "KAIST"
+      ],
+      "name": "Junmo Kim"
+    },
+    {
+      "affiliations": [
+        "Sony Group Corporation"
+      ],
+      "name": "Yuki Mitsufuji"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对图文音视频混合检索中通用语义与模态特性难分离的问题，Syn-Omni 用共享 LoRA 加模态专家 LoRA 与渐进路由在 81 个任务上整体更均衡，3B 整体 Hit@1 达 49.4%，代价是专家路径推理时不能合并带来延迟增加。",
+  "originalTitle": "Syn-Omni: Structured Specialization and Progressive Collaboration for Omnimodal Embeddings",
+  "pdfUrl": "https://arxiv.org/pdf/2610.12256v1.pdf",
+  "readerTitle": "Syn-Omni：共享与专家分工加渐进协作的全模态检索向量",
+  "schemaVersion": 2
+}

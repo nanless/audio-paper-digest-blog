@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.04004v1",
+  "abstract": "Large Audio Language Models (LALMs) are prone to hallucinating and over-relying on text priors when simultaneously presented with audio and text inputs. To mitigate these hallucinations, we propose utilizing the multimodal Direct Preference Optimization (mDPO) objective, which forces the model to ground its generation in the acoustic input by contrasting intact and distorted audio counterparts. We extend this preference learning framework to the audio domain by applying a variety of acoustic perturbations. Evaluating the Qwen2-Audio backbone across the DCASE 2025 Challenge and AH Existence datasets, we demonstrate that extending mDPO to LALMs significantly enhances temporal reasoning in the complex DCASE dataset, and improves performance on basic existence verification in the AH benchmark. We identify temporal reversal, frequency masking, and random noise as the most effective perturbations. Ultimately, our approach achieves an absolute accuracy improvement of 14.0% on the DCASE 2025 dataset and 27.4% on AH Existence.",
+  "abstractSha256": "6ab7bfc3acb6e44b4bc073bd5a86f50ce184ae260fda5da597c05506cb472f77",
+  "arxivId": "2610.04004",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.04004v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "偏好优化",
+    "primaryTask": "音频问答",
+    "rankBucket": "前50%",
+    "score": 5.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-question-answering",
+          "label": "音频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.preference-optimization",
+          "label": "偏好优化"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.hallucination-faithfulness",
+          "label": "幻觉与忠实度"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.audio-language",
+          "label": "音频大模型"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "偏好优化",
+      "primaryMethodId": "method.preference-optimization",
+      "primaryTask": "音频问答",
+      "primaryTaskId": "task.audio-question-answering",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bebe Cosgrove"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Aaron Isidore Grace"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Weiran Wang"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对音频大模型偏向文本先验而幻觉的问题，该文用完整与扰动音频对比的多模态偏好优化微调 Qwen2-Audio，在 DCASE 问答与 AH 存在性验证上提升准确率，但结论只在给定划分、提示与扰动配置下成立且伴随三倍数据等代价。",
+  "originalTitle": "Hallucination Reduction for LLM-Based Audio Understanding via Multimodal Direct Preference Optimization",
+  "pdfUrl": "https://arxiv.org/pdf/2610.04004v1.pdf",
+  "readerTitle": "用带扰动音频的偏好优化让音频大模型更听声音",
+  "schemaVersion": 2
+}
