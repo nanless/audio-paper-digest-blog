@@ -20,7 +20,7 @@ paper_digest_primary_task: "目标说话人提取"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.target-speaker","label":"目标说话人提取"},{"facet":"method","id":"method.neural-codec","label":"神经编解码与离散单元"},{"facet":"method","id":"method.autoregressive","label":"自回归模型"},{"facet":"signal","id":"signal.speech","label":"语音"}]
 paper_digest_primary_method: "神经编解码与离散单元"
 paper_digest_score: 7.0
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "该文研究编解码器词元怎样用于目标说话人提取，提出判别语义分支加生成声学分支的分工结构，在 Libri2Mix 上把可比基线的 dWER 从 0.388 降到 0.118，代价是依赖两阶段结构和冻结的 DualCodec 编解码器。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Wang Xiang"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Bang Zeng"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Ming Li"}]
 paper_digest_abstract_sha256: "7628d685ae7286b94b9eb8d31f1ca1ee9572aa26fb3008837af874262591082c"
-paper_digest_sidecars: {"citation.bib":{"sha256":"8e30a941470e59281e36db6955a1b547d46455fc2058ee44739c0ba833dd9a54","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16858/citation.bib"},"citation.json":{"sha256":"dac1a4314e6760d11ce1db745b967a990570f70703589aeec176f97d5b40f93b","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16858/citation.json"},"citation.ris":{"sha256":"ed031fbfff0fccd358150af1810ff9fe21357f094a90bb17bfc8927d8a6e1309","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16858/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"7daef38b35d9ecd2a9418fc54e18f3049dbac9c4ead475284bcce002b243208f","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16858/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"8e30a941470e59281e36db6955a1b547d46455fc2058ee44739c0ba833dd9a54","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16858/citation.bib"},"citation.json":{"sha256":"dac1a4314e6760d11ce1db745b967a990570f70703589aeec176f97d5b40f93b","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16858/citation.json"},"citation.ris":{"sha256":"ed031fbfff0fccd358150af1810ff9fe21357f094a90bb17bfc8927d8a6e1309","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16858/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"a7b2581d48f477e4f6c628f4482bfeb16aa9c14c6e4d1100e4839b41a3216590","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16858/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "9a13b5fc1f8caeb982d21d4150e49534f50d09fa9c602fe1443cb57fbd613715"
 paper_digest_api_reader_plan_sha256: "c2a4246a2e9127524b6c12f8f4e900543dc586e126809dce97da3552671ce6ac"
@@ -52,8 +52,16 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[What Makes Codec Tokens Effective for Target Speaker Extraction? A Semantic-Acoustic Disentanglement Perspective](https://arxiv.org/abs/2610.16858v1)*
 
-> 标签：#目标说话人提取 | #神经编解码与离散单元 | #自回归模型 | #语音
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[音频分离](/audio-paper-digest-blog/papers/?concept=task.audio-separation) → [语音分离](/audio-paper-digest-blog/papers/?concept=task.speech-separation) → [目标说话人提取](/audio-paper-digest-blog/papers/?concept=task.target-speaker)
+- **研究方法**：[向量量化](/audio-paper-digest-blog/papers/?concept=method.vector-quantization) → [神经编解码与离散单元](/audio-paper-digest-blog/papers/?concept=method.neural-codec)；[生成模型](/audio-paper-digest-blog/papers/?concept=method.generative) → [自回归模型](/audio-paper-digest-blog/papers/?concept=method.autoregressive)
+- **信号**：[语音](/audio-paper-digest-blog/papers/?concept=signal.speech)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**7.0/10** | 创新 1.5/2 | 技术严谨 1.2/1.5 | 实验充分 1.2/1.5 | 清晰度 0.8/1 | 影响力 1/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 

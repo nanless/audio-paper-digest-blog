@@ -20,7 +20,7 @@ paper_digest_primary_task: "语音属性识别"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.speech-attributes","label":"语音属性识别"},{"facet":"method","id":"method.evaluation-protocol","label":"评测协议"},{"facet":"method","id":"method.semi-supervised","label":"半监督学习"},{"facet":"setting","id":"setting.accent-dialect","label":"口音与方言"},{"facet":"research_focus","id":"research_focus.robustness","label":"鲁棒性"}]
 paper_digest_primary_method: "评测协议"
 paper_digest_score: 5.4
@@ -29,7 +29,7 @@ paper_digest_document_type: "应用研究"
 paper_digest_one_sentence: "论文以英语口音分类为对象，用 DistilHuBERT 做声学编码加分类头，在文件级与说话人隔离、平衡外部扩展和教师学生伪标签对照下，说明说话人重叠抬高库内成绩，而平衡外部训练只在部分折改善留出跨库表现且高置信伪标签并未带来提升。"
 paper_digest_authors: [{"affiliations":["Department of Electrical Engineering","Columbia University","New York, NY, USA"],"name":"Xu He"},{"affiliations":["Mechanical Engineering Dept. and","Electrical Engineering Dept.","Columbia University, NYC, NY, USA","and Recognition Technologies, Inc.","South Salem, NY, USA"],"name":"Homayoon Beigi"}]
 paper_digest_abstract_sha256: "9cba0a16621906b94a1744f563735fccc37de1148d271d4783007aacdcaae77a"
-paper_digest_sidecars: {"citation.bib":{"sha256":"c108faf64e458b4d74a3234257e7bb64967e2f3d953b189c8de485ee3bdfb747","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13440/citation.bib"},"citation.json":{"sha256":"eb60672d30cc44f0cf7a1e3a71c357f2ac79f77a51143362e95b933b75590da3","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13440/citation.json"},"citation.ris":{"sha256":"a16441bd6edfc8c4f83aebce29749316dc28fad00687765101ed9d144825c006","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13440/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"7b3ec38c6f0b22c7f075223c556a381a051aa56687e3e0391050c79470fb544a","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13440/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"c108faf64e458b4d74a3234257e7bb64967e2f3d953b189c8de485ee3bdfb747","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13440/citation.bib"},"citation.json":{"sha256":"eb60672d30cc44f0cf7a1e3a71c357f2ac79f77a51143362e95b933b75590da3","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13440/citation.json"},"citation.ris":{"sha256":"a16441bd6edfc8c4f83aebce29749316dc28fad00687765101ed9d144825c006","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13440/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"d2317240a92a7fa0c75038c606e9c4b28eb92e577a4b646bf3a33bd218569892","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13440/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "196837e4b80eb75a01579da263431a367dfbe8550b1b487406d96549c51a6714"
 paper_digest_api_reader_plan_sha256: "25ebbfca5aed5be96fa08d02278b36744c04091cebf7a203b428a838060a6029"
@@ -52,8 +52,17 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[Revisiting Accent Classification with DistilHuBERT: Speaker-Disjoint Evaluation and Cross-Corpus Generalization](https://arxiv.org/abs/2610.13440v1)*
 
-> 标签：#语音属性识别 | #评测协议 | #半监督学习 | #口音与方言 | #鲁棒性
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[语音属性识别](/audio-paper-digest-blog/papers/?concept=task.speech-attributes)
+- **研究方法**：[评测协议](/audio-paper-digest-blog/papers/?concept=method.evaluation-protocol)；[半监督学习](/audio-paper-digest-blog/papers/?concept=method.semi-supervised)
+- **研究条件**：[口音与方言](/audio-paper-digest-blog/papers/?concept=setting.accent-dialect)
+- **研究重点**：[鲁棒性](/audio-paper-digest-blog/papers/?concept=research_focus.robustness)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**5.4/10** | 创新 1/2 | 技术严谨 1/1.5 | 实验充分 1/1.5 | 清晰度 0.8/1 | 影响力 0.8/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 0.5/1.5
 
 

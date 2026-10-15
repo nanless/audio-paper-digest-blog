@@ -20,7 +20,7 @@ paper_digest_primary_task: "语音识别"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.asr","label":"语音识别"},{"facet":"task","id":"task.speech-translation","label":"语音翻译"},{"facet":"method","id":"method.autoregressive","label":"自回归模型"},{"facet":"method","id":"method.distillation","label":"知识蒸馏"}]
 paper_digest_primary_method: "自回归模型"
 paper_digest_score: 8.0
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "针对自回归语音识别逐词生成慢的问题，论文用复用目标模型声学与解码器表示的轻量 Speech-Draft 做草稿加并行验证，在 LibriSpeech 上 Whisper 达 1.91 倍、Conformer 达 2.43 倍且识别结果不变，代价是需额外训练草稿模块并调草稿长度。"
 paper_digest_authors: [{"affiliations":["the College of Intelligence and Computing, Tianjin University, Tianjin 300350, China"],"name":"Sen Zhang"},{"affiliations":["the College of Intelligence and Computing, Tianjin University, Tianjin 300350, China"],"name":"Xianghu Yue"},{"affiliations":["ASUS Intelligent Cloud Services, Singapore 486030"],"name":"Yiming Chen"},{"affiliations":["the College of Intelligence and Computing, Tianjin University, Tianjin 300350, China"],"name":"Wenhuan Lu"},{"affiliations":["the College of Intelligence and Computing, Tianjin University, Tianjin 300350, China"],"name":"Jianguo Wei"},{"affiliations":["the School of Artificial Intelligence, The Chinese University of Hong Kong, Shenzhen, Guangdong 518172, China, also with the Department of Electrical and Computer Engineering, National University of Singapore, Singapore 117583"],"name":"Haizhou Li"}]
 paper_digest_abstract_sha256: "7c801bcf222af147e91d69f21d6f38d74b28e94bbf1d2bc351a6709117001d50"
-paper_digest_sidecars: {"citation.bib":{"sha256":"a454c9643edffdc1e9b8f91b9f041fa806220792f90079ca621e5eea4557126f","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13506/citation.bib"},"citation.json":{"sha256":"d33af4a5af1bd20381dbefbe7681f399fafa6a0ebbbd56f030231a35f8c02319","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13506/citation.json"},"citation.ris":{"sha256":"5bad58cd26fcba16878ff2aacc6545342a40826033cf356fcee162f012c72e14","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13506/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"6c8980dd858389d19aa06e3b462c1f832a1ab33f832a8c799cc542eb2cb2aae1","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13506/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"a454c9643edffdc1e9b8f91b9f041fa806220792f90079ca621e5eea4557126f","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13506/citation.bib"},"citation.json":{"sha256":"d33af4a5af1bd20381dbefbe7681f399fafa6a0ebbbd56f030231a35f8c02319","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13506/citation.json"},"citation.ris":{"sha256":"5bad58cd26fcba16878ff2aacc6545342a40826033cf356fcee162f012c72e14","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13506/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"a62c7b7c6c42daf99b7180cd9657c615781906737b0bf1978adc5d96428c5230","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13506/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "ffb674f2ae5b6e657766fa4b2aaf5c51e39bbb2714a71904678a958186cf4ba5"
 paper_digest_api_reader_plan_sha256: "83179f5b032cbbe8990d4a714458d7831e7f5a25a06c232817949c1aa88c65a2"
@@ -52,8 +52,15 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[Lossless Inference Acceleration for ASR via EAGLE-Style Speculative Decoding](https://arxiv.org/abs/2610.13506v1)*
 
-> 标签：#语音识别 | #语音翻译 | #自回归模型 | #知识蒸馏
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[语音识别](/audio-paper-digest-blog/papers/?concept=task.asr)；[语音翻译](/audio-paper-digest-blog/papers/?concept=task.speech-translation)
+- **研究方法**：[生成模型](/audio-paper-digest-blog/papers/?concept=method.generative) → [自回归模型](/audio-paper-digest-blog/papers/?concept=method.autoregressive)；[知识蒸馏](/audio-paper-digest-blog/papers/?concept=method.distillation)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**8.0/10** | 创新 1.4/2 | 技术严谨 1.2/1.5 | 实验充分 1.3/1.5 | 清晰度 0.8/1 | 影响力 1/1.5 | 开源 1/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 

@@ -20,7 +20,7 @@ paper_digest_primary_task: "病理语音评估"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.pathological-speech","label":"病理语音评估"},{"facet":"method","id":"method.psychometrics","label":"心理测量"},{"facet":"scientific_topic","id":"scientific_topic.prosody","label":"韵律"},{"facet":"signal","id":"signal.speech","label":"语音"},{"facet":"application","id":"application.speech-biomarker","label":"语音生物标志物"}]
 paper_digest_primary_method: "心理测量"
 paper_digest_score: 6.7
@@ -29,10 +29,10 @@ paper_digest_document_type: "应用研究"
 paper_digest_one_sentence: "论文检验词级韵律能否作为抑郁与 PTSD 的行为标记，发现词特异偏差跨语境几乎不重复，而按说话人聚合后高度可重复，但仍与症状严重度无可检测关联。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Hsiang-Chen Yeh"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Aurosweta Mahapatra"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Shreeram Suresh Chandra"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Ryan L. Boyd"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Berrak Sisman"}]
 paper_digest_abstract_sha256: "b8c3d9cd3f88fbd722d39f7b87032a42f0c4f8146dda420bc7eee253c010cf68"
-paper_digest_sidecars: {"citation.bib":{"sha256":"c600eb2c00fcb077feea38778b6e7853ad26f006f39c1285b22653a6c2f7e763","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15181/citation.bib"},"citation.json":{"sha256":"c2fa575b7210cea3276543afdbeef30229f0af155609653184539a88d953982d","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15181/citation.json"},"citation.ris":{"sha256":"d3e89604d3b3e3e4a5171d76550d85ef49ef8765d2b89cacc2196a023100b909","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15181/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"564359d562543e6ba87d1460346302273f37ae118d7ad5ff6a97a2713f120000","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15181/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"c600eb2c00fcb077feea38778b6e7853ad26f006f39c1285b22653a6c2f7e763","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15181/citation.bib"},"citation.json":{"sha256":"c2fa575b7210cea3276543afdbeef30229f0af155609653184539a88d953982d","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15181/citation.json"},"citation.ris":{"sha256":"d3e89604d3b3e3e4a5171d76550d85ef49ef8765d2b89cacc2196a023100b909","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15181/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"7a142220251154f62d0dc7688e01ecff8606679a7a6b2360d705402a3baff435","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15181/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
-paper_digest_api_reader_article_sha256: "44447140fe59603b694dd20d8cebdc4b405f8dd08efffd9d02f9fa4aabbc0057"
-paper_digest_api_reader_plan_sha256: "8f979e6852c122e7ce45aa5b233f1800905412f4bb86b313bc08e4ae07d29239"
+paper_digest_api_reader_article_sha256: "5e6915e36f1413b7f3a45ca8c66536af3f4b6b28f6d8285d3426197ca1a71fdb"
+paper_digest_api_reader_plan_sha256: "76c8581fcde34e01e17b7538149abe39240378dafc07f87d3d809618a20a4af0"
 paper_digest_api_reader_source_binding_contract: "api-reader-source-bindings-v4"
 paper_digest_api_reader_source_bindings_sha256: "1bec25426db12ad644cae28b6ae0c20d8b217d21d2a12e3a1074f3fa76e71c0b"
 paper_digest_api_reader_source_table_count: 2
@@ -52,8 +52,18 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[Word-Aligned Prosody Reflects Speaker Differences More Than Depression or PTSD Severity](https://arxiv.org/abs/2610.15181v1)*
 
-> 标签：#病理语音评估 | #心理测量 | #韵律 | #语音 | #语音生物标志物
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[病理语音评估](/audio-paper-digest-blog/papers/?concept=task.pathological-speech)
+- **研究方法**：[心理测量](/audio-paper-digest-blog/papers/?concept=method.psychometrics)
+- **信号**：[语音](/audio-paper-digest-blog/papers/?concept=signal.speech)
+- **应用**：[医疗音频](/audio-paper-digest-blog/papers/?concept=application.medical) → [语音生物标志物](/audio-paper-digest-blog/papers/?concept=application.speech-biomarker)
+- **科学主题**：[韵律](/audio-paper-digest-blog/papers/?concept=scientific_topic.prosody)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**6.7/10** | 创新 1/2 | 技术严谨 1.2/1.5 | 实验充分 1.2/1.5 | 清晰度 0.8/1 | 影响力 0.5/1.5 | 开源 1.2/1.5 | 可复现 0.3/0.5 | 工程/实践 0.5/1.5
 
 
@@ -186,15 +196,15 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 这意味着若只为得到稳定的说话人基线，短语音对平均音高和能量已够，但若关心音高动态或语速，需要更长采样。临床语料在看症状前先过分析关，日记跨录音为 0.975 到 0.980，访谈访谈内为 0.844 到 0.996，4 个特征全部通过。因此后续临床零结果不太可能用声学摘要不可靠来解释。需要保留的限制是播客分半跨期但仍可能含通道成分，访谈只有一次访谈，零结果的含义只限于所用拆分条件。
 
-读图说明：下图横轴为每半区平均的词数从 5 到 200，纵轴为一致性，4 条曲线分别对应 4 个特征，灰带为词偏差重复性，虚线为 0.80，请比较曲线的爬升速度与灰带高度。
+读图说明：下图横轴为每半区平均的词数从 5 到 200，纵轴为一致性，当前图像中可辨认的是分别对应 4 个特征的 4 条曲线和 0.80 虚线，请比较曲线的爬升速度与虚线位置。原文图注还述及词偏差重复性的灰带为 0.07-0.10 并称平均不同词不能提高该估计量，但当前受控原图 PNG 中没有可辨认灰带，该数值是图注所述的研究数值，不能当作图内可见像素读数。
 
-> **看图路径：** 1. 先沿横轴从 5 词到 200 词看四条一致性曲线的上升速度；2. 再看 0.80 虚线处平均基频与能量何时越过、极差与时长为何滞后；3. 最后看底部灰带位置，理解平均不同词为何不能提高词偏差重复性
+> **看图路径：** 1. 先沿横轴从 5 词到 200 词看四条一致性曲线的上升速度；2. 再看 0.80 虚线处平均基频与能量何时越过、极差与时长为何滞后；3. 记住四条曲线均为说话人摘要一致性，图注所述 0.07-0.10 词偏差数值在当前图像中无可辨认灰带，不作像素读数
 
 ![原论文 Figure 2：Aggregation in MSP-Podcast, one corpus, two estimands.](/audio-paper-digest-blog/images/papers/2610.15181/figure-2-42dd5e0fc3e1562a.png)
 
 *论文图 2。原论文 Figure 2:：“Aggregation in MSP-Podcast, one corpus, two estimands.”。*
 
-上图可见平均基频与能量曲线上升最快并早早越过虚线，基频极差与时长曲线明显更低且爬升更慢，底部灰带停留在 0.07 到 0.10 附近，说明平均不同词不能抬高词偏差的重复性。纵轴是一致性而非改善量，曲线向下不代表性能变差，只代表词数少时排序不稳。末端 200 词处的值不能推广到任意短语音，实际部署的词数条件必须对照横轴读取。
+上图可见平均基频与能量曲线上升最快并早早越过虚线，基频极差与时长曲线明显更低且爬升更慢。4 条曲线只用于说话人摘要一致性，不混为词偏差重复性这一另一估计量。关于词偏差重复性 0.07 到 0.10 与平均不同词不能抬高该估计量的结论，保留为原文图注所述且当前图像未呈现的内容，不绘制补入灰带。纵轴是一致性而非改善量，曲线位置低只代表词数少时排序不稳。末端 200 词处的值不能推广到任意短语音，实际部署的词数条件必须对照横轴读取。
 
 **平均基频 × 稳健基频极差：** 平均基频指一个词内浊音帧基频的均值，反映音高高低；稳健基频极差指第 90 百分位与第 10 百分位之差，反映音高变化幅度。二者分工是分别刻画水平与动态，搭配能量和经音节校正的对数词时长后构成四个共享特征，组合的意义是用同一套提取代码横跨表演、自发和临床语料，使跨库比较不受特征定义改变的干扰。
 

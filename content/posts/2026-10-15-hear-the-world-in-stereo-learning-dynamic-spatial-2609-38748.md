@@ -20,7 +20,7 @@ paper_digest_primary_task: "音视频生成"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.av-generation","label":"音视频生成"},{"facet":"method","id":"method.multimodal-learning","label":"多模态学习"},{"facet":"artifact","id":"artifact.dataset","label":"数据集"},{"facet":"artifact","id":"artifact.benchmark","label":"基准测试"}]
 paper_digest_primary_method: "多模态学习"
 paper_digest_score: 8.0
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "论文要解决声源运动时左右声道空间线索不跟着画面走的问题，用运动轨迹同时约束视频和立体声音频的 StereoBind 在 StereoWorldBench 上取得更好的空间一致性，同时保持整体视听质量，结论只在该合成监督与评测条件下成立。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Hanmo Chen"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Chengcheng Liu"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Tianxiao Chen"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Zheyu Zhang"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Siming Zheng"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Jinwei Chen"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Xu Yang"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Cheng Deng"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Bo Li"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Peng-tao Jiang"}]
 paper_digest_abstract_sha256: "ba520e5e1b7ddbc261994a6bb5ad115c6afc442fbeaa3feedf3f2bf8962f44ba"
-paper_digest_sidecars: {"citation.bib":{"sha256":"d7e3e86d0c029eed8570d1aebebd33a9e1d55db01e1252e095750396d0516d2d","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2609-38748/citation.bib"},"citation.json":{"sha256":"642e4557786f240916bf9c7e5f83db7a7f181ffc29503f9f1868b9906731c3ff","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2609-38748/citation.json"},"citation.ris":{"sha256":"2af64db6e500909436e3a1e3b490287c6ae519758d35968c877c7f5628a04195","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2609-38748/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"215ef8142aa7b7b678054d095d79d4e382e33c2043ecf59a0eee833a52036cc5","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2609-38748/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"d7e3e86d0c029eed8570d1aebebd33a9e1d55db01e1252e095750396d0516d2d","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2609-38748/citation.bib"},"citation.json":{"sha256":"642e4557786f240916bf9c7e5f83db7a7f181ffc29503f9f1868b9906731c3ff","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2609-38748/citation.json"},"citation.ris":{"sha256":"2af64db6e500909436e3a1e3b490287c6ae519758d35968c877c7f5628a04195","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2609-38748/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"2497ca077ead7e1fd4038f2e64d47148900d39ce9522315a37bd270ad32e3832","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2609-38748/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "ed3be095ce15621252bcb31a3493e8a126a329026926da469e5af0c57a55dc00"
 paper_digest_api_reader_plan_sha256: "03419f2c4d5b274d468b56a8fc392649b31726ba25ca1f1a2366743052bd875d"
@@ -52,8 +52,16 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[Hear the World in Stereo: Learning Dynamic Spatial Correspondence for Immersive Joint Video-Audio Generation](https://arxiv.org/abs/2609.38748)*
 
-> 标签：#音视频生成 | #多模态学习 | #数据集 | #基准测试
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[音视频生成](/audio-paper-digest-blog/papers/?concept=task.av-generation)
+- **研究方法**：[多模态学习](/audio-paper-digest-blog/papers/?concept=method.multimodal-learning)
+- **研究产物**：[数据集](/audio-paper-digest-blog/papers/?concept=artifact.dataset)；[基准测试](/audio-paper-digest-blog/papers/?concept=artifact.benchmark)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**8.0/10** | 创新 1.5/2 | 技术严谨 1.2/1.5 | 实验充分 1.2/1.5 | 清晰度 0.8/1 | 影响力 1/1.5 | 开源 1/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 

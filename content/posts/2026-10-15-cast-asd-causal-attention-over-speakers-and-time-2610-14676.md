@@ -20,7 +20,7 @@ paper_digest_primary_task: "说话人分离标注"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.diarization","label":"说话人分离标注"},{"facet":"method","id":"method.attention","label":"注意力机制"},{"facet":"signal","id":"signal.audiovisual","label":"音视频"},{"facet":"setting","id":"setting.causal","label":"严格因果"}]
 paper_digest_primary_method: "注意力机制"
 paper_digest_score: 8.2
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "论文要解决多人同框时把声音归属到正确人脸的在线判断问题，用当前帧跨人脸比较加单人历史因果建模实现零前视，在 MSDWild 多人验证集上把竞争性误报相对降低约三分之一，代价是每个块增加 1.57M 参数和跨人脸注意的平方计算量。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Pratham Gupta"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Haotian Qi"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Tushar Sandhan"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Gabriel Skantze"}]
 paper_digest_abstract_sha256: "b2608c21f82b2f80a94f9bb7ebb21a0459326fc8f9368e64d0faff2c77ddd8b5"
-paper_digest_sidecars: {"citation.bib":{"sha256":"cf8c35c835ad04c7a232b61173c68b08a6e1017d6942e9d3193bfdb3dbff6385","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14676/citation.bib"},"citation.json":{"sha256":"faff90eaad681365d8b607567a9d94a6445bdc068be428aeddf869fb55fe5a94","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14676/citation.json"},"citation.ris":{"sha256":"d1f23396d7a0d3cb8bcedc1c5edeed2db1f00c2913135985720ac2040857e7e8","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14676/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"39211dfda4a14fae60fed56ee5b9cdf96a3646657888a8bbbdf30ddf401fdd2f","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14676/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"cf8c35c835ad04c7a232b61173c68b08a6e1017d6942e9d3193bfdb3dbff6385","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14676/citation.bib"},"citation.json":{"sha256":"faff90eaad681365d8b607567a9d94a6445bdc068be428aeddf869fb55fe5a94","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14676/citation.json"},"citation.ris":{"sha256":"d1f23396d7a0d3cb8bcedc1c5edeed2db1f00c2913135985720ac2040857e7e8","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14676/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"43f5f2867f0b5f5294702f95d54d9d1f9b83e0bea6268e670d56c580bc6a668a","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14676/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "451caaa2d0b0e48f964dfb16c663b7288b785ea6844b834f8f00763fe584ab8b"
 paper_digest_api_reader_plan_sha256: "059c60573c5f76f3772ddc97dba029823b833ceff32c7586c80879969a71e4fa"
@@ -52,8 +52,17 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[CAST-ASD: Causal Attention over Speakers and Time for Online Active Speaker Detection](https://arxiv.org/abs/2610.14676v1)*
 
-> 标签：#说话人分离标注 | #注意力机制 | #音视频 | #严格因果
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[说话人分离标注](/audio-paper-digest-blog/papers/?concept=task.diarization)
+- **研究方法**：[注意力机制](/audio-paper-digest-blog/papers/?concept=method.attention)
+- **研究条件**：[严格因果](/audio-paper-digest-blog/papers/?concept=setting.causal)
+- **信号**：[音视频](/audio-paper-digest-blog/papers/?concept=signal.audiovisual)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**8.2/10** | 创新 1.5/2 | 技术严谨 1.2/1.5 | 实验充分 1.2/1.5 | 清晰度 0.8/1 | 影响力 1/1.5 | 开源 1.2/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 

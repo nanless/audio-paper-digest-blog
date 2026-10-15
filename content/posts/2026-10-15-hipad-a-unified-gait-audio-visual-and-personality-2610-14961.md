@@ -20,7 +20,7 @@ paper_digest_primary_task: "病理语音评估"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.pathological-speech","label":"病理语音评估"},{"facet":"method","id":"method.multimodal-learning","label":"多模态学习"},{"facet":"application","id":"application.mental-health","label":"精神健康筛查"},{"facet":"model_family","id":"model_family.llm","label":"大语言模型"}]
 paper_digest_primary_method: "多模态学习"
 paper_digest_score: 5.6
@@ -29,7 +29,7 @@ paper_digest_document_type: "系统技术报告"
 paper_digest_one_sentence: "论文用同一 BiLSTM 融合结构参加六个步态与音视频抑郁检测子赛道，发现约 150 词的人格描述带来约 0.5 的赛道分提升，而领域微调大模型虽提高二分类一致性却破坏 PHQ-9 回归校准，在每队列不足百人时小容量加深集成更稳妥。"
 paper_digest_authors: [{"affiliations":["Kozminski University, Warsaw, Poland","WarsawIQ, Warsaw, Poland"],"name":"Karol Chlasta"},{"affiliations":["WarsawIQ, Warsaw, Poland"],"name":"Piotr Struzik"}]
 paper_digest_abstract_sha256: "2a5b34205b6c1c552a1904ad15b9be87fe09789896728791267dab9add884a06"
-paper_digest_sidecars: {"citation.bib":{"sha256":"57c430d9c8a4f2b032cc0466b38f710affc174fe02172233a9aad3a338a5fcf1","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14961/citation.bib"},"citation.json":{"sha256":"f68485efb91bf745dcbc0c338fc9d1733635549cdaf01a03ddc3f37b0eab4d2e","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14961/citation.json"},"citation.ris":{"sha256":"51b40f7766dde86b522c91a9265e49a1f53598476ffa6912343fdb9f1d8c8d07","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14961/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"ec1be513795fb56648848252cb71d405215229d3c06916b959e352b4bec1b1cf","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14961/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"57c430d9c8a4f2b032cc0466b38f710affc174fe02172233a9aad3a338a5fcf1","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14961/citation.bib"},"citation.json":{"sha256":"f68485efb91bf745dcbc0c338fc9d1733635549cdaf01a03ddc3f37b0eab4d2e","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14961/citation.json"},"citation.ris":{"sha256":"51b40f7766dde86b522c91a9265e49a1f53598476ffa6912343fdb9f1d8c8d07","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14961/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"70e2586b03c9da3d888049c3cba5bd6b733c4fd16a9d37fdeeaf561f236a0855","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14961/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "ce5f36bbf2765fe3810a8c71d76cc10fec54856934ab6d2d78eefe5844667eb0"
 paper_digest_api_reader_plan_sha256: "63a19747577d62e49876bcc268cbfeafa654206c458dc5b531cde54bdc1d4426"
@@ -52,8 +52,17 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[HiPAD: A Unified Gait, Audio-Visual, and Personality Fusion Network for Depression Detection, with a Hierarchical Personality Ablation and the Calibration Limits of Domain-Adapted LLMs](https://arxiv.org/abs/2610.14961v1)*
 
-> 标签：#病理语音评估 | #多模态学习 | #精神健康筛查 | #大语言模型
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[病理语音评估](/audio-paper-digest-blog/papers/?concept=task.pathological-speech)
+- **研究方法**：[多模态学习](/audio-paper-digest-blog/papers/?concept=method.multimodal-learning)
+- **应用**：[医疗音频](/audio-paper-digest-blog/papers/?concept=application.medical) → [精神健康筛查](/audio-paper-digest-blog/papers/?concept=application.mental-health)
+- **模型家族**：[大语言模型](/audio-paper-digest-blog/papers/?concept=model_family.llm)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**5.6/10** | 创新 1.2/2 | 技术严谨 1/1.5 | 实验充分 1/1.5 | 清晰度 0.7/1 | 影响力 0.4/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 

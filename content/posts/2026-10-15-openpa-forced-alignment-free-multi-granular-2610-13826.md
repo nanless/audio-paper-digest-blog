@@ -20,7 +20,7 @@ paper_digest_primary_task: "发音评估"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.pronunciation-assessment","label":"发音评估"},{"facet":"method","id":"method.end-to-end-learning","label":"端到端学习"},{"facet":"method","id":"method.lora","label":"LoRA"},{"facet":"task","id":"task.pathological-speech","label":"病理语音评估"}]
 paper_digest_primary_method: "端到端学习"
 paper_digest_score: 7.0
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "OpenPA 针对闭合跟读与开放自由作答两种条件，用 Whisper 编码器-解码器加`<score>`标记同时做单词级和语句级评分，只在 speechocean762 上训练，在域内和 MultiPA 零样本上报告了单词级 PCC 提升，代价是韵律相关语句指标未全面领先且病理语音迁移仍是探索性结论。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Fu-An Chao"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Bi-Cheng Yan"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Berlin Chen"}]
 paper_digest_abstract_sha256: "203b81577ead043d5c0d2eb28aa21afcbe4384fcd9360e36b4eecbbe7a5b707b"
-paper_digest_sidecars: {"citation.bib":{"sha256":"c3afcf84f523c83044f07bcd5f19eac1d45f79f186b831a5fa9036b907606cee","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13826/citation.bib"},"citation.json":{"sha256":"66d4d1402f5e4ed3ac512ba6c618d73872c0b914309acc7c541190a988855941","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13826/citation.json"},"citation.ris":{"sha256":"05bb250fb8459abf99a00dd573f03723a4cb68f9693de6f270be080cc859ab5d","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13826/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"ee36b8f8a4b7ca899f2f9d97d03f45b133d60a820e15d7c1878517060a9a827a","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13826/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"c3afcf84f523c83044f07bcd5f19eac1d45f79f186b831a5fa9036b907606cee","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13826/citation.bib"},"citation.json":{"sha256":"66d4d1402f5e4ed3ac512ba6c618d73872c0b914309acc7c541190a988855941","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13826/citation.json"},"citation.ris":{"sha256":"05bb250fb8459abf99a00dd573f03723a4cb68f9693de6f270be080cc859ab5d","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13826/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"e28b90ab0cfa1ace4d9c88df97b51938dad4aa15f5f7cdaa41a8bda74f2d87e6","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13826/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "ac0fecc2b8d8fb33dcd4ad698618ab2a755f5790a809839f9ddecb60f69be44a"
 paper_digest_api_reader_plan_sha256: "81f494b3f534f4ec52e358e2b09cea6e7fe92f4d9cd8d56cc115f6e637a8f73a"
@@ -52,8 +52,15 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[OpenPA: Forced-alignment-free Multi-granular Pronunciation Assessment with Mixed-transcript Adaptation](https://arxiv.org/abs/2610.13826v1)*
 
-> 标签：#发音评估 | #端到端学习 | #LoRA | #病理语音评估
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[语音属性识别](/audio-paper-digest-blog/papers/?concept=task.speech-attributes) → [发音评估](/audio-paper-digest-blog/papers/?concept=task.pronunciation-assessment)；[病理语音评估](/audio-paper-digest-blog/papers/?concept=task.pathological-speech)
+- **研究方法**：[端到端学习](/audio-paper-digest-blog/papers/?concept=method.end-to-end-learning)；[参数高效微调](/audio-paper-digest-blog/papers/?concept=method.peft) → [LoRA](/audio-paper-digest-blog/papers/?concept=method.lora)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**7.0/10** | 创新 1.5/2 | 技术严谨 1.2/1.5 | 实验充分 1.2/1.5 | 清晰度 0.8/1 | 影响力 1/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 

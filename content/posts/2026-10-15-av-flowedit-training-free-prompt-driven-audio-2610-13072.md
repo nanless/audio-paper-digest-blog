@@ -20,7 +20,7 @@ paper_digest_primary_task: "音视频生成"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.av-generation","label":"音视频生成"},{"facet":"method","id":"method.flow-matching","label":"流匹配"},{"facet":"signal","id":"signal.audiovisual","label":"音视频"}]
 paper_digest_primary_method: "流匹配"
 paper_digest_score: 5.6
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "AV-FlowEdit 针对已有音视频片段的提示词编辑问题，用冻结联合模型的源-目标流差异同时更新视频和音频，并用事件感知的多尺度低频校正抑制非目标漂移，代价是大幅语义改动会拉低与源视频的视觉相似度。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Shaohua Pan"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Xiao Liu"}]
 paper_digest_abstract_sha256: "92ab1c095e3b5e166605776f0b19aa57f09eec4710ace8b2a63ea639c170eab2"
-paper_digest_sidecars: {"citation.bib":{"sha256":"a5b4ce93acb2182597de1a8995312dbdad054fbed93ab00d03f357421843aedf","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13072/citation.bib"},"citation.json":{"sha256":"d5554f17c46a3079068df3670730681de1fea8923ed3c5b9fd4309f86a6f7ac4","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13072/citation.json"},"citation.ris":{"sha256":"63500a5c7c1b72fb540baacf76a478f1dfb118794c0561f9591da29cba9af4e7","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13072/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"c821d5099575c10e332c675bd6b41424791360b11e1b0f1d83d6e18baf98fead","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13072/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"a5b4ce93acb2182597de1a8995312dbdad054fbed93ab00d03f357421843aedf","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13072/citation.bib"},"citation.json":{"sha256":"d5554f17c46a3079068df3670730681de1fea8923ed3c5b9fd4309f86a6f7ac4","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13072/citation.json"},"citation.ris":{"sha256":"63500a5c7c1b72fb540baacf76a478f1dfb118794c0561f9591da29cba9af4e7","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13072/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"74d96fe122917e9767a071163ddf4bbac937f16d7f0efd78d2289384f7936f68","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13072/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "ec3c7a4cd533e507bd459c99db982d5c3900afb358c9c44a855858ae128f8fdf"
 paper_digest_api_reader_plan_sha256: "3adbc985970886645f10e398922662de6fa1fb22a2b49b78bc4f67867baf65c4"
@@ -52,8 +52,16 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[AV-FlowEdit: Training-Free Prompt-Driven Audio-Visual Editing with Event-Aware Spectral Trajectory Preservation](https://arxiv.org/abs/2610.13072v1)*
 
-> 标签：#音视频生成 | #流匹配 | #音视频
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[音视频生成](/audio-paper-digest-blog/papers/?concept=task.av-generation)
+- **研究方法**：[生成模型](/audio-paper-digest-blog/papers/?concept=method.generative) → [流匹配](/audio-paper-digest-blog/papers/?concept=method.flow-matching)
+- **信号**：[音视频](/audio-paper-digest-blog/papers/?concept=signal.audiovisual)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**5.6/10** | 创新 1.2/2 | 技术严谨 1/1.5 | 实验充分 1/1.5 | 清晰度 0.7/1 | 影响力 0.8/1.5 | 开源 0/1.5 | 可复现 0.1/0.5 | 工程/实践 0.8/1.5
 
 

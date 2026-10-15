@@ -20,7 +20,7 @@ paper_digest_primary_task: "音视频理解"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.av-understanding","label":"音视频理解"},{"facet":"method","id":"method.benchmark-design","label":"基准设计"},{"facet":"artifact","id":"artifact.benchmark","label":"基准测试"},{"facet":"signal","id":"signal.audiovisual","label":"音视频"}]
 paper_digest_primary_method: "基准设计"
 paper_digest_score: 6.5
@@ -29,7 +29,7 @@ paper_digest_document_type: "数据集与基准"
 paper_digest_one_sentence: "OmniCompass 针对视频理解只考问答或只用文字指代的问题，用同一目标的文字与图文配对、视觉与视听双轨道、时间定位加空间定位加问答三任务来诊断模型，并用 50 个模型的评测显示问答强而定位弱、跨指代不一致、开源模型在视听绑定上差距更大，但多帧与时间戳等输入预算会改变结论的适用条件。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Xuyang Liu"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Shihao Wang"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Xinyu Wei"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Minghan Li"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Zeqing Wang"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Zuhao Yang"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Zichen Wen"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Lei Zhang"}]
 paper_digest_abstract_sha256: "13db9163beb136411f82aad104675fc4e310400b05f430d66a6acf25834cef53"
-paper_digest_sidecars: {"citation.bib":{"sha256":"5bed202de3cf0cf8f8bfbee6d0a744fc5dc0d3c13e7106188a4f1a8a024aa0a2","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18829/citation.bib"},"citation.json":{"sha256":"6e3ae153ea02338091e6985843f94218e1b6f3790a49b70e83880fe596257544","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18829/citation.json"},"citation.ris":{"sha256":"8547d798f72656a598c8e6f45085750fb1fd556bf0ac064115f8395742b611ab","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18829/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"866ad58b4156fdc5108a43acb9559d2c112379307e8087dead583cdd8d0f0b10","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18829/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"5bed202de3cf0cf8f8bfbee6d0a744fc5dc0d3c13e7106188a4f1a8a024aa0a2","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18829/citation.bib"},"citation.json":{"sha256":"6e3ae153ea02338091e6985843f94218e1b6f3790a49b70e83880fe596257544","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18829/citation.json"},"citation.ris":{"sha256":"8547d798f72656a598c8e6f45085750fb1fd556bf0ac064115f8395742b611ab","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18829/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"35d0407104a246dcf41cf0ff5ded4b0c43ea93f32f735ca2dc3b6770613a1c75","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18829/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "d3726595fb4aed3fde0a69f95bd26b6d72cdd26183666ea4a04cb2032d3f1068"
 paper_digest_api_reader_plan_sha256: "f7f7b98fcebfde350debc4217636a0e72b386ff07d474bfcdc84826ed0e25a75"
@@ -52,8 +52,17 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[OmniCompass: A Holistic Benchmark for Omni-Modal Video Grounding and Understanding](https://arxiv.org/abs/2610.18829v1)*
 
-> 标签：#音视频理解 | #基准设计 | #基准测试 | #音视频
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[音视频理解](/audio-paper-digest-blog/papers/?concept=task.av-understanding)
+- **研究方法**：[评测协议](/audio-paper-digest-blog/papers/?concept=method.evaluation-protocol) → [基准设计](/audio-paper-digest-blog/papers/?concept=method.benchmark-design)
+- **信号**：[音视频](/audio-paper-digest-blog/papers/?concept=signal.audiovisual)
+- **研究产物**：[基准测试](/audio-paper-digest-blog/papers/?concept=artifact.benchmark)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**6.5/10** | 创新 1.5/2 | 技术严谨 1.2/1.5 | 实验充分 1.2/1.5 | 清晰度 0.8/1 | 影响力 0.5/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 

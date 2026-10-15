@@ -20,7 +20,7 @@ paper_digest_primary_task: "音频事件检测"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.event-detection","label":"音频事件检测"},{"facet":"method","id":"method.prompt-learning","label":"提示学习"},{"facet":"method","id":"method.regularization","label":"正则化"},{"facet":"signal","id":"signal.audiovisual","label":"音视频"}]
 paper_digest_primary_method: "提示学习"
 paper_digest_score: 7.5
@@ -29,12 +29,12 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "论文针对开放词汇音视事件定位中手工模板敏感与可学习提示偏向已见类的问题，用跨音频视觉的连续提示调优加语义拓扑一致性正则保持类间相似结构，在 OV-AVEBench 上已见平均 71.2% 与未见平均 61.7% 的条件下取得提升，代价是仍依赖冻结编码器与合成类别代理。"
 paper_digest_authors: [{"affiliations":["the School of Big Data and Statistics, Anhui University, Hefei 230039, China"],"name":"Hanyu Xuan"},{"affiliations":["the School of Big Data and Statistics, Anhui University, Hefei 230039, China"],"name":"Haoran Xu"},{"affiliations":["the School of Big Data and Statistics, Anhui University, Hefei 230039, China"],"name":"Min Yin"},{"affiliations":["the School of Information Science and Technology, University of Science and Technology of China, Hefei, China"],"name":"Shuo Wang"},{"affiliations":["the Shenzhen University Medical School, Shenzhen University, Shenzhen 518060, China"],"name":"Cheng Zhao"},{"affiliations":["the College of Information Technology, United Arab Emirates University, Abu Dhabi, 15551, United Arab Emirates"],"name":"Kun Li"},{"affiliations":["the Institute of Artificial Intelligence, Hefei Comprehensive National Science Center, Hefei, 230026, China"],"name":"Fei Wang"},{"affiliations":["the College of Computing and Data Science, Nanyang Technological University, Singapore 639798, Singapore"],"name":"Zhiliang Wu"},{"affiliations":["the Shenzhen University Medical School, Shenzhen University, Shenzhen 518060, China"],"name":"Guanghui Yue"},{"affiliations":["the School of Artificial Intelligence, Zhejiang University, Hangzhou 310007, China"],"name":"Hehe Fan"}]
 paper_digest_abstract_sha256: "9734a0dc09b68cddeaa14e19113cdb111b4dac392947546dba66f02d26d68993"
-paper_digest_sidecars: {"citation.bib":{"sha256":"e2df8ac5b9f7dad606e6cbdb4ce650a9b2aa7d8246b2905e3d2cfd404f13da3b","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15342/citation.bib"},"citation.json":{"sha256":"1e6d12061372fdba071eb3ae4fdb4b44c5c2e62c580172a44f73d2c06d01ee1b","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15342/citation.json"},"citation.ris":{"sha256":"4c058dfc097cb171a8ae9bb736542f6e33915f5f5ac6bfb92e69ded071deff77","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15342/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"f77fbe9e9fe35420658756f4648cd5ae172e2ebe5af8518f862384f21c033df3","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15342/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"e2df8ac5b9f7dad606e6cbdb4ce650a9b2aa7d8246b2905e3d2cfd404f13da3b","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15342/citation.bib"},"citation.json":{"sha256":"1e6d12061372fdba071eb3ae4fdb4b44c5c2e62c580172a44f73d2c06d01ee1b","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15342/citation.json"},"citation.ris":{"sha256":"4c058dfc097cb171a8ae9bb736542f6e33915f5f5ac6bfb92e69ded071deff77","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15342/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"339d9df3a250566a534393af71479b65b0ea31f04e9a93c1b87577363b7d8be4","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15342/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
-paper_digest_api_reader_article_sha256: "94d3650bde450c0ff9b8a313bcab561bbe1d29cfb05123bc34fe18f46e28e59b"
-paper_digest_api_reader_plan_sha256: "ce41663ff734a1698cc05a4ca34d124738ade861d8c70b8e81989208fc5cc2ae"
+paper_digest_api_reader_article_sha256: "a5afc4074281f15ef89e1e4070d5856b6f86dd6e1bb12fb20a7e71cbfe52d649"
+paper_digest_api_reader_plan_sha256: "0609c0785a38a215fe6365038160684d57f4e79a4f4b5fe92162cc82c40e5255"
 paper_digest_api_reader_source_binding_contract: "api-reader-source-bindings-v4"
-paper_digest_api_reader_source_bindings_sha256: "77b5f3adddc444c39185f2ca9c530b2485eaf546ec9cf14395325f495c0b8f22"
+paper_digest_api_reader_source_bindings_sha256: "7e299e8baf6ce668079c7cbd2343912f357b51c6ebb8becc7ff59fe4fd2fbfab"
 paper_digest_api_reader_source_table_count: 4
 paper_digest_api_reader_source_formula_count: 4
 paper_digest_api_reader_structured_artifacts_sha256: "fcfcf33bf1b0155d1c61a7b212d4dd86321a06813e408faa9847ff322ccaeb61"
@@ -52,8 +52,16 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[SIMPLE: Semantic Structure-Aligned Prompt Learning for Open-Vocabulary Audio-Visual Event Localization](https://arxiv.org/abs/2610.15342v1)*
 
-> 标签：#音频事件检测 | #提示学习 | #正则化 | #音视频
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[音频事件检测](/audio-paper-digest-blog/papers/?concept=task.event-detection)
+- **研究方法**：[提示学习](/audio-paper-digest-blog/papers/?concept=method.prompt-learning)；[正则化](/audio-paper-digest-blog/papers/?concept=method.regularization)
+- **信号**：[音视频](/audio-paper-digest-blog/papers/?concept=signal.audiovisual)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**7.5/10** | 创新 1.5/2 | 技术严谨 1.3/1.5 | 实验充分 1.3/1.5 | 清晰度 0.8/1 | 影响力 1.1/1.5 | 开源 0/1.5 | 可复现 0.5/0.5 | 工程/实践 1/1.5
 
 
@@ -122,11 +130,11 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 ### SIMPLE 的整体流程如何把两路信号变成片段预测
 
-SIMPLE 的全称是语义结构对齐的提示学习，整体由可学习连续提示调优与语义拓扑一致性正则两部分分工组成。前者负责自动做提示工程并产生任务自适应的文本原型，后者负责约束这些原型之间的类间关系不偏离手工提示保留的原有结构。输入处理过程是音频与视频分别经过冻结的 ImageBind 音频编码器与视觉编码器得到片段特征，再各自经过一个轻量时序 Transformer 捕捉模态内时序依赖。
+SIMPLE 的全称是语义结构对齐的提示学习，整体由可学习连续提示调优与语义拓扑一致性正则两部分分工组成。前者负责自动做提示工程并产生任务自适应的文本原型，后者负责约束这些原型之间的类间关系不偏离手工提示保留的原有结构。输入处理过程是音频与视频分别经过 ImageBind 音频编码器与视觉编码器得到片段特征，再各自经过一个轻量时序 Transformer 捕捉模态内时序依赖。按正文科学设计，3 个编码器参数冻结，只更新可学习上下文与轻量时序层等约 4.2M 参数。
 
 文本侧把可学习上下文与类别词嵌入拼接后送入冻结的文本编码器得到每个类别的原型；最后计算每段视听特征与每个类别原型的余弦相似，得到音频与视觉两张相似矩阵再等权平均融合，用交叉熵监督已见样本的预测。
 
-框架图把训练与推理的类别范围差异用不同颜色虚线框标出，是理解开放词汇的关键，读图时先沿主路径看编码与匹配，再看类别框的划分，最后看融合输出。
+框架图把训练与推理的类别范围差异用不同颜色虚线框标出，是理解开放词汇的关键，读图时先沿主路径看编码与匹配，再看类别框的划分，最后看融合输出。需要说明该原图右下角图例存在作者原图错误，雪花旁写 trainbale、火焰旁写 frozen，与正文冻结编码器、可学习提示的描述正好写反，本文保留原像素不做改动，仍按正文文字理解冻结与可学习关系。
 
 > **看图路径：** 1. 沿音频与视频两条支路看编码器到时间层再到相似矩阵的走向；2. 看中间文本支路中可学习提示如何生成类别原型并同时参与两路相似计算；3. 注意红色训练框与紫色推理框在类别范围上的差异
 
@@ -192,10 +200,11 @@ SIMPLE 的全称是语义结构对齐的提示学习，整体由可学习连续�
 
 主结果要回答的是在同一基准划分与同一四指标下，本文方法相对此前最优是否在已见与未见上同时提升。比较对象包括通用基线、闭集方法与开放词汇方法，指标分为已见、未见与总体 3 组，每组都看准确率、片段级分数、事件级分数和三者平均，数值越大越好。下表整理已见平均、未见平均与总体平均的关键对照，百分点为绝对差值。
 
-| 条件 | 指标 | 前最佳 | 本方法 | 提升 |
+| 条件 | 指标 | 前最佳 | 本方法 | 比较对象 |
 | --- | --- | --- | --- | --- |
-| 已见 | 平均值 | 68.8% | 71.2% | 2.4 pp |
-| 总体 | 平均值 | 60.2% | 60.2% | 持平 |
+| 已见 | 平均值 | 68.8% | 71.2% | 最优基线 |
+| 未见 | 平均值 | 59.9% | 61.7% | 最优基线 |
+| 总体 | 平均值 | 60.2% | 60.2% | Cue2Rule |
 
 表后解释需要把数字与条件绑在一起看。本文方法总体平均 60.2%，与 Cue2Rule 持平，但已见从 68.8% 到 71.2%、未见从 59.9% 到 61.7%，分别提升 2.4 与 1.8 个百分点，说明增益不是用已见换未见。论文还指出闭集方法在已见上可达 59.4% 到 68.6% 但未见只有 28.7% 到 34.0%，通用基线总体只有 39.3% 到 46.6%，因此跨路线直接比单数会误导，结论只在开放词汇的片段定位任务与该划分下成立。
 
@@ -211,27 +220,30 @@ SIMPLE 的全称是语义结构对齐的提示学习，整体由可学习连续�
 
 该表说明参数减半的同时总体平均从 57.8% 提升到 60.2%，且正则只在训练时激活，推理不增加开销；与 Cue2Rule 总体平均相同但避免了迭代智能体规则搜索。限制是时间是在单卡与特定早停条件下的实测，换硬件、换批量或换早停耐心值会变化，不能当作理论复杂度。
 
-下面这组定性例子展示定位边界上的具体行为，左侧是已见的长臂猿嚎叫，右侧是未见的篮球，每列分别给出音频波形、视觉画面、真值以及基线和本文方法的逐段预测，读图时先看真值再看两方法行的差异。
+下面这组定性例子展示定位边界上的具体行为，左侧是已见的长臂猿嚎叫，右侧是未见的篮球，每列分别给出音频行、视觉行、真值以及基线和本文方法的逐段预测。读图时先逐段对照音频与视觉标签是否一致，再看两方法行的差异，尤其注意中间存在单模态错位的片段。
 
-> **看图路径：** 1. 看左侧长臂猿嚎叫例子中音频与视觉错位时各方法的背景判断；2. 看右侧篮球例子中未见事件被判为背景的片段数量差异；3. 对比真值行与两方法行在边界处的连续性
+> **看图路径：** 1. 逐段对照左例音频行与视觉行的标签是否一致；2. 看第 4 段与第 5 段单模态错位时两方法行的差异；3. 对比右例真值行与两方法行在背景误判数量上的差异
 
 [![原论文 Fig. 8：Qualitative examples for seen and unseen audio-visual event categories.](https://arxiv.org/html/2610.15342v1/Figs/qualitative.png)](https://arxiv.org/html/2610.15342v1/Figs/qualitative.png)
 
 *论文图 8。原论文 Fig. 8:：“Qualitative examples for seen and unseen audio-visual event categories.”。*
 
-从像素看，左例音频与视觉存在错位，基线把开头背景判为人群嚎叫并向后延续，本文方法在开头给出背景并在只有音频的片段保持长臂猿嚎叫；右例真值多为篮球，基线多数判为背景只检出一小段篮球，本文方法在多数时间检出篮球但仍有一段判为背景。这说明方法更能区分语义相近类别并改善未见事件的连续定位，但单一样本不能推广为整体误判率，仍需结合上表的平均指标一起看。
+从本次实际像素逐段核实，左例共 5 段，第 1 段音频标签为 background、视觉标签为图内原拼写 gibon howling，真值与本文方法第 1 段均为 background；第 2 段与第 3 段音频与视觉均为 gibon howling，第 4 段音频为 gibon howling、视觉为 background，第 5 段音频为 background、视觉为 gibon howling，真值相应为背景、事件、事件、背景、背景。基线把第 1 段判为 crowd howling 并把第 4 段与第 5 段都延续判为 gibon howling；本文方法第 1 段判为背景、第 4 段判为背景、第 5 段判为 gibon howling。可见第 4 段是音频有事件而视觉无事件，本文方法按背景处理，第 5 段是视觉有事件而音频无事件，本文方法仍判为事件，因此不能把第 5 段说成只有音频的正确检出。
+
+原文称正确识别背景并对 audio-only 片段准确预测的定性文字，与图内第 4 段与第 5 段标签不完全吻合，应以像素标签为准。右例真值 5 段均为篮球，基线仅 1 段检出篮球其余判为背景，本文方法检出 4 段仅 1 段判为背景，改善了未见事件的连续定位，但单一样本不能推广为整体误判率，仍需结合平均指标一起看。
 
 ### 每个组件对分数的贡献有多大
 
-消融要回答的是 STCR、合成新类别与随机采样各自是否必要。比较的问题是固定其他条件，只开关一项看已见、未见与总体平均的变化，指标越高越好。下表整理加入 STCR 前后的未见与总体平均，以及去掉两项设计后的下降幅度，单位为百分点与百分比。
+消融要回答的是语义拓扑一致性正则、合成新类别与随机采样各自是否必要。比较的问题是固定其他条件，只开关一项看已见、未见与总体平均的变化，指标越高越好。下表整理加入正则前后的未见与总体平均，以及去掉两项设计后的下降幅度，单位为百分点与百分比。
 
 | 对比 | 未见平均 | 总体平均 | 变化 | 说明 |
 | --- | --- | --- | --- | --- |
-| 加 STCR 前 | 59.6% | 57.7% | 基线 | 仅 LCPT |
-| 完整模型 | 61.7% | 60.2% | 提升 2.1 与 2.5 pp | 加 STCR |
+| 仅可学习提示 | 59.6% | 57.7% | 基线 | 未加正则 |
+| 完整模型 | 61.7% | 60.2% | 提升 2.1 与 2.5 pp | 加正则 |
+| 去合成类别 | 59.4% | 57.8% | 下降 2.3 与 2.4 pp | 证据支持 |
 | 去随机采样 | 60.5% | 58.8% | 下降 1.2 与 1.4 pp | 改全量 |
 
-表后解释要区分两类代价。只加 LCPT 时已见平均保持 71.3% 不变，未见从 58.7% 到 59.6% 提升 0.9 个百分点，说明任务自适应缓解了固定模板与音视语义的错配；再加 STCR 后未见从 59.6% 到 61.7%、总体从 57.7% 到 60.2%，支持结构约束缓解漂移的解释。去掉合成新类别后未见与总体分别下降 2.3 与 2.4 个百分点，去掉随机采样改全量后未见从 61.7% 到 60.5%、总体从 60.2% 到 58.8%，说明类外代理与随机性都对泛化重要。限制是消融只在全量数据与默认超参数下做一次报告，未给出显著性检验，超参数交互也未穷举。
+表后解释要区分两类代价。只加可学习连续提示调优时已见平均保持 71.3% 不变，未见从 58.7% 到 59.6% 提升 0.9 个百分点，说明任务自适应缓解了固定模板与音视语义的错配；再加正则后未见从 59.6% 到 61.7%、总体从 57.7% 到 60.2%，支持结构约束缓解漂移的解释。去掉合成新类别后未见与总体分别下降 2.3 与 2.4 个百分点，去掉随机采样改全量后未见从 61.7% 到 60.5%、总体从 60.2% 到 58.8%，说明类外代理与随机性都对泛化重要。限制是消融只在全量数据与默认超参数下做一次报告，未给出显著性检验，超参数交互也未穷举。
 
 ### 训练量与超参数如何影响总体与未见分数
 

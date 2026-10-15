@@ -20,7 +20,7 @@ paper_digest_primary_task: "语音识别"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.asr","label":"语音识别"},{"facet":"method","id":"method.instruction-tuning","label":"指令微调"},{"facet":"model_family","id":"model_family.llm","label":"大语言模型"},{"facet":"research_focus","id":"research_focus.hallucination-faithfulness","label":"幻觉与忠实度"}]
 paper_digest_primary_method: "指令微调"
 paper_digest_score: 5.7
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "论文研究只给文本 N-Best 列表时大模型如何做生成式改写，用参考答案把训练分成可纠正、已正确、无答案三类来教选择与克制，在私有对话数据上从 3B 左右开始稳定优于同量随机数据，而在 CommonVoice 上结论不稳定。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Shiran Liu"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Gaohui Xu"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Sergio Burdisso"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Thibault Bañeras-Roux"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Shashi Kumar"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Petr Motlicek"}]
 paper_digest_abstract_sha256: "1f671dd8a614281907b98467de227550f2a5fed73bdb0a13812ec56a4e48538b"
-paper_digest_sidecars: {"citation.bib":{"sha256":"e4c8151448800bab519597c5a24bb9c72b61b9dbd9249d1d1f8163a96d3dcf28","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15056/citation.bib"},"citation.json":{"sha256":"5ab6615434603e8ae81c7e4b113b5e70e2a38e0071e8c6c5753bda634fa7f92a","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15056/citation.json"},"citation.ris":{"sha256":"9d3f4526723e712fa1b8bdb9eb465439c70231d689b03fcbbe36223dfe9d21a9","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15056/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"9f6109841a2c644bc579d810ae859835f83ab9a63d3b80558299f29b452e1830","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15056/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"e4c8151448800bab519597c5a24bb9c72b61b9dbd9249d1d1f8163a96d3dcf28","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15056/citation.bib"},"citation.json":{"sha256":"5ab6615434603e8ae81c7e4b113b5e70e2a38e0071e8c6c5753bda634fa7f92a","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15056/citation.json"},"citation.ris":{"sha256":"9d3f4526723e712fa1b8bdb9eb465439c70231d689b03fcbbe36223dfe9d21a9","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15056/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"b6ec0934c21c353c728bbee41d9be645b55bd70417142da47e9103757f7326e6","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15056/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "4ca8d04c55fe95eb194a5c2dca6b5db6d672ecac0d492f5c90726c1a445f06a7"
 paper_digest_api_reader_plan_sha256: "cb99d13440cb4e954a04aacaa7f839b8c3c917a6af35cd2cc045f846520a0aa8"
@@ -52,8 +52,17 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[Select or Rewrite: Oracle-Guided Fine-Tuning for Generative ASR Post-Editing from N-Best Hypotheses](https://arxiv.org/abs/2610.15056v1)*
 
-> 标签：#语音识别 | #指令微调 | #大语言模型 | #幻觉与忠实度
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[语音识别](/audio-paper-digest-blog/papers/?concept=task.asr)
+- **研究方法**：[指令微调](/audio-paper-digest-blog/papers/?concept=method.instruction-tuning)
+- **研究重点**：[幻觉与忠实度](/audio-paper-digest-blog/papers/?concept=research_focus.hallucination-faithfulness)
+- **模型家族**：[大语言模型](/audio-paper-digest-blog/papers/?concept=model_family.llm)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**5.7/10** | 创新 1/2 | 技术严谨 1/1.5 | 实验充分 1/1.5 | 清晰度 0.8/1 | 影响力 0.8/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 0.8/1.5
 
 

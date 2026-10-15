@@ -20,7 +20,7 @@ paper_digest_primary_task: "语音属性识别"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.speech-attributes","label":"语音属性识别"},{"facet":"method","id":"method.self-supervised","label":"自监督学习"},{"facet":"method","id":"method.signal-processing","label":"信号处理"},{"facet":"scientific_topic","id":"scientific_topic.phonation","label":"发声与构音"}]
 paper_digest_primary_method: "自监督学习"
 paper_digest_score: 7.3
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "SoFilNet 只用重建语音做监督就同时估计基频、清浊、五带非周期性与有序共振峰和反共振零点，在 VTR 共振峰与跨库基频上取得最低平均误差，代价是幅度谱建模与固定极零点结构带来的简化。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Nani Meka"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Raghavan Ramesh"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Sri Rama Murty Kodukula"}]
 paper_digest_abstract_sha256: "c48a95b4ce3a45e81870f879f10a0b5f2a93e9632e7161cb4f34774daccecf89"
-paper_digest_sidecars: {"citation.bib":{"sha256":"716fede9830c787c8a8c2451c6e9e0e84367ab0bd71eb3e67817f0600f932bcd","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18120/citation.bib"},"citation.json":{"sha256":"9df94b435cba75d75fc350bc2019cacc7fc21048b35c68721a009d8bf1c2a31e","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18120/citation.json"},"citation.ris":{"sha256":"e3a9dbeec38ccb9026af807b0c3863185ce64dfc7a998d0bf8db0c7ffaf197c9","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18120/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"e81042e6b789800eaa815e5a675df01cffc9d15329e07cffa247e97041ea6f89","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18120/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"716fede9830c787c8a8c2451c6e9e0e84367ab0bd71eb3e67817f0600f932bcd","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18120/citation.bib"},"citation.json":{"sha256":"9df94b435cba75d75fc350bc2019cacc7fc21048b35c68721a009d8bf1c2a31e","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18120/citation.json"},"citation.ris":{"sha256":"e3a9dbeec38ccb9026af807b0c3863185ce64dfc7a998d0bf8db0c7ffaf197c9","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18120/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"3fddca6df4b38fe06a62aba6deb214cb54f0c64b8b87d3223125c75af7a9f164","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18120/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "1e317b6831fdb100273db7c0e4fe5fec4bc2295a3eb21931d215fe8c97fac13f"
 paper_digest_api_reader_plan_sha256: "8407f0c7ce25cbeec5d05bd0851fc3a2d3d7a58890a3c68e5445fab182ab6aff"
@@ -52,8 +52,16 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[Self-Supervised Source-Filter Model of Speech Production](https://arxiv.org/abs/2610.18120v1)*
 
-> 标签：#语音属性识别 | #自监督学习 | #信号处理 | #发声与构音
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[语音属性识别](/audio-paper-digest-blog/papers/?concept=task.speech-attributes)
+- **研究方法**：[自监督学习](/audio-paper-digest-blog/papers/?concept=method.self-supervised)；[信号处理](/audio-paper-digest-blog/papers/?concept=method.signal-processing)
+- **科学主题**：[发声与构音](/audio-paper-digest-blog/papers/?concept=scientific_topic.phonation)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**7.3/10** | 创新 1.6/2 | 技术严谨 1.2/1.5 | 实验充分 1.3/1.5 | 清晰度 0.8/1 | 影响力 1.1/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 

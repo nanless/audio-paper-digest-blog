@@ -20,7 +20,7 @@ paper_digest_primary_task: "音乐源分离"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.music-separation","label":"音乐源分离"},{"facet":"method","id":"method.reinforcement","label":"强化学习"},{"facet":"method","id":"method.flow-matching","label":"流匹配"},{"facet":"setting","id":"setting.post-training","label":"后训练"},{"facet":"signal","id":"signal.music","label":"音乐"}]
 paper_digest_primary_method: "强化学习"
 paper_digest_score: 5.9
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "该文研究潜空间流匹配人声分离在波形指标不可微时的后训练对齐，用组内最优与均值差距分析指导 ViSQOL 改写与样本过滤，使 FlowGRPO 在原评价指标上提升分离与感知质量，但结论只在内部 50 秒测试与固定阈值下成立且 MRSTFT 单奖励仍保留最低谱损失。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Lishi Zuo"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Chong-Xin Gan"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Zezhong Jin"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Youzhi Tu"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Man-Wai Mak"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"KongAik Lee"}]
 paper_digest_abstract_sha256: "4ff309b953a202257bf5883dae8840a0e5da91ab6e270c1cb68ba8fc6962b563"
-paper_digest_sidecars: {"citation.bib":{"sha256":"a1a3d95834cfde3f768b93bfd51a7390229b5ee96a70c4c56de6a9a14fdf9847","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15780/citation.bib"},"citation.json":{"sha256":"9847de840b5976d0365c50fd5b133fcc07fd58edc85b6e82db130c8544577cb4","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15780/citation.json"},"citation.ris":{"sha256":"44f54c596d77371b712601e1914856006bbc9866fa40a0c389efdce915d7c996","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15780/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"33b2d468371502926d3b10cccb2fb246de1f81ae0a78d5a0c85d6a374f1e0bf3","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15780/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"a1a3d95834cfde3f768b93bfd51a7390229b5ee96a70c4c56de6a9a14fdf9847","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15780/citation.bib"},"citation.json":{"sha256":"9847de840b5976d0365c50fd5b133fcc07fd58edc85b6e82db130c8544577cb4","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15780/citation.json"},"citation.ris":{"sha256":"44f54c596d77371b712601e1914856006bbc9866fa40a0c389efdce915d7c996","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15780/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"8b851794a2d1f6b1fd252ec995f6f4c792fed28f482b8d8ae0e2126e5cd92088","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15780/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "f22efc812e2025dff8c2c3e98fe29910b2989303c366e3b562d7f84a796fa820"
 paper_digest_api_reader_plan_sha256: "6b065f8a614e837dbe22b438554e9f87ade1c0b4684d3459145fb499e48363da"
@@ -52,8 +52,17 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[FlowGRPO for Vocal Separation: From Reward Analysis to Reward Design](https://arxiv.org/abs/2610.15780v1)*
 
-> 标签：#音乐源分离 | #强化学习 | #流匹配 | #后训练 | #音乐
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[音频分离](/audio-paper-digest-blog/papers/?concept=task.audio-separation) → [音乐源分离](/audio-paper-digest-blog/papers/?concept=task.music-separation)
+- **研究方法**：[强化学习](/audio-paper-digest-blog/papers/?concept=method.reinforcement)；[生成模型](/audio-paper-digest-blog/papers/?concept=method.generative) → [流匹配](/audio-paper-digest-blog/papers/?concept=method.flow-matching)
+- **研究条件**：[后训练](/audio-paper-digest-blog/papers/?concept=setting.post-training)
+- **信号**：[音乐](/audio-paper-digest-blog/papers/?concept=signal.music)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**5.9/10** | 创新 1.2/2 | 技术严谨 1/1.5 | 实验充分 0.8/1.5 | 清晰度 0.8/1 | 影响力 0.8/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 

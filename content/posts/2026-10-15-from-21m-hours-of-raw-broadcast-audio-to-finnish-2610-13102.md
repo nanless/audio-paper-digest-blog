@@ -20,7 +20,7 @@ paper_digest_primary_task: "语音识别"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.asr","label":"语音识别"},{"facet":"method","id":"method.self-supervised","label":"自监督学习"},{"facet":"method","id":"method.conformer","label":"Conformer"},{"facet":"setting","id":"setting.pretraining","label":"预训练"}]
 paper_digest_primary_method: "自监督学习"
 paper_digest_score: 7.1
@@ -29,7 +29,7 @@ paper_digest_document_type: "模型报告"
 paper_digest_one_sentence: "论文用 VAD、去重和 ASR 置信度把 210 万小时广播音频筛到 47.1 万小时做 wav2vec 2.0 预训练，并在相同参数量下比较四种编码器，Base 规模卷积增强结构域外优势最大，X-Large 规模差距缩小。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Yaroslav Getman"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Tamás Grósz"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Tommi Lehtonen"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Mikko Kurimo"}]
 paper_digest_abstract_sha256: "4874d4c90462bd7cfc7f3df1b64c7f5885386991e65715f9399b0f4289dc05cc"
-paper_digest_sidecars: {"citation.bib":{"sha256":"b3253f8ffaff8fbea35a142f10fbd130092908bcba74658a1012f1cb7833042d","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13102/citation.bib"},"citation.json":{"sha256":"f885fde48ae95c55bbbd994153c1607610902546e3efcd0b1caa2dcbb916e5ac","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13102/citation.json"},"citation.ris":{"sha256":"281dfa4a99e0aa55a7e33d35a21139124b6b7fb6a669d99069654d9eac11093e","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13102/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"9e06903da75637b52d0e106dca07509afd5b76cc74aef0c6ff3c411b60010048","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13102/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"b3253f8ffaff8fbea35a142f10fbd130092908bcba74658a1012f1cb7833042d","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13102/citation.bib"},"citation.json":{"sha256":"f885fde48ae95c55bbbd994153c1607610902546e3efcd0b1caa2dcbb916e5ac","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13102/citation.json"},"citation.ris":{"sha256":"281dfa4a99e0aa55a7e33d35a21139124b6b7fb6a669d99069654d9eac11093e","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13102/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"584b12b3d93c54903ea21e1896d3aea7720df9e2b499012f1a7df38b5c76b99b","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13102/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "0d700d8096fd9d904daeed74638fac2cdc55ef25a430730aee3317aeef32386a"
 paper_digest_api_reader_plan_sha256: "607fc49df55cfd38291fcab36284861c142f2a57d819ad9a0f3ebd220fb653ba"
@@ -52,8 +52,16 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[From 2.1M Hours of Raw Broadcast Audio to Finnish Speech SSL: Confidence Filtering and Architectural Analysis at Scale](https://arxiv.org/abs/2610.13102v1)*
 
-> 标签：#语音识别 | #自监督学习 | #Conformer | #预训练
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[语音识别](/audio-paper-digest-blog/papers/?concept=task.asr)
+- **研究方法**：[自监督学习](/audio-paper-digest-blog/papers/?concept=method.self-supervised)；[Conformer](/audio-paper-digest-blog/papers/?concept=method.conformer)
+- **研究条件**：[预训练](/audio-paper-digest-blog/papers/?concept=setting.pretraining)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**7.1/10** | 创新 1.5/2 | 技术严谨 1.2/1.5 | 实验充分 1.3/1.5 | 清晰度 0.8/1 | 影响力 1/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 

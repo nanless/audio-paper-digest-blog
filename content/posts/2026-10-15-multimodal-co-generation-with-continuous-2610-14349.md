@@ -20,7 +20,7 @@ paper_digest_primary_task: "文本到语音"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.tts","label":"文本到语音"},{"facet":"method","id":"method.diffusion","label":"扩散模型"},{"facet":"task","id":"task.asr","label":"语音识别"},{"facet":"method","id":"method.multimodal-learning","label":"多模态学习"},{"facet":"signal","id":"signal.speech","label":"语音"}]
 paper_digest_primary_method: "扩散模型"
 paper_digest_score: 7.2
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "论文把图像、语音、文本、蛋白质序列与结构都写成固定二进制码，用同一套高斯加噪、按比特预测和部分去噪流程训练一个去噪器，通过控制哪些比特可见来切换联合生成与不同条件生成，并在受控加法、语音文本与蛋白质三组实验中验证一致性与主要代价。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Georgios Batzolis"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Georgios Kontos"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Bruno Trentini"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Pranam Chatterjee"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Micha Livne"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Mark Girolami"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Luca Ambrogioni"}]
 paper_digest_abstract_sha256: "d1f0ef70127e738c1071b37d3d72612905aab97aeab1fdc754c30fb0b19f5235"
-paper_digest_sidecars: {"citation.bib":{"sha256":"5a39b3c9a0fc9f95456b5d0f7ffdcf78c84fa6c1b1d952ea06657fd3c2f78453","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14349/citation.bib"},"citation.json":{"sha256":"a77860281578040fb5f24e71bf1b334bac9a9f7128d51f34c124cdfb4ad23d27","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14349/citation.json"},"citation.ris":{"sha256":"231112341831d05362ca6c2b06cee2c3c876ff3dc924e4cb63d0618dde8b4589","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14349/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"f138f97cb3fd37b244ea47372836b2b68fd272f3196e5f6660b831cc77aae770","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14349/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"5a39b3c9a0fc9f95456b5d0f7ffdcf78c84fa6c1b1d952ea06657fd3c2f78453","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14349/citation.bib"},"citation.json":{"sha256":"a77860281578040fb5f24e71bf1b334bac9a9f7128d51f34c124cdfb4ad23d27","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14349/citation.json"},"citation.ris":{"sha256":"231112341831d05362ca6c2b06cee2c3c876ff3dc924e4cb63d0618dde8b4589","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14349/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"3f4577bf7f125dde4e285a5d9987a452ee8106e55c5d7b055a511062ba05dce3","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14349/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "6e4aa69a3009470f75706f063765783a5a31ad719eb955a29c439224fdff5a9e"
 paper_digest_api_reader_plan_sha256: "be17a7bb91006530a9b3ca95d45862c7b1ac057cf1db146ab2ac419e99114c5b"
@@ -52,8 +52,16 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[Multimodal Co-Generation With Continuous Bitstream Diffusion](https://arxiv.org/abs/2610.14349v1)*
 
-> 标签：#文本到语音 | #扩散模型 | #语音识别 | #多模态学习 | #语音
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[语音合成](/audio-paper-digest-blog/papers/?concept=task.speech-synthesis) → [文本到语音](/audio-paper-digest-blog/papers/?concept=task.tts)；[语音识别](/audio-paper-digest-blog/papers/?concept=task.asr)
+- **研究方法**：[生成模型](/audio-paper-digest-blog/papers/?concept=method.generative) → [扩散模型](/audio-paper-digest-blog/papers/?concept=method.diffusion)；[多模态学习](/audio-paper-digest-blog/papers/?concept=method.multimodal-learning)
+- **信号**：[语音](/audio-paper-digest-blog/papers/?concept=signal.speech)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**7.2/10** | 创新 1.5/2 | 技术严谨 1.2/1.5 | 实验充分 1.2/1.5 | 清晰度 0.8/1 | 影响力 1/1.5 | 开源 0.2/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 

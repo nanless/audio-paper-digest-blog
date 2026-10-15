@@ -20,7 +20,7 @@ paper_digest_primary_task: "音频隐私攻击与防御"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.privacy-attack-defense","label":"音频隐私攻击与防御"},{"facet":"method","id":"method.evaluation-protocol","label":"评测协议"},{"facet":"task","id":"task.speech-editing","label":"语音编辑"},{"facet":"application","id":"application.medical","label":"医疗音频"}]
 paper_digest_primary_method: "评测协议"
 paper_digest_score: 7.4
@@ -29,10 +29,10 @@ paper_digest_document_type: "系统技术报告"
 paper_digest_one_sentence: "AegisVox 把长临床对话的说话人声音转换与标识词替换分开处理，在 390 段公开模拟对话上比较两种整轮重读方案，发现替换实现率提高的同时可能伴随更多模型判定的矛盾和编辑区声音可关联性。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Praphul Singh"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Akshat Agarwal"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Ratul Ghosh"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Aashna Kanuga"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Devashish Khatwani"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Anurag Dwarakanath"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Sri Gadde"},{"affiliations":["Oracle Health AI"],"name":"Krishnaram Kenthapadi"}]
 paper_digest_abstract_sha256: "0727cc78452d351fe7b095b88628aa6b437e49d4f5cbf87f72f41cdc3544699d"
-paper_digest_sidecars: {"citation.bib":{"sha256":"a4ac1a9642bf55d497448c77b753de507eecc9188d42d9eba47d08e1af712267","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14643/citation.bib"},"citation.json":{"sha256":"8304e0eb4adef6eaa38a22f969fb87c95b8dbf0549fc5bab9ded56eebd13d262","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14643/citation.json"},"citation.ris":{"sha256":"4164b82a90681ae61d1eb05c396923399114930b306ca673a33caa71754795a6","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14643/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"c6fef50c812901ca28f5676f665153bba492e3acf86e2fdd34111fed6c44262f","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14643/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"a4ac1a9642bf55d497448c77b753de507eecc9188d42d9eba47d08e1af712267","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14643/citation.bib"},"citation.json":{"sha256":"8304e0eb4adef6eaa38a22f969fb87c95b8dbf0549fc5bab9ded56eebd13d262","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14643/citation.json"},"citation.ris":{"sha256":"4164b82a90681ae61d1eb05c396923399114930b306ca673a33caa71754795a6","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14643/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"ae68c5ee91a04cce80033fe4f83fc47fe5753ca7ec738525fe03f4f04883ca90","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14643/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
-paper_digest_api_reader_article_sha256: "96a12cb3468c5013029a8654c4949ca381d02aa8a95ad6c06fa33b8f638e979d"
-paper_digest_api_reader_plan_sha256: "3e98c950b7ca4a59381ae9aa4e24ca7d54b49f7bad1e231945eec12d10d4bda7"
+paper_digest_api_reader_article_sha256: "9b61d64c4928abd19b221d091deb042c115211ef45245fe02042d826dc5e0fcf"
+paper_digest_api_reader_plan_sha256: "b2322e5ebdd60a05af113573e4a6ce371692afd2b6f72d372b170b6273f6549e"
 paper_digest_api_reader_source_binding_contract: "api-reader-source-bindings-v4"
 paper_digest_api_reader_source_bindings_sha256: "937a0284b5f759d9f14916d5cf4dd9802e63455500c04e67003ed5d733b40e6f"
 paper_digest_api_reader_source_table_count: 4
@@ -52,8 +52,16 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[AegisVox: Factorized Privacy and Clinical Preservation for Long-Form Speech](https://arxiv.org/abs/2610.14643v1)*
 
-> 标签：#音频隐私攻击与防御 | #评测协议 | #语音编辑 | #医疗音频
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[音频隐私攻击与防御](/audio-paper-digest-blog/papers/?concept=task.privacy-attack-defense)；[语音编辑](/audio-paper-digest-blog/papers/?concept=task.speech-editing)
+- **研究方法**：[评测协议](/audio-paper-digest-blog/papers/?concept=method.evaluation-protocol)
+- **应用**：[医疗音频](/audio-paper-digest-blog/papers/?concept=application.medical)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**7.4/10** | 创新 1.2/2 | 技术严谨 1/1.5 | 实验充分 1.2/1.5 | 清晰度 0.8/1 | 影响力 0.7/1.5 | 开源 1.2/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 
@@ -172,7 +180,7 @@ F5-TTS 实现 535 项约 89.0%，VoiceCraft 实现 453 项约 75.4%，配对增�
 
 ### 临床事实保留了多少，平均数掩盖了什么
 
-临床用 25778 个源临床原子命题冻结清单跨条件复用，评判在各条件转写中找字面证据，分为保留、部分、缺失、矛盾或保留待定，严格保留只计保留。原始音频新转写对照保留 25998 项约 97.0%，SeedVC 后约 77.9%，两种渲染分别约 77.4% 与 77.3%，大部分总体缺口已在声音路径后出现。左图给出参考刻度，右图给出配对差异，保留与矛盾分属两种错误类型。
+临床用 25778 个源临床原子命题冻结清单跨条件复用，评判在各条件转写中找字面证据，分为保留、部分、缺失、矛盾或保留待定，严格保留只计保留。原始音频新转写对照保留 24998 项约 97.0%，SeedVC 后约 77.9%，两种渲染分别约 77.4% 与 77.3%，大部分总体缺口已在声音路径后出现。左图给出参考刻度，右图给出配对差异，保留与矛盾分属两种错误类型。
 
 这两幅图回答总量相近时类型是否相同：左图看参考刻度有多高，右图看保留差异的区间位置与矛盾差异的区间位置。
 
@@ -196,7 +204,7 @@ F5-TTS 实现 535 项约 89.0%，VoiceCraft 实现 453 项约 75.4%，配对增�
 
 F5-TTS 矛盾 479 项约 1.9%，VoiceCraft 矛盾 391 项约 1.5%，配对增加显著；部分、缺失与保留待定的分布也有差别。按源标注重要性分层，关键、主要、次要 3 层都有贡献，总体结论依赖测量协议。Qwen 独立重判 600 个共享命题时词汇排序一致，类别一致 Kappa 仅 0.253 到 0.340，加权保留率更高且区间不同，说明绝对值依赖评判者。只用当前条件转写写笔记的对照也显示保留差异区间跨零而矛盾增加，缺失笔记的变化可能带来总体方向的变化。
 
-**等错误率 × 分数方向敏感性分析：** 等错误率记载误匹配与漏匹配平衡点的错误水平，数值越低表示在该测试下变换后语音与原说话人关联得越容易；分数方向敏感性分析同时报告余弦分数两种取向并取较低等错误率，取向依评测标签选出。两种后端对分数高低代表同一人的约定有差别，搭配使用可以显示全对话平均分浌漏的编辑区关联性，在同录音注册的评测设置内提供另一层结果。
+**等错误率 × 分数方向敏感性分析：** 等错误率记载误匹配与漏匹配平衡点的错误水平，数值越低表示在该测试下变换后语音与原说话人关联得越容易；分数方向敏感性分析同时报告余弦分数两种取向并取较低等错误率，取向依评测标签选出，而非独立校准。两种后端对分数高低代表同一人的约定有差别，搭配使用可以显示按全对话统计可能掩盖编辑区域更高可关联性的含义，在同录音注册的评测设置内提供另一层结果。
 
 全轮样本用 809 个档案、编辑区样本用 291 个档案的成对对比图表明两层结果：全对话平均没有检测到差异时，被编辑语音局部更容易被关联回源说话人。
 

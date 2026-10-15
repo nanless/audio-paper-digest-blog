@@ -20,7 +20,7 @@ paper_digest_primary_task: "音视频生成"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.av-generation","label":"音视频生成"},{"facet":"method","id":"method.evaluation-protocol","label":"评测协议"},{"facet":"signal","id":"signal.audiovisual","label":"音视频"},{"facet":"method","id":"method.statistical-analysis","label":"统计分析"}]
 paper_digest_primary_method: "评测协议"
 paper_digest_score: 6.3
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "论文针对音频条件视觉预测中去掉音频就下结论的问题，提出把解释与干预、留出任务比较和端点对照绑定的 CIViC 四门诊断，并在演员不重叠的人脸光栅、合成特征混合与来源视频不重叠的 SpeakerVid 代理任务上给出通过与失败并存的证据。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Mengzhe Geng"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Max W. Y. Lam"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Yuewen Cao"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Shoukang Hu"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Jing Xu"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Marc Tessier"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Xu Li"}]
 paper_digest_abstract_sha256: "4d2b60ec3f0519c5f131131c31c9181bb7fd0380cc42db923627eba174770a78"
-paper_digest_sidecars: {"citation.bib":{"sha256":"8ad1169bca86b067f6cb40d0666230feb89231389e38eaac03c456f8d1a67e1f","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15327/citation.bib"},"citation.json":{"sha256":"41ad303a63f2911c277ff0bf8a5650d84b50524a786bb9339ecd7bd332e5559b","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15327/citation.json"},"citation.ris":{"sha256":"3470c0111e123cc125b18a589d2bfd2216f93c4a890b47950046ec373d303315","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15327/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"2bfc80431a2d56c5d2a1aa6dff5c1f3fb3c3f2d243e11fef8c4cb1f61c68faca","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15327/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"8ad1169bca86b067f6cb40d0666230feb89231389e38eaac03c456f8d1a67e1f","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15327/citation.bib"},"citation.json":{"sha256":"41ad303a63f2911c277ff0bf8a5650d84b50524a786bb9339ecd7bd332e5559b","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15327/citation.json"},"citation.ris":{"sha256":"3470c0111e123cc125b18a589d2bfd2216f93c4a890b47950046ec373d303315","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15327/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"09779ced6f3bb90ab8dba45ffa42ba40188cae8b100c50ec69f46529afa882b7","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15327/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "6ec5144aaa3b2e80d5f7a466f6fdcd83922ae60c0cbb6e2b30dc61b647e6f403"
 paper_digest_api_reader_plan_sha256: "7528e166a7dd736b79ce14a03695088b8ad444ede39c2131fb5a62f03ebf75f2"
@@ -52,8 +52,16 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[CIViC: Evidence Gates for Audio-Conditioned Visual Prediction on Proxy Tasks](https://arxiv.org/abs/2610.15327v1)*
 
-> 标签：#音视频生成 | #评测协议 | #音视频 | #统计分析
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[音视频生成](/audio-paper-digest-blog/papers/?concept=task.av-generation)
+- **研究方法**：[评测协议](/audio-paper-digest-blog/papers/?concept=method.evaluation-protocol)；[统计分析](/audio-paper-digest-blog/papers/?concept=method.statistical-analysis)
+- **信号**：[音视频](/audio-paper-digest-blog/papers/?concept=signal.audiovisual)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**6.3/10** | 创新 1/2 | 技术严谨 1/1.5 | 实验充分 1.2/1.5 | 清晰度 0.8/1 | 影响力 0.5/1.5 | 开源 1/1.5 | 可复现 0.3/0.5 | 工程/实践 0.5/1.5
 
 

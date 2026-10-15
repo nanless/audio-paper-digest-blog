@@ -20,7 +20,7 @@ paper_digest_primary_task: "音视频问答"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.av-question-answering","label":"音视频问答"},{"facet":"task","id":"task.audio-reasoning","label":"音频推理"},{"facet":"method","id":"method.multimodal-learning","label":"多模态学习"},{"facet":"model_family","id":"model_family.llm","label":"大语言模型"}]
 paper_digest_primary_method: "多模态学习"
 paper_digest_score: 5.5
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "论文针对全模态问答中感知到却用不上的问题，用词级对齐诊断定位生成可及性瓶颈，再以自我生成的模态描述补足弱模态，主要证据是跨七个模型的平均提升与弱模态对齐回升，代价是增加描述生成开销。"
 paper_digest_authors: [{"affiliations":["机构信息未能从 arXiv PDF 文本可靠映射"],"name":"Na Min An"},{"affiliations":["机构信息未能从 arXiv PDF 文本可靠映射"],"name":"Taekyung Kim"},{"affiliations":["机构信息未能从 arXiv PDF 文本可靠映射"],"name":"Jaemyung Yu"},{"affiliations":["机构信息未能从 arXiv PDF 文本可靠映射"],"name":"Hyunjung Shim"},{"affiliations":["机构信息未能从 arXiv PDF 文本可靠映射"],"name":"Dongyoon Han"}]
 paper_digest_abstract_sha256: "70bc39e98157f1726db4caa00c258e2ee477f78a8aca0e257867ad944542a0a9"
-paper_digest_sidecars: {"citation.bib":{"sha256":"8a581ad6ee862fd4469fcd177e736ad3dd110684ad7cd8041f965076f9d4bcba","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16135/citation.bib"},"citation.json":{"sha256":"ebc40ebe3017e4fae26391eb7687db6b3d2fcd0fc0729c8c2191b01968ac3f9b","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16135/citation.json"},"citation.ris":{"sha256":"8764a952cda7bd3e8407985189ecb2c7e15042a95fb0a1c7dcbe59f75b1ae88b","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16135/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"caf47897019b232ab8e51c8f2d7c7777ef0bb61da4b919f53271ebd0420d96b3","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16135/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"8a581ad6ee862fd4469fcd177e736ad3dd110684ad7cd8041f965076f9d4bcba","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16135/citation.bib"},"citation.json":{"sha256":"ebc40ebe3017e4fae26391eb7687db6b3d2fcd0fc0729c8c2191b01968ac3f9b","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16135/citation.json"},"citation.ris":{"sha256":"8764a952cda7bd3e8407985189ecb2c7e15042a95fb0a1c7dcbe59f75b1ae88b","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16135/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"a71818d1f74378f341e3c0727ba18fb2f021abaeede569cffedbce4c95a6a4d6","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16135/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "75d43de201a840d9ea66ac3bc27619291336bb94e591700b7b33a3c5d9e0d2b3"
 paper_digest_api_reader_plan_sha256: "53c472bda9b3c9286fcee9ff0ac3a699d4aeee42a1aab19b4715470dbe6a35f7"
@@ -52,8 +52,16 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[Omni-Modal LLMs Know More Than They Say](https://arxiv.org/abs/2610.16135v1)*
 
-> 标签：#音视频问答 | #音频推理 | #多模态学习 | #大语言模型
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[音视频理解](/audio-paper-digest-blog/papers/?concept=task.av-understanding) → [音视频问答](/audio-paper-digest-blog/papers/?concept=task.av-question-answering)；[音频理解](/audio-paper-digest-blog/papers/?concept=task.audio-understanding) → [音频推理](/audio-paper-digest-blog/papers/?concept=task.audio-reasoning)
+- **研究方法**：[多模态学习](/audio-paper-digest-blog/papers/?concept=method.multimodal-learning)
+- **模型家族**：[大语言模型](/audio-paper-digest-blog/papers/?concept=model_family.llm)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**5.5/10** | 创新 1.2/2 | 技术严谨 1/1.5 | 实验充分 1/1.5 | 清晰度 0.7/1 | 影响力 0.5/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 0.8/1.5
 
 

@@ -20,7 +20,7 @@ paper_digest_primary_task: "语音情感识别"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.emotion-recognition","label":"语音情感识别"},{"facet":"method","id":"method.transfer","label":"迁移学习"},{"facet":"setting","id":"setting.cross-lingual","label":"跨语言"},{"facet":"setting","id":"setting.low-resource","label":"低资源"}]
 paper_digest_primary_method: "迁移学习"
 paper_digest_score: 6.5
@@ -29,7 +29,7 @@ paper_digest_document_type: "应用研究"
 paper_digest_one_sentence: "论文用约 100 小时英语 MSP-Podcast 训练的 WavLM Large 模型，再用 1 到 20 小时汉语普通话 BIIC-Podcast 做适应，与只用汉语普通话从头训练对比，发现唤醒度只需 2 小时即可追平 100 小时单语模型，而效价需要 20 小时，代价是小数据下直接训练不稳定且效价与优势度整体更难预测。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Dániel Halmai"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Gábor Gosztolya"}]
 paper_digest_abstract_sha256: "fd87e010ce8e3e458bdc2ed55d66e34d87e6159357b8c1f6eaf91da33fe3a1ea"
-paper_digest_sidecars: {"citation.bib":{"sha256":"010e2196674fd3d9a5a08a888f2a84f3d9ce1e85a1c5aac2387a57cba4a86a48","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15059/citation.bib"},"citation.json":{"sha256":"29fccfc2fcbaa14f7aa1e178356f0feb2f9ccf4bd66cf55213ddb05593920d03","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15059/citation.json"},"citation.ris":{"sha256":"5c0567efb0d6444a798cd8f07fc50d2c2bbadb7e137fa31c781b877e32c2c596","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15059/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"cfd1cff974ed822e7ce5d51901bbd51c1526528c7cb27bb11686c5a0685d1d25","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15059/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"010e2196674fd3d9a5a08a888f2a84f3d9ce1e85a1c5aac2387a57cba4a86a48","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15059/citation.bib"},"citation.json":{"sha256":"29fccfc2fcbaa14f7aa1e178356f0feb2f9ccf4bd66cf55213ddb05593920d03","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15059/citation.json"},"citation.ris":{"sha256":"5c0567efb0d6444a798cd8f07fc50d2c2bbadb7e137fa31c781b877e32c2c596","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15059/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"e3b62a4fa61224e0f76905da03092bcabb134ec1346f7d66f54a145b9dd4554a","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15059/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "e555fef2a781ee7f74247fb40dbac4f2c880a19e2352af5eb226c62b2b896ee6"
 paper_digest_api_reader_plan_sha256: "e33e6fd01fd536c1e550e4d1cfd8e0dfbfdf8dd001e5dc587128d4fa9ff375c6"
@@ -52,8 +52,16 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[How Language-Independent Are Emotional Attributes? A Study on Training Data Scaling and Cross-Lingual Generalization](https://arxiv.org/abs/2610.15059v1)*
 
-> 标签：#语音情感识别 | #迁移学习 | #跨语言 | #低资源
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[语音情感识别](/audio-paper-digest-blog/papers/?concept=task.emotion-recognition)
+- **研究方法**：[迁移学习](/audio-paper-digest-blog/papers/?concept=method.transfer)
+- **研究条件**：[跨语言](/audio-paper-digest-blog/papers/?concept=setting.cross-lingual)；[低资源](/audio-paper-digest-blog/papers/?concept=setting.low-resource)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**6.5/10** | 创新 1.2/2 | 技术严谨 1.2/1.5 | 实验充分 1.2/1.5 | 清晰度 0.8/1 | 影响力 0.8/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 

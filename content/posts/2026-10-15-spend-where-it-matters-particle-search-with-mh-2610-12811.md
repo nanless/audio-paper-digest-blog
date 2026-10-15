@@ -20,7 +20,7 @@ paper_digest_primary_task: "音视频生成"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.av-generation","label":"音视频生成"},{"facet":"method","id":"method.dynamic-computation","label":"动态计算与早退"},{"facet":"signal","id":"signal.audiovisual","label":"音视频"},{"facet":"research_focus","id":"research_focus.efficiency","label":"高效推理"}]
 paper_digest_primary_method: "动态计算与早退"
 paper_digest_score: 7.4
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "论文针对联合音画生成中多目标对齐需要大量模型评估的问题，提出先做方差引导的自适应粒子搜索再做短链局部修正的两阶段推理对齐方法，在匹配计算量下提升七个对齐指标并用图像实验验证分配策略的通用性，代价是需要维护在线调度参数和两阶段奖励设置。"
 paper_digest_authors: [{"affiliations":["University of Illinois Urbana-Champaign","Adobe Research"],"name":"Shivanshu Shekhar"},{"affiliations":["Adobe Research"],"name":"Raghavendra Addanki"},{"affiliations":["University of Illinois Urbana-Champaign"],"name":"Tong Zhang"},{"affiliations":["Adobe Research"],"name":"Uttaran Bhattacharya"}]
 paper_digest_abstract_sha256: "93b6edcbf6d71c8475f71628f61cd543a76aa440c43a3760858c21ae13defe5e"
-paper_digest_sidecars: {"citation.bib":{"sha256":"a260853e88d0e5dc81896a2e93efb43b7ce16b570a537da12794620210fb398c","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-12811/citation.bib"},"citation.json":{"sha256":"9959b1dbbc01e3cde5915c92f59f3b3bbce36e0b478f0f8070683cd55a57e9f6","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-12811/citation.json"},"citation.ris":{"sha256":"973bd9abe2502b9254a8ff3da8947f9b56b58c574ce1739a37d023db1034a240","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-12811/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"d97d8fb53110edb23ae37ba1b1ff7db21b63f3d17c8130d9b0cde1a88efedbf6","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-12811/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"a260853e88d0e5dc81896a2e93efb43b7ce16b570a537da12794620210fb398c","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-12811/citation.bib"},"citation.json":{"sha256":"9959b1dbbc01e3cde5915c92f59f3b3bbce36e0b478f0f8070683cd55a57e9f6","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-12811/citation.json"},"citation.ris":{"sha256":"973bd9abe2502b9254a8ff3da8947f9b56b58c574ce1739a37d023db1034a240","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-12811/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"1c0f4a5228c18c9dff5d8e271198d1a7c6fe44c0ab021fd855d643202af7ef6b","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-12811/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "b3e986902e84e61acad16d1e07173f75f7e08972fea62ed0fcce433b69d2d9d5"
 paper_digest_api_reader_plan_sha256: "731ee83d11557ded7e33ea87b9fbb9c920af7f09d006e78b32f36045f6d44a70"
@@ -52,8 +52,17 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[Spend Where It Matters: Particle Search with MH Refinement for Budget-Constrained Audio-Visual Alignment](https://arxiv.org/abs/2610.12811v1)*
 
-> 标签：#音视频生成 | #动态计算与早退 | #音视频 | #高效推理
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[音视频生成](/audio-paper-digest-blog/papers/?concept=task.av-generation)
+- **研究方法**：[模型压缩](/audio-paper-digest-blog/papers/?concept=method.compression) → [动态计算与早退](/audio-paper-digest-blog/papers/?concept=method.dynamic-computation)
+- **信号**：[音视频](/audio-paper-digest-blog/papers/?concept=signal.audiovisual)
+- **研究重点**：[高效推理](/audio-paper-digest-blog/papers/?concept=research_focus.efficiency)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**7.4/10** | 创新 1.5/2 | 技术严谨 1.3/1.5 | 实验充分 1.3/1.5 | 清晰度 0.8/1 | 影响力 1/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1.2/1.5
 
 

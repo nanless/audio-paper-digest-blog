@@ -20,7 +20,7 @@ paper_digest_primary_task: "音频问答"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.audio-question-answering","label":"音频问答"},{"facet":"task","id":"task.audio-classification","label":"音频分类"},{"facet":"method","id":"method.adapter","label":"Adapter"},{"facet":"method","id":"method.lora","label":"LoRA"}]
 paper_digest_primary_method: "Adapter"
 paper_digest_score: 6.4
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "针对 16 kHz 音频语言模型看不见 8 kHz 以上信号的问题，论文用搬移频带加同时刻双视图融合复用冻结编码器，在高频决定答案的对照测试上取得明显提升，但结论依赖特定的构造评测与微调预算。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Sergei Polezhaev"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Saba Anjum"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Michael Gormish"}]
 paper_digest_abstract_sha256: "132a894b8f4afddd9ae0e92660dc31afd9d3e48b86eec30947b4720eecabb86b"
-paper_digest_sidecars: {"citation.bib":{"sha256":"c0a66712023e1f9ebceb295504262e50f71f0b0456a40fa2a874652ce1a076b2","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17048/citation.bib"},"citation.json":{"sha256":"61f7ff411d332f72b046fd112f4a775453a9e38ee35144ffa45902e44b8692b8","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17048/citation.json"},"citation.ris":{"sha256":"a5e87264fc23e7b3c09acf67a0713984bbc7fd0f2d3e658237d1bd53423c9ad2","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17048/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"1fdc638a5b873d0d6132f1f648e9b4fec7159802fe105e650f3aa7b22f55adbe","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17048/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"c0a66712023e1f9ebceb295504262e50f71f0b0456a40fa2a874652ce1a076b2","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17048/citation.bib"},"citation.json":{"sha256":"61f7ff411d332f72b046fd112f4a775453a9e38ee35144ffa45902e44b8692b8","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17048/citation.json"},"citation.ris":{"sha256":"a5e87264fc23e7b3c09acf67a0713984bbc7fd0f2d3e658237d1bd53423c9ad2","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17048/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"81eb8319cf2557057203d8a9d560766d427096f020ca44269208d2f4bdc56208","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17048/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "5fda2cdb6b0b9fef0b73e388f51ad48b2bf83cc999478f68f1b40435988d2e8c"
 paper_digest_api_reader_plan_sha256: "833f57308937ef38d883fb3139c5eb1c318682c623419147909e6157fed1e682"
@@ -52,8 +52,15 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[SpectralBridge: Adding High-Frequency Capability to Large Audio-Language Models](https://arxiv.org/abs/2610.17048v1)*
 
-> 标签：#音频问答 | #音频分类 | #Adapter | #LoRA
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[音频理解](/audio-paper-digest-blog/papers/?concept=task.audio-understanding) → [音频问答](/audio-paper-digest-blog/papers/?concept=task.audio-question-answering)；[音频分类](/audio-paper-digest-blog/papers/?concept=task.audio-classification)
+- **研究方法**：[参数高效微调](/audio-paper-digest-blog/papers/?concept=method.peft) → [Adapter](/audio-paper-digest-blog/papers/?concept=method.adapter)；[参数高效微调](/audio-paper-digest-blog/papers/?concept=method.peft) → [LoRA](/audio-paper-digest-blog/papers/?concept=method.lora)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**6.4/10** | 创新 1.4/2 | 技术严谨 1.1/1.5 | 实验充分 1.2/1.5 | 清晰度 0.8/1 | 影响力 0.9/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 0.7/1.5
 
 

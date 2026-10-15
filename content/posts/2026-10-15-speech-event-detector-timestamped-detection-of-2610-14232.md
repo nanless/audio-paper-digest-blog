@@ -20,7 +20,7 @@ paper_digest_primary_task: "音频事件检测"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.event-detection","label":"音频事件检测"},{"facet":"method","id":"method.augmentation","label":"数据增强"},{"facet":"method","id":"method.cnn","label":"CNN"},{"facet":"method","id":"method.transformer","label":"Transformer"},{"facet":"task","id":"task.forced-alignment","label":"强制对齐"}]
 paper_digest_primary_method: "数据增强"
 paper_digest_score: 6.9
@@ -29,7 +29,7 @@ paper_digest_document_type: "系统技术报告"
 paper_digest_one_sentence: "论文要解决 Whisper 只出词而丢掉呼吸笑声喇叭声的问题，用统一七个异构数据集的卷积加 Transformer 每 40 毫秒输出 54 类概率的做法，在重叠留出数据的留出集上敏感档找到约三分之二事件但宏观精度只有 0.30，代价是阈值与评估都偏乐观且弱类仍不可用。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Ayush Kumar Bar"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Promila Ghosh"}]
 paper_digest_abstract_sha256: "25020e9d3cdea53c21e4a67af2ec3ffcfbb7b62c40e971e1f93ed739b017b844"
-paper_digest_sidecars: {"citation.bib":{"sha256":"c696c0b92c711d69d6a397572639913190a51807299a75c0979ebed5e9a8b3b3","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14232/citation.bib"},"citation.json":{"sha256":"d13fa24953debd0b8edc72c0560ab27c958d45eed09b5404c8ce71327567223d","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14232/citation.json"},"citation.ris":{"sha256":"512196f2b52a21a9c363a8269b2272ff5c911dc1cfcc26a13074680e18d00c56","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14232/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"27bc11051d2826a82020d1d3fd2028a26695799bbbc1f0f660de456d0ba7b3e4","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14232/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"c696c0b92c711d69d6a397572639913190a51807299a75c0979ebed5e9a8b3b3","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14232/citation.bib"},"citation.json":{"sha256":"d13fa24953debd0b8edc72c0560ab27c958d45eed09b5404c8ce71327567223d","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14232/citation.json"},"citation.ris":{"sha256":"512196f2b52a21a9c363a8269b2272ff5c911dc1cfcc26a13074680e18d00c56","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14232/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"d0b0440233a1212d092b36d27c07dab906fc88b4b1c38048f7b770d9f3656ccb","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14232/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "42884c22569d51b58ab5331140a0676427cd685084ad9cb0cc3d46024ac791eb"
 paper_digest_api_reader_plan_sha256: "c29918b481af55ec800898754bb891894557bb494c484bfd52c76de61835ce2e"
@@ -52,8 +52,15 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[Speech event detector: Timestamped detection of non-verbal vocalizations and background sounds for rich speech transcription](https://arxiv.org/abs/2610.14232v1)*
 
-> 标签：#音频事件检测 | #数据增强 | #CNN | #Transformer | #强制对齐
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[音频事件检测](/audio-paper-digest-blog/papers/?concept=task.event-detection)；[强制对齐](/audio-paper-digest-blog/papers/?concept=task.forced-alignment)
+- **研究方法**：[数据增强](/audio-paper-digest-blog/papers/?concept=method.augmentation)；[CNN](/audio-paper-digest-blog/papers/?concept=method.cnn)；[Transformer](/audio-paper-digest-blog/papers/?concept=method.transformer)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**6.9/10** | 创新 1/2 | 技术严谨 1/1.5 | 实验充分 0.8/1.5 | 清晰度 0.8/1 | 影响力 0.8/1.5 | 开源 1/1.5 | 可复现 0.3/0.5 | 工程/实践 1.2/1.5
 
 

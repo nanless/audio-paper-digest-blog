@@ -20,7 +20,7 @@ paper_digest_primary_task: "语音属性识别"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.speech-attributes","label":"语音属性识别"},{"facet":"method","id":"method.benchmark-design","label":"基准设计"},{"facet":"artifact","id":"artifact.benchmark","label":"基准测试"},{"facet":"artifact","id":"artifact.dataset","label":"数据集"},{"facet":"research_focus","id":"research_focus.fairness","label":"公平性"}]
 paper_digest_primary_method: "基准设计"
 paper_digest_score: 6.9
@@ -29,7 +29,7 @@ paper_digest_document_type: "数据集与基准"
 paper_digest_one_sentence: "论文针对语音同时带来有用人口线索和有害刻板联想的问题，提出区分是否被明确要求使用人口信息的三轴评测，用八个语音大模型显示能听出性别年龄不等于会恰当使用，且显式标签同时提升个性化和刻板选择。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Kshitij Ambilduke"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Caroline Brun"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Thibaut Thonet"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Vassilina Nikoulina"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Marcely Zanon Boito"}]
 paper_digest_abstract_sha256: "a8b4b397d05f23554c477892e2a244eeef3b128259462e94ffb62b0058346419"
-paper_digest_sidecars: {"citation.bib":{"sha256":"6b4eee32810ad0450162b1fa49db8802d3ad6219475cb8e61766389d43ad9b54","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13550/citation.bib"},"citation.json":{"sha256":"687a0d5b37ed20ef73dfaf46eab8c2cef6cf9b63e00e2c9f50f715bb1fb46550","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13550/citation.json"},"citation.ris":{"sha256":"313b3335718f15b5c0fda350cd35bfc8caf9dec92c1430f103dec3f17440fbd7","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13550/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"99c24615438833bee46bc67a7f2a36e6936fc0474e7574641043f612cab243d4","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13550/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"6b4eee32810ad0450162b1fa49db8802d3ad6219475cb8e61766389d43ad9b54","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13550/citation.bib"},"citation.json":{"sha256":"687a0d5b37ed20ef73dfaf46eab8c2cef6cf9b63e00e2c9f50f715bb1fb46550","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13550/citation.json"},"citation.ris":{"sha256":"313b3335718f15b5c0fda350cd35bfc8caf9dec92c1430f103dec3f17440fbd7","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13550/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"d4370e9e59421a9de874bcf5e42ef2593d8a582fd9b5639e7ac1960973e8a7f1","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13550/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "363e0fbdbc3fcb0a509d8f4015985db97e1113330e85931b6ce3c227925c87ba"
 paper_digest_api_reader_plan_sha256: "97b04eb9b031041ff93231dac4f88ff3db7e2e2186f611985347e2c5d7d505ee"
@@ -52,8 +52,17 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[Personalization Without Stereotyping: Do Speech LLMs Know When to Turn a Deaf Ear?](https://arxiv.org/abs/2610.13550v1)*
 
-> 标签：#语音属性识别 | #基准设计 | #基准测试 | #数据集 | #公平性
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[语音属性识别](/audio-paper-digest-blog/papers/?concept=task.speech-attributes)
+- **研究方法**：[评测协议](/audio-paper-digest-blog/papers/?concept=method.evaluation-protocol) → [基准设计](/audio-paper-digest-blog/papers/?concept=method.benchmark-design)
+- **研究重点**：[公平性](/audio-paper-digest-blog/papers/?concept=research_focus.fairness)
+- **研究产物**：[基准测试](/audio-paper-digest-blog/papers/?concept=artifact.benchmark)；[数据集](/audio-paper-digest-blog/papers/?concept=artifact.dataset)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**6.9/10** | 创新 1.5/2 | 技术严谨 1/1.5 | 实验充分 1.3/1.5 | 清晰度 0.8/1 | 影响力 1/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 

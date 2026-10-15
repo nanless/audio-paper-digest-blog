@@ -20,7 +20,7 @@ paper_digest_primary_task: "语音翻译"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.speech-translation","label":"语音翻译"},{"facet":"task","id":"task.voice-cloning","label":"语音克隆"},{"facet":"method","id":"method.prompt-learning","label":"提示学习"},{"facet":"task","id":"task.prosody-style-control","label":"韵律与风格控制"}]
 paper_digest_primary_method: "提示学习"
 paper_digest_score: 6.1
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "PACT 把语音到语音翻译分成语义文本、说话人音色和语用表达三路，把源语音的语用线索映射到目标语言表达空间并做成连续提示去引导冻结的合成器，在西班牙语英语双向 TOPI 评测里内容、音色和表达同时更好，但结论只在 30 对重演条件下成立。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Yuchen Song"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Satoshi Nakamura"}]
 paper_digest_abstract_sha256: "88cc2804eddd86c7652730af58e5fe9488ae4334c7b8b567e007af82ac33724d"
-paper_digest_sidecars: {"citation.bib":{"sha256":"f3e8a613bcc2e5ebabf1db177b9aa67164013c2548b4394b314629e1989cb0e5","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18247/citation.bib"},"citation.json":{"sha256":"b3a02d11b9483f5ea11f401bfb1c1da0328274b710e47af0612e56c1c6d66997","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18247/citation.json"},"citation.ris":{"sha256":"5483d08f333b6311a3a1d469e21a293599e671a08c4f6ed7331da2322187e145","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18247/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"228e3e7ca49c8153bb2a6aa8f2c4e498bac521a05aab84b8bf75b068c1e795b5","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18247/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"f3e8a613bcc2e5ebabf1db177b9aa67164013c2548b4394b314629e1989cb0e5","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18247/citation.bib"},"citation.json":{"sha256":"b3a02d11b9483f5ea11f401bfb1c1da0328274b710e47af0612e56c1c6d66997","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18247/citation.json"},"citation.ris":{"sha256":"5483d08f333b6311a3a1d469e21a293599e671a08c4f6ed7331da2322187e145","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18247/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"4a0f07d01788795f0e50048bcdc38d4ad975a6ace2c5550c0b1674bae42908fa","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18247/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "9e0b3ecdd989cd444a3059feac6a0499e9fbb828fd843efbdce33b79523dcb98"
 paper_digest_api_reader_plan_sha256: "cb8c3ea9db3dffeb14328e9cf2a39b47ae3cc438a1d3fe88fae75263311801fa"
@@ -52,8 +52,15 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[PACT: A Pragmatic Prompting Framework for Expressive and Voice-Preserving Speech-to-Speech Translation](https://arxiv.org/abs/2610.18247v1)*
 
-> 标签：#语音翻译 | #语音克隆 | #提示学习 | #韵律与风格控制
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[语音翻译](/audio-paper-digest-blog/papers/?concept=task.speech-translation)；[语音克隆](/audio-paper-digest-blog/papers/?concept=task.voice-cloning)；[语音合成](/audio-paper-digest-blog/papers/?concept=task.speech-synthesis) → [韵律与风格控制](/audio-paper-digest-blog/papers/?concept=task.prosody-style-control)
+- **研究方法**：[提示学习](/audio-paper-digest-blog/papers/?concept=method.prompt-learning)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**6.1/10** | 创新 1.2/2 | 技术严谨 1/1.5 | 实验充分 1/1.5 | 清晰度 0.8/1 | 影响力 0.8/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 

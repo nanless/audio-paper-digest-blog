@@ -20,7 +20,7 @@ paper_digest_primary_task: "语音识别"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.asr","label":"语音识别"},{"facet":"method","id":"method.quantization","label":"模型量化"},{"facet":"setting","id":"setting.on-device","label":"端侧运行"},{"facet":"setting","id":"setting.streaming","label":"流式处理"}]
 paper_digest_primary_method: "模型量化"
 paper_digest_score: 7.2
@@ -29,7 +29,7 @@ paper_digest_document_type: "系统技术报告"
 paper_digest_one_sentence: "Oído 把 13M 参数 Conformer-CTC 以整句整块加按帧动态 int8 的方式装进 ESP32-S3 并在 LibriSpeech 上做到 3.70%/8.23%，代价是单核约 2 倍实时、文本要在说话结束后数秒才出现。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Daniel Varela Sánchez"},{"affiliations":["Lokutor (Hashing Works, S.L.L.), Madrid, Spain"],"name":"Guillermo Martín-Coello Juárez"}]
 paper_digest_abstract_sha256: "d2e469af67341e0b9ac4a2d8adb56bdf336a09f14238a516795728d94cece743"
-paper_digest_sidecars: {"citation.bib":{"sha256":"bb7582894e86282ab2b3b9ff075f96ce1ece44f42661de2394d2e0ad537343fa","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13447/citation.bib"},"citation.json":{"sha256":"fa9ddd1183c4338a3aa414be62f2aaed0254510b399b6c0fb0ea0bd508a082f0","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13447/citation.json"},"citation.ris":{"sha256":"d2e8e2fd51e19404ed32a8fcb841efb9a733794fb035a7f3d6afc48d1c596f65","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13447/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"35bc9bf1b0d725de6699ee5c6935d787739db5a21a546b2823b59854c97d92c3","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13447/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"bb7582894e86282ab2b3b9ff075f96ce1ece44f42661de2394d2e0ad537343fa","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13447/citation.bib"},"citation.json":{"sha256":"fa9ddd1183c4338a3aa414be62f2aaed0254510b399b6c0fb0ea0bd508a082f0","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13447/citation.json"},"citation.ris":{"sha256":"d2e8e2fd51e19404ed32a8fcb841efb9a733794fb035a7f3d6afc48d1c596f65","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13447/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"53a5fa51753dab2e723508f4c1ba7ff1a2d4fe8a382cff702988885369d23c3a","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13447/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "348806f462b6b16b71f9dc30dcea10ac9de77216d8e73e8fa893e1fb8a96e192"
 paper_digest_api_reader_plan_sha256: "eda04df3ff6f4c6c0e5a47580a711cda8fc931f632a3826c2a58597fd7b455cb"
@@ -52,8 +52,16 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[Oído: Open-Vocabulary Speech Recognition on a \$5 Microcontroller without a Neural Accelerator](https://arxiv.org/abs/2610.13447v1)*
 
-> 标签：#语音识别 | #模型量化 | #端侧运行 | #流式处理
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[语音识别](/audio-paper-digest-blog/papers/?concept=task.asr)
+- **研究方法**：[模型压缩](/audio-paper-digest-blog/papers/?concept=method.compression) → [模型量化](/audio-paper-digest-blog/papers/?concept=method.quantization)
+- **研究条件**：[端侧运行](/audio-paper-digest-blog/papers/?concept=setting.on-device)；[流式处理](/audio-paper-digest-blog/papers/?concept=setting.streaming)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**7.2/10** | 创新 1.5/2 | 技术严谨 1.1/1.5 | 实验充分 1.3/1.5 | 清晰度 0.8/1 | 影响力 1/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1.2/1.5
 
 

@@ -20,7 +20,7 @@ paper_digest_primary_task: "音频分类"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.audio-classification","label":"音频分类"},{"facet":"method","id":"method.multimodal-learning","label":"多模态学习"},{"facet":"method","id":"method.attention","label":"注意力机制"}]
 paper_digest_primary_method: "多模态学习"
 paper_digest_score: 5.6
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "针对标题标签描述字段结构与噪声不同以及单标量融合不区分通道的问题，FAM-Gate 用音频引导的字段注意力先聚合元数据，再用以音频为先验的向量门按维度融合，在 BSD 与 FSD50K 的匹配五种子评测中提升层级与宏平均指标，代价是总参数增加约 0.19% 与每样本多编码三个文本视图。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Xiangyu Jing"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Hongqing Liu"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Liming Shi"}]
 paper_digest_abstract_sha256: "018cdec107e4b9e0c760701ef423379982f8b87c2131768c9806f13c2b9f1148"
-paper_digest_sidecars: {"citation.bib":{"sha256":"a432fa6465cdba0d8da6140979dd3f3ec55d9a1b72e5092f11f43e4e750ea6d2","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14673/citation.bib"},"citation.json":{"sha256":"7d59abfe467f922735f2c191e9c97bd0e726c5cd499e16ddba780ba7b1812531","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14673/citation.json"},"citation.ris":{"sha256":"5dad99d67d51eab74d8dd989af622289fcaff712982cc2063c8bed5c9d5575bd","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14673/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"62beea4f3a13f86588d409ce3f4eed302d4371d84b0bc5c4c02646bd7da7c402","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14673/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"a432fa6465cdba0d8da6140979dd3f3ec55d9a1b72e5092f11f43e4e750ea6d2","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14673/citation.bib"},"citation.json":{"sha256":"7d59abfe467f922735f2c191e9c97bd0e726c5cd499e16ddba780ba7b1812531","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14673/citation.json"},"citation.ris":{"sha256":"5dad99d67d51eab74d8dd989af622289fcaff712982cc2063c8bed5c9d5575bd","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14673/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"59de9629896548f43d8f0f0e15c52b4cf75ec4f5b886e575589fe74796fb0455","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14673/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "8cfd51055982c05666fbdae747230aae65674b49b543e96c73f48268bcf80f28"
 paper_digest_api_reader_plan_sha256: "dd6c6bc6299c979904b7aa1734d27ac3316fe45dab5042347da810e95678404d"
@@ -52,8 +52,15 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[FAM-gate: field-aware metadata attention with prior-constrained vector gating for audio classification](https://arxiv.org/abs/2610.14673v1)*
 
-> 标签：#音频分类 | #多模态学习 | #注意力机制
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[音频分类](/audio-paper-digest-blog/papers/?concept=task.audio-classification)
+- **研究方法**：[多模态学习](/audio-paper-digest-blog/papers/?concept=method.multimodal-learning)；[注意力机制](/audio-paper-digest-blog/papers/?concept=method.attention)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**5.6/10** | 创新 1/2 | 技术严谨 1/1.5 | 实验充分 1.2/1.5 | 清晰度 0.8/1 | 影响力 0.8/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 0.5/1.5
 
 

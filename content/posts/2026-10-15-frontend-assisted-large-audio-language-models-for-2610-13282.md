@@ -20,7 +20,7 @@ paper_digest_primary_task: "多说话人语音识别"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.multi-talker-asr","label":"多说话人语音识别"},{"facet":"task","id":"task.diarization","label":"说话人分离标注"},{"facet":"method","id":"method.sft","label":"SFT"},{"facet":"method","id":"method.beamforming","label":"波束成形"}]
 paper_digest_primary_method: "SFT"
 paper_digest_score: 5.8
@@ -29,7 +29,7 @@ paper_digest_document_type: "系统技术报告"
 paper_digest_one_sentence: "论文针对智能眼镜四通道双人日常对话的重叠与远场转写问题，比较直接微调 SoulX-Transcriber 与 GSS 和多通道 DPRNN 前端辅助两路解码的差异，验证集上前端在高重叠时更优但最终以更稳定的直接微调系统提交并在测试集取得 tcpCER 6.22，代价是前端失真与零填充带来的幻觉和分段解码处理。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Yushi Wang"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Zeyan Song"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Xiaobin Rong"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Chengwei Liu"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Jun Gao"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Jing Lu"}]
 paper_digest_abstract_sha256: "6415b3087c3223b6707b193e5f2ee3ef3fab1593a2f06c1b92d2240435b1ea72"
-paper_digest_sidecars: {"citation.bib":{"sha256":"e7f87fe0c04341b9abc7103d815436f56f02b690992d49734edef060b70d31a4","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13282/citation.bib"},"citation.json":{"sha256":"8db95732ef75b9d2ed1afa3e9f3992b0834f31605a52fd076fe560c84db16ff4","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13282/citation.json"},"citation.ris":{"sha256":"c17ad5981512ae7adddb205c50b9f82f7a38a9e5110d4a5a3ac264d726e5c8d8","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13282/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"98c22e28ac9338c42404d5433e9a0ef2f264ba1bbfa59f61e5f3520ef7af95b0","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13282/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"e7f87fe0c04341b9abc7103d815436f56f02b690992d49734edef060b70d31a4","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13282/citation.bib"},"citation.json":{"sha256":"8db95732ef75b9d2ed1afa3e9f3992b0834f31605a52fd076fe560c84db16ff4","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13282/citation.json"},"citation.ris":{"sha256":"c17ad5981512ae7adddb205c50b9f82f7a38a9e5110d4a5a3ac264d726e5c8d8","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13282/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"d6526255bfe2d8b92ac677124cab4ce3339b2cf10fb362581898179dd0877034","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13282/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "6e6ffb52be7b5adfe58f6cdc8019859ab6a164d432f532d62d7ca44e516f8608"
 paper_digest_api_reader_plan_sha256: "be73cd64db54bb1ed697a080356245e9e409eae4c37dc5947ef6a8e64d58f270"
@@ -52,8 +52,15 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[Frontend-Assisted Large Audio-Language Models for SLT2026 SmartGlasses Challenge](https://arxiv.org/abs/2610.13282v1)*
 
-> 标签：#多说话人语音识别 | #说话人分离标注 | #SFT | #波束成形
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[语音识别](/audio-paper-digest-blog/papers/?concept=task.asr) → [多说话人语音识别](/audio-paper-digest-blog/papers/?concept=task.multi-talker-asr)；[说话人分离标注](/audio-paper-digest-blog/papers/?concept=task.diarization)
+- **研究方法**：[SFT](/audio-paper-digest-blog/papers/?concept=method.sft)；[波束成形](/audio-paper-digest-blog/papers/?concept=method.beamforming)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**5.8/10** | 创新 1/2 | 技术严谨 1/1.5 | 实验充分 1/1.5 | 清晰度 0.7/1 | 影响力 0.8/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 

@@ -20,7 +20,7 @@ paper_digest_primary_task: "语音识别"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.asr","label":"语音识别"},{"facet":"method","id":"method.sft","label":"SFT"},{"facet":"setting","id":"setting.accent-dialect","label":"口音与方言"},{"facet":"signal","id":"signal.speech","label":"语音"}]
 paper_digest_primary_method: "SFT"
 paper_digest_score: 6.0
@@ -29,12 +29,12 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "论文在方言适应中同步跟踪损失与字错率，把快速崩溃、随后修复与长期普通话漂移拆成三个可分离过程，并用层拼接、梯度谱与更新迁移证明绕开早期崩溃仍会出现源域退化。"
 paper_digest_authors: [{"affiliations":["Department of Intelligence Science and Technology, Kyoto University","Xiaowei, WXG, Tencent"],"name":"Yichi Wang"},{"affiliations":["Department of Intelligence Science and Technology, Kyoto University","Xiaowei, WXG, Tencent"],"name":"Wangjin Zhou"},{"affiliations":["Department of Intelligence Science and Technology, Kyoto University","Xiaowei, WXG, Tencent"],"name":"Yizhou Zhang"},{"affiliations":["Communication University of China","Xiaowei, WXG, Tencent"],"name":"Xin Gu"},{"affiliations":["Xiaowei, WXG, Tencent"],"name":"Wei Tan"},{"affiliations":["Xiaowei, WXG, Tencent"],"name":"Yi Zhao"},{"affiliations":["Xiaowei, WXG, Tencent"],"name":"Gong Zhi"}]
 paper_digest_abstract_sha256: "975879c1342b78e47739282d8fae4fa188faab64b6b012764baacc893986cff1"
-paper_digest_sidecars: {"citation.bib":{"sha256":"87fe5a4fead8347773b9ddd8843c1e87ae683a218463b4c2e91abe355a1b336b","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18192/citation.bib"},"citation.json":{"sha256":"3821b7448979e033a7dd94f14f33dd0c9dc5387cfc184b8eac8aeff121bbf3a3","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18192/citation.json"},"citation.ris":{"sha256":"3c4b74fcd177b2c2be393c52fe05fa78d022094bee5460c6bc67f77d720f5cb4","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18192/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"767ee41384ed5e696a2bd61fd4ed98a6774b76cfd540f765d3f15e717603b529","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18192/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"87fe5a4fead8347773b9ddd8843c1e87ae683a218463b4c2e91abe355a1b336b","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18192/citation.bib"},"citation.json":{"sha256":"3821b7448979e033a7dd94f14f33dd0c9dc5387cfc184b8eac8aeff121bbf3a3","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18192/citation.json"},"citation.ris":{"sha256":"3c4b74fcd177b2c2be393c52fe05fa78d022094bee5460c6bc67f77d720f5cb4","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18192/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"14ef3a48a680a69552364f431b71ede0787aa122a43c2db651d0e6f10af89a52","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18192/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
-paper_digest_api_reader_article_sha256: "8c6eb4aab93bcb68bb08f68136284411e6dbe93f0914f40a9b61ef1b96003708"
-paper_digest_api_reader_plan_sha256: "0b661b97d444f610cf666b0ac5f196a71c2b7acbfc6b9536685f0f00549781e1"
+paper_digest_api_reader_article_sha256: "74c28e06363d47fba89c6dd8eadf424631505841c3dd830005a2fdc586703ca6"
+paper_digest_api_reader_plan_sha256: "fdf9d1a674d482ff98d30d21998259480ad46f4fe096e4d5cae9aa2fc2fdd980"
 paper_digest_api_reader_source_binding_contract: "api-reader-source-bindings-v4"
-paper_digest_api_reader_source_bindings_sha256: "c752138af7cce157fbed6c76cb583244192ec250482c641bbeb0cd6a6d24ac0b"
+paper_digest_api_reader_source_bindings_sha256: "0f0916ac2e3b01e2ad8dccf6c2a6466fb9d26baa2607cc0a019f2c5b1d40eed5"
 paper_digest_api_reader_source_table_count: 4
 paper_digest_api_reader_source_formula_count: 4
 paper_digest_api_reader_structured_artifacts_sha256: "686d474818fc8cef7bc50d1f173953fab01150c6c51f63d8372c0d49b67b2c58"
@@ -52,8 +52,17 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[Collapse, Repair, and Drift: Dissecting Fine Tuning Dynamics in Speech Language Models](https://arxiv.org/abs/2610.18192v1)*
 
-> 标签：#语音识别 | #SFT | #口音与方言 | #语音
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[语音识别](/audio-paper-digest-blog/papers/?concept=task.asr)
+- **研究方法**：[SFT](/audio-paper-digest-blog/papers/?concept=method.sft)
+- **研究条件**：[口音与方言](/audio-paper-digest-blog/papers/?concept=setting.accent-dialect)
+- **信号**：[语音](/audio-paper-digest-blog/papers/?concept=signal.speech)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**6.0/10** | 创新 1.2/2 | 技术严谨 1/1.5 | 实验充分 1.2/1.5 | 清晰度 0.8/1 | 影响力 1/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 0.5/1.5
 
 
@@ -95,11 +104,11 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 ### 为什么只看损失会漏掉关键变化
 
-监督微调通常盯着训练损失和验证损失，看到尖峰或平台就判断优化出了问题。但损失是优化目标本身，用教师强制计算下一个字符的交叉熵，一步只看局部预测分布。字错率则是整句解码后与参考文本对齐的结果，会累积搜索、重复、截断等行为差异。语音识别适合暴露这种差异，因为音频和文本有较强的时间和内容对应，错误可以定位和量化，不像开放式描述那样难以归因。论文的起点就是这两条曲线可能走出完全不同的形状：验证损失只中等起伏，识别却在几步内崩掉再恢复。如果只看损失，就会把严重的功能中断误判为普通波动，也无法区分可恢复的崩溃和彻底失败。
+监督微调通常盯着训练损失和验证损失，看到尖峰或平台就判断优化出了问题。但损失是优化目标本身，用教师强制计算下一个字符的交叉熵，一步只看局部预测分布。字错率则是整句解码后与参考文本对齐的结果，会累积搜索、重复、截断等行为差异。语音识别适合暴露这种差异，因为音频和文本有较强的时间和内容对应，错误可以定位和量化，不像开放式描述那样难以归因。论文的起点就是这两条曲线可能走出完全不同的形状：验证损失只经历短暂起伏，识别却在几步内崩掉再恢复。如果只看损失，就会把严重的功能中断误判为普通波动，也无法区分可恢复的崩溃和彻底失败。
 
 ### 整体流程如何把同一轨迹切成四个视角
 
-论文没有提出新的识别模型，而是把一次完整的方言适应全程记录下来，再从 4 个视角切片。第一是行为视角，全程跟踪方言字错率和普通话字错率，学习率覆盖 10-5、10-4、10-3 3 个量级。第二是功能定位视角，在崩溃发生、达到峰值和恢复的密集检查点之间做双向层拼接，看预训练计算与适应后计算在哪个深度上不再兼容。
+论文没有提出新的识别模型，而是把一次完整的方言适应全程记录下来，再从 4 个视角切片。第一是行为视角，全程跟踪方言字错率和普通话字错率，学习率覆盖 10-5、10-4、10-3 共 3 个量级。第二是功能定位视角，在崩溃发生、达到峰值和恢复的密集检查点之间做双向层拼接，看预训练计算与适应后计算在哪个深度上不再兼容。
 
 第三是优化几何视角，在每一步为 5 个方言各算一个解码器梯度，算步内跨方言一致性和相邻步同方言一致性，再把 5 个梯度堆成矩阵看奇异值能量分布。第四是因果干预视角，用 AdamW 更新迁移改写早期路径，绕开崩溃后再看长期漂移是否还出现。四步共用同一数据流和同一训练步数，保证比较的是同一轨迹的不同切面。
 
@@ -161,15 +170,15 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 ### 损失平稳时识别为何会先崩溃再恢复
 
-论文图 1 的教学价值在于同一横轴、不同纵轴的反差。上方面板是评估损失随训练步的变化，下方面板是同一运行的方言与普通话字错率。读图时注意横轴都是训练步，纵轴一个是损失、一个是对数字错率。上方面板从第 1 步后缓慢下降，下方面板却在前几步冲高到 100% 附近再回落，普通话还出现一个标注为修复的小回勾。这种反差就是全文的起点：损失只中等变化，功能却剧烈变化。
+论文图 1 的教学价值在于同一横轴、不同纵轴的反差。读图时先看上面板评估损失：横轴是训练步，纵轴是评估损失，它在第 1 步后先有一个明显尖峰再回落，随后到 10 步附近缓慢下降并长期走平。再看下面板识别字错率：横轴同样是训练步，纵轴是对数字错率，方言与普通话两条曲线都在前几步冲高到 100% 附近再回落，普通话还出现一个标注为修复的小回勾。这种反差就是全文的起点：损失的尖峰回落幅度有限，功能却剧烈变化。
 
-> **看图路径：** 1. 先看上面板评估损失的纵轴与横轴，确认第 1 步后是否只是温和起伏后缓慢下降；2. 再看下面板方言与普通话两条字错率曲线在前 10 步的冲高幅度和回落位置；3. 对比同一横轴位置上下两图的走向差异，体会损失平稳而功能剧变的分叉
+> **看图路径：** 1. 先看上面板评估损失在第 1 步后出现的明显尖峰，再看它回落到 10 步附近的缓慢下降段；2. 再看下面板方言与普通话两条字错率曲线在前 10 步的冲高幅度和回落位置；3. 对比同一横轴位置上下两图的走向差异，体会损失尖峰回落与功能剧烈崩溃恢复的对应关系
 
 [![原论文 Figure 1：Evaluation loss and recognition CER can exhibit qualitatively different trajectories during SFT.](https://arxiv.org/html/2610.18192v1/figure1_qwen3_asr_1e-4_loss_cer_large.svg)](https://arxiv.org/html/2610.18192v1/figure1_qwen3_asr_1e-4_loss_cer_large.svg)
 
 *论文图 1。原论文 Figure 1:：“Evaluation loss and recognition CER can exhibit qualitatively different trajectories during SFT.”。*
 
-图 1 实际显示损失下降与识别崩溃恢复可以并存，说明损失对中间功能变化的刻画比较粗。它能区分大体成功与失败的优化区间，但在崩溃的严重程度和时间结构上提供的信息很少。后文图 2 进一步把 3 个模型和 3 个学习率的损失放在一起，可以看到 10-5 下快速下降、10-3 下先升后降但终值高出 2 倍多，可这些曲线都无法预告字错率在哪一步冲多高、哪一步恢复。
+图 1 实际显示损失的尖峰回落与识别崩溃恢复可以并存，说明损失对中间功能变化的刻画比较粗。它能区分大体成功与失败的优化区间，但在崩溃的严重程度和时间结构上提供的信息很少。后文图 2 进一步把 3 个模型和 3 个学习率的损失放在一起，可以看到 10-5 下快速下降、10-3 下先升后降但终值高出 2 倍多，可这些曲线都无法预告字错率在哪一步冲多高、哪一步恢复。
 
 下面这张表说明 3 个学习率比较的公平性，比较的问题是轨迹差异是否来自优化尺度，公平条件是同模型内除学习率外其他设置固定，且都冻结声学部分。
 
@@ -215,13 +224,15 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 梯度余弦部分先看定性：成功运行的步内相似度从较高初值快速掉到零附近窄幅波动，学习率越大则保持更强共线或更大波动，10-3 失败最明显；步间相似度的高值既可出现在早期适应也可出现在失败运行，低值既可出现在早期也可出现在收敛后，因此单看高低无法判断是否收敛。论文强调这是高维下的弱诊断性，需要更紧凑的结构视图。读有效维度图时先按行看模型、按列看学习率，注意标有有效适应的面板，纵轴是参与比 1 至 5，越接近 5 越分散，越接近 1 越集中。
 
-> **看图路径：** 1. 先确认纵轴是参与比 1 至 5，横轴是 391 步，颜色区分学习率；2. 看标有效适应的面板是否快速上升到接近 5 并保持平稳；3. 看失败面板是长期贴近 1 还是大幅上下波动
+> **看图路径：** 1. 先确认纵轴是参与比 1 至 5，横轴是 391 步，行是模型列是学习率；2. 对比左下 MiMo-Audio 在 1e-5 的较宽波动与左上、中上成功面板的平稳贴近 5；3. 看失败面板是长期贴近 1 还是大幅上下波动
 
 [![原论文 Figure 6：Gradient effective dimensionality across models and learning rates, measured by D_eff.](https://arxiv.org/html/2610.18192v1/svd_participation_lines.svg)](https://arxiv.org/html/2610.18192v1/svd_participation_lines.svg)
 
 *论文图 6。原论文 Figure 6:：“Gradient effective dimensionality across models and learning rates, measured by D_eff.”。*
 
-图 6 显示成功运行有效维度快速上升后长期贴近 5 且只有小波动，失败运行则长期集中或持续大波动。MiMo-Audio 在 10-4 的波动明显大于另两个成功运行，10-3 三者都出现长期集中或反复重组。含义是稳定适应对应宽而时间稳定的谱能量分布，不稳定对应谱集中或持续重组。但论文也提醒相似的有效维度值可能对应不同的能量分配，需要结合堆叠谱图看完整分布，且行为恢复可以早于谱稳定，说明功能可用不等于优化几何已稳定。
+图 6 需要按实际像素分开读。作者的总体概括是：成功收敛的运行有效维度快速上升后长期贴近 5 且只有小波动，失败运行则长期集中或持续大波动。这一概括适用于 Qwen3-ASR 在 10-5 和 10-4、FireRed-LLM 在 10-5 和 10-4 等面板，它们确实快速上升到接近 5 并保持平稳。但左下 MiMo-Audio 在 1e-5 是明显的例外：虽然标有有效适应，其中部和后部仍有明显较宽的上下波动，不能概括为长期贴近 5 且只有小波动。MiMo-Audio 在 10-4 的波动更大且均值更低，10-3 三者则出现长期集中或反复重组。
+
+含义是稳定适应总体对应宽而时间稳定的谱能量分布，不稳定对应谱集中或持续重组，但具体面板存在差异，论文也提醒相似的有效维度值可能对应不同的能量分配，需要结合堆叠谱图看完整分布，且行为恢复可以早于谱稳定，说明功能可用不等于优化几何已稳定。
 
 ### 绕开早期崩溃后普通话退化是否还会出现
 
@@ -257,7 +268,7 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 复现应从行为轨迹做起，而不是只复现终点分数。第一步按原文冻结声学编码器和映射模块、只训文本解码器，用固定学习率、无预热跑 10-5、10-4、10-3 三档，全程保存前 10 步的密集检查点和之后每 10 步的检查点，同步记录验证损失、方言字错率和普通话字错率，横轴在前 20 步放大、对数纵轴展示字错率。第二步在峰值步附近做双向拼接，扫全部边界并与预训练基线对比，确认不兼容是否随恢复减弱。
 
-第三步在每步为 5 个方言各存一个裁剪前梯度，算步内均值、步间中位数和奇异值能量分布，重点看有效维度是否贴近 5 并保持稳定。干预复现需严格对齐数据流，保证教师与学生处理相同批量，先拷教师前 10 步的优化器状态再从第 10 步混合到第 70 步。作者资源方面，本次未发现可验证的公开代码、模型或数据链接，不得声称已开源；私有方言语料和 SpeechIO-3 评估集需自行准备可比的划分。
+第三步在每步为 5 个方言各存一个裁剪前梯度，算步内均值、步间中位数和奇异值能量分布，重点看有效维度是否贴近 5 并保持稳定，同时注意 MiMo-Audio 等面板可能存在较宽波动。干预复现需严格对齐数据流，保证教师与学生处理相同批量，先拷教师前 10 步的优化器状态再从第 10 步混合到第 70 步。作者资源方面，本次未发现可验证的公开代码、模型或数据链接，不得声称已开源；私有方言语料和 SpeechIO-3 评估集需自行准备可比的划分。
 
 ### 什么时候值得借鉴还需要补哪项验证
 

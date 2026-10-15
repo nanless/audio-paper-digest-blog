@@ -20,7 +20,7 @@ paper_digest_primary_task: "语音情感识别"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.emotion-recognition","label":"语音情感识别"},{"facet":"method","id":"method.multimodal-learning","label":"多模态学习"},{"facet":"method","id":"method.uncertainty-estimation","label":"不确定性估计与校准"},{"facet":"signal","id":"signal.speech","label":"语音"}]
 paper_digest_primary_method: "多模态学习"
 paper_digest_score: 6.9
@@ -29,10 +29,10 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "针对多模态情绪识别中 softmax 被迫自信的问题，论文提出每个模态输出狄利克雷证据并用 Dempster-Shafer 规则融合，在四个数据集上同时提升精度与校准，而代价是需要调冲突权重与 KL 退火且依赖条件独立假设。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Muhammad Usama"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Yeoreum Jung"}]
 paper_digest_abstract_sha256: "f74da0baf9bd7ceb42d53c0f261a1f1197b8863a320a9d566de8647cb414a409"
-paper_digest_sidecars: {"citation.bib":{"sha256":"d99f3b46c7602517529f207d3c4b567940e475006f72f9583dd31344ba98c9bf","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13013/citation.bib"},"citation.json":{"sha256":"3ce9d20bcae9e4b77840659756f98e2b8249fd90ac008ead31e76dad0a17b8fb","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13013/citation.json"},"citation.ris":{"sha256":"336cdec34eb5ca432069de35f23ca243d62ee2aa507fc6ea03c4ebe666958883","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13013/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"01fac1a359b20fb65aa2aa24241b48895aea678b4eb4eaede02b597515a2f5e5","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13013/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"d99f3b46c7602517529f207d3c4b567940e475006f72f9583dd31344ba98c9bf","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13013/citation.bib"},"citation.json":{"sha256":"3ce9d20bcae9e4b77840659756f98e2b8249fd90ac008ead31e76dad0a17b8fb","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13013/citation.json"},"citation.ris":{"sha256":"336cdec34eb5ca432069de35f23ca243d62ee2aa507fc6ea03c4ebe666958883","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13013/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"e61d3493c3dafaef44ac057727c81989e5ccfac72a960ac34e4a980868c2285d","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13013/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
-paper_digest_api_reader_article_sha256: "1acf514bb7b6eeb7b932baec89052691f9af09c86f4a628bce370507a3352521"
-paper_digest_api_reader_plan_sha256: "b2e20396c04ea4c50e5be65bc6cd6612eaa712eb9a9c2f23319d810497113942"
+paper_digest_api_reader_article_sha256: "ed0808ce0abf5c88edff5e9e9fbd52cdaef1889401b98d2424a4b6e35bbbe6c3"
+paper_digest_api_reader_plan_sha256: "429fffcbe7fa28937f2b3be7301e6ba0569b862fd7962cf28210195d60113a6f"
 paper_digest_api_reader_source_binding_contract: "api-reader-source-bindings-v4"
 paper_digest_api_reader_source_bindings_sha256: "bf8696d3788840623a0f1f1f382bbaf2277c0ade71072729ac655bc498ab1a3b"
 paper_digest_api_reader_source_table_count: 5
@@ -52,8 +52,16 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[Evidential Multimodal Transformers with Dempster-Shafer Fusion for Emotion Recognition](https://arxiv.org/abs/2610.13013v1)*
 
-> 标签：#语音情感识别 | #多模态学习 | #不确定性估计与校准 | #语音
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[语音情感识别](/audio-paper-digest-blog/papers/?concept=task.emotion-recognition)
+- **研究方法**：[多模态学习](/audio-paper-digest-blog/papers/?concept=method.multimodal-learning)；[不确定性估计与校准](/audio-paper-digest-blog/papers/?concept=method.uncertainty-estimation)
+- **信号**：[语音](/audio-paper-digest-blog/papers/?concept=signal.speech)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**6.9/10** | 创新 1.3/2 | 技术严谨 1.2/1.5 | 实验充分 1.3/1.5 | 清晰度 0.8/1 | 影响力 0.8/1.5 | 开源 0/1.5 | 可复现 0.5/0.5 | 工程/实践 1/1.5
 
 
@@ -92,7 +100,7 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 整体流程可以沿一个样本走一遍。多种原始输入先各自进专用编码器得到定长特征向量，再经证据头输出每个类别的非负证据。证据换算成主观意见，即信念质量向量、不确定性和先验。多模态意见送入 Dempster-Shafer 融合模块，迭代做两两组合，算出冲突并得到融合信念与融合不确定性，最后按投影公式得到决策概率。下图展示了从模态编码、证据头、主观意见到失谐感知融合与最终预测的主路径，是理解分工的关键。
 
-为初学者准备的读图说明：该架构图从左到右分为编码区、意见区、融合区和预测区，重点是 3 条模态支路在哪里汇合以及冲突在何处被计算，建议先看主箭头再看融合块的标注。
+为初学者准备的读图说明：该架构图从左到右分为编码区、意见区、融合区和预测区，重点是 3 条模态支路在哪里汇合以及冲突在何处被计算，建议先看主箭头再看融合块的标注。需要按实际像素说明，左侧紫色框内实际只画了音频、视频、文本三支，生理 1 维卷积第四支不在本图像素中；生理编码器的 1 维卷积加时序注意力是原文图注与正文所述的一般扩展，后续 DEAP 与 KEMDy20 的生理讨论仍按原文保留。
 
 > **看图路径：** 1. 沿音频视频文本三条支路看编码器到证据头的箭头；2. 看三个主观意见如何汇入中间蓝色融合块；3. 看融合块到融合意见再到投影概率的最后一步
 
@@ -100,11 +108,11 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 *论文图 1。原论文 Fig. 1:：“Overall architecture of EMT-DS. Modality-specific encoders (e.g., Wav2Vec2, ViT-B/16, BERT/KoELECTRA, and a physiological 1D-CNN) extract features h^m\in\mathbbR^d from…”。*
 
-图中左侧紫色框内是音频用 Wav2Vec2 加全局平均池化、视频用 ViT 取分类标记、文本用 BERT 或 KoELECTRA 取分类标记，生理信号用 1 维卷积加时序注意力，各自接证据头输出意见；中间蓝色块把多个意见做迭代 Dempster-Shafer 组合并输出聚合意见；右侧红色框把融合意见经狄利克雷参数换算为投影概率。教学例子：若音频证据集中在一类而文本无证据，前者不确定性小、后者不确定性接近 1，融合后应主要听音频的，这正是引出后面公式要解释的机制。
+图中左侧紫色框实际可见的是音频用 Wav2Vec2 加全局平均池化、视频用 ViT-B/16 取分类标记、文本用 BERT 或 KoELECTRA 取分类标记，各自接证据头输出 3 个主观意见；中间蓝色块把多个意见做迭代 Dempster-Shafer 组合并输出聚合意见；右侧红色框把融合意见经狄利克雷参数换算为投影概率。原文图注另述生理 1D-CNN 作为异构输入的一般扩展，可用于脑电与外周生理，但不冒充为本图已画出的分支。教学例子：若音频证据集中在一类而文本无证据，前者不确定性小、后者不确定性接近 1，融合后应主要听音频的，这正是引出后面公式要解释的机制。
 
 ### 每个模态的证据和主观意见怎么算
 
-每个模态先用适合该信号的编码器提取特征。论文中音频用 Wav2Vec2-Large 取最后一层平均池化得到 1024 维，视频用人脸 ViT 取分类标记得到 768 维，文本用 BERT 或韩语 KoELECTRA 取分类标记得到 768 维，生理信号用 4 层 1 维卷积加单块八头时序自注意力再平均池化得到 512 维。所有预训练编码器在实验中冻结，训练的是证据头与融合层，因此增益被归因于融合机制而非微调编码器。
+每个模态先用适合该信号的编码器提取特征。论文中音频用 Wav2Vec2-Large 取最后一层平均池化得到 1024 维，视频用人脸 ViT 取分类标记得到 768 维，文本用 BERT 或韩语 KoELECTRA 取分类标记得到 768 维，生理信号按原文用 4 层 1 维卷积加单块八头时序自注意力再平均池化得到 512 维。所有预训练编码器在实验中冻结，训练的是证据头与融合层，因此增益被归因于融合机制而非微调编码器。
 
 **主观意见 × 狄利克雷分布：** 主观意见是每个模态对 K 个情绪类的信念质量加不确定性的表示，狄利克雷分布是它在概率单纯形上的具体参数化；证据向量经 softplus 得到后换算成信念质量与不确定性，二者搭配让模型既能给出类别倾向又能显式保留缺证据的状态，组合后融合层才能区分自信一致与证据不足。
 
@@ -241,7 +249,7 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 ### 换融合规则与加噪声缺模态会怎样
 
-固定模态证据只换组合算子时，Dempster 规则精度 0.843 最优，PCR5 次之，Yager 与 Murphy 平均更低，直接把 softmax 概率套 D-S 最差，说明价值来自证据参数化与组合规则的协同而非规则本身。超参在 KL 退火约 0.8、冲突权重 IEMOCAP 取 0.10、学习率 1 乘 10 的负 4 次方到 5 乘 10 的负 4 次方平台最稳。噪声实验往音频特征加高斯噪声，噪声强度为 1 时注意力跌到 45.3% 而 EMT-DS 保持 71.2%，机理是损坏模态不确定性趋近 1 使融合自动依赖干净文本。读图说明：横轴为噪声强度、纵轴为精度，3 条曲线斜率越平越鲁棒，重点看最右端差距与误差棒。
+固定模态证据只换组合算子时，Dempster 规则精度 0.843 最优，PCR5 次之，Yager 与 Murphy 平均更低，直接把 softmax 概率套 D-S 最差，说明价值来自证据参数化与组合规则的协同而非规则本身。超参在 KL 退火约 0.8、冲突权重 IEMOCAP 取 0.10、学习率 1 乘 10 的负 4 次方到 5 乘 10 的负 4 次方平台最稳。噪声实验往音频特征加高斯噪声，原文正文报告噪声强度为 1 时注意力跌到 45.3% 而 EMT-DS 保持 71.2%，机理是损坏模态不确定性趋近 1 使融合自动依赖干净文本。读图说明：横轴为噪声强度、纵轴为精度，3 条曲线斜率越平越鲁棒，重点看最右端差距与误差棒。
 
 > **看图路径：** 1. 横轴噪声强度从 0 到 1 看三条曲线的斜率差异；2. 比较噪声为 1 时绿色点与红蓝点的纵轴差距；3. 注意误差棒随噪声增大如何变宽
 
@@ -249,7 +257,7 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 *论文图 5。原论文 Fig. 5:：“Robustness to audio modality corruption.”。*
 
-绿色 EMT-DS 随噪声缓慢下降，红蓝两条基线快速下滑，末端差距约 26 个百分点。缺整个模态时，IEMOCAP 缺音频仍有 71.2% 而注意力仅 56.4%，KEMDy20 缺音频加视频仍有 82.6% 而注意力仅 54.2%，且融合不确定性随信息丢失上升。下表比较不同融合规则的精度、校准、冲突与风险覆盖，冲突列对不计算冲突的规则记为不可用。
+绿色 EMT-DS 随噪声缓慢下降，红蓝两条基线快速下滑，按原文正文报告末端为 45.3% 对 71.2%；而本图中实际标注为 Attention Fusion 44.9% 与 EMT-DS 71.1%，原文未解释该图文差异，此处分别归属以保留可核查性，主分析仍按正文报告值讨论。缺整个模态时，IEMOCAP 缺音频仍有 71.2% 而注意力仅 56.4%，KEMDy20 缺音频加视频仍有 82.6% 而注意力仅 54.2%，且融合不确定性随信息丢失上升。下表比较不同融合规则的精度、校准、冲突与风险覆盖，冲突列对不计算冲突的规则记为不可用。
 
 该表回答规则本身是否关键，公平条件是输入证据完全相同，准确率越高、校准误差与风险覆盖越低越好。
 
@@ -293,7 +301,7 @@ KL 正则只证明空虚意见是唯一最小值子，并非全局凸，分布�
 
 复现应先按原文固定数据划分与特征。IEMOCAP 用会话独立五折，DEAP 用留一被试，KEMDy20 用说话人独立五折且 5 类协议，CMU-MOSEI 用官方划分；归一化均值方差与滤波参数只在训练折估计。特征用冻结的 Wav2Vec2、BERT 或 KoELECTRA、ViT 与论文给出的 1 维卷积结构，不要微调编码器以免混入增益。训练批量 IEMOCAP 与 KEMDy20 为 32、DEAP 为 16，学习率 2 乘 10 的负 4 次方余弦退火 50 轮，KL 退火前 10 轮从 0.01 到 1，冲突权重 IEMOCAP 与 DEAP 取 0.10、KEMDy20 取 0.15，阈值 0.5，冲突裁剪 0.999，证据上限 1000，种子用 7、13、21、42、2024。
 
-模型选择看验证集非加权精度，早停耐心 10 轮。来源方面，本次未能确认作者已公开代码、模型或数据资源，复现时不应默认其可用；缺失的是完整补充材料中的证明细节与部分超参扫描表，复现时需以正文数字为准核对。
+模型选择看验证集非加权精度，早停耐心 10 轮。来源方面，本次未能确认作者已公开代码、模型或数据资源，复现时不应默认其可用；HTML 正文未展开的证明细节与部分超参扫描表，实际可在本次封存 PDF 第 19 到 23 页补充材料中核对：第 19 到 20 页含定理与引理证明，第 21 页含阈值、冲突权重和裁剪常数扫描表。
 
 ### 什么时候值得尝试与还缺什么验证
 

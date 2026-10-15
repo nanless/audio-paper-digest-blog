@@ -20,7 +20,7 @@ paper_digest_primary_task: "音视频问答"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.av-question-answering","label":"音视频问答"},{"facet":"method","id":"method.test-time-adaptation","label":"测试时自适应"},{"facet":"signal","id":"signal.audiovisual","label":"音视频"},{"facet":"research_focus","id":"research_focus.hallucination-faithfulness","label":"幻觉与忠实度"}]
 paper_digest_primary_method: "测试时自适应"
 paper_digest_score: 6.0
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "论文针对全模态大模型中问题相关证据仍在单模态分支可恢复却在联合预测中丢失的模态误路由问题，提出免训练的 CaRe 两阶段冲突检测与残差纠偏，并在 CMM 和 AVHBench 上以额外反事实推理为代价取得一致提升。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Yu Mi"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Licheng Pan"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Jiayi Zhu"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Qirui Liu"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Yitong Qiao"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Changtong Xu"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Tao Wei"},{"affiliations":["Zhejiang University Ant Group Institute of Computing Technology, CAS"],"name":"Fei Sun"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Zhixuan Chu"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Kui Ren"}]
 paper_digest_abstract_sha256: "4040a1214758603ad76f443fc03eea92631d5a1b750fa34b5b8cc3b0759f9269"
-paper_digest_sidecars: {"citation.bib":{"sha256":"c43fba86caf22eb58a0eb6b82e5baf4f66adb71a5cd4891140df7c038efb48b6","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18141/citation.bib"},"citation.json":{"sha256":"56c3e7a59659673e5f21be98aa1032ceab2d3165df1dbbfec561b0801a35c170","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18141/citation.json"},"citation.ris":{"sha256":"ec0983e5c27f85086323f1abf513731db720fce0324cc25cc66af91484f9e29a","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18141/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"d780aa09c7ea944e5f5514ba6bd025f23dca2d669f08d74f71610597425faaed","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18141/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"c43fba86caf22eb58a0eb6b82e5baf4f66adb71a5cd4891140df7c038efb48b6","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18141/citation.bib"},"citation.json":{"sha256":"56c3e7a59659673e5f21be98aa1032ceab2d3165df1dbbfec561b0801a35c170","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18141/citation.json"},"citation.ris":{"sha256":"ec0983e5c27f85086323f1abf513731db720fce0324cc25cc66af91484f9e29a","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18141/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"6076d88e9adaab52e0cd7cdf8f2a5da6dda51c60714c3dab144e0e1116bf4f19","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18141/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "48994bb2562f0b2ada637195c2c0118d30225c989910b3b354dbabef689ce500"
 paper_digest_api_reader_plan_sha256: "9adf1eb133d9ed2194ad95fe3e6932621a70cca9e0649da36e5ecfda00007b81"
@@ -52,8 +52,17 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[Mitigating Cross-Modal Hallucinations by Correcting Modality Misrouting in Omnimodal LLMs](https://arxiv.org/abs/2610.18141v1)*
 
-> 标签：#音视频问答 | #测试时自适应 | #音视频 | #幻觉与忠实度
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[音视频理解](/audio-paper-digest-blog/papers/?concept=task.av-understanding) → [音视频问答](/audio-paper-digest-blog/papers/?concept=task.av-question-answering)
+- **研究方法**：[迁移学习](/audio-paper-digest-blog/papers/?concept=method.transfer) → [领域适应](/audio-paper-digest-blog/papers/?concept=method.domain-adaptation) → [测试时自适应](/audio-paper-digest-blog/papers/?concept=method.test-time-adaptation)
+- **信号**：[音视频](/audio-paper-digest-blog/papers/?concept=signal.audiovisual)
+- **研究重点**：[幻觉与忠实度](/audio-paper-digest-blog/papers/?concept=research_focus.hallucination-faithfulness)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**6.0/10** | 创新 1.2/2 | 技术严谨 1/1.5 | 实验充分 1.2/1.5 | 清晰度 0.8/1 | 影响力 0.8/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 0.7/1.5
 
 

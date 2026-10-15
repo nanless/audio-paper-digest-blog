@@ -20,7 +20,7 @@ paper_digest_primary_task: "音频检索"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.audio-retrieval","label":"音频检索"},{"facet":"method","id":"method.adapter","label":"Adapter"},{"facet":"setting","id":"setting.multilingual","label":"多语言"},{"facet":"signal","id":"signal.speech","label":"语音"}]
 paper_digest_primary_method: "Adapter"
 paper_digest_score: 7.0
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "SSEmb 只用标准语音转写对训练轻量适配器，把冻结语音编码器接到冻结文本检索向量空间，实现直接语音查文本，在英文与多语言及口语文档检索上接近级联系统且时延更低。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Sangkwon Park"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Dongwook Lee"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Youngho Cho"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Donghun Kang"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Heeseung Kim"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Sungroh Yoon"}]
 paper_digest_abstract_sha256: "7be1ddb5d6f4b5322062f839280009350f2ee7a26e7ca64f73928e2bdfeea222"
-paper_digest_sidecars: {"citation.bib":{"sha256":"b9f53fe9fafc7a8b22f56804697d6f893aa0d75664a67e8472c970899303af57","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17813/citation.bib"},"citation.json":{"sha256":"e546084f557b1b7ea26c6107b92032ef41e72b9f6289e44d6b8cceaa3aa7a6ab","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17813/citation.json"},"citation.ris":{"sha256":"76186ff18df57d7fff9ba598ff07c9924c8ca2d8c81af27b1cedca173af68736","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17813/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"efa5b97b5e08df514ce0eb7b2b9d2771350e40366e8c226da981cae082d0e487","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17813/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"b9f53fe9fafc7a8b22f56804697d6f893aa0d75664a67e8472c970899303af57","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17813/citation.bib"},"citation.json":{"sha256":"e546084f557b1b7ea26c6107b92032ef41e72b9f6289e44d6b8cceaa3aa7a6ab","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17813/citation.json"},"citation.ris":{"sha256":"76186ff18df57d7fff9ba598ff07c9924c8ca2d8c81af27b1cedca173af68736","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17813/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"a518262d6bcb23fd86bb8ae68c3d1416b59308d227c359e5f6337fa4a2814ce8","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17813/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "80535862ea358a7dae9f408f646bc23bad86014afb8c7a3d351cbbaf8cbdf2ba"
 paper_digest_api_reader_plan_sha256: "328e3f0498abda4c69506427083875f0882ceff5a2c37e5ab61f3aec68be43da"
@@ -52,8 +52,17 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[SSEmb: Training a Generalizable Speech Retrieval Model Using Only Automatic Speech Recognition Data](https://arxiv.org/abs/2610.17813v1)*
 
-> 标签：#音频检索 | #Adapter | #多语言 | #语音
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[音频检索](/audio-paper-digest-blog/papers/?concept=task.audio-retrieval)
+- **研究方法**：[参数高效微调](/audio-paper-digest-blog/papers/?concept=method.peft) → [Adapter](/audio-paper-digest-blog/papers/?concept=method.adapter)
+- **研究条件**：[多语言](/audio-paper-digest-blog/papers/?concept=setting.multilingual)
+- **信号**：[语音](/audio-paper-digest-blog/papers/?concept=signal.speech)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**7.0/10** | 创新 1.5/2 | 技术严谨 1.1/1.5 | 实验充分 1.3/1.5 | 清晰度 0.8/1 | 影响力 1/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 

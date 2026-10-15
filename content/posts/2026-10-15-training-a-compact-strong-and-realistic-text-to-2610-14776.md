@@ -20,7 +20,7 @@ paper_digest_primary_task: "语音克隆"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.voice-cloning","label":"语音克隆"},{"facet":"task","id":"task.tts","label":"文本到语音"},{"facet":"method","id":"method.preference-optimization","label":"偏好优化"},{"facet":"method","id":"method.autoregressive","label":"自回归模型"}]
 paper_digest_primary_method: "偏好优化"
 paper_digest_score: 7.0
@@ -29,7 +29,7 @@ paper_digest_document_type: "模型报告"
 paper_digest_one_sentence: "论文用 0.6B 双自回归模型做零样本语音克隆，以多语言微调打底、用词错误率和说话人相似度稳住内容和音色，再用对照真人录音的真实感评价模型做强化学习来提升韵律自然感，代价是需要配对真人参考并额外约束时长。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Runyuan Cai"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Yu Lin"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Yiming Wang"},{"affiliations":["AutoArk"],"name":"Xiaodong Zeng"}]
 paper_digest_abstract_sha256: "f7150ebaa1d62cda18a8b25d647c202783ed5f333ea6aac388ae700c0b578054"
-paper_digest_sidecars: {"citation.bib":{"sha256":"84c9a68edb95d3236966be7946c366f8459ebe7685e9487a7d620a2c5e7022de","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14776/citation.bib"},"citation.json":{"sha256":"7b1f5c796e079bfca153b3c60cd64d6fb7a319676fefab40ed3c67d85b94b1b3","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14776/citation.json"},"citation.ris":{"sha256":"ba57cbbcdb50a4b1e4ecebe6dd0557f86bd1558dae12282a43fd94baaebf8ccc","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14776/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"1f616a0fcb63a003fe4cfe28ea1e8b9531acb38d49ec2aa3878b2e4c8c04d499","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14776/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"84c9a68edb95d3236966be7946c366f8459ebe7685e9487a7d620a2c5e7022de","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14776/citation.bib"},"citation.json":{"sha256":"7b1f5c796e079bfca153b3c60cd64d6fb7a319676fefab40ed3c67d85b94b1b3","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14776/citation.json"},"citation.ris":{"sha256":"ba57cbbcdb50a4b1e4ecebe6dd0557f86bd1558dae12282a43fd94baaebf8ccc","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14776/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"cb2e3251cdd2be0010d214c5d8c58243c45ea21e722956586cf3f3cc6df12c93","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14776/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "3d578417d8bed1b93e0fefb19faeb739177228aa013733d1c4d339d5314a78a8"
 paper_digest_api_reader_plan_sha256: "913d84118ace96731affb9aa1a14b3e1600a6858af7ba694eeaeb8c7763905f3"
@@ -52,8 +52,15 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[Training a Compact, Strong, and Realistic Text-to-Speech Model](https://arxiv.org/abs/2610.14776v1)*
 
-> 标签：#语音克隆 | #文本到语音 | #偏好优化 | #自回归模型
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[语音克隆](/audio-paper-digest-blog/papers/?concept=task.voice-cloning)；[语音合成](/audio-paper-digest-blog/papers/?concept=task.speech-synthesis) → [文本到语音](/audio-paper-digest-blog/papers/?concept=task.tts)
+- **研究方法**：[偏好优化](/audio-paper-digest-blog/papers/?concept=method.preference-optimization)；[生成模型](/audio-paper-digest-blog/papers/?concept=method.generative) → [自回归模型](/audio-paper-digest-blog/papers/?concept=method.autoregressive)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**7.0/10** | 创新 1.5/2 | 技术严谨 1.2/1.5 | 实验充分 1.2/1.5 | 清晰度 0.8/1 | 影响力 1/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 

@@ -20,7 +20,7 @@ paper_digest_primary_task: "语音代理规划与工具使用"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.voice-agent-planning","label":"语音代理规划与工具使用"},{"facet":"method","id":"method.uncertainty-estimation","label":"不确定性估计与校准"},{"facet":"signal","id":"signal.speech","label":"语音"},{"facet":"setting","id":"setting.streaming","label":"流式处理"},{"facet":"artifact","id":"artifact.dataset","label":"数据集"}]
 paper_digest_primary_method: "不确定性估计与校准"
 paper_digest_score: 7.1
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "RASSG 针对流式语音中用户修正参数会导致已启动工具产生不可逆陈旧执行的问题，用三次识别一致启动加校准无效风险在最后可取消时刻否决继续执行，在受控执行时钟下把 ReCAST 修正子集的陈旧率从 50.00% 降到 3.15%，代价是保留 3.676 s 成功延迟并依赖固定工具时间假设。"
 paper_digest_authors: [{"affiliations":["Beihang University"],"name":"Daijin Hu"},{"affiliations":["Beihang University"],"name":"Xi Wang"}]
 paper_digest_abstract_sha256: "93630a27bafe82561f76441e80b17cd339bd0f89ed3ac9012b2e0829866927b5"
-paper_digest_sidecars: {"citation.bib":{"sha256":"52d6d9609cff7e2e088ac0fd7ab5890418e0e56947120c2e4ccc58d63ebd3540","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14659/citation.bib"},"citation.json":{"sha256":"7a652cad576603ca8a067498f836b6c69425cc3786f4d2c5ab721c4c103c3ad8","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14659/citation.json"},"citation.ris":{"sha256":"3fdb701ee48641553ebfb200123728d5dff97cfe813f586031aa8d9dee875201","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14659/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"ee1922b63896a57dc0740fd715ae84ed99ca545a36437f1915b8c74a4dec7e9b","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14659/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"52d6d9609cff7e2e088ac0fd7ab5890418e0e56947120c2e4ccc58d63ebd3540","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14659/citation.bib"},"citation.json":{"sha256":"7a652cad576603ca8a067498f836b6c69425cc3786f4d2c5ab721c4c103c3ad8","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14659/citation.json"},"citation.ris":{"sha256":"3fdb701ee48641553ebfb200123728d5dff97cfe813f586031aa8d9dee875201","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14659/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"08040d99d88787ce035380ef79a870052ba38a39a152b5274a22fecdd3b112df","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14659/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "be23550e1f8413c5f02d0409dda14a048af8d358d883a4bb66a8e8b23001d62b"
 paper_digest_api_reader_plan_sha256: "46bb8ed8f908bdd3b1fb081f6be34b607378705e2ba3887430e1872eae680342"
@@ -52,8 +52,18 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[RASSG: Repair-Aware Semantic Survival Gating for Streaming Tool Execution](https://arxiv.org/abs/2610.14659v1)*
 
-> 标签：#语音代理规划与工具使用 | #不确定性估计与校准 | #语音 | #流式处理 | #数据集
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[语音交互](/audio-paper-digest-blog/papers/?concept=task.speech-interaction) → [语音代理规划与工具使用](/audio-paper-digest-blog/papers/?concept=task.voice-agent-planning)
+- **研究方法**：[不确定性估计与校准](/audio-paper-digest-blog/papers/?concept=method.uncertainty-estimation)
+- **研究条件**：[流式处理](/audio-paper-digest-blog/papers/?concept=setting.streaming)
+- **信号**：[语音](/audio-paper-digest-blog/papers/?concept=signal.speech)
+- **研究产物**：[数据集](/audio-paper-digest-blog/papers/?concept=artifact.dataset)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**7.1/10** | 创新 1.2/2 | 技术严谨 1/1.5 | 实验充分 1.1/1.5 | 清晰度 0.7/1 | 影响力 0.8/1.5 | 开源 1/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 

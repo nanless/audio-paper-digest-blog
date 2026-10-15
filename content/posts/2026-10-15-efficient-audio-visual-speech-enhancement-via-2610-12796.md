@@ -20,7 +20,7 @@ paper_digest_primary_task: "语音增强"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.speech-enhancement","label":"语音增强"},{"facet":"method","id":"method.reinforcement","label":"强化学习"},{"facet":"signal","id":"signal.audiovisual","label":"音视频"},{"facet":"research_focus","id":"research_focus.efficiency","label":"高效推理"}]
 paper_digest_primary_method: "强化学习"
 paper_digest_score: 5.5
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "论文用带约束的强化学习结构搜索解决 22M 参数音视增强模型难以部署到手机等边缘设备的问题，以 35 次候选评估找到 2.9M 参数、14.5 dB SI-SNR 提升的模型，代价是比基线低 0.7 dB。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Khubaib Ahmed"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Ahsan Adeel"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Nasir Saleem"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Kia Dashtipour"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Ahsan Ulhaq"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Amir Hussain"}]
 paper_digest_abstract_sha256: "452254e5d883fe597c0bf3e0e76778ea1bc7a4c6d7e22a36159ad0959ada26b2"
-paper_digest_sidecars: {"citation.bib":{"sha256":"e6a7acc65abe934e41a996b4d1f43b6c7e593400d47dd497beb8f934e639a821","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-12796/citation.bib"},"citation.json":{"sha256":"a5ef1465229620e5735252e302b85754499b953f39ca8bc4227297d14c90bfba","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-12796/citation.json"},"citation.ris":{"sha256":"9d87cc8adb255aeac8bd84b388db363bde54e31d65c3b54d2484019bc23b598c","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-12796/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"86f11e2cf5ed193ea1fc6d050eacbd0c4abc8415bcbe1bc76e1b89bc2efdc99c","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-12796/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"e6a7acc65abe934e41a996b4d1f43b6c7e593400d47dd497beb8f934e639a821","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-12796/citation.bib"},"citation.json":{"sha256":"a5ef1465229620e5735252e302b85754499b953f39ca8bc4227297d14c90bfba","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-12796/citation.json"},"citation.ris":{"sha256":"9d87cc8adb255aeac8bd84b388db363bde54e31d65c3b54d2484019bc23b598c","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-12796/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"364f0f454bb70dee9b6ef00279b243169a3bf4a5476484c624751b47ace80e13","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-12796/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "c1dea750200e17bb788dbcf4150e4e206052d706df5bda3ec5e55a4cfc00ba11"
 paper_digest_api_reader_plan_sha256: "3928058e6a8a2bcef2578a0997776445c210550be35ef3faf26beac0a6d09ba4"
@@ -52,8 +52,17 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[Efficient Audio-Visual Speech Enhancement via Reinforcement Learning-Based Neural Architecture Search](https://arxiv.org/abs/2610.12796v1)*
 
-> 标签：#语音增强 | #强化学习 | #音视频 | #高效推理
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[语音增强](/audio-paper-digest-blog/papers/?concept=task.speech-enhancement)
+- **研究方法**：[强化学习](/audio-paper-digest-blog/papers/?concept=method.reinforcement)
+- **信号**：[音视频](/audio-paper-digest-blog/papers/?concept=signal.audiovisual)
+- **研究重点**：[高效推理](/audio-paper-digest-blog/papers/?concept=research_focus.efficiency)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**5.5/10** | 创新 1.2/2 | 技术严谨 0.8/1.5 | 实验充分 0.8/1.5 | 清晰度 0.7/1 | 影响力 0.7/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 

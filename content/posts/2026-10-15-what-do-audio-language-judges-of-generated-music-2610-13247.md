@@ -20,7 +20,7 @@ paper_digest_primary_task: "音频质量评估"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.audio-quality","label":"音频质量评估"},{"facet":"method","id":"method.evaluation-protocol","label":"评测协议"},{"facet":"signal","id":"signal.music","label":"音乐"},{"facet":"model_family","id":"model_family.audio-language","label":"音频大模型"}]
 paper_digest_primary_method: "评测协议"
 paper_digest_score: 6.3
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "论文针对音频语言模型评价生成音乐时相关性无法说明依据的问题，用去掉音频、同提示替换、成对调序和改写指令四个带对照探针检验五个公开评判模型，发现对齐评分都跟随实际播放的音频而质量评分只有部分跟随，且小模型的成对选择跟随位置而指令措辞的影响可达更换模型量级。"
 paper_digest_authors: [{"affiliations":["Institute of Computer Science, Warsaw University of Technology"],"name":"Mateusz Modrzejewski"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Tomasz Radzikowski"}]
 paper_digest_abstract_sha256: "6eb1e4f92a5f30795c8d6412f6154648db6c65ceb104f05e7256a91df7a1456c"
-paper_digest_sidecars: {"citation.bib":{"sha256":"9cd6209aae10a620f961597174e238b75b35d7879734394568c7f68816585979","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13247/citation.bib"},"citation.json":{"sha256":"9f3e316303c54cfcabfd278fb977d09e57dfc8af2ab4279bf19197251940fd21","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13247/citation.json"},"citation.ris":{"sha256":"5cf1a820769f9f342a76d82bfd690e50f0037e2772d491ca78acae8b95bb45cc","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13247/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"8703cbc0f4859cea5e30f1087f94c8805d0910d31d2e2df95c5fa974fde7b440","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13247/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"9cd6209aae10a620f961597174e238b75b35d7879734394568c7f68816585979","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13247/citation.bib"},"citation.json":{"sha256":"9f3e316303c54cfcabfd278fb977d09e57dfc8af2ab4279bf19197251940fd21","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13247/citation.json"},"citation.ris":{"sha256":"5cf1a820769f9f342a76d82bfd690e50f0037e2772d491ca78acae8b95bb45cc","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13247/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"7ace9f2b9bf430c39d7dd167da6fa1c1cf300bfc3f823203453478cec4fdc398","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13247/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "2cd13a437b8488e66fa61672bb914c897996bf1aaf943a7399fe90a54246391c"
 paper_digest_api_reader_plan_sha256: "3b929ed72f9cf808bdce7df1f74eedf4cda1c726c13c562511a90b805473a7e9"
@@ -52,8 +52,17 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[What Do Audio-Language Judges of Generated Music Listen For? Four Probes with Controls from Expert Ratings](https://arxiv.org/abs/2610.13247v1)*
 
-> 标签：#音频质量评估 | #评测协议 | #音乐 | #音频大模型
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[音频质量评估](/audio-paper-digest-blog/papers/?concept=task.audio-quality)
+- **研究方法**：[评测协议](/audio-paper-digest-blog/papers/?concept=method.evaluation-protocol)
+- **信号**：[音乐](/audio-paper-digest-blog/papers/?concept=signal.music)
+- **模型家族**：[音频大模型](/audio-paper-digest-blog/papers/?concept=model_family.audio-language)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**6.3/10** | 创新 1.2/2 | 技术严谨 1.2/1.5 | 实验充分 1.2/1.5 | 清晰度 0.8/1 | 影响力 0.8/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 0.8/1.5
 
 

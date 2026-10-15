@@ -20,7 +20,7 @@ paper_digest_primary_task: "音视频问答"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.av-question-answering","label":"音视频问答"},{"facet":"method","id":"method.uncertainty-estimation","label":"不确定性估计与校准"},{"facet":"model_family","id":"model_family.multimodal","label":"多模态模型"},{"facet":"signal","id":"signal.audiovisual","label":"音视频"}]
 paper_digest_primary_method: "不确定性估计与校准"
 paper_digest_score: 5.7
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "论文针对全模态大模型的答案可信度问题，用外部全模态编码器把输入和思维链映射到同一空间算贴合与连贯，再给多数投票加权，在 UNO-Bench 上随生成器和模态小幅改善且在开放式全模态问答上相对最稳，代价是需要辅助切分和少量标注校准。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Iacopo Ghinassi"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Hy Nguyen Gia La"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Luke Ong"}]
 paper_digest_abstract_sha256: "ef2d276248020dc74c3673c0784b2aab33eb36ccbd0f9d41a12f21b3728bcf9c"
-paper_digest_sidecars: {"citation.bib":{"sha256":"ab8dc92645d1ea8c40ba7ff866323c5c1cd0bc2831a1de533569473f318cfefc","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16933/citation.bib"},"citation.json":{"sha256":"16024b0d9a475bcccb57afefee0344764b6d9ef1b362b08c427d517ab552a971","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16933/citation.json"},"citation.ris":{"sha256":"374d9ff1352604be323b62ac8e48abf89148d3b25d248540a9905d996c171fcc","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16933/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"3496943e263e8a596170631fca0926da155dbc68a985148e17f39ec2592d5439","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16933/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"ab8dc92645d1ea8c40ba7ff866323c5c1cd0bc2831a1de533569473f318cfefc","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16933/citation.bib"},"citation.json":{"sha256":"16024b0d9a475bcccb57afefee0344764b6d9ef1b362b08c427d517ab552a971","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16933/citation.json"},"citation.ris":{"sha256":"374d9ff1352604be323b62ac8e48abf89148d3b25d248540a9905d996c171fcc","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16933/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"9a91589f39be58eb915f4fbbab308348c4275ff7508c58ab26b730ec847ed9f3","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16933/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "4b1396002e824931c4de035dd4fbb59c4fcb5e16d92c0d7f265aeeb7d43dbac0"
 paper_digest_api_reader_plan_sha256: "9865b120aa9e53fbd0bdaf425a9a334e93ecbe9ae200a50d15e4901b9224f05f"
@@ -52,8 +52,17 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[Estimating Uncertainty of Omnimodal Large Language Models via External Omnimodal Embeddings](https://arxiv.org/abs/2610.16933v1)*
 
-> 标签：#音视频问答 | #不确定性估计与校准 | #多模态模型 | #音视频
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[音视频理解](/audio-paper-digest-blog/papers/?concept=task.av-understanding) → [音视频问答](/audio-paper-digest-blog/papers/?concept=task.av-question-answering)
+- **研究方法**：[不确定性估计与校准](/audio-paper-digest-blog/papers/?concept=method.uncertainty-estimation)
+- **信号**：[音视频](/audio-paper-digest-blog/papers/?concept=signal.audiovisual)
+- **模型家族**：[多模态模型](/audio-paper-digest-blog/papers/?concept=model_family.multimodal)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**5.7/10** | 创新 1.2/2 | 技术严谨 1/1.5 | 实验充分 1.2/1.5 | 清晰度 0.7/1 | 影响力 0.5/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 0.8/1.5
 
 

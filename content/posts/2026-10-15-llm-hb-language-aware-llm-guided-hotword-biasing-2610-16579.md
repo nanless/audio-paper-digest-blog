@@ -20,7 +20,7 @@ paper_digest_primary_task: "语音识别"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.asr","label":"语音识别"},{"facet":"method","id":"method.moe","label":"混合专家模型"},{"facet":"setting","id":"setting.code-switching","label":"代码转换"},{"facet":"model_family","id":"model_family.llm","label":"大语言模型"}]
 paper_digest_primary_method: "混合专家模型"
 paper_digest_score: 6.5
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "针对一句内中英交替难认准、稀有词和人名易错的问题，该工作把混合专家适配、辅助语言预测和热词提示组合进语音大模型流程，在 ASRU2019 混读测试集 15 个干扰词条件下把混合错误率从 7.34% 降到 5.85%，代价是需要约 2200 小时多数据训练和预先给定热词表。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Yuxuan He"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Genshun Wan"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Pengcheng Li"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Gongping Huang"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Jianqing Gao"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Yanmin Qian"}]
 paper_digest_abstract_sha256: "693a3ceea38f59cd21809c87d2bf49d55bcc71ffeabddb3104600e25442ac587"
-paper_digest_sidecars: {"citation.bib":{"sha256":"f72695dd9be12c7fe23b9e3c9f1e90d08bf2252525eecfb193e2263589463cb8","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16579/citation.bib"},"citation.json":{"sha256":"4a8b10a47c152f2a88ee5c8ba02975e7ac4fef521002dff8293ddb498ee99bd1","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16579/citation.json"},"citation.ris":{"sha256":"5e056153af4033a86791e0522f314c245ebb2754bd074ddc6e89004d7f012265","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16579/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"eb62380d2a66040d631f81f70c909e635d4a757c022929eccdc067450f38f06e","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16579/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"f72695dd9be12c7fe23b9e3c9f1e90d08bf2252525eecfb193e2263589463cb8","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16579/citation.bib"},"citation.json":{"sha256":"4a8b10a47c152f2a88ee5c8ba02975e7ac4fef521002dff8293ddb498ee99bd1","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16579/citation.json"},"citation.ris":{"sha256":"5e056153af4033a86791e0522f314c245ebb2754bd074ddc6e89004d7f012265","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16579/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"39057cc8308cb89f0a78ca0beed5a25ee089093dadfaad431c95d5fd5ce3219a","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16579/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "dccfaf50c4866030622b7834d241f8685bfe7ca91b3b43025e21706e2742fd98"
 paper_digest_api_reader_plan_sha256: "6462adda265c74bcbd31137fb5fa8c2b1f1a288db1df5f158c0f092938c50bb0"
@@ -52,8 +52,17 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[LLM-HB: Language-Aware LLM-Guided Hotword Biasing for Code-Switching ASR](https://arxiv.org/abs/2610.16579v1)*
 
-> 标签：#语音识别 | #混合专家模型 | #代码转换 | #大语言模型
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[语音识别](/audio-paper-digest-blog/papers/?concept=task.asr)
+- **研究方法**：[混合专家模型](/audio-paper-digest-blog/papers/?concept=method.moe)
+- **研究条件**：[多语言](/audio-paper-digest-blog/papers/?concept=setting.multilingual) → [代码转换](/audio-paper-digest-blog/papers/?concept=setting.code-switching)
+- **模型家族**：[大语言模型](/audio-paper-digest-blog/papers/?concept=model_family.llm)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**6.5/10** | 创新 1.3/2 | 技术严谨 1.1/1.5 | 实验充分 1.1/1.5 | 清晰度 0.8/1 | 影响力 0.9/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 

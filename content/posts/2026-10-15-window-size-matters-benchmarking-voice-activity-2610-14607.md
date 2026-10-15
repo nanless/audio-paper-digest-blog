@@ -20,7 +20,7 @@ paper_digest_primary_task: "语音活动检测"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.vad","label":"语音活动检测"},{"facet":"method","id":"method.benchmark-design","label":"基准设计"},{"facet":"artifact","id":"artifact.benchmark","label":"基准测试"},{"facet":"signal","id":"signal.speech","label":"语音"}]
 paper_digest_primary_method: "基准设计"
 paper_digest_score: 6.9
@@ -29,7 +29,7 @@ paper_digest_document_type: "数据集与基准"
 paper_digest_one_sentence: "论文在 LibriVAD-small 的 test-clean 上离线比较 TEN、Silero 与 RMS 能量基线，回答窗长如何改变帧级排序质量，最强证据是 TEN 在 16 ms 取得 AUC 0.917 且 20 到 50 ms 几乎不变，而 Silero 只在 30 ms 附近最好，代价是结论限于离线排序而不含端点延迟。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Alok Kumar"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Mohit Srivastava"},{"affiliations":["OneByZero AI"],"name":"Anupam Purwar"}]
 paper_digest_abstract_sha256: "3777ee3e4686fb3bcc0ea3202fc023dc254167e43e74c6f4b798111768e82c4e"
-paper_digest_sidecars: {"citation.bib":{"sha256":"e8385a07a2d7a36795ba5bae6269e8bbe726d033a536a50a107959ed5d339742","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14607/citation.bib"},"citation.json":{"sha256":"d252f2d656a81d4e03ea7fb0125579467339975dff9c4b8b2e2c1ac5c7a31f90","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14607/citation.json"},"citation.ris":{"sha256":"7b3395e93cf34ef85732d56e6b2ace3b58ee9abfe887f229f64b6115708268e0","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14607/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"9aebd2655710a228a2fb412b1aba9b9ec06c9567d9cee418899a3e4b9dbd3bbf","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14607/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"e8385a07a2d7a36795ba5bae6269e8bbe726d033a536a50a107959ed5d339742","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14607/citation.bib"},"citation.json":{"sha256":"d252f2d656a81d4e03ea7fb0125579467339975dff9c4b8b2e2c1ac5c7a31f90","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14607/citation.json"},"citation.ris":{"sha256":"7b3395e93cf34ef85732d56e6b2ace3b58ee9abfe887f229f64b6115708268e0","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14607/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"62e9b8b380f03416203c242f21151050a4ef28aa5c297c9b5bd8825a2d85a60d","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14607/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "79f28f6805e2222bb475a7ee7e95bc258ed5b12b203452f596106cea4c426300"
 paper_digest_api_reader_plan_sha256: "0f53db317ec9ab64b01e4dc02a320fb8f3b0c347c13e867dbd202d671ead7f73"
@@ -52,8 +52,17 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[Window Size Matters: Benchmarking Voice Activity Detectors in Noise](https://arxiv.org/abs/2610.14607v1)*
 
-> 标签：#语音活动检测 | #基准设计 | #基准测试 | #语音
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[语音活动检测](/audio-paper-digest-blog/papers/?concept=task.vad)
+- **研究方法**：[评测协议](/audio-paper-digest-blog/papers/?concept=method.evaluation-protocol) → [基准设计](/audio-paper-digest-blog/papers/?concept=method.benchmark-design)
+- **信号**：[语音](/audio-paper-digest-blog/papers/?concept=signal.speech)
+- **研究产物**：[基准测试](/audio-paper-digest-blog/papers/?concept=artifact.benchmark)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**6.9/10** | 创新 1/2 | 技术严谨 1/1.5 | 实验充分 1/1.5 | 清晰度 0.8/1 | 影响力 0.8/1.5 | 开源 1/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 

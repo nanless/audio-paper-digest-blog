@@ -20,7 +20,7 @@ paper_digest_primary_task: "音频深度伪造检测"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.audio-deepfake","label":"音频深度伪造检测"},{"facet":"method","id":"method.transformer","label":"Transformer"},{"facet":"artifact","id":"artifact.benchmark","label":"基准测试"},{"facet":"artifact","id":"artifact.dataset","label":"数据集"},{"facet":"research_focus","id":"research_focus.robustness","label":"鲁棒性"}]
 paper_digest_primary_method: "Transformer"
 paper_digest_score: 7.4
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "论文把混合音频的取证从整段二分类扩展为语音与背景各自的存在与真假八分类，用分离引导加混合波形与伪影证据联合推理的 TruMix 在 MixedTruth 上达到宏平均 AUC 约 98.51%，代价是约 98.8M 参数的多路 Transformer 与结构化推理流程。"
 paper_digest_authors: [{"affiliations":["Vanderbilt University"],"name":"Xindong Zheng"},{"affiliations":["Vanderbilt University"],"name":"Jiashu Zhu"},{"affiliations":["Vanderbilt University"],"name":"Ke Li"},{"affiliations":["Vanderbilt University"],"name":"Dan Lin"}]
 paper_digest_abstract_sha256: "a459070e8f95d1de9ff7cdcfe80aebca43b957d3ab60957ced5b1811ceb7091d"
-paper_digest_sidecars: {"citation.bib":{"sha256":"33dfd1e13a54d13778bc026d3ed83dbbe3e3f56f14c55fb6671260df085fed4a","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14141/citation.bib"},"citation.json":{"sha256":"fd8c3261179427a2615ea38de811d46d6b7fcd7dce69e98b6863f85786fa795e","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14141/citation.json"},"citation.ris":{"sha256":"05db9fce2356d64e99b397378c31da0a0f201c6f2ea2142bab2fd04ea7004221","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14141/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"cb3dbf157fbf572474f118f45385ad48c47047594f9da206f730326d447541f7","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14141/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"33dfd1e13a54d13778bc026d3ed83dbbe3e3f56f14c55fb6671260df085fed4a","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14141/citation.bib"},"citation.json":{"sha256":"fd8c3261179427a2615ea38de811d46d6b7fcd7dce69e98b6863f85786fa795e","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14141/citation.json"},"citation.ris":{"sha256":"05db9fce2356d64e99b397378c31da0a0f201c6f2ea2142bab2fd04ea7004221","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14141/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"a75458036dbbb0eef0dc995f3678cff1706c456b1f945407ad142f3579341447","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14141/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "3cf5c81464ff8f51946192052fc96c775eba178691659eb5fd1f30d01d97d742"
 paper_digest_api_reader_plan_sha256: "5611694c60cd62a687c7d478a894bb70eeeb868d82a616d3b1085ce0fdc4938f"
@@ -52,8 +52,17 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[MixedTruth: Component-Level Detection of Synthetic Speech and Synthetic Background in Mixed Audio](https://arxiv.org/abs/2610.14141v1)*
 
-> 标签：#音频深度伪造检测 | #Transformer | #基准测试 | #数据集 | #鲁棒性
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[音频伪造检测](/audio-paper-digest-blog/papers/?concept=task.audio-forgery) → [音频深度伪造检测](/audio-paper-digest-blog/papers/?concept=task.audio-deepfake)
+- **研究方法**：[Transformer](/audio-paper-digest-blog/papers/?concept=method.transformer)
+- **研究重点**：[鲁棒性](/audio-paper-digest-blog/papers/?concept=research_focus.robustness)
+- **研究产物**：[基准测试](/audio-paper-digest-blog/papers/?concept=artifact.benchmark)；[数据集](/audio-paper-digest-blog/papers/?concept=artifact.dataset)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**7.4/10** | 创新 1.5/2 | 技术严谨 1.2/1.5 | 实验充分 1.3/1.5 | 清晰度 0.8/1 | 影响力 1.1/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1.2/1.5
 
 

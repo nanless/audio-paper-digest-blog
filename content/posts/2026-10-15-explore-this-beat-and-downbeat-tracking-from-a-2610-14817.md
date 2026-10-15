@@ -20,7 +20,7 @@ paper_digest_primary_task: "节拍跟踪"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.beat-tracking","label":"节拍跟踪"},{"facet":"method","id":"method.transformer","label":"Transformer"},{"facet":"signal","id":"signal.music","label":"音乐"},{"facet":"method","id":"method.signal-processing","label":"信号处理"}]
 paper_digest_primary_method: "Transformer"
 paper_digest_score: 5.7
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "该文把节拍跟踪拆成先学局部等脉冲塔图姆网格再在网格上判断每拍含几个脉冲、每小节含几拍，用可微分的网格加子网格分布代替逐帧独立概率，在下拍连续性上超过同基座的无后处理基线，但平均仍落后于带动态贝叶斯网络的最优方法，且网格漏拍会直接限制最终上限。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Robert Kihlborg"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"André Holzapfel"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Jan Schlüter"}]
 paper_digest_abstract_sha256: "82280c30cc0631fbed72ff15ae49513f839697f4370d4b6576917084bde336e9"
-paper_digest_sidecars: {"citation.bib":{"sha256":"d30ecb212ac413399d9ed44e0e4e3cfbd1f48bfa218a039a2c3a2b82983b2019","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14817/citation.bib"},"citation.json":{"sha256":"35e2a1026a28ea61defcb2af2e5adbcd0663b009ac5782e5e7af07e96a477668","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14817/citation.json"},"citation.ris":{"sha256":"28c2881c0da04be3a8b282a4119b10a41eb69efcc8495c61bbcd74daf49b4da6","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14817/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"12056b2008be5d31e71745c611c7c4d29070a16458d0dc0befdf36fdc4b31192","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14817/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"d30ecb212ac413399d9ed44e0e4e3cfbd1f48bfa218a039a2c3a2b82983b2019","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14817/citation.bib"},"citation.json":{"sha256":"35e2a1026a28ea61defcb2af2e5adbcd0663b009ac5782e5e7af07e96a477668","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14817/citation.json"},"citation.ris":{"sha256":"28c2881c0da04be3a8b282a4119b10a41eb69efcc8495c61bbcd74daf49b4da6","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14817/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"af7c597bb7f17d8e52f4d76d16f4ab06a5c050467c574932772040864c1e815a","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14817/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "dac5b7e8cc1c109df5806e03d3384fef4d990a21e64e6beb186c39130f9d21c8"
 paper_digest_api_reader_plan_sha256: "81f93ff0c3e75c8d5b735e33bb8f066c208d9a2c0024c99bb13879775e79dc58"
@@ -52,8 +52,16 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[Explore This! Beat and Downbeat Tracking From a Learned Tatum Grid](https://arxiv.org/abs/2610.14817v1)*
 
-> 标签：#节拍跟踪 | #Transformer | #音乐 | #信号处理
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[音乐分析](/audio-paper-digest-blog/papers/?concept=task.music-understanding) → [节拍跟踪](/audio-paper-digest-blog/papers/?concept=task.beat-tracking)
+- **研究方法**：[Transformer](/audio-paper-digest-blog/papers/?concept=method.transformer)；[信号处理](/audio-paper-digest-blog/papers/?concept=method.signal-processing)
+- **信号**：[音乐](/audio-paper-digest-blog/papers/?concept=signal.music)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**5.7/10** | 创新 1.2/2 | 技术严谨 1/1.5 | 实验充分 1/1.5 | 清晰度 0.7/1 | 影响力 0.7/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 0.8/1.5
 
 

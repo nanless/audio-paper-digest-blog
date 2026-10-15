@@ -20,7 +20,7 @@ paper_digest_primary_task: "歌唱生成"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.singing","label":"歌唱生成"},{"facet":"method","id":"method.vae","label":"变分自编码器"},{"facet":"task","id":"task.audio-coding","label":"音频编码"},{"facet":"task","id":"task.music-understanding","label":"音乐分析"},{"facet":"signal","id":"signal.music","label":"音乐"}]
 paper_digest_primary_method: "变分自编码器"
 paper_digest_score: 7.3
@@ -29,7 +29,7 @@ paper_digest_document_type: "模型报告"
 paper_digest_one_sentence: "MSVAE 针对歌词与连续音频隐变量难对齐的问题，把 64 维隐变量切成两个 32 维子空间分别对齐曲谱与语音识别参考，并以冻结音乐自监督特征为后验基底加门控声学修正，在保持重建的同时用无时间标注的音素前缀实现可懂歌声，代价是两阶段大语料训练与多判别器联合优化。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Guobin Ma"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Yuepeng Jiang"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Dake Guo"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Huakang Chen"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Yuan Zhou"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Lingxin Xiong"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Wenkai Cheng"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Jingbin Hu"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Hanke Xie"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Chunbo Hao"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Wenhao Li"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Ziqian Ning"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Jixun Yao"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Jian Zhao"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Zhonglin Jiang"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Yong Chen"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Lei Xie"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Pengcheng Zhu"}]
 paper_digest_abstract_sha256: "4eece230ac22b181ce3d2daf603907bc1f2d0bda461399e282e84d4b12e5d0d4"
-paper_digest_sidecars: {"citation.bib":{"sha256":"740f18a0ba00d105e63df4d57cfde5c85df89b5a2adc199f9fb8b488d6a83ae4","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17187/citation.bib"},"citation.json":{"sha256":"c83545a71b4e7276a0aa7cb524338a0712a8109e504e14653272a3b5a551ac13","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17187/citation.json"},"citation.ris":{"sha256":"4da70f5525805b316af5424dfd4613a20eb52df54b3978773855b607fbece837","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17187/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"e04e3110768eb93dd86498399e3dcdc9081decd34675b7ee2ef61f97e428b86d","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17187/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"740f18a0ba00d105e63df4d57cfde5c85df89b5a2adc199f9fb8b488d6a83ae4","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17187/citation.bib"},"citation.json":{"sha256":"c83545a71b4e7276a0aa7cb524338a0712a8109e504e14653272a3b5a551ac13","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17187/citation.json"},"citation.ris":{"sha256":"4da70f5525805b316af5424dfd4613a20eb52df54b3978773855b607fbece837","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17187/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"a51b7ab5bf123cd2314b2e2eef1a52a44b8e89650ebe848a5f906f13cbc76227","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17187/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "f9cfdc8b84acaadbc6e6829856feecfa2ec8d612a587f11606c350d12c5dcf29"
 paper_digest_api_reader_plan_sha256: "6a2bd2c2418be40ec993c91c7b9cfe2307fdd5124876eec5c3107a0bcc30c91a"
@@ -52,8 +52,16 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[MSVAE: Rethinking Musical Semantics in Continuous Latent Spaces](https://arxiv.org/abs/2610.17187v1)*
 
-> 标签：#歌唱生成 | #变分自编码器 | #音频编码 | #音乐分析 | #音乐
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[音乐生成](/audio-paper-digest-blog/papers/?concept=task.music-generation) → [歌唱生成](/audio-paper-digest-blog/papers/?concept=task.singing)；[音频编码](/audio-paper-digest-blog/papers/?concept=task.audio-coding)；[音乐分析](/audio-paper-digest-blog/papers/?concept=task.music-understanding)
+- **研究方法**：[生成模型](/audio-paper-digest-blog/papers/?concept=method.generative) → [变分自编码器](/audio-paper-digest-blog/papers/?concept=method.vae)
+- **信号**：[音乐](/audio-paper-digest-blog/papers/?concept=signal.music)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**7.3/10** | 创新 1.5/2 | 技术严谨 1.2/1.5 | 实验充分 1.3/1.5 | 清晰度 0.8/1 | 影响力 1.2/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 

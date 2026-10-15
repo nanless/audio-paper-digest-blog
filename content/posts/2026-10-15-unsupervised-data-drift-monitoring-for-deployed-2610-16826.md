@@ -20,7 +20,7 @@ paper_digest_primary_task: "音频深度伪造检测"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.audio-deepfake","label":"音频深度伪造检测"},{"facet":"method","id":"method.unsupervised","label":"无监督学习"},{"facet":"method","id":"method.uncertainty-estimation","label":"不确定性估计与校准"},{"facet":"signal","id":"signal.speech","label":"语音"},{"facet":"research_focus","id":"research_focus.robustness","label":"鲁棒性"}]
 paper_digest_primary_method: "无监督学习"
 paper_digest_score: 6.3
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "论文针对部署中无标签条件下无法判断检测器是否处于熟悉条件的问题，在固定检测器嵌入上用两个参考的正则马氏距离做可信与告警分流，实验显示未被拦截的伪造误接受率降到 1% 以下，但代价是自动覆盖率明显下降且真语音漂移也会触发大量告警。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Lukáš Prokeš"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Vojtěch Staněk"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Anton Firc"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Kamil Malinka"}]
 paper_digest_abstract_sha256: "ce65bdf38754c8f7ec4bf2990b781c7c34c57d15586b04b8cdcc1d5cdb50a6e7"
-paper_digest_sidecars: {"citation.bib":{"sha256":"cab87c64f3ce8658a9e7587f740e0a23509fe56d079be009345a055331f2ca35","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16826/citation.bib"},"citation.json":{"sha256":"b1162027c571aa6120ee1cce3b5dcd50ed9e9cbb0f68c18d7479bb061feaa90e","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16826/citation.json"},"citation.ris":{"sha256":"88ae25785827eadc28b6db37aa4d02fc0821a099e47a84241397fbb34a6a7359","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16826/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"7140984a44c08c31b95c6fa667f3237e8841e4983741a90f8f734f6669bd7900","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16826/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"cab87c64f3ce8658a9e7587f740e0a23509fe56d079be009345a055331f2ca35","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16826/citation.bib"},"citation.json":{"sha256":"b1162027c571aa6120ee1cce3b5dcd50ed9e9cbb0f68c18d7479bb061feaa90e","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16826/citation.json"},"citation.ris":{"sha256":"88ae25785827eadc28b6db37aa4d02fc0821a099e47a84241397fbb34a6a7359","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16826/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"408aab232d38df808cc64900e06963d4589401b9a8323658097ee5317f5b3db1","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16826/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "94e329b838f57dcf9836be90821c986cf701179f86c66e198a23e8bd0af6507a"
 paper_digest_api_reader_plan_sha256: "d2fc06e42e2fca8963b108b6e67fa44a2cbf78b95b7a4b3fccc0552f8cbcaff0"
@@ -52,8 +52,17 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[Unsupervised Data Drift Monitoring for Deployed Deepfake Speech Detectors](https://arxiv.org/abs/2610.16826v1)*
 
-> 标签：#音频深度伪造检测 | #无监督学习 | #不确定性估计与校准 | #语音 | #鲁棒性
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[音频伪造检测](/audio-paper-digest-blog/papers/?concept=task.audio-forgery) → [音频深度伪造检测](/audio-paper-digest-blog/papers/?concept=task.audio-deepfake)
+- **研究方法**：[无监督学习](/audio-paper-digest-blog/papers/?concept=method.unsupervised)；[不确定性估计与校准](/audio-paper-digest-blog/papers/?concept=method.uncertainty-estimation)
+- **信号**：[语音](/audio-paper-digest-blog/papers/?concept=signal.speech)
+- **研究重点**：[鲁棒性](/audio-paper-digest-blog/papers/?concept=research_focus.robustness)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**6.3/10** | 创新 1.2/2 | 技术严谨 1/1.5 | 实验充分 1/1.5 | 清晰度 0.8/1 | 影响力 1/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 

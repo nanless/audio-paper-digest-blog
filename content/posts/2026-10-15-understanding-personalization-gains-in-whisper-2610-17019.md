@@ -20,7 +20,7 @@ paper_digest_primary_task: "语音识别"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.asr","label":"语音识别"},{"facet":"method","id":"method.lora","label":"LoRA"},{"facet":"method","id":"method.domain-adaptation","label":"领域适应"},{"facet":"research_focus","id":"research_focus.evaluation","label":"模型评估"}]
 paper_digest_primary_method: "LoRA"
 paper_digest_score: 6.3
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "论文用组内划分在三个英语数据集上对照零样本、混合 LoRA 与分组 LoRA，发现增益集中在基线错误大且集中的地方，而混合适配常能持平或超过分组适配，因此超过零样本不能直接当作个性化的证据。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Sergei Katkov"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Antonio Liotta"}]
 paper_digest_abstract_sha256: "f25d4ff0d413e5f7feee1fa527f463ba2bb7e249b19086a0cbc891f8b949c4d9"
-paper_digest_sidecars: {"citation.bib":{"sha256":"d5e92cdf818d4ab1ffcc501beb40e5dc3dcd83318280a4175a0e68ad9abfa17e","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17019/citation.bib"},"citation.json":{"sha256":"b7daa8232a7c195a69505b9b431cf0223b87fe70fc289613f1ddd881ba2e8006","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17019/citation.json"},"citation.ris":{"sha256":"9805a6d408a1a202b6fb1016542bbad231763be6923e4cc7eb05e2fe7e56a65d","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17019/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"72ca8cce787039fb4eaa4c44e13f5fd7a56935e092f589afb214f1ad023c0b51","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17019/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"d5e92cdf818d4ab1ffcc501beb40e5dc3dcd83318280a4175a0e68ad9abfa17e","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17019/citation.bib"},"citation.json":{"sha256":"b7daa8232a7c195a69505b9b431cf0223b87fe70fc289613f1ddd881ba2e8006","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17019/citation.json"},"citation.ris":{"sha256":"9805a6d408a1a202b6fb1016542bbad231763be6923e4cc7eb05e2fe7e56a65d","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17019/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"42d535d4182d01c6cafb783d085b1e90aad6728d0e78c325a81f2c8ffdc3a99f","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17019/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "deaa70c190f98b17e55ba9abf4af25507d7f1339839904927d3d01603f9663d4"
 paper_digest_api_reader_plan_sha256: "ee74ac7ad0261891f038c34df3e2994f37247d30e3ad9e0417ed9aba0c2f247b"
@@ -52,8 +52,16 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[Understanding Personalization Gains in Whisper](https://arxiv.org/abs/2610.17019v1)*
 
-> 标签：#语音识别 | #LoRA | #领域适应 | #模型评估
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[语音识别](/audio-paper-digest-blog/papers/?concept=task.asr)
+- **研究方法**：[参数高效微调](/audio-paper-digest-blog/papers/?concept=method.peft) → [LoRA](/audio-paper-digest-blog/papers/?concept=method.lora)；[迁移学习](/audio-paper-digest-blog/papers/?concept=method.transfer) → [领域适应](/audio-paper-digest-blog/papers/?concept=method.domain-adaptation)
+- **研究重点**：[模型评估](/audio-paper-digest-blog/papers/?concept=research_focus.evaluation)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**6.3/10** | 创新 1/2 | 技术严谨 1.2/1.5 | 实验充分 1.2/1.5 | 清晰度 0.8/1 | 影响力 1/1.5 | 开源 0/1.5 | 可复现 0.1/0.5 | 工程/实践 1/1.5
 
 

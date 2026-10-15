@@ -20,7 +20,7 @@ paper_digest_primary_task: "音频检索"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.audio-retrieval","label":"音频检索"},{"facet":"method","id":"method.multimodal-learning","label":"多模态学习"},{"facet":"method","id":"method.gnn","label":"图神经网络"},{"facet":"method","id":"method.contrastive","label":"对比学习"}]
 paper_digest_primary_method: "多模态学习"
 paper_digest_score: 6.7
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "论文针对融合模型从双模态到三模态时性能下降的模态抑制问题，提出先做小波分解提纯单模态再做结构感知图传播与交叉加权融合的 MMWave，并在四个数据集上以全排序检索验证效果与开销。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Rongqing Kenneth Ong"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Andy W. H. Khong"}]
 paper_digest_abstract_sha256: "a2204f9fef88ca2a706282cd0fe101c4d78b6f59f1a7aaef30e0f491bb5a96cd"
-paper_digest_sidecars: {"citation.bib":{"sha256":"099814016e19a13cb9176536ad7dba47132583a75869bae3c52c40374a307655","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16229/citation.bib"},"citation.json":{"sha256":"7776a10ee3f20492bf3968953bf5c1523ad55f7e372d288fe8702b118bb88c9f","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16229/citation.json"},"citation.ris":{"sha256":"14efc060768aecd2a576824a91fbccb128585f144a31dd09b1684a586e68d125","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16229/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"c0276029f11174b2f1da9267467f8a9d725095724bd35c10d191d344a6922aaa","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16229/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"099814016e19a13cb9176536ad7dba47132583a75869bae3c52c40374a307655","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16229/citation.bib"},"citation.json":{"sha256":"7776a10ee3f20492bf3968953bf5c1523ad55f7e372d288fe8702b118bb88c9f","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16229/citation.json"},"citation.ris":{"sha256":"14efc060768aecd2a576824a91fbccb128585f144a31dd09b1684a586e68d125","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16229/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"6aebac1f205ea295051f40ddc0bab8df650981e3c546275d823c33ef78a7f3e2","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16229/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "aa93c5e7f2009b12b658e2b0481597f541f628f90d03a9a302973675ab08cf83"
 paper_digest_api_reader_plan_sha256: "5cdd0ab7fd53eab3292d022010df19ac098c515048a6806c71b3e2b648731a67"
@@ -52,8 +52,15 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[Tackling the Modality Inhibitance Effect with Wavelet-based Modality Integration in Multi-modal Recommendation](https://arxiv.org/abs/2610.16229v1)*
 
-> 标签：#音频检索 | #多模态学习 | #图神经网络 | #对比学习
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[音频检索](/audio-paper-digest-blog/papers/?concept=task.audio-retrieval)
+- **研究方法**：[多模态学习](/audio-paper-digest-blog/papers/?concept=method.multimodal-learning)；[图神经网络](/audio-paper-digest-blog/papers/?concept=method.gnn)；[对比学习](/audio-paper-digest-blog/papers/?concept=method.contrastive)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**6.7/10** | 创新 1.2/2 | 技术严谨 1/1.5 | 实验充分 1.2/1.5 | 清晰度 0.7/1 | 影响力 0.3/1.5 | 开源 1.2/1.5 | 可复现 0.3/0.5 | 工程/实践 0.8/1.5
 
 

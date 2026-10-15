@@ -44,7 +44,7 @@
       "primaryMethodId": "method.augmentation",
       "primaryTask": "音频事件检测",
       "primaryTaskId": "task.event-detection",
-      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
       "registryVersion": "paper-tag-catalog-v2",
       "selectionContract": "paper-tag-selection-v2"
     }

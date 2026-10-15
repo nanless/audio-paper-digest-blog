@@ -20,7 +20,7 @@ paper_digest_primary_task: "文本到语音"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.tts","label":"文本到语音"},{"facet":"task","id":"task.prosody-style-control","label":"韵律与风格控制"},{"facet":"method","id":"method.diffusion","label":"扩散模型"},{"facet":"method","id":"method.preference-optimization","label":"偏好优化"}]
 paper_digest_primary_method: "扩散模型"
 paper_digest_score: 6.2
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "针对扩散式情感合成只强化目标情绪而缺少对竞争情绪建模的问题，Emo-BPO 用同文本倒序情绪对联合学习对齐与对比两个分数分支并在推理时做对比引导，在 ESD 与 EmoVoiceDB 条件下提升了情绪与韵律相似度和主客观情绪准确率，而可懂度保持接近但未超过自回归大模型基线。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Jiacheng Shi"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Hongfei Du"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Xinyuan Song"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Y. Alicia Hong"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Yanfu Zhang"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Ye Gao"}]
 paper_digest_abstract_sha256: "f61bdfb1ec8f2f9f179e53cc124f82df2a51c3362690434d56a1b1ac20b2cdd6"
-paper_digest_sidecars: {"citation.bib":{"sha256":"d35a8cc9621a53db820462e80139bcf22de1cdada6018d533805dfecbc52b049","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-12958/citation.bib"},"citation.json":{"sha256":"bece890e6f45eb2c62826de957320768a0452bfb143c01519fb475742c41343d","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-12958/citation.json"},"citation.ris":{"sha256":"b06e3c80cf991c13fb688459d7182346fe366822670c8d575c39db60bedd2c08","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-12958/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"bcab352433d2f561f9e91c29cf22d7354724b6be6a2eae5dff45775122aafa1e","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-12958/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"d35a8cc9621a53db820462e80139bcf22de1cdada6018d533805dfecbc52b049","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-12958/citation.bib"},"citation.json":{"sha256":"bece890e6f45eb2c62826de957320768a0452bfb143c01519fb475742c41343d","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-12958/citation.json"},"citation.ris":{"sha256":"b06e3c80cf991c13fb688459d7182346fe366822670c8d575c39db60bedd2c08","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-12958/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"bf0ce0fa14aaa2510c9eb001658064f93c4228571f119ca8ce3801c3d69ac0f1","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-12958/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "380168120a8a2c9155014082ec79f1f7d666d1363e7a8a2716760187447fa405"
 paper_digest_api_reader_plan_sha256: "0b59f0b9767f9f13310467e7befb384b3c1870bfab24480a5ed6b6e557f820d1"
@@ -52,8 +52,15 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[Emo-BPO: Emotion Bidirectional Preference Optimization for Diffusion-based Emotional TTS](https://arxiv.org/abs/2610.12958v1)*
 
-> 标签：#文本到语音 | #韵律与风格控制 | #扩散模型 | #偏好优化
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[语音合成](/audio-paper-digest-blog/papers/?concept=task.speech-synthesis) → [文本到语音](/audio-paper-digest-blog/papers/?concept=task.tts)；[语音合成](/audio-paper-digest-blog/papers/?concept=task.speech-synthesis) → [韵律与风格控制](/audio-paper-digest-blog/papers/?concept=task.prosody-style-control)
+- **研究方法**：[生成模型](/audio-paper-digest-blog/papers/?concept=method.generative) → [扩散模型](/audio-paper-digest-blog/papers/?concept=method.diffusion)；[偏好优化](/audio-paper-digest-blog/papers/?concept=method.preference-optimization)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**6.2/10** | 创新 1.2/2 | 技术严谨 1/1.5 | 实验充分 1/1.5 | 清晰度 0.7/1 | 影响力 1/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 

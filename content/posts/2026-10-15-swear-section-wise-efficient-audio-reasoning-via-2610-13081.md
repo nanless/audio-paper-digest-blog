@@ -20,7 +20,7 @@ paper_digest_primary_task: "音频推理"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.audio-reasoning","label":"音频推理"},{"facet":"task","id":"task.speech-translation","label":"语音翻译"},{"facet":"method","id":"method.curriculum","label":"课程学习"},{"facet":"method","id":"method.reinforcement","label":"强化学习"}]
 paper_digest_primary_method: "课程学习"
 paper_digest_score: 6.0
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "SWEAR 针对音频问答中不同推理阶段难度不一致的问题，用离线五维难度构造分段评分与压缩目标，先让模型在监督微调中学会自评难度，再用课程强化学习按自评调节各段长度，在 MMAU-test-mini 取得 73.5% 准确率和 197.13 词元、在 MMAR 取得 62.0% 准确率和 195.85 词元，相对 CoTA-SFT 减少约六成词元。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Yixuan Li"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Minghao Lv"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Xuenan Xu"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Zihao Zheng"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Mengyue Wu"}]
 paper_digest_abstract_sha256: "0345251273797b3b4073e477188a2bbca414f5072f2eefb0f9b52399d42f5728"
-paper_digest_sidecars: {"citation.bib":{"sha256":"7af10f84dac7715684e3090fd46d8811be64540cefe4fb41d3fcf4d30eec74d6","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13081/citation.bib"},"citation.json":{"sha256":"4e99f6ce9dd381ce5e1d1fdbc33cf9d40ee67292b83974c0d71c1e81c3d1edf7","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13081/citation.json"},"citation.ris":{"sha256":"18d6b80e8c9cd2eb995d8481c4ce9af8755449df2ffb2b2d14dc689d5b772c29","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13081/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"cee254aed093eaa009c85b94099c3fc8441c41b86d4588254f651efaff9375fa","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13081/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"7af10f84dac7715684e3090fd46d8811be64540cefe4fb41d3fcf4d30eec74d6","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13081/citation.bib"},"citation.json":{"sha256":"4e99f6ce9dd381ce5e1d1fdbc33cf9d40ee67292b83974c0d71c1e81c3d1edf7","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13081/citation.json"},"citation.ris":{"sha256":"18d6b80e8c9cd2eb995d8481c4ce9af8755449df2ffb2b2d14dc689d5b772c29","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13081/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"f750388a6de84104d6d3001b33c7f70d5b8bc8940dd2b5ce9fed7a36312cfd03","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13081/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "1e0be7874f90fb1688b3cfb23bf6627c823dfbc8a5a5d43c3ff0f1608afb8c80"
 paper_digest_api_reader_plan_sha256: "b47acea39c3a0227a603de35aef06516a9ce7e0e8191d9f053c6c4167d46e867"
@@ -52,8 +52,15 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[SWEAR: Section-Wise Efficient Audio Reasoning via Self-Rated Difficulty](https://arxiv.org/abs/2610.13081v1)*
 
-> 标签：#音频推理 | #语音翻译 | #课程学习 | #强化学习
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[音频理解](/audio-paper-digest-blog/papers/?concept=task.audio-understanding) → [音频推理](/audio-paper-digest-blog/papers/?concept=task.audio-reasoning)；[语音翻译](/audio-paper-digest-blog/papers/?concept=task.speech-translation)
+- **研究方法**：[课程学习](/audio-paper-digest-blog/papers/?concept=method.curriculum)；[强化学习](/audio-paper-digest-blog/papers/?concept=method.reinforcement)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**6.0/10** | 创新 1.2/2 | 技术严谨 1/1.5 | 实验充分 1/1.5 | 清晰度 0.7/1 | 影响力 1/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 0.8/1.5
 
 

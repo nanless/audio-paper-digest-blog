@@ -20,7 +20,7 @@ paper_digest_primary_task: "歌唱生成"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.singing","label":"歌唱生成"},{"facet":"method","id":"method.flow-matching","label":"流匹配"},{"facet":"method","id":"method.autoregressive","label":"自回归模型"},{"facet":"method","id":"method.vector-quantization","label":"向量量化"}]
 paper_digest_primary_method: "流匹配"
 paper_digest_score: 7.0
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "论文用离散词元做长时规划、用连续语义特征做声音渲染并让流匹配损失回传语言模型，在 192 个共用提示上 Joint-STD-48D 相对离散基线提升 SongEval 并降低音素错误率，但更宽特征与不同渲染路线各有取舍且增益来源尚未分离。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Zheqi Dai"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Zhiyue Wu"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Ruibin Yuan"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Haolin He"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Chunyat Wu"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Xuerui Yang"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Qiuqiang Kong"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Chao Yan"}]
 paper_digest_abstract_sha256: "f839d49128673a7cbd3c74412efab5cfa305a9359590e0d9333cd8e88a2da94a"
-paper_digest_sidecars: {"citation.bib":{"sha256":"5bc80a50b2167af235b1dc06a4ec806b1a274667dacccff8cc9a85d000f5537b","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15802/citation.bib"},"citation.json":{"sha256":"afb950a4158f6c46eaa8a76a26c92954378aa9246b8e53e39d6cb7d9aff59926","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15802/citation.json"},"citation.ris":{"sha256":"a6556d9bc61cf7374fccffaadd4753e0fb0c40900124d29e45172ae13f03f13f","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15802/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"b1094cbbfd2092a4933d6ebbd78d0f670560203c4040ef00c33a4102b2a6bbd6","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15802/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"5bc80a50b2167af235b1dc06a4ec806b1a274667dacccff8cc9a85d000f5537b","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15802/citation.bib"},"citation.json":{"sha256":"afb950a4158f6c46eaa8a76a26c92954378aa9246b8e53e39d6cb7d9aff59926","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15802/citation.json"},"citation.ris":{"sha256":"a6556d9bc61cf7374fccffaadd4753e0fb0c40900124d29e45172ae13f03f13f","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15802/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"855ab3f0b2e0113fbfc69c98c86b680cf8bce2885902052a89f4609613dc1f80","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15802/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "959d87a6b3d1942e9bb674dc2d6876325fa6203204a5c3c5538b5d068f4881f7"
 paper_digest_api_reader_plan_sha256: "fe5abad18b301fc2d90c5f79b131616a53863293e2b036d2215727fb2d9d2b34"
@@ -52,8 +52,15 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[High-Fidelity Song Generation with Joint Discrete and Continuous Modeling](https://arxiv.org/abs/2610.15802v1)*
 
-> 标签：#歌唱生成 | #流匹配 | #自回归模型 | #向量量化
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[音乐生成](/audio-paper-digest-blog/papers/?concept=task.music-generation) → [歌唱生成](/audio-paper-digest-blog/papers/?concept=task.singing)
+- **研究方法**：[生成模型](/audio-paper-digest-blog/papers/?concept=method.generative) → [流匹配](/audio-paper-digest-blog/papers/?concept=method.flow-matching)；[生成模型](/audio-paper-digest-blog/papers/?concept=method.generative) → [自回归模型](/audio-paper-digest-blog/papers/?concept=method.autoregressive)；[向量量化](/audio-paper-digest-blog/papers/?concept=method.vector-quantization)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**7.0/10** | 创新 1.4/2 | 技术严谨 1.2/1.5 | 实验充分 1.1/1.5 | 清晰度 0.8/1 | 影响力 1/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1.2/1.5
 
 

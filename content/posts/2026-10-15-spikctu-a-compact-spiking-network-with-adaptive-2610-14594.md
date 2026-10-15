@@ -20,7 +20,7 @@ paper_digest_primary_task: "关键词检测"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.keyword-detection","label":"关键词检测"},{"facet":"method","id":"method.dynamic-computation","label":"动态计算与早退"},{"facet":"signal","id":"signal.speech","label":"语音"},{"facet":"research_focus","id":"research_focus.efficiency","label":"高效推理"}]
 paper_digest_primary_method: "动态计算与早退"
 paper_digest_score: 6.5
@@ -29,12 +29,12 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "论文把语音指令识别拆成一次编码得到固定记忆、多次共享循环读记忆并修正预测，在三个基准上用 0.16-0.17M 参数取得可比精度，早退能减少循环步数但总能耗节省有限。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Li Jin"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Jiang Wenbin"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Chen Tao"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Wen Fei"}]
 paper_digest_abstract_sha256: "afebe99cd0dfa4bb24a3ae37eb19eda9d69b7acf52b4674f12842db14672baea"
-paper_digest_sidecars: {"citation.bib":{"sha256":"371133ef07154309d4a90e4f7cdf2c064291e02facb7d2fa750fc2e005571cc6","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14594/citation.bib"},"citation.json":{"sha256":"2449c9c4cc9bfddf15d95cbe9a4beba13d502abede38e97aa29afddd86bf4330","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14594/citation.json"},"citation.ris":{"sha256":"9bd059513d05f1fc40cd6a4ee4ecb4d1199c509bda35847ff6048cb6a3ebc6bb","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14594/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"4d61952fdd33e61eb62c8796de6dc9f98aec20321bc7572e2aa2b1443cc85ab6","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14594/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"371133ef07154309d4a90e4f7cdf2c064291e02facb7d2fa750fc2e005571cc6","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14594/citation.bib"},"citation.json":{"sha256":"2449c9c4cc9bfddf15d95cbe9a4beba13d502abede38e97aa29afddd86bf4330","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14594/citation.json"},"citation.ris":{"sha256":"9bd059513d05f1fc40cd6a4ee4ecb4d1199c509bda35847ff6048cb6a3ebc6bb","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14594/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"772a9d41e623e1855731626659be2d689b83ff30dc54734b5e7becb9a04751d1","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14594/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
-paper_digest_api_reader_article_sha256: "cb4cfc9d0d6acd1b4bb7c40ffd4ae312c5d462804312de8ffe36c73463cc8dbb"
-paper_digest_api_reader_plan_sha256: "649b86ac556306c6721eddc532d14d9204cf42e1502b65bd061f1a2f268a6a1c"
+paper_digest_api_reader_article_sha256: "1cfdef8749ffc2789a1bd288fb4d5a8f2e9342f5db4b95824706dd1c0eca3dc6"
+paper_digest_api_reader_plan_sha256: "b5b2d789cefc69980885da6c56e16165db7ba10edbbd2ba9d2b088cb500a3756"
 paper_digest_api_reader_source_binding_contract: "api-reader-source-bindings-v4"
-paper_digest_api_reader_source_bindings_sha256: "daf76aa6495c45b4ce53cbe174da27822011b4acf872e275cf3f6884ba7b7142"
+paper_digest_api_reader_source_bindings_sha256: "87909e932d2cba2c0730230583f91698893b88e27be0749f3ca8bb6ff0a767dd"
 paper_digest_api_reader_source_table_count: 4
 paper_digest_api_reader_source_formula_count: 4
 paper_digest_api_reader_structured_artifacts_sha256: "0cdcb0445c5c7eee7e01e23f56c5c37c6f6b7fd6dad5f3d791503b29c3f34b7e"
@@ -52,8 +52,17 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[SpikCTU: A Compact Spiking Network with Adaptive Recurrent Computation for Speech Command Recognition](https://arxiv.org/abs/2610.14594v1)*
 
-> 标签：#关键词检测 | #动态计算与早退 | #语音 | #高效推理
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[关键词检测](/audio-paper-digest-blog/papers/?concept=task.keyword-detection)
+- **研究方法**：[模型压缩](/audio-paper-digest-blog/papers/?concept=method.compression) → [动态计算与早退](/audio-paper-digest-blog/papers/?concept=method.dynamic-computation)
+- **信号**：[语音](/audio-paper-digest-blog/papers/?concept=signal.speech)
+- **研究重点**：[高效推理](/audio-paper-digest-blog/papers/?concept=research_focus.efficiency)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**6.5/10** | 创新 1.3/2 | 技术严谨 1/1.5 | 实验充分 1.2/1.5 | 清晰度 0.8/1 | 影响力 0.9/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 
@@ -191,7 +200,9 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 *论文图 4。原论文 Figure 4:：“Prediction changes during recurrent computation.”。*
 
-图中显示 SSC 有 9.48% 样本从错变对，也有 3.06% 从对变错，其中延迟修正和振荡修正占一定比例。同模型随步数平均精度上升但存在波动，阈值为 0.9 时早退与全深的差距很小。注意力遮挡实验进一步显示，遮掉最终步最关注的 10% 时间区间会掉 17.65 个百分点，而随机遮同比例只掉 4.55 个百分点，说明关注区域确实与决策相关，但注意力移动幅度与目标间隔变化的相关只有 0.07，不能用注意力移动证明变好。
+图中轨迹需分清两种口径。原文正文报告的 SSC 从错变对 9.48% 与从对变错 3.06%，是比较同一模型第一步与最后一步预测是否正确的初末转变指标，有真源并保留归于原文报告，不能说成是图上直接显示的比例。本次传入像素的图 4(a) 实际标值为 SSC 始终正确 70.3% 与最终正确 17.1% 等轨迹构成标注，与正文初末转变指标并非可无证等同，此处明确作者文字与图上标值的表观差异，不猜分母也不改数值。同模型随步数平均精度上升但存在波动，阈值为 0.9 时早退与全深的差距很小。
+
+注意力遮挡实验进一步显示，遮掉最终步最关注的 10% 时间区间会掉 17.65 个百分点，而随机遮同比例只掉 4.55 个百分点，说明关注区域确实与决策相关，但注意力移动幅度与目标间隔变化的相关只有 0.07，不能用注意力移动证明变好。
 
 ### 早退省了多少循环步，总能耗省了多少
 
@@ -237,7 +248,7 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 | SSC | 1/3/5 | 81.12 | 3.06 |
 | GSC | 1/1/2 | 95.61 | 1.35 |
 
-上表显示粗分配虽利用了难度信号但效果弱于置信度早退，SSC 粗分配 81.12% 低于置信早退 81.42%，GSC 粗分配 95.61% 低于 95.99%，且平均步数并未更少，说明样本级逐步判断保留了更多差异。限制是这些扫描均为单次运行，且难度分组阈值在校准集上选，换分辨率或部署约束可能不迁移。
+上表显示粗分配虽利用了难度信号但效果弱于置信度早退，SSC 粗分配 81.12% 低于置信早退 81.42%，GSC 粗分配 95.61% 低于 95.99%，且平均步数并未更少，说明样本级逐步判断保留了更多差异。表中深度为按容易、中等、困难顺序的 3 个整数，不把扁平化引文中的重复拼接当作深度。限制是这些扫描均为单次运行，且难度分组阈值在校准集上选，换分辨率或部署约束可能不迁移。
 
 ### 证据的边界在哪里
 
@@ -255,7 +266,7 @@ SHD 无官方验证集而用训练子集校准，与 SSC 和 GSC 的验证选模
 
 当设备内存和能量受限且能接受比最高精度低约 1 到 2 个百分点时值得尝试，SSC 上约十二分之一参数和 GSC 上约 55% 代理能量的代价是具体依据。当任务只需要浅循环或输入本身已很清晰时，早退增益可能为零，SHD 就是例子。复现第一步是先跑通固定记忆加两步循环的 SHD 小模型，确认混合表征门控和基准证据的作用，再按任务调循环深度和阈值。还缺的验证包括流式延迟下的停止行为、开放词表上的泛化，以及在目标神经形态硬件上的实测能耗和访存开销。
 
-容易产生的误解是把循环步数节省等同于总能耗同比节省，实际上编码固定成本占大头。另一个误解是把注意力移动当作变好的证据，论文用遮挡和相关系数表明关注区域虽与决策相关但移动方向不决定好坏。第三个误解是把事后阈值扫描的最优点当作可部署增益，实际可运行的是校准集选出的阈值而非测试集上的最优阈值。
+容易产生的误解是把循环步数节省等同于总能耗同比节省，实际上编码固定成本占大头。另一个误解是把注意力移动当作变好的证据，论文用遮挡和相关系数表明关注区域虽与决策相关但移动方向不决定好坏。第 3 个误解是把事后阈值扫描的最优点当作可部署增益，实际可运行的是校准集选出的阈值而非测试集上的最优阈值。
 
 <details>
 <summary>📎 论文与评分元数据</summary>

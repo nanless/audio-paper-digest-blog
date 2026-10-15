@@ -20,7 +20,7 @@ paper_digest_primary_task: "音乐分析"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.music-understanding","label":"音乐分析"},{"facet":"method","id":"method.evaluation-protocol","label":"评测协议"},{"facet":"artifact","id":"artifact.dataset","label":"数据集"},{"facet":"research_focus","id":"research_focus.comparison","label":"模型比较"},{"facet":"signal","id":"signal.music","label":"音乐"}]
 paper_digest_primary_method: "评测协议"
 paper_digest_score: 6.0
@@ -29,7 +29,7 @@ paper_digest_document_type: "应用研究"
 paper_digest_one_sentence: "该文把审美评价做成同艺人组内两两比较再汇总排序，用音频语言模型评歌曲、用视觉语言模型只看画面评 MV，发现视觉排序的模型间一致性明显高于音频，而音频与视觉共识几乎不对齐，与早期 YouTube 播放量的正相关也因艺人组而异。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Kaishen Wang"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Yucheng Pan"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Xuehao Cui"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Hanling Tian"},{"affiliations":["University of Maryland, College Park"],"name":"Heng Huang"}]
 paper_digest_abstract_sha256: "114e7182a648bd4cdb68f4624c0e0193dd45e1089467696dcecc76030b7cea43"
-paper_digest_sidecars: {"citation.bib":{"sha256":"af9121888c60c6f843c3892fe31c0cf651e52f3970a7a78417a38d587fd75ff4","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17731/citation.bib"},"citation.json":{"sha256":"86413fed279a586a7e7820ffdbb0217a3ecf07aef3672f31436c44a26ae88afb","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17731/citation.json"},"citation.ris":{"sha256":"59039c00646ec1c1e56094254afd3d3c6115ca1db15d3624fb0c11d04f23dc5a","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17731/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"09e95e21395f26562c2266b288ab0ee2e19133559553bd190299b06b4a37c868","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17731/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"af9121888c60c6f843c3892fe31c0cf651e52f3970a7a78417a38d587fd75ff4","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17731/citation.bib"},"citation.json":{"sha256":"86413fed279a586a7e7820ffdbb0217a3ecf07aef3672f31436c44a26ae88afb","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17731/citation.json"},"citation.ris":{"sha256":"59039c00646ec1c1e56094254afd3d3c6115ca1db15d3624fb0c11d04f23dc5a","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17731/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"8fdd91d070f6e287398d7066f5a8d33ecc5339c3aa2b991cab8afcbed93df26b","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17731/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "8dd45afa525813175c3e68cd877fd1b2dd24343baf6f17a6104e5bd7d3e1af3a"
 paper_digest_api_reader_plan_sha256: "324e31dc7ed10a2383e9569f222e6c0efdd47107bd4788eb5f906785c48928e4"
@@ -52,8 +52,18 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[Understanding Machine Taste: Aesthetic Agreement Across Foundation Models in K-pop](https://arxiv.org/abs/2610.17731v1)*
 
-> 标签：#音乐分析 | #评测协议 | #数据集 | #模型比较 | #音乐
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[音乐分析](/audio-paper-digest-blog/papers/?concept=task.music-understanding)
+- **研究方法**：[评测协议](/audio-paper-digest-blog/papers/?concept=method.evaluation-protocol)
+- **信号**：[音乐](/audio-paper-digest-blog/papers/?concept=signal.music)
+- **研究重点**：[模型评估](/audio-paper-digest-blog/papers/?concept=research_focus.evaluation) → [模型比较](/audio-paper-digest-blog/papers/?concept=research_focus.comparison)
+- **研究产物**：[数据集](/audio-paper-digest-blog/papers/?concept=artifact.dataset)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**6.0/10** | 创新 1.2/2 | 技术严谨 1.2/1.5 | 实验充分 1.2/1.5 | 清晰度 0.8/1 | 影响力 0.8/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 0.5/1.5
 
 

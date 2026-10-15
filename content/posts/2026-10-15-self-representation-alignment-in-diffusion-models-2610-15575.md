@@ -20,7 +20,7 @@ paper_digest_primary_task: "符号音乐生成"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.symbolic-music","label":"符号音乐生成"},{"facet":"method","id":"method.diffusion","label":"扩散模型"},{"facet":"task","id":"task.video-to-audio","label":"视频到声音生成"},{"facet":"signal","id":"signal.music","label":"音乐"}]
 paper_digest_primary_method: "扩散模型"
 paper_digest_score: 5.9
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "论文针对视频条件下的符号音乐生成中扩散模型内部表示质量不足的问题，提出用高噪声下浅层表示向低噪声下深层表示对齐的 U-SRA 方法，在 BGM909 上以检索精度和接近真实数据的音高节奏指标超过 Diff-BGM，代价是需要额外的教师分支与对齐投影计算。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Jincheng Zhang"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"György Fazekas"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Charalampos Saitis"}]
 paper_digest_abstract_sha256: "6b612ccb89050de83582b9b2daaa4b8f182a0d9b0c98c011b6d77997428409e3"
-paper_digest_sidecars: {"citation.bib":{"sha256":"7e7b510fd5e62d3f176df3fedc5b3807236477ae8a7fc0fb96b2b046ed972506","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15575/citation.bib"},"citation.json":{"sha256":"deadd7bbe3de780d336385db08dc9dffe36075799ecb38d26638b07c197f0d69","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15575/citation.json"},"citation.ris":{"sha256":"cce46dc039e7f8596acccc7b0b19eaf8b8b837f4b48625f0b2a79f2cfb49fe3e","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15575/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"7e3f12dd1b58af18322aa8514dfbb430bf3476e02d6f41893932caded12d551a","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15575/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"7e7b510fd5e62d3f176df3fedc5b3807236477ae8a7fc0fb96b2b046ed972506","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15575/citation.bib"},"citation.json":{"sha256":"deadd7bbe3de780d336385db08dc9dffe36075799ecb38d26638b07c197f0d69","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15575/citation.json"},"citation.ris":{"sha256":"cce46dc039e7f8596acccc7b0b19eaf8b8b837f4b48625f0b2a79f2cfb49fe3e","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15575/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"c592dcfd308ad2dca70d7986f0b68c311f183d542981ef0510e567e6618336d1","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15575/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "64fa33fa5300dde3aadcaaf0d32fb1fd4589cb5e389c705ebe0a5b5d09768176"
 paper_digest_api_reader_plan_sha256: "92d5c575992cdb6bca6449bbe6b5ac652108fe4e5670eb7d92a2e2e17b54d868"
@@ -52,8 +52,16 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[Self-Representation Alignment in Diffusion Models for Video Background Music Generation](https://arxiv.org/abs/2610.15575v1)*
 
-> 标签：#符号音乐生成 | #扩散模型 | #视频到声音生成 | #音乐
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[音乐生成](/audio-paper-digest-blog/papers/?concept=task.music-generation) → [符号音乐生成](/audio-paper-digest-blog/papers/?concept=task.symbolic-music)；[音频生成](/audio-paper-digest-blog/papers/?concept=task.audio-generation) → [视频到声音生成](/audio-paper-digest-blog/papers/?concept=task.video-to-audio)
+- **研究方法**：[生成模型](/audio-paper-digest-blog/papers/?concept=method.generative) → [扩散模型](/audio-paper-digest-blog/papers/?concept=method.diffusion)
+- **信号**：[音乐](/audio-paper-digest-blog/papers/?concept=signal.music)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**5.9/10** | 创新 1.2/2 | 技术严谨 1/1.5 | 实验充分 1/1.5 | 清晰度 0.8/1 | 影响力 0.8/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 0.8/1.5
 
 

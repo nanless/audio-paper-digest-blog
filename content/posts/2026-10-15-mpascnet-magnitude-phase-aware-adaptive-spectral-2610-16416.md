@@ -20,7 +20,7 @@ paper_digest_primary_task: "音频修复"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.audio-restoration","label":"音频修复"},{"facet":"method","id":"method.attention","label":"注意力机制"},{"facet":"signal","id":"signal.music","label":"音乐"},{"facet":"method","id":"method.time-frequency","label":"时频分析"}]
 paper_digest_primary_method: "注意力机制"
 paper_digest_score: 8.0
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "针对 MP3 低码率造成的带宽缺失与编码失真，MPASCNet 用幅度和包裹相位共同指导频点到紧凑 token 的自适应压缩与分支重建，在 MedleyDB 非重叠评测上以 6.49 M 参数取得整体 17.65 dB SDR 和 17.27 dB SI-SNR，但增益只在原文的混合训练与三类评测条件下成立。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Xinlong Deng"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Yu Xia"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Qiuqiang Kong"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Yin Cao"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Jie Jiang"}]
 paper_digest_abstract_sha256: "54b319c7ff11b21e11bb3f52dc7fa24a0424f10ea72e1765e091268e113a709d"
-paper_digest_sidecars: {"citation.bib":{"sha256":"1721822e3790f451789efb6bcf07016f87d399fa119a74694e6c8cc48f26811f","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16416/citation.bib"},"citation.json":{"sha256":"3010dd4e9a221aa8defbb323a26fc43d36dd45a8e8ce5f584bc139a8048c9ea7","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16416/citation.json"},"citation.ris":{"sha256":"8a97835d36ef52a128f2a4461260676c672e2a26ba484b897596e99889741cdf","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16416/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"95bf5fc68b41a9cfdb1f2a26b5525eef7bc5bd4e4421604afab7e9a6a8227ba2","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16416/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"1721822e3790f451789efb6bcf07016f87d399fa119a74694e6c8cc48f26811f","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16416/citation.bib"},"citation.json":{"sha256":"3010dd4e9a221aa8defbb323a26fc43d36dd45a8e8ce5f584bc139a8048c9ea7","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16416/citation.json"},"citation.ris":{"sha256":"8a97835d36ef52a128f2a4461260676c672e2a26ba484b897596e99889741cdf","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16416/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"67fcb888203bff303547db2573631de2a068cad42aa84c6794fda58195df39c3","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16416/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "6166b823a46819b4a4a2d98d59fed7a2142de75b732fbf3af526388399151a72"
 paper_digest_api_reader_plan_sha256: "3a97ace4b88a65d590c65e678d25bf98174712e38a93a56c1249ee3eb96f5cc0"
@@ -52,8 +52,16 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[MPASCNet: Magnitude-Phase-Aware Adaptive Spectral Compression for Compressed Music Restoration](https://arxiv.org/abs/2610.16416v1)*
 
-> 标签：#音频修复 | #注意力机制 | #音乐 | #时频分析
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[音频修复](/audio-paper-digest-blog/papers/?concept=task.audio-restoration)
+- **研究方法**：[注意力机制](/audio-paper-digest-blog/papers/?concept=method.attention)；[信号处理](/audio-paper-digest-blog/papers/?concept=method.signal-processing) → [时频分析](/audio-paper-digest-blog/papers/?concept=method.time-frequency)
+- **信号**：[音乐](/audio-paper-digest-blog/papers/?concept=signal.music)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**8.0/10** | 创新 1.3/2 | 技术严谨 1/1.5 | 实验充分 1.2/1.5 | 清晰度 0.8/1 | 影响力 1/1.5 | 开源 1/1.5 | 可复现 0.5/0.5 | 工程/实践 1.2/1.5
 
 

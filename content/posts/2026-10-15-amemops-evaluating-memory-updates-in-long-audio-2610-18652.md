@@ -20,7 +20,7 @@ paper_digest_primary_task: "音频问答"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.audio-question-answering","label":"音频问答"},{"facet":"method","id":"method.benchmark-design","label":"基准设计"},{"facet":"artifact","id":"artifact.benchmark","label":"基准测试"},{"facet":"setting","id":"setting.long-audio","label":"长音频处理"}]
 paper_digest_primary_method: "基准设计"
 paper_digest_score: 6.0
@@ -29,7 +29,7 @@ paper_digest_document_type: "数据集与基准"
 paper_digest_one_sentence: "AMemOps 用增益与声像位置可控的长音频流检验最新属性取回、未变属性保留与缺席拒绝，用录音、熟悉度与冲突历史配对控制比较固定尺寸递推记忆与注意力，说明更新优势在什么录音与历史条件下出现以及擦除的作用。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Peiwei Chang"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Li Zhang"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Mark D. Plumbley"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Philip J. B. Jackson"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Wenwu Wang"}]
 paper_digest_abstract_sha256: "4134383b3bf11fd1def5b4926bb32a4831be5a7303c5d3bd5c21797621fbc7e2"
-paper_digest_sidecars: {"citation.bib":{"sha256":"a7f7d0ad46e093c874b776026835119b796e1001377fb527b760d69311023c33","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18652/citation.bib"},"citation.json":{"sha256":"330c98930d5765a1d94d2a75b214eee56d03e78b2652acb8a780f667dbd04145","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18652/citation.json"},"citation.ris":{"sha256":"bd718ef07c862f339bed168501a44521d09edb392c6cbeb61e5f7661131f61bd","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18652/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"aa761a9a85bcbc5dde6a76e41c8e48f7bcec7ed966b791ce75130f51b27e8198","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18652/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"a7f7d0ad46e093c874b776026835119b796e1001377fb527b760d69311023c33","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18652/citation.bib"},"citation.json":{"sha256":"330c98930d5765a1d94d2a75b214eee56d03e78b2652acb8a780f667dbd04145","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18652/citation.json"},"citation.ris":{"sha256":"bd718ef07c862f339bed168501a44521d09edb392c6cbeb61e5f7661131f61bd","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18652/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"648c02b4d0d752ccff3432c88061cc6df9afe504489d6c5669e008377ea8ed86","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18652/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "ce81da26f714d26381d3db3d502551c9349b4be9a0abfb6e70264374dec74c58"
 paper_digest_api_reader_plan_sha256: "24b9e4b644e50d75e382b8854ffe90d46910d3a918aa94efa22d11caf76db9c2"
@@ -52,8 +52,17 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[AMemOps: Evaluating Memory Updates in Long Audio Streams](https://arxiv.org/abs/2610.18652v1)*
 
-> 标签：#音频问答 | #基准设计 | #基准测试 | #长音频处理
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[音频理解](/audio-paper-digest-blog/papers/?concept=task.audio-understanding) → [音频问答](/audio-paper-digest-blog/papers/?concept=task.audio-question-answering)
+- **研究方法**：[评测协议](/audio-paper-digest-blog/papers/?concept=method.evaluation-protocol) → [基准设计](/audio-paper-digest-blog/papers/?concept=method.benchmark-design)
+- **研究条件**：[长音频处理](/audio-paper-digest-blog/papers/?concept=setting.long-audio)
+- **研究产物**：[基准测试](/audio-paper-digest-blog/papers/?concept=artifact.benchmark)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**6.0/10** | 创新 1.2/2 | 技术严谨 1/1.5 | 实验充分 1.2/1.5 | 清晰度 0.8/1 | 影响力 0.7/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 0.8/1.5
 
 

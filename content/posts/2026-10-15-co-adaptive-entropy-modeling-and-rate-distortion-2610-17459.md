@@ -20,7 +20,7 @@ paper_digest_primary_task: "音频编码"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.audio-coding","label":"音频编码"},{"facet":"method","id":"method.signal-processing","label":"信号处理"},{"facet":"task","id":"task.audio-quality","label":"音频质量评估"},{"facet":"method","id":"method.subjective-evaluation","label":"主观评测"}]
 paper_digest_primary_method: "信号处理"
 paper_digest_score: 7.0
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "该论文把随解码数据在线学习的熵编码代价直接送入感知比特分配，用动态规划在块预算下求最小总噪声掩蔽比，并用严格按块与带储备的对照分离出熵感知与协同适应的增量，代价是动态规划编码端约 20 倍于拉格朗日方法的计算量。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Soohyun Kim"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Jiwon Jeong"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Marina Bosi"}]
 paper_digest_abstract_sha256: "0bdc335183f8f7a88e8996a49c6cb42c71705a5a11c48f30faf9125dc9d7ae1d"
-paper_digest_sidecars: {"citation.bib":{"sha256":"fcbce0151629bf80f2af317967034114446470cefcbd73a496aa549f72a34613","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17459/citation.bib"},"citation.json":{"sha256":"574030e088e6b4dea447f85aa6885a7ac0b4459dc65cd0f624e5dae23950af08","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17459/citation.json"},"citation.ris":{"sha256":"8d69d5e0b4165d8263ee397b3c0af230a6ea449c274f3dc81185fa1321f57984","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17459/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"f45dd5b8a5d96e939afd24779668304abea92280f282b68528c566415cf21838","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17459/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"fcbce0151629bf80f2af317967034114446470cefcbd73a496aa549f72a34613","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17459/citation.bib"},"citation.json":{"sha256":"574030e088e6b4dea447f85aa6885a7ac0b4459dc65cd0f624e5dae23950af08","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17459/citation.json"},"citation.ris":{"sha256":"8d69d5e0b4165d8263ee397b3c0af230a6ea449c274f3dc81185fa1321f57984","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17459/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"32b416a798b3e9571c0e0454423dbf9a86c923bd3092b3d6e8639d8d62dddd15","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17459/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "89e6c68c3a38757118c45919f9a9b4ac0eff70453525d121402d567601ded2c5"
 paper_digest_api_reader_plan_sha256: "6ed24a73c036631ad9d53b55a191599dc294c0cede0a1a9d023347157902ffff"
@@ -52,8 +52,15 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[Co-Adaptive Entropy Modeling and Rate-Distortion-Optimal Bit Allocation for Perceptual Audio Coding](https://arxiv.org/abs/2610.17459v1)*
 
-> 标签：#音频编码 | #信号处理 | #音频质量评估 | #主观评测
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[音频编码](/audio-paper-digest-blog/papers/?concept=task.audio-coding)；[音频质量评估](/audio-paper-digest-blog/papers/?concept=task.audio-quality)
+- **研究方法**：[信号处理](/audio-paper-digest-blog/papers/?concept=method.signal-processing)；[人类参与评测](/audio-paper-digest-blog/papers/?concept=method.human-evaluation) → [主观评测](/audio-paper-digest-blog/papers/?concept=method.subjective-evaluation)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**7.0/10** | 创新 1.5/2 | 技术严谨 1.2/1.5 | 实验充分 1.2/1.5 | 清晰度 0.8/1 | 影响力 1/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 

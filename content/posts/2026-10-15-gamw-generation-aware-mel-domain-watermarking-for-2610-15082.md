@@ -20,7 +20,7 @@ paper_digest_primary_task: "音频水印"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.watermarking","label":"音频水印"},{"facet":"task","id":"task.tts","label":"文本到语音"},{"facet":"method","id":"method.attention","label":"注意力机制"},{"facet":"research_focus","id":"research_focus.robustness","label":"鲁棒性"}]
 paper_digest_primary_method: "注意力机制"
 paper_digest_score: 6.5
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "GAMW 针对合成语音事后加水印易被复合处理抹除的问题，把内容自适应的多比特残差写进冻结 TTS 产生的梅尔谱再经冻结声码器发声，并用聚焦调节加动态逐比特加权学习解码，在两条 TTS 链路上保持语音质量的同时提升了单种与复合扰动下的解出率。"
 paper_digest_authors: [{"affiliations":["Zhejiang University"],"name":"Yihang Zhang"},{"affiliations":["Zhejiang University"],"name":"Weicai Yan"},{"affiliations":["Zhejiang University"],"name":"Qifei Zhang"},{"affiliations":["Zhejiang University"],"name":"Yangyang Wu"},{"affiliations":["Zhejiang University"],"name":"Tao Jin"}]
 paper_digest_abstract_sha256: "bf14d05dfb4a648888857d48c51c4efc5ee777511bdc35ee936d1b5f079c1b5e"
-paper_digest_sidecars: {"citation.bib":{"sha256":"289953c208729d5ce3a31ff1bc9a891b74b3e1cacee7b47640493a524a35c70c","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15082/citation.bib"},"citation.json":{"sha256":"bf59053a7e67ba1febfd6ca2db8292bd2550698c5ceddf2e28f885651ea9db0d","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15082/citation.json"},"citation.ris":{"sha256":"a7561911ecd906b7284e4593344d2826f74d2124e421cab2368828e7ce3fa27a","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15082/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"d4b840e9bd5b1482eda961b8e8ae9d79ad2146ab8188dd1a561dc824b23883c4","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15082/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"289953c208729d5ce3a31ff1bc9a891b74b3e1cacee7b47640493a524a35c70c","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15082/citation.bib"},"citation.json":{"sha256":"bf59053a7e67ba1febfd6ca2db8292bd2550698c5ceddf2e28f885651ea9db0d","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15082/citation.json"},"citation.ris":{"sha256":"a7561911ecd906b7284e4593344d2826f74d2124e421cab2368828e7ce3fa27a","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15082/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"0db4d0c85fa9a7025b55eb28d65c45babf97d6f15d9b43404235264c04429b1f","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15082/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "1fe63da456fd1f08ce2056d9e078c21662f045bcbc83a063ffe943bfb3b28f16"
 paper_digest_api_reader_plan_sha256: "90793b8ba08bccdbd6c0e6a9bb53f08aaecc28d87fb62aaaf26edd77c5623556"
@@ -52,8 +52,16 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[GAMW: Generation-Aware Mel-Domain Watermarking for TTS Traceability](https://arxiv.org/abs/2610.15082v1)*
 
-> 标签：#音频水印 | #文本到语音 | #注意力机制 | #鲁棒性
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[音频水印](/audio-paper-digest-blog/papers/?concept=task.watermarking)；[语音合成](/audio-paper-digest-blog/papers/?concept=task.speech-synthesis) → [文本到语音](/audio-paper-digest-blog/papers/?concept=task.tts)
+- **研究方法**：[注意力机制](/audio-paper-digest-blog/papers/?concept=method.attention)
+- **研究重点**：[鲁棒性](/audio-paper-digest-blog/papers/?concept=research_focus.robustness)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**6.5/10** | 创新 1.3/2 | 技术严谨 1/1.5 | 实验充分 1.2/1.5 | 清晰度 0.8/1 | 影响力 0.9/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 

@@ -20,7 +20,7 @@ paper_digest_primary_task: "文本到语音"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.tts","label":"文本到语音"},{"facet":"method","id":"method.sft","label":"SFT"},{"facet":"task","id":"task.prosody-style-control","label":"韵律与风格控制"},{"facet":"scientific_topic","id":"scientific_topic.speech-disorders","label":"言语障碍"}]
 paper_digest_primary_method: "SFT"
 paper_digest_score: 5.8
@@ -29,7 +29,7 @@ paper_digest_document_type: "模型报告"
 paper_digest_one_sentence: "论文针对治疗师缺乏失语症沟通练习对象的问题，用失语症语料微调轻量非自回归语音合成模型并加入停顿口吃处理与向量偏移扩增说话人，在语速停顿和可懂度指标上复现了失语症特征，但结论只在五十句脚本合成与所选临床指标范围内成立。"
 paper_digest_authors: [{"affiliations":["机构信息未能从 arXiv PDF 文本可靠映射"],"name":"Al Varrel Putra Kusuma"},{"affiliations":["机构信息未能从 arXiv PDF 文本可靠映射"],"name":"Fernando Bello"},{"affiliations":["机构信息未能从 arXiv PDF 文本可靠映射"],"name":"Joshua Brown"}]
 paper_digest_abstract_sha256: "19bed9f4b4f6c7a0ab4e292eb2f4f98c23921ddc73c45524c7d53c937517559a"
-paper_digest_sidecars: {"citation.bib":{"sha256":"66abb5bcb821a53dfc9cef13fbb19c0075c37fdd4247ced8c6c59d27fb467763","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14479/citation.bib"},"citation.json":{"sha256":"be54a3e1983c7cf6cf8f29ecf7263ac4e75c81fb153b279f5e8283d908a69d24","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14479/citation.json"},"citation.ris":{"sha256":"e35f6d29294d8dfb633e00436f6c7b8361ff13d5702a88db83c68fd346774a86","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14479/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"a22827e1223603c670438338a8ad0db2359d633911c479bb5877d73635e92a3b","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14479/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"66abb5bcb821a53dfc9cef13fbb19c0075c37fdd4247ced8c6c59d27fb467763","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14479/citation.bib"},"citation.json":{"sha256":"be54a3e1983c7cf6cf8f29ecf7263ac4e75c81fb153b279f5e8283d908a69d24","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14479/citation.json"},"citation.ris":{"sha256":"e35f6d29294d8dfb633e00436f6c7b8361ff13d5702a88db83c68fd346774a86","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14479/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"29c43becec8e053544fc4cc4a1e2d122eda5f041401d8714f9887ccf031d2c87","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14479/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "213276ac94bc9a2939f3246f94172049bb8d2861d1468684a10f99a3c8778d3e"
 paper_digest_api_reader_plan_sha256: "20300d9d0d39ae38522ca4ffaeb18f4dffe411ea07f2a39df01ae94365a3e3e6"
@@ -52,8 +52,16 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[AphaVoice: Text-to-Speech Model for Aphasia Patient Simulation](https://arxiv.org/abs/2610.14479v1)*
 
-> 标签：#文本到语音 | #SFT | #韵律与风格控制 | #言语障碍
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[语音合成](/audio-paper-digest-blog/papers/?concept=task.speech-synthesis) → [文本到语音](/audio-paper-digest-blog/papers/?concept=task.tts)；[语音合成](/audio-paper-digest-blog/papers/?concept=task.speech-synthesis) → [韵律与风格控制](/audio-paper-digest-blog/papers/?concept=task.prosody-style-control)
+- **研究方法**：[SFT](/audio-paper-digest-blog/papers/?concept=method.sft)
+- **科学主题**：[言语障碍](/audio-paper-digest-blog/papers/?concept=scientific_topic.speech-disorders)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**5.8/10** | 创新 1.2/2 | 技术严谨 1/1.5 | 实验充分 1/1.5 | 清晰度 0.7/1 | 影响力 0.8/1.5 | 开源 0/1.5 | 可复现 0.1/0.5 | 工程/实践 1/1.5
 
 

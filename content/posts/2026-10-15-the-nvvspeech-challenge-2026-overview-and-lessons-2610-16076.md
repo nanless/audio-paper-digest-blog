@@ -20,7 +20,7 @@ paper_digest_primary_task: "语音识别"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.asr","label":"语音识别"},{"facet":"method","id":"method.benchmark-design","label":"基准设计"},{"facet":"task","id":"task.tts","label":"文本到语音"},{"facet":"artifact","id":"artifact.benchmark","label":"基准测试"}]
 paper_digest_primary_method: "基准设计"
 paper_digest_score: 6.3
@@ -29,7 +29,7 @@ paper_digest_document_type: "数据集与基准"
 paper_digest_one_sentence: "NVVSpeech 挑战赛用中英双语 16 类非言语发声的统一任务比较了理解与可控生成的十个系统，发现呼吸与喘息最难、事件控制与字词保真存在权衡，自动评分与人工听感并不完全一致。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Liumeng Xue"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Yuang Cao"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Jingbin Hu"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Qirui Zhan"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Huakang Chen"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Yibin Zheng"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Yunxiang Chen"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Houdun Liu"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Su Feng"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Haibin Wu"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Zheng Lian"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Wei Xue"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Bengu Wu"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Hui Bu"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Lei Xie"}]
 paper_digest_abstract_sha256: "f84387e93ba57f5666beb8d223ca0d619f780933534102ec051d8948a16d9afd"
-paper_digest_sidecars: {"citation.bib":{"sha256":"de5887f3a64d0be23de2a4aa8bf29e067b85600da78d1fd6e675d34dd4032fc7","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16076/citation.bib"},"citation.json":{"sha256":"411d85617c2979d8a9530a377dad566b08fdd12b00d70806dd17f64ff4d5de97","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16076/citation.json"},"citation.ris":{"sha256":"b9255181dec20567e3a54adb1e4c8972b541e53fd3f86f9489544e21da9f09fa","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16076/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"67e32eecd0cad28b6af3af8a29cb8a6c98118f18c42419fcd515973f42cc7894","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16076/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"de5887f3a64d0be23de2a4aa8bf29e067b85600da78d1fd6e675d34dd4032fc7","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16076/citation.bib"},"citation.json":{"sha256":"411d85617c2979d8a9530a377dad566b08fdd12b00d70806dd17f64ff4d5de97","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16076/citation.json"},"citation.ris":{"sha256":"b9255181dec20567e3a54adb1e4c8972b541e53fd3f86f9489544e21da9f09fa","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16076/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"13f4e08891b768586a3ea139b82f4b474b0b82994ae521ce001d262009caee98","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16076/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "33d6755e0e7a5ac7c319027e2556ac3b6c7abf6ea5dd35d4af01e30bceb3e9fc"
 paper_digest_api_reader_plan_sha256: "87807a03d0ae1fa043321db973fbdf79d2ba3735d1bb3be581e6c6686d9ac43f"
@@ -52,8 +52,16 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[The NVVSpeech Challenge 2026: Overview and Lessons for Speech Understanding and Generation with Nonverbal Vocalizations](https://arxiv.org/abs/2610.16076v1)*
 
-> 标签：#语音识别 | #基准设计 | #文本到语音 | #基准测试
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[语音识别](/audio-paper-digest-blog/papers/?concept=task.asr)；[语音合成](/audio-paper-digest-blog/papers/?concept=task.speech-synthesis) → [文本到语音](/audio-paper-digest-blog/papers/?concept=task.tts)
+- **研究方法**：[评测协议](/audio-paper-digest-blog/papers/?concept=method.evaluation-protocol) → [基准设计](/audio-paper-digest-blog/papers/?concept=method.benchmark-design)
+- **研究产物**：[基准测试](/audio-paper-digest-blog/papers/?concept=artifact.benchmark)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**6.3/10** | 创新 1.2/2 | 技术严谨 1/1.5 | 实验充分 1/1.5 | 清晰度 0.8/1 | 影响力 1/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 

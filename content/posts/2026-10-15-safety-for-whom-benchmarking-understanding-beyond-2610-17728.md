@@ -20,7 +20,7 @@ paper_digest_primary_task: "音视频问答"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.av-question-answering","label":"音视频问答"},{"facet":"method","id":"method.benchmark-design","label":"基准设计"},{"facet":"artifact","id":"artifact.benchmark","label":"基准测试"},{"facet":"artifact","id":"artifact.dataset","label":"数据集"},{"facet":"research_focus","id":"research_focus.evaluation","label":"模型评估"}]
 paper_digest_primary_method: "基准设计"
 paper_digest_score: 6.4
@@ -29,7 +29,7 @@ paper_digest_document_type: "数据集与基准"
 paper_digest_one_sentence: "论文针对第一视角助手只看拒答率会掩盖伤害对象差异与不懂装拒问题，提出 2,902 条视频加语音查询的 STOU 基准并分离测试拒答与理解，发现理解后仍协助与对佩戴者伤害最弱是主要代价。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Yewon Han"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Jisu Jeon"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Suhyun Choi"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Juan Yeo"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Minsoo Jo"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Gihoon Kim"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Hyunggyu Lim"},{"affiliations":["Graduate School of Data Science, Seoul National University"],"name":"Taesup Kim"}]
 paper_digest_abstract_sha256: "9e576a8864d84ff3812ac9732a41fa633607ab3623ad0ee360a870559882df1a"
-paper_digest_sidecars: {"citation.bib":{"sha256":"33fdabeb9f6fbe128326ae929afbef62f9375b88992d8574fb653691553a0857","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17728/citation.bib"},"citation.json":{"sha256":"48515f586a9f55a784c8733d7b6c9b74679ad7f626b70c0c100f05fde4e41835","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17728/citation.json"},"citation.ris":{"sha256":"7492fa25ea0a36e3ade6479f42cc08b14a6ed3d11603578c8da629e2aa5ed1b7","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17728/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"969b08e7233e8ad50fd7f857b39f8dcdd3fa0c6b29a7f15259c829ea8fa9aa72","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17728/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"33fdabeb9f6fbe128326ae929afbef62f9375b88992d8574fb653691553a0857","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17728/citation.bib"},"citation.json":{"sha256":"48515f586a9f55a784c8733d7b6c9b74679ad7f626b70c0c100f05fde4e41835","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17728/citation.json"},"citation.ris":{"sha256":"7492fa25ea0a36e3ade6479f42cc08b14a6ed3d11603578c8da629e2aa5ed1b7","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17728/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"80808db9a90ac624409c967fadb7cd1a7fe3b031471da910a3ac2bd94a03b851","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17728/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "e9eb3f4baa79469e09a9e9b59bd049836ce64435dd4910223e16e8f81f32a73e"
 paper_digest_api_reader_plan_sha256: "a75f275fb260c06f8f4ac61c037a511cea0740926b360e0246cb25cfbb957208"
@@ -52,8 +52,17 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[Safety for Whom? Benchmarking Understanding Beyond Refusal in Egocentric Multimodal Assistants](https://arxiv.org/abs/2610.17728v1)*
 
-> 标签：#音视频问答 | #基准设计 | #基准测试 | #数据集 | #模型评估
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[音视频理解](/audio-paper-digest-blog/papers/?concept=task.av-understanding) → [音视频问答](/audio-paper-digest-blog/papers/?concept=task.av-question-answering)
+- **研究方法**：[评测协议](/audio-paper-digest-blog/papers/?concept=method.evaluation-protocol) → [基准设计](/audio-paper-digest-blog/papers/?concept=method.benchmark-design)
+- **研究重点**：[模型评估](/audio-paper-digest-blog/papers/?concept=research_focus.evaluation)
+- **研究产物**：[基准测试](/audio-paper-digest-blog/papers/?concept=artifact.benchmark)；[数据集](/audio-paper-digest-blog/papers/?concept=artifact.dataset)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**6.4/10** | 创新 1.3/2 | 技术严谨 1/1.5 | 实验充分 1.2/1.5 | 清晰度 0.8/1 | 影响力 0.8/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 

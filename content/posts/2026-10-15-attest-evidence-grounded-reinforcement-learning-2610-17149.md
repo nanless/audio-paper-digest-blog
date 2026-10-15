@@ -20,7 +20,7 @@ paper_digest_primary_task: "音频时间定位"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.temporal-grounding","label":"音频时间定位"},{"facet":"method","id":"method.reinforcement","label":"强化学习"},{"facet":"artifact","id":"artifact.benchmark","label":"基准测试"},{"facet":"setting","id":"setting.long-audio","label":"长音频处理"},{"facet":"research_focus","id":"research_focus.hallucination-faithfulness","label":"幻觉与忠实度"}]
 paper_digest_primary_method: "强化学习"
 paper_digest_score: 7.2
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "针对 5 分钟长音频中事件定位与密集描述易幻觉的问题，论文用 EgoSCAPE 评测与 ATTEST 强化学习约束模型只说音频中有证据的时间段，代价是需要多轮采样与注意力统计的训练开销。"
 paper_digest_authors: [{"affiliations":["Meta Superintelligence Labs","University of Southern California"],"name":"Ashutosh Chaubey"},{"affiliations":["Meta Superintelligence Labs"],"name":"Jinxi Guo"},{"affiliations":["Meta Superintelligence Labs"],"name":"Minh Tran"},{"affiliations":["Meta Superintelligence Labs"],"name":"Michael Andersland"},{"affiliations":["Meta Superintelligence Labs"],"name":"Ozlem Kalinli"}]
 paper_digest_abstract_sha256: "9e9be6ef2fdc7db64f2e3fcf25b4e1da14c1706f083102d0f36517aa41c7c808"
-paper_digest_sidecars: {"citation.bib":{"sha256":"9b10874f7c921b2f8ba8ca69306182bf0cf4299a938699fec0937280374b5fc4","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17149/citation.bib"},"citation.json":{"sha256":"5bbd1d39d02b3c1c3dbd083b076e13b1f26a2e532b3e9f8c3d4d2b1ca89c459b","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17149/citation.json"},"citation.ris":{"sha256":"5bcf61ccc8a057e0936af48436a28e1b5fa16f1f21739a1a5277e18565e7ad87","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17149/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"00fcfd8775fa84634fc7313388b1b3553a34796fdf411561fc332ffb6a25c02e","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17149/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"9b10874f7c921b2f8ba8ca69306182bf0cf4299a938699fec0937280374b5fc4","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17149/citation.bib"},"citation.json":{"sha256":"5bbd1d39d02b3c1c3dbd083b076e13b1f26a2e532b3e9f8c3d4d2b1ca89c459b","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17149/citation.json"},"citation.ris":{"sha256":"5bcf61ccc8a057e0936af48436a28e1b5fa16f1f21739a1a5277e18565e7ad87","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17149/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"5b6b7bb04632fd52d722035d389d787bb72df738a42d530a95fb374cde1e61c4","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17149/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "0486f5326035779ad6c9a41f2c1b425a1a8c30de62194a751712210bcbb1eee5"
 paper_digest_api_reader_plan_sha256: "10e8a1e7db16f8ed8b7e8b3af0fb1a1937554f02e60010637ce6853d1ffeec88"
@@ -52,8 +52,18 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[ATTEST: Evidence-Grounded Reinforcement Learning for Long-Audio Temporal Understanding](https://arxiv.org/abs/2610.17149v1)*
 
-> 标签：#音频时间定位 | #强化学习 | #基准测试 | #长音频处理 | #幻觉与忠实度
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[音频理解](/audio-paper-digest-blog/papers/?concept=task.audio-understanding) → [音频时间定位](/audio-paper-digest-blog/papers/?concept=task.temporal-grounding)
+- **研究方法**：[强化学习](/audio-paper-digest-blog/papers/?concept=method.reinforcement)
+- **研究条件**：[长音频处理](/audio-paper-digest-blog/papers/?concept=setting.long-audio)
+- **研究重点**：[幻觉与忠实度](/audio-paper-digest-blog/papers/?concept=research_focus.hallucination-faithfulness)
+- **研究产物**：[基准测试](/audio-paper-digest-blog/papers/?concept=artifact.benchmark)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**7.2/10** | 创新 1.5/2 | 技术严谨 1.2/1.5 | 实验充分 1.3/1.5 | 清晰度 0.8/1 | 影响力 1.1/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 

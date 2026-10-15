@@ -20,7 +20,7 @@ paper_digest_primary_task: "音频交互"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.audio-interaction","label":"音频交互"},{"facet":"method","id":"method.autoregressive","label":"自回归模型"},{"facet":"setting","id":"setting.streaming","label":"流式处理"},{"facet":"scientific_topic","id":"scientific_topic.spatial-audio","label":"空间音频"},{"facet":"setting","id":"setting.real-time","label":"实时处理"}]
 paper_digest_primary_method: "自回归模型"
 paper_digest_score: 6.5
@@ -29,12 +29,12 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "Sonic-AMG 针对双耳音频流加世界系声源位置输入，用 what 与 where 分离表征加因果 Transformer 与流头逐段生成动作，并以排练训练和空间反馈缓解历史与空间条件失配，在 SAM 上取得最优 FID 与 R-precision 且保持实时流式生成，但结论限于 SAM 划分与已知声源位置条件。"
 paper_digest_authors: [{"affiliations":["Brown University"],"name":"Jingcheng Ni"},{"affiliations":["Brown University"],"name":"Zekun Li"},{"affiliations":["MIT"],"name":"Zhiyang Dou"},{"affiliations":["Brown University"],"name":"Xiaoyan Cong"},{"affiliations":["Yale University"],"name":"Ziyao Zeng"},{"affiliations":["Brown University"],"name":"Hongyang Du"},{"affiliations":["Brown University"],"name":"Randall Balestriero"},{"affiliations":["The University of Hong Kong"],"name":"Taku Komura"},{"affiliations":["Brown University"],"name":"Srinath Sridhar"}]
 paper_digest_abstract_sha256: "939e0711ab5d674badb65d33ed443390eb121dcfc2ca1620ce5bb62e03f68dc4"
-paper_digest_sidecars: {"citation.bib":{"sha256":"02b04fb4fb7374afbb89881d67b80295648e95e902dde492a5226608853a4931","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13300/citation.bib"},"citation.json":{"sha256":"58a4e83d61c2ce791516eedc3c095fa4bfcb7cbe496581c175ce49d4119f931a","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13300/citation.json"},"citation.ris":{"sha256":"5b3e08a9d0589fb78b63186293b26b425b237bb119aa014464d7cd1784dd2af8","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13300/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"f67489109554244c25b56b267765ef2d2e66d7caaacb5252ddecc30cb10e4000","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13300/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"02b04fb4fb7374afbb89881d67b80295648e95e902dde492a5226608853a4931","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13300/citation.bib"},"citation.json":{"sha256":"58a4e83d61c2ce791516eedc3c095fa4bfcb7cbe496581c175ce49d4119f931a","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13300/citation.json"},"citation.ris":{"sha256":"5b3e08a9d0589fb78b63186293b26b425b237bb119aa014464d7cd1784dd2af8","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13300/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"33b5723f057c4346f264505d2b4fb888ceefb2386dcfa8508c5f5f67d82d780b","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13300/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
-paper_digest_api_reader_article_sha256: "79c60fa9608d8e079e6c284de6346983227180144a28ebdb25d1d124488a8695"
-paper_digest_api_reader_plan_sha256: "aeb44f77ebb9650b536aeea3d2f465a7a66b44f279529b15b0c83457ba077bea"
+paper_digest_api_reader_article_sha256: "5696ac0faaf4b2acaa9fea069b8280c531c795ca1f34d0d5e0ec3645e57a1628"
+paper_digest_api_reader_plan_sha256: "a1a8daa73686250cc1ab00eb1f92c9304335e85a77b892075edb965db5fca363"
 paper_digest_api_reader_source_binding_contract: "api-reader-source-bindings-v4"
-paper_digest_api_reader_source_bindings_sha256: "f3c394c55a0bb5b8c77d2630ce724b1e1e2f56baf0b7eeb33d02bbd20709e638"
+paper_digest_api_reader_source_bindings_sha256: "846268aab7efd40df09a0b6c3acaa95becc0ec4a9a727bdabd571beb28fdce14"
 paper_digest_api_reader_source_table_count: 4
 paper_digest_api_reader_source_formula_count: 5
 paper_digest_api_reader_structured_artifacts_sha256: "461b1b47bd5592fe884a74668a5951cc443218f422e0e13e093de824e6a41f54"
@@ -52,8 +52,17 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[Sonic-AMG: Streaming Human Motion Generation from Spatial Audio](https://arxiv.org/abs/2610.13300v1)*
 
-> 标签：#音频交互 | #自回归模型 | #流式处理 | #空间音频 | #实时处理
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[音频交互](/audio-paper-digest-blog/papers/?concept=task.audio-interaction)
+- **研究方法**：[生成模型](/audio-paper-digest-blog/papers/?concept=method.generative) → [自回归模型](/audio-paper-digest-blog/papers/?concept=method.autoregressive)
+- **研究条件**：[流式处理](/audio-paper-digest-blog/papers/?concept=setting.streaming)；[实时处理](/audio-paper-digest-blog/papers/?concept=setting.real-time)
+- **科学主题**：[空间音频](/audio-paper-digest-blog/papers/?concept=scientific_topic.spatial-audio)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**6.5/10** | 创新 1.5/2 | 技术严谨 1.2/1.5 | 实验充分 1.2/1.5 | 清晰度 0.8/1 | 影响力 0.5/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 
@@ -199,9 +208,11 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 | TITAN RTX | MOSPA | GT | — | 1.427 | 否 |
 | TITAN RTX | Ours | Online | 118.0 ms | 0.885 | 是 |
 
-该原表显示 Online 在两块显卡上仍满足实时吞吐，240 帧块对应 8.0 秒动作，在 RTX A6000 上耗时 2,857 毫秒、在 TITAN RTX 上耗时 11,415 毫秒，对应因子为 0.357 和 1.427。MOSPA 在强显卡上实时因子看似更低，但它要求先收集完整窗口且不支持因果流式，在较弱显卡上因子超过 1 而本文方法仍低于 1。从强卡换到弱卡时 MOSPA 块时间放大更多，本文 Online 步时间从 50.2 毫秒变为 118.0 毫秒，退化更平缓。代价是 Online 比 GT 每步更贵，平均单步时间从 41.2 毫秒增至 50.2 毫秒以及从 102.5 毫秒增至 118.0 毫秒，多出的解码与空间反馈开销必须计入预算。首包延迟估计结合声学特征可用延迟与稳态生成得到约 193 毫秒，相对 MOSPA 大幅缩小，但该估计排除了音频预处理编码、初始化与渲染投递，仅比较输入等待加稳态生成。本表数值与单位依据论文 PDF。
+该原表显示 Online 在两块显卡上仍满足实时吞吐，240 帧块对应 8.0 秒动作，在 RTX A6000 上耗时 2,857 毫秒、在 TITAN RTX 上耗时 11,415 毫秒，对应因子为 0.357 和 1.427。MOSPA 在强显卡上实时因子看似更低，但它要求先收集完整窗口且不支持因果流式，在较弱显卡上因子超过 1 而本文方法仍低于 1。从强卡换到弱卡时 MOSPA 块时间放大更多，本文 Online 步时间从 50.2 毫秒变为 118.0 毫秒，退化更平缓。代价是 Online 比 GT 每步更贵，平均单步时间从 41.2 毫秒增至 50.2 毫秒以及从 102.5 毫秒增至 118.0 毫秒，多出的解码与空间反馈开销必须计入预算。
 
-先看流式示意中颜色如何把声源、音频段与动作段绑定，再看长音频对比中长度与轨迹的差异，重点观察声源切换时运动是否连续。
+首包延迟估计结合声学特征可用延迟与稳态生成得到约 193 毫秒，相对 MOSPA 大幅缩小，但该估计排除了音频预处理编码、初始化与渲染投递，仅比较输入等待加稳态生成。本表数值与单位依据论文 PDF。
+
+先看这张流式示意中颜色如何把声源、音频段与动作段绑定，再沿人体颜色观察声源切换时的运动过渡，顶部双耳波形与半透明带的对应是理解重点。
 
 > **看图路径：** 1. 看顶部三段音频波形颜色与下方人体颜色的对应关系；2. 沿从紫到蓝到黄的人体快照观察声源切换时的运动过渡；3. 注意半透明带如何把音频段与对应动作段连接起来
 
@@ -209,15 +220,17 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 *论文图 1。原论文 Figure 1:：“Streaming motion generation from spatial audio.”。*
 
-该图展示音乐到爆炸到鸟鸣 3 段事件下人体快照从紫到蓝到黄的连续过渡，半透明带把音频段与反应段相连，淡化姿态标出段间过渡，说明单模型无需新初始化即可跨事件连贯生成。顶部双耳波形按颜色分段，底部网格上根轨迹连续延伸，但长程连贯目前主要是定性证据。
+该图展示音乐到爆炸到鸟鸣 3 段事件下人体快照从紫到蓝到黄的连续过渡，半透明带把音频段与反应段相连，淡化姿态标出段间过渡，顶部双耳波形按颜色分段，底部网格上根轨迹连续延伸，说明单模型无需新初始化即可跨事件连贯生成，但长程连贯目前主要是定性证据。
 
-> **看图路径：** 1. 对比上下两行 MOSPA 只生成 8 秒与 Sonic-AMG 覆盖更长整段音频的长度；2. 观察每序列均匀采样的六个姿态中根轨迹红点的连续性；3. 注意声源标记与人体远离或转向动作的相对位置
+下面单独看全时长覆盖对比，上下两行分别为 MOSPA 与 Sonic-AMG，重点比较每列子图 a 到 d 中人体位移幅度与声源标记的相对位置差异。
+
+> **看图路径：** 1. 对照图注的采样说明与 8 秒和 10–12 秒时长信息理解上下两行长度差异；2. 在子图 a 到 c 中比较人体位移与转向幅度不硬数重叠姿态个数；3. 结合紫色声源标记看远离或转向的相对位置红点淡处以可辨认部分为准
 
 [![原论文 Figure 4：Reactions over the full audio duration.](https://arxiv.org/html/2610.13300v1/qualitative_full_audio.png)](https://arxiv.org/html/2610.13300v1/qualitative_full_audio.png)
 
 *论文图 4。原论文 Figure 4:：“Reactions over the full audio duration.”。*
 
-该图显示 MOSPA 只生成 8 秒而 Sonic-AMG 覆盖更长的完整音频，6 个姿态按各自时长均匀采样，根轨迹红点在本文方法中贯穿全程，支持姿态变化与位移随音频展开。紫色标记为声源位置，上下两行视角与采样方式一致，但完整性仍受 SAM 时长与风格标签条件的限制。
+图注称 MOSPA 只生成 8 秒而 Sonic-AMG 覆盖 10–12 秒完整音频，每序列按各自时长均匀采样 6 个姿态，红点表示根轨迹，紫色标记为声源。从当前像素能确认的是下行人体位移更大、姿态展开更连续，定性上支持姿态变化随音频展开；但在子图 a 到 c 中姿态存在重叠遮挡，不能逐格数出 6 个清晰姿态，红点在部分视角下较淡，不能把图注的采样数与完整轨迹当作每格都清晰可见，完整性结论仍受 SAM 时长与风格标签条件限制。
 
 ### 排练训练相对两遍训练与纯自展好在哪里
 

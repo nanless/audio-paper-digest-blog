@@ -20,7 +20,7 @@ paper_digest_primary_task: "口语理解"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.spoken-understanding","label":"口语理解"},{"facet":"method","id":"method.formal-analysis","label":"形式化分析"},{"facet":"signal","id":"signal.speech","label":"语音"},{"facet":"scientific_topic","id":"scientific_topic.speech-perception","label":"言语感知"},{"facet":"scientific_topic","id":"scientific_topic.listening-effort","label":"听觉努力与认知负荷"}]
 paper_digest_primary_method: "形式化分析"
 paper_digest_score: 6.2
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "论文用语音语言模型直接从声音算惊奇值，提出对多种发音求平均的重要性采样估计，在听句瞳孔数据上发现词级抽象估计比单次具体发音更能预测瞳孔变化，但总体预测力很弱且受刺激与时间基线限制。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Zachary Hopton"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Samuel Kiegeland"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Francesco Ignazio Re"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Patrick Haller"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Matthew B. Winn"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Ryan Cotterell"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Eleanor Chodroff"}]
 paper_digest_abstract_sha256: "88c0f2bcea1261e071925c4777951bea5d2d85a9d9f10cb88b627ac11c415e77"
-paper_digest_sidecars: {"citation.bib":{"sha256":"199cc4afdc6c076faf14193bc13a69375b06cf1808963fc557ebd5397085fec0","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18439/citation.bib"},"citation.json":{"sha256":"f5e3ee45f47eeff5c4dbd3d756d4102f2493123c6c1fa6c37a4b1cdc9d9fd042","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18439/citation.json"},"citation.ris":{"sha256":"8f24be8b0ee35744c5d8d2efe9937e8f88cfa7d3cddbbfdb02df93500af2ac98","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18439/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"a4ba7fa7fb75b3edee382b746a8a1da4bcb75c34d23388cedec0de26e83370d8","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18439/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"199cc4afdc6c076faf14193bc13a69375b06cf1808963fc557ebd5397085fec0","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18439/citation.bib"},"citation.json":{"sha256":"f5e3ee45f47eeff5c4dbd3d756d4102f2493123c6c1fa6c37a4b1cdc9d9fd042","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18439/citation.json"},"citation.ris":{"sha256":"8f24be8b0ee35744c5d8d2efe9937e8f88cfa7d3cddbbfdb02df93500af2ac98","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18439/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"ec3bac76fbc8b9ac997f88d01ce808a8b5afd0db334be3fb5e2cf3cd0e1fe96a","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18439/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "d860881cdede1b59738eb0f0f8b210dfc4a7ff4172f51dbc05cd5cabd9be467f"
 paper_digest_api_reader_plan_sha256: "ebdcc0197cf617ab3478552afc40e8373f319f682e2fe79d0b7ee6d2b2227e1a"
@@ -52,8 +52,17 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[Estimating Surprisal from the Speech Signal](https://arxiv.org/abs/2610.18439v1)*
 
-> 标签：#口语理解 | #形式化分析 | #语音 | #言语感知 | #听觉努力与认知负荷
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[口语理解](/audio-paper-digest-blog/papers/?concept=task.spoken-understanding)
+- **研究方法**：[形式化分析](/audio-paper-digest-blog/papers/?concept=method.formal-analysis)
+- **信号**：[语音](/audio-paper-digest-blog/papers/?concept=signal.speech)
+- **科学主题**：[言语感知](/audio-paper-digest-blog/papers/?concept=scientific_topic.speech-perception)；[听觉努力与认知负荷](/audio-paper-digest-blog/papers/?concept=scientific_topic.listening-effort)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**6.2/10** | 创新 1.5/2 | 技术严谨 1.2/1.5 | 实验充分 1/1.5 | 清晰度 0.8/1 | 影响力 0.9/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 0.5/1.5
 
 

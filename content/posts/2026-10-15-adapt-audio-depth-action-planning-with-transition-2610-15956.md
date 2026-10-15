@@ -20,7 +20,7 @@ paper_digest_primary_task: "声源定位"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.localization","label":"声源定位"},{"facet":"method","id":"method.reinforcement","label":"强化学习"},{"facet":"artifact","id":"artifact.benchmark","label":"基准测试"},{"facet":"application","id":"application.industrial","label":"工业应用"},{"facet":"signal","id":"signal.spatial-audio","label":"空间音频信号"}]
 paper_digest_primary_method: "强化学习"
 paper_digest_score: 6.5
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "论文研究无可见光工业场景下只用空间音频找方向、只用深度看路的导航问题，用三阶段训练的 ADAPT 和位置朝向图上的剩余动作数奖励 TARS 实现，在未见过的工厂中 Clean 条件成功率 90.6% 而最难的局部噪声下保持 60.0%，代价是依赖仿真中的特权地图和固定鸣叫信标。"
 paper_digest_authors: [{"affiliations":["University of California, Irvine"],"name":"Wenjun Huang"},{"affiliations":["University of Pennsylvania"],"name":"Shenghao Fu"},{"affiliations":["Carnegie Mellon University"],"name":"Yian Jin"},{"affiliations":["Purdue University Northwest"],"name":"Yang Ni"},{"affiliations":["Michigan State University"],"name":"Yifan Li"},{"affiliations":["Independent Researcher"],"name":"Lichi Li"},{"affiliations":["Dartmouth College"],"name":"Xingjian Diao"},{"affiliations":["University of California, Irvine"],"name":"Pengfei Zhang"},{"affiliations":["University of California, Irvine"],"name":"Yutong Song"},{"affiliations":["University of California, Irvine"],"name":"Hanning Chen"},{"affiliations":["University of California, Los Angeles"],"name":"Jiarui Cui"},{"affiliations":["University of Notre Dame"],"name":"Tianyu Yang"},{"affiliations":["University of California, Irvine"],"name":"Shilong Li"},{"affiliations":["Michigan State University"],"name":"Yu Kong"},{"affiliations":["University of California, Irvine"],"name":"Mohsen Imani"}]
 paper_digest_abstract_sha256: "420b62ea8218bab9d8101b5a517816f2a1d1430ed18875dc2728b0438c2a093e"
-paper_digest_sidecars: {"citation.bib":{"sha256":"1f2851c1476d86d42333257122b7bd43a7aca9a25e918dae839615338b60606a","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15956/citation.bib"},"citation.json":{"sha256":"b970d56b17c65ef12c1dff48456faa43d0c22d08645c8076d98f76a3e063bd43","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15956/citation.json"},"citation.ris":{"sha256":"522f47e1ab96f23f44711a0d3303094291d0e5d59a24e55942ca69a9bd9096f4","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15956/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"48b81e17cb93efd2886d9584dfd95245f16cce39fc263bf1b778e7f05fe554ff","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15956/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"1f2851c1476d86d42333257122b7bd43a7aca9a25e918dae839615338b60606a","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15956/citation.bib"},"citation.json":{"sha256":"b970d56b17c65ef12c1dff48456faa43d0c22d08645c8076d98f76a3e063bd43","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15956/citation.json"},"citation.ris":{"sha256":"522f47e1ab96f23f44711a0d3303094291d0e5d59a24e55942ca69a9bd9096f4","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15956/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"8781f0ca628c77a45f0293254ad6e6f28ff2a0964658500018ceba161ffe597d","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15956/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "a972b8e9fbea0f44a01d7cf002cdc8b2dc9ee7a903c94f0139f0567ec4cde5bf"
 paper_digest_api_reader_plan_sha256: "0bd008f6990f381c716852e13901c298cd9800b87ee8eb34c8cbd6c90d73eefd"
@@ -52,8 +52,18 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[ADAPT: Audio-Depth Action Planning with Transition-Aware Rewards for Lights-Out Industrial Navigation](https://arxiv.org/abs/2610.15956v1)*
 
-> 标签：#声源定位 | #强化学习 | #基准测试 | #工业应用 | #空间音频信号
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[声源定位](/audio-paper-digest-blog/papers/?concept=task.localization)
+- **研究方法**：[强化学习](/audio-paper-digest-blog/papers/?concept=method.reinforcement)
+- **信号**：[空间音频信号](/audio-paper-digest-blog/papers/?concept=signal.spatial-audio)
+- **应用**：[工业应用](/audio-paper-digest-blog/papers/?concept=application.industrial)
+- **研究产物**：[基准测试](/audio-paper-digest-blog/papers/?concept=artifact.benchmark)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**6.5/10** | 创新 1.3/2 | 技术严谨 1.2/1.5 | 实验充分 1.2/1.5 | 清晰度 0.8/1 | 影响力 0.7/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 

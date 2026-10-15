@@ -20,7 +20,7 @@ paper_digest_primary_task: "音频生成"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.audio-generation","label":"音频生成"},{"facet":"method","id":"method.flow-matching","label":"流匹配"},{"facet":"artifact","id":"artifact.dataset","label":"数据集"},{"facet":"artifact","id":"artifact.benchmark","label":"基准测试"},{"facet":"scientific_topic","id":"scientific_topic.bioacoustics","label":"生物声学"}]
 paper_digest_primary_method: "流匹配"
 paper_digest_score: 5.8
@@ -29,7 +29,7 @@ paper_digest_document_type: "数据集与基准"
 paper_digest_one_sentence: "论文以行为文本控制动物叫声生成，用发声锚点把六个物种录音与文献行为知识成组配对，在 TangoFlux 上微调并用事件感知变长掩码聚焦真实事件，主结果支持微调全面改善与变长进一步提升判别力和声学保真度，但结论只限于已见行为的新表述与给定目标时长条件。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Xinlong Deng"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Yong Tian"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Jian Guan"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Qiuqiang Kong"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Jie Jiang"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Yin Cao"}]
 paper_digest_abstract_sha256: "d4564276f8bdbab0b114380adade36fc25b5c8ad3c3bb7c713d8c382985b6ade"
-paper_digest_sidecars: {"citation.bib":{"sha256":"6a354c408f65cc0e1cd358bd96476ae091701403cd50f5141126bd5ae8241c2e","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16382/citation.bib"},"citation.json":{"sha256":"432a0c68a67838c740a0f722a8f7c3b01cf21510bba88e7fdae0e9ca51cf42f4","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16382/citation.json"},"citation.ris":{"sha256":"16aad80f4d1af7914d3928eb50089b1bb9951d8b991225d4e8d3934f452e3df4","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16382/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"c754bda888287ab285f38c8498fc382bfaab6089997da43355d0bc9801694927","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16382/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"6a354c408f65cc0e1cd358bd96476ae091701403cd50f5141126bd5ae8241c2e","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16382/citation.bib"},"citation.json":{"sha256":"432a0c68a67838c740a0f722a8f7c3b01cf21510bba88e7fdae0e9ca51cf42f4","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16382/citation.json"},"citation.ris":{"sha256":"16aad80f4d1af7914d3928eb50089b1bb9951d8b991225d4e8d3934f452e3df4","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16382/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"feca543b61bb0c7d3c0823da53049348b4b3477187fcf4da0e05a968d5d13500","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16382/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "e4235e8c8de3cc406057d966fb58f961974486bf94342841dfa01f1e5dbd4ab4"
 paper_digest_api_reader_plan_sha256: "204993df3e3ac40c04232a6ba8756b671ddffff90ac6a50c501f787dd076b701"
@@ -52,8 +52,17 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[Behavior-Conditioned Animal Vocalization Generation: Event-Aware Modeling and Multidimensional Evaluation](https://arxiv.org/abs/2610.16382v1)*
 
-> 标签：#音频生成 | #流匹配 | #数据集 | #基准测试 | #生物声学
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[音频生成](/audio-paper-digest-blog/papers/?concept=task.audio-generation)
+- **研究方法**：[生成模型](/audio-paper-digest-blog/papers/?concept=method.generative) → [流匹配](/audio-paper-digest-blog/papers/?concept=method.flow-matching)
+- **研究产物**：[数据集](/audio-paper-digest-blog/papers/?concept=artifact.dataset)；[基准测试](/audio-paper-digest-blog/papers/?concept=artifact.benchmark)
+- **科学主题**：[生物声学](/audio-paper-digest-blog/papers/?concept=scientific_topic.bioacoustics)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**5.8/10** | 创新 1.2/2 | 技术严谨 1/1.5 | 实验充分 1/1.5 | 清晰度 0.8/1 | 影响力 0.5/1.5 | 开源 0.2/1.5 | 可复现 0.3/0.5 | 工程/实践 0.8/1.5
 
 

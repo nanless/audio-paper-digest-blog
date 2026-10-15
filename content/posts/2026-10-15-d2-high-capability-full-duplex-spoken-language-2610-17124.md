@@ -20,7 +20,7 @@ paper_digest_primary_task: "全双工语音交互"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.full-duplex","label":"全双工语音交互"},{"facet":"method","id":"method.distillation","label":"知识蒸馏"},{"facet":"method","id":"method.sft","label":"SFT"},{"facet":"setting","id":"setting.streaming","label":"流式处理"}]
 paper_digest_primary_method: "知识蒸馏"
 paper_digest_score: 7.5
@@ -29,7 +29,7 @@ paper_digest_document_type: "模型报告"
 paper_digest_one_sentence: "D2 把已具备理解与生成能力的半双工语音模型按固定短块切分对话，用流式编码器蒸馏加全双工监督微调实现边听边说，在 80 毫秒块下 Qwen3-Omni-D2 仍保持 70.1 的 VoiceBench 总分，但小块会明显削弱停顿容忍并保留合成与数据构造等限制。"
 paper_digest_authors: [{"affiliations":["MIT CSAIL"],"name":"Cheng-Kuang Chang"},{"affiliations":["MIT CSAIL"],"name":"Alexander H. Liu"},{"affiliations":["MIT-IBM Watson AI Lab"],"name":"Brian Kingsbury"},{"affiliations":["MIT-IBM Watson AI Lab"],"name":"Hilde Kuehne"},{"affiliations":["MIT-IBM Watson AI Lab"],"name":"Rogerio Feris"},{"affiliations":["MIT-IBM Watson AI Lab"],"name":"Samuel Thomas"},{"affiliations":["MIT CSAIL"],"name":"James Glass"},{"affiliations":["MIT CSAIL"],"name":"Kai-Wei Chang"}]
 paper_digest_abstract_sha256: "82969469eac1eab23a4d9b5fb7efcee12bfc81c4d869a8b7a200c0f6a7a708e7"
-paper_digest_sidecars: {"citation.bib":{"sha256":"f9f50b20802a21f6a4db4346910923ba346b0465228dedb11ab8546b5134e709","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17124/citation.bib"},"citation.json":{"sha256":"76ca201632c651a038639cd9dc68900064071f5e037dcf0dce48f406fcaf35bd","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17124/citation.json"},"citation.ris":{"sha256":"c37b5bd191bb7926565abfd7b8bdd86cbd87fba8d7bff8ca6272665efe170670","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17124/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"cceb7fd6d062286641b9b728aaec39ab65b3c3af32fceab050c365574928713e","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17124/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"f9f50b20802a21f6a4db4346910923ba346b0465228dedb11ab8546b5134e709","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17124/citation.bib"},"citation.json":{"sha256":"76ca201632c651a038639cd9dc68900064071f5e037dcf0dce48f406fcaf35bd","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17124/citation.json"},"citation.ris":{"sha256":"c37b5bd191bb7926565abfd7b8bdd86cbd87fba8d7bff8ca6272665efe170670","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17124/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"04aa782542f50475b07deb484bf495f32b2624aae0e69aca3668c56243ff067e","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17124/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "3236d0a71b26edb5406cbd4eaad12f17939300b8b5d40567ae56075fedbc0299"
 paper_digest_api_reader_plan_sha256: "138e7b14e118724bc17b1c37c3732126e0f9b646d439f156af2b51ebf236b714"
@@ -52,8 +52,16 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[D2: High-Capability Full-Duplex Spoken Language Models from Half-Duplex Backbones](https://arxiv.org/abs/2610.17124v1)*
 
-> 标签：#全双工语音交互 | #知识蒸馏 | #SFT | #流式处理
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[语音交互](/audio-paper-digest-blog/papers/?concept=task.speech-interaction) → [全双工语音交互](/audio-paper-digest-blog/papers/?concept=task.full-duplex)
+- **研究方法**：[知识蒸馏](/audio-paper-digest-blog/papers/?concept=method.distillation)；[SFT](/audio-paper-digest-blog/papers/?concept=method.sft)
+- **研究条件**：[流式处理](/audio-paper-digest-blog/papers/?concept=setting.streaming)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**7.5/10** | 创新 1.5/2 | 技术严谨 1.2/1.5 | 实验充分 1.2/1.5 | 清晰度 0.8/1 | 影响力 1.1/1.5 | 开源 0.2/1.5 | 可复现 0.5/0.5 | 工程/实践 1/1.5
 
 

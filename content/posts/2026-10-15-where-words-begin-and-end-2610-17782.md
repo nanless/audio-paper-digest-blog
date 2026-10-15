@@ -20,7 +20,7 @@ paper_digest_primary_task: "强制对齐"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.forced-alignment","label":"强制对齐"},{"facet":"method","id":"method.lora","label":"LoRA"},{"facet":"setting","id":"setting.multilingual","label":"多语言"},{"facet":"method","id":"method.augmentation","label":"数据增强"}]
 paper_digest_primary_method: "LoRA"
 paper_digest_score: 7.3
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "论文先量出已有对齐器在人工词边界上的误差和电话信道下的退化，再只用人标边界训练 Whisper 直接预测词起止时间戳，在英语、韩语、荷兰语和多语测试上超过蒙特利尔强制对齐器，而电话增强、槽位后置和带噪文本训练是关键代价与收益所在。"
 paper_digest_authors: [{"affiliations":["Scicom (MSC) Berhad, Malaysia"],"name":"Husein Zolkepli"}]
 paper_digest_abstract_sha256: "ab467cb5a64feef8366f8d6a5a23cc4a4daa516920f3240b551122223372b4c9"
-paper_digest_sidecars: {"citation.bib":{"sha256":"d6cdb110f9269d7c3655e300b21e6df22fbb0f020211fcb29ec50ed45016edd0","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17782/citation.bib"},"citation.json":{"sha256":"91e6fbd974268d9122d7b60efe896e60fcaeac43782534db47e3a90180e4d572","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17782/citation.json"},"citation.ris":{"sha256":"136dda50fbf6fa574e57f205b2a7803a36b3cd8ebe6b565e4fd3173a5c5514cb","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17782/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"2cefed4e5824bc928f3a2cee9ae8a39f5597967cb498f8ad9c9773d285b4281f","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17782/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"d6cdb110f9269d7c3655e300b21e6df22fbb0f020211fcb29ec50ed45016edd0","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17782/citation.bib"},"citation.json":{"sha256":"91e6fbd974268d9122d7b60efe896e60fcaeac43782534db47e3a90180e4d572","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17782/citation.json"},"citation.ris":{"sha256":"136dda50fbf6fa574e57f205b2a7803a36b3cd8ebe6b565e4fd3173a5c5514cb","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17782/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"72d2e892270cafbb70469b66c754398e7cd2822e46f0443d09560bb8a6cba641","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17782/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "1dc2732a30be515267a9de895d7aa89f6bceef4dc398b12634261765a3641486"
 paper_digest_api_reader_plan_sha256: "4088d15955cc904517defe493afcf0a7011ea891e09ea4cd88debf8a08fdf8b5"
@@ -52,8 +52,16 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[Where Words Begin and End](https://arxiv.org/abs/2610.17782v1)*
 
-> 标签：#强制对齐 | #LoRA | #多语言 | #数据增强
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[强制对齐](/audio-paper-digest-blog/papers/?concept=task.forced-alignment)
+- **研究方法**：[参数高效微调](/audio-paper-digest-blog/papers/?concept=method.peft) → [LoRA](/audio-paper-digest-blog/papers/?concept=method.lora)；[数据增强](/audio-paper-digest-blog/papers/?concept=method.augmentation)
+- **研究条件**：[多语言](/audio-paper-digest-blog/papers/?concept=setting.multilingual)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**7.3/10** | 创新 1.5/2 | 技术严谨 1.2/1.5 | 实验充分 1.3/1.5 | 清晰度 0.8/1 | 影响力 1/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1.2/1.5
 
 

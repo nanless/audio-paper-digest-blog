@@ -20,7 +20,7 @@ paper_digest_primary_task: "全双工语音交互"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.full-duplex","label":"全双工语音交互"},{"facet":"task","id":"task.speech-dialogue","label":"语音对话系统"},{"facet":"method","id":"method.diffusion","label":"扩散模型"},{"facet":"setting","id":"setting.real-time","label":"实时处理"}]
 paper_digest_primary_method: "扩散模型"
 paper_digest_score: 7.4
@@ -29,7 +29,7 @@ paper_digest_document_type: "模型报告"
 paper_digest_one_sentence: "Diffuplex 用自回归策略决定何时说话、用语音条件离散扩散并行生成说什么，在 VoiceBench 上以思考模式达到 86.9 分并实现每前向 13.0 词元、1872 词元每秒的解码速度，代价是需要三阶段训练与提前固定前缀带来的延迟质量折中。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Chen Chen"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Pin-Jui Ku"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Ankita Pasad"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Ante Jukić"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Zhehuai Chen"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Boris Ginsburg"}]
 paper_digest_abstract_sha256: "230cb774deca55b6a68aeadbad30517f86aec56a6fbf3a9f6e9eca5feb656862"
-paper_digest_sidecars: {"citation.bib":{"sha256":"c5155020f7a2bc4518935d125fb79ce6f423f063f123a54882bd0710e3d885b5","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17780/citation.bib"},"citation.json":{"sha256":"377f1b8f76c81cd45e47e10894804317fcc577058e924a24f00c99b4846ef281","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17780/citation.json"},"citation.ris":{"sha256":"832ed73147ce2e80f24e8ea594e0db72e942006c6d83111a9c8c53c043ee6294","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17780/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"0124b62e758f72485d9edd725c557e76ae3a9a9a9f02b58ca085e9c97aa74dfd","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17780/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"c5155020f7a2bc4518935d125fb79ce6f423f063f123a54882bd0710e3d885b5","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17780/citation.bib"},"citation.json":{"sha256":"377f1b8f76c81cd45e47e10894804317fcc577058e924a24f00c99b4846ef281","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17780/citation.json"},"citation.ris":{"sha256":"832ed73147ce2e80f24e8ea594e0db72e942006c6d83111a9c8c53c043ee6294","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17780/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"2702dfe2d9eaeea9ff2e6fc8133c28d157278d6b56c5e70b9e52208e89ee8117","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17780/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "5bdb1c42c2cb28ea4c320c3f434a5f492baa1790219a0e0db1b801186126264f"
 paper_digest_api_reader_plan_sha256: "bff817b411156910f188f58f38a6ed22f48eb60bd0177a9be3bd1e27d8df0903"
@@ -52,8 +52,16 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[Full-duplex Spoken Language Modeling with Discrete Diffusion](https://arxiv.org/abs/2610.17780v1)*
 
-> 标签：#全双工语音交互 | #语音对话系统 | #扩散模型 | #实时处理
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[语音交互](/audio-paper-digest-blog/papers/?concept=task.speech-interaction) → [全双工语音交互](/audio-paper-digest-blog/papers/?concept=task.full-duplex)；[语音交互](/audio-paper-digest-blog/papers/?concept=task.speech-interaction) → [语音对话系统](/audio-paper-digest-blog/papers/?concept=task.speech-dialogue)
+- **研究方法**：[生成模型](/audio-paper-digest-blog/papers/?concept=method.generative) → [扩散模型](/audio-paper-digest-blog/papers/?concept=method.diffusion)
+- **研究条件**：[实时处理](/audio-paper-digest-blog/papers/?concept=setting.real-time)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**7.4/10** | 创新 1.5/2 | 技术严谨 1.2/1.5 | 实验充分 1.2/1.5 | 清晰度 0.8/1 | 影响力 1.2/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1.2/1.5
 
 

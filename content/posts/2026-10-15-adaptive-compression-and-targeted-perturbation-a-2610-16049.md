@@ -20,7 +20,7 @@ paper_digest_primary_task: "音频深度伪造检测"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.audio-deepfake","label":"音频深度伪造检测"},{"facet":"method","id":"method.adversarial-training","label":"对抗训练"},{"facet":"method","id":"method.moe","label":"混合专家模型"},{"facet":"signal","id":"signal.speech","label":"语音"}]
 paper_digest_primary_method: "对抗训练"
 paper_digest_score: 8.0
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "论文用随输入选择压缩宽度的自适应特征融合与只扰动高频梅尔带的对抗正则来做音频真伪判别，在英中双语训练后在多个未见数据集上取得更低的等错误率，但结论只在原文的数据划分、冻结编码器和评测协议下成立，且对抗训练增加了训练开销。"
 paper_digest_authors: [{"affiliations":["Yangtze Delta Region Institute of Tsinghua University","Jiaxing, China"],"name":"Jianqiao Cui"},{"affiliations":["University of Southampton","Southampton, UK"],"name":"Haoxian Zhu"},{"affiliations":["Taiyuan University of Technology","Taiyuan, China"],"name":"Hanbiao Meng"},{"affiliations":["Imperial College London","London, UK"],"name":"Yanghao Zhang"}]
 paper_digest_abstract_sha256: "35febdbccc678ca1203d32a125e740c08bfc3ccd87b463fb0b21969fbcb93a6f"
-paper_digest_sidecars: {"citation.bib":{"sha256":"c7f034ae33042e3e65a713ba193a8c6c0885bfcd7d4db8157e5abe1d141f9e06","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16049/citation.bib"},"citation.json":{"sha256":"5f7e0691e975fc60046729cb5141181c94a43f2a9a418c4bf0576ea56b224a53","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16049/citation.json"},"citation.ris":{"sha256":"2ad7616c7d3f0a1ed25ac7c3ca84b24d439abe5562f43ad11e14e81c9364c853","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16049/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"b7d1c373cab5063556dc86f28b310741a72091e7e01ab4de2121566dbc8be418","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16049/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"c7f034ae33042e3e65a713ba193a8c6c0885bfcd7d4db8157e5abe1d141f9e06","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16049/citation.bib"},"citation.json":{"sha256":"5f7e0691e975fc60046729cb5141181c94a43f2a9a418c4bf0576ea56b224a53","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16049/citation.json"},"citation.ris":{"sha256":"2ad7616c7d3f0a1ed25ac7c3ca84b24d439abe5562f43ad11e14e81c9364c853","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16049/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"6313b099280137e1e111b26fb96de0f27f3555c97326c7c3730ae898b764c705","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16049/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "7732567d10a7cc3a67c15069b1e658f9a7aeb4e41dcbbfcaffb34d2b78b47243"
 paper_digest_api_reader_plan_sha256: "9592b56bcdbc468748a7f85114610622a61613b25e3e1939ec6b13dd65d94296"
@@ -52,8 +52,16 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[Adaptive Compression and Targeted Perturbation: A Unified Framework for Generalized Audio Deepfake Detection](https://arxiv.org/abs/2610.16049v1)*
 
-> 标签：#音频深度伪造检测 | #对抗训练 | #混合专家模型 | #语音
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[音频伪造检测](/audio-paper-digest-blog/papers/?concept=task.audio-forgery) → [音频深度伪造检测](/audio-paper-digest-blog/papers/?concept=task.audio-deepfake)
+- **研究方法**：[对抗训练](/audio-paper-digest-blog/papers/?concept=method.adversarial-training)；[混合专家模型](/audio-paper-digest-blog/papers/?concept=method.moe)
+- **信号**：[语音](/audio-paper-digest-blog/papers/?concept=signal.speech)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**8.0/10** | 创新 1.5/2 | 技术严谨 1.2/1.5 | 实验充分 1.2/1.5 | 清晰度 0.8/1 | 影响力 1/1.5 | 开源 1/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 

@@ -20,7 +20,7 @@ paper_digest_primary_task: "音画同步"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.av-synchronization","label":"音画同步"},{"facet":"method","id":"method.preference-optimization","label":"偏好优化"},{"facet":"artifact","id":"artifact.dataset","label":"数据集"},{"facet":"artifact","id":"artifact.benchmark","label":"基准测试"},{"facet":"method","id":"method.contrastive","label":"对比学习"}]
 paper_digest_primary_method: "偏好优化"
 paper_digest_score: 7.0
@@ -29,7 +29,7 @@ paper_digest_document_type: "数据集与基准"
 paper_digest_one_sentence: "论文针对联合生成的音画不同步问题，用 80K 条专业同步评分和两阶段奖励模型做评测与优化，在自建 1K 基准上与人类最一致，但只优化同步可能牺牲提示词保真度。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Kaisi Guan"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Ying Ba"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Wenjing Wang"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Xihua Wang"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Chen Li"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Jing Lyu"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Ruihau Song"}]
 paper_digest_abstract_sha256: "2d4eac2f7678a3ce6246abbfe152266c8020888db2ae20fdb9c686e76076d863"
-paper_digest_sidecars: {"citation.bib":{"sha256":"7df98de108a66a9a023b827a056c6f2f87a1d94e2645e765877fbe33c9ab2b5a","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16338/citation.bib"},"citation.json":{"sha256":"e1bccd56702ae78aa2c9f8da65332ef63474843279ef6e5b393360d4282a7028","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16338/citation.json"},"citation.ris":{"sha256":"5a3e6537a5c0f7d40442ae5dff7a9bb035b5662a41651838dc2f45bd2736bd0e","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16338/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"dcef6f4e12db64f9811dfedb1dd17dbe169cba4fe5a1a0083eefb819efda0ddf","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16338/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"7df98de108a66a9a023b827a056c6f2f87a1d94e2645e765877fbe33c9ab2b5a","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16338/citation.bib"},"citation.json":{"sha256":"e1bccd56702ae78aa2c9f8da65332ef63474843279ef6e5b393360d4282a7028","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16338/citation.json"},"citation.ris":{"sha256":"5a3e6537a5c0f7d40442ae5dff7a9bb035b5662a41651838dc2f45bd2736bd0e","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16338/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"3e6b22c55aa980e86767ede89b77961cd0f29ad4e3e9fb1383e74dd15a03f4a5","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16338/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "d797e69902c603623094331e2a86184e8a44cf6cc3913c8f334b1d7abd5f5032"
 paper_digest_api_reader_plan_sha256: "7d32fd6b12523a065ac0c16d990a064593ace9a6f77fc4c82f85303034c2cfd7"
@@ -52,8 +52,16 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[SyncReward: Human-Aligned Synchronization Reward for Audio-Visual Generation](https://arxiv.org/abs/2610.16338v1)*
 
-> 标签：#音画同步 | #偏好优化 | #数据集 | #基准测试 | #对比学习
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[音视频生成](/audio-paper-digest-blog/papers/?concept=task.av-generation) → [音画同步](/audio-paper-digest-blog/papers/?concept=task.av-synchronization)
+- **研究方法**：[偏好优化](/audio-paper-digest-blog/papers/?concept=method.preference-optimization)；[对比学习](/audio-paper-digest-blog/papers/?concept=method.contrastive)
+- **研究产物**：[数据集](/audio-paper-digest-blog/papers/?concept=artifact.dataset)；[基准测试](/audio-paper-digest-blog/papers/?concept=artifact.benchmark)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**7.0/10** | 创新 1.5/2 | 技术严谨 1.2/1.5 | 实验充分 1.2/1.5 | 清晰度 0.8/1 | 影响力 1/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 

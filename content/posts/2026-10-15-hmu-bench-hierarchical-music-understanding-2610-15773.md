@@ -20,7 +20,7 @@ paper_digest_primary_task: "音乐分析"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.music-understanding","label":"音乐分析"},{"facet":"task","id":"task.audio-question-answering","label":"音频问答"},{"facet":"artifact","id":"artifact.benchmark","label":"基准测试"},{"facet":"method","id":"method.benchmark-design","label":"基准设计"}]
 paper_digest_primary_method: "基准设计"
 paper_digest_score: 6.1
@@ -29,7 +29,7 @@ paper_digest_document_type: "数据集与基准"
 paper_digest_one_sentence: "HMU-Bench 用 1029 对乐谱问答和 460 对音频问答考查同一批全模态模型，最强系统乐谱得分接近 3.9 而音频最高仅 1.33，且两类排名几乎无关，局部困难音频与移调八度错误进一步暴露了评分与定位短板。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Zheqi Dai"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Boyang Wang"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Zhiyue Wu"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Yiyang Xu"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Xinming Shi"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Ruibin Yuan"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Xuerui Yang"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Chao Yan"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Qiuqiang Kong"}]
 paper_digest_abstract_sha256: "216a0f83a999b7cec29b87cd702b7c743a0d87a263d8036c6bc9d30ae49352cb"
-paper_digest_sidecars: {"citation.bib":{"sha256":"f709e64c4fc3658be58f620c4b973db3ea50832176c18926bb596298cbada45e","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15773/citation.bib"},"citation.json":{"sha256":"cd69f110debd036a4be7186ae79b6e5b3ade61d4017317754ecfa68e5dc0eb14","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15773/citation.json"},"citation.ris":{"sha256":"3635c8c088723fdb8148a8bf61e75cd9db7fe19a3d54a5509039ad3f32419d14","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15773/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"66a780c892240062cabe9019d3e094abbcc90a299e5bee991c72660d869c33a2","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15773/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"f709e64c4fc3658be58f620c4b973db3ea50832176c18926bb596298cbada45e","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15773/citation.bib"},"citation.json":{"sha256":"cd69f110debd036a4be7186ae79b6e5b3ade61d4017317754ecfa68e5dc0eb14","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15773/citation.json"},"citation.ris":{"sha256":"3635c8c088723fdb8148a8bf61e75cd9db7fe19a3d54a5509039ad3f32419d14","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15773/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"5fbaf84d0746ae8985efceb47f7d3e2be0b39db3826495f0ef8ac14ce6c4302e","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15773/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "7d833504742b477c218c05ba239c75a1c7b33e0341ee20d365cdb1f90a7a05ac"
 paper_digest_api_reader_plan_sha256: "7fec81451648690ef9819232eb3f89192333651a6bd675d8ca2bc3c5499134a1"
@@ -52,8 +52,16 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[HMU-Bench: Hierarchical Music Understanding Benchmark for Omni Models](https://arxiv.org/abs/2610.15773v1)*
 
-> 标签：#音乐分析 | #音频问答 | #基准测试 | #基准设计
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[音乐分析](/audio-paper-digest-blog/papers/?concept=task.music-understanding)；[音频理解](/audio-paper-digest-blog/papers/?concept=task.audio-understanding) → [音频问答](/audio-paper-digest-blog/papers/?concept=task.audio-question-answering)
+- **研究方法**：[评测协议](/audio-paper-digest-blog/papers/?concept=method.evaluation-protocol) → [基准设计](/audio-paper-digest-blog/papers/?concept=method.benchmark-design)
+- **研究产物**：[基准测试](/audio-paper-digest-blog/papers/?concept=artifact.benchmark)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**6.1/10** | 创新 1.2/2 | 技术严谨 1/1.5 | 实验充分 1/1.5 | 清晰度 0.8/1 | 影响力 0.8/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 

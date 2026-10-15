@@ -20,7 +20,7 @@ paper_digest_primary_task: "语音质量评估"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.speech-quality","label":"语音质量评估"},{"facet":"method","id":"method.crowdsourced-evaluation","label":"众包评测"},{"facet":"setting","id":"setting.accent-dialect","label":"口音与方言"},{"facet":"signal","id":"signal.speech","label":"语音"}]
 paper_digest_primary_method: "众包评测"
 paper_digest_score: 5.8
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "论文用同一批日式英语做分析再合成以对齐口音强度，对比四种指示语和两类评测者并对照三种自动打分，说明笼统问自然度会把口音当缺陷，而问像人声程度并请熟悉该口音的人来听能更公平地比出系统差异。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Kentaro Onda"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Satoru Fukayama"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Daisuke Saito"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Nobuaki Minematsu"}]
 paper_digest_abstract_sha256: "b8de01d5ba689f9ec4739bc4b0b4248b133f3447f2eefd8fc4e6e966ac0ba517"
-paper_digest_sidecars: {"citation.bib":{"sha256":"7069135ac83861660df673f300fa195a51699c3f117cc90929d89fdb7441c2f9","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13175/citation.bib"},"citation.json":{"sha256":"02a3a40bb50146c27b048136123753ee6d4423d1e35da80db3bb83133c143e44","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13175/citation.json"},"citation.ris":{"sha256":"7af18cf5a1d909ee42265afd41cacffa36ea9df1873d06325f98989d75ced29d","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13175/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"8e7be869e95086f8cab608aca37cdce26c8e4ab00509b9e54a9f2a5259b7f0aa","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13175/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"7069135ac83861660df673f300fa195a51699c3f117cc90929d89fdb7441c2f9","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13175/citation.bib"},"citation.json":{"sha256":"02a3a40bb50146c27b048136123753ee6d4423d1e35da80db3bb83133c143e44","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13175/citation.json"},"citation.ris":{"sha256":"7af18cf5a1d909ee42265afd41cacffa36ea9df1873d06325f98989d75ced29d","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13175/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"6169d6e7959d86b77294fec1e4c6bc99d453d8ff4d302e8211ed46f029bd67f7","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13175/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "17cdde276a1f9862f49e789420f24acaa49cf23314d7e77d2d9199cb712faa7d"
 paper_digest_api_reader_plan_sha256: "4adb7f8feb7d739035b9ac1153a76f5628efe67a2f21fb2691c7db235341606c"
@@ -52,8 +52,17 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[How Should We Evaluate Naturalness for Synthetic Speech with a Foreign Accent?](https://arxiv.org/abs/2610.13175v1)*
 
-> 标签：#语音质量评估 | #众包评测 | #口音与方言 | #语音
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[语音质量评估](/audio-paper-digest-blog/papers/?concept=task.speech-quality)
+- **研究方法**：[人类参与评测](/audio-paper-digest-blog/papers/?concept=method.human-evaluation) → [主观评测](/audio-paper-digest-blog/papers/?concept=method.subjective-evaluation) → [众包评测](/audio-paper-digest-blog/papers/?concept=method.crowdsourced-evaluation)
+- **研究条件**：[口音与方言](/audio-paper-digest-blog/papers/?concept=setting.accent-dialect)
+- **信号**：[语音](/audio-paper-digest-blog/papers/?concept=signal.speech)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**5.8/10** | 创新 1.2/2 | 技术严谨 1/1.5 | 实验充分 1.2/1.5 | 清晰度 0.8/1 | 影响力 0.8/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 0.5/1.5
 
 

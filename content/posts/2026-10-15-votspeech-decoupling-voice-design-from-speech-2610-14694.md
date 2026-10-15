@@ -20,7 +20,7 @@ paper_digest_primary_task: "文本到语音"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.tts","label":"文本到语音"},{"facet":"task","id":"task.prosody-style-control","label":"韵律与风格控制"},{"facet":"method","id":"method.flow-matching","label":"流匹配"},{"facet":"model_family","id":"model_family.llm","label":"大语言模型"}]
 paper_digest_primary_method: "流匹配"
 paper_digest_score: 7.0
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "VoTSpeech 针对纯文字指令缺显式声音目标的问题，用流匹配预测连续声音隐变量并双路引导大语言模型与声学扩散变换器，在中文指令评测的描述风格与角色扮演任务上占优，但结论只在同一中文训练与统一评判条件下成立，且推理多出声音采样开销。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Wenbing Yang"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Qihang Lu"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Zihan Sun"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Peilei Jia"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Yingming Gao"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Ya Li"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Jun Gao"}]
 paper_digest_abstract_sha256: "2d61e0f0b8401ccb644e4352fc77addce80d9453eb773100de959170b4b11083"
-paper_digest_sidecars: {"citation.bib":{"sha256":"5cde241ee43bd74a7fcd95ce0733e802665e5de7751afb881caab0f170372e8d","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14694/citation.bib"},"citation.json":{"sha256":"5bf63d688f31090d928a9f8a1b8eeac07c5b944b655dff7656b97ae01c6381fb","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14694/citation.json"},"citation.ris":{"sha256":"1cba030cb918b6c9c7996ac52d9414eb9fc795448d41a8f72b43368278a775ff","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14694/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"de9eaed099e2ea55b42a853052ddb37aab349207d5847195a2a6a160b40a6a8a","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14694/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"5cde241ee43bd74a7fcd95ce0733e802665e5de7751afb881caab0f170372e8d","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14694/citation.bib"},"citation.json":{"sha256":"5bf63d688f31090d928a9f8a1b8eeac07c5b944b655dff7656b97ae01c6381fb","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14694/citation.json"},"citation.ris":{"sha256":"1cba030cb918b6c9c7996ac52d9414eb9fc795448d41a8f72b43368278a775ff","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14694/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"4629ad197b07611fa9513ffe99fe9bdd0f1379332f9b128fd29a43b537c9959b","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14694/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "ce7390d7126bd70f602925456b898395b12e05c77e0cf656ca2aeb8bf9ac96ae"
 paper_digest_api_reader_plan_sha256: "ef16c08556a6033d53976ff6951e91e6c6c23c58c8e1d23b1d78b22fd589a12b"
@@ -52,8 +52,16 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[VoTSpeech: Decoupling Voice Design from Speech Generation in Instruction-Following TTS](https://arxiv.org/abs/2610.14694v1)*
 
-> 标签：#文本到语音 | #韵律与风格控制 | #流匹配 | #大语言模型
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[语音合成](/audio-paper-digest-blog/papers/?concept=task.speech-synthesis) → [文本到语音](/audio-paper-digest-blog/papers/?concept=task.tts)；[语音合成](/audio-paper-digest-blog/papers/?concept=task.speech-synthesis) → [韵律与风格控制](/audio-paper-digest-blog/papers/?concept=task.prosody-style-control)
+- **研究方法**：[生成模型](/audio-paper-digest-blog/papers/?concept=method.generative) → [流匹配](/audio-paper-digest-blog/papers/?concept=method.flow-matching)
+- **模型家族**：[大语言模型](/audio-paper-digest-blog/papers/?concept=model_family.llm)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**7.0/10** | 创新 1.5/2 | 技术严谨 1.2/1.5 | 实验充分 1.2/1.5 | 清晰度 0.8/1 | 影响力 1/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 

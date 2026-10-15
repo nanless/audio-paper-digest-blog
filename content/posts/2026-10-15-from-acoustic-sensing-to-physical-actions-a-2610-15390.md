@@ -20,7 +20,7 @@ paper_digest_primary_task: "语音代理规划与工具使用"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.voice-agent-planning","label":"语音代理规划与工具使用"},{"facet":"method","id":"method.literature-review","label":"文献综述方法"},{"facet":"research_focus","id":"research_focus.security","label":"音频安全"},{"facet":"setting","id":"setting.on-device","label":"端侧运行"}]
 paper_digest_primary_method: "文献综述方法"
 paper_digest_score: 6.3
@@ -29,7 +29,7 @@ paper_digest_document_type: "综述"
 paper_digest_one_sentence: "本文针对边缘部署的音频大模型智能体提出声学感知到动作的系统模型，沿六个阶段整合攻击、防御与评测证据，指出单点防护不能保证端到端安全，结论成立依赖于最终部署形态、权限绑定与跨阶段传播是否被完整评测。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Binhong Wang"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Haidong Kang"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Yanfeng Zhang"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Hong-Ning Dai"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Guo Yu"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Shangce Gao"}]
 paper_digest_abstract_sha256: "0d025a93d0a9fd05e796436a816e8c8ab52069dd6c1c9980d27d3bf0ad44eceb"
-paper_digest_sidecars: {"citation.bib":{"sha256":"ee0ee9da7c47fdec8fad196d44121325d8084818a64b3f1367e3bd59be27ce95","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15390/citation.bib"},"citation.json":{"sha256":"8b3efb1892d50e68ec4a5d769f8b9b63d06ad6e7d5f5c4e64b15dd9420d23293","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15390/citation.json"},"citation.ris":{"sha256":"6494a26efd0ff505b7a83985af407a0348f6d1c115ff72eaa4699655f4ce5300","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15390/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"d6627d36fe70db1c137d19555463db18a022bfa885ac620a8eef119e62337593","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15390/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"ee0ee9da7c47fdec8fad196d44121325d8084818a64b3f1367e3bd59be27ce95","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15390/citation.bib"},"citation.json":{"sha256":"8b3efb1892d50e68ec4a5d769f8b9b63d06ad6e7d5f5c4e64b15dd9420d23293","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15390/citation.json"},"citation.ris":{"sha256":"6494a26efd0ff505b7a83985af407a0348f6d1c115ff72eaa4699655f4ce5300","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15390/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"3a1cb87cdec4b1c97a6117b202be980238efcf0b099b8036f5d2eeca0dbd1a61","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15390/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "51a9fdab42ec842e43b7943c694dff4a89f6836cd88556e858a281ebedfed906"
 paper_digest_api_reader_plan_sha256: "bb2a1a645b66cb2b3529ed9c8f7ccfad0cd85bf4c4691705254a246244bf517d"
@@ -52,8 +52,17 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[From Acoustic Sensing to Physical Actions: A Comprehensive Survey of Security Risks in Edge-Deployed Audio LLM-Based Agents](https://arxiv.org/abs/2610.15390v1)*
 
-> 标签：#语音代理规划与工具使用 | #文献综述方法 | #音频安全 | #端侧运行
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[语音交互](/audio-paper-digest-blog/papers/?concept=task.speech-interaction) → [语音代理规划与工具使用](/audio-paper-digest-blog/papers/?concept=task.voice-agent-planning)
+- **研究方法**：[文献综述方法](/audio-paper-digest-blog/papers/?concept=method.literature-review)
+- **研究条件**：[端侧运行](/audio-paper-digest-blog/papers/?concept=setting.on-device)
+- **研究重点**：[音频安全](/audio-paper-digest-blog/papers/?concept=research_focus.security)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**6.3/10** | 创新 1.2/2 | 技术严谨 1/1.5 | 实验充分 1/1.5 | 清晰度 0.8/1 | 影响力 1/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 

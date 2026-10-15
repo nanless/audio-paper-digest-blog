@@ -20,7 +20,7 @@ paper_digest_primary_task: "符号音乐生成"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.symbolic-music","label":"符号音乐生成"},{"facet":"task","id":"task.music-structure-analysis","label":"音乐结构分析"},{"facet":"method","id":"method.autoregressive","label":"自回归模型"},{"facet":"method","id":"method.diffusion","label":"扩散模型"},{"facet":"method","id":"method.dataset-curation","label":"数据集构建"}]
 paper_digest_primary_method: "自回归模型"
 paper_digest_score: 7.3
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "TASTE 把文字拆成标签、段落计划和意象三路条件，用三层弱监督数据和两类模型实现可控钢琴生成，在情感与结构对齐上提升明显，但伴奏与演奏风格仍受标签可靠性限制。"
 paper_digest_authors: [{"affiliations":["University of California, San Diego","University of Rochester"],"name":"Mingyang Yao"},{"affiliations":["University of California, San Diego"],"name":"Jingyue Huang"},{"affiliations":["University of California, San Diego"],"name":"Ke Chen"},{"affiliations":["University of California, San Diego"],"name":"Taylor Berg-Kirkpatrick"},{"affiliations":["University of California, San Diego"],"name":"Shlomo Dubnov"}]
 paper_digest_abstract_sha256: "dc7cc19846f71150b0feca859496581345d5a1728001ee17442bd0d35622abb5"
-paper_digest_sidecars: {"citation.bib":{"sha256":"aa889b8bebdcf54ed4368481d820751588f214f3c551f9ba48434fbd142ef2d1","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15960/citation.bib"},"citation.json":{"sha256":"69fedf79fbd8e6e2ff2a0e57237fb66682d82286769f95b5dedfedd4fd2018c8","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15960/citation.json"},"citation.ris":{"sha256":"3c28da966322d70467844ebcb8a9038bc0f792477d5d5b4b7d842a289b7bffd3","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15960/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"c3123eef15d2d058ccc258a91304167b485e1fea6c6c593fad067d94924bc7f5","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15960/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"aa889b8bebdcf54ed4368481d820751588f214f3c551f9ba48434fbd142ef2d1","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15960/citation.bib"},"citation.json":{"sha256":"69fedf79fbd8e6e2ff2a0e57237fb66682d82286769f95b5dedfedd4fd2018c8","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15960/citation.json"},"citation.ris":{"sha256":"3c28da966322d70467844ebcb8a9038bc0f792477d5d5b4b7d842a289b7bffd3","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15960/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"a5e96749c8dadfbd395669cb1380009b081619c93bdf30094abac60f9dd430a2","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15960/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "c101b26a7efff111af3e5aa1a99bfc73c4d34bf661791ca8c3840d521ed3788b"
 paper_digest_api_reader_plan_sha256: "76f6378ccb0f93d27067c84e26f747c3919551119e9218ad0930ecc684f87bf0"
@@ -52,8 +52,15 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[TASTE: Taxonomy-Aware Symbolic Piano Generation from Textual Description](https://arxiv.org/abs/2610.15960v1)*
 
-> 标签：#符号音乐生成 | #音乐结构分析 | #自回归模型 | #扩散模型 | #数据集构建
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[音乐生成](/audio-paper-digest-blog/papers/?concept=task.music-generation) → [符号音乐生成](/audio-paper-digest-blog/papers/?concept=task.symbolic-music)；[音乐分析](/audio-paper-digest-blog/papers/?concept=task.music-understanding) → [音乐结构分析](/audio-paper-digest-blog/papers/?concept=task.music-structure-analysis)
+- **研究方法**：[生成模型](/audio-paper-digest-blog/papers/?concept=method.generative) → [自回归模型](/audio-paper-digest-blog/papers/?concept=method.autoregressive)；[生成模型](/audio-paper-digest-blog/papers/?concept=method.generative) → [扩散模型](/audio-paper-digest-blog/papers/?concept=method.diffusion)；[数据集构建](/audio-paper-digest-blog/papers/?concept=method.dataset-curation)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**7.3/10** | 创新 1.5/2 | 技术严谨 1.2/1.5 | 实验充分 1.3/1.5 | 清晰度 0.8/1 | 影响力 1/1.5 | 开源 0/1.5 | 可复现 0.5/0.5 | 工程/实践 1/1.5
 
 

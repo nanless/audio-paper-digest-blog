@@ -20,7 +20,7 @@ paper_digest_primary_task: "语音质量评估"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.speech-quality","label":"语音质量评估"},{"facet":"method","id":"method.sft","label":"SFT"},{"facet":"artifact","id":"artifact.dataset","label":"数据集"},{"facet":"method","id":"method.subjective-evaluation","label":"主观评测"}]
 paper_digest_primary_method: "SFT"
 paper_digest_score: 6.3
@@ -29,7 +29,7 @@ paper_digest_document_type: "模型报告"
 paper_digest_one_sentence: "针对现有 MOS 预测在韩语上校准不良的问题，KOMOS 用 29 名韩国听众对 1000 条语音的 5000 个打分微调 Whisper-medium 编码器与听众条件预测头，在测试集上取得 SRCC 0.900 与 LCC 0.950，但结论只在该韩语数据划分与 seen-system 条件下成立。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Sangchun Ha"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Junwon Moon"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Kyuhong Shim"}]
 paper_digest_abstract_sha256: "e114c73d8ea1f4eea972542dbb03951f2429607f3e7a4ed042e6c83d2777bfc8"
-paper_digest_sidecars: {"citation.bib":{"sha256":"dafeca19d8f34db9d375ab8c48a9b54f62ff948af05c7fbfcffd1487f5f64f94","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15353/citation.bib"},"citation.json":{"sha256":"35510fc5d35f3f51b7d954c8a639aa84287476c1dc32e68f165652e414610e89","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15353/citation.json"},"citation.ris":{"sha256":"6f786788c4dd33261ed8f8ba55624ada58c49effc5943d87aa0d70b6ce8a7451","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15353/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"1c4da72e2a3b85385de0f8d8b56b1e02c0f7cf5d5e58074a137356c2e55725e0","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15353/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"dafeca19d8f34db9d375ab8c48a9b54f62ff948af05c7fbfcffd1487f5f64f94","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15353/citation.bib"},"citation.json":{"sha256":"35510fc5d35f3f51b7d954c8a639aa84287476c1dc32e68f165652e414610e89","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15353/citation.json"},"citation.ris":{"sha256":"6f786788c4dd33261ed8f8ba55624ada58c49effc5943d87aa0d70b6ce8a7451","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15353/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"714dd98eabb394d4ab9f9f62b4fd0635566d234f0aca49053f6c35347f4a966b","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15353/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "043b42cad17de09c7329fa943febda073e1cc8b6d301ecb9c8593dcd4977fbab"
 paper_digest_api_reader_plan_sha256: "dec2ac4f64e11a5b66637075b333982e42f832b8b3a5be6cbff7c8fbab990640"
@@ -52,8 +52,16 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[KOMOS: Automatic Mean Opinion Score Estimation for Korean Speech](https://arxiv.org/abs/2610.15353v1)*
 
-> 标签：#语音质量评估 | #SFT | #数据集 | #主观评测
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[语音质量评估](/audio-paper-digest-blog/papers/?concept=task.speech-quality)
+- **研究方法**：[SFT](/audio-paper-digest-blog/papers/?concept=method.sft)；[人类参与评测](/audio-paper-digest-blog/papers/?concept=method.human-evaluation) → [主观评测](/audio-paper-digest-blog/papers/?concept=method.subjective-evaluation)
+- **研究产物**：[数据集](/audio-paper-digest-blog/papers/?concept=artifact.dataset)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**6.3/10** | 创新 1.3/2 | 技术严谨 1/1.5 | 实验充分 1.1/1.5 | 清晰度 0.8/1 | 影响力 0.8/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 

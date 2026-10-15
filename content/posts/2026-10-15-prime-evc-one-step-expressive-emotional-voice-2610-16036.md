@@ -20,7 +20,7 @@ paper_digest_primary_task: "语音转换"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.voice-conversion","label":"语音转换"},{"facet":"task","id":"task.prosody-style-control","label":"韵律与风格控制"},{"facet":"method","id":"method.flow-matching","label":"流匹配"},{"facet":"signal","id":"signal.speech","label":"语音"}]
 paper_digest_primary_method: "流匹配"
 paper_digest_score: 6.8
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "Prime-EVC 把目标情感的音高能量与说话人相关的风格提前做进条件 μ 中，再用 DiT 条件流匹配解码器一步生成梅尔谱，在 ESD 英文集上以单步取得 UTMOS 3.37 与 EECS 0.87，代价是条件分支更复杂且结论只在相同划分与声码器下成立。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Yu Pan"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Xiaojuan Cai"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Liang Zhang"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Yang Hou"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Tianjiao Zhang"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Yuguang Yang"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Jixun Yao"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Hiroshi Koide"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Lei Ma"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Jianjun Zhao"}]
 paper_digest_abstract_sha256: "e3d54dfdb64507428c8fd6fc76c831c0a30be327459d0528d520cd24ed8032a7"
-paper_digest_sidecars: {"citation.bib":{"sha256":"dcdd7acae49c7ccc2742dbe4b91892e7b02ddb282c9013a3fc409b40a77fdf6e","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16036/citation.bib"},"citation.json":{"sha256":"2277b527279382dec839a9333c8c1d3126c771ff2b05222a4215ecef0a94f0fc","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16036/citation.json"},"citation.ris":{"sha256":"d6dcfc6c24adba89f64324f346293f0c6eaa9240e8da62a09845f0152b6f5b6d","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16036/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"07fa41eaab708cfb861388be5632f170243f73702bd0f95e3daa79f84f0d0b03","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16036/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"dcdd7acae49c7ccc2742dbe4b91892e7b02ddb282c9013a3fc409b40a77fdf6e","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16036/citation.bib"},"citation.json":{"sha256":"2277b527279382dec839a9333c8c1d3126c771ff2b05222a4215ecef0a94f0fc","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16036/citation.json"},"citation.ris":{"sha256":"d6dcfc6c24adba89f64324f346293f0c6eaa9240e8da62a09845f0152b6f5b6d","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16036/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"747106cdcd38fbea8f915b2352f7b3f0e6bf4460fada661681bb070e9791df48","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16036/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "f96cdf1b344c99d87e222b4d654737e4f628ccf7ca3a25cec2d14af75a9b1352"
 paper_digest_api_reader_plan_sha256: "8ce8f272d5f716fa1a556db46bd4675d7513a84d3da2258c061c911bac8f7436"
@@ -52,8 +52,16 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[Prime-EVC: One-Step Expressive Emotional Voice Conversion via Emotion-Primed Flow Matching](https://arxiv.org/abs/2610.16036v1)*
 
-> 标签：#语音转换 | #韵律与风格控制 | #流匹配 | #语音
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[语音转换](/audio-paper-digest-blog/papers/?concept=task.voice-conversion)；[语音合成](/audio-paper-digest-blog/papers/?concept=task.speech-synthesis) → [韵律与风格控制](/audio-paper-digest-blog/papers/?concept=task.prosody-style-control)
+- **研究方法**：[生成模型](/audio-paper-digest-blog/papers/?concept=method.generative) → [流匹配](/audio-paper-digest-blog/papers/?concept=method.flow-matching)
+- **信号**：[语音](/audio-paper-digest-blog/papers/?concept=signal.speech)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**6.8/10** | 创新 1.3/2 | 技术严谨 1.2/1.5 | 实验充分 1.2/1.5 | 清晰度 0.8/1 | 影响力 1/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 

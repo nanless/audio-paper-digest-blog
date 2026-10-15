@@ -20,7 +20,7 @@ paper_digest_primary_task: "语音识别"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.asr","label":"语音识别"},{"facet":"task","id":"task.speech-translation","label":"语音翻译"},{"facet":"task","id":"task.audio-question-answering","label":"音频问答"},{"facet":"method","id":"method.pruning","label":"模型剪枝"},{"facet":"research_focus","id":"research_focus.efficiency","label":"高效推理"}]
 paper_digest_primary_method: "模型剪枝"
 paper_digest_score: 6.8
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "针对音频编码器产生过长音频 Token 序列导致解码器自注意力开销过大的问题，AudioTETRIS 用编码器隐状态的帧间变化构造音素过渡先验，再与随深度切换的解码器注意力分数相乘做逐层 top-k 剪枝，在 Qwen2-Audio 等三个模型上用 25% Token 保持接近未压缩精度，但高压缩下转写任务仍先退化且需一次校准确定交叉层。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Shreya Sajid"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Anna Vettoruzzo"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Joaquin Vanschoren"}]
 paper_digest_abstract_sha256: "45a9c907f5e4a1b735b22761014983aebfa16db3a9ded6b56ee5017fd60b68be"
-paper_digest_sidecars: {"citation.bib":{"sha256":"ccb94c49b8df7aeac83193f791beaaebae4fb2587d7c46eed25b9dc935ebb59d","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13600/citation.bib"},"citation.json":{"sha256":"2f2c5c9a2dccb2432e0b80414a882d42de8f60b397ee53d6ad13171fe73d1265","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13600/citation.json"},"citation.ris":{"sha256":"9cd87747142b1b4742e62eb281c46123db03a07f34053b0975ec57c3648c5413","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13600/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"175725f5d0cac81fddcaf22f16e66b1fb3f2cdd0a7a5d4b6ab61abd0337e08da","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13600/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"ccb94c49b8df7aeac83193f791beaaebae4fb2587d7c46eed25b9dc935ebb59d","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13600/citation.bib"},"citation.json":{"sha256":"2f2c5c9a2dccb2432e0b80414a882d42de8f60b397ee53d6ad13171fe73d1265","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13600/citation.json"},"citation.ris":{"sha256":"9cd87747142b1b4742e62eb281c46123db03a07f34053b0975ec57c3648c5413","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13600/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"b0c6af1008441cef722101ea13d2c98023c79013a6f0de7166499873ca98f39d","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13600/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "a6b91c34f46e7c4a989412ddc7ac945fea5fa58225d14e4c435df9fcab37acab"
 paper_digest_api_reader_plan_sha256: "e36daefecdbbbf05536bf260410578c78b536349e1d91bcca90052f0e7dda7ad"
@@ -52,8 +52,16 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[AudioTETRIS: Token Elimination via Transitional Importance Signals for Efficient Audio LLMs](https://arxiv.org/abs/2610.13600v1)*
 
-> 标签：#语音识别 | #语音翻译 | #音频问答 | #模型剪枝 | #高效推理
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[语音识别](/audio-paper-digest-blog/papers/?concept=task.asr)；[语音翻译](/audio-paper-digest-blog/papers/?concept=task.speech-translation)；[音频理解](/audio-paper-digest-blog/papers/?concept=task.audio-understanding) → [音频问答](/audio-paper-digest-blog/papers/?concept=task.audio-question-answering)
+- **研究方法**：[模型压缩](/audio-paper-digest-blog/papers/?concept=method.compression) → [模型剪枝](/audio-paper-digest-blog/papers/?concept=method.pruning)
+- **研究重点**：[高效推理](/audio-paper-digest-blog/papers/?concept=research_focus.efficiency)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**6.8/10** | 创新 1.2/2 | 技术严谨 1/1.5 | 实验充分 1.3/1.5 | 清晰度 0.8/1 | 影响力 1/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1.2/1.5
 
 

@@ -20,7 +20,7 @@ paper_digest_primary_task: "符号音乐生成"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.symbolic-music","label":"符号音乐生成"},{"facet":"task","id":"task.transcription","label":"音乐转录"},{"facet":"method","id":"method.transfer","label":"迁移学习"},{"facet":"method","id":"method.multitask","label":"多任务学习"},{"facet":"signal","id":"signal.music","label":"音乐"}]
 paper_digest_primary_method: "迁移学习"
 paper_digest_score: 6.0
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "论文研究如何用冻结的自动音乐转录编码器加谱面解码器生成节奏游戏谱面，并在谱面最少的模式上用跨模式联合训练把事件 F1 从 0.492 提到 0.506，而与 Clone Hero 联合反而降到 0.482。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Sojeong An"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Nathan Pruyne"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Chris Donahue"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Dasaem Jeong"}]
 paper_digest_abstract_sha256: "1cc993f1156a2ec5807ca995067bb5d63fb172714ec71d54f21d9b9b0fbf623f"
-paper_digest_sidecars: {"citation.bib":{"sha256":"6aca71139066b21199eea706490f23a2a817f219e2e418a71c05e2b7e1f91fc0","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14955/citation.bib"},"citation.json":{"sha256":"a508d531505e45c89246be9387d94d5e7774e4612e318cc8a19d553e7add819b","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14955/citation.json"},"citation.ris":{"sha256":"ae48b43013196acb622cd1cc9b13e37ac0d8b2e8b683fd8d901cdabe969390a6","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14955/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"af06c3f968a2f8a9ae2ac8f2430ed6f7363fa5da9e19bd79f797dcbe313955e8","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14955/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"6aca71139066b21199eea706490f23a2a817f219e2e418a71c05e2b7e1f91fc0","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14955/citation.bib"},"citation.json":{"sha256":"a508d531505e45c89246be9387d94d5e7774e4612e318cc8a19d553e7add819b","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14955/citation.json"},"citation.ris":{"sha256":"ae48b43013196acb622cd1cc9b13e37ac0d8b2e8b683fd8d901cdabe969390a6","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14955/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"e0a3c5db014ed739732543d22fd81e1adbe06a8d2bbf8004d375b5606e99c6d9","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14955/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "e6f2a3764a102eecd63839c46e8019e1f9108266acd67e1a48b96cab78460a14"
 paper_digest_api_reader_plan_sha256: "8d9b9eec52e80c6e9bf8723e6219732a50da80975d9f825c16ac43c556c0f967"
@@ -52,8 +52,16 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[Transfer Learning for Rhythm Game Chart Generation from Music Transcription and Across Games](https://arxiv.org/abs/2610.14955v1)*
 
-> 标签：#符号音乐生成 | #音乐转录 | #迁移学习 | #多任务学习 | #音乐
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[音乐生成](/audio-paper-digest-blog/papers/?concept=task.music-generation) → [符号音乐生成](/audio-paper-digest-blog/papers/?concept=task.symbolic-music)；[音乐分析](/audio-paper-digest-blog/papers/?concept=task.music-understanding) → [音乐转录](/audio-paper-digest-blog/papers/?concept=task.transcription)
+- **研究方法**：[迁移学习](/audio-paper-digest-blog/papers/?concept=method.transfer)；[多任务学习](/audio-paper-digest-blog/papers/?concept=method.multitask)
+- **信号**：[音乐](/audio-paper-digest-blog/papers/?concept=signal.music)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**6.0/10** | 创新 1.2/2 | 技术严谨 1/1.5 | 实验充分 1/1.5 | 清晰度 0.8/1 | 影响力 0.8/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 0.9/1.5
 
 

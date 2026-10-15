@@ -20,7 +20,7 @@ paper_digest_primary_task: "文本到语音"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.tts","label":"文本到语音"},{"facet":"task","id":"task.prosody-style-control","label":"韵律与风格控制"},{"facet":"method","id":"method.retrieval-augmented","label":"检索增强"},{"facet":"artifact","id":"artifact.dataset","label":"数据集"},{"facet":"method","id":"method.dataset-curation","label":"数据集构建"}]
 paper_digest_primary_method: "检索增强"
 paper_digest_score: 6.2
@@ -29,7 +29,7 @@ paper_digest_document_type: "系统技术报告"
 paper_digest_one_sentence: "E3-System 针对零样本语音合成中文字意图缺乏声学依据、音色与风格纠缠的问题，用 1012 小时多语种 EmoData 构建风格空间、用 Style-RAG 把文字意图映射为语音风格提示、用 Dual-TTS 实现音色与风格解耦合成，在双提示条件下直接语音提示与检索文字控制分别达到不同的可懂度与相似度平衡。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Yiqiao Huang"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Xiaolong Lin"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Zhenpeng Zhan"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Zhizheng Wu"}]
 paper_digest_abstract_sha256: "1c22227cbd91ee67e1dceac4146473e5120eaa43b8906336e9436090e172ec74"
-paper_digest_sidecars: {"citation.bib":{"sha256":"838a1bc6ba9108b2b1b8ae4c65f7ec5b802d2c75266fb53bf50e2cc63bba62a7","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-12993/citation.bib"},"citation.json":{"sha256":"3c9603f6ddddff4ce2cc57d7548c3ddc08ef9166ca7653822e6c59c93db6f673","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-12993/citation.json"},"citation.ris":{"sha256":"3dbca4df5c992f012d5dc01e39d973aed9e60a87575bca354a69fa1ef08c255f","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-12993/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"a4f00ed6fba82cb7698081942e3c973dd52797cb307a770cec15ec0dd2c199fb","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-12993/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"838a1bc6ba9108b2b1b8ae4c65f7ec5b802d2c75266fb53bf50e2cc63bba62a7","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-12993/citation.bib"},"citation.json":{"sha256":"3c9603f6ddddff4ce2cc57d7548c3ddc08ef9166ca7653822e6c59c93db6f673","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-12993/citation.json"},"citation.ris":{"sha256":"3dbca4df5c992f012d5dc01e39d973aed9e60a87575bca354a69fa1ef08c255f","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-12993/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"547390a33cf2e83cb99d496ce7572b9898c09edf26ddb1fc3f5d17755aaf2485","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-12993/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "8da4d43c9186132a1be1dbf0ebeb01cc9619b9959ccfdc4b0e088c79818ef207"
 paper_digest_api_reader_plan_sha256: "81c3e7a46f9ba02974aade7d9721217ed2a7a563db3d9ed589c096503ce8d47b"
@@ -52,8 +52,16 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[E3-System: Expressive EmoData, Explicitly Controllable, Easy-to-Use TTS](https://arxiv.org/abs/2610.12993v1)*
 
-> 标签：#文本到语音 | #韵律与风格控制 | #检索增强 | #数据集 | #数据集构建
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[语音合成](/audio-paper-digest-blog/papers/?concept=task.speech-synthesis) → [文本到语音](/audio-paper-digest-blog/papers/?concept=task.tts)；[语音合成](/audio-paper-digest-blog/papers/?concept=task.speech-synthesis) → [韵律与风格控制](/audio-paper-digest-blog/papers/?concept=task.prosody-style-control)
+- **研究方法**：[检索增强](/audio-paper-digest-blog/papers/?concept=method.retrieval-augmented)；[数据集构建](/audio-paper-digest-blog/papers/?concept=method.dataset-curation)
+- **研究产物**：[数据集](/audio-paper-digest-blog/papers/?concept=artifact.dataset)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**6.2/10** | 创新 1.3/2 | 技术严谨 1/1.5 | 实验充分 1.1/1.5 | 清晰度 0.7/1 | 影响力 1/1.5 | 开源 0/1.5 | 可复现 0.1/0.5 | 工程/实践 1/1.5
 
 

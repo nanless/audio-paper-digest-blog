@@ -20,7 +20,7 @@ paper_digest_primary_task: "言语神经解码"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.neural-speech-decoding","label":"言语神经解码"},{"facet":"method","id":"method.multimodal-learning","label":"多模态学习"},{"facet":"signal","id":"signal.neural","label":"脑信号"},{"facet":"signal","id":"signal.speech","label":"语音"}]
 paper_digest_primary_method: "多模态学习"
 paper_digest_score: 6.4
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "针对鸡尾酒会中从脑电解码注意对象的问题，Merit 用去均值相关打分堵住音频捷径，用分流打乱与 Shapley 值度量每个输入的贡献，在 MAESTRO 上达到四选一 0.82 与未见被试 0.74 的准确率，同时发现加入行为信号流会让脑电的贡献几乎减半。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Ali Alavi"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Donald S. Williamson"}]
 paper_digest_abstract_sha256: "3ce1cdc37ab334ddf72b152493c49dab5e8fc9703419937006e2ac8746a67085"
-paper_digest_sidecars: {"citation.bib":{"sha256":"347cc58faa544615b31aa04eaf92f7f216a701b9ead1404a3b19c1a7f637a744","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17507/citation.bib"},"citation.json":{"sha256":"13e4abba53102686029517787296c8c0a0345454c0e9524db7160379564e374e","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17507/citation.json"},"citation.ris":{"sha256":"ef8860281bc6ad999fb3ff46a6a28b5569cfb1bd8ec41bdb8174da7953e45da5","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17507/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"edc7ff9188ff7acfbbcbc071e8c6bd108a36b20544c4cacbce83e13ee0f8c52e","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17507/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"347cc58faa544615b31aa04eaf92f7f216a701b9ead1404a3b19c1a7f637a744","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17507/citation.bib"},"citation.json":{"sha256":"13e4abba53102686029517787296c8c0a0345454c0e9524db7160379564e374e","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17507/citation.json"},"citation.ris":{"sha256":"ef8860281bc6ad999fb3ff46a6a28b5569cfb1bd8ec41bdb8174da7953e45da5","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17507/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"e0c1af4577be3a9075546a445e5e1997307e210d16828bbe07c2495853274106","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17507/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "35dbfac3f0a452a4cdd8ec06d24517f9c9dfa35e5505ac9cbb3dd7aac7b72eb0"
 paper_digest_api_reader_plan_sha256: "34ce79ca0546cb11f843885960f1c7f5bed970b78d097cad1400414f34cf32a7"
@@ -52,8 +52,16 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[Merit: Making every modality earn its contribution in multimodal attention decoding](https://arxiv.org/abs/2610.17507v1)*
 
-> 标签：#言语神经解码 | #多模态学习 | #脑信号 | #语音
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[言语神经解码](/audio-paper-digest-blog/papers/?concept=task.neural-speech-decoding)
+- **研究方法**：[多模态学习](/audio-paper-digest-blog/papers/?concept=method.multimodal-learning)
+- **信号**：[脑信号](/audio-paper-digest-blog/papers/?concept=signal.neural)；[语音](/audio-paper-digest-blog/papers/?concept=signal.speech)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**6.4/10** | 创新 1.5/2 | 技术严谨 1.2/1.5 | 实验充分 1.3/1.5 | 清晰度 0.8/1 | 影响力 0.7/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 0.6/1.5
 
 

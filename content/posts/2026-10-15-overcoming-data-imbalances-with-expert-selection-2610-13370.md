@@ -20,7 +20,7 @@ paper_digest_primary_task: "语音识别"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.asr","label":"语音识别"},{"facet":"method","id":"method.moe","label":"混合专家模型"},{"facet":"setting","id":"setting.multilingual","label":"多语言"},{"facet":"setting","id":"setting.low-resource","label":"低资源"}]
 paper_digest_primary_method: "混合专家模型"
 paper_digest_score: 5.8
@@ -29,10 +29,10 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "COAX 在预训练选专家时按数据类别加软偏置，让低资源类别被引向更大的指定专家子集，在多语言与多模态混合上改善了低资源验证损失，而推理时可去掉偏置保持标准 MoE 流程，代价是小规模下可观的训练吞吐开销。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Ayush K. Tarun"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Clara Meister"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Antoine Bosselut"}]
 paper_digest_abstract_sha256: "ed2af7a5275d2180f471c74a93ab5c3a0552cc9ddaeeafa55a092345365c5127"
-paper_digest_sidecars: {"citation.bib":{"sha256":"ba5c846f7f349292453cb7f7d23b597e8a0a7803cb2fe9eb9040bbcb83c6d173","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13370/citation.bib"},"citation.json":{"sha256":"b0129486127dc76afc36f6a3ce2e030196c7e6bfb54b598610dacf782baff26d","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13370/citation.json"},"citation.ris":{"sha256":"b028421bef5158c7c4048d9da796a6ed9c9765ec4ed6635b4e210455b0ddfaa1","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13370/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"f1d4bd49cdee3949aab473868fb983a5a68ecdf58e485e3a8bd5e9a06919e2e9","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13370/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"ba5c846f7f349292453cb7f7d23b597e8a0a7803cb2fe9eb9040bbcb83c6d173","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13370/citation.bib"},"citation.json":{"sha256":"b0129486127dc76afc36f6a3ce2e030196c7e6bfb54b598610dacf782baff26d","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13370/citation.json"},"citation.ris":{"sha256":"b028421bef5158c7c4048d9da796a6ed9c9765ec4ed6635b4e210455b0ddfaa1","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13370/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"09e2d4208fb10d32f702ab19ed98fdd2c70bb5e90826ff2b43332c41c1491e94","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13370/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
-paper_digest_api_reader_article_sha256: "7a811a3a5f5d0aa67ccbd6a42ed72e852697ae2e4f955f51f947ea675a1850c0"
-paper_digest_api_reader_plan_sha256: "63a740c706ac0f9a78767834d05fc3cca296f589f2aa8f25e5dfd2a9bd665395"
+paper_digest_api_reader_article_sha256: "fb001f8d3441d4a7148cd61542c6f4bad36df4d0983ee156230fac2a06e5524f"
+paper_digest_api_reader_plan_sha256: "8f8af5f6ed3e407314bda8db724e92b3f8246fda0725b16560e1c2c8a9ff16c9"
 paper_digest_api_reader_source_binding_contract: "api-reader-source-bindings-v4"
 paper_digest_api_reader_source_bindings_sha256: "87e2923380e8f47e46bb753af2b2aa3643bcae10170674f442a732c9cfa62041"
 paper_digest_api_reader_source_table_count: 4
@@ -52,8 +52,16 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[Overcoming Data Imbalances with Expert Selection Biases](https://arxiv.org/abs/2610.13370v1)*
 
-> 标签：#语音识别 | #混合专家模型 | #多语言 | #低资源
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[语音识别](/audio-paper-digest-blog/papers/?concept=task.asr)
+- **研究方法**：[混合专家模型](/audio-paper-digest-blog/papers/?concept=method.moe)
+- **研究条件**：[多语言](/audio-paper-digest-blog/papers/?concept=setting.multilingual)；[低资源](/audio-paper-digest-blog/papers/?concept=setting.low-resource)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**5.8/10** | 创新 1.2/2 | 技术严谨 1/1.5 | 实验充分 1.2/1.5 | 清晰度 0.8/1 | 影响力 0.3/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 
@@ -192,16 +200,17 @@ COAX 为每个类别维护一个指定专家子集，子集大小记为该类别
 
 ### 多模态实验中视觉和音频是否都受益
 
-多模态混合由文本、视觉和音频组成，视觉平均分为图像到文本和文本到图像两类序列，音频包括纯音频、语音识别和音频文本交错序列。视觉和音频各被引向约 2 倍于其词元占比的专家，文本取剩余子集。这种设置用来检验给稀缺模态更多首选专家后，是否减轻干扰并改善低资源模态。
-读图说明：这张路由比例图直接检验偏置是否可控，左右面板偏置强度不同，纵轴是组内路由比例，虚线是随机基准，观察时先对比强度再看随训练步的形状。
+多模态混合由文本、视觉和音频组成，真实配比是文本占 75%，视觉和音频各占 12.5%，其中视觉平均分为图像到文本和文本到图像两类序列，音频包括纯音频、语音识别和音频文本交错序列。视觉和音频各被引向约 2 倍于其词元占比的专家，文本取剩余子集。这种设置用来检验给稀缺模态更多首选专家后，是否减轻干扰并改善低资源模态。
 
-> **看图路径：** 1. 对比左右两图不同偏置强度下组内路由比例的高低；2. 观察训练初期曲线冲高后回落再缓慢上升的形状；3. 对照虚线表示的随机路由基准理解牵引幅度
+读图说明：下面这张路由比例图不是多模态文本视觉音频分组的直接展示，必须先明确它的归属再看趋势。它来自四语言混合，图例 3 条曲线分别是 Korean、Urdu、Swahili 语言组，左面板偏置强度为 0.01，右面板为 0.1，纵轴是组内路由比例，虚线是均匀随机基准即组大小除以专家总数。因此它只证明偏置强度可控地牵引语言词元趋向指定子集，不能直接当作视觉和音频分组的路由证据，多模态是否受益要看后文留出集损失。
+
+> **看图路径：** 1. 确认图例三条曲线是 Korean、Urdu、Swahili 而非文本视觉音频；2. 对比左图 α=0.01 与右图 α=0.1 下组内路由比例的高低；3. 对照虚线表示的均匀随机基准理解牵引幅度
 
 [![原论文 Figure 2：COAX effectively coaxes category-aligned routing.](https://arxiv.org/html/2610.13370v1/ingroup_routing_alpha_m5p.svg)](https://arxiv.org/html/2610.13370v1/ingroup_routing_alpha_m5p.svg)
 
 *论文图 2。原论文 Figure 2:：“COAX effectively coaxes category-aligned routing.”。*
 
-从图中可见，更大的偏置强度带来更强的组内路由比例，曲线在训练早期冲高后回落再缓慢上升。这说明偏置确实提供了可调的分化强度，但组内比例高本身不等于性能好，还需要结合损失来判断。论文报告在最小和最大规模上所有验证集都改善，中间规模上视觉改善伴随文本和音频的小幅回退。去掉推理偏置仍保留大部分收益，保留偏置则多为小幅额外改善，由于模态标签事先已知，保留偏置在多模态部署中更可行。
+从图中可见，更大的偏置强度带来更强的组内路由比例，曲线在训练早期冲高后回落再缓慢上升，韩语组内比例最高，斯瓦希里语最低但仍高于其随机基准。这说明偏置确实提供了可调的分化强度，但组内比例高本身不等于性能好，还需要结合损失来判断。论文报告在最小和最大规模上所有验证集都改善，中间规模上视觉改善伴随文本和音频的小幅回退。去掉推理偏置仍保留大部分收益，保留偏置则多为小幅额外改善，由于模态标签事先已知，保留偏置在多模态部署中更可行。
 
 下表整理多模态的数据配比与训练等价含义，损失方向是越低越好。
 

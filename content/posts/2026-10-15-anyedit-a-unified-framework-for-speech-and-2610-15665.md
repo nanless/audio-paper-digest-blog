@@ -20,7 +20,7 @@ paper_digest_primary_task: "语音编辑"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.speech-editing","label":"语音编辑"},{"facet":"method","id":"method.flow-matching","label":"流匹配"},{"facet":"task","id":"task.singing","label":"歌唱生成"},{"facet":"artifact","id":"artifact.benchmark","label":"基准测试"}]
 paper_digest_primary_method: "流匹配"
 paper_digest_score: 7.0
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "AnyEdit 把带噪编辑拆成干净语义编辑与上下文声学渲染两步，用噪声鲁棒韵律与流匹配渲染保持背景，在真实与模拟带噪集上内容与背景连续性更好，但长音频与瞬态声仍受限。"
 paper_digest_authors: [{"affiliations":["The Chinese University of Hong Kong, Shenzhen"],"name":"Yunjia Zhang"},{"affiliations":["The Chinese University of Hong Kong, Shenzhen"],"name":"Junan Zhang"},{"affiliations":["Institute of Media Technology and Experience Design, Huawei"],"name":"Jing Yang"},{"affiliations":["The Chinese University of Hong Kong, Shenzhen"],"name":"Xueyao Zhang"},{"affiliations":["Institute of Media Technology and Experience Design, Huawei"],"name":"Fan Fan"},{"affiliations":["The Chinese University of Hong Kong, Shenzhen","City University of Macau","Amphion Technology Co., Ltd."],"name":"Zhizheng Wu"}]
 paper_digest_abstract_sha256: "031c0d3abbf102711ebc62eb81d7b51f530778f4fe41e720a632810ea7acfb8b"
-paper_digest_sidecars: {"citation.bib":{"sha256":"faa3b97032735395f1c5de4c55a8c5eee7c482170d29d26d380a9fbd73d36646","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15665/citation.bib"},"citation.json":{"sha256":"332e224edcfcff908a4f380181dd10970d3038ed00eb1a3591d2fd5fa59ef563","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15665/citation.json"},"citation.ris":{"sha256":"e25b413050e42ef5884a12243c85d29225e25d8f13e4da65c9b398348dfaa861","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15665/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"3b081d0777a0b1cdfc6e98d7b260751884880b9e06913c9580c24fee8cecd36e","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15665/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"faa3b97032735395f1c5de4c55a8c5eee7c482170d29d26d380a9fbd73d36646","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15665/citation.bib"},"citation.json":{"sha256":"332e224edcfcff908a4f380181dd10970d3038ed00eb1a3591d2fd5fa59ef563","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15665/citation.json"},"citation.ris":{"sha256":"e25b413050e42ef5884a12243c85d29225e25d8f13e4da65c9b398348dfaa861","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15665/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"8fb01e5fe8bab260a6dc37a46896f8ab72b088b79486e89ce186e38c2f1a2de6","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15665/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "3912f528dc8078049bee639d8640eb3a9c660cac9ce72d51bad76a58c43b5f03"
 paper_digest_api_reader_plan_sha256: "4e3c5a047f1950837848a70bb7bbb8cd05f64550b16195c0b00cb6db66852696"
@@ -52,8 +52,16 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[AnyEdit: A Unified Framework for Speech and Singing Voice Editing with Real-World Environmental Consistency](https://arxiv.org/abs/2610.15665v1)*
 
-> 标签：#语音编辑 | #流匹配 | #歌唱生成 | #基准测试
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[语音编辑](/audio-paper-digest-blog/papers/?concept=task.speech-editing)；[音乐生成](/audio-paper-digest-blog/papers/?concept=task.music-generation) → [歌唱生成](/audio-paper-digest-blog/papers/?concept=task.singing)
+- **研究方法**：[生成模型](/audio-paper-digest-blog/papers/?concept=method.generative) → [流匹配](/audio-paper-digest-blog/papers/?concept=method.flow-matching)
+- **研究产物**：[基准测试](/audio-paper-digest-blog/papers/?concept=artifact.benchmark)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**7.0/10** | 创新 1.5/2 | 技术严谨 1.2/1.5 | 实验充分 1.2/1.5 | 清晰度 0.8/1 | 影响力 1/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 

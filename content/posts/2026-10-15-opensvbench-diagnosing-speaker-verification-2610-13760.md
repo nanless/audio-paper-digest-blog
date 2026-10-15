@@ -20,7 +20,7 @@ paper_digest_primary_task: "说话人验证"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.speaker-verification","label":"说话人验证"},{"facet":"method","id":"method.benchmark-design","label":"基准设计"},{"facet":"artifact","id":"artifact.benchmark","label":"基准测试"},{"facet":"research_focus","id":"research_focus.robustness","label":"鲁棒性"}]
 paper_digest_primary_method: "基准设计"
 paper_digest_score: 7.3
@@ -29,7 +29,7 @@ paper_digest_document_type: "数据集与基准"
 paper_digest_one_sentence: "论文针对单一媒体语音协议无法反映部署泛化的问题，把 16 个公开来源整理为 26 个固定试音对集合与 11 个场景组，用冻结键值和统一打分比较 18 个检查点的场景画像，发现平均误差相近的系统失效模式不同且同场景内也存在来源差异。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Qituan Shangguan"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Bosen Xu"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Shuai Wang"}]
 paper_digest_abstract_sha256: "ed641c1ad2357b426c62f4664cb70cfe730b35faea6fceed756e85afa4046473"
-paper_digest_sidecars: {"citation.bib":{"sha256":"c5a4e15753a6f7a22fbf8c2f902fcb0a924e5c2440cb7c9d28afce4750d8b9c0","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13760/citation.bib"},"citation.json":{"sha256":"a71261224ff1d059c10f8faf3c98ad2ae8c10e9aea89223c5d1f4763b41c5d8c","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13760/citation.json"},"citation.ris":{"sha256":"ecc58f0b851b6e3f715fc672fcc8a8d5cb18263d78548913cec8f7ad8904a81b","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13760/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"0d1afe2b90948993f15783a6d4c7d8f2b8a97ed17f629385099e96b014d42cb4","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13760/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"c5a4e15753a6f7a22fbf8c2f902fcb0a924e5c2440cb7c9d28afce4750d8b9c0","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13760/citation.bib"},"citation.json":{"sha256":"a71261224ff1d059c10f8faf3c98ad2ae8c10e9aea89223c5d1f4763b41c5d8c","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13760/citation.json"},"citation.ris":{"sha256":"ecc58f0b851b6e3f715fc672fcc8a8d5cb18263d78548913cec8f7ad8904a81b","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13760/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"67872cb4aaf99afecb435c3d2b0fb207c9f2c26e311368f95b7dd769f3d53185","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13760/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "5e24901265c622f485bc3dfb750276ddd9b2bb1acbaf180ca9a9a8ef21dedc47"
 paper_digest_api_reader_plan_sha256: "6d7859493d35807be03b100b1d5a827044da26f0ac5358ba87ccf64c6abbe1aa"
@@ -52,8 +52,17 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[OpenSVBench: Diagnosing Speaker Verification Generalization Across Deployment Scenarios](https://arxiv.org/abs/2610.13760v1)*
 
-> 标签：#说话人验证 | #基准设计 | #基准测试 | #鲁棒性
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[说话人验证](/audio-paper-digest-blog/papers/?concept=task.speaker-verification)
+- **研究方法**：[评测协议](/audio-paper-digest-blog/papers/?concept=method.evaluation-protocol) → [基准设计](/audio-paper-digest-blog/papers/?concept=method.benchmark-design)
+- **研究重点**：[鲁棒性](/audio-paper-digest-blog/papers/?concept=research_focus.robustness)
+- **研究产物**：[基准测试](/audio-paper-digest-blog/papers/?concept=artifact.benchmark)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**7.3/10** | 创新 1.5/2 | 技术严谨 1.2/1.5 | 实验充分 1.3/1.5 | 清晰度 0.8/1 | 影响力 1.2/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 

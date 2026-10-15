@@ -20,7 +20,7 @@ paper_digest_primary_task: "语言识别"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.language-identification","label":"语言识别"},{"facet":"method","id":"method.statistical-analysis","label":"统计分析"},{"facet":"setting","id":"setting.code-switching","label":"代码转换"},{"facet":"signal","id":"signal.speech","label":"语音"}]
 paper_digest_primary_method: "统计分析"
 paper_digest_score: 6.8
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "该论文要从整句语音直接判断是否出现语码转换，方法是只用单语语音找出对两种语言反应不同的编码器维度，再把这些维度上的帧级激活聚合成整句判决，在 CS-FLEURS 上 Whisper-small 平均 F1 为 0.798，但结论只在给定评测集和少量标注调参条件下成立，且未验证野外无标注挖掘流程。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Jie Chi"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Zakaria Aldeneh"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Masha Fedzechkina"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Maureen de Seyssel"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Natalie Schluter"}]
 paper_digest_abstract_sha256: "ae7c94b5279e31968e246467bf23d45e86a39898c4b65a1896ef0ac57562c375"
-paper_digest_sidecars: {"citation.bib":{"sha256":"085d4a224504518a9031c5d1181a86b004646787c89efd8bbc829d13fbab0b1b","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18726/citation.bib"},"citation.json":{"sha256":"bfbfca686d921dc8254405e608c25739e9a31bab65371f9aa479e75815e00ce3","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18726/citation.json"},"citation.ris":{"sha256":"c254956b4643cbf23f0a2857cde8711c1f458f8db01364cda67fe621f9059db6","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18726/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"e2653df48d86d600141c091cf8ce1e3bd170bf44abc544ab4b11b35c536a2e9b","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18726/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"085d4a224504518a9031c5d1181a86b004646787c89efd8bbc829d13fbab0b1b","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18726/citation.bib"},"citation.json":{"sha256":"bfbfca686d921dc8254405e608c25739e9a31bab65371f9aa479e75815e00ce3","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18726/citation.json"},"citation.ris":{"sha256":"c254956b4643cbf23f0a2857cde8711c1f458f8db01364cda67fe621f9059db6","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18726/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"9e0ba9ca34d493ec72d2a8ab11ab60193f3de909418ad03dff899bb373e5f01f","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18726/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "84e3d1ab2c92724cfaffc11a427c33e65365042e0c0f4df6857a45478ec34423"
 paper_digest_api_reader_plan_sha256: "868f772a9b2b2d9deae152727fcd08ce7599602ec00951c1d660f51ae6383a49"
@@ -52,8 +52,17 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[Code-Switching Detection via Language-Selective Dimensions in Speech Foundation Models](https://arxiv.org/abs/2610.18726v1)*
 
-> 标签：#语言识别 | #统计分析 | #代码转换 | #语音
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[语言识别](/audio-paper-digest-blog/papers/?concept=task.language-identification)
+- **研究方法**：[统计分析](/audio-paper-digest-blog/papers/?concept=method.statistical-analysis)
+- **研究条件**：[多语言](/audio-paper-digest-blog/papers/?concept=setting.multilingual) → [代码转换](/audio-paper-digest-blog/papers/?concept=setting.code-switching)
+- **信号**：[语音](/audio-paper-digest-blog/papers/?concept=signal.speech)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**6.8/10** | 创新 1.3/2 | 技术严谨 1.2/1.5 | 实验充分 1.2/1.5 | 清晰度 0.8/1 | 影响力 1/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 

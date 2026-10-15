@@ -20,7 +20,7 @@ paper_digest_primary_task: "音频质量评估"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.audio-quality","label":"音频质量评估"},{"facet":"method","id":"method.signal-processing","label":"信号处理"},{"facet":"method","id":"method.formal-analysis","label":"形式化分析"},{"facet":"research_focus","id":"research_focus.theory","label":"理论分析"}]
 paper_digest_primary_method: "信号处理"
 paper_digest_score: 6.0
@@ -29,7 +29,7 @@ paper_digest_document_type: "理论研究"
 paper_digest_one_sentence: "该文用振膜弯曲到波导伸长再到马赫-曾德干涉光电流的解析链，评估光学散粒噪声与背腔热机械噪声决定的压力分辨率和以 10% 总谐波失真定义的过载，在 1 mW 紧凑情形给出 78 dB 信噪比与 124 dB 过载、在 100 mW 测量情形主要改善压力分辨率，但均附带有利假设而不构成对常规话筒的全面优势。"
 paper_digest_authors: [{"affiliations":["机构信息未能从 arXiv PDF 文本可靠映射"],"name":"Xiaoyu Niu"},{"affiliations":["机构信息未能从 arXiv PDF 文本可靠映射"],"name":"Yuqi Meng"},{"affiliations":["机构信息未能从 arXiv PDF 文本可靠映射"],"name":"Zihuan Liu"},{"affiliations":["机构信息未能从 arXiv PDF 文本可靠映射"],"name":"Ehsan Vatankhah"},{"affiliations":["机构信息未能从 arXiv PDF 文本可靠映射"],"name":"Neal Hall"}]
 paper_digest_abstract_sha256: "9bdb4580c446e0e6beb0b3b7652d4640b247eb6c21e771a5eadebf14fcae5186"
-paper_digest_sidecars: {"citation.bib":{"sha256":"96c1fcc74b40d240f789d19368adce7f1229398a245df6f04a5caec394a8b507","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17745/citation.bib"},"citation.json":{"sha256":"e61a2ed6e21a7f677b88b39673303300e31c2cc30e5083eff05dd9b840e5fff6","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17745/citation.json"},"citation.ris":{"sha256":"90d19342eeb1be51019288537147599000f7aca01fb5d9d4f6e6815c426b0430","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17745/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"ea676fa33e6395daad726dbd274e8c2f7841e042e7895e52859721ddd674f6c6","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17745/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"96c1fcc74b40d240f789d19368adce7f1229398a245df6f04a5caec394a8b507","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17745/citation.bib"},"citation.json":{"sha256":"e61a2ed6e21a7f677b88b39673303300e31c2cc30e5083eff05dd9b840e5fff6","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17745/citation.json"},"citation.ris":{"sha256":"90d19342eeb1be51019288537147599000f7aca01fb5d9d4f6e6815c426b0430","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17745/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"e6ff54afda6929a18aaf8cbe5b052a8ed82517e1ab59a4786f1dc866bcb1e571","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17745/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "989af315d01ee121a54781713b62b0198cd749c84c89b55cd811565f01dd2e0f"
 paper_digest_api_reader_plan_sha256: "b38947f823d1fbbaeccc3237c64ac0514d56b3dbe1a7647b849ce019ae927bfd"
@@ -52,8 +52,16 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[Modeling and Design of a Diaphragm-Integrated Photonic Waveguide Microphone](https://arxiv.org/abs/2610.17745v1)*
 
-> 标签：#音频质量评估 | #信号处理 | #形式化分析 | #理论分析
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[音频质量评估](/audio-paper-digest-blog/papers/?concept=task.audio-quality)
+- **研究方法**：[信号处理](/audio-paper-digest-blog/papers/?concept=method.signal-processing)；[形式化分析](/audio-paper-digest-blog/papers/?concept=method.formal-analysis)
+- **研究重点**：[理论分析](/audio-paper-digest-blog/papers/?concept=research_focus.theory)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**6.0/10** | 创新 1/2 | 技术严谨 1/1.5 | 实验充分 0.3/1.5 | 清晰度 0.7/1 | 影响力 0.7/1.5 | 开源 1.5/1.5 | 可复现 0.3/0.5 | 工程/实践 0.5/1.5
 
 

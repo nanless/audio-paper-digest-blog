@@ -20,7 +20,7 @@ paper_digest_primary_task: "音乐生成"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.music-generation","label":"音乐生成"},{"facet":"method","id":"method.transformer","label":"Transformer"},{"facet":"setting","id":"setting.streaming","label":"流式处理"},{"facet":"setting","id":"setting.real-time","label":"实时处理"}]
 paper_digest_primary_method: "Transformer"
 paper_digest_score: 7.3
@@ -29,7 +29,7 @@ paper_digest_document_type: "系统技术报告"
 paper_digest_one_sentence: "LiveSynth 用流式 MIDI 加 CLAP 音色向量逐帧生成连续音频隐变量再经因果 VAE 解码，在 NSynth 和 Slakh 上取得与离线基线可比的音色相似度和更低的频谱距离，代价是音符准确率和制作质量偏低，且实时性结论只在 M3 MacBook Air 上 10 ms 帧长下成立。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Kyungsu Kim"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Yejin Kim"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Kyogu Lee"}]
 paper_digest_abstract_sha256: "e5095a2c04afec9b2a15785c7f93221c0a64eee1ad0176939f486a01014b4e6c"
-paper_digest_sidecars: {"citation.bib":{"sha256":"a7dbd1dcbf56b78a5f8cd800081f5af4bb75f82211e19eb5bfc84888ed994276","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13054/citation.bib"},"citation.json":{"sha256":"2b07e122840a8799c20adc420fabc6dd6bde2b2388fe7684dbc44995b7f701bf","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13054/citation.json"},"citation.ris":{"sha256":"c71fdf59ceb2e2c42447b77711aba1f2e02f3fc6e7d8e0cd3e6995ceabe44054","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13054/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"fd56cab6e6652e334dfd825690aa3f299e128610a6425b0974750ce64f88a574","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13054/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"a7dbd1dcbf56b78a5f8cd800081f5af4bb75f82211e19eb5bfc84888ed994276","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13054/citation.bib"},"citation.json":{"sha256":"2b07e122840a8799c20adc420fabc6dd6bde2b2388fe7684dbc44995b7f701bf","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13054/citation.json"},"citation.ris":{"sha256":"c71fdf59ceb2e2c42447b77711aba1f2e02f3fc6e7d8e0cd3e6995ceabe44054","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13054/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"78eb276cef4433703adfc24834fb55681fed318c3071d17885dfda96b02c05f0","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13054/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "c4dfba6b84ed413af57e997837722c767198a5552c917b6c846d7cad2dd8eea8"
 paper_digest_api_reader_plan_sha256: "ff7cbb9c86784d2b4658261bfb5f217ff87db9dd6d9610d51be10382ae5afa21"
@@ -52,8 +52,16 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[LiveSynth: A Streaming Neural Synthesizer for Instrument Cloning and Text-to-Instrument](https://arxiv.org/abs/2610.13054v1)*
 
-> 标签：#音乐生成 | #Transformer | #流式处理 | #实时处理
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[音乐生成](/audio-paper-digest-blog/papers/?concept=task.music-generation)
+- **研究方法**：[Transformer](/audio-paper-digest-blog/papers/?concept=method.transformer)
+- **研究条件**：[流式处理](/audio-paper-digest-blog/papers/?concept=setting.streaming)；[实时处理](/audio-paper-digest-blog/papers/?concept=setting.real-time)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**7.3/10** | 创新 1.2/2 | 技术严谨 1/1.5 | 实验充分 1/1.5 | 清晰度 0.8/1 | 影响力 0.8/1.5 | 开源 1/1.5 | 可复现 0.3/0.5 | 工程/实践 1.2/1.5
 
 

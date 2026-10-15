@@ -20,7 +20,7 @@ paper_digest_primary_task: "音频分类"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.audio-classification","label":"音频分类"},{"facet":"method","id":"method.weak-supervised","label":"弱监督学习"},{"facet":"artifact","id":"artifact.dataset","label":"数据集"},{"facet":"research_focus","id":"research_focus.interpretability","label":"可解释性"}]
 paper_digest_primary_method: "弱监督学习"
 paper_digest_score: 6.3
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "RespFocus 针对只有周期类别而无事件标注的呼吸音分类，用共享异常证据引导的双分支多示例学习分别汇聚短促爆裂音峰值与持续哮鸣多点响应并组合成四类判决，在 ICBHI 与 PedResp2026 上取得 69.55% 与 72.91% 的 Score，代价是依赖已给周期边界与双预训练特征且儿科新队列规模仍有限。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Yi Tian"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Xiaohuan Chen"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Yufei tang"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Xinyu Lin"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Hongliang Li"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Chengbin Hou"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Degen Huang"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Rongshan Yu"}]
 paper_digest_abstract_sha256: "d8b0ed1ee27dcdbbcda611e6168edf53132b7181e9a8220c7c24c2d84459330a"
-paper_digest_sidecars: {"citation.bib":{"sha256":"4b0d96a26d676fb24cf198d8434f0c1c972b6b169a3542d1d8cfd5c4ad695592","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15702/citation.bib"},"citation.json":{"sha256":"1bd869e3af826b0cf5c0c03e8c125002421821e8f6fd354908c90d5a7c4fe1a9","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15702/citation.json"},"citation.ris":{"sha256":"f7689cf95d448d9322fbf0c771fe2777640c622b4f7edc58b15ef70847156b64","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15702/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"a25deaa8c940a828354ff1c3dded7ce25884d039f06eb82b864e498d6cbfb69f","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15702/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"4b0d96a26d676fb24cf198d8434f0c1c972b6b169a3542d1d8cfd5c4ad695592","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15702/citation.bib"},"citation.json":{"sha256":"1bd869e3af826b0cf5c0c03e8c125002421821e8f6fd354908c90d5a7c4fe1a9","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15702/citation.json"},"citation.ris":{"sha256":"f7689cf95d448d9322fbf0c771fe2777640c622b4f7edc58b15ef70847156b64","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15702/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"1fc3cb12106dc3536f5a31eabe445f594932f444b2462fb7767b6c9c65cb0ae8","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15702/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "79f9940c9fd8c1625ef7f5f91d7fc11ebbd3f278c527144ea77af70f40a29591"
 paper_digest_api_reader_plan_sha256: "092c07f6979946e1942cf5b32e294e8b123dde6b1db31ae5dfce60cd1a6c102a"
@@ -52,8 +52,17 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[RespFocus: Learning Temporal Evidence for Weakly Supervised Respiratory Sound Classification](https://arxiv.org/abs/2610.15702v1)*
 
-> 标签：#音频分类 | #弱监督学习 | #数据集 | #可解释性
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[音频分类](/audio-paper-digest-blog/papers/?concept=task.audio-classification)
+- **研究方法**：[弱监督学习](/audio-paper-digest-blog/papers/?concept=method.weak-supervised)
+- **研究重点**：[可解释性](/audio-paper-digest-blog/papers/?concept=research_focus.interpretability)
+- **研究产物**：[数据集](/audio-paper-digest-blog/papers/?concept=artifact.dataset)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**6.3/10** | 创新 1.2/2 | 技术严谨 1/1.5 | 实验充分 1.1/1.5 | 清晰度 0.7/1 | 影响力 0.5/1.5 | 开源 1/1.5 | 可复现 0.3/0.5 | 工程/实践 0.5/1.5
 
 

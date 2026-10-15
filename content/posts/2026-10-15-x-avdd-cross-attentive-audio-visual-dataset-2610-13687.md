@@ -20,7 +20,7 @@ paper_digest_primary_task: "音视频理解"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.av-understanding","label":"音视频理解"},{"facet":"task","id":"task.audio-classification","label":"音频分类"},{"facet":"method","id":"method.multimodal-learning","label":"多模态学习"},{"facet":"method","id":"method.attention","label":"注意力机制"}]
 paper_digest_primary_method: "多模态学习"
 paper_digest_score: 6.2
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "X-AVDD 针对配对音频-视觉数据集蒸馏，用先训练带双向交叉注意力的教师模型再按类匹配交叉注意力后嵌入的方法合成每类少量样本，在四个音频-视觉事件识别基准上提高小数据训练精度，并把合成总耗时从 10 小时降到 1.3 小时。"
 paper_digest_authors: [{"affiliations":["Department of Artificial Intelligence, Indian Institute of Technology Hyderabad"],"name":"Saumyaranjan Mohanty"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Aravind Reddy"},{"affiliations":["Department of Artificial Intelligence, Indian Institute of Technology Hyderabad"],"name":"Konda Reddy Mopuri"}]
 paper_digest_abstract_sha256: "2057d8086126aa066c4e4b14f0469a4028d31be2bef023496e221064cbe49544"
-paper_digest_sidecars: {"citation.bib":{"sha256":"c3f45b7f2091ecbc7898490d94cab6602a7b72b225fddd1bd13623cbf1e1b7d4","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13687/citation.bib"},"citation.json":{"sha256":"859b2782304220698d3cfe3a1e5b0a1be851be168d3e15541f35fb5dde9251b3","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13687/citation.json"},"citation.ris":{"sha256":"14791ad2bb3d8949e647f3a235fa996e19268bf269af7cfee3b13406edc3d8a1","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13687/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"1e80779224814a43f30c307fdaff12de293953abd29f914eb7b19f389d122844","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13687/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"c3f45b7f2091ecbc7898490d94cab6602a7b72b225fddd1bd13623cbf1e1b7d4","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13687/citation.bib"},"citation.json":{"sha256":"859b2782304220698d3cfe3a1e5b0a1be851be168d3e15541f35fb5dde9251b3","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13687/citation.json"},"citation.ris":{"sha256":"14791ad2bb3d8949e647f3a235fa996e19268bf269af7cfee3b13406edc3d8a1","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13687/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"beac3474103351071df00646fc83059b8fbfd0c18de77dd83085bd443dc7e4a1","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13687/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "fd0d6e6c809dc66c1a26b4f9322acd73b13cc26e5f905f07d0d9fd2bbc78457f"
 paper_digest_api_reader_plan_sha256: "0daddfdc352326d6a808141e01ed7ecffe41c6849f67d21a48d9b9ecd17ffafe"
@@ -52,8 +52,15 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[X-AVDD: Cross-Attentive Audio-Visual Dataset Distillation](https://arxiv.org/abs/2610.13687v1)*
 
-> 标签：#音视频理解 | #音频分类 | #多模态学习 | #注意力机制
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[音视频理解](/audio-paper-digest-blog/papers/?concept=task.av-understanding)；[音频分类](/audio-paper-digest-blog/papers/?concept=task.audio-classification)
+- **研究方法**：[多模态学习](/audio-paper-digest-blog/papers/?concept=method.multimodal-learning)；[注意力机制](/audio-paper-digest-blog/papers/?concept=method.attention)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**6.2/10** | 创新 1.2/2 | 技术严谨 1/1.5 | 实验充分 1.2/1.5 | 清晰度 0.7/1 | 影响力 0.8/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 

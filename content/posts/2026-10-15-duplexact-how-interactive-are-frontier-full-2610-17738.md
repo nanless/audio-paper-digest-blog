@@ -20,7 +20,7 @@ paper_digest_primary_task: "全双工语音交互"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.full-duplex","label":"全双工语音交互"},{"facet":"method","id":"method.benchmark-design","label":"基准设计"},{"facet":"artifact","id":"artifact.benchmark","label":"基准测试"},{"facet":"signal","id":"signal.speech","label":"语音"}]
 paper_digest_primary_method: "基准设计"
 paper_digest_score: 6.8
@@ -29,7 +29,7 @@ paper_digest_document_type: "数据集与基准"
 paper_digest_one_sentence: "DuplexAct 把边听边说的交互拆成 8 个动作和 24 种条件，用立即执行与后续跟进两段成功率评价 14 个模型，发现能力分布不均且后续跟进普遍偏弱。"
 paper_digest_authors: [{"affiliations":["The University of Melbourne","University of Birmingham"],"name":"Jiaheng Dong"},{"affiliations":["Wuhan University"],"name":"Shihong Tan"},{"affiliations":["Wuhan University"],"name":"Gongping Huang"},{"affiliations":["The University of Melbourne"],"name":"Jean Honorio"},{"affiliations":["University of Birmingham"],"name":"Abhirup Ghosh"},{"affiliations":["The University of Melbourne"],"name":"Ting Dang"}]
 paper_digest_abstract_sha256: "e8e7801febdba63c82ab83993e30ed7b3e09c3d4e5309ff7a80e84ce1edd3bc4"
-paper_digest_sidecars: {"citation.bib":{"sha256":"a02cc6768cbb62e84a57543f5d3b034286a4f575eff6521c86c1a596a80ea16d","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17738/citation.bib"},"citation.json":{"sha256":"57e037ecf1e9ee2edc544de63d81bc281b21b63acca687a97f40c61a38050166","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17738/citation.json"},"citation.ris":{"sha256":"b28854d22d2e0b6e1fb85df79ad4e0568f4aa3dfa502908bda272df964ae451e","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17738/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"cd5519d0f11a7aa5ee610349257ed306244873f039966ed3679dcb680c29285d","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17738/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"a02cc6768cbb62e84a57543f5d3b034286a4f575eff6521c86c1a596a80ea16d","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17738/citation.bib"},"citation.json":{"sha256":"57e037ecf1e9ee2edc544de63d81bc281b21b63acca687a97f40c61a38050166","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17738/citation.json"},"citation.ris":{"sha256":"b28854d22d2e0b6e1fb85df79ad4e0568f4aa3dfa502908bda272df964ae451e","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17738/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"28387747654b2eed2eb258259d3aaa344d4a419efbf0206fde7c220670172331","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17738/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "113e17fbfe14dc6fa192122ea446f781376b5cdef594917ded4d3306b9349c8a"
 paper_digest_api_reader_plan_sha256: "413c80cc9afa9992bab91bb61f53e1c8f3a170ae61374cea2d45844ce503b1a9"
@@ -52,8 +52,17 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[DuplexAct: How Interactive Are Frontier Full-Duplex Spoken Language Models?](https://arxiv.org/abs/2610.17738v1)*
 
-> 标签：#全双工语音交互 | #基准设计 | #基准测试 | #语音
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[语音交互](/audio-paper-digest-blog/papers/?concept=task.speech-interaction) → [全双工语音交互](/audio-paper-digest-blog/papers/?concept=task.full-duplex)
+- **研究方法**：[评测协议](/audio-paper-digest-blog/papers/?concept=method.evaluation-protocol) → [基准设计](/audio-paper-digest-blog/papers/?concept=method.benchmark-design)
+- **信号**：[语音](/audio-paper-digest-blog/papers/?concept=signal.speech)
+- **研究产物**：[基准测试](/audio-paper-digest-blog/papers/?concept=artifact.benchmark)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**6.8/10** | 创新 1.5/2 | 技术严谨 1/1.5 | 实验充分 1.2/1.5 | 清晰度 0.8/1 | 影响力 1/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 

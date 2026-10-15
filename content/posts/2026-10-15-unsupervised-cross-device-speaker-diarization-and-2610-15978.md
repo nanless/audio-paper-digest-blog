@@ -20,7 +20,7 @@ paper_digest_primary_task: "说话人分离标注"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.diarization","label":"说话人分离标注"},{"facet":"method","id":"method.unsupervised","label":"无监督学习"},{"facet":"signal","id":"signal.speech","label":"语音"},{"facet":"application","id":"application.medical","label":"医疗音频"}]
 paper_digest_primary_method: "无监督学习"
 paper_digest_score: 6.0
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "该文研究门诊多房间录音中无访客注册时的访客跨房链接，用逐设备中心化加并发与房间类型约束和员工语音校准阈值做聚类，在 VOiCES 仿真日上对 11 种嵌入全面超越无标签基线，但高度依赖跨房重复语音去除且单访患者仍易误合并。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Suhas BN"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Nikitha K"}]
 paper_digest_abstract_sha256: "138d3280609e96c13aee36e78153a43e818823b6e5229bcef777ecaf83fe2659"
-paper_digest_sidecars: {"citation.bib":{"sha256":"7e3d217d40cd887374c4f427da56605e312b428a3a69ac90f30893316017be92","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15978/citation.bib"},"citation.json":{"sha256":"379ff38fda7a5bab9d64904a75234a329c6cc5c734aa9b17805a6e938fedf5d0","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15978/citation.json"},"citation.ris":{"sha256":"533e8cce6c0c9ed04e7f6b4bdd5a81ed3b65850c6cad82290032a50a65aca9b4","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15978/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"62074ab0adae2d2df7c0ce2f151f53c79fdf175b61e2bb9e000556be0a4bc643","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15978/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"7e3d217d40cd887374c4f427da56605e312b428a3a69ac90f30893316017be92","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15978/citation.bib"},"citation.json":{"sha256":"379ff38fda7a5bab9d64904a75234a329c6cc5c734aa9b17805a6e938fedf5d0","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15978/citation.json"},"citation.ris":{"sha256":"533e8cce6c0c9ed04e7f6b4bdd5a81ed3b65850c6cad82290032a50a65aca9b4","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15978/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"5ccea6953c9a2d4481c5a0bcf3a038dd980e46e769947c2dbd9850c511df351a","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15978/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "4b23e5f25a5a32b7ac277308115868fc88a8ebee4ea1b4c9e15cd498b1fbd5b8"
 paper_digest_api_reader_plan_sha256: "873de2eed880f8e8694739652560c9ef3ffe959f9c47e2f2ba06d9249ab79a62"
@@ -52,8 +52,17 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[Unsupervised Cross-device Speaker Diarization And Linking Through Spatiotemporal Structure](https://arxiv.org/abs/2610.15978v1)*
 
-> 标签：#说话人分离标注 | #无监督学习 | #语音 | #医疗音频
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[说话人分离标注](/audio-paper-digest-blog/papers/?concept=task.diarization)
+- **研究方法**：[无监督学习](/audio-paper-digest-blog/papers/?concept=method.unsupervised)
+- **信号**：[语音](/audio-paper-digest-blog/papers/?concept=signal.speech)
+- **应用**：[医疗音频](/audio-paper-digest-blog/papers/?concept=application.medical)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**6.0/10** | 创新 1.2/2 | 技术严谨 1/1.5 | 实验充分 1.2/1.5 | 清晰度 0.8/1 | 影响力 0.5/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 

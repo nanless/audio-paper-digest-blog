@@ -20,7 +20,7 @@ paper_digest_primary_task: "语音编码"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.speech-coding","label":"语音编码"},{"facet":"method","id":"method.neural-codec","label":"神经编解码与离散单元"},{"facet":"method","id":"method.distillation","label":"知识蒸馏"},{"facet":"method","id":"method.vae","label":"变分自编码器"}]
 paper_digest_primary_method: "神经编解码与离散单元"
 paper_digest_score: 7.3
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "针对离散语音编码易丢声学细节而连续隐变量难做离散建模的问题，SemiCodec 用同步的离散 token 加连续隐变量做波形重建，并用先保留后接地两阶段训练缓解连续通路捷径，在 LibriSpeech test-other 上以 25 帧每秒实现 PESQ-WB 4.03 与 WER 5.02%，代价是仍需保留连续通路和两阶段训练。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Kecan Mao"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Nan Xu"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Zhaoyang Meng"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Zhengyao Ma"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Yingming Gao"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Yi Zhao"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Ya Li"}]
 paper_digest_abstract_sha256: "1e0d6ecd07e8862f33a24906e3d0a98b352587528adff543b6bb34377e314136"
-paper_digest_sidecars: {"citation.bib":{"sha256":"fb32ca95d973ca6bfc386dbc283b792371102f003fa9ec63e6cf2704134e54c5","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14834/citation.bib"},"citation.json":{"sha256":"1c4e554f2fe5df5b953e657fc8bb1371ce2f250fd39cd0cdea62e30de83d5169","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14834/citation.json"},"citation.ris":{"sha256":"59669eebdcba859f48beb869a5f64183084045eb628707028669ec32a470f40d","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14834/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"731849a8a6915c6cabbe32b43c12f9e1788e29ecc34d60b16414a5c45a5112c4","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14834/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"fb32ca95d973ca6bfc386dbc283b792371102f003fa9ec63e6cf2704134e54c5","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14834/citation.bib"},"citation.json":{"sha256":"1c4e554f2fe5df5b953e657fc8bb1371ce2f250fd39cd0cdea62e30de83d5169","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14834/citation.json"},"citation.ris":{"sha256":"59669eebdcba859f48beb869a5f64183084045eb628707028669ec32a470f40d","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14834/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"0c3152924154964b01bd679edb1158d6ddae044320429e5c29a60bcc54f261fd","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14834/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "d9360789c56fb3a60847f72b5ca4b34a6b4c945d389b0bc271bfdc92974d80e3"
 paper_digest_api_reader_plan_sha256: "7c57050a3b9e677d7501a1e9e34f45d675f734299a1a89b6a513d757a6da0918"
@@ -52,8 +52,15 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[SemiCodec: Bridging Speech Tokenization and High-fidelity Reconstruction with Semi-discrete Representations](https://arxiv.org/abs/2610.14834v1)*
 
-> 标签：#语音编码 | #神经编解码与离散单元 | #知识蒸馏 | #变分自编码器
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[音频编码](/audio-paper-digest-blog/papers/?concept=task.audio-coding) → [语音编码](/audio-paper-digest-blog/papers/?concept=task.speech-coding)
+- **研究方法**：[向量量化](/audio-paper-digest-blog/papers/?concept=method.vector-quantization) → [神经编解码与离散单元](/audio-paper-digest-blog/papers/?concept=method.neural-codec)；[知识蒸馏](/audio-paper-digest-blog/papers/?concept=method.distillation)；[生成模型](/audio-paper-digest-blog/papers/?concept=method.generative) → [变分自编码器](/audio-paper-digest-blog/papers/?concept=method.vae)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**7.3/10** | 创新 1.5/2 | 技术严谨 1.2/1.5 | 实验充分 1.3/1.5 | 清晰度 0.8/1 | 影响力 1/1.5 | 开源 0.2/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 

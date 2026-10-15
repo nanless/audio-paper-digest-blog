@@ -20,7 +20,7 @@ paper_digest_primary_task: "音频分离"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.audio-separation","label":"音频分离"},{"facet":"task","id":"task.audio-classification","label":"音频分类"},{"facet":"method","id":"method.cnn","label":"CNN"},{"facet":"research_focus","id":"research_focus.efficiency","label":"高效推理"}]
 paper_digest_primary_method: "CNN"
 paper_digest_score: 5.9
@@ -29,7 +29,7 @@ paper_digest_document_type: "系统技术报告"
 paper_digest_one_sentence: "该文把空间语义分割拆成先标注后提取的两步，研究用卷积标注器与 SuDoRMRF 分离器替换大基线后在混合准确率与类感知信干比提升上的得失，并给出参数量与计算量的代价。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Mayank Mishra"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Paul Magron"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Romain Serizel"}]
 paper_digest_abstract_sha256: "d5fe778051fe7d84145bb8df4904fd333c10a9790c8f965baaa1c7c9a1607d43"
-paper_digest_sidecars: {"citation.bib":{"sha256":"52cc9105581e546d0087518620aeeded2d4e87c3a74e3399454c211a61eee9ed","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-12693/citation.bib"},"citation.json":{"sha256":"ad0c68cc762df32733505e9e971574f5ace6f17ddb33a718d05d4cd689a6dde3","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-12693/citation.json"},"citation.ris":{"sha256":"b7bc7dbab849f7509c8e5f87e78def70df0af354618365f16437099acd8d4edb","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-12693/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"450684c3960a45378aeb4b757668d2fd9972457e1c1dff9ffa970bc9af4bfbbd","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-12693/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"52cc9105581e546d0087518620aeeded2d4e87c3a74e3399454c211a61eee9ed","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-12693/citation.bib"},"citation.json":{"sha256":"ad0c68cc762df32733505e9e971574f5ace6f17ddb33a718d05d4cd689a6dde3","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-12693/citation.json"},"citation.ris":{"sha256":"b7bc7dbab849f7509c8e5f87e78def70df0af354618365f16437099acd8d4edb","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-12693/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"53810b448b24a21f65aac18cd5d7d593e6131e8015cfba908502334cea79f8f2","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-12693/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "16d1e947a9f5e3f75289f55f27a1b006a74f4e3e64ad85b8c35b67dbf5b899f4"
 paper_digest_api_reader_plan_sha256: "9215831a45c20bfe0d45ee6749f581e01049d47d13eee6cae5c43fa030b86403"
@@ -52,8 +52,16 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[Lightweight Systems for Spatial Semantic Segmentation of Sound Scenes](https://arxiv.org/abs/2610.12693v1)*
 
-> 标签：#音频分离 | #音频分类 | #CNN | #高效推理
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[音频分离](/audio-paper-digest-blog/papers/?concept=task.audio-separation)；[音频分类](/audio-paper-digest-blog/papers/?concept=task.audio-classification)
+- **研究方法**：[CNN](/audio-paper-digest-blog/papers/?concept=method.cnn)
+- **研究重点**：[高效推理](/audio-paper-digest-blog/papers/?concept=research_focus.efficiency)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**5.9/10** | 创新 1/2 | 技术严谨 1/1.5 | 实验充分 1/1.5 | 清晰度 0.8/1 | 影响力 0.8/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 

@@ -20,7 +20,7 @@ paper_digest_primary_task: "音视频生成"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.av-generation","label":"音视频生成"},{"facet":"method","id":"method.distillation","label":"知识蒸馏"},{"facet":"method","id":"method.diffusion","label":"扩散模型"},{"facet":"signal","id":"signal.audiovisual","label":"音视频"},{"facet":"research_focus","id":"research_focus.efficiency","label":"高效推理"}]
 paper_digest_primary_method: "知识蒸馏"
 paper_digest_score: 6.6
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "该文研究把多步扩散与流模型压缩到 4 次函数求值的问题，提出只做在轨速度回归并加上训练期残差代理与弱预测排斥的 SMD 框架，在图像、编辑、3D、视频与 33B 音频视频联合模型上验证了对齐与质量表现，但结论依赖同网格评测与原文报告的基线配置。"
 paper_digest_authors: [{"affiliations":["机构信息未能从 arXiv PDF 文本可靠映射"],"name":"Jiawei Zhang"},{"affiliations":["机构信息未能从 arXiv PDF 文本可靠映射"],"name":"Ziyu Wan"},{"affiliations":["机构信息未能从 arXiv PDF 文本可靠映射"],"name":"Nanye Ma"},{"affiliations":["机构信息未能从 arXiv PDF 文本可靠映射"],"name":"Long Zhao"},{"affiliations":["机构信息未能从 arXiv PDF 文本可靠映射"],"name":"Dong Chen"},{"affiliations":["机构信息未能从 arXiv PDF 文本可靠映射"],"name":"Hongyu Liu"},{"affiliations":["机构信息未能从 arXiv PDF 文本可靠映射"],"name":"Qifeng Chen"},{"affiliations":["机构信息未能从 arXiv PDF 文本可靠映射"],"name":"Dongdong Chen"}]
 paper_digest_abstract_sha256: "2e9beb3346bcbdc4e312f2a06850edfd50fce7ba562dbd0476eff8bfe2b1d50e"
-paper_digest_sidecars: {"citation.bib":{"sha256":"91dfa8b46473fe7b9fd23eedda281b9760ce23f46d870ba5aaba030bf455dc58","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18472/citation.bib"},"citation.json":{"sha256":"9f68a9d8d05dae0a3392ab0cdda048ec79a29f5b8cbf84c0845b8c8ace94bdf8","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18472/citation.json"},"citation.ris":{"sha256":"eca471a6a58ae1f4725487ce4901aee7b9cd690a65a6cfdb38e4474ac02ce747","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18472/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"4169b0a62925860374421dde7666f1a23724eee402b7c15bda0945ad7bb10c87","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18472/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"91dfa8b46473fe7b9fd23eedda281b9760ce23f46d870ba5aaba030bf455dc58","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18472/citation.bib"},"citation.json":{"sha256":"9f68a9d8d05dae0a3392ab0cdda048ec79a29f5b8cbf84c0845b8c8ace94bdf8","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18472/citation.json"},"citation.ris":{"sha256":"eca471a6a58ae1f4725487ce4901aee7b9cd690a65a6cfdb38e4474ac02ce747","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18472/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"70c7bb8591ee74bf9689904f79ab200f210c6982830526f47231e9817949e7a8","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18472/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "42a132bc5aa8332b5e1f2543710fc7c99bf29a34befb4330133d6412ab893484"
 paper_digest_api_reader_plan_sha256: "c7fbb1b9b8249d62420ad52bd655c1cabe4b4db568681b8d0ec91540f659347b"
@@ -52,8 +52,17 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[Simplifying and Improving On-Policy Distillation for Few-Step Diffusion](https://arxiv.org/abs/2610.18472v1)*
 
-> 标签：#音视频生成 | #知识蒸馏 | #扩散模型 | #音视频 | #高效推理
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[音视频生成](/audio-paper-digest-blog/papers/?concept=task.av-generation)
+- **研究方法**：[知识蒸馏](/audio-paper-digest-blog/papers/?concept=method.distillation)；[生成模型](/audio-paper-digest-blog/papers/?concept=method.generative) → [扩散模型](/audio-paper-digest-blog/papers/?concept=method.diffusion)
+- **信号**：[音视频](/audio-paper-digest-blog/papers/?concept=signal.audiovisual)
+- **研究重点**：[高效推理](/audio-paper-digest-blog/papers/?concept=research_focus.efficiency)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**6.6/10** | 创新 1.5/2 | 技术严谨 1.2/1.5 | 实验充分 1.3/1.5 | 清晰度 0.8/1 | 影响力 0.5/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 

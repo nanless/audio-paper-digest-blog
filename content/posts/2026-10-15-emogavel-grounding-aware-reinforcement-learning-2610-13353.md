@@ -20,7 +20,7 @@ paper_digest_primary_task: "语音情感识别"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.emotion-recognition","label":"语音情感识别"},{"facet":"method","id":"method.reinforcement","label":"强化学习"},{"facet":"method","id":"method.preference-optimization","label":"偏好优化"},{"facet":"signal","id":"signal.audiovisual","label":"音视频"}]
 paper_digest_primary_method: "强化学习"
 paper_digest_score: 5.9
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "针对开放式情感描述偏好只给二选一标签而缺少错误定位监督的问题，EmoGavel 用受控错误构造的可验证目标先做接地监督微调再做偏好门控的组相对强化学习，在 EmoPrefer-Data 上自然偏好达到 79.75% 加权 F1、四类受控错误平均 88.20% 并保持 77.27% 接地总分，但缺失证据恢复略有下降且结论适用范围限于四种预设错误。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Zilong Huang"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Kong Aik Lee"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Zezhong Jin"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Man-Wai Mak"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Tatsuya Kawahara"}]
 paper_digest_abstract_sha256: "3c867e8cab4a500e092d524e17d78219db46ffb5007b5b3fbde11787059d912d"
-paper_digest_sidecars: {"citation.bib":{"sha256":"5646aa7f17c2025c6c8dc0335017c031c37908f4bae12d10ccac8962783affcc","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13353/citation.bib"},"citation.json":{"sha256":"4667ee5e1c9f975013bc2f11780e6c5a719ba07a77ad8aae8b053b56adf89f47","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13353/citation.json"},"citation.ris":{"sha256":"8666134b34f622a45398938fb1bd529f6d901f4f52a55c6ce280898ad490a373","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13353/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"fc79d27de338b84ab74098c756d2231af88cec40ac24ae0cb73be2e8a83f60d4","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13353/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"5646aa7f17c2025c6c8dc0335017c031c37908f4bae12d10ccac8962783affcc","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13353/citation.bib"},"citation.json":{"sha256":"4667ee5e1c9f975013bc2f11780e6c5a719ba07a77ad8aae8b053b56adf89f47","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13353/citation.json"},"citation.ris":{"sha256":"8666134b34f622a45398938fb1bd529f6d901f4f52a55c6ce280898ad490a373","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13353/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"7a45c9c2b9f8e59978aabab2d594e823ff1d1f12ab1cdd4847da3693e64c1b5a","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13353/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "98a03914432bd6defa398703977669c9cbe61825e4a4bc50ce518bc7269d31b0"
 paper_digest_api_reader_plan_sha256: "d2a4d5083f7e1cf5cf7584f6932cdaac8c8ab0f2757238cd3ecabf5e4fd090a2"
@@ -52,8 +52,16 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[EmoGavel: Grounding-Aware Reinforcement Learning with Verifiable Rewards for Multimodal Emotion Preference Learning](https://arxiv.org/abs/2610.13353v1)*
 
-> 标签：#语音情感识别 | #强化学习 | #偏好优化 | #音视频
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[语音情感识别](/audio-paper-digest-blog/papers/?concept=task.emotion-recognition)
+- **研究方法**：[强化学习](/audio-paper-digest-blog/papers/?concept=method.reinforcement)；[偏好优化](/audio-paper-digest-blog/papers/?concept=method.preference-optimization)
+- **信号**：[音视频](/audio-paper-digest-blog/papers/?concept=signal.audiovisual)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**5.9/10** | 创新 1.2/2 | 技术严谨 1/1.5 | 实验充分 1.1/1.5 | 清晰度 0.8/1 | 影响力 0.7/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 0.8/1.5
 
 

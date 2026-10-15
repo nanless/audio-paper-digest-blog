@@ -9,8 +9,8 @@
     "documentType": "方法研究",
     "primaryMethod": "向量量化",
     "primaryTask": "音频编码",
-    "rankBucket": "前25%",
-    "score": 8.2,
+    "rankBucket": "前50%",
+    "score": 7.0,
     "tagMetadata": {
       "concepts": [
         {
@@ -34,7 +34,7 @@
       "primaryMethodId": "method.vector-quantization",
       "primaryTask": "音频编码",
       "primaryTaskId": "task.audio-coding",
-      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
       "registryVersion": "paper-tag-catalog-v2",
       "selectionContract": "paper-tag-selection-v2"
     }
@@ -42,33 +42,33 @@
   "authors": [
     {
       "affiliations": [
-        "机构信息未在 arXiv HTML 中可靠披露"
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
       ],
       "name": "Darius Pétermann"
     },
     {
       "affiliations": [
-        "机构信息未在 arXiv HTML 中可靠披露"
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
       ],
       "name": "Wootaek Lim"
     },
     {
       "affiliations": [
-        "机构信息未在 arXiv HTML 中可靠披露"
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
       ],
       "name": "Seungkwon Beack"
     },
     {
       "affiliations": [
-        "机构信息未在 arXiv HTML 中可靠披露"
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
       ],
       "name": "Minje Kim"
     }
   ],
   "contract": "paper-research-context-v2",
-  "oneSentenceThesis": "HE-NAC 针对 32 kHz 音乐在约 18 到 23 kbps 下高频易丢失的问题，用核心频段打底加中高频段残差补偿的三路残差向量量化与分阶段训练，在听感测试中超过同码率 DAC 与 24 kbps 商用 HE-AAC，代价是解码头更多与高频客观波形指标仍不高。",
+  "oneSentenceThesis": "HE-NAC 针对音乐高频易被粗量化丢掉的问题，用核心带、中频带、高频带三路残差量化和分阶段冻结训练补足盲上采样的误差，在约 23 kbps 有效码率下主观听感超过同码率 DAC 和 24 kbps 商用 HE-AAC，代价是解码器更大且高频分支增加推理计算量。",
   "originalTitle": "HE-NAC: High-Efficiency Neural Audio Coding via Hierarchical and Residual Multi-Band Quantization",
   "pdfUrl": "https://arxiv.org/pdf/2610.15243v1.pdf",
-  "readerTitle": "HE-NAC：用分频段残差量化保住音乐高频细节",
+  "readerTitle": "HE-NAC：把码率按频带分配的高保真神经音频编码",
   "schemaVersion": 2
 }

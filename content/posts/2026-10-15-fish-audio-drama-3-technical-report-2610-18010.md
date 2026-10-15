@@ -20,7 +20,7 @@ paper_digest_primary_task: "文本到语音"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.tts","label":"文本到语音"},{"facet":"method","id":"method.preference-optimization","label":"偏好优化"},{"facet":"task","id":"task.voice-cloning","label":"语音克隆"},{"facet":"task","id":"task.speech-editing","label":"语音编辑"},{"facet":"setting","id":"setting.streaming","label":"流式处理"}]
 paper_digest_primary_method: "偏好优化"
 paper_digest_score: 7.4
@@ -29,7 +29,7 @@ paper_digest_document_type: "模型报告"
 paper_digest_one_sentence: "Drama 3 用混合线性注意力骨干加逐码本预测解码器把配音、修订、拼场和补录写成同一种对话，用单一人类偏好奖励做强化学习，在多语克隆和按需修改上测得可复述的提升，代价是更大的总参数和更复杂的推理工程。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Dawei Han"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Shidong Li"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Shijia Liao"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Jiahua Liu"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Songting Liu"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Qingzheng Wang"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Yuxuan Wang"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Xin Chen"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Yifan Cheng"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Tianyu Li"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Gangin Park"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Xuehao Yang"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Chang Zeng"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Haoyang Zhang"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Ruoyi Zhang"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Xiangyu Zhang"}]
 paper_digest_abstract_sha256: "fc6cd2604b5b093731e104da4126f4c24638f281659883956ee83bdb51c3fe47"
-paper_digest_sidecars: {"citation.bib":{"sha256":"845a946625d3b022d067a88f0102b0acfbfa8cf0d466e119c85fff9b97e8dcbb","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18010/citation.bib"},"citation.json":{"sha256":"5da832cd9de7ad552b30fdbbd01acc3394131e08df769bbe489e7d6171e0282c","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18010/citation.json"},"citation.ris":{"sha256":"7baa735e2bf7b5c9c885f84cbfc5c1e23533a4f5103bd472b1b9e41329634772","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18010/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"5fb9a46448b05aa691ac6c4937c57a38fb6e4b0104cccebf15adbe40845e8f39","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18010/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"845a946625d3b022d067a88f0102b0acfbfa8cf0d466e119c85fff9b97e8dcbb","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18010/citation.bib"},"citation.json":{"sha256":"5da832cd9de7ad552b30fdbbd01acc3394131e08df769bbe489e7d6171e0282c","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18010/citation.json"},"citation.ris":{"sha256":"7baa735e2bf7b5c9c885f84cbfc5c1e23533a4f5103bd472b1b9e41329634772","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18010/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"f0f4076b82e189f588d81ce1bff183ea233dfab7f2c4b647bc8e145a38265f06","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18010/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "39d18f0190402891f8bee21d55bbf21c210d093ad778d6945d061a4f759d9ab7"
 paper_digest_api_reader_plan_sha256: "d1d5bdf48e5ab5b79c5cc3b269286fb5c0df74b22e02e4e6a1adb78f5b713663"
@@ -52,8 +52,16 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[Fish Audio Drama 3 Technical Report](https://arxiv.org/abs/2610.18010v1)*
 
-> 标签：#文本到语音 | #偏好优化 | #语音克隆 | #语音编辑 | #流式处理
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[语音合成](/audio-paper-digest-blog/papers/?concept=task.speech-synthesis) → [文本到语音](/audio-paper-digest-blog/papers/?concept=task.tts)；[语音克隆](/audio-paper-digest-blog/papers/?concept=task.voice-cloning)；[语音编辑](/audio-paper-digest-blog/papers/?concept=task.speech-editing)
+- **研究方法**：[偏好优化](/audio-paper-digest-blog/papers/?concept=method.preference-optimization)
+- **研究条件**：[流式处理](/audio-paper-digest-blog/papers/?concept=setting.streaming)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**7.4/10** | 创新 1.5/2 | 技术严谨 1.2/1.5 | 实验充分 1.3/1.5 | 清晰度 0.8/1 | 影响力 1.1/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1.2/1.5
 
 

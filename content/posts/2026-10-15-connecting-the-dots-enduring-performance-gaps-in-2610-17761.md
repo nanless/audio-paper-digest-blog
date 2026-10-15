@@ -20,7 +20,7 @@ paper_digest_primary_task: "语音识别"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.asr","label":"语音识别"},{"facet":"method","id":"method.statistical-analysis","label":"统计分析"},{"facet":"setting","id":"setting.accent-dialect","label":"口音与方言"},{"facet":"research_focus","id":"research_focus.fairness","label":"公平性"}]
 paper_digest_primary_method: "统计分析"
 paper_digest_score: 6.3
@@ -29,7 +29,7 @@ paper_digest_document_type: "应用研究"
 paper_digest_one_sentence: "论文用 16 个 2021-2025 年语音识别系统在 8 个多口音数据集上对比主流美国英语与少数英语口音的词错误率，发现差距长期存在且少数口音更容易在换代时大幅退化，而主流口音始终被基准测试稳定保护。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Alexander Metzger"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Aruna Srivastava"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Ruslan Mukhamedvaleev"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Eunjung Yeo"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Syed Ishtiaque Ahmed"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Nina Markl"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Sachin Kumar"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Farhan Samir"}]
 paper_digest_abstract_sha256: "cee8153c7908ff3cdcb3658a221491657045137fc19b97df7baac37ec8b54760"
-paper_digest_sidecars: {"citation.bib":{"sha256":"f7d9e430ab680e262dd4aaa259d2f4d543e0feef29951685aa7777e3896d6e7c","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17761/citation.bib"},"citation.json":{"sha256":"9c9e76fedf55962c9505c0e2500b355648bfc354458dc1586924f2e309dcb1ab","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17761/citation.json"},"citation.ris":{"sha256":"b2a80070bd8108848bb6b35cd1ba642fdf534b4ab55c0f93f3f61a1f72253645","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17761/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"31cb1c30338dab0275d6b0f435f782b0f4611eb7adbee4e252af03efcd9afcb4","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17761/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"f7d9e430ab680e262dd4aaa259d2f4d543e0feef29951685aa7777e3896d6e7c","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17761/citation.bib"},"citation.json":{"sha256":"9c9e76fedf55962c9505c0e2500b355648bfc354458dc1586924f2e309dcb1ab","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17761/citation.json"},"citation.ris":{"sha256":"b2a80070bd8108848bb6b35cd1ba642fdf534b4ab55c0f93f3f61a1f72253645","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17761/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"31a91eec45d853de9b2b0692ee4818136ab2b3b93f15bd0d9dff0c7835a8bd7f","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17761/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "bcbedf0485453949fc8cd9a68049810e6ea54c5ca9e2dce63aa5a863da47b807"
 paper_digest_api_reader_plan_sha256: "fc21a1e7a3708330e49e71e1a1fea91d58e55e1bc871e7774dde022014e3faa9"
@@ -52,8 +52,17 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[Connecting the Dots: Enduring Performance Gaps in ASR Systems Between Standard and Minority English Varieties](https://arxiv.org/abs/2610.17761v1)*
 
-> 标签：#语音识别 | #统计分析 | #口音与方言 | #公平性
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[语音识别](/audio-paper-digest-blog/papers/?concept=task.asr)
+- **研究方法**：[统计分析](/audio-paper-digest-blog/papers/?concept=method.statistical-analysis)
+- **研究条件**：[口音与方言](/audio-paper-digest-blog/papers/?concept=setting.accent-dialect)
+- **研究重点**：[公平性](/audio-paper-digest-blog/papers/?concept=research_focus.fairness)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**6.3/10** | 创新 1.2/2 | 技术严谨 1/1.5 | 实验充分 1.2/1.5 | 清晰度 0.8/1 | 影响力 1/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 0.8/1.5
 
 

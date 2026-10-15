@@ -20,7 +20,7 @@ paper_digest_primary_task: "语音识别"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.asr","label":"语音识别"},{"facet":"method","id":"method.reinforcement","label":"强化学习"},{"facet":"task","id":"task.emotion-recognition","label":"语音情感识别"},{"facet":"task","id":"task.speaker-counting","label":"说话人计数"}]
 paper_digest_primary_method: "强化学习"
 paper_digest_score: 6.3
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "ASSET 针对语音大模型音频前缀过长的问题，用可学习的边界策略把冻结编码器帧切成变长段再池化为音频 token，以转录损失加保留比带惩罚为奖励训练切分，在 LibriSpeech-960h 上以 10.9/10.6 Hz 取得 2.79/5.63% 词错误率，在 AISHELL-1 上以 7.7 tokens/s 取得 7.53% 字错误率，代价是依赖字符或音素对齐冷启动与三阶段训练。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Cihan Xiao"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Yuan Tseng"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Matthew Wiesner"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Desh Raj"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Leibny Paola Garcia Perera"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Sanjeev Khudanpur"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"David Harwath"}]
 paper_digest_abstract_sha256: "f1e9575f6a3361559a2cf43a64f4a96c216ff6d816ec0879e666f358c7f2414c"
-paper_digest_sidecars: {"citation.bib":{"sha256":"0de75817aa6a077d6781f8bc0d4fc6623c343a32885274a5ead9bceeb70944c1","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14309/citation.bib"},"citation.json":{"sha256":"b21f0f90e0b9eb258deabe9dcfac60352b21f35949b999a3d97290e629e1b305","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14309/citation.json"},"citation.ris":{"sha256":"db922d1894e2998b317b600248edeb90fcbbd739e664eaeb2b160fe34eb48def","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14309/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"1f32a66df704290c01925a6e541f5b15da53d001b40fcd7d1d43a076c54e71ee","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14309/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"0de75817aa6a077d6781f8bc0d4fc6623c343a32885274a5ead9bceeb70944c1","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14309/citation.bib"},"citation.json":{"sha256":"b21f0f90e0b9eb258deabe9dcfac60352b21f35949b999a3d97290e629e1b305","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14309/citation.json"},"citation.ris":{"sha256":"db922d1894e2998b317b600248edeb90fcbbd739e664eaeb2b160fe34eb48def","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14309/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"6904fa9dcf59fae9a80010018a2d86aaff7049ba76d8347975a96482e6b65cb9","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14309/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "b9f2a3caff5beca2f30c57ede9517057ce6fc689fd5314933c56ab67f8adf437"
 paper_digest_api_reader_plan_sha256: "b1263ada02275d86fe9c4b673ab9a4ea42388316d58b5e47f86b236623d61973"
@@ -52,8 +52,15 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[ASSET: Adaptive Speech Segmentation via Reinforcement Learning](https://arxiv.org/abs/2610.14309v1)*
 
-> 标签：#语音识别 | #强化学习 | #语音情感识别 | #说话人计数
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[语音识别](/audio-paper-digest-blog/papers/?concept=task.asr)；[语音情感识别](/audio-paper-digest-blog/papers/?concept=task.emotion-recognition)；[说话人计数](/audio-paper-digest-blog/papers/?concept=task.speaker-counting)
+- **研究方法**：[强化学习](/audio-paper-digest-blog/papers/?concept=method.reinforcement)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**6.3/10** | 创新 1.2/2 | 技术严谨 1/1.5 | 实验充分 1/1.5 | 清晰度 0.8/1 | 影响力 0.8/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1.2/1.5
 
 

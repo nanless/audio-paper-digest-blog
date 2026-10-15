@@ -20,7 +20,7 @@ paper_digest_primary_task: "语音代理规划与工具使用"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.voice-agent-planning","label":"语音代理规划与工具使用"},{"facet":"method","id":"method.evaluation-protocol","label":"评测协议"},{"facet":"method","id":"method.statistical-analysis","label":"统计分析"},{"facet":"signal","id":"signal.speech","label":"语音"}]
 paper_digest_primary_method: "评测协议"
 paper_digest_score: 6.5
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "论文用同一句话配对比较不同位置的单字改动，说明数字与否定等任务角色比功能词更容易让结构化工具调用失败，并用跨源分组预测证明细粒度角色比二元关键性多出可验证的诊断信息。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Xiaolong Wang"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Shijie Su"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Naqi Xiong"}]
 paper_digest_abstract_sha256: "cfdde25ddde3273e549a4af3af5f35d6cd9e596e91fddc11e32690bdda3aa01e"
-paper_digest_sidecars: {"citation.bib":{"sha256":"bd83063b58942daceeb605259a5c30fc2acc4ab13ea255fc99edeaa42628ab23","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17619/citation.bib"},"citation.json":{"sha256":"d663cb4c6bb524ffb886395a4a88cfcb6c334ca4928128b12cc3d9b3d6318272","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17619/citation.json"},"citation.ris":{"sha256":"68b01a9f50d13503ac743d71452162694061c5ff330f22776537d251d595ae7c","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17619/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"41236721691fd6f201fea64173374137d92fdb1e092dd38068154b3c178dab65","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17619/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"bd83063b58942daceeb605259a5c30fc2acc4ab13ea255fc99edeaa42628ab23","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17619/citation.bib"},"citation.json":{"sha256":"d663cb4c6bb524ffb886395a4a88cfcb6c334ca4928128b12cc3d9b3d6318272","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17619/citation.json"},"citation.ris":{"sha256":"68b01a9f50d13503ac743d71452162694061c5ff330f22776537d251d595ae7c","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17619/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"1bde99ae1a7f0e28d230cfeef40fb27fcf67346306d692687981ed6fe2fd9de3","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17619/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "0a388d493aad749a548506f6dd4774a3437fa4f6544033ea25b0a6013233340b"
 paper_digest_api_reader_plan_sha256: "b4e9f1167e8b458debd34dee2fca9fea020bb41de10477875bfdb3e0317bce94"
@@ -52,8 +52,16 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[When Does an ASR Error Matter? Task-Role Diagnostics for Tool-Using Voice Agents](https://arxiv.org/abs/2610.17619v1)*
 
-> 标签：#语音代理规划与工具使用 | #评测协议 | #统计分析 | #语音
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[语音交互](/audio-paper-digest-blog/papers/?concept=task.speech-interaction) → [语音代理规划与工具使用](/audio-paper-digest-blog/papers/?concept=task.voice-agent-planning)
+- **研究方法**：[评测协议](/audio-paper-digest-blog/papers/?concept=method.evaluation-protocol)；[统计分析](/audio-paper-digest-blog/papers/?concept=method.statistical-analysis)
+- **信号**：[语音](/audio-paper-digest-blog/papers/?concept=signal.speech)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**6.5/10** | 创新 1.2/2 | 技术严谨 1.2/1.5 | 实验充分 1.1/1.5 | 清晰度 0.8/1 | 影响力 0.7/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1.2/1.5
 
 

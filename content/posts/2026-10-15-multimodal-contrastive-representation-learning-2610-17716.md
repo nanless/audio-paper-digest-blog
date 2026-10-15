@@ -20,7 +20,7 @@ paper_digest_primary_task: "语音转换"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.voice-conversion","label":"语音转换"},{"facet":"method","id":"method.contrastive","label":"对比学习"},{"facet":"method","id":"method.multimodal-learning","label":"多模态学习"},{"facet":"signal","id":"signal.speech","label":"语音"}]
 paper_digest_primary_method: "对比学习"
 paper_digest_score: 5.8
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "针对电子喉语音与正常语音差异大导致序列到序列转换表示不稳的问题，论文用第一阶段语音文本对比对齐加融合、第二阶段把融合表示作为固定教师蒸馏给纯语音编码器的方法，在两个小规模日语患者数据集上优于纯语音和普通多模态基线，但结论只在原文的数据划分、合成数据增强和评价工具条件下成立。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Ding Ma"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Jinyi Mi"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Jiajun He"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Kazuhiro Kobayashi"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Naoki Nishio"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Tomoki Toda"}]
 paper_digest_abstract_sha256: "014bb81e63eb4d7e93a84418af31a1420dca3449be621678d378c66a3278d182"
-paper_digest_sidecars: {"citation.bib":{"sha256":"d5f0af0584a43e015658a0acba58b8fa36ca393eb5e1bf015bb0d1af881d7662","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17716/citation.bib"},"citation.json":{"sha256":"4b7ffce035651a48ebdf20e34b1feeefdd3727e08058193abac31db54471ed1f","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17716/citation.json"},"citation.ris":{"sha256":"2f77a601e8aeac10386fae5aa49b97d6cfe8da907632ddb21142e446c31651e5","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17716/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"1786a2e65a8759facd11724a8f9794f6eedc46c5d4c487f94648e730d4d43624","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17716/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"d5f0af0584a43e015658a0acba58b8fa36ca393eb5e1bf015bb0d1af881d7662","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17716/citation.bib"},"citation.json":{"sha256":"4b7ffce035651a48ebdf20e34b1feeefdd3727e08058193abac31db54471ed1f","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17716/citation.json"},"citation.ris":{"sha256":"2f77a601e8aeac10386fae5aa49b97d6cfe8da907632ddb21142e446c31651e5","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17716/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"a328e1283d0e7a3aed4f8dd13996e84b0569e86b76ae6d55a02d63efa2a6ff0b","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17716/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "3b48869c97deb9f48665840cd7b0f69901385db66162d1dc49e8151852415d69"
 paper_digest_api_reader_plan_sha256: "5632cf35ade7183fce417104963344735f6ee90d393f676ddd67b022416beca0"
@@ -52,8 +52,16 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[Multimodal Contrastive Representation Learning Based Voice Conversion for Electrolaryngeal Speech Enhancement](https://arxiv.org/abs/2610.17716v1)*
 
-> 标签：#语音转换 | #对比学习 | #多模态学习 | #语音
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[语音转换](/audio-paper-digest-blog/papers/?concept=task.voice-conversion)
+- **研究方法**：[对比学习](/audio-paper-digest-blog/papers/?concept=method.contrastive)；[多模态学习](/audio-paper-digest-blog/papers/?concept=method.multimodal-learning)
+- **信号**：[语音](/audio-paper-digest-blog/papers/?concept=signal.speech)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**5.8/10** | 创新 1.2/2 | 技术严谨 1/1.5 | 实验充分 1/1.5 | 清晰度 0.8/1 | 影响力 0.5/1.5 | 开源 0.2/1.5 | 可复现 0.3/0.5 | 工程/实践 0.8/1.5
 
 

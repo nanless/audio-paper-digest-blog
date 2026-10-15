@@ -20,7 +20,7 @@ paper_digest_primary_task: "语音情感识别"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.emotion-recognition","label":"语音情感识别"},{"facet":"task","id":"task.av-question-answering","label":"音视频问答"},{"facet":"method","id":"method.multimodal-learning","label":"多模态学习"},{"facet":"method","id":"method.lora","label":"LoRA"},{"facet":"signal","id":"signal.audiovisual","label":"音视频"}]
 paper_digest_primary_method: "多模态学习"
 paper_digest_score: 6.5
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "论文针对声音表情与画面不一致时生成式回答容易跟随视觉的问题，用共享 WavLM 编码上的视觉查询融合与直接时间积分两路组织输入同一解码器，在 CA-MER 平均指标 67.89 与 EmotionTalk 测试集 62.88% 等条件下验证了直接声学通路的作用，代价是增加 16 个声学 token 与混合任务适配的约束设计。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Yibo Wang"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Jisheng Dang"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Bimei Wang"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Junhong Liu"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Jiongpei Hou"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Jingwen Zhao"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Wenjun Ma"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Hong Peng"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Bin Hu"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Qi Tian"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Tat-Seng Chua"}]
 paper_digest_abstract_sha256: "787f2f5bbfb3f2f955ccf5675032f342d8d90c4c3cf37b5753b7f2eab167b6aa"
-paper_digest_sidecars: {"citation.bib":{"sha256":"74d6dbbc79b99bfba5794344c3ea0759b8f9088e434683d6837789e9707f72e5","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18073/citation.bib"},"citation.json":{"sha256":"5c46324324d6a5aec44434bd7cfb552c745bf30eda7ac0dca8070c3e03a931e6","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18073/citation.json"},"citation.ris":{"sha256":"cb86b022e3c8cb01baf2b9a6931620d89a3367c0fa0be90cedd8b4a2fb9b61d5","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18073/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"a732847c8b1797e7422722170794c79dbf6c9e8193b188d44e11e5e5edee763e","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18073/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"74d6dbbc79b99bfba5794344c3ea0759b8f9088e434683d6837789e9707f72e5","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18073/citation.bib"},"citation.json":{"sha256":"5c46324324d6a5aec44434bd7cfb552c745bf30eda7ac0dca8070c3e03a931e6","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18073/citation.json"},"citation.ris":{"sha256":"cb86b022e3c8cb01baf2b9a6931620d89a3367c0fa0be90cedd8b4a2fb9b61d5","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18073/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"6bad3b3b139782438214e111fb6d51e41f0fa4799e6287dcac20e9015a21e25e","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18073/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "f3e1bb3a767323817548decdd1f616e1e549089afa8dac9e66eb0b0bd1dc8fbd"
 paper_digest_api_reader_plan_sha256: "e8f063dffa9a140b87d529ab09f099f8dabb1dc046fe1388487fcb42846e85a1"
@@ -52,8 +52,16 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[DualAffect: Dual-Path Paralinguistic Integration for Generative Audiovisual Emotion Understanding](https://arxiv.org/abs/2610.18073v1)*
 
-> 标签：#语音情感识别 | #音视频问答 | #多模态学习 | #LoRA | #音视频
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[语音情感识别](/audio-paper-digest-blog/papers/?concept=task.emotion-recognition)；[音视频理解](/audio-paper-digest-blog/papers/?concept=task.av-understanding) → [音视频问答](/audio-paper-digest-blog/papers/?concept=task.av-question-answering)
+- **研究方法**：[多模态学习](/audio-paper-digest-blog/papers/?concept=method.multimodal-learning)；[参数高效微调](/audio-paper-digest-blog/papers/?concept=method.peft) → [LoRA](/audio-paper-digest-blog/papers/?concept=method.lora)
+- **信号**：[音视频](/audio-paper-digest-blog/papers/?concept=signal.audiovisual)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**6.5/10** | 创新 1.2/2 | 技术严谨 1/1.5 | 实验充分 1.2/1.5 | 清晰度 0.8/1 | 影响力 1/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 

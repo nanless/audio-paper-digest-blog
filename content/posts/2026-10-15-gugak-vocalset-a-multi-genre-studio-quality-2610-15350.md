@@ -20,7 +20,7 @@ paper_digest_primary_task: "音频事件检测"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.event-detection","label":"音频事件检测"},{"facet":"task","id":"task.audio-classification","label":"音频分类"},{"facet":"task","id":"task.music-understanding","label":"音乐分析"},{"facet":"method","id":"method.dataset-curation","label":"数据集构建"},{"facet":"artifact","id":"artifact.dataset","label":"数据集"}]
 paper_digest_primary_method: "数据集构建"
 paper_digest_score: 6.6
@@ -29,7 +29,7 @@ paper_digest_document_type: "数据集与基准"
 paper_digest_one_sentence: "论文用 305 首棚录独唱和 68000 余段音频对齐的装饰音标注解决韩语传统声乐缺乏可计算语料的问题，基线显示音高曲线在分类上超过冻结通用音乐模型，而频谱在线索定位上互补，代价是固定调与速度限制了自然表达。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Danbinaerin Han"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Wonil Kim"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Seah Hong"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Dongjoo Moon"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Jaeok Lee"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Jongpil Lee"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Chaewon Kim"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Juhan Nam"}]
 paper_digest_abstract_sha256: "62610576f67cc32907785db677ed0f8e081d3f8c96cfbe58057322e5b477ba26"
-paper_digest_sidecars: {"citation.bib":{"sha256":"2dd068c0c1ec903f1ae8c626a1ecce49e0fc52a47620df5a94b837024d3fc02c","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15350/citation.bib"},"citation.json":{"sha256":"dfd2d723feaa5b10063a32a01527a6b14c3fa83e133b1e03f415edde3fe4803d","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15350/citation.json"},"citation.ris":{"sha256":"34e5a4de5eb71cc7c3c75b5ee1514cc93b2864d3c87bb2b6840cfa5ac2e31d49","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15350/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"b3b6aadbaca923b6b71107ef39a5cf9a1384d093653ffe082563e4b7ca5da9aa","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15350/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"2dd068c0c1ec903f1ae8c626a1ecce49e0fc52a47620df5a94b837024d3fc02c","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15350/citation.bib"},"citation.json":{"sha256":"dfd2d723feaa5b10063a32a01527a6b14c3fa83e133b1e03f415edde3fe4803d","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15350/citation.json"},"citation.ris":{"sha256":"34e5a4de5eb71cc7c3c75b5ee1514cc93b2864d3c87bb2b6840cfa5ac2e31d49","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15350/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"676cdab788de799e9c258adb9a53379ebc0df757713d069b5be0494f9ba553c8","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15350/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "f5a60411278f8c15c058a6e53cd8396c419eaeff04d4bce2f4b42018ac2fc914"
 paper_digest_api_reader_plan_sha256: "3db3f2addf2d5349c369184e763f33160cd7672dbefc126be98ac4bef21338c4"
@@ -52,8 +52,16 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[Gugak-VocalSet: A Multi-Genre Studio-Quality Dataset of Korean Traditional Singing with Sigimsae Annotations](https://arxiv.org/abs/2610.15350v1)*
 
-> 标签：#音频事件检测 | #音频分类 | #音乐分析 | #数据集构建 | #数据集
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[音频事件检测](/audio-paper-digest-blog/papers/?concept=task.event-detection)；[音频分类](/audio-paper-digest-blog/papers/?concept=task.audio-classification)；[音乐分析](/audio-paper-digest-blog/papers/?concept=task.music-understanding)
+- **研究方法**：[数据集构建](/audio-paper-digest-blog/papers/?concept=method.dataset-curation)
+- **研究产物**：[数据集](/audio-paper-digest-blog/papers/?concept=artifact.dataset)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**6.6/10** | 创新 1.2/2 | 技术严谨 1.2/1.5 | 实验充分 1.1/1.5 | 清晰度 0.8/1 | 影响力 1/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 

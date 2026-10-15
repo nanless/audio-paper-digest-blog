@@ -20,7 +20,7 @@ paper_digest_primary_task: "空间音频渲染"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.spatial-rendering","label":"空间音频渲染"},{"facet":"method","id":"method.flow-matching","label":"流匹配"},{"facet":"signal","id":"signal.spatial-audio","label":"空间音频信号"},{"facet":"signal","id":"signal.music","label":"音乐"}]
 paper_digest_primary_method: "流匹配"
 paper_digest_score: 6.2
@@ -29,12 +29,12 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "该文把单声道转立体声看作已知下混算子的逆问题，用冻结的立体声流模型做先验保证真实感，再用声道间相干与声级差分布奖励在推理时塑造声像，并在 MUSDB18-HQ 上以空间真实感见长但中频波形保真度有所牺牲。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Sattwik Basu"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Gautam Bhattacharya"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Alan Seefeldt"}]
 paper_digest_abstract_sha256: "e8f81bbf6cfbdad0490678c7d57cad3491ce12227e19c1e74833186de454854e"
-paper_digest_sidecars: {"citation.bib":{"sha256":"bf0e6b0a2f82599ed5bf20be0100fbacf53d89ae71460e905f0934ad152b71c7","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15967/citation.bib"},"citation.json":{"sha256":"e75a9f6e21d93ae954b0d4c31848b9c741845607ea6ffb63e38e9a86d0b967b5","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15967/citation.json"},"citation.ris":{"sha256":"3ddbc1bb72a96f71ca2acf29d3419fee7a19ad01969d1a726e7fd60965e59c4d","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15967/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"461f6c5f7bb37044d3df50fbb4e055a3fcddead5b809afebe5b169e4eaeb9074","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15967/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"bf0e6b0a2f82599ed5bf20be0100fbacf53d89ae71460e905f0934ad152b71c7","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15967/citation.bib"},"citation.json":{"sha256":"e75a9f6e21d93ae954b0d4c31848b9c741845607ea6ffb63e38e9a86d0b967b5","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15967/citation.json"},"citation.ris":{"sha256":"3ddbc1bb72a96f71ca2acf29d3419fee7a19ad01969d1a726e7fd60965e59c4d","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15967/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"6bb6c6e537687a439440b619f1e006be37df92a3bb490dfe77cd4c3ada08e059","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15967/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
-paper_digest_api_reader_article_sha256: "d48a4236514a31071e99b50e40bdb3277d1aa8b131d6cd89ee400ac4a917d711"
-paper_digest_api_reader_plan_sha256: "6e51fb5cba0ed884593fcdb6e7f0eef259b9ea2ac1217d17f82afcdd7c68f97e"
+paper_digest_api_reader_article_sha256: "b7f17cce55777722252d0ba24150beb68c9eabf136b5f1a71213b65dc42b2f85"
+paper_digest_api_reader_plan_sha256: "e6aefb13eae8ece6a85a86184852ff52b88f3f56f0ff022a351652611ed853f2"
 paper_digest_api_reader_source_binding_contract: "api-reader-source-bindings-v4"
-paper_digest_api_reader_source_bindings_sha256: "7cff013a900390f86eae913b587246202c2af12cf7447de75f2324886f8d1965"
+paper_digest_api_reader_source_bindings_sha256: "8047b5787afc53c211f477c789f0174a420e20ae6691775030c1c68e53c6f926"
 paper_digest_api_reader_source_table_count: 2
 paper_digest_api_reader_source_formula_count: 4
 paper_digest_api_reader_structured_artifacts_sha256: "eca38f8a68d5c47d9c5c6aa1e915acfecc20cb8f0b849f59e0ff3f58abdc9d77"
@@ -52,8 +52,16 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[Controllable Mono-to-Stereo Upmixing using Reward-tilted Flows](https://arxiv.org/abs/2610.15967v1)*
 
-> 标签：#空间音频渲染 | #流匹配 | #空间音频信号 | #音乐
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[空间音频渲染](/audio-paper-digest-blog/papers/?concept=task.spatial-rendering)
+- **研究方法**：[生成模型](/audio-paper-digest-blog/papers/?concept=method.generative) → [流匹配](/audio-paper-digest-blog/papers/?concept=method.flow-matching)
+- **信号**：[空间音频信号](/audio-paper-digest-blog/papers/?concept=signal.spatial-audio)；[音乐](/audio-paper-digest-blog/papers/?concept=signal.music)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**6.2/10** | 创新 1.4/2 | 技术严谨 1/1.5 | 实验充分 0.9/1.5 | 清晰度 0.8/1 | 影响力 1/1.5 | 开源 0/1.5 | 可复现 0.1/0.5 | 工程/实践 1/1.5
 
 
@@ -101,7 +109,7 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 **前向算子 × 流先验：** 前向算子说明单声道观测是如何从立体声得到的，包括立体声到单声道的下混与可能的低通或削波退化；流先验说明真实立体声应该长什么样，由预训练速度场隐式定义。观测一致性靠前向算子约束，真实感靠流先验约束，组合后才能在大量都符合单声道的候选中挑出既对得上观测又听起来像音乐的立体声。
 
-这张示意图把 2 阶段位移和重加噪循环画在同一张数据密度背景上，橙色对应测量保真方向，紫色对应空间一致方向，读图时注意两段箭头是先后衔接而非一次叠加。
+这张示意图把 2 阶段位移和重加噪循环画在同一张数据密度背景上，橙色对应测量保真方向，紫色对应空间一致方向，读图时注意两段箭头是先后衔接而非一次叠加，图中还标出了信任域与重加噪返回噪声侧的路径。
 
 > **看图路径：** 1. 先看左上高斯起点沿流速度场箭头如何指向左下干净预测点；2. 再看橙色似然箭头如何把预测点推向满足下混约束的中间点；3. 再看紫色信任域内奖励箭头如何把样本推向右侧最终估计；4. 最后看灰色重加噪虚线如何回到噪声侧进入下一轮
 
@@ -139,8 +147,6 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 上式是第一阶段的目标，解出中间估计后再做第 2 阶段的信任域优化。图 1 中的红圈和紫圈正好对应这两个邻域。这种解耦是启发式的可处理代理，不是原倾斜后验的精确采样，好处是稳定，代价是多了一组迭代次数和步长要调。论文在每个噪声水平都重复这 2 阶段加一次重加噪，低噪声阶段重复更多次，使精修累积起来。
 
-**声道间相干 × 声道间声级差：** 声道间相干指左右声道在同一感知频带内有多相关，低相干听感更弥散、声场更宽；声道间声级差指左右能量比的对数，决定偏左还是偏右的摆位。只看声级差管不住宽度，只看相干管不住摆位，论文把它们都按随时间变化的分布来比较，才能同时模仿目标的平均宽度、平均摆位和时变起伏。
-
 ### 相干与声级差分布具体怎么算
 
 先对左右通道做短时傅里叶变换，得到每频点每帧的复数对，再用听觉频带矩阵把频点合并到若干频带。对每个频带每帧计算 2 阶空间协方差矩阵，对角线是左右能量，非对角线是互相关，矩阵半正定且对波形可微。
@@ -150,6 +156,8 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 从该矩阵导出两个线索，相干是互相关幅度除以左右能量几何平均，有界在零到一之间，越低越弥散；声级差是左右能量比取对数，反映偏左偏右。论文不把它们按时间平均，而是看成随时间变化的样本，相干用贝塔分布建模并用均值方差矩匹配求形状参数，声级差用高斯建模并用样本均值方差求参数。对参考谱同样估计一组目标参数，候选与目标的奖励就是各频带上两类分布散度的平均再取负，另有一个系数平衡相干与声级差的权重。
 
 附录给出了高斯与贝塔散度的闭式推导，避免对样本直方图求梯度或在相干接近一时出现对数发散，整个链条只含线性变换、乘积、对数、均值方差和伽马函数，都是可微的。宽度控制还可以通过转向系数先压低目标平均相干再拟合，实现加宽或收窄。
+
+**声道间相干 × 声道间声级差：** 声道间相干指左右声道在同一感知频带内有多相关，低相干听感更弥散、声场更宽；声道间声级差指左右能量比的对数，决定偏左还是偏右的摆位。只看声级差管不住宽度，只看相干管不住摆位，论文把它们都按随时间变化的分布来比较，才能同时模仿目标的平均宽度、平均摆位和时变起伏。
 
 **空间协方差矩阵 × 等效矩形带宽频带划分：** 空间协方差矩阵指每个频带每帧由左右频谱外积加权求和得到的二阶矩阵，对角线是左右能量，非对角线幅度反映相关；等效矩形带宽频带划分指按听觉分辨率把频点合并到若干频带的做法。先按听觉频带汇总能量与相关，再从中导出相干与声级差，使奖励作用在与定位和宽度感知相关的尺度上，而不是逐个频点抖动。
 
@@ -167,24 +175,23 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 ### 干净上混时空间与保真如何取舍
 
-这里要回答当单声道同时存在带宽缺失或削波时，只做上混不够，还能不能把缺失的高频和受损声像一起恢复。论文把下混与退化写成同一个前向算子，用同一流先验做联合恢复与上混，不做专门重训练。比较的是退化后的单声道观测与 Aura 输出，在带内中间通道信噪比、侧信号谱误差、相干距离、声级差距离、空间距离和高频谱误差上的变化。带内中间通道信噪比在低通下只算截止频率以内，削波下算全带，高频谱误差在全带削波下无定义，表中记为短横。
+本节只看干净单声道下混的上混对照，回答在没有额外带宽缺失时，空间真实感与单声道保真之间如何取舍。比较对象包括经典去相关器、参数化立体声、扩散上混器的两种采样、单阶段流逆问题求解器，以及本文方法的中小两个尺寸。指标方向是多分辨率谱误差、空间距离、声级差距离和相干距离越低越好，整体与中间通道信噪比越高越好，其中保单声道方法在中间通道上天然占优。
 
-下表比较 3 种退化下退化观测与 Aura 的取值，退化包括 8 千赫兹低通、11 千赫兹低通和削波，表头已标明指标方向，数值细节见原表。
+| Method | Training-free | MP | MR-STFT ↓ | SI-SDR (dB) ↑ | SI-SDR Mid (dB) ↑ | Spatial FD ↓ | ILD Dist. ↓ | IC Dist. ↓ |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| S3A (DSP) | – | ✓ | 0.290 | 1.44 | 24.14 | 93.9 | 2.203 | 0.246 |
+| Parametric Stereo | × | ✓ | 0.201 | 7.617 | 20.570 | 358.730 | 2.638 | 0.240 |
+| DiffStereo (DDIM) | × | × | 0.581 | -2.16 | 1.79 | 53.3 | 1.460 | 0.343 |
+| DiffStereo (DDPM) | × | × | 0.4550 | 0.569 | 4.34 | 43.16 | 1.552 | 0.263 |
+| FlowDPS | ✓ | × | 0.657 | -18.036 | -17.045 | 25.659 | 1.36 | 0.25 |
+| Aura - Small (Ours) | ✓ | × | 0.2223 | 4.6920 | 8.34 | 20.3344 | 1.3744 | 0.1693 |
+| Aura - Medium (Ours) | ✓ | × | 0.2088 | 5.042 | 8.15 | 34.6924 | 1.543 | 0.233 |
 
-| Degradation | Method | Mid In-band SI-SDR↑ | Side MR-STFT↓ | IC dist↓ | ILD dist↓ | Spatial FD↓ | HF MR-STFT↓ |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-|  | Degraded | 38.87 | 1.211 | 0.402 | 1.473 | 158.4 | 1.112 |
-| LPF 8 kHz | Aura | 9.36 | 0.653 | 0.149 | 1.332 | 18.6 | 0.744 |
-|  | Degraded | 40.02 | 1.211 | 0.402 | 1.473 | 158.4 | 1.045 |
-| LPF 11 kHz | Aura | 9.06 | 0.672 | 0.158 | 1.353 | 20.1 | 0.707 |
-|  | Degraded | 17.73 | 1.211 | 0.402 | 1.473 | 158.4 | – |
-| Clip | Aura | 6.74 | 0.655 | 0.157 | 1.364 | 18.6 | – |
-
-原表显示 Aura 把空间距离从 158.4 降到 18.6 到 20.1，侧信号谱误差从 1.211 降到 0.653 到 0.672，相干距离和声级差距离也有下降。8 千赫兹低通的高频谱误差从 1.112 降到 0.744，11 千赫兹低通从 1.045 降到 0.707，说明高频重建确有改善。这些改善伴随带内中间通道保真下降，8 千赫兹下从 38.87 降到 9.36，11 千赫兹下从 40.02 降到 9.06，削波全带从 17.73 降到 6.74 分贝。判断是该方法在空间真实感和高频恢复上占优，但以中间信号保真下降为代价，结论只在所选音乐片段、所用退化设置和所列指标下成立，换截止频率或削波强度会改变平衡。
+原表显示本文小尺寸在空间距离和相干距离上最好，同时谱误差和整体信噪比优于扩散方法和单阶段流方法；中尺寸在谱误差和整体信噪比上略好于小尺寸，但在空间指标上反而不如小尺寸，说明增大模型并未一致改善上混。保单声道基线中间通道信噪比很高但空间距离很差，单阶段流方法空间尚可但波形失真极大，扩散方法加宽伴随伪影。这一取舍只在所选无人声重混片段和所列指标下成立，换曲风或参考会改变平衡。
 
 ### 主观听感里质量与空间如何平衡
 
-主观部分要看音频质量与空间成像两个维度是否能兼得。横轴是 6 种系统，纵轴是 0 到 100 分，蓝色为音频质量，橙色为空间成像，箱体表示四分位范围，横线是中位，白圈是样本，菱形是均值，理解离散程度时不要只读中位线。
+主观部分要看音频质量与空间成像两个维度是否能兼得。横轴是 6 种系统，纵轴是 0 到 100 分，蓝色为音频质量，橙色为空间成像，箱体表示四分位范围，横线是中位，白圈是样本，菱形是均值，理解离散程度时不要只读中位线，样本仅来自 5 人 8 段音乐的筛选后评分。
 
 > **看图路径：** 1. 先对比横轴六组中蓝色音频质量与橙色空间成像两类箱体的高低；2. 再看双单声道与隐藏参考如何构成一端偏科与两端都高的对照；3. 再看本文方法在空间维度上相对其他上混系统的位置与离散程度
 
@@ -196,9 +203,7 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 ### 带宽缺失或削波时还能补回多少
 
-这里要回答同一套先验换上退化算子后，能否同时补高频或削波并恢复声像，以及中间保真掉多少。低通下带内中间信噪比按截止频率以下计算，削波按全频带计算，高频谱误差只在低通时定义，削波时该项无定义。
-
-下表比较退化观测本身与本文方法输出在中间信噪比、侧信号谱误差、相干与声级差距离、空间距离和高频谱误差上的变化，可以看出空间和高频重建的改善伴随中间保真的下降。
+这里要回答同一套先验换上退化算子后，能否同时补高频或削波并恢复声像，以及中间保真掉多少。低通下带内中间信噪比按截止频率以下计算，削波按全频带计算，高频谱误差只在低通时定义，削波时该项无定义，表中记为短横，退化观测本身作为对照。
 
 | Degradation | Method | Mid In-band SI-SDR↑ | Side MR-STFT↓ | IC dist↓ | ILD dist↓ | Spatial FD↓ | HF MR-STFT↓ |
 | --- | --- | --- | --- | --- | --- | --- | --- |

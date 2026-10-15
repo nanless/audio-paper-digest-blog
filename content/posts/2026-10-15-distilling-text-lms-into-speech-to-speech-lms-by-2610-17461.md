@@ -20,7 +20,7 @@ paper_digest_primary_task: "语音合成"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.speech-synthesis","label":"语音合成"},{"facet":"model_family","id":"model_family.speech","label":"语音大模型"},{"facet":"method","id":"method.distillation","label":"知识蒸馏"},{"facet":"method","id":"method.autoregressive","label":"自回归模型"},{"facet":"method","id":"method.flow-matching","label":"流匹配"}]
 paper_digest_primary_method: "知识蒸馏"
 paper_digest_score: 7.5
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "论文用先预测文本词再生成对应语音段的序列构造解决语音到语音续写的内容建模问题，最强证据是在相同模型和数据下生成困惑度从 151.7 降到 58.9，蒸馏与文本回放进一步保留事实知识，代价是需要词级对齐和双头生成。"
 paper_digest_authors: [{"affiliations":["TTI-Chicago"],"name":"Ju-Chieh Chou"},{"affiliations":["Stony Brook University"],"name":"Jiawei Zhou"},{"affiliations":["TTI-Chicago"],"name":"Karen Livescu"}]
 paper_digest_abstract_sha256: "9e9382eff275e5f1c6beb5424e115db8bb15fee91b61624c29aed7eb615413ee"
-paper_digest_sidecars: {"citation.bib":{"sha256":"f15776a010dfc78c168cf6a7f6881aa2f87f88d2fa5f38f358792fa284f3c378","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17461/citation.bib"},"citation.json":{"sha256":"1d7c8971b5017a5469d37978394a4695c5b642b93277de09aa6f1891994ed6cf","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17461/citation.json"},"citation.ris":{"sha256":"5bd1f385bcf1bfa17baf3a433229101ec296a19e7181b8d2ca429a6626ecd4a9","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17461/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"6e6aef34701cec5475a2845d6ab6ae7b204b8925fbfe5287a5737796e59333cb","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17461/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"f15776a010dfc78c168cf6a7f6881aa2f87f88d2fa5f38f358792fa284f3c378","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17461/citation.bib"},"citation.json":{"sha256":"1d7c8971b5017a5469d37978394a4695c5b642b93277de09aa6f1891994ed6cf","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17461/citation.json"},"citation.ris":{"sha256":"5bd1f385bcf1bfa17baf3a433229101ec296a19e7181b8d2ca429a6626ecd4a9","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17461/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"7128e7b71389b0533a1700688a4544c67159b9be1f93a151369611bbf040b772","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17461/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "ef1a5b7d5043bda9a41bdf6f0af22c7df2588d803b765332fe30414652ff4b7d"
 paper_digest_api_reader_plan_sha256: "b6b7bf7d093aff658b51559a309d005ecdad59bd3a59f02c04a1e1cf5f535711"
@@ -52,8 +52,16 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[Distilling Text LMs into Speech-to-Speech LMs by Matching Internal Text Predictions](https://arxiv.org/abs/2610.17461v1)*
 
-> 标签：#语音合成 | #语音大模型 | #知识蒸馏 | #自回归模型 | #流匹配
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[语音合成](/audio-paper-digest-blog/papers/?concept=task.speech-synthesis)
+- **研究方法**：[知识蒸馏](/audio-paper-digest-blog/papers/?concept=method.distillation)；[生成模型](/audio-paper-digest-blog/papers/?concept=method.generative) → [自回归模型](/audio-paper-digest-blog/papers/?concept=method.autoregressive)；[生成模型](/audio-paper-digest-blog/papers/?concept=method.generative) → [流匹配](/audio-paper-digest-blog/papers/?concept=method.flow-matching)
+- **模型家族**：[语音大模型](/audio-paper-digest-blog/papers/?concept=model_family.speech)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**7.5/10** | 创新 1.5/2 | 技术严谨 1.3/1.5 | 实验充分 1.3/1.5 | 清晰度 0.8/1 | 影响力 1/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1.3/1.5
 
 

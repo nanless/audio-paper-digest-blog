@@ -20,7 +20,7 @@ paper_digest_primary_task: "音频深度伪造检测"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.audio-deepfake","label":"音频深度伪造检测"},{"facet":"method","id":"method.statistical-analysis","label":"统计分析"},{"facet":"method","id":"method.lora","label":"LoRA"},{"facet":"signal","id":"signal.environmental","label":"环境声"},{"facet":"signal","id":"signal.speech","label":"语音"}]
 paper_digest_primary_method: "统计分析"
 paper_digest_score: 6.1
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "论文用语音和背景声各自独立真假的混合数据，比较四种检测器对假语音与假背景声的敏感度和依赖频段，发现假背景声更好检但差距主要来自对未见过假语音的泛化失败，且前端编码器决定了证据集中在哪个频段。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Wanying Ge"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Xin Wang"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Junichi Yamagishi"}]
 paper_digest_abstract_sha256: "7f51dd9cb34641c112ba17ba8ca99f0c93904972a76142dca07b2c8bd0f49cb6"
-paper_digest_sidecars: {"citation.bib":{"sha256":"983c42f678679349bfbf122031d1611388706170af907bd3afd2a21d3cd9f398","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17617/citation.bib"},"citation.json":{"sha256":"129b4703d9da99bb0587d24b7877c22a2f6dabe7cba30984b6e5c9810d437468","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17617/citation.json"},"citation.ris":{"sha256":"0b18a2fd95fd58023812a602615b1718b3c5f9b2a4555e2b14eee6b985d870ca","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17617/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"6bdf22e0a2c86976ad60ed303add2e0a2d38e679f222300d93ef9d7478619b0f","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17617/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"983c42f678679349bfbf122031d1611388706170af907bd3afd2a21d3cd9f398","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17617/citation.bib"},"citation.json":{"sha256":"129b4703d9da99bb0587d24b7877c22a2f6dabe7cba30984b6e5c9810d437468","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17617/citation.json"},"citation.ris":{"sha256":"0b18a2fd95fd58023812a602615b1718b3c5f9b2a4555e2b14eee6b985d870ca","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17617/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"626223c29cdc05039aba5790942777f5bc1227079129af12cfc6226f20f294a1","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17617/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "69aa20774f3f43e11441b096a9c56c79f98bea4d2eaf7501388503134ccc17bc"
 paper_digest_api_reader_plan_sha256: "f8c69dc9e329cffc1c41d0ffe7e5b5b7351d246cc036b35b106a886a0916b03a"
@@ -52,8 +52,16 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[What Do Deepfake Audio Detectors Hear? From Self-Supervised Models to Audio LLMs](https://arxiv.org/abs/2610.17617v1)*
 
-> 标签：#音频深度伪造检测 | #统计分析 | #LoRA | #环境声 | #语音
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[音频伪造检测](/audio-paper-digest-blog/papers/?concept=task.audio-forgery) → [音频深度伪造检测](/audio-paper-digest-blog/papers/?concept=task.audio-deepfake)
+- **研究方法**：[统计分析](/audio-paper-digest-blog/papers/?concept=method.statistical-analysis)；[参数高效微调](/audio-paper-digest-blog/papers/?concept=method.peft) → [LoRA](/audio-paper-digest-blog/papers/?concept=method.lora)
+- **信号**：[环境声](/audio-paper-digest-blog/papers/?concept=signal.environmental)；[语音](/audio-paper-digest-blog/papers/?concept=signal.speech)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**6.1/10** | 创新 1.2/2 | 技术严谨 1/1.5 | 实验充分 1.1/1.5 | 清晰度 0.8/1 | 影响力 1/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 0.7/1.5
 
 

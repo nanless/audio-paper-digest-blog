@@ -20,7 +20,7 @@ paper_digest_primary_task: "语音属性识别"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.speech-attributes","label":"语音属性识别"},{"facet":"method","id":"method.statistical-analysis","label":"统计分析"},{"facet":"research_focus","id":"research_focus.interpretability","label":"可解释性"},{"facet":"signal","id":"signal.speech","label":"语音"}]
 paper_digest_primary_method: "统计分析"
 paper_digest_score: 6.8
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "论文用平均词段的二维投影发现圆周式词计时轨迹，再用旋转切分在 HuBERT 第 9 层上以 64.3% 边界 F1 和 39.8% 词 F1 切分出单个词，而未训练模型与对数梅尔特征不能做到同等实例级切分。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Burin Naowarat"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Hao Tang"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Sharon Goldwater"}]
 paper_digest_abstract_sha256: "e0ac83bc0dcdb927c71f3739e74df3601f13af9a638c8dbbb8c225ea0f61db2d"
-paper_digest_sidecars: {"citation.bib":{"sha256":"4b08d933d1bfa674dbc0b5863ced97a3707f8b3c3c0085fcfe8d62513964ad54","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16273/citation.bib"},"citation.json":{"sha256":"ecaada3a1f7f7eb82eb593b7c3c4c445008bd383da5f53e2f278c22f03d82c3c","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16273/citation.json"},"citation.ris":{"sha256":"eb16a0d57a67361fc81e6d411af816bc8ace1eff5ebed2e80d05c71f913de2ea","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16273/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"dc97d7ede0757c71b14d86a0a6a9e7ea5fe1baefb67f2b6ba054e5c8c4857d04","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16273/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"4b08d933d1bfa674dbc0b5863ced97a3707f8b3c3c0085fcfe8d62513964ad54","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16273/citation.bib"},"citation.json":{"sha256":"ecaada3a1f7f7eb82eb593b7c3c4c445008bd383da5f53e2f278c22f03d82c3c","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16273/citation.json"},"citation.ris":{"sha256":"eb16a0d57a67361fc81e6d411af816bc8ace1eff5ebed2e80d05c71f913de2ea","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16273/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"c0d940ecea3d32a8ed04a77ebb47761db8534c3dac1d8eb9e36d1bdd9c5ca9b9","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16273/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "87ce9d2c958eeb98ae3ced3158f4c656a90ae4a53ee95e4fd90ec527999a21c5"
 paper_digest_api_reader_plan_sha256: "bee82e7cff92685c67ba98475ed0c7715b70f0cd59c242de05415afca31bea16"
@@ -52,8 +52,17 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[Deep Speech Representations Track Word Timing along a Low-Dimensional Circular Trajectory](https://arxiv.org/abs/2610.16273v1)*
 
-> 标签：#语音属性识别 | #统计分析 | #可解释性 | #语音
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[语音属性识别](/audio-paper-digest-blog/papers/?concept=task.speech-attributes)
+- **研究方法**：[统计分析](/audio-paper-digest-blog/papers/?concept=method.statistical-analysis)
+- **信号**：[语音](/audio-paper-digest-blog/papers/?concept=signal.speech)
+- **研究重点**：[可解释性](/audio-paper-digest-blog/papers/?concept=research_focus.interpretability)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**6.8/10** | 创新 1.5/2 | 技术严谨 1.2/1.5 | 实验充分 1.2/1.5 | 清晰度 0.8/1 | 影响力 1/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 0.8/1.5
 
 

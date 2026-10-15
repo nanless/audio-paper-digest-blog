@@ -20,7 +20,7 @@ paper_digest_primary_task: "语音识别"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.asr","label":"语音识别"},{"facet":"method","id":"method.augmentation","label":"数据增强"},{"facet":"task","id":"task.voice-conversion","label":"语音转换"},{"facet":"task","id":"task.tts","label":"文本到语音"}]
 paper_digest_primary_method: "数据增强"
 paper_digest_score: 5.6
@@ -29,7 +29,7 @@ paper_digest_document_type: "应用研究"
 paper_digest_one_sentence: "论文在土耳其语银行客服录音上比较只用真实数据、只用合成数据和真实加合成三种训练方式，发现只用合成远不如真实，真实加合成在 10 小时和 20 小时时明显降低词错误率而 50 小时收益消失，其中 Seed-VC 和 Vec2Wav2 的增广效果相对更好但多次重复转换会带来退化。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Yunus Emre Ozkose"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Ali Haznedaroglu"}]
 paper_digest_abstract_sha256: "ceeb6b2803a68d32ea4a673e0651d6a4a9a1845292f42cb9b870790040ea5862"
-paper_digest_sidecars: {"citation.bib":{"sha256":"179195f8835fda08fcd1f94fae1750b1c4101c75b2d9e8d65258e9a0f9c9f3d6","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13662/citation.bib"},"citation.json":{"sha256":"840d2fe00440d28f498292f629a7c1ca937d734ef5955167abb97dba7d1a9f0b","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13662/citation.json"},"citation.ris":{"sha256":"93d03827e6ac2f57d0ef2be06687e7293131bfda8d667decbd12165722b8a75e","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13662/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"ea4250a121f35cdd31bf5ad934af42f94d85e5edb4c146f9d310f132c65d7061","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13662/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"179195f8835fda08fcd1f94fae1750b1c4101c75b2d9e8d65258e9a0f9c9f3d6","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13662/citation.bib"},"citation.json":{"sha256":"840d2fe00440d28f498292f629a7c1ca937d734ef5955167abb97dba7d1a9f0b","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13662/citation.json"},"citation.ris":{"sha256":"93d03827e6ac2f57d0ef2be06687e7293131bfda8d667decbd12165722b8a75e","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13662/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"5c15060e778a1752bd8dfb9d2a641f8d794e8b82dbff0586446f063237a1c1e4","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13662/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "72386a82c71d83363d56cbf059a4c7716d783c87de52ff25ff1989b7720b7a11"
 paper_digest_api_reader_plan_sha256: "256f994042d6acbe6cce555ab0eee79a2c852b34d248f7261c2bdc0cef5ffd30"
@@ -52,8 +52,15 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[Enhancing Speech Recognition through Text-to-Speech and Voice Conversion Augmentation](https://arxiv.org/abs/2610.13662v1)*
 
-> 标签：#语音识别 | #数据增强 | #语音转换 | #文本到语音
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[语音识别](/audio-paper-digest-blog/papers/?concept=task.asr)；[语音转换](/audio-paper-digest-blog/papers/?concept=task.voice-conversion)；[语音合成](/audio-paper-digest-blog/papers/?concept=task.speech-synthesis) → [文本到语音](/audio-paper-digest-blog/papers/?concept=task.tts)
+- **研究方法**：[数据增强](/audio-paper-digest-blog/papers/?concept=method.augmentation)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**5.6/10** | 创新 1/2 | 技术严谨 1/1.5 | 实验充分 1/1.5 | 清晰度 0.7/1 | 影响力 0.8/1.5 | 开源 0/1.5 | 可复现 0.1/0.5 | 工程/实践 1/1.5
 
 

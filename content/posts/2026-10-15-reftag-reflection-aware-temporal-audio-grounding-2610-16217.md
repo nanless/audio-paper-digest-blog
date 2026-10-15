@@ -20,7 +20,7 @@ paper_digest_primary_task: "音频时间定位"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.temporal-grounding","label":"音频时间定位"},{"facet":"task","id":"task.audio-reasoning","label":"音频推理"},{"facet":"method","id":"method.reinforcement","label":"强化学习"},{"facet":"model_family","id":"model_family.audio-language","label":"音频大模型"}]
 paper_digest_primary_method: "强化学习"
 paper_digest_score: 6.8
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "针对自然语言查询在音频中所有出现位置都要找全找准的问题，RefTAG 让模型先写草稿区间再做数量与边界诊断并给出修订，并用最终定位质量与修订效果的联合奖励做强化学习，在 8228 条查询上把平均定位精度做到 51.01%，代价是一次回答要走完草稿加诊断加修订的完整结构。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Yuhang Dai"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Xin Shu"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Zhennan Lin"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Mingchen Shao"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Chengyou Wang"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Xiangang Li"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Jianwei Yu"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Lei Xie"}]
 paper_digest_abstract_sha256: "44ee330bbaa0011358a71072026446cc591732207ed1e88f3b7ffc3205b77ca7"
-paper_digest_sidecars: {"citation.bib":{"sha256":"66fbbe70b5e7768c2dc068c23319fe1d6c87a67c0e1eb6327906a9ac4e44f894","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16217/citation.bib"},"citation.json":{"sha256":"12539b9caf3b4be1f4542eabe27299eaf890fc281c0648b6cb9c0cafa8623d3c","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16217/citation.json"},"citation.ris":{"sha256":"7134c7679ddb6d73c4dab53131a0020d732b71db34536fa5aa4f8bc11da5b944","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16217/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"82cd32cdd628eb205e2e97b442dacc529d519ff3e8a3c3d276ff3ba3ab4e44e7","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16217/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"66fbbe70b5e7768c2dc068c23319fe1d6c87a67c0e1eb6327906a9ac4e44f894","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16217/citation.bib"},"citation.json":{"sha256":"12539b9caf3b4be1f4542eabe27299eaf890fc281c0648b6cb9c0cafa8623d3c","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16217/citation.json"},"citation.ris":{"sha256":"7134c7679ddb6d73c4dab53131a0020d732b71db34536fa5aa4f8bc11da5b944","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16217/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"f96c0e7fd92d38991fb7aaee39498019e7eb896f72130da744325263e7dc33e6","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16217/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "b6d7fe5b4f894c575b3ebfdc7139fefe0cc0cdc462638fd82e8bf51e916016bf"
 paper_digest_api_reader_plan_sha256: "5ae2a523ecfc762c0eb066da798139c37afe507e4e610363eda65be975bc0b4b"
@@ -52,8 +52,16 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[RefTAG: Reflection-aware Temporal Audio Grounding in Large Audio Language Models](https://arxiv.org/abs/2610.16217v1)*
 
-> 标签：#音频时间定位 | #音频推理 | #强化学习 | #音频大模型
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[音频理解](/audio-paper-digest-blog/papers/?concept=task.audio-understanding) → [音频时间定位](/audio-paper-digest-blog/papers/?concept=task.temporal-grounding)；[音频理解](/audio-paper-digest-blog/papers/?concept=task.audio-understanding) → [音频推理](/audio-paper-digest-blog/papers/?concept=task.audio-reasoning)
+- **研究方法**：[强化学习](/audio-paper-digest-blog/papers/?concept=method.reinforcement)
+- **模型家族**：[音频大模型](/audio-paper-digest-blog/papers/?concept=model_family.audio-language)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**6.8/10** | 创新 1.5/2 | 技术严谨 1.2/1.5 | 实验充分 1.2/1.5 | 清晰度 0.8/1 | 影响力 1/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 0.8/1.5
 
 

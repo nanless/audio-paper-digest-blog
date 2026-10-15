@@ -20,7 +20,7 @@ paper_digest_primary_task: "音频分类"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.audio-classification","label":"音频分类"},{"facet":"method","id":"method.ensemble-learning","label":"集成学习"},{"facet":"research_focus","id":"research_focus.comparison","label":"模型比较"},{"facet":"research_focus","id":"research_focus.interpretability","label":"可解释性"}]
 paper_digest_primary_method: "集成学习"
 paper_digest_score: 5.5
@@ -29,7 +29,7 @@ paper_digest_document_type: "应用研究"
 paper_digest_one_sentence: "论文把 Freesound 上的下载量和平均评分转成下载三分类与评分四分类，用元数据、平台声学描述子、eGeMAPS 和 MERT 四类特征比较随机森林、XGBoost 和 MLP，发现下载量靠元数据预测最好而音乐评分靠平台声学描述子最好，但 eGeMAPS 和 MERT 在短音效上基本失效。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Ikram El Hadi"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Nihad Elbari"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Kawtar Tlemçani"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Théo Mariotte"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Meysam Shamsi"}]
 paper_digest_abstract_sha256: "5f872790fadf9ba96accad30295a690f9ac0c96022ce1781a2dac65527b5d446"
-paper_digest_sidecars: {"citation.bib":{"sha256":"26893bd53eeda59a7770c7e99b77f841f0abbc4d60d71f0f5ba83033da4e7456","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16809/citation.bib"},"citation.json":{"sha256":"62d8230332ac669b6390f1fd8fd712812a71661a3e64771e6dbb85ad2a85f6e1","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16809/citation.json"},"citation.ris":{"sha256":"2de1f9608994d2d9097d6292a7681d436ab7968130079fc4f92370cae8f3ed35","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16809/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"cb60c45b57cc9ad45aba313f896cb63dc19896497c3d4627ba4f43d4397a4d69","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16809/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"26893bd53eeda59a7770c7e99b77f841f0abbc4d60d71f0f5ba83033da4e7456","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16809/citation.bib"},"citation.json":{"sha256":"62d8230332ac669b6390f1fd8fd712812a71661a3e64771e6dbb85ad2a85f6e1","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16809/citation.json"},"citation.ris":{"sha256":"2de1f9608994d2d9097d6292a7681d436ab7968130079fc4f92370cae8f3ed35","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16809/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"8f687cf901b5f8640cbc32a97bae2d057d3b5bb836b7ab26aed36641cb49b348","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16809/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "976fb35189702dc31d854a493949ef6b76bb1864af30b882ce811f9847fb8fdf"
 paper_digest_api_reader_plan_sha256: "639a55126ae409be08f199774914ecf6f8398280dbd44cf0ca34a84c83ba3b2a"
@@ -52,8 +52,16 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[Predicting Audio Popularity: A Comparative Study of Metadata and Acoustic Features Across Music and Sound Effects](https://arxiv.org/abs/2610.16809v1)*
 
-> 标签：#音频分类 | #集成学习 | #模型比较 | #可解释性
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[音频分类](/audio-paper-digest-blog/papers/?concept=task.audio-classification)
+- **研究方法**：[集成学习](/audio-paper-digest-blog/papers/?concept=method.ensemble-learning)
+- **研究重点**：[模型评估](/audio-paper-digest-blog/papers/?concept=research_focus.evaluation) → [模型比较](/audio-paper-digest-blog/papers/?concept=research_focus.comparison)；[可解释性](/audio-paper-digest-blog/papers/?concept=research_focus.interpretability)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**5.5/10** | 创新 1/2 | 技术严谨 1/1.5 | 实验充分 1/1.5 | 清晰度 0.8/1 | 影响力 0.8/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 0.6/1.5
 
 

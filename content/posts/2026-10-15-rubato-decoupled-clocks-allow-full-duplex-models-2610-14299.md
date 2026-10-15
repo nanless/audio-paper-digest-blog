@@ -20,7 +20,7 @@ paper_digest_primary_task: "全双工语音交互"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.full-duplex","label":"全双工语音交互"},{"facet":"method","id":"method.dynamic-computation","label":"动态计算与早退"},{"facet":"task","id":"task.audio-reasoning","label":"音频推理"},{"facet":"signal","id":"signal.speech","label":"语音"},{"facet":"setting","id":"setting.real-time","label":"实时处理"}]
 paper_digest_primary_method: "动态计算与早退"
 paper_digest_score: 7.6
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "针对全双工语音模型中实时音频与内部思考共用一条位置时间轴导致变速推理时错位的问题，Rubato 用实时钟与思考钟两套独立位置计数实现零样本变速插值，在只训练两种极端思考预算下保持准确率并随算力提升缩短给出答案的时间，代价是推理需维护多套键缓存与合成数据依赖。"
 paper_digest_authors: [{"affiliations":["The University of Texas at Austin","FAIR, Meta Superintelligence Labs"],"name":"Yi-Jen Shih"},{"affiliations":["FAIR, Meta Superintelligence Labs"],"name":"Puyuan Peng"},{"affiliations":["FAIR, Meta Superintelligence Labs"],"name":"Haohe Liu"},{"affiliations":["The University of Texas at Austin"],"name":"David Harwath"},{"affiliations":["FAIR, Meta Superintelligence Labs"],"name":"Abdelrahman Mohamed"}]
 paper_digest_abstract_sha256: "22ecb64569e14e180e47b9a0d35a08be13cc6cabc2db145749db585f3e76d24f"
-paper_digest_sidecars: {"citation.bib":{"sha256":"265f888e1cf8deec19400cc0f713795564e934afe2cc3061622dddd5c2ec701e","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14299/citation.bib"},"citation.json":{"sha256":"d7c8cf38caf4203c43fc49eef65285f5ce624e1fce396dc5d68d1f5588954492","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14299/citation.json"},"citation.ris":{"sha256":"5ec8fc667a34f3d6903858466baae184b559547a8dcdfd7b19f2de2c8c2d3eb5","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14299/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"83c0f1ef57e57ed4a869f51c6daef9a2290704614a2207d090fc30f4c4eeadf1","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14299/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"265f888e1cf8deec19400cc0f713795564e934afe2cc3061622dddd5c2ec701e","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14299/citation.bib"},"citation.json":{"sha256":"d7c8cf38caf4203c43fc49eef65285f5ce624e1fce396dc5d68d1f5588954492","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14299/citation.json"},"citation.ris":{"sha256":"5ec8fc667a34f3d6903858466baae184b559547a8dcdfd7b19f2de2c8c2d3eb5","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14299/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"974e33fe986ec844bee2ada59a3dac11834a5309d6d9cbda643f06980c256ec9","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14299/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "454de86edcfa3b10605f50b8963b3e89f53482cfea4dce26dbb493fe7c9ea38e"
 paper_digest_api_reader_plan_sha256: "685d477b414509469a263485164aad3f7b58e416dbb15e780e24e249d7ab7954"
@@ -52,8 +52,17 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[RUBATO: Decoupled Clocks Allow Full-Duplex Models to Think as Fast as They Can](https://arxiv.org/abs/2610.14299v1)*
 
-> 标签：#全双工语音交互 | #动态计算与早退 | #音频推理 | #语音 | #实时处理
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[语音交互](/audio-paper-digest-blog/papers/?concept=task.speech-interaction) → [全双工语音交互](/audio-paper-digest-blog/papers/?concept=task.full-duplex)；[音频理解](/audio-paper-digest-blog/papers/?concept=task.audio-understanding) → [音频推理](/audio-paper-digest-blog/papers/?concept=task.audio-reasoning)
+- **研究方法**：[模型压缩](/audio-paper-digest-blog/papers/?concept=method.compression) → [动态计算与早退](/audio-paper-digest-blog/papers/?concept=method.dynamic-computation)
+- **研究条件**：[实时处理](/audio-paper-digest-blog/papers/?concept=setting.real-time)
+- **信号**：[语音](/audio-paper-digest-blog/papers/?concept=signal.speech)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**7.6/10** | 创新 1.5/2 | 技术严谨 1.3/1.5 | 实验充分 1.3/1.5 | 清晰度 0.8/1 | 影响力 1/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1.4/1.5
 
 

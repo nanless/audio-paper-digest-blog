@@ -20,7 +20,7 @@ paper_digest_primary_task: "语音伪造检测"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.speech-spoofing","label":"语音伪造检测"},{"facet":"method","id":"method.uncertainty-estimation","label":"不确定性估计与校准"},{"facet":"signal","id":"signal.speech","label":"语音"},{"facet":"research_focus","id":"research_focus.robustness","label":"鲁棒性"}]
 paper_digest_primary_method: "不确定性估计与校准"
 paper_digest_score: 6.8
@@ -29,7 +29,7 @@ paper_digest_document_type: "应用研究"
 paper_digest_one_sentence: "论文把压缩语音表示送入 8 比特变分量子电路做瓶颈变换，在匹配经典对照下主要改善固定阈值下的部署代价与校准，最强域外证据是 AASIST 上 EER 相对降低 28% 而真机验证只证明可行且代价不稳定。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Anton Firc"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Nouhaila Innan"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Vojtěch Staněk"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Kamil Malinka"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Martin Perešini"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Zbyněk Lička"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Walid El Maouaki"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Alberto Marchisio"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Muhammad Shafique"}]
 paper_digest_abstract_sha256: "d7883d5ca1d0576e7609d36b9a26c5d520bd613a7c40b7aba5d8d770b4d4d9c5"
-paper_digest_sidecars: {"citation.bib":{"sha256":"2a95a33fa04492d18e5672b62b30be73267e0e70e8a413a802fb53e25e9aeb1d","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16390/citation.bib"},"citation.json":{"sha256":"9a4c2b39af0d936e2bf2cf45f259558dd828382848ba0e2ba183a2e3a4ff1471","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16390/citation.json"},"citation.ris":{"sha256":"ec9b15da6b4070fb423f9756fdcab9ba93f0d437fd756aaa7dff5d7f93026e57","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16390/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"000524f0b02a699a4cd2b3fd38355501b05dd9546ef6be6c53a5cee22d73611e","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16390/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"2a95a33fa04492d18e5672b62b30be73267e0e70e8a413a802fb53e25e9aeb1d","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16390/citation.bib"},"citation.json":{"sha256":"9a4c2b39af0d936e2bf2cf45f259558dd828382848ba0e2ba183a2e3a4ff1471","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16390/citation.json"},"citation.ris":{"sha256":"ec9b15da6b4070fb423f9756fdcab9ba93f0d437fd756aaa7dff5d7f93026e57","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16390/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"48c96842497eb16b81efc03da4eabd0c66ddf30027495cb278635be2af59eac3","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16390/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "97b860a2b4087b6235c1cb5dff30bdca73f5a18945d1bda8ea367080d0a85e9d"
 paper_digest_api_reader_plan_sha256: "46bb703f263dc4add61a446ddd739a390d8530eef22b0803f37d3fc539dfba56"
@@ -52,8 +52,17 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[QBFF: Deep Quantum Bottleneck for Automatic Speaker Verification Anti-Spoofing](https://arxiv.org/abs/2610.16390v1)*
 
-> 标签：#语音伪造检测 | #不确定性估计与校准 | #语音 | #鲁棒性
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[音频伪造检测](/audio-paper-digest-blog/papers/?concept=task.audio-forgery) → [语音伪造检测](/audio-paper-digest-blog/papers/?concept=task.speech-spoofing)
+- **研究方法**：[不确定性估计与校准](/audio-paper-digest-blog/papers/?concept=method.uncertainty-estimation)
+- **信号**：[语音](/audio-paper-digest-blog/papers/?concept=signal.speech)
+- **研究重点**：[鲁棒性](/audio-paper-digest-blog/papers/?concept=research_focus.robustness)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**6.8/10** | 创新 1.5/2 | 技术严谨 1/1.5 | 实验充分 1.2/1.5 | 清晰度 0.8/1 | 影响力 1/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 

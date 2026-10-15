@@ -20,7 +20,7 @@ paper_digest_primary_task: "语音识别"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.asr","label":"语音识别"},{"facet":"task","id":"task.tts","label":"文本到语音"},{"facet":"task","id":"task.audio-question-answering","label":"音频问答"},{"facet":"method","id":"method.autoregressive","label":"自回归模型"},{"facet":"method","id":"method.neural-codec","label":"神经编解码与离散单元"}]
 paper_digest_primary_method: "神经编解码与离散单元"
 paper_digest_score: 6.1
@@ -29,14 +29,14 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "论文把保留内容与韵律的单码本语音单元同时用作统一模型的输入与生成目标，在相同框架和数据下比较识别、判别与合成，并在问答微调后检验保留情况，但合成只用自动指标且局限于英语朗读语音。"
 paper_digest_authors: [{"affiliations":["Johns Hopkins University"],"name":"Mingrui Liang"},{"affiliations":["The University of Tokyo"],"name":"Kentaro Onda"},{"affiliations":["Carnegie Mellon University"],"name":"Shinji Watanabe"}]
 paper_digest_abstract_sha256: "409ce56a8809302cb32dec3aef8763fb227ca757c890e49b94c21891682bc083"
-paper_digest_sidecars: {"citation.bib":{"sha256":"8cd1ef02c1b08cf0517e794d71b570a57127c19200828ce577650fe8aa67234a","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18469/citation.bib"},"citation.json":{"sha256":"2a556a79872ca9d78c640c43e9c5ee5398795816040c77d244b7d3d311a789f3","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18469/citation.json"},"citation.ris":{"sha256":"82b3c64a8d20e781fa2fffcc4a58f8df34d19ad66229c0bd99261512d6a01b84","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18469/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"ea5710dfbf2c151c6a1c3961e8d20acfadd8d024153b8984522b51d5e91d537a","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18469/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"8cd1ef02c1b08cf0517e794d71b570a57127c19200828ce577650fe8aa67234a","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18469/citation.bib"},"citation.json":{"sha256":"2a556a79872ca9d78c640c43e9c5ee5398795816040c77d244b7d3d311a789f3","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18469/citation.json"},"citation.ris":{"sha256":"82b3c64a8d20e781fa2fffcc4a58f8df34d19ad66229c0bd99261512d6a01b84","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18469/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"cf351f63ddf9877ef84e19929d95899d5bd912b8549745cc3be7858f7c8936f2","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18469/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
-paper_digest_api_reader_article_sha256: "d6f878d5a7445fa2084625cd1024e9b09bee6acd2a1069f4d57082a39b1faf68"
-paper_digest_api_reader_plan_sha256: "82c6cbd1a3d6a120daea6514f2d358b9f88e286d9ef67284d6f19a0dff4e94d0"
+paper_digest_api_reader_article_sha256: "c08b9fe6d92f1db65f2891f8f76a48380d2767bf73e643cc5c4ed891fc301a12"
+paper_digest_api_reader_plan_sha256: "b6edd292705160f75b988ee0f2113e096f7bdc28d542f8fc247b8da8a2fedff1"
 paper_digest_api_reader_source_binding_contract: "api-reader-source-bindings-v4"
-paper_digest_api_reader_source_bindings_sha256: "2660b3254ba468341fe71443c2e4a7fd5888bb9494c5e137dbb3dc79950c8edd"
+paper_digest_api_reader_source_bindings_sha256: "6d546e6c96b65210037a8a144b0569b46c7f0f58a6908230b145e9c1003589c4"
 paper_digest_api_reader_source_table_count: 5
-paper_digest_api_reader_source_formula_count: 3
+paper_digest_api_reader_source_formula_count: 2
 paper_digest_api_reader_structured_artifacts_sha256: "d1165faad0bf40f9d09e18f4d3d23942114dd041af13508a29b3503bc537c4b2"
 paper_digest_api_reader_author_identity_contract: "api-reader-author-identity-v1"
 paper_digest_api_reader_author_identity_sha256: "e17dddb93b179887c8defd3ae414c8a9854da60b64fc6ba3ea1e8fe184c46975"
@@ -52,8 +52,15 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[PhonoVoxtLM: Exploring Single-Codebook Phonological Tokens for Speech Understanding and Generation](https://arxiv.org/abs/2610.18469v1)*
 
-> 标签：#语音识别 | #文本到语音 | #音频问答 | #自回归模型 | #神经编解码与离散单元
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[语音识别](/audio-paper-digest-blog/papers/?concept=task.asr)；[语音合成](/audio-paper-digest-blog/papers/?concept=task.speech-synthesis) → [文本到语音](/audio-paper-digest-blog/papers/?concept=task.tts)；[音频理解](/audio-paper-digest-blog/papers/?concept=task.audio-understanding) → [音频问答](/audio-paper-digest-blog/papers/?concept=task.audio-question-answering)
+- **研究方法**：[生成模型](/audio-paper-digest-blog/papers/?concept=method.generative) → [自回归模型](/audio-paper-digest-blog/papers/?concept=method.autoregressive)；[向量量化](/audio-paper-digest-blog/papers/?concept=method.vector-quantization) → [神经编解码与离散单元](/audio-paper-digest-blog/papers/?concept=method.neural-codec)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**6.1/10** | 创新 1.2/2 | 技术严谨 1/1.5 | 实验充分 1.1/1.5 | 清晰度 0.8/1 | 影响力 0.9/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 0.8/1.5
 
 
@@ -153,11 +160,7 @@ PhonoVoxtLM 沿用 VoxtLM 的统一框架，只替换语音符号来源。理解
 
 主实验使用 OPT-350M 主干。平衡混合包含从 LibriLight 采样的 30 万语音样本、从 LibriSpeech 语言建模文本采样的 30 万文本样本、LibriSpeech 960 小时训练集的 28.1 万配对样本用于识别，以及 LibriTTS 与 VCTK 的 39.9 万配对样本用于合成。扩大设置把两个非配对部分各增至 3,000,000，配对数据与开发测试划分不变。问答适配把 LibriSQA 第一部分与第二部分按相同答案生成目标合并，训练集约 204,000，再混入 6.5 万重放样本，其中识别 25,000、文本续写 25,000、合成 10,000、语音续写 5,000，合计约 269,000 样本，问答与重放的监督目标词元分别约 5,700,000 与 5,100,000，接近平衡。
 
-四任务训练用 Adam、峰值学习率 3×10 的负 4 次方、2500 步预热、权重衰减 10 的负 6 次方、混合精度、20 个小批量梯度累积、梯度裁剪 1.0、标签平滑 0.1，按开发集目标词元准确率选检查点。问答适配把峰值学习率降至 10 的负 4 次方、预热 300 步，按开发集答案词元准确率选点，并按开发损失 patience 为 4 个验证轮次早停。选择题打分用有语音条件与无语音条件的答案对数似然之差选择候选项，空语音段保留其他提示成分，候选似然对答案词元求和且不含结束符。
-
-\[\displaystyle s(A_{j};S,Q)={}\]
-
-上式是选择题的校准分数形式，含义是用加入语音后的似然减去无语音时的似然，以突出语音带来的增益，而不是直接比较原始似然大小。
+四任务训练用 Adam、峰值学习率 3×10 的负 4 次方、2500 步预热、权重衰减 10 的负 6 次方、混合精度、20 个小批量梯度累积、梯度裁剪 1.0、标签平滑 0.1，按开发集目标词元准确率选检查点。问答适配把峰值学习率降至 10 的负 4 次方、预热 300 步，按开发集答案词元准确率选点，并按开发损失 patience 为 4 个验证轮次早停。选择题打分用有语音条件与无语音条件的答案对数似然之差选择候选项，空语音段保留其他提示成分，候选似然对答案词元求和且不含结束符，含义是用加入语音后的似然减去无语音时的似然，以突出语音带来的增益，而不是直接比较原始似然大小。
 
 ### 平衡数据下相对 HuBERT 基线的主要变化
 
@@ -216,10 +219,10 @@ PhonoVoxtLM 沿用 VoxtLM 的统一框架，只替换语音符号来源。理解
 
 下表整理原文直接报告的合成端数字，突出共享表示必须两端都测的原因。
 
-| 语音单元 | 合成预测质量 | 合成基频相关 | WavLM 基线范围含义 |
-| --- | --- | --- | --- |
-| 音系单元 2000 | 3.98 | 0.282 | 合成端更强 |
-| WavLM-1K 与 2K | 3.62–3.70 | 0.144–0.159 | 预测质量与基频匹配较低 |
+| 语音单元 | 合成预测质量 | 合成基频相关 | WavLM 基线范围含义 | 结果含义 |
+| --- | --- | --- | --- | --- |
+| 音系单元 2000 | 3.98 | 0.282 | 合成端更强 | 预测质量与基频匹配领先 |
+| WavLM-1K 与 2K | 3.62–3.70 | 0.144–0.159 | 预测质量与基频匹配较低 | 理解强但合成弱 |
 
 表后解释要给出未胜出项。原文显示 WavLM 基线在语音判别与识别上更好、词错率更低，而音系单元在 4 个合成指标上更好，预测质量与参考音高相关优势最明显；音系模型的合成字符错率接近 WavLM-1K 且低于 WavLM-2K。因此判别与识别更强的单元不一定合成更强，音系单元的价值是平衡：在合成明显更好时仍保持有竞争力的理解性能。论文同时提醒基线只匹配了编码器结构与特征层，没有分离分词训练目标各自的作用，评价又因说话人不匹配只能把基频相关当作同条件下的相对比较，而非说话人匹配的韵律保持的直接度量。
 

@@ -20,7 +20,7 @@ paper_digest_primary_task: "音频分类"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.audio-classification","label":"音频分类"},{"facet":"method","id":"method.benchmark-design","label":"基准设计"},{"facet":"artifact","id":"artifact.benchmark","label":"基准测试"},{"facet":"model_family","id":"model_family.audio-language","label":"音频大模型"}]
 paper_digest_primary_method: "基准设计"
 paper_digest_score: 6.8
@@ -29,7 +29,7 @@ paper_digest_document_type: "数据集与基准"
 paper_digest_one_sentence: "UA-Bench 用 375,051 条参数可追溯的合成水下音频考查通用音频语言模型，九个开源模型细粒度准确率仅 2.0%–13.1%，波形主要帮助粗粒度路由而对细分类提升至多 4.7 个百分点。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Zhe Sun"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Liang An"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Jiayu Yao"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Ronglai Qian"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Jianing Cai"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Ziwei Huang"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Qing Fan"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Zhiyuan Yang"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Yujun Cai"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Hongli Cao"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Yiwei Wang"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Xiaoyan Wang"}]
 paper_digest_abstract_sha256: "42828abffea823998724a2658506dfdf4b9fbedbe601244564ad24d05314f0fa"
-paper_digest_sidecars: {"citation.bib":{"sha256":"4c65c9923e27d4aa92334050fe431b90109025aeb67d32ee645511f63a9c8c02","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16942/citation.bib"},"citation.json":{"sha256":"f594026f581e42aa1b2f1c1ccb0fb896578988b4175c636b8fb7b202d97fe509","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16942/citation.json"},"citation.ris":{"sha256":"f048347fdf2e1e086d66229399255fe15b0c2aa317431f8a1de55e8daf2ca0d4","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16942/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"b65d3dd245bc205929d88544f61140effbb3f38e1996828f61a8d9e8e6af2477","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16942/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"4c65c9923e27d4aa92334050fe431b90109025aeb67d32ee645511f63a9c8c02","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16942/citation.bib"},"citation.json":{"sha256":"f594026f581e42aa1b2f1c1ccb0fb896578988b4175c636b8fb7b202d97fe509","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16942/citation.json"},"citation.ris":{"sha256":"f048347fdf2e1e086d66229399255fe15b0c2aa317431f8a1de55e8daf2ca0d4","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16942/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"d9dcae8b498d7c09dcf7ce3a6bb2ad50e7e5aee1129adb0884a66c28bd8a3f12","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16942/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "2ff44842f227a2f0641eb89e569a653a1facffc7214e076e01ecce426fb90bd3"
 paper_digest_api_reader_plan_sha256: "140cdb03694e2eccf1b40e7f917556d2376c71ff61aea3dd157df2d63a2ff8f6"
@@ -52,8 +52,17 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[UA-Bench: Benchmarking Large Audio-Language Models on Underwater Acoustic Recognition](https://arxiv.org/abs/2610.16942v1)*
 
-> 标签：#音频分类 | #基准设计 | #基准测试 | #音频大模型
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[音频分类](/audio-paper-digest-blog/papers/?concept=task.audio-classification)
+- **研究方法**：[评测协议](/audio-paper-digest-blog/papers/?concept=method.evaluation-protocol) → [基准设计](/audio-paper-digest-blog/papers/?concept=method.benchmark-design)
+- **研究产物**：[基准测试](/audio-paper-digest-blog/papers/?concept=artifact.benchmark)
+- **模型家族**：[音频大模型](/audio-paper-digest-blog/papers/?concept=model_family.audio-language)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**6.8/10** | 创新 1.5/2 | 技术严谨 1.2/1.5 | 实验充分 1.2/1.5 | 清晰度 0.8/1 | 影响力 0.8/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 

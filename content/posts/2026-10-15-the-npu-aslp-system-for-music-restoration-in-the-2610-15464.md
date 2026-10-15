@@ -20,7 +20,7 @@ paper_digest_primary_task: "音频修复"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.audio-restoration","label":"音频修复"},{"facet":"method","id":"method.moe","label":"混合专家模型"},{"facet":"method","id":"method.time-frequency","label":"时频分析"},{"facet":"signal","id":"signal.music","label":"音乐"}]
 paper_digest_primary_method: "混合专家模型"
 paper_digest_score: 6.3
@@ -29,10 +29,10 @@ paper_digest_document_type: "系统技术报告"
 paper_digest_one_sentence: "针对播放器染色、空间传播与手机录音链路耦合导致的音乐退化，该系统用尺度感知编码加直接复数谱映射的双轴 Top-1 稀疏专家模型复原，并以 202 种条件下 1572.12 小时对齐仿真数据提供监督，最终以 2.951M 参数取得盲测 LSD 1.273、FAD 2.540、ViSQOL 3.495 的第三名成绩。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Zeyu Zhu"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Yike Zhu"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Xingchen Li"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Chaoren Yu"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Jingyi Wang"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Yurun Li"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Jierui Guo"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Chunjiang He"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Lei Xie"}]
 paper_digest_abstract_sha256: "13a825fa178fa0e95d87c5f230efb48b7b178bdf92fc8f528ad1bb3605653f08"
-paper_digest_sidecars: {"citation.bib":{"sha256":"54fa0e85e65bc04afca91579c3a3b1d07a7db89c63bcea087672ffe75dc28820","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15464/citation.bib"},"citation.json":{"sha256":"ec41a774b7c1772179be37c8615d3a26f06177022f124f21e980873a7989e87a","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15464/citation.json"},"citation.ris":{"sha256":"c8d52b3df57e8d51468f8a0069af4a2531e274ec5040f05f31e81817de0cafe3","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15464/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"e457e951e252f9b8e261cdbb95828d0ec4d75bd0be6f7fe1a6776a5509044cd6","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15464/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"54fa0e85e65bc04afca91579c3a3b1d07a7db89c63bcea087672ffe75dc28820","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15464/citation.bib"},"citation.json":{"sha256":"ec41a774b7c1772179be37c8615d3a26f06177022f124f21e980873a7989e87a","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15464/citation.json"},"citation.ris":{"sha256":"c8d52b3df57e8d51468f8a0069af4a2531e274ec5040f05f31e81817de0cafe3","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15464/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"70bbb453e88f9aeccc05137a566de11a1917ecaf10053245721d1699576221d0","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15464/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
-paper_digest_api_reader_article_sha256: "42dba8889336641731571ccf1cd937c304eefce3f990999025fbecf376faa35d"
-paper_digest_api_reader_plan_sha256: "edd9f2ee3147dd4dec4782c8f178a02cfa1869ca4261696d3f20a2fb60ae23c6"
+paper_digest_api_reader_article_sha256: "e16c25deb70a1cc6960df04435b7cf02a30867cd5b34fc1050301147be6d1dcb"
+paper_digest_api_reader_plan_sha256: "7768dfa4046e49d432f4f55c5359ed35eba28af04e5b6aa99341769a59c5e8ad"
 paper_digest_api_reader_source_binding_contract: "api-reader-source-bindings-v4"
 paper_digest_api_reader_source_bindings_sha256: "1820137879bf402189d98bf4050284674a341f9a52e3ab76f726e2e1a7472a11"
 paper_digest_api_reader_source_table_count: 4
@@ -52,8 +52,16 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[The NPU-ASLP System for Music Restoration in the CCF-AATC 2026 Challenge](https://arxiv.org/abs/2610.15464v1)*
 
-> 标签：#音频修复 | #混合专家模型 | #时频分析 | #音乐
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[音频修复](/audio-paper-digest-blog/papers/?concept=task.audio-restoration)
+- **研究方法**：[混合专家模型](/audio-paper-digest-blog/papers/?concept=method.moe)；[信号处理](/audio-paper-digest-blog/papers/?concept=method.signal-processing) → [时频分析](/audio-paper-digest-blog/papers/?concept=method.time-frequency)
+- **信号**：[音乐](/audio-paper-digest-blog/papers/?concept=signal.music)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**6.3/10** | 创新 1.2/2 | 技术严谨 1/1.5 | 实验充分 1.2/1.5 | 清晰度 0.8/1 | 影响力 0.8/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 
@@ -101,11 +109,11 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 ### 系统从录音到干净音乐经历了哪些步骤
 
-系统主干输入是录音波形的复谱 Y，属于复数矩阵，维度为频点数 F 乘时间帧数 T。先用 32 毫秒 Hanning 窗、8 毫秒移位做短时傅里叶变换，再把 F 个频点切成 K 等于 80 的 Mel 式子带。尺度感知带编码器把每个带内频点编码成 N 等于 32 维特征，得到 N 乘 K 乘 T 的 3 维表示。接着 6 层堆叠的 TF-MoE 块沿频率轴和时间轴依次处理，最后映射解码器合并子带特征，直接估计目标复谱，再经逆短时傅里叶变换重建波形。
+系统主干输入是录音波形的复谱 Y，属于复数矩阵，维度为频点数 F 乘时间帧数 T。先用 32 毫秒 Hanning 窗、8 毫秒移位做短时傅里叶变换，再把 F 个频点切成 K 等于 80 的 Mel 式子带。尺度感知带编码器把每个带内频点编码成 N 等于 32 维特征，得到 N 乘 K 乘 T 的 3 维表示。接着堆叠的 TF-MoE 块沿频率轴和时间轴依次处理，最后映射解码器合并子带特征，直接估计目标复谱，再经逆短时傅里叶变换重建波形。堆叠 6 层、隐维 32、80 带的配置以方法正文和图注为准。
 
-下图展示了这条从频谱提取、带划分编码、TF-MoE 建模到映射解码的主路径，是理解各组件分工的总览，请按箭头顺序阅读各模块的输入输出。
+下图展示了这条从频谱提取、带划分编码、TF-MoE 建模到映射解码的主路径，是理解各组件分工的总览。图内可见的是 Mel80 带划分框、Z 与 Q 特征维度框和 TF-MoE 箭头，框内并无 6 层或 x6 字样，层数请以图注 R 等于 6 和方法中的 6 层描述为准，不要在图内寻找不存在的层数标注。
 
-> **看图路径：** 1. 先沿输入复谱到输出复谱的箭头看主路径；2. 再看 80 带划分、特征维度与 6 层堆叠的标注位置；3. 比较编码器、TF-MoE 与映射解码器的分工
+> **看图路径：** 1. 先沿输入复谱到输出复谱的箭头看主路径；2. 再看图内 Mel80 带划分与 Z/Q 特征维度的框注；3. 注意 TF-MoE 框内没有层数标注，R 等于 6 以图注和方法为准
 
 [![原论文 Figure 1：Overview of the restoration backbone.](https://arxiv.org/html/2610.15464v1/backbone.svg)](https://arxiv.org/html/2610.15464v1/backbone.svg)
 
@@ -181,11 +189,11 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 | TAU Urban Acoustic Scenes [10] | FSD50K [7] |
 | DEMAND [24] | UrbanSound8K [21] |
 
-该表列出仿真噪声池的来源，左右两列均为数据集名称，覆盖城市声景、事件声与背景噪声。仿真共设 202 种场景设备质量距离条件，每条件采样 1000 段，合计 202000 对齐对，1572.12 小时。物理顺序严格按录制先后：预处理准备活跃音乐片段并匹配官方干净均方根轮廓，保留 3 秒真实上下文前缀供混响压缩和自动增益状态稳定，该前缀不计入监督段；播放模拟输入增益、可选动态压缩、软非线性和扬声器频响。
+该表列出仿真噪声池的来源，左右两列均为数据集名称，覆盖城市声景、事件声与背景噪声，更多噪声来源与音乐条目见原文表格。仿真共设 202 种场景设备质量距离条件，每条件采样 1000 段，合计 202000 对齐对，1572.12 小时。物理顺序严格按录制先后：预处理准备活跃音乐片段并匹配官方干净均方根轮廓，保留 3 秒真实上下文前缀供混响压缩和自动增益状态稳定，该前缀不计入监督段；播放模拟输入增益、可选动态压缩、软非线性和扬声器频响。
 
 传播对每扬声器通道卷积各自冲激响应、独立增益加小延迟后求和，常规设备 1 到 2 声源，阵列用 6、12 或 18 声源，定位直达声补偿卷积延迟使监督同一起始样点，再按 1 到 50 米距离衰减加 -15 到 20 dB 信噪比的噪声；录音经麦克风响应滤波预放、自动增益、按真实电平校准加防削波线性安全增益。
 
-下图是该链路总览，请按高质量音乐到劣化录音的顺序看 4 个阶段，并注意前缀与 3 段 degradations 的先后依赖。
+下图是该链路总览，请按高质量音乐到劣化录音的顺序看 4 个阶段，并注意前缀与 3 段退化的先后依赖。
 
 > **看图路径：** 1. 按高质量音乐到劣化录音的顺序看四个阶段；2. 注意 3 秒上下文前缀在最前端的作用；3. 看播放、传播、录音三段的先后依赖
 
@@ -237,7 +245,7 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 复现先对齐数据与评估，再跑模型。数据侧需准备 16 千赫单声道音乐、噪声与房间冲激响应，按论文 202 条件与电平轮廓重建仿真链，特别注意 3 秒上下文前缀只用于状态稳定而不计入监督，直达声对齐保证监督同一起始样点，信噪比 -15 到 20 dB。模型侧按 80 带、N 等于 32、6 层、每层 12 专家、Top-1 路由、四头注意力加 31 核卷积搭建，主干输入输出为复谱。
 
-训练用随机种子 42、AdamW 上述学习率与热身余弦、全局批量 96、4 秒随机裁剪，用 25 首开发录音头中尾 10 秒裁剪加 500 固定仿真段选型。推理用 10 秒块 5 秒跳交叠相加。来源方面，论文列出的<https://www.npu-aslp.org>经核验为第三方可用链接，仅证明论文提到该地址，不证明作者已开源代码或权重；本文未报告代码开源与权重下载，不可将三者混为一谈。复现时应先用小规模仿真验证对齐与评估器一致，再扩大到全量。
+训练用随机种子 42、AdamW 上述学习率与热身余弦、全局批量 96、4 秒随机裁剪，用 25 首开发录音头中尾 10 秒裁剪加 500 固定仿真段选型。推理用 10 秒块 5 秒跳交叠相加。来源方面，论文列出的 <https://www.npu-aslp.org> 经核验为第三方可用链接，仅证明论文提到该地址，不证明作者已开源代码或权重；本文未报告代码开源与权重下载，不可将三者混为一谈。复现时应先用小规模仿真验证对齐与评估器一致，再扩大到全量。
 
 ### 什么时候值得尝试，还缺哪项验证
 

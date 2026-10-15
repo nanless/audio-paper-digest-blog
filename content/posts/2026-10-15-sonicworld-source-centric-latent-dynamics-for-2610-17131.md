@@ -20,7 +20,7 @@ paper_digest_primary_task: "音频问答"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.audio-question-answering","label":"音频问答"},{"facet":"task","id":"task.localization","label":"声源定位"},{"facet":"method","id":"method.state-space","label":"状态空间模型"},{"facet":"artifact","id":"artifact.benchmark","label":"基准测试"}]
 paper_digest_primary_method: "状态空间模型"
 paper_digest_score: 8.0
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "针对重叠与运动下指定声源在指定时刻位置难定位的问题，SonicWorld 用持续声源状态组织声学证据，在 Sonic-Bench 上把单声源方向准确率从 43.75% 提升到 50.00%，代价是需要完整片段离线推理与两阶段微调。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Chenlong Wei"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Hanling Wang"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Mingjin Lou"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Yufan Shi"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Yandong Sun"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Sheldon Yu"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Xiaohui Zhu"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Xiaobo Jin"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Yiwei Wang"}]
 paper_digest_abstract_sha256: "58f24966b4c580de709d2e8c5398d91ec4c50eca14f262a83804bc37bab12e25"
-paper_digest_sidecars: {"citation.bib":{"sha256":"f703163737193bbfc1bf0ffc7d26997261d3cca6fbb39f2f63b4ac5ac9e88708","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17131/citation.bib"},"citation.json":{"sha256":"2cc12608b1c16259650988e224a3365483208157f03f73918b692b01850e617a","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17131/citation.json"},"citation.ris":{"sha256":"2027014b3e2aa8e8fe6e9a235d1c9a874b22f9da1c66b6da6ba6a68c744ea793","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17131/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"a78a316de345e05359d8e4e78ca5a815f4a1eb148a2db8431cf97c73b7c2a8d7","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17131/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"f703163737193bbfc1bf0ffc7d26997261d3cca6fbb39f2f63b4ac5ac9e88708","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17131/citation.bib"},"citation.json":{"sha256":"2cc12608b1c16259650988e224a3365483208157f03f73918b692b01850e617a","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17131/citation.json"},"citation.ris":{"sha256":"2027014b3e2aa8e8fe6e9a235d1c9a874b22f9da1c66b6da6ba6a68c744ea793","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17131/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"758582253eda4c124896d2c286324ff35732800954c5891b546f2e8d6a3b6a45","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17131/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "c42941048724a72082a385ea9b8035c7e82a6debac06bcc4b5c83254b8461773"
 paper_digest_api_reader_plan_sha256: "ca5f37c5a156b60c4951ad9f935dc0174b3f8ef48b809b13125c9fe85cf1aa5c"
@@ -52,8 +52,16 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[SonicWorld: Source-Centric Latent Dynamics for Spatial Audio Reasoning](https://arxiv.org/abs/2610.17131v1)*
 
-> 标签：#音频问答 | #声源定位 | #状态空间模型 | #基准测试
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[音频理解](/audio-paper-digest-blog/papers/?concept=task.audio-understanding) → [音频问答](/audio-paper-digest-blog/papers/?concept=task.audio-question-answering)；[声源定位](/audio-paper-digest-blog/papers/?concept=task.localization)
+- **研究方法**：[状态空间模型](/audio-paper-digest-blog/papers/?concept=method.state-space)
+- **研究产物**：[基准测试](/audio-paper-digest-blog/papers/?concept=artifact.benchmark)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**8.0/10** | 创新 1.5/2 | 技术严谨 1.2/1.5 | 实验充分 1.2/1.5 | 清晰度 0.8/1 | 影响力 1/1.5 | 开源 1/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 

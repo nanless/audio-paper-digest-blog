@@ -44,7 +44,7 @@
       "primaryMethodId": "method.preference-optimization",
       "primaryTask": "文本到语音",
       "primaryTaskId": "task.tts",
-      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
       "registryVersion": "paper-tag-catalog-v2",
       "selectionContract": "paper-tag-selection-v2"
     }
@@ -52,63 +52,63 @@
   "authors": [
     {
       "affiliations": [
-        "机构信息未在 arXiv HTML 中可靠披露"
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
       ],
       "name": "Yingda Shen"
     },
     {
       "affiliations": [
-        "机构信息未在 arXiv HTML 中可靠披露"
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
       ],
       "name": "Yao Qian"
     },
     {
       "affiliations": [
-        "机构信息未在 arXiv HTML 中可靠披露"
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
       ],
       "name": "Dekun Chen"
     },
     {
       "affiliations": [
-        "机构信息未在 arXiv HTML 中可靠披露"
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
       ],
       "name": "Yufei Liu"
     },
     {
       "affiliations": [
-        "机构信息未在 arXiv HTML 中可靠披露"
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
       ],
       "name": "Junan Zhang"
     },
     {
       "affiliations": [
-        "机构信息未在 arXiv HTML 中可靠披露"
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
       ],
       "name": "Chong Jing"
     },
     {
       "affiliations": [
-        "机构信息未在 arXiv HTML 中可靠披露"
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
       ],
       "name": "Han Wang"
     },
     {
       "affiliations": [
-        "机构信息未在 arXiv HTML 中可靠披露"
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
       ],
       "name": "Yuxiang Wang"
     },
     {
       "affiliations": [
-        "机构信息未在 arXiv HTML 中可靠披露"
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
       ],
       "name": "Zhizheng Wu"
     }
   ],
   "contract": "paper-research-context-v2",
-  "oneSentenceThesis": "论文研究连续自回归语音模型在偏好后训练中如何构造偏好对、在哪个流噪声水平比较以及更新自回归主干还是声学头，发现固定声学头只更新主干后部层在所测条件下带来更大的自动奖励提升，但训练损失更低并不等于生成语音更好。",
+  "oneSentenceThesis": "论文研究连续自回归语音模型如何构造偏好对、在哪个流噪声水平比较优劣以及更新主干还是声学头，发现在受试设置下固定声学头只更新主干后部能提升自动奖励，但训练损失最低并不对应生成语音最好。",
   "originalTitle": "What Matters in Preference Post-Training of Continuous Autoregressive Speech Language Models",
   "pdfUrl": "https://arxiv.org/pdf/2610.16276v1.pdf",
-  "readerTitle": "连续自回归语音语言模型的偏好后训练：采样、流时间与更新位置",
+  "readerTitle": "连续自回归语音语言模型的偏好后训练：扰动、流时间与更新模块",
   "schemaVersion": 2
 }

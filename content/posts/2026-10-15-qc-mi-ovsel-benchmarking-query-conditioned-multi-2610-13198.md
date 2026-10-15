@@ -20,7 +20,7 @@ paper_digest_primary_task: "联合声音事件检测定位"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.seld","label":"联合声音事件检测定位"},{"facet":"method","id":"method.benchmark-design","label":"基准设计"},{"facet":"artifact","id":"artifact.benchmark","label":"基准测试"},{"facet":"signal","id":"signal.spatial-audio","label":"空间音频信号"}]
 paper_digest_primary_method: "基准设计"
 paper_digest_score: 7.0
@@ -29,7 +29,7 @@ paper_digest_document_type: "数据集与基准"
 paper_digest_one_sentence: "论文提出查询条件下的同类多声源集合定位任务，用 40,000 场景基准检验包含缺席查询在内的集合恢复，Q-RSet 以查询加权的声源槽与证据汇聚实现最多 3 个同类源的活动与方向预测，主测试 F1 为 50.36% 但方向误差与空查询误报仍有明显代价。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Yongqiang Chen"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Peiwei Chang"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Yuelan Cheng"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Xiatian Zhu"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Wenwu Wang"}]
 paper_digest_abstract_sha256: "0ca5e1b2b3deafeccd47dbe277b1a204e864aef8a48a2f49849b8f6a3857fcde"
-paper_digest_sidecars: {"citation.bib":{"sha256":"094b20e35c24a9e6b667a6c98e214a6244da7d3b3baffcfdd9ec37354964e177","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13198/citation.bib"},"citation.json":{"sha256":"3b5f1d6786d1c79b0d6a0ec12b25f8ce840e9ac6c9ca6bad2bc530795ce917b3","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13198/citation.json"},"citation.ris":{"sha256":"a791a9641dd27babc1080c8166663cd56edaaf3fb6503dc54af02ea25da982b5","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13198/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"0c91aec461511532de3c6fdf654f7e841eadcfe72e2208e6ff0a64334750af1a","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13198/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"094b20e35c24a9e6b667a6c98e214a6244da7d3b3baffcfdd9ec37354964e177","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13198/citation.bib"},"citation.json":{"sha256":"3b5f1d6786d1c79b0d6a0ec12b25f8ce840e9ac6c9ca6bad2bc530795ce917b3","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13198/citation.json"},"citation.ris":{"sha256":"a791a9641dd27babc1080c8166663cd56edaaf3fb6503dc54af02ea25da982b5","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13198/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"015b8113bfa454f5d16f29254c27b2915c8d7f579e89458970098475e3221cb8","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13198/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "00517590cfbf78aac2c6c07a26cae81a1808206919cf3cd9d097980db201edbd"
 paper_digest_api_reader_plan_sha256: "ebabb4b8ccaaba4f0ee20f1dc3ace8e779581744781d6b2be1d3ab97e741fb8d"
@@ -52,8 +52,17 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[QC-MI-OVSEL: Benchmarking Query-Conditioned Multi-Instance Open-Vocabulary Sound Event Localization](https://arxiv.org/abs/2610.13198v1)*
 
-> 标签：#联合声音事件检测定位 | #基准设计 | #基准测试 | #空间音频信号
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[联合声音事件检测定位](/audio-paper-digest-blog/papers/?concept=task.seld)
+- **研究方法**：[评测协议](/audio-paper-digest-blog/papers/?concept=method.evaluation-protocol) → [基准设计](/audio-paper-digest-blog/papers/?concept=method.benchmark-design)
+- **信号**：[空间音频信号](/audio-paper-digest-blog/papers/?concept=signal.spatial-audio)
+- **研究产物**：[基准测试](/audio-paper-digest-blog/papers/?concept=artifact.benchmark)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**7.0/10** | 创新 1.5/2 | 技术严谨 1.2/1.5 | 实验充分 1.2/1.5 | 清晰度 0.8/1 | 影响力 1/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 

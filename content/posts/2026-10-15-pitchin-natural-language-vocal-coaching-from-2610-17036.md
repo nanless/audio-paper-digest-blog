@@ -20,7 +20,7 @@ paper_digest_primary_task: "音频问答"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.audio-question-answering","label":"音频问答"},{"facet":"task","id":"task.music-understanding","label":"音乐分析"},{"facet":"method","id":"method.instruction-tuning","label":"指令微调"},{"facet":"artifact","id":"artifact.dataset","label":"数据集"}]
 paper_digest_primary_method: "指令微调"
 paper_digest_score: 6.7
@@ -29,7 +29,7 @@ paper_digest_document_type: "数据集与基准"
 paper_digest_one_sentence: "论文要解决演唱录音缺专家诊断配对的问题，把 Reddit 评论整理成 Focused QA 和 Overall Feedback 来微调音频语言模型，在 VocalCoachBench 上把有效诊断加纠正的比例从 21.3% 提高到 61.0%，代价是严格匹配专家诊断仍很低且识别类辅助任务没有带来开放式指导增益。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Hayeon Bang"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Hounsu Kim"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Joonyong Park"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Jung-Jae Yu"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Juhan Nam"}]
 paper_digest_abstract_sha256: "c875a05df34f5257b6681cefe5fec5e1f4cadee108b5841550f89b09faec5cdb"
-paper_digest_sidecars: {"citation.bib":{"sha256":"bab3824523514c88adec5869a99934f3f41e6a28a0bd889b3d5eaf6891b23026","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17036/citation.bib"},"citation.json":{"sha256":"13a31e4efbf838030abd50b1461f06f4b07f17b5ee04015cd897af936f77e1d6","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17036/citation.json"},"citation.ris":{"sha256":"4cf7336fb7b60341f012b2895d7cfdeb4be7f2d879ca05e9237e0e1b12aeac1d","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17036/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"44d97947afcdaa09b4074bb39689ed7aaca2b61bdb52218f0c4978eb80f3a60c","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17036/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"bab3824523514c88adec5869a99934f3f41e6a28a0bd889b3d5eaf6891b23026","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17036/citation.bib"},"citation.json":{"sha256":"13a31e4efbf838030abd50b1461f06f4b07f17b5ee04015cd897af936f77e1d6","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17036/citation.json"},"citation.ris":{"sha256":"4cf7336fb7b60341f012b2895d7cfdeb4be7f2d879ca05e9237e0e1b12aeac1d","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17036/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"6655dc5ddd6b99f1cc18241c53ccf6f26c9113ea4e2e2c546ee39abc6bbce521","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17036/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "7d79ebc5e6f8e3d4fb90c5ce3fff214d2b3175dda51d83ff872be1a85afbe62a"
 paper_digest_api_reader_plan_sha256: "b6d67992e595d16f1a84e77e3b9b5bb1323a7f33e0913d97122d8640051b23a9"
@@ -52,8 +52,16 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[PitchIn: Natural-Language Vocal Coaching from Unstructured Community Feedback](https://arxiv.org/abs/2610.17036v1)*
 
-> 标签：#音频问答 | #音乐分析 | #指令微调 | #数据集
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[音频理解](/audio-paper-digest-blog/papers/?concept=task.audio-understanding) → [音频问答](/audio-paper-digest-blog/papers/?concept=task.audio-question-answering)；[音乐分析](/audio-paper-digest-blog/papers/?concept=task.music-understanding)
+- **研究方法**：[指令微调](/audio-paper-digest-blog/papers/?concept=method.instruction-tuning)
+- **研究产物**：[数据集](/audio-paper-digest-blog/papers/?concept=artifact.dataset)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**6.7/10** | 创新 1.2/2 | 技术严谨 1/1.5 | 实验充分 1.2/1.5 | 清晰度 0.8/1 | 影响力 0.8/1.5 | 开源 0.2/1.5 | 可复现 0.3/0.5 | 工程/实践 1.2/1.5
 
 

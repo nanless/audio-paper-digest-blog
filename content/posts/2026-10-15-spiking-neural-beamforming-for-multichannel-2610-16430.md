@@ -20,7 +20,7 @@ paper_digest_primary_task: "语音增强"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.speech-enhancement","label":"语音增强"},{"facet":"method","id":"method.beamforming","label":"波束成形"},{"facet":"method","id":"method.signal-processing","label":"信号处理"},{"facet":"setting","id":"setting.microphone-array","label":"麦克风阵列"},{"facet":"setting","id":"setting.on-device","label":"端侧运行"}]
 paper_digest_primary_method: "波束成形"
 paper_digest_score: 6.0
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "论文把多通道复数掩码估计问题交给全连接脉冲网络，用直接编码与率编码两种脉冲序列实现多麦克风空间信息的利用，并在固定仿真条件下刻画了模型宽度与脉冲长度带来的增强质量与计算代价权衡。"
 paper_digest_authors: [{"affiliations":["School of Electrical and Computer Engineering, Ben-Gurion University of the Negev, Israel"],"name":"Hanan Beit-On"},{"affiliations":["Neuromorphic Lab, Israel"],"name":"Eli Shapira"},{"affiliations":["School of Electrical and Computer Engineering, Ben-Gurion University of the Negev, Israel"],"name":"Boaz Rafaely"}]
 paper_digest_abstract_sha256: "9cc7e2a13b731b95c4863b5d110db065a667660f070def4c22ee889b8c0ec3da"
-paper_digest_sidecars: {"citation.bib":{"sha256":"f0b43ad105f22f393da9d2ec3198342289d70e337358f1aa722c88aa39c9d1ad","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16430/citation.bib"},"citation.json":{"sha256":"7d3ff2bbb5cbcae4f59401e747b3e399ede60a1793261d0c93a49813bc9adbaf","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16430/citation.json"},"citation.ris":{"sha256":"80a327c609c335b6881cc786ba52bee0826af4059696f6cafc4c659034762a6e","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16430/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"2c93ec159edbfd6e38aca8ff3693ccb054a31a18ba17292842d0f829927d138d","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16430/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"f0b43ad105f22f393da9d2ec3198342289d70e337358f1aa722c88aa39c9d1ad","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16430/citation.bib"},"citation.json":{"sha256":"7d3ff2bbb5cbcae4f59401e747b3e399ede60a1793261d0c93a49813bc9adbaf","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16430/citation.json"},"citation.ris":{"sha256":"80a327c609c335b6881cc786ba52bee0826af4059696f6cafc4c659034762a6e","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16430/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"38023581c025dbd862f074c6adc0d17a356d19cf201642aa8d76fee686e4fd5a","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16430/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "3d7d7c4f0a59a5496804057ebb3297568ac0ddfc5971e4f34e680b32a8b0bb34"
 paper_digest_api_reader_plan_sha256: "e5ee8b0f88521591ea10c30e9b1759fa01e6a09eb1dd80dfef6ef31d6a2dc6c5"
@@ -52,8 +52,16 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[Spiking Neural Beamforming for Multichannel Speech Enhancement on the Edge](https://arxiv.org/abs/2610.16430v1)*
 
-> 标签：#语音增强 | #波束成形 | #信号处理 | #麦克风阵列 | #端侧运行
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[语音增强](/audio-paper-digest-blog/papers/?concept=task.speech-enhancement)
+- **研究方法**：[波束成形](/audio-paper-digest-blog/papers/?concept=method.beamforming)；[信号处理](/audio-paper-digest-blog/papers/?concept=method.signal-processing)
+- **研究条件**：[多通道](/audio-paper-digest-blog/papers/?concept=setting.multichannel) → [麦克风阵列](/audio-paper-digest-blog/papers/?concept=setting.microphone-array)；[端侧运行](/audio-paper-digest-blog/papers/?concept=setting.on-device)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**6.0/10** | 创新 1.1/2 | 技术严谨 1/1.5 | 实验充分 1/1.5 | 清晰度 0.8/1 | 影响力 0.8/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 

@@ -20,7 +20,7 @@ paper_digest_primary_task: "语音编码"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.speech-coding","label":"语音编码"},{"facet":"method","id":"method.adapter","label":"Adapter"},{"facet":"signal","id":"signal.spatial-audio","label":"空间音频信号"},{"facet":"method","id":"method.neural-codec","label":"神经编解码与离散单元"}]
 paper_digest_primary_method: "Adapter"
 paper_digest_score: 8.0
@@ -29,12 +29,12 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "FOAdapter 冻结单声道编码只传 W 声道内容，再用一条 275 bit/s 的空间码流恢复四声道 FOA，在 Spatial LibriSpeech 上把方向误差稳定到约 7 度，代价是语音客观质量低于同骨干的四通道独立编码。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Kirak Kim"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Yoonjeong Park"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Juhan Nam"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Sungyoung Kim"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Minje Kim"}]
 paper_digest_abstract_sha256: "3c2dbd3f62cb0b60c8c6d5da84a8f41aed4e243c6b15b2e17ad16f57f5b18c57"
-paper_digest_sidecars: {"citation.bib":{"sha256":"b39b4391bf5cb570ccabf24a45c877d8cb17c812005df928cc936e5e967edf47","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16202/citation.bib"},"citation.json":{"sha256":"85f12debc24fa804d5bd1197d9d76c02f4c5a0edcfbda3933c13fcf3e498605f","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16202/citation.json"},"citation.ris":{"sha256":"e4c15589ea559d358239358753f9725de9672c8fa480b07391147f4c1d6786e4","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16202/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"929a3ed614939ba9b8a4edbae13279afd81374a0b7137e429669cbbf29094f72","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16202/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"b39b4391bf5cb570ccabf24a45c877d8cb17c812005df928cc936e5e967edf47","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16202/citation.bib"},"citation.json":{"sha256":"85f12debc24fa804d5bd1197d9d76c02f4c5a0edcfbda3933c13fcf3e498605f","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16202/citation.json"},"citation.ris":{"sha256":"e4c15589ea559d358239358753f9725de9672c8fa480b07391147f4c1d6786e4","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16202/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"0aac80ae898a8589283beeffa38c0bd39db2dbf5beebaaad343f8102f51baf7d","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16202/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
-paper_digest_api_reader_article_sha256: "b6142e0f176897b0fcfaa72667b443ec6d9482bb8aae2e64bae90579428a2102"
-paper_digest_api_reader_plan_sha256: "0a17c8e5a1c8a7869afa2c21be7b50da4a27d5fb5daf1f55f27cbdeacb1e259e"
+paper_digest_api_reader_article_sha256: "6a418f741bfd17d7417eb4b2e7e0e7b3733cb8d93daa156fb11b998fca4a00e6"
+paper_digest_api_reader_plan_sha256: "af50166dbfeafc8fa77a3d5aa7e0578b64d05ec68698878a997dad80c773db2e"
 paper_digest_api_reader_source_binding_contract: "api-reader-source-bindings-v4"
-paper_digest_api_reader_source_bindings_sha256: "a47847aa433031b1328f0f893efaf636bcee95238d0722087b932d036e7c2081"
+paper_digest_api_reader_source_bindings_sha256: "b9b25dd6d28cc1a0843a86ccd2531e76e5e531b16be307a4b530c680bb867520"
 paper_digest_api_reader_source_table_count: 2
 paper_digest_api_reader_source_formula_count: 3
 paper_digest_api_reader_structured_artifacts_sha256: "cf31ae1fbc43d5fd34156326d1431f6886442428bd998c7a15707ce01129cc76"
@@ -52,8 +52,16 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[FOAdapter: A Plug-and-Play Spatial Tokenizer for Low-Bitrate FOA Speech Coding](https://arxiv.org/abs/2610.16202v1)*
 
-> 标签：#语音编码 | #Adapter | #空间音频信号 | #神经编解码与离散单元
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[音频编码](/audio-paper-digest-blog/papers/?concept=task.audio-coding) → [语音编码](/audio-paper-digest-blog/papers/?concept=task.speech-coding)
+- **研究方法**：[参数高效微调](/audio-paper-digest-blog/papers/?concept=method.peft) → [Adapter](/audio-paper-digest-blog/papers/?concept=method.adapter)；[向量量化](/audio-paper-digest-blog/papers/?concept=method.vector-quantization) → [神经编解码与离散单元](/audio-paper-digest-blog/papers/?concept=method.neural-codec)
+- **信号**：[空间音频信号](/audio-paper-digest-blog/papers/?concept=signal.spatial-audio)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**8.0/10** | 创新 1.5/2 | 技术严谨 1.2/1.5 | 实验充分 1.2/1.5 | 清晰度 0.8/1 | 影响力 1/1.5 | 开源 1/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 
@@ -89,7 +97,7 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 最直接的路线是通道独立编码，对 4 个声道各用一次单声道编码器，同等单通道码率下总码率变为 4 倍，且低码率时方向信息容易先受损。SpatialCodec 的思路是传一路参考声道加空间分支，用空间信息预测滤波器恢复其余通道，但原文面向 8 通道麦克风阵列且总码率 12 kbps，场景和码率都不同。FOA Tokenizer 把 WavTokenizer 扩展为 4 通道联合编码，用空间一致性目标做到 0.9 kbps，但论文转述其在内部 SpatialVCTK 上词错误率 67%，说明内容保持还有提升空间。FOAdapter 的问题于是很具体：能否不动预训练单声道编码器，只外挂一条极低码率空间流，同时保住内容和方向。
 
-**通道独立编码 × 空间解码器调制：** 通道独立编码是对 W、X、Y、Z 各跑一遍单声道编码，不利用通道共享信息，总码率翻倍；空间解码器调制是只传一路 W 波形加少量空间参数，在解码端用空间参数缩放和平移 W 特征来生成四声道，省码率的关键正在于此。
+**通道独立编码 × 空间解码器调制：** 通道独立编码是对 W、X、Y、Z 各跑一遍单声道编码，不利用通道共享信息，总码率为同等单通道码率的 4 倍；空间解码器调制是只传一路 W 波形加少量空间参数，在解码端用空间参数缩放和平移 W 特征来生成四声道，省码率的关键正在于此。
 
 ### 低码率下内容与方向为何难兼顾
 
@@ -182,15 +190,15 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 为检验内容与方向是否解耦，论文从测试集取 1000 条组成 500 对不同说话人组合，每对双向交换，共 1000 个用例。输出由一方的重建 W 波形加另一方的空间 token 生成，再比较输出方向更接近哪一方，并分别对两方转录计算词错误率。下表整理该交换实验的样本量、方向接近度与内容保持，数字来自原文连续报告，比较输出方向跟随空间供体还是内容供体、以及识别文字跟随哪一方。
 
-| 样本量 | 方向接近供体比例 | 平均角距离到空间供体 | 平均角距离到内容供体 | 对内容供体的词错误率 | 对空间供体的词错误率 |
+| 样本量 | 平均方向接近度评分与接近供体用例比例 | 平均角距离到空间供体 | 平均角距离到内容供体 | 对内容供体的词错误率 | 对空间供体的词错误率 |
 | --- | --- | --- | --- | --- | --- |
-| 1000 个交换用例 | 88.32% 与 97.4% 更接近空间供体 | 8.48 度 | 91.12 度 | 9.55% | 106.77% |
+| 1000 个交换用例 | 平均 Pdir 评分 88.32%；更接近空间供体的用例比例 97.4% | 8.48 度 | 91.12 度 | 9.55% | 106.77% |
 
-表中方向接近度 88.32% 与 97.4% 更接近空间供体的含义是输出方向基本跟随空间 token 提供方，平均角距离到空间供体仅 8.48 度、到内容供体达 91.12 度，而词错误率对内容供体仅 9.55%、对空间供体高达 106.77%，说明识别出的文字跟随参考波形提供方。限制是该结论只在固定几何、双向交换的仿真条件下成立，且方向估计与波束形成方向的选择会影响数值，不能直接推广为任意混响与移动声源下的完全解耦。
+表中的 88.32% 是平均方向接近度评分 Pdir，97.4% 是输出方向到空间供体的距离小于到内容供体距离的用例比例；前者是连续评分的平均值，后者是满足该距离条件的样本占比，二者分别支持输出方向基本跟随空间 token 提供方，平均角距离到空间供体仅 8.48 度、到内容供体达 91.12 度，而词错误率对内容供体仅 9.55%、对空间供体高达 106.77%，说明识别出的文字跟随参考波形提供方。限制是该结论只在固定几何、双向交换的仿真条件下成立，且方向估计与波束形成方向的选择会影响数值，不能直接推广为任意混响与移动声源下的完全解耦。
 
 ### 人耳听感是否也觉得更省码率
 
-主观分数的读图说明是：横轴为 6 个系统，纵轴为分数越高越好，误差条为 95% 置信区间，重点看 MOSS-8 加 FOAdapter 与同码率基线的相对高低。
+主观分数的读图说明是：横轴为 6 个系统，纵轴为分数越高越好，误差条为 95% 置信区间，重点看 MOSS-8 加 FOAdapter 与相近码率基线的相对高低。
 
 > **看图路径：** 1. 比较 MOSS-8 加 FOAdapter 与 MOSS-3 独立编码的均值高低；2. 看误差条是否重叠，理解显著性检验的含义；3. 对比 Opus-F2 高码率但低分的反差；4. 以参考与锚点为上下界，定位各系统的相对位置
 

@@ -20,7 +20,7 @@ paper_digest_primary_task: "语音编码"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.speech-coding","label":"语音编码"},{"facet":"task","id":"task.bandwidth-extension","label":"带宽扩展"},{"facet":"method","id":"method.diffusion","label":"扩散模型"},{"facet":"method","id":"method.state-space","label":"状态空间模型"}]
 paper_digest_primary_method: "扩散模型"
 paper_digest_score: 6.0
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "BridgeCodec 要解决冻结的 8 kHz 源编码器与 48 kHz 目标解码器无法直接通信的问题，用 Schrödinger Bridge 在潜在空间做最优传输并以 Mamba 增强的 U-Net 建模长时依赖，在 1 kbps 传输下实现 48 kHz 重建，代价是需要两阶段训练且高频内容带有生成性幻觉。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Zijian Lin"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Jing Yang"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Jinghao Luo"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Zhuo Wang"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Fan Fan"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Zhiyong Wu"}]
 paper_digest_abstract_sha256: "d48b4c3f08f03c103effec579d558ee35a3a66add9484788af817110ce44e3de"
-paper_digest_sidecars: {"citation.bib":{"sha256":"6cd79869a00babe78fff06fc28bb7c70426dd8b6cba2ebc1cb88941b39dd8796","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15453/citation.bib"},"citation.json":{"sha256":"c977538927cdc72f64d398daac5416081c09cc9375ed3550896a453d5350b47d","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15453/citation.json"},"citation.ris":{"sha256":"c928f30ba8ab3050aa935ff1b7cef94ba2f5629fe8750727f4d26e8ff4eb1bf8","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15453/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"ecf96ca2c441aacae205c61b63fae0e68d81706ef4521f2dde5fce356e01adbf","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15453/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"6cd79869a00babe78fff06fc28bb7c70426dd8b6cba2ebc1cb88941b39dd8796","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15453/citation.bib"},"citation.json":{"sha256":"c977538927cdc72f64d398daac5416081c09cc9375ed3550896a453d5350b47d","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15453/citation.json"},"citation.ris":{"sha256":"c928f30ba8ab3050aa935ff1b7cef94ba2f5629fe8750727f4d26e8ff4eb1bf8","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15453/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"7f22a4346600827942ae241b61c232039373bdad08c1473f51fba8a33cbeb160","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15453/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "e8e67fc16ff51379daad14dd2d39c844e35f6ee7c22e206f7c6792c980c00432"
 paper_digest_api_reader_plan_sha256: "9cd178c70855944c017a0b704216db3c0cd4fd171bd0753c84e58a2cb35e5319"
@@ -52,8 +52,15 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[BridgeCodec: Mamba Enhanced Neural Audio Codec with Schrödinger Bridge at Low Bitrate](https://arxiv.org/abs/2610.15453v1)*
 
-> 标签：#语音编码 | #带宽扩展 | #扩散模型 | #状态空间模型
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[音频编码](/audio-paper-digest-blog/papers/?concept=task.audio-coding) → [语音编码](/audio-paper-digest-blog/papers/?concept=task.speech-coding)；[音频修复](/audio-paper-digest-blog/papers/?concept=task.audio-restoration) → [音频超分辨](/audio-paper-digest-blog/papers/?concept=task.audio-super-resolution) → [带宽扩展](/audio-paper-digest-blog/papers/?concept=task.bandwidth-extension)
+- **研究方法**：[生成模型](/audio-paper-digest-blog/papers/?concept=method.generative) → [扩散模型](/audio-paper-digest-blog/papers/?concept=method.diffusion)；[状态空间模型](/audio-paper-digest-blog/papers/?concept=method.state-space)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**6.0/10** | 创新 1.2/2 | 技术严谨 1/1.5 | 实验充分 1/1.5 | 清晰度 0.7/1 | 影响力 0.8/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 

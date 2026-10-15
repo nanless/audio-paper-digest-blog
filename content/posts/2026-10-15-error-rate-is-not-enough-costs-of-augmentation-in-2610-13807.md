@@ -20,7 +20,7 @@ paper_digest_primary_task: "语音识别"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.asr","label":"语音识别"},{"facet":"method","id":"method.augmentation","label":"数据增强"},{"facet":"setting","id":"setting.low-resource","label":"低资源"},{"facet":"scientific_topic","id":"scientific_topic.phonetics","label":"语音学与音系"}]
 paper_digest_primary_method: "数据增强"
 paper_digest_score: 7.5
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "论文在四个低资源语言和不同数据量的英语上比较改造音频与文本合成两类增强，发现 SpecAugment 总体错误率最稳但增加声调和腭化错误，而随机替换词的文本合成能提高稀有词频率并修复这两类错误，两者联用产生超可加改进但只在低资源区间成立。"
 paper_digest_authors: [{"affiliations":["机构信息未能从 arXiv PDF 文本可靠映射"],"name":"Katsumi Ibaraki"},{"affiliations":["机构信息未能从 arXiv PDF 文本可靠映射"],"name":"David Chiang"}]
 paper_digest_abstract_sha256: "2e217ddd0f5df3b56e2d0bf561038c2d414294df0b1ba552a62a44dc20ecb35c"
-paper_digest_sidecars: {"citation.bib":{"sha256":"825f198abd396cb6ac0e97e740ac4640e49740c09c4f2203cb068f628526d35d","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13807/citation.bib"},"citation.json":{"sha256":"fbc17f0dd0df89fb9de3eef3ee58f20bb15ef0b0a617692de39e53497c3f04d5","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13807/citation.json"},"citation.ris":{"sha256":"6c3771139080221f7129730fd672195b5bdfba4c54b91bcb67caa249c71fa29d","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13807/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"d6bc69924723c2f47718c6988c7554bbf558433ded8c853ca70f02b365b9ed54","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13807/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"825f198abd396cb6ac0e97e740ac4640e49740c09c4f2203cb068f628526d35d","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13807/citation.bib"},"citation.json":{"sha256":"fbc17f0dd0df89fb9de3eef3ee58f20bb15ef0b0a617692de39e53497c3f04d5","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13807/citation.json"},"citation.ris":{"sha256":"6c3771139080221f7129730fd672195b5bdfba4c54b91bcb67caa249c71fa29d","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13807/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"351ad12d8c7e1904f63276a8aa98b7b3aaa7eb423879ed28f74a3619a3376748","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13807/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "06ed70bd18beee6e841e807944794cc7baac52d9990dcb7fd70c7eb0b2c089f9"
 paper_digest_api_reader_plan_sha256: "94191a2254b3420c27f244bad6684301eafefd6778b67c66f3512f9a4c596017"
@@ -52,8 +52,17 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[Error Rate is Not Enough: Costs of Augmentation in Low-Resource ASR](https://arxiv.org/abs/2610.13807v1)*
 
-> 标签：#语音识别 | #数据增强 | #低资源 | #语音学与音系
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[语音识别](/audio-paper-digest-blog/papers/?concept=task.asr)
+- **研究方法**：[数据增强](/audio-paper-digest-blog/papers/?concept=method.augmentation)
+- **研究条件**：[低资源](/audio-paper-digest-blog/papers/?concept=setting.low-resource)
+- **科学主题**：[语音学与音系](/audio-paper-digest-blog/papers/?concept=scientific_topic.phonetics)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**7.5/10** | 创新 1.5/2 | 技术严谨 1.2/1.5 | 实验充分 1.4/1.5 | 清晰度 0.8/1 | 影响力 1/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1.3/1.5
 
 

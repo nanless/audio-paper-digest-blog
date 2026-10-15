@@ -20,7 +20,7 @@ paper_digest_primary_task: "音频生成"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.audio-generation","label":"音频生成"},{"facet":"task","id":"task.voice-conversion","label":"语音转换"},{"facet":"method","id":"method.flow-matching","label":"流匹配"},{"facet":"research_focus","id":"research_focus.robustness","label":"鲁棒性"}]
 paper_digest_primary_method: "流匹配"
 paper_digest_score: 6.7
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "针对带噪语音条件导致生成语义偏移与轨迹不稳的问题，AlignAudio 先用适配器拉近干净与带噪表征，再用方向一致约束拉齐干净与带噪条件下的流匹配速度场，在语音到音频与语音转换任务上用噪声、域外与实录条件验证了条件保真度的提升与干净条件的保持。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Yixuan Li"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Xuenan Xu"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Zeyu Xie"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Mengyue Wu"}]
 paper_digest_abstract_sha256: "ede7161d0d0495dd270d44ffff55d35be4a5015e97f64bb7fcab41ae92d01e4a"
-paper_digest_sidecars: {"citation.bib":{"sha256":"b09d5c9f232a414c9e043fc376d766aecd7fc11d0e623602b271e1b6d9581946","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14697/citation.bib"},"citation.json":{"sha256":"c1ae936f8f9f7c994633e88c73bd4a535ee80be4c46cca36b5f6541585cfdf4a","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14697/citation.json"},"citation.ris":{"sha256":"f8f2611934e8c28467d3cb026db03a978273e544cf8366f1400ec4e35e28ce15","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14697/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"c8df842871d474e4ef340643c7a59535de58fad749c34215d3d73609171fd951","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14697/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"b09d5c9f232a414c9e043fc376d766aecd7fc11d0e623602b271e1b6d9581946","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14697/citation.bib"},"citation.json":{"sha256":"c1ae936f8f9f7c994633e88c73bd4a535ee80be4c46cca36b5f6541585cfdf4a","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14697/citation.json"},"citation.ris":{"sha256":"f8f2611934e8c28467d3cb026db03a978273e544cf8366f1400ec4e35e28ce15","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14697/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"e08294ca28aa2380f0a4efe87c5e623a1871fa3e95fb4d31ad7365e51ee5427d","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14697/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "5e2e5885cbefccd932e961bd2dc3ce63cde2e22efa751d5cc925a24bffb4eb10"
 paper_digest_api_reader_plan_sha256: "34274bd2c73520d9d797867ffb0a052fda5cb6c30d6d385c2c4e1a7defb48f2e"
@@ -52,8 +52,16 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[AlignAudio: A Unified Dual-Alignment Framework for Noise-Robust Speech-Conditioned Generation](https://arxiv.org/abs/2610.14697v1)*
 
-> 标签：#音频生成 | #语音转换 | #流匹配 | #鲁棒性
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[音频生成](/audio-paper-digest-blog/papers/?concept=task.audio-generation)；[语音转换](/audio-paper-digest-blog/papers/?concept=task.voice-conversion)
+- **研究方法**：[生成模型](/audio-paper-digest-blog/papers/?concept=method.generative) → [流匹配](/audio-paper-digest-blog/papers/?concept=method.flow-matching)
+- **研究重点**：[鲁棒性](/audio-paper-digest-blog/papers/?concept=research_focus.robustness)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**6.7/10** | 创新 1.5/2 | 技术严谨 1.2/1.5 | 实验充分 1.2/1.5 | 清晰度 0.8/1 | 影响力 1/1.5 | 开源 0/1.5 | 可复现 0.1/0.5 | 工程/实践 0.9/1.5
 
 

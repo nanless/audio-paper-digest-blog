@@ -20,7 +20,7 @@ paper_digest_primary_task: "符号音乐生成"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.symbolic-music","label":"符号音乐生成"},{"facet":"task","id":"task.music-understanding","label":"音乐分析"},{"facet":"method","id":"method.statistical-analysis","label":"统计分析"},{"facet":"research_focus","id":"research_focus.interpretability","label":"可解释性"}]
 paper_digest_primary_method: "统计分析"
 paper_digest_score: 6.3
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "论文以巴赫众赞歌终止式为切口，说明 Aria 模型的和声决策从中间层开始逐步形成，先出现调式后出现具体调性，并证明沿探针方向做推理时干预可以稳定改变终止走向且保持结构完整，但结论只在众赞歌这类规范和声语料上得到验证。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Adi Silberschein"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Megan Wei"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Tamar Rott Shaham"}]
 paper_digest_abstract_sha256: "68d9156787d8e881ef2be390845c4b7ac9deafdf002c4c9201e6ed63b717f5b8"
-paper_digest_sidecars: {"citation.bib":{"sha256":"0b64a649df0362d56cb056aaca7c4d9bab2cee9e6cec12a8921df14aeb868458","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15957/citation.bib"},"citation.json":{"sha256":"5fe51ab09794dbb95d98dc9836894edcff08fbd068d210a84fe989f9706a97ec","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15957/citation.json"},"citation.ris":{"sha256":"ab5d9a6081771f46d4ed400708acf3ca6ae70296a2c1e683b5ca4d6cd67e5eb1","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15957/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"7c54b894e00620c2055ce431ffa95cf9ac387af1e3dc5e18d0d9125845690646","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15957/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"0b64a649df0362d56cb056aaca7c4d9bab2cee9e6cec12a8921df14aeb868458","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15957/citation.bib"},"citation.json":{"sha256":"5fe51ab09794dbb95d98dc9836894edcff08fbd068d210a84fe989f9706a97ec","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15957/citation.json"},"citation.ris":{"sha256":"ab5d9a6081771f46d4ed400708acf3ca6ae70296a2c1e683b5ca4d6cd67e5eb1","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15957/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"588c9227f6d9f6f0d10359bd6ff43ee0210f504131364c00b649e5089c3a3906","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15957/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "3af0a210ff504f5012ea048766845f9e8a3756fff3187218aa8eaa95b974849b"
 paper_digest_api_reader_plan_sha256: "dd21f2753ce68d861a96e6b4f7d81aecf6dbcd33416fc121db2b597be5d7c643"
@@ -52,8 +52,16 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[Harmonic Representations in Symbolic Music Transformers are Localized and Controllable](https://arxiv.org/abs/2610.15957v1)*
 
-> 标签：#符号音乐生成 | #音乐分析 | #统计分析 | #可解释性
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[音乐生成](/audio-paper-digest-blog/papers/?concept=task.music-generation) → [符号音乐生成](/audio-paper-digest-blog/papers/?concept=task.symbolic-music)；[音乐分析](/audio-paper-digest-blog/papers/?concept=task.music-understanding)
+- **研究方法**：[统计分析](/audio-paper-digest-blog/papers/?concept=method.statistical-analysis)
+- **研究重点**：[可解释性](/audio-paper-digest-blog/papers/?concept=research_focus.interpretability)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**6.3/10** | 创新 1.2/2 | 技术严谨 1/1.5 | 实验充分 1/1.5 | 清晰度 0.8/1 | 影响力 1/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 

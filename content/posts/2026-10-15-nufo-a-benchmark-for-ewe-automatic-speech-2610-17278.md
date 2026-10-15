@@ -20,7 +20,7 @@ paper_digest_primary_task: "语音识别"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.asr","label":"语音识别"},{"facet":"method","id":"method.benchmark-design","label":"基准设计"},{"facet":"artifact","id":"artifact.benchmark","label":"基准测试"},{"facet":"setting","id":"setting.low-resource","label":"低资源"}]
 paper_digest_primary_method: "基准设计"
 paper_digest_score: 5.9
@@ -29,7 +29,7 @@ paper_digest_document_type: "数据集与基准"
 paper_digest_one_sentence: "论文把 WAXAL、BibleTTS 与 Mina 三处埃维语资源去重拼成 174.82 小时固定评测基准，并在其上微调 Whisper 与 AfriHuBERT，最好的 Whisper-medium 在 1443 句固定测试集上词错误率为 37.98%，代价是仍有标点与变音符号带来的虚高误差和专有名词脆弱性。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Christ Kekeli Keli"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Steve Sanogo"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Patrice Sebastiano"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Hamad Aldenawi"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Ryan Whetten"}]
 paper_digest_abstract_sha256: "b5009f2d728a966fafbef0efeeb38a1c9cac8c8830aaa9504ca1474a816f9d74"
-paper_digest_sidecars: {"citation.bib":{"sha256":"91917cc1753f3bd5e8bbc6bdae42bf770e35fa56c8f3887e17c1e5b8c5deda1b","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17278/citation.bib"},"citation.json":{"sha256":"831a5533c7cc04bd8c8ce16081ef451f5cf0c3d4faabce080cd29356f8e7529e","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17278/citation.json"},"citation.ris":{"sha256":"be34c83f9b485de1b133cc5737c1cd0e4a9a172eb9a57482cfaa0d7fb19f29be","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17278/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"9d4af7089693da0da120c2c48641fa37e46303c3e793a5206fd1893a296ca12c","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17278/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"91917cc1753f3bd5e8bbc6bdae42bf770e35fa56c8f3887e17c1e5b8c5deda1b","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17278/citation.bib"},"citation.json":{"sha256":"831a5533c7cc04bd8c8ce16081ef451f5cf0c3d4faabce080cd29356f8e7529e","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17278/citation.json"},"citation.ris":{"sha256":"be34c83f9b485de1b133cc5737c1cd0e4a9a172eb9a57482cfaa0d7fb19f29be","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17278/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"f516c37e8f3150a44983c5beac7814fe667bba309fa1648748eaedc4ecb1cc6d","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17278/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "d541bdab32d023772d133d86eb600ac746c83302d22f649475f7e8a86f9d2b94"
 paper_digest_api_reader_plan_sha256: "db13cf6c467ec8a62ec00bfb24f34849219b52d21793957be09aacf252712ab8"
@@ -52,8 +52,17 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[Nufo: A Benchmark for Ewe Automatic Speech Recognition](https://arxiv.org/abs/2610.17278v1)*
 
-> 标签：#语音识别 | #基准设计 | #基准测试 | #低资源
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[语音识别](/audio-paper-digest-blog/papers/?concept=task.asr)
+- **研究方法**：[评测协议](/audio-paper-digest-blog/papers/?concept=method.evaluation-protocol) → [基准设计](/audio-paper-digest-blog/papers/?concept=method.benchmark-design)
+- **研究条件**：[低资源](/audio-paper-digest-blog/papers/?concept=setting.low-resource)
+- **研究产物**：[基准测试](/audio-paper-digest-blog/papers/?concept=artifact.benchmark)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**5.9/10** | 创新 1/2 | 技术严谨 1/1.5 | 实验充分 1/1.5 | 清晰度 0.8/1 | 影响力 0.8/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 

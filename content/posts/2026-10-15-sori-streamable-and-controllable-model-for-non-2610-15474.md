@@ -20,7 +20,7 @@ paper_digest_primary_task: "符号音乐生成"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.symbolic-music","label":"符号音乐生成"},{"facet":"method","id":"method.domain-adaptation","label":"领域适应"},{"facet":"method","id":"method.transformer","label":"Transformer"},{"facet":"setting","id":"setting.streaming","label":"流式处理"}]
 paper_digest_primary_method: "领域适应"
 paper_digest_score: 6.8
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "针对非音乐音频到符号音乐的一对多转换问题，Sori 用只在音乐音频上训练的编码器加双解码器结构配合域对抗训练和无分类器引导，在 AudioSet 评测上用连续参数控制贴合输入与音乐性之间的权衡，并以平均实时率 0.82 在消费级 CPU 上实现流式推理。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Kyungsu Kim"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Yejin Kim"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Kyogu Lee"}]
 paper_digest_abstract_sha256: "377be1dbd96d5dbe2a570e9477e71573ef705bcaf1884b6c0c83d8775ea27cae"
-paper_digest_sidecars: {"citation.bib":{"sha256":"52edb35b4f050437ff5f01a9c009bd8ee8e7d2f1ae3cf8bfc9b7ddfeabc0ccb6","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15474/citation.bib"},"citation.json":{"sha256":"1c9b0e895d8549dbd96b70dc56942d3946418c1d790f064360ffb8c040c7977d","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15474/citation.json"},"citation.ris":{"sha256":"1da2e5e1c5e8981e8f9baff5fbaff651528ee7fbfc6738556d63143f326098e2","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15474/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"5a97513998e7f1c12effdb1eae1bae455c4fc57a712d71e3c8c66050394e9fbb","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15474/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"52edb35b4f050437ff5f01a9c009bd8ee8e7d2f1ae3cf8bfc9b7ddfeabc0ccb6","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15474/citation.bib"},"citation.json":{"sha256":"1c9b0e895d8549dbd96b70dc56942d3946418c1d790f064360ffb8c040c7977d","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15474/citation.json"},"citation.ris":{"sha256":"1da2e5e1c5e8981e8f9baff5fbaff651528ee7fbfc6738556d63143f326098e2","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15474/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"9a83d8c6de297447638d1a6d3d09a90be47d05058fc89492d1979e1388d81f76","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15474/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "4fb94c899f266b822a121a8c3cad1049b895d8f82529a77aa5743994e1a0728d"
 paper_digest_api_reader_plan_sha256: "3647321ffa6d6ae0089008fe3d91e90d0f69ef58a30222e6c7769cb6f35570ba"
@@ -52,8 +52,16 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[Sori: Streamable and Controllable Model for Non-musical Audio to Symbolic Music Transformation](https://arxiv.org/abs/2610.15474v1)*
 
-> 标签：#符号音乐生成 | #领域适应 | #Transformer | #流式处理
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[音乐生成](/audio-paper-digest-blog/papers/?concept=task.music-generation) → [符号音乐生成](/audio-paper-digest-blog/papers/?concept=task.symbolic-music)
+- **研究方法**：[迁移学习](/audio-paper-digest-blog/papers/?concept=method.transfer) → [领域适应](/audio-paper-digest-blog/papers/?concept=method.domain-adaptation)；[Transformer](/audio-paper-digest-blog/papers/?concept=method.transformer)
+- **研究条件**：[流式处理](/audio-paper-digest-blog/papers/?concept=setting.streaming)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**6.8/10** | 创新 1.5/2 | 技术严谨 1/1.5 | 实验充分 1.2/1.5 | 清晰度 0.8/1 | 影响力 0.8/1.5 | 开源 0.2/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 

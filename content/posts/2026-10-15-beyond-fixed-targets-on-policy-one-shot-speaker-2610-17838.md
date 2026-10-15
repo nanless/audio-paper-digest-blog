@@ -20,7 +20,7 @@ paper_digest_primary_task: "语音克隆"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.voice-cloning","label":"语音克隆"},{"facet":"task","id":"task.tts","label":"文本到语音"},{"facet":"method","id":"method.reinforcement","label":"强化学习"},{"facet":"method","id":"method.distillation","label":"知识蒸馏"}]
 paper_digest_primary_method: "强化学习"
 paper_digest_score: 7.0
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "论文针对只有一对参考文本语音时固定目标监督微调导致推理提前结束的问题，提出在当前策略采样轨迹上学习的 GRPO 和 OPSD，在 LLaSA-1B 与 Seed-TTS-Eval 英文子集上提高说话人相似度并保持可懂度，但 GRPO 每步耗时远高于 OPSD。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Sangkwon Park"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Che Hyun Lee"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Heeseung Kim"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Sungroh Yoon"}]
 paper_digest_abstract_sha256: "4c25f567da86bbe9e53859b9973a5307279be260ee5a1dd484bfbdc8b1becbba"
-paper_digest_sidecars: {"citation.bib":{"sha256":"5f42551940581eec2ff352d6796ec111e6794c7dbc65efe3259d8a82f9bede8a","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17838/citation.bib"},"citation.json":{"sha256":"1b668616d47def3ac000cc188c2852f5a140467c29dbe75c59f0f383c23e37d5","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17838/citation.json"},"citation.ris":{"sha256":"f0d4a8f694f73c860d044eed0ad44ff96b4bd5bdf74122da57e6bfdef61e6633","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17838/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"a99611aa954fa31e85d70411c9e56c29a3f68e579c731dbd0ecba728ea5ed67d","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17838/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"5f42551940581eec2ff352d6796ec111e6794c7dbc65efe3259d8a82f9bede8a","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17838/citation.bib"},"citation.json":{"sha256":"1b668616d47def3ac000cc188c2852f5a140467c29dbe75c59f0f383c23e37d5","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17838/citation.json"},"citation.ris":{"sha256":"f0d4a8f694f73c860d044eed0ad44ff96b4bd5bdf74122da57e6bfdef61e6633","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17838/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"bde5c2aeb39593096f976fa66c92b3176aa3ce3551bb71c87fd97d6fe2abf5ad","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17838/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "b6deba56d9eb081076e66b7867562a4e8085304412049a03e3b22896db22aac7"
 paper_digest_api_reader_plan_sha256: "d3ba7aa0514a679cca57710417795fe8ab82915fc7bf477f3b99b8fe7aa411ec"
@@ -52,8 +52,15 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[Beyond Fixed Targets: On-Policy One-Shot Speaker Personalization for Autoregressive Text-To-Speech Models](https://arxiv.org/abs/2610.17838v1)*
 
-> 标签：#语音克隆 | #文本到语音 | #强化学习 | #知识蒸馏
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[语音克隆](/audio-paper-digest-blog/papers/?concept=task.voice-cloning)；[语音合成](/audio-paper-digest-blog/papers/?concept=task.speech-synthesis) → [文本到语音](/audio-paper-digest-blog/papers/?concept=task.tts)
+- **研究方法**：[强化学习](/audio-paper-digest-blog/papers/?concept=method.reinforcement)；[知识蒸馏](/audio-paper-digest-blog/papers/?concept=method.distillation)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**7.0/10** | 创新 1.5/2 | 技术严谨 1.2/1.5 | 实验充分 1.2/1.5 | 清晰度 0.8/1 | 影响力 1/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 

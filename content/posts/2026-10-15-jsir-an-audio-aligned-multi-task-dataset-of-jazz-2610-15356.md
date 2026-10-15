@@ -20,7 +20,7 @@ paper_digest_primary_task: "节拍跟踪"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.beat-tracking","label":"节拍跟踪"},{"facet":"task","id":"task.chord-recognition","label":"和弦识别"},{"facet":"task","id":"task.music-structure-analysis","label":"音乐结构分析"},{"facet":"method","id":"method.dataset-curation","label":"数据集构建"}]
 paper_digest_primary_method: "数据集构建"
 paper_digest_score: 7.0
@@ -29,7 +29,7 @@ paper_digest_document_type: "数据集与基准"
 paper_digest_one_sentence: "JSIR 用 44 首标准曲的 267 个商用录音和统一拍点网格上的拍点、和弦、段落三层标注，解决流行乐数据训练的模型在爵士上拍点小节线、七和弦与段落边界失效的问题，基线显示外部爵士集下拍 F 值从 87.7% 到 89.2% 而七和弦准确率明显提升，但结论只在按曲目分组、可靠片段评估和阈值调参与否等条件下成立。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Sihun Lee"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Dasaem Jeong"}]
 paper_digest_abstract_sha256: "41f7d21867ffd001cf00376bd7308c0f0c329821900f973bd3d495ffc1b650b1"
-paper_digest_sidecars: {"citation.bib":{"sha256":"1e6d6b21d2296bcbb625f9c1c002fc14394a2381cde7ce5e83465c522c0d8394","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15356/citation.bib"},"citation.json":{"sha256":"570dedc54d20684d32be9a1792cdf9a3431c753a8f1aebc8c600022a7eeca16f","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15356/citation.json"},"citation.ris":{"sha256":"ec33294bfbaa29df4cd3ae6a8ed2ff047af89ef43d7306b2a177f06cd143c4df","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15356/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"79349f4def1ae98c577ae5096b20206a7a6c2702ca6de8a7f8a29454882b4808","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15356/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"1e6d6b21d2296bcbb625f9c1c002fc14394a2381cde7ce5e83465c522c0d8394","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15356/citation.bib"},"citation.json":{"sha256":"570dedc54d20684d32be9a1792cdf9a3431c753a8f1aebc8c600022a7eeca16f","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15356/citation.json"},"citation.ris":{"sha256":"ec33294bfbaa29df4cd3ae6a8ed2ff047af89ef43d7306b2a177f06cd143c4df","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15356/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"4f3130b9acb8237e293b762f097f29160cd72672c29033f45c5d247eb1767d54","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15356/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "3d9f6afb75dd24a817bc483280fc33df7f410dbc269a7d98e1b96d02adcca7ab"
 paper_digest_api_reader_plan_sha256: "16f638bdbb1a21b25761d8189b19f7368fbc90132c040d6c435346509310f5e5"
@@ -52,8 +52,15 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[JSIR: An Audio-Aligned, Multi-Task Dataset of Jazz Standard Recordings](https://arxiv.org/abs/2610.15356v1)*
 
-> 标签：#节拍跟踪 | #和弦识别 | #音乐结构分析 | #数据集构建
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[音乐分析](/audio-paper-digest-blog/papers/?concept=task.music-understanding) → [节拍跟踪](/audio-paper-digest-blog/papers/?concept=task.beat-tracking)；[音乐分析](/audio-paper-digest-blog/papers/?concept=task.music-understanding) → [和弦识别](/audio-paper-digest-blog/papers/?concept=task.chord-recognition)；[音乐分析](/audio-paper-digest-blog/papers/?concept=task.music-understanding) → [音乐结构分析](/audio-paper-digest-blog/papers/?concept=task.music-structure-analysis)
+- **研究方法**：[数据集构建](/audio-paper-digest-blog/papers/?concept=method.dataset-curation)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**7.0/10** | 创新 1.5/2 | 技术严谨 1.2/1.5 | 实验充分 1.2/1.5 | 清晰度 0.8/1 | 影响力 1/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 

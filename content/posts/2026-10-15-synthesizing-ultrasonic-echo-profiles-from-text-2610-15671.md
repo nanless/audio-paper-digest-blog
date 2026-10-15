@@ -20,7 +20,7 @@ paper_digest_primary_task: "静默语音接口"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.silent-speech","label":"静默语音接口"},{"facet":"method","id":"method.gan","label":"生成对抗网络"},{"facet":"setting","id":"setting.pretraining","label":"预训练"},{"facet":"method","id":"method.contrastive","label":"对比学习"},{"facet":"method","id":"method.tool-augmentation","label":"工具增强与约束解码"}]
 paper_digest_primary_method: "生成对抗网络"
 paper_digest_score: 6.6
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "针对眼镜超声静音识别配对数据难收集的问题，论文用语音克隆 TTS 加两阶段生成器从文本合成回波包络与条纹，并在 104 小时合成数据预训练后把词错误率从 25.9% 降到 23.6%，叠加故障会话与解码后到 14.9%，代价是需要 TTS 语音、两阶段对抗训练与语言模型重打分。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Jiacheng Liu"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Ruidong Zhang"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"François Guimbretière"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Cheng Zhang"}]
 paper_digest_abstract_sha256: "37bb734076de1b6c3ef78a3df24d21a12d4d85a931b649675bad0751430027af"
-paper_digest_sidecars: {"citation.bib":{"sha256":"c7ee7322dc1142c5a5737960d13cef92c0ddbf6fc77a1c62ce2bf3f5b35e3f98","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15671/citation.bib"},"citation.json":{"sha256":"6308a033ec076c0c38a67253924e1ace352bf2c0092b54d1baadf3f04ff2cdf7","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15671/citation.json"},"citation.ris":{"sha256":"96970763d8de1730083bc5b1ec9009a7c9379dcc2f27282dc0a81739d751a3af","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15671/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"0192b513f3c304e92c840fa6165ea23a38748b83c403f9ab217b1bf5d471f64f","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15671/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"c7ee7322dc1142c5a5737960d13cef92c0ddbf6fc77a1c62ce2bf3f5b35e3f98","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15671/citation.bib"},"citation.json":{"sha256":"6308a033ec076c0c38a67253924e1ace352bf2c0092b54d1baadf3f04ff2cdf7","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15671/citation.json"},"citation.ris":{"sha256":"96970763d8de1730083bc5b1ec9009a7c9379dcc2f27282dc0a81739d751a3af","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15671/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"b77fdc87c574afe059a032bb5bfab2639b188cafc4754c8f05338b4a0aa2515e","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15671/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "28c67ae8c543907db08da261725312ae9784cad8c5756b2776f2a64d5cefb192"
 paper_digest_api_reader_plan_sha256: "db9147a452bf4c8942d188e03986220830630cd80c7b52c1b08b5e0230c03911"
@@ -52,8 +52,16 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[Synthesizing Ultrasonic Echo Profiles from Text for Open-Vocabulary Silent Speech Recognition](https://arxiv.org/abs/2610.15671v1)*
 
-> 标签：#静默语音接口 | #生成对抗网络 | #预训练 | #对比学习 | #工具增强与约束解码
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[静默语音接口](/audio-paper-digest-blog/papers/?concept=task.silent-speech)
+- **研究方法**：[生成模型](/audio-paper-digest-blog/papers/?concept=method.generative) → [生成对抗网络](/audio-paper-digest-blog/papers/?concept=method.gan)；[对比学习](/audio-paper-digest-blog/papers/?concept=method.contrastive)；[工具增强与约束解码](/audio-paper-digest-blog/papers/?concept=method.tool-augmentation)
+- **研究条件**：[预训练](/audio-paper-digest-blog/papers/?concept=setting.pretraining)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**6.6/10** | 创新 1.5/2 | 技术严谨 1.2/1.5 | 实验充分 1.3/1.5 | 清晰度 0.8/1 | 影响力 0.5/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 

@@ -20,7 +20,7 @@ paper_digest_primary_task: "音乐源分离"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.music-separation","label":"音乐源分离"},{"facet":"method","id":"method.flow-matching","label":"流匹配"},{"facet":"signal","id":"signal.music","label":"音乐"}]
 paper_digest_primary_method: "流匹配"
 paper_digest_score: 7.0
@@ -29,12 +29,12 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "论文把音乐分离写成以混合为条件的生成问题，用流匹配学习从混合到各乐器的传输，在 MUSDB18-HQ 上用频谱与嵌入指标超过同骨干判别基线和已有生成方法，但波形重建类的 SDR 仍弱于强判别方法。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Shuyang Cui"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Zhi Zhong"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Keisuke Toyama"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Koichi Saito"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Qiyu Wu"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Yukara Ikemiya"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Junghyun Koo"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Kin Wai Cheuk"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Woosung Choi"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Giorgio Fabbro"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Wei-Hsiang Liao"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Shusuke Takahashi"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Yuki Mitsufuji"}]
 paper_digest_abstract_sha256: "3846d6be60882c405965d75f036f816ad61296874a5866942e4295ab4e52c95b"
-paper_digest_sidecars: {"citation.bib":{"sha256":"89462f10de61e9be90d83fc5dc7859fbfd83fea8c875ff3d2c199995e2397af1","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17821/citation.bib"},"citation.json":{"sha256":"8a8a145b0a7b4535def7a7111d62d997459dbf6ad94c049bdb41f20490687a9e","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17821/citation.json"},"citation.ris":{"sha256":"62171b157a1eacd9d412405dd81e94a85fa7124ed4e1265e4b8c5b22f0eec92c","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17821/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"42c73e42f6fc3dae3f8be03190c063bf5b70770c7e188567f7e0584b97361bc7","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17821/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"89462f10de61e9be90d83fc5dc7859fbfd83fea8c875ff3d2c199995e2397af1","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17821/citation.bib"},"citation.json":{"sha256":"8a8a145b0a7b4535def7a7111d62d997459dbf6ad94c049bdb41f20490687a9e","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17821/citation.json"},"citation.ris":{"sha256":"62171b157a1eacd9d412405dd81e94a85fa7124ed4e1265e4b8c5b22f0eec92c","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17821/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"0e699aa552fcb49840774e647d98a372ba14035da8e61a4116c462136b317fa8","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17821/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
-paper_digest_api_reader_article_sha256: "8947f5d7e3f8ada334660af256c0b057d0314c407bde67c96c4ba319a3ead4c8"
-paper_digest_api_reader_plan_sha256: "bf5b3afe4352c743bfc6638aa6a1c684c813c3955b12b630cabd95b4c2a75403"
+paper_digest_api_reader_article_sha256: "2411f64e739dee92048c3cacff5a585d869a85e03f3b58180f6df68fc5ac5f29"
+paper_digest_api_reader_plan_sha256: "e06f7c1b72c0d98f83c69de65748c07c79b24a75f1add705f6aead918baa13f5"
 paper_digest_api_reader_source_binding_contract: "api-reader-source-bindings-v4"
-paper_digest_api_reader_source_bindings_sha256: "f9f966ccd22cf4ac7599632dd9845c713f5001b21e70048e6605a36cc48696a4"
+paper_digest_api_reader_source_bindings_sha256: "d98d814ebc249cd7b977f058105841de960f498f4e53da027c4d8ac13dc080bd"
 paper_digest_api_reader_source_table_count: 4
 paper_digest_api_reader_source_formula_count: 3
 paper_digest_api_reader_structured_artifacts_sha256: "ac22506a6e31014fad8574bfb8ca19775b24a3f1626958ec95c3850e0246970b"
@@ -52,8 +52,16 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[FLOMSS: Generative Source Separation by Flow Matching](https://arxiv.org/abs/2610.17821v1)*
 
-> 标签：#音乐源分离 | #流匹配 | #音乐
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[音频分离](/audio-paper-digest-blog/papers/?concept=task.audio-separation) → [音乐源分离](/audio-paper-digest-blog/papers/?concept=task.music-separation)
+- **研究方法**：[生成模型](/audio-paper-digest-blog/papers/?concept=method.generative) → [流匹配](/audio-paper-digest-blog/papers/?concept=method.flow-matching)
+- **信号**：[音乐](/audio-paper-digest-blog/papers/?concept=signal.music)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**7.0/10** | 创新 1.5/2 | 技术严谨 1.2/1.5 | 实验充分 1.2/1.5 | 清晰度 0.8/1 | 影响力 1/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 
@@ -181,7 +189,9 @@ OT 推理用 10 步中点常微分方程求解器，SB 用 10 步指数积分器
 | MMD ↓ | MERT | 11.1 | 11.1 | 21.7 | 15.4 | 51.5 |
 | LPAPS ↓ | CLAP | 2.43 | 2.45 | 2.72 | 2.58 | 4.13 |
 
-表中判别基线在波形距离 0.0197 和 SDR 4.95 上仍是同组最好，说明直接预测目标样本在逐点重建上有优势。两种最优传输变体把 Mel 降到 1.71 与 1.63、STFT 降到 2.81 与 2.69，都好于判别基线的 2.30 与 3.16，并在多数嵌入指标上更优。速度预测在嵌入类多为最好，例如 FD-VGG 0.77 对 0.87，但 SDR 3.23 低于数据预测的 3.77。薛定谔桥数据预测拿下生成方法中最好的波形 0.0203 与 SDR 4.63，却在 Mel 2.99 与嵌入指标上弱于最优传输。论文因此选最优传输加数据预测继续往后做，理由是它在各组指标间比较均衡。限制是这只是四轨平均，没有展开单轨差异，采样步数的影响也要看逐步采样分析。本表数值与单位依据论文 PDF。
+表中判别基线在波形距离 0.0197 和 SDR 4.95 上仍是同组最好，说明直接预测目标样本在逐点重建上有优势。两种最优传输变体把 Mel 降到 1.71 与 1.63、STFT 降到 2.81 与 2.69，都好于判别基线的 2.30 与 3.16，并在多数嵌入指标上更优。速度预测在嵌入类多为最好，例如 FD-VGG 0.77 对 0.87，但 SDR 3.23 低于数据预测的 3.77。薛定谔桥数据预测拿下生成方法中最好的波形 0.0203 与 SDR 4.63，却在 Mel 2.99 与嵌入指标上弱于最优传输。论文因此选最优传输加数据预测继续往后做，理由是它在各组指标间比较均衡。
+
+限制是这只是四轨平均，没有展开单轨差异，采样步数的影响也要看逐步采样分析。本表数值与单位依据论文 PDF。
 
 ### 与已有方法的基准对比在什么条件下成立
 
@@ -221,15 +231,15 @@ OT 推理用 10 步中点常微分方程求解器，SB 用 10 步指数积分器
 
 ### 采样过程与多源混合一致带来什么代价
 
-读逐步采样图要先确认对象是 Vocals 单源 OT 数据预测模型，横轴是中点求解器第 0 到 9 步从目标预测算出的指标值，虚线是判别基线，星号是每指标的最优点，且该图把负 SDR 画成越低越好。导读之后看像素可见的趋势：Mel、STFT、波形与 LPAPS 在前两步大幅下降后趋平，FD 与 MMD 各格多随步数继续下降，负 SDR 格先降后升。
+读逐步采样图要先确认对象是 Vocals 单源 OT 数据预测模型，横轴是中点求解器第 0 到 9 步从目标预测算出的指标值，虚线是判别基线，星号是每指标的最优点，且该图全部纵轴均越低越好，其中负 SDR 格向下即 SDR 变好。导读之后看像素可见的趋势：Mel、STFT、波形与 LPAPS 在前两步大幅下降后趋平，FD 与 MMD 各格多随步数继续下降，负 SDR 格先降后升。
 
-> **看图路径：** 1. 先看每列标题区分样本层、Fréchet 距离与最大均值差异三组，再对齐横轴 Step index 看 0 到 9 步的变化；2. 对比蓝色虚线判别基线与带点实线 OT-CFM-x 在 Mel、负 SDR 与波形三格的前两步落差；3. 找每格星号 Best 位置，确认分布类指标多在第 9 步最好而负 SDR 类在中间步最好；4. 注意纵轴方向已统一为越低越好，负 SDR 格向下不代表 SDR 变好，要结合原文说明反读
+> **看图路径：** 1. 先看每列标题区分样本层、Fréchet 距离与最大均值差异三组，再对齐横轴 Step index 看 0 到 9 步的变化；2. 对比蓝色虚线判别基线与带点实线 OT-CFM-x 在 Mel、负 SDR 与波形三格的前两步落差；3. 找每格星号 Best 位置，确认分布类指标多在第 9 步最好而负 SDR 类在中间步最好；4. 注意纵轴已统一为越低越好，负 SDR 格向下即 SDR 变好，按负 SDR 定义正读即可
 
 [![原论文 Figure 1：Stepwise behavior of OT-CFM-\\mathbfx for Vocals.](https://arxiv.org/html/2610.17821v1/midpoint_sampler_metrics_singlecol_OTCFM.svg)](https://arxiv.org/html/2610.17821v1/midpoint_sampler_metrics_singlecol_OTCFM.svg)
 
 *论文图 1。原论文 Figure 1:：“Stepwise behavior of OT-CFM-\mathbfx for Vocals.”。*
 
-图后解释是早期估计先靠近判别基线，Mel 与 SDR 在前几步与虚线接近，说明模型先恢复重建导向的估计；后期继续积分改善频谱与嵌入指标，但以牺牲 SDR 为代价，星号在分布类多落在第 9 步而在重建类落在中间步，揭示了分布相似与波形重建的权衡。多源对比进一步显示，无约束多源把骨干几乎不变而一次输出四轨，Mel 从 1.63 升到 1.71、SDR 从 3.77 掉到 3.07，嵌入指标全面变差。加软一致后 SDR 回到 3.69，Mel 与 LPAPS 基本保持。硬一致无论波形域还是未压缩谱域都整体变差，仅 MERT 例外。这里比较的是单模型一次输出四轨能否不损质量，以及混合可加先验以何种形式加入才有效。
+图后解释是早期估计先靠近判别基线，Mel 与 SDR 在前几步与虚线接近，说明模型先恢复重建导向的估计；后期继续积分改善频谱与嵌入指标，但以牺牲 SDR 为代价，负 SDR 先降即 SDR 先变好、后升即 SDR 后变差，星号在分布类多落在第 9 步而在重建类落在中间步，揭示了分布相似与波形重建的权衡。多源对比进一步显示，无约束多源把骨干几乎不变而一次输出四轨，Mel 从 1.63 升到 1.71、SDR 从 3.77 掉到 3.07，嵌入指标全面变差。加软一致后 SDR 回到 3.69，Mel 与 LPAPS 基本保持。硬一致无论波形域还是未压缩谱域都整体变差，仅 MERT 例外。这里比较的是单模型一次输出四轨能否不损质量，以及混合可加先验以何种形式加入才有效。
 
 | Method / Path | Domain | Mel ↓ | SDR ↑ | FD VGG ↓ | FD PaSST ↓ | FD CLAP ↓ | FD MERT ↓ | LPAPS CLAP ↓ |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |

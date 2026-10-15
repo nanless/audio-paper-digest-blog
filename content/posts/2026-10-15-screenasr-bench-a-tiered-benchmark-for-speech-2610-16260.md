@@ -20,7 +20,7 @@ paper_digest_primary_task: "音视频语音识别"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.av-asr","label":"音视频语音识别"},{"facet":"method","id":"method.benchmark-design","label":"基准设计"},{"facet":"artifact","id":"artifact.benchmark","label":"基准测试"},{"facet":"artifact","id":"artifact.dataset","label":"数据集"}]
 paper_digest_primary_method: "基准设计"
 paper_digest_score: 5.9
@@ -29,10 +29,10 @@ paper_digest_document_type: "数据集与基准"
 paper_digest_one_sentence: "论文针对屏幕场景下仅靠音频难以判定的关键词，构建按视觉证据直接程度分三层的评测集 ScreenASR-Bench，用关键词召回与归一化视觉增益度量三类模型在纯音频与加入视觉条件下的变化，最强的提升出现在可直接读屏的层级而间接语义层级提升最小。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Mingwei Fu"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Zheshu Song"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Zhikai Zhou"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Shen Huang"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Shidong Shang"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Mengxiao Zhu"}]
 paper_digest_abstract_sha256: "3256b0858be826f8058f4ed714c798583421644067d388586ef89b38fd912192"
-paper_digest_sidecars: {"citation.bib":{"sha256":"edcf7e153745580d11947e233182a12868423d91084eec1affc32a0374f73e2b","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16260/citation.bib"},"citation.json":{"sha256":"20a59b919d7b33f3c40429283fd4adee81ae1eae68760e766ccecc592492f3bc","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16260/citation.json"},"citation.ris":{"sha256":"db7aaefae2e5e034e0e481a4e05d25fe478a35330a7f3dda8b7f013ee899375e","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16260/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"89ed2525570f2b8d6434d1f1faecd62858f6815668dfd0c4b7b874e70a31fe34","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16260/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"edcf7e153745580d11947e233182a12868423d91084eec1affc32a0374f73e2b","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16260/citation.bib"},"citation.json":{"sha256":"20a59b919d7b33f3c40429283fd4adee81ae1eae68760e766ccecc592492f3bc","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16260/citation.json"},"citation.ris":{"sha256":"db7aaefae2e5e034e0e481a4e05d25fe478a35330a7f3dda8b7f013ee899375e","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16260/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"581271fb97f35fe1a28581cfaa1f6b5f6e237171ece893b21f693f7223337cd8","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16260/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
-paper_digest_api_reader_article_sha256: "0c89aabbedd96ec53a2bdc571d30e87695ba7e71198bc04daec6501e914f5c31"
-paper_digest_api_reader_plan_sha256: "b48a87dbd6d57f250d424995671dc69cba0dfd6f9711b53588d4e7a2be47995e"
+paper_digest_api_reader_article_sha256: "2bfddf696d4021ebacf34e63c8a06c9544103520ef5d63e8c2c3ac6e88608366"
+paper_digest_api_reader_plan_sha256: "d5c7933334308cb229f8512d8435edf971f79e6344fb711f75d3ae95225dbaa7"
 paper_digest_api_reader_source_binding_contract: "api-reader-source-bindings-v4"
 paper_digest_api_reader_source_bindings_sha256: "f2ab73272cff62fb3f3d10be7552fb9c03c037d76b5d11da7d79fa291e55d01c"
 paper_digest_api_reader_source_table_count: 2
@@ -52,8 +52,16 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[ScreenASR-Bench: A Tiered Benchmark for Speech Recognition with Visual Context](https://arxiv.org/abs/2610.16260v1)*
 
-> 标签：#音视频语音识别 | #基准设计 | #基准测试 | #数据集
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[语音识别](/audio-paper-digest-blog/papers/?concept=task.asr) → [音视频语音识别](/audio-paper-digest-blog/papers/?concept=task.av-asr)
+- **研究方法**：[评测协议](/audio-paper-digest-blog/papers/?concept=method.evaluation-protocol) → [基准设计](/audio-paper-digest-blog/papers/?concept=method.benchmark-design)
+- **研究产物**：[基准测试](/audio-paper-digest-blog/papers/?concept=artifact.benchmark)；[数据集](/audio-paper-digest-blog/papers/?concept=artifact.dataset)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**5.9/10** | 创新 1/2 | 技术严谨 1/1.5 | 实验充分 1/1.5 | 清晰度 0.8/1 | 影响力 0.8/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 
@@ -123,7 +131,7 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 *论文图 2。原论文 Figure 2:：“Overview of the ScreenASR-Bench construction pipeline, consisting of three stages: (1) candidate collection, (2) automatic screening, and (3) expert verification.”。*
 
-上图左侧把视频、音频和参考转写作为起点，中间自动筛选又细分为关键词挖掘过滤、关键帧选择生成和证据分类 3 个子框，右侧是人工核验的 4 个检查项。图中还标出视觉语言模型使用的是 Qwen3.5-35B-A3B，以及无相关帧时用生成模型补关键帧的分支。读图时重点看音频如何先经过多个识别器再与参考比对，以及参考、关键帧和关键词如何一起进入视觉语言模型做选择与分类。
+上图左侧把视频、音频和参考转写作为起点，中间自动筛选又细分为关键词挖掘过滤、关键帧选择生成和证据分类 3 个子框，右侧是人工核验的 4 个检查项。图内 2 个模型节点只写 VLM，图注和方法正文进一步说明两处 VLM 均指 Qwen3.5-35B-A3B。图中另有无相关帧时用生成模型补关键帧的分支。读图时重点看音频如何先经过多个识别器再与参考比对，以及参考、关键帧和关键词如何一起进入视觉语言模型做选择与分类。
 
 ### 难词是怎样从多个识别结果里挖出来的
 

@@ -20,7 +20,7 @@ paper_digest_primary_task: "音乐生成"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.music-generation","label":"音乐生成"},{"facet":"method","id":"method.multimodal-learning","label":"多模态学习"},{"facet":"artifact","id":"artifact.dataset","label":"数据集"},{"facet":"artifact","id":"artifact.benchmark","label":"基准测试"}]
 paper_digest_primary_method: "多模态学习"
 paper_digest_score: 6.0
@@ -29,7 +29,7 @@ paper_digest_document_type: "应用研究"
 paper_digest_one_sentence: "PAG-Agent 用最爱的歌曲与用户背景先提炼显式审美档案再生成专辑，并在 Personal-100 上用一致性与特异性指标验证个性化效果，而通用音质并未同步提升。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Yifeng Mao"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Ziye Wang"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Yutong Shen"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Feiran Liu"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Wenjuan Han"}]
 paper_digest_abstract_sha256: "6eb78168bae91bc3a72dc70b9650badfabe1bae5fec76137530f80e2dff76b84"
-paper_digest_sidecars: {"citation.bib":{"sha256":"72f65f2a98050684a48808751ccfe55010995bfd3e0e5d077450ebe962399047","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14508/citation.bib"},"citation.json":{"sha256":"9a6c3d2bf9ca8803bb7ad803afabcd22bafe2852b806058f3c71f080b8144177","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14508/citation.json"},"citation.ris":{"sha256":"9dbd9e5f9de1b8338263f361854bb8eab576533a7b331e13d975d1222fec0cb4","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14508/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"b0b2d526887233159eb6cddd4858b8cf8ec88893ff6e93d677d5ff7b3090e71f","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14508/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"72f65f2a98050684a48808751ccfe55010995bfd3e0e5d077450ebe962399047","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14508/citation.bib"},"citation.json":{"sha256":"9a6c3d2bf9ca8803bb7ad803afabcd22bafe2852b806058f3c71f080b8144177","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14508/citation.json"},"citation.ris":{"sha256":"9dbd9e5f9de1b8338263f361854bb8eab576533a7b331e13d975d1222fec0cb4","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14508/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"a684af42c9b2047554fa981a266346518a00004604945c382f6e25dbe6abadeb","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14508/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "9dc3f77ca3b5768d3310c941916fc746e52a76108fbc6df6f5d21d6e6221bfb7"
 paper_digest_api_reader_plan_sha256: "fc296382afc4a319578d85c80562654f3c5ad2a255d98813a55f5d241b61b370"
@@ -52,8 +52,16 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[PAG-Agent: Zero-Shot Personalized Music Album Generation via Aesthetic Profile Distillation](https://arxiv.org/abs/2610.14508v1)*
 
-> 标签：#音乐生成 | #多模态学习 | #数据集 | #基准测试
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[音乐生成](/audio-paper-digest-blog/papers/?concept=task.music-generation)
+- **研究方法**：[多模态学习](/audio-paper-digest-blog/papers/?concept=method.multimodal-learning)
+- **研究产物**：[数据集](/audio-paper-digest-blog/papers/?concept=artifact.dataset)；[基准测试](/audio-paper-digest-blog/papers/?concept=artifact.benchmark)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**6.0/10** | 创新 1.2/2 | 技术严谨 1/1.5 | 实验充分 1.2/1.5 | 清晰度 0.8/1 | 影响力 0.9/1.5 | 开源 0/1.5 | 可复现 0.1/0.5 | 工程/实践 0.8/1.5
 
 

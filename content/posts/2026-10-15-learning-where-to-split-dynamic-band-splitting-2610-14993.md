@@ -20,7 +20,7 @@ paper_digest_primary_task: "音频分离"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.audio-separation","label":"音频分离"},{"facet":"method","id":"method.dynamic-computation","label":"动态计算与早退"},{"facet":"signal","id":"signal.music","label":"音乐"},{"facet":"signal","id":"signal.speech","label":"语音"}]
 paper_digest_primary_method: "动态计算与早退"
 paper_digest_score: 7.3
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "论文针对固定频带划分难以兼顾不同混合内容的问题，提出随混合自适应移动边界的动态频带切分框架，在三个数据集上用固定带数对照验证了划分自适应的增益，并以消融说明了分块预算与重建细化的代价。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Bingzhe Zhang"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Kai Li"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Xiaolin Hu"}]
 paper_digest_abstract_sha256: "e7f131f8ff6ce2033ea959645e2737a73365b323f6b487c29da09b23131ef6ad"
-paper_digest_sidecars: {"citation.bib":{"sha256":"10af330a4589b11d9263b657a8bccdd36fe080fbfcb09e6369fa7ce369a8a4d7","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14993/citation.bib"},"citation.json":{"sha256":"d4e41a7be74be495afddacd04fc72cc33f36933dc8d8486b9695e1f792f9e9f1","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14993/citation.json"},"citation.ris":{"sha256":"aae8657b98d84eed6264f140cffe0dea2b9b7bf0bc3ad951e83df0da89a84fdd","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14993/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"310e5ec556529d628e622918b297084a107d096669d993c63b00a88ab88c0654","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14993/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"10af330a4589b11d9263b657a8bccdd36fe080fbfcb09e6369fa7ce369a8a4d7","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14993/citation.bib"},"citation.json":{"sha256":"d4e41a7be74be495afddacd04fc72cc33f36933dc8d8486b9695e1f792f9e9f1","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14993/citation.json"},"citation.ris":{"sha256":"aae8657b98d84eed6264f140cffe0dea2b9b7bf0bc3ad951e83df0da89a84fdd","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14993/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"efe33489ec5d081313bab80c3fb610527e0ebb6c533293b324ec7779d88910c7","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14993/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "7cffa7637cf10c9dbc9bc9a7332754bb69bc324be3c869c3969f7184c7d09667"
 paper_digest_api_reader_plan_sha256: "c5395f70fab5e62f48a4654c9e9a1c74897cf7fba3d3c57ddbb81371f9c8ecaf"
@@ -52,8 +52,16 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[Learning Where to Split: Dynamic Band Splitting for Audio Source Separation](https://arxiv.org/abs/2610.14993v1)*
 
-> 标签：#音频分离 | #动态计算与早退 | #音乐 | #语音
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[音频分离](/audio-paper-digest-blog/papers/?concept=task.audio-separation)
+- **研究方法**：[模型压缩](/audio-paper-digest-blog/papers/?concept=method.compression) → [动态计算与早退](/audio-paper-digest-blog/papers/?concept=method.dynamic-computation)
+- **信号**：[音乐](/audio-paper-digest-blog/papers/?concept=signal.music)；[语音](/audio-paper-digest-blog/papers/?concept=signal.speech)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**7.3/10** | 创新 1.5/2 | 技术严谨 1.2/1.5 | 实验充分 1.3/1.5 | 清晰度 0.8/1 | 影响力 1/1.5 | 开源 0.2/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 

@@ -20,7 +20,7 @@ paper_digest_primary_task: "语音识别"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.asr","label":"语音识别"},{"facet":"method","id":"method.continual","label":"持续学习"},{"facet":"method","id":"method.regularization","label":"正则化"},{"facet":"signal","id":"signal.speech","label":"语音"}]
 paper_digest_primary_method: "持续学习"
 paper_digest_score: 5.7
@@ -29,12 +29,12 @@ paper_digest_document_type: "应用研究"
 paper_digest_one_sentence: "把 Whisper-small 从 TED 演讲语音调到 Earnings22 财报语音时，同域两分区上都出现负遗忘，不加正则的微调取得最低词错误率，而需要正则时 mini-KFAC 比对角 EWC 更低更稳，但差异在 5 个种子下不显著。"
 paper_digest_authors: [{"affiliations":["Department of Computer Science","Columbia University, NYC, NY, USA"],"name":"Thai Quoc On"},{"affiliations":["Mechanical Engineering Dept. and","Electrical Engineering Dept.","Columbia University, NYC, NY, USA","and Recognition Technologies, Inc.","South Salem, NY, USA"],"name":"Homayoon Beigi"}]
 paper_digest_abstract_sha256: "2827efd4801d484afef7bf2ac77b37f25b9af259d39b89b95fae68b82f416abd"
-paper_digest_sidecars: {"citation.bib":{"sha256":"b4bed50f794ab06bdbd4bf9b0818a6556199efd311d2a671c9e34a0039980eb3","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13432/citation.bib"},"citation.json":{"sha256":"357096e58ed815824a5702aae9c34414b9dc19ceca673d82a35ff6e3c074144b","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13432/citation.json"},"citation.ris":{"sha256":"da4992c2d84c51568f3af93101f5746fdc13c67660766f742bd25159f81238f6","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13432/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"76a8618517d588f027d77bc2640d16fd21c12f28feaa289f740af06decfafc7d","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13432/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"b4bed50f794ab06bdbd4bf9b0818a6556199efd311d2a671c9e34a0039980eb3","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13432/citation.bib"},"citation.json":{"sha256":"357096e58ed815824a5702aae9c34414b9dc19ceca673d82a35ff6e3c074144b","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13432/citation.json"},"citation.ris":{"sha256":"da4992c2d84c51568f3af93101f5746fdc13c67660766f742bd25159f81238f6","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13432/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"5840d9f784c48f13b9340ac591ec4653999575f604fe62cde1501269a6b11375","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13432/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
-paper_digest_api_reader_article_sha256: "319d53f2b2f10ccc59e844a8d5a77e080d3cb0d985f4918f78a5c7e742f645ba"
-paper_digest_api_reader_plan_sha256: "bc9aaaa3f69d315fb7fa669e4f1ff16186ce40e14d43b97a37f9a8bb8a62c847"
+paper_digest_api_reader_article_sha256: "7f99276e8db768d9fcf01a3f521ca0812eade6de4de584181f75012f65022b7d"
+paper_digest_api_reader_plan_sha256: "5bc8898b46e141b584d54a6d5636f436b75b64f3bfed486485af5c7410f95e38"
 paper_digest_api_reader_source_binding_contract: "api-reader-source-bindings-v4"
-paper_digest_api_reader_source_bindings_sha256: "e0bcddff74dc2133144e8a423a5be36d46b67de0a4b46e628882f61b49207bc9"
+paper_digest_api_reader_source_bindings_sha256: "20dc8d4f1671838aaa604f4ec436975e5498bbdf4963fc8f5e3966fe91b5a627"
 paper_digest_api_reader_source_table_count: 3
 paper_digest_api_reader_source_formula_count: 2
 paper_digest_api_reader_structured_artifacts_sha256: "20fc4b49594f59c2d57f7d51bba1d011de15e418d621d8367e2735b0926b803a"
@@ -52,8 +52,16 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[Does Financial Speech Need Continual Learning Regularization? A Study of EWC and mini-KFAC on Earnings Call ASR](https://arxiv.org/abs/2610.13432v1)*
 
-> 标签：#语音识别 | #持续学习 | #正则化 | #语音
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[语音识别](/audio-paper-digest-blog/papers/?concept=task.asr)
+- **研究方法**：[持续学习](/audio-paper-digest-blog/papers/?concept=method.continual)；[正则化](/audio-paper-digest-blog/papers/?concept=method.regularization)
+- **信号**：[语音](/audio-paper-digest-blog/papers/?concept=signal.speech)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**5.7/10** | 创新 1/2 | 技术严谨 1/1.5 | 实验充分 0.8/1.5 | 清晰度 0.8/1 | 影响力 0.8/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 
@@ -98,17 +106,17 @@ Kronecker 分解近似曲率的方法最早用于可扩展的 2 阶优化，它�
 
 ### 三步流水线如何组织输入与评测
 
-全文的实验可以看成一条三步流水线，输入是语音加文字，输出是转写文字，中间用保留分区做记忆探针。第一步是在 TEDLIUM 衍生语料的训练划分上适配 Whisper-small，得到通用域初始化和第一阶段检查点。第二步是在第一阶段的数据批次上估计 Fisher 统计量，分别按对角形式和 mini-KFAC 形式保存，供第三步使用。第三步只在 Earnings22 的目标分区 Task B 上微调，同时在从未见过的保留分区 Task A 上评测，Task A 的词错误率变化就是遗忘度量。下图把这种分工画得很清楚，Task A 只连向评测，Task B 才连向 3 种可运行策略。
+全文的实验可以看成一条三步流水线，输入是语音加文字，输出是转写文字，中间用保留分区做记忆探针。第一步是在 TEDLIUM 衍生语料的训练划分上适配 Whisper-small，得到通用域初始化和第一阶段检查点。第二步是在第一阶段的数据批次上估计 Fisher 统计量，分别按对角形式和 mini-KFAC 形式保存，供第三步使用。第三步只在 Earnings22 的目标分区 Task B 上微调，同时在从未见过的保留分区 Task A 上评测，Task A 的词错误率变化就是遗忘度量。原文明确 Task A 是从不参与训练的保留分区，Task B 才用于微调，且两者说话人组不重叠，3 种方法都在 Task A 和 Task B 上评测，这是原文的科学设置，而不只是从图上推测。
 
-下面这张流程图是理解分工的关键，先看主路径再看分支汇合，图中方框和箭头标出了数据与检查点的流向。
+下面这张流程图是理解分工的关键，先看主路径再看分支，图中方框和箭头标出了数据与检查点的流向，读图时以正文设置为准。
 
-> **看图路径：** 1. 先沿 Whisper-small 到 TEDLIUM 再到 Earnings22 的主箭头看三步顺序；2. 再看第二步如何分出对角 Fisher 与 mini-KFAC Fisher 两条支路；3. 最后看 Task A 只连向评测而 Task B 连向三种训练方法的分工
+> **看图路径：** 1. 先沿 Whisper-small 到 TEDLIUM 再到 Earnings22 的主箭头看三步顺序；2. 再看第二步如何分出对角 Fisher 与 mini-KFAC Fisher 两条支路；3. 最后对照正文确认 Task A 只做保留评测而 Task B 做微调的分工
 
 [![原论文 Figure 1：The architecture of the continual learning experimental pipeline.](https://arxiv.org/html/2610.13432v1/figures/continual_learning_pipeline.png)](https://arxiv.org/html/2610.13432v1/figures/continual_learning_pipeline.png)
 
 *论文图 1。原论文 Figure 1:：“The architecture of the continual learning experimental pipeline.”。*
 
-从像素上看，图顶是 Whisper-small 方框，向下进入第一步虚线框，依次是 TEDLIUM 数据集、第一阶段微调和第一阶段检查点。第二步虚线框从检查点分出两条并行支路，分别是 Diagonal Fisher 和 Mini-KFAC Fisher，之后再汇合向下。第三步虚线框内是 Earnings22 数据集分出 Task A 和 Task B，Task B 向下连接基线、对角 EWC 和 mini-KFAC 3 个并列方法框，Task A 则与这 3 个方法的输出一起汇入评测框。这种画法强调了保留分区不参与梯度更新，只作为外部探针，任何在 Task A 上的提升都只能来自跨说话人的泛化，而不是直接拟合。
+图 1 顶部是 Whisper-small 方框，向下进入第一步虚线框，依次是 TEDLIUM 数据集、第一阶段微调和第一阶段检查点。第二步虚线框从检查点分出对角 Fisher 与 mini-KFAC Fisher 两条并行支路。第三步虚线框内是 Earnings22 数据集分出 Task A 和 Task B，其中 Task A 到评测的箭头在图中明确画出，3 种方法框是否汇入评测不能单凭像素断定。原文写明 3 种可运行策略都在两个分区上评测，Task A 从不参与梯度更新，只作为外部探针，因此 Task A 上的提升只能按原文解释为跨说话人的同域泛化，而不是直接拟合。
 
 ### 对角 EWC 如何按参数逐个加约束
 
@@ -152,13 +160,12 @@ mini-KFAC EWC 仍是 Fisher 正则，但把重要性从标量换成每层的矩�
 
 先看最核心的比较问题：在相同三步流水线和相同评测分区下，不加正则、对角 EWC 和 mini-KFAC EWC 在目标分区和保留分区上的词错误率谁更低，遗忘符号如何。公平条件是同一 Whisper-small 起点、同一 Task B 训练数据、同一 Task A 评测集，指标方向都是词错误率越低越好，遗忘越负表示保留分区改善越多。论文取最优检查点比较而非取 120 步终点，这一点对理解基线的先降后升很关键。
 
-下表整理了论文正文句子直接报告的关键数字，比较对象是 3 种实际可运行策略，单位均为百分点，方向越低越好。
+下表整理了论文正文句子直接报告的关键数字，比较对象是 3 种实际可运行策略，单位均为百分点方向越低越好，最后一列补充显著性标记以便对照限制。
 
-| 评估对象 | 不加正则微调 | 对角 EWC | mini-KFAC EWC | 差异说明 |
+| 评估方法 | Task B 词错误率 | Task A 词错误率 | 遗忘均值 | 遗忘显著性 |
 | --- | --- | --- | --- | --- |
-| Task B 词错误率 | 31.94% | 35.23% | 34.26% | mini-KFAC 比对角低 0.97% |
-| Task A 词错误率 | 未以句子报告具体基线值 | 21.88% | 21.52% | mini-KFAC 比对角低 0.36% |
-| 遗忘均值，负值表示改善 | −4.87% | −3.66% | −4.02% | 约束越强允许的改善越小 |
+| 对角 EWC | 35.23% | 21.88% | −3.66% | p<0.05 |
+| mini-KFAC EWC | 34.26% | 21.52% | −4.02% | p<0.05 |
 
 上表说明三件事。第一，3 种方法的遗忘都是负的，基线改善最多为−4.87%，mini-KFAC 为−4.02%，对角 EWC 为−3.66%，约束越强允许的改善越小，说明正则挡住了有益的协同适应。第二，目标分区上基线 31.94% 明显低于两种正则的 35.23% 和 34.26%，尽管在 5 个种子下成对检验不显著，但 Task B 上基线对两种正则的效应量分别达 0.89 和 0.83，属于大效应，提示增加种子可能确认这一实际有意义的差距。第三，需要正则时 mini-KFAC 在报告的指标上都略好于对角 EWC，Task B 降低 0.97%，Task A 降低 0.36%，但这些差异的效应量只有 0.17 到 0.23，属于小效应且不显著，只能视为方向一致的温和优势。未胜出的信息也要保留：两种正则都没有在任何指标上超过基线。
 
@@ -172,7 +179,7 @@ mini-KFAC EWC 仍是 Fisher 正则，但把重要性从标量换成每层的矩�
 
 *论文图 2。原论文 Figure 2:：“Task A WER evolution during Stage B fine-tuning.”。*
 
-图 2 的横轴是训练步数 20 到 120，纵轴是 Task A 词错误率，越低越好。可见 3 条平滑线起点都在约 22% 附近，顶部灰色虚线是第 2 阶段前的起点约 26% 以上，3 条线全程都在其下方，证实了负遗忘。基线橙色平滑线持续下降到约 19%，而对角红色线和 mini-KFAC 棕色线先降后略升，最终停在约 21% 到 22%，阴影带显示正则方法的波动并不比基线小太多，但基线的下降斜率更陡。
+图 2 横轴是训练步数 20 到 120，纵轴是 Task A 词错误率，越低越好，包含原始虚线和平滑实线以及 5 个种子的阴影带。可见 3 条平滑线起点都在约 22% 附近，顶部灰色虚线是第 2 阶段前的起点约 26% 以上，3 条线全程都在其下方，证实了负遗忘。基线橙色平滑线持续下降到约 19%，而对角红色线和 mini-KFAC 棕色线先降后略升，最终停在约 21% 到 22%，阴影带显示正则方法的波动并不比基线小太多，但基线的下降斜率更陡。
 
 \[t=\frac{\bar{x}_{\text{forgetting}}}{s/\sqrt{n}},\quad df=n-1=4\]
 
@@ -182,13 +189,13 @@ mini-KFAC EWC 仍是 Fisher 正则，但把重要性从标量换成每层的矩�
 
 第二个比较问题是目标分区和保留分区的轨迹是否一致，条件同样是 5 个种子平均、同一训练步数对齐，指标仍是词错误率越低越好。目标分区反映学得好不好，保留分区反映忘没忘，两者用同一批检查点串起来，才能判断是否存在保持与适应的权衡。本文的特殊之处在于两者同时变好，至少在最优检查点附近是这样。
 
-下表把遗忘均值与对应的 t 值和 p 值放在一起，列数满足跨方法对照的需要，方向越负表示改善越多。
+下表把遗忘均值与对应的 t 值和 p 值放在一起，列数满足跨方法对照的需要，方向越负表示改善越多，最后一列说明统计含义与限制。
 
-| 方法 | 遗忘均值 | t 值 | p 值，单尾 | 显著性结论 |
+| 方法 | 遗忘均值 | t 值 | p 值单尾 | 显著性结论与限制 |
 | --- | --- | --- | --- | --- |
-| 不加正则微调 | −4.87% | −4.41 | 0.006 | 显著，p<0.05 |
-| 对角 EWC | −3.66% | −4.20 | 0.007 | 显著，p<0.05 |
-| mini-KFAC EWC | −4.02% | −3.73 | 0.010 | 显著，p<0.05 |
+| 不加正则微调 | −4.87% | −4.41 | 0.006 | 显著但仅针对同域分区 |
+| 对角 EWC | −3.66% | −4.20 | 0.007 | 显著但仅针对同域分区 |
+| mini-KFAC EWC | −4.02% | −3.73 | 0.010 | 显著但仅针对同域分区 |
 
 这张表比较的是同域保留分区上的改善是否稳定，以及结论能走多远。3 种方法的 p 都小于 0.05，效应相对抽样波动很大，因此作者认为即使正态假设在 n 等于 5 时无法验证，定性结论受偏离影响较小。但这不等于证明了对遗忘的抵抗，它只是说在该同域验证分区上微调带来了跨说话人的泛化，论文明确把负遗忘限定为有符号词错误率变化的标签，而非经典大偏移下的保持适应权衡。
 
@@ -202,13 +209,13 @@ mini-KFAC EWC 仍是 Fisher 正则，但把重要性从标量换成每层的矩�
 
 *论文图 3。原论文 Figure 3:：“Task B WER evolution during Stage B fine-tuning.”。*
 
-图 3 的横轴同样是训练步数，纵轴是 Task B 词错误率。基线蓝色虚线在 40 步附近达到约 32.8% 的最低点，之后回升到 44% 附近，呈现先学好再过拟合的形态。对角与 mini-KFAC 两条线更平坦，始终在 36% 到 41% 之间，后期反而低于回升后的基线。如果只看 120 步终点，会误以为正则更好，但论文的规则是取最优验证值，因此基线的最优值仍然最好。阴影带在早期很宽，说明 5 个种子在初期的分歧大，到中后期才收窄，比较时必须同时看均值和带宽。
+图 3 横轴同样是训练步数，纵轴是 Task B 词错误率，包含基线、对角与 mini-KFAC 的原始和平滑线以及 B 阶段前灰色虚线。基线蓝色虚线在 40 步附近达到约 32.8% 的最低点，之后回升到 44% 附近，呈现先学好再过拟合的形态。对角与 mini-KFAC 两条线更平坦，始终在 36% 到 41% 之间，后期反而低于回升后的基线。如果只看 120 步终点，会误以为正则更好，但论文的规则是取最优验证值，因此基线的最优值仍然最好。阴影带在早期很宽，说明 5 个种子在初期的分歧大，到中后期才收窄，比较时必须同时看均值和带宽。
 
 ### 正则强度与惩罚动态如何解释差异
 
 要理解为什么 mini-KFAC 略好，需要看惩罚和损失的动态。比较问题是两种正则的约束轨迹有何不同，条件是相同的爬升安排和相同的分层系数，观察对象是每步的 EWC 惩罚、总损失、ASR 损失分量和正则损失分量。论文把总损失拆成 ASR 分量加 EWC 分量，基线的 EWC 分量始终为零，因此它的总损失就是 ASR 损失。
 
-下图导读有助于抓住两条惩罚曲线的形态差异，重点看峰的位置与高度以及衰减速度，横轴是训练步数，纵轴是惩罚值。
+下图导读有助于抓住两条惩罚曲线的形态差异，重点看峰的位置与高度以及衰减速度，横轴是训练步数，纵轴是惩罚值，基线始终为零可作参照。
 
 > **看图路径：** 1. 看 mini-KFAC 曲线更早上升更快见顶而对角 EWC 上升更慢见顶更晚；2. 看两者峰后都下降但 mini-KFAC 最终稳定在更低的惩罚值；3. 看基线始终为零以确认它不受任何参数漂移惩罚
 
@@ -216,18 +223,16 @@ mini-KFAC EWC 仍是 Fisher 正则，但把重要性从标量换成每层的矩�
 
 *论文图 4。原论文 Figure 4:：“EWC penalty evolution during Stage B adaptation.”。*
 
-从像素上看，横轴 0 到 120 步，纵轴是 EWC 惩罚损失。绿色 mini-KFAC 线在约 5 步后迅速爬升，约 28 步达到约 0.10 的峰，随后持续下降到约 0.02。橙色对角线爬升更慢，约 50 步达到约 0.15 的更高峰，随后缓慢下降到约 0.09。蓝色基线始终为零。论文的解释是两者上升都来自 50 步线性爬升与参数漂移增大的叠加，而 mini-KFAC 因能更精确地检测结构化漂移而更早见顶，随后找到兼顾 Task B 与 Kronecker 几何的方向使惩罚下降。
+图 4 横轴 0 到 120 步，纵轴是 EWC 惩罚损失，包含 5 个种子的均值线与阴影带。绿色 mini-KFAC 线在约 5 步后迅速爬升，约 28 步达到约 0.10 的峰，随后持续下降到约 0.02。橙色对角线爬升更慢，约 50 步达到约 0.15 的更高峰，随后缓慢下降到约 0.09。蓝色基线始终为零。论文的解释是两者上升都来自 50 步线性爬升与参数漂移增大的叠加，而 mini-KFAC 因能更精确地检测结构化漂移而更早见顶，随后找到兼顾 Task B 与 Kronecker 几何的方向使惩罚下降。
 
-对角版本缺乏这种结构，轨迹更高更平。附带的损失分解显示，总损失初期上升正是正则项加入所致，mini-KFAC 稳定在更低的校准约束水平，从而允许更大的 ASR 进展，这对应了它在 2 个任务上都更低的词错误率。
+对角版本缺乏这种结构，轨迹更高更平。附带的损失分解显示，总损失初期上升正是正则项加入所致，mini-KFAC 稳定在更低的校准约束水平，从而允许更大的 ASR 进展。
 
-下表进一步把方法间两两比较的统计量并列，说明为什么只能称温和优势，差异为百分点，方向负值表示前者更低。
+下表进一步把方法间两两比较的统计量并列，说明为什么只能称温和优势，差异为百分点，方向负值表示前者更低，效应量与 p 值共同决定结论强度。
 
-| 对比组 | 评估指标 | 降低幅度 | t 值 | p 值 | 效应量 d |
-| --- | --- | --- | --- | --- | --- |
-| mini-KFAC 相对对角 EWC | Task A 词错误率 | 0.36% | −0.27 | 0.80 | 0.17–0.23 |
-| mini-KFAC 相对对角 EWC | Task B 词错误率 | 0.97% | −0.36 | 0.73 | 0.17–0.23 |
-| 基线相对正则方法 | Task B 词错误率 | 未以句子报告差值 | 未报告 | 未报告 | 0.89 |
-| 基线相对正则方法 | Task B 词错误率 | 未以句子报告差值 | 未报告 | 未报告 | 0.83 |
+| 对比组 | 评估指标 | 降低幅度 | p 值 | 效应量 d 与结论 |
+| --- | --- | --- | --- | --- |
+| mini-KFAC 相对对角 EWC | Task A 词错误率 | 0.36% | 0.80 | 0.17 小效应不显著 |
+| mini-KFAC 相对对角 EWC | Task B 词错误率 | 0.97% | 0.73 | 0.23 小效应不显著 |
 
 把两两比较放在一起看，mini-KFAC 对对角的两组比较在 0.05 水平不显著。mini-KFAC 对对角的差异绝对值小且效应量小，需要更多种子或更长任务序列才能确认。基线对正则的优势虽不显著但效应量大，提示是真实模式而非偶然。论文还指出梯度比在爬升后保持稳定非零，证实正则系数处于有效但非主导区间，过大则限制适应，过小则失去保护作用，调参需要在两者之间平衡。未评测的范围包括回放和适配器等更广基线，本文没有给出它们在同一流水线上的数字，因此不能说 Fisher 路线整体优于其他持续学习路线。
 
@@ -235,7 +240,7 @@ mini-KFAC EWC 仍是 Fisher 正则，但把重要性从标量换成每层的矩�
 
 这项研究的适用边界写得很明确，初学者最容易误读的地方也在这里。第一，同域两分区设计是故意的下界研究，它隔离了大分布偏移，让遗忘直接归因于参数漂移，但也意味着它是最好情形，不能读成正则在所有语音持续学习中都不必要。附录指出 3 种可能需要正则的情形：任务间声学或语言差异大、出现强灾难性遗忘、目标分区数据很少需要借助旧知识防过拟合，这些情形本文都没有评测。
 
-第二，种子数只有 5 个，负遗忘显著但方法间比较功效不足，且正态假设难以验证，作者建议用不需要正态假设的自举法进一步确认。第三，任务序列只有两段且步数较短，第一阶段 100 步、第 2 个阶段 120 步，长期多季度流中互补性是否持续未知。第四，超参数是在单卡预算下为稳定优化选择的，学习率、爬升步数和全局系数的其他组合可能改变相对排序。
+第二，种子数只有 5 个，负遗忘显著但方法间比较功效不足，且正态假设难以验证，作者建议用不需要正态假设的自举法进一步确认。第三，任务序列只有两段且步数较短，第一阶段 100 步、第二个阶段 120 步，长期多季度流中互补性是否持续未知。第四，超参数是在单卡预算下为稳定优化选择的，学习率、爬升步数和全局系数的其他组合可能改变相对排序。
 
 把这些条件讲清后，论文的实践建议才成立：先评测遗忘再决定是否正则，稳定或负遗忘意味着互补而不必加约束，确实观察到遗忘时优先选 mini-KFAC 而非对角版本。超出这些条件，比如跨领域或长序列，结论是否成立还有待验证。
 

@@ -20,7 +20,7 @@ paper_digest_primary_task: "音频事件检测"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.event-detection","label":"音频事件检测"},{"facet":"method","id":"method.adaptive-filtering","label":"自适应滤波"},{"facet":"method","id":"method.attention","label":"注意力机制"},{"facet":"application","id":"application.medical","label":"医疗音频"}]
 paper_digest_primary_method: "自适应滤波"
 paper_digest_score: 6.0
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "针对仅用环境音频检测鼾声、低通气和阻塞性呼吸暂停并估计 AHI 的问题，论文提出把多分辨率自适应线增强器的置信图直接送入注意力偏置和特征调制，在 APSAA 上取得 Event-F1 0.7105 的最好结果，代价是三路滤波加双流建模带来额外计算和单中心小样本的适用限制。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Chanwoo Park"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Chanwoo Kim"}]
 paper_digest_abstract_sha256: "197048c8d2fdc80dc3960bd31975cacde981c6e182ba1820d2866bc6492cff3a"
-paper_digest_sidecars: {"citation.bib":{"sha256":"4f0fb325ec9b817d8049370245154a4e425554d2bb645e7a27a950a83d7912b9","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15532/citation.bib"},"citation.json":{"sha256":"a0f27912a400ebc35967fee5b1ad7866fbfb2efaddbbc6f02366c849e14f2ff2","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15532/citation.json"},"citation.ris":{"sha256":"a1eaa8d030f421b17a0f738eb58bec2cc139b75cd8c5436250c6770a504c5b4b","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15532/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"19e94cb61adbfa7df872a7dc12afb8b73da5109356f4761311317b39799036f7","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15532/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"4f0fb325ec9b817d8049370245154a4e425554d2bb645e7a27a950a83d7912b9","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15532/citation.bib"},"citation.json":{"sha256":"a0f27912a400ebc35967fee5b1ad7866fbfb2efaddbbc6f02366c849e14f2ff2","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15532/citation.json"},"citation.ris":{"sha256":"a1eaa8d030f421b17a0f738eb58bec2cc139b75cd8c5436250c6770a504c5b4b","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15532/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"58689e75dba3b068b964f8eb109fb998c8d93c3523291679b7f6c1e1e8e11ea5","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15532/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "2089951031ca6fbaaac54197c16bd83fc01ec69754c2885ebbe35e49d87dd27a"
 paper_digest_api_reader_plan_sha256: "8bab11806d1e0355ced03a911d027654c7320550bc5d57dcf6b5275120d2355d"
@@ -52,8 +52,16 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[Sleep Sound Event Detection Powered by Learnable Multi-Resolution Adaptive Line Enhancer](https://arxiv.org/abs/2610.15532v1)*
 
-> 标签：#音频事件检测 | #自适应滤波 | #注意力机制 | #医疗音频
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[音频事件检测](/audio-paper-digest-blog/papers/?concept=task.event-detection)
+- **研究方法**：[信号处理](/audio-paper-digest-blog/papers/?concept=method.signal-processing) → [自适应滤波](/audio-paper-digest-blog/papers/?concept=method.adaptive-filtering)；[注意力机制](/audio-paper-digest-blog/papers/?concept=method.attention)
+- **应用**：[医疗音频](/audio-paper-digest-blog/papers/?concept=application.medical)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**6.0/10** | 创新 1.3/2 | 技术严谨 1/1.5 | 实验充分 1/1.5 | 清晰度 0.7/1 | 影响力 0.7/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 

@@ -20,7 +20,7 @@ paper_digest_primary_task: "目标说话人提取"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.target-speaker","label":"目标说话人提取"},{"facet":"method","id":"method.dynamic-computation","label":"动态计算与早退"},{"facet":"setting","id":"setting.multilingual","label":"多语言"},{"facet":"research_focus","id":"research_focus.efficiency","label":"高效推理"},{"facet":"scientific_topic","id":"scientific_topic.phonetics","label":"语音学与音系"}]
 paper_digest_primary_method: "动态计算与早退"
 paper_digest_score: 6.3
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "针对多语言混合语音中不同输入提取难度不同，该研究用样本级难度估计加共享多出口提取器做自适应路由，在 PolyExtract 上以 0.30 GFLOPs 达到 15.07 dB 宏平均 SI-SNRi 并把下游平均词错误率从 16.8% 降到 14.6%。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Yanxiang Chen"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Haoyuan Deng"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Jinyu Wang"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Hongyi Chen"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Dingshan Li"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Runlin Huang"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Weifeng Su"}]
 paper_digest_abstract_sha256: "e63104ad315e9079fe75468f107693e0516725a54a4f13dac15ac11e32dfff1a"
-paper_digest_sidecars: {"citation.bib":{"sha256":"393abca7e4580eaf69b21cbad10cfb45222d89fd07b7732d5000006183045bcc","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13500/citation.bib"},"citation.json":{"sha256":"08d162c175979e7a056fd7da42a98f305b30fc8d99b52e3c6e5a3ba78bf107c5","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13500/citation.json"},"citation.ris":{"sha256":"19e807292513da35d70ccbda2ac2dad5d38e4f9552f439edf815a32ed81fb578","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13500/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"562e120cd337d550be331fe0edc66849cb0f698f57e08dccd309c2cc40727586","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13500/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"393abca7e4580eaf69b21cbad10cfb45222d89fd07b7732d5000006183045bcc","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13500/citation.bib"},"citation.json":{"sha256":"08d162c175979e7a056fd7da42a98f305b30fc8d99b52e3c6e5a3ba78bf107c5","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13500/citation.json"},"citation.ris":{"sha256":"19e807292513da35d70ccbda2ac2dad5d38e4f9552f439edf815a32ed81fb578","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13500/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"5030bb5a6cc8d86317e0be4976e0c364a5593909c9876acf27b68ea8f7953ce8","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13500/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "af2527c8a7d165ef8680909a641bb97c12af70617fb34020e603ff6172be4153"
 paper_digest_api_reader_plan_sha256: "a39e131b8b052587ac9202a2a8202827144eb469deae8f9cf3c74c12d0ae86ea"
@@ -52,8 +52,18 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[Phonology-Aware Speaker Extraction Frontend for Audio LLMs](https://arxiv.org/abs/2610.13500v1)*
 
-> 标签：#目标说话人提取 | #动态计算与早退 | #多语言 | #高效推理 | #语音学与音系
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[音频分离](/audio-paper-digest-blog/papers/?concept=task.audio-separation) → [语音分离](/audio-paper-digest-blog/papers/?concept=task.speech-separation) → [目标说话人提取](/audio-paper-digest-blog/papers/?concept=task.target-speaker)
+- **研究方法**：[模型压缩](/audio-paper-digest-blog/papers/?concept=method.compression) → [动态计算与早退](/audio-paper-digest-blog/papers/?concept=method.dynamic-computation)
+- **研究条件**：[多语言](/audio-paper-digest-blog/papers/?concept=setting.multilingual)
+- **研究重点**：[高效推理](/audio-paper-digest-blog/papers/?concept=research_focus.efficiency)
+- **科学主题**：[语音学与音系](/audio-paper-digest-blog/papers/?concept=scientific_topic.phonetics)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**6.3/10** | 创新 1.2/2 | 技术严谨 1/1.5 | 实验充分 1/1.5 | 清晰度 0.8/1 | 影响力 1/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 

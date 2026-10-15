@@ -20,7 +20,7 @@ paper_digest_primary_task: "语音转换"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.voice-conversion","label":"语音转换"},{"facet":"method","id":"method.gan","label":"生成对抗网络"},{"facet":"task","id":"task.speech-attributes","label":"语音属性识别"},{"facet":"method","id":"method.subjective-evaluation","label":"主观评测"}]
 paper_digest_primary_method: "生成对抗网络"
 paper_digest_score: 8.2
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "该文把人声强度转换定义为按连续 dB SPL 目标改写 frozen 特征，再用条件循环 GAN 训练轻量转换器，WavLM 上实现约 83% 的目标强度变化，但绝对感知水平仍依赖源录音且韵律频谱改变量小于自然差异。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Quentin Le Tellier"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Albert Rilliard"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Olivier Perrotin"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Marc Evrard"}]
 paper_digest_abstract_sha256: "31e60309a630326f4a7bf1c2ace84556a09cccf22059759819a3c4874747d709"
-paper_digest_sidecars: {"citation.bib":{"sha256":"cc00cf3a6c025d426ccb3c7821f6f15c223904ef276b1e0a3681603137b866ea","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13608/citation.bib"},"citation.json":{"sha256":"e492e8e2b60ea8702bffa1675361d56766f079a04ab78ed0e565770d2d3036d7","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13608/citation.json"},"citation.ris":{"sha256":"f67342aced9199accffb1baafe2025f77921b899d0bed7d6bda1d0073df7848f","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13608/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"464c15f1da94b25a872e8394e2f2ca6eb90ba5fe7c91ecc29d311294be5549d1","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13608/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"cc00cf3a6c025d426ccb3c7821f6f15c223904ef276b1e0a3681603137b866ea","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13608/citation.bib"},"citation.json":{"sha256":"e492e8e2b60ea8702bffa1675361d56766f079a04ab78ed0e565770d2d3036d7","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13608/citation.json"},"citation.ris":{"sha256":"f67342aced9199accffb1baafe2025f77921b899d0bed7d6bda1d0073df7848f","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13608/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"b0a7daa0e7bca09a396f3aec2cc17a535415a5d32b70e5e3089fdbfe163d1bb1","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-13608/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "52b24fc8e43bd950438fac350ab06ef4730825c03801705d5fe3da1287cb6bf0"
 paper_digest_api_reader_plan_sha256: "a9219c4e4489937db4583b5600bdb7ff7b71615c7c06bfc42c4350381a43dc14"
@@ -52,8 +52,15 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[Vocal Intensity Conversion with Continuous SPL Control via Adversarial Training](https://arxiv.org/abs/2610.13608v1)*
 
-> 标签：#语音转换 | #生成对抗网络 | #语音属性识别 | #主观评测
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[语音转换](/audio-paper-digest-blog/papers/?concept=task.voice-conversion)；[语音属性识别](/audio-paper-digest-blog/papers/?concept=task.speech-attributes)
+- **研究方法**：[生成模型](/audio-paper-digest-blog/papers/?concept=method.generative) → [生成对抗网络](/audio-paper-digest-blog/papers/?concept=method.gan)；[人类参与评测](/audio-paper-digest-blog/papers/?concept=method.human-evaluation) → [主观评测](/audio-paper-digest-blog/papers/?concept=method.subjective-evaluation)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**8.2/10** | 创新 1.5/2 | 技术严谨 1.2/1.5 | 实验充分 1.2/1.5 | 清晰度 0.8/1 | 影响力 1/1.5 | 开源 1.2/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 

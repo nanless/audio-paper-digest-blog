@@ -20,7 +20,7 @@ paper_digest_primary_task: "说话人匿名化"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.anonymization","label":"说话人匿名化"},{"facet":"task","id":"task.voice-conversion","label":"语音转换"},{"facet":"method","id":"method.autoregressive","label":"自回归模型"},{"facet":"method","id":"method.neural-codec","label":"神经编解码与离散单元"},{"facet":"setting","id":"setting.streaming","label":"流式处理"}]
 paper_digest_primary_method: "自回归模型"
 paper_digest_score: 7.2
@@ -29,7 +29,7 @@ paper_digest_document_type: "系统技术报告"
 paper_digest_one_sentence: "LiveAnon 用冻结的流式语音识别编码器特征直接驱动自回归编解码器语言模型做语音转换，并用截断的残差量化延迟同时控制隐私、情感保留和延迟，代价是仍依赖编码器分块带来的数百毫秒算法延迟。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Yejin Kim"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Kyungsu Kim"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Seungu Han"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Kyogu Lee"}]
 paper_digest_abstract_sha256: "3161404a549f33e1564b7b98337d05cb28f9c7212d3619242c6af6e521d9abf6"
-paper_digest_sidecars: {"citation.bib":{"sha256":"5f487717c5c34d6a4a660cde72d27b86c0e686a6f0c88d67415f27f0bca642c9","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15379/citation.bib"},"citation.json":{"sha256":"ea1b97724c29f26f1a022a0fdbe0946fbda6c8b0be2f5d6e8460726d39a83b79","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15379/citation.json"},"citation.ris":{"sha256":"2dd9785e88963d42a3bf48d972ff93003ffc21b6ca23cbb3c60a3d9b1808a6e3","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15379/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"965113af499536ae0fc7dcc464258ac5f21fea0ded4fca46149887e2fb260fbb","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15379/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"5f487717c5c34d6a4a660cde72d27b86c0e686a6f0c88d67415f27f0bca642c9","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15379/citation.bib"},"citation.json":{"sha256":"ea1b97724c29f26f1a022a0fdbe0946fbda6c8b0be2f5d6e8460726d39a83b79","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15379/citation.json"},"citation.ris":{"sha256":"2dd9785e88963d42a3bf48d972ff93003ffc21b6ca23cbb3c60a3d9b1808a6e3","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15379/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"d27792598b44a00353e9a0652d9be205e117271d63b577335a6b11a80389afd2","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-15379/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "d8b5594dc4c4731c6eed114af33796140af262325d43e1d077fd8a80057042d4"
 paper_digest_api_reader_plan_sha256: "e6183e1c4f5116b75104f77fa5e1844fcf10b3f84da2689a838d745657cebfb9"
@@ -52,8 +52,16 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[LiveAnon: Improving Privacy and Utility in Streaming Speaker Anonymization with Codec Language Models](https://arxiv.org/abs/2610.15379v1)*
 
-> 标签：#说话人匿名化 | #语音转换 | #自回归模型 | #神经编解码与离散单元 | #流式处理
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[说话人匿名化](/audio-paper-digest-blog/papers/?concept=task.anonymization)；[语音转换](/audio-paper-digest-blog/papers/?concept=task.voice-conversion)
+- **研究方法**：[生成模型](/audio-paper-digest-blog/papers/?concept=method.generative) → [自回归模型](/audio-paper-digest-blog/papers/?concept=method.autoregressive)；[向量量化](/audio-paper-digest-blog/papers/?concept=method.vector-quantization) → [神经编解码与离散单元](/audio-paper-digest-blog/papers/?concept=method.neural-codec)
+- **研究条件**：[流式处理](/audio-paper-digest-blog/papers/?concept=setting.streaming)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**7.2/10** | 创新 1.5/2 | 技术严谨 1.2/1.5 | 实验充分 1.2/1.5 | 清晰度 0.8/1 | 影响力 1/1.5 | 开源 0.2/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 

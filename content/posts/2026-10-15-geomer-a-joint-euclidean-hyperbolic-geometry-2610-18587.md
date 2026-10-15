@@ -20,7 +20,7 @@ paper_digest_primary_task: "语音情感识别"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.emotion-recognition","label":"语音情感识别"},{"facet":"method","id":"method.multimodal-learning","label":"多模态学习"},{"facet":"method","id":"method.attention","label":"注意力机制"},{"facet":"signal","id":"signal.speech","label":"语音"}]
 paper_digest_primary_method: "多模态学习"
 paper_digest_score: 5.6
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "GeoMER 针对语音加文本情绪识别中细粒度跨模态对齐与抽象情绪结构难以兼顾的问题，用欧氏分支做词元级融合、用双曲几何核心路由组织抽象情绪表示，在 IEMOCAP 四分类上报告 83.54% 加权准确率和 83.35% 非加权准确率，代价是双分支与双曲运算带来的额外复杂度。"
 paper_digest_authors: [{"affiliations":["Newcastle University, Newcastle upon Tyne, United Kingdom"],"name":"Ting Zhu"},{"affiliations":["Newcastle University, Newcastle upon Tyne, United Kingdom"],"name":"Huizhi Liang"},{"affiliations":["Newcastle University, Newcastle upon Tyne, United Kingdom"],"name":"Boguslaw Obara"},{"affiliations":["Taiyuan University of Technology, Shanxi, China"],"name":"Shufei Duan"},{"affiliations":["Newcastle University, Newcastle upon Tyne, United Kingdom"],"name":"Varun Ojha"}]
 paper_digest_abstract_sha256: "c74dc3ca9ac0fccb8786f5c3b48ae6ca327d7d8ca87a1d4f0f408c142025192c"
-paper_digest_sidecars: {"citation.bib":{"sha256":"b5bf7673095c92620d3edd354bac209147715957237852335c669e21d68a5c0d","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18587/citation.bib"},"citation.json":{"sha256":"832870253b237643479271c9fa17240c9781c21864987aec53f54057238b1029","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18587/citation.json"},"citation.ris":{"sha256":"5fc8b16a151edbeaeceb534c235cd4c382ac6ef4b0c3e2c32ad2baae58413cba","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18587/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"0ba05b158b8d9121a5475d99f3b8b16246a1726248ad4860c68611844d820110","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18587/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"b5bf7673095c92620d3edd354bac209147715957237852335c669e21d68a5c0d","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18587/citation.bib"},"citation.json":{"sha256":"832870253b237643479271c9fa17240c9781c21864987aec53f54057238b1029","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18587/citation.json"},"citation.ris":{"sha256":"5fc8b16a151edbeaeceb534c235cd4c382ac6ef4b0c3e2c32ad2baae58413cba","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18587/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"b0784a13b3babea02cb017417ea241ea8f34195a920103c07ee3b6e0fd561b3f","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-18587/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "9cb9f73fb09a1020d4beb4409b6216a55f3e7501f21715a2797b317c791d2978"
 paper_digest_api_reader_plan_sha256: "9b64272831d0d168aca99588fe02292282b9c039cdb2782b857aa1d0a8f7f66f"
@@ -52,8 +52,16 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[GeoMER: A Joint Euclidean-Hyperbolic Geometry Framework for Multimodal Emotion Recognition](https://arxiv.org/abs/2610.18587v1)*
 
-> 标签：#语音情感识别 | #多模态学习 | #注意力机制 | #语音
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[语音情感识别](/audio-paper-digest-blog/papers/?concept=task.emotion-recognition)
+- **研究方法**：[多模态学习](/audio-paper-digest-blog/papers/?concept=method.multimodal-learning)；[注意力机制](/audio-paper-digest-blog/papers/?concept=method.attention)
+- **信号**：[语音](/audio-paper-digest-blog/papers/?concept=signal.speech)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**5.6/10** | 创新 1.2/2 | 技术严谨 1/1.5 | 实验充分 1/1.5 | 清晰度 0.8/1 | 影响力 0.8/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 0.5/1.5
 
 

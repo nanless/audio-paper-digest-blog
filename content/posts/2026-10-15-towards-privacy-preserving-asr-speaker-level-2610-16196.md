@@ -20,7 +20,7 @@ paper_digest_primary_task: "语音识别"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.asr","label":"语音识别"},{"facet":"task","id":"task.privacy-attack-defense","label":"音频隐私攻击与防御"},{"facet":"method","id":"method.regularization","label":"正则化"},{"facet":"signal","id":"signal.speech","label":"语音"}]
 paper_digest_primary_method: "正则化"
 paper_digest_score: 5.9
@@ -29,7 +29,7 @@ paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "论文针对语音识别隐表示残留说话人痕迹的隐私问题，提出在第 6 层辅助嵌入上先聚类找质心再推离的 SAID 方法，在 VCTK 上以遗忘集成员推断 52.6% 接近重训练金模型 52.7% 为最强证据，代价是保留集词错误率高于微调类基线。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Seaone Ok"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Seungu Han"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Eungbeom Kim"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Kyogu Lee"}]
 paper_digest_abstract_sha256: "e7107b0282ce7e792b2a54942fe315419dba1e56d6d51edccdaa1af431fff3b5"
-paper_digest_sidecars: {"citation.bib":{"sha256":"c1f7df6ef0816522598194b6a48ba7bb89a8525fb8ffb4970ba83853e2c05ef4","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16196/citation.bib"},"citation.json":{"sha256":"e8880e19d1be9d6923a113110b0a5a00240e84c2d515c25b764ab7bb406d7a26","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16196/citation.json"},"citation.ris":{"sha256":"4c774c12b01507b11ee30a44e7348c1577158646d21e77170ea7541c89965eb5","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16196/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"46fe969fe4d9c64e70bb18267dbf981f27156fa9e5dd2c3e831da92cfa884703","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16196/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"c1f7df6ef0816522598194b6a48ba7bb89a8525fb8ffb4970ba83853e2c05ef4","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16196/citation.bib"},"citation.json":{"sha256":"e8880e19d1be9d6923a113110b0a5a00240e84c2d515c25b764ab7bb406d7a26","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16196/citation.json"},"citation.ris":{"sha256":"4c774c12b01507b11ee30a44e7348c1577158646d21e77170ea7541c89965eb5","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16196/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"6d80cf8e4c476416b30055964fcb3fcd6b3a1c2cff8025e31a21d0aa6d00c75f","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-16196/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "eaff0115c514e32e8428f245e7b02fa98cbe264195b96ce50a27bdba022cc455"
 paper_digest_api_reader_plan_sha256: "cc8ade607d508b6702a67b01ae69c7560f7c37f8861eb2aa16e839168b4ffa28"
@@ -52,8 +52,16 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[Towards Privacy-Preserving ASR: Speaker-Level Machine Unlearning](https://arxiv.org/abs/2610.16196v1)*
 
-> 标签：#语音识别 | #音频隐私攻击与防御 | #正则化 | #语音
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[语音识别](/audio-paper-digest-blog/papers/?concept=task.asr)；[音频隐私攻击与防御](/audio-paper-digest-blog/papers/?concept=task.privacy-attack-defense)
+- **研究方法**：[正则化](/audio-paper-digest-blog/papers/?concept=method.regularization)
+- **信号**：[语音](/audio-paper-digest-blog/papers/?concept=signal.speech)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**5.9/10** | 创新 1.2/2 | 技术严谨 1/1.5 | 实验充分 1/1.5 | 清晰度 0.8/1 | 影响力 0.8/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 0.8/1.5
 
 

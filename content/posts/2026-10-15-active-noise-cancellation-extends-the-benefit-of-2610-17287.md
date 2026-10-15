@@ -20,7 +20,7 @@ paper_digest_primary_task: "语音增强"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.speech-enhancement","label":"语音增强"},{"facet":"method","id":"method.signal-processing","label":"信号处理"},{"facet":"task","id":"task.active-noise-control","label":"主动降噪"},{"facet":"application","id":"application.hearing-aids","label":"助听器"}]
 paper_digest_primary_method: "信号处理"
 paper_digest_score: 6.3
@@ -29,7 +29,7 @@ paper_digest_document_type: "应用研究"
 paper_digest_one_sentence: "该研究在吵闹真实场景的人体模型录音上验证：AI 语音增强在放大通路内各设备改善相近，但只有压住未经处理的直接声通路后，其信噪比改善才能从高频扩展到低频，宽带加权信噪比因此明显提高，而单独开主动降噪几乎不改善信噪比。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Andrew T. Sabin"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Linkai Li"}]
 paper_digest_abstract_sha256: "05e04364a2e1f57f20420e7a7941c14782782f10997bfcf8bbdd5198b9c5d9a3"
-paper_digest_sidecars: {"citation.bib":{"sha256":"e437919f15276b043bae74b3684312badcc050197f5e4be8f6e4967666d0e7e5","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17287/citation.bib"},"citation.json":{"sha256":"2c06ab9cdabf47842b13a5b88185574c48ae8a7ece87422f77162410b9776d8b","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17287/citation.json"},"citation.ris":{"sha256":"df30ac60a46ef27344fe6f870f89b54e2f4cb4bc5518d0e57b3c9cf859bacc07","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17287/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"a44bb0509344f03f8a7fa70d24a67cb9df644028be4707a983e9229b703fd504","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17287/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"e437919f15276b043bae74b3684312badcc050197f5e4be8f6e4967666d0e7e5","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17287/citation.bib"},"citation.json":{"sha256":"2c06ab9cdabf47842b13a5b88185574c48ae8a7ece87422f77162410b9776d8b","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17287/citation.json"},"citation.ris":{"sha256":"df30ac60a46ef27344fe6f870f89b54e2f4cb4bc5518d0e57b3c9cf859bacc07","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17287/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"0338b7c82b06eef512c9e18ecc309b28f7b2827f1be1263b92f25a5fd2616557","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-17287/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "a4d08a9858f8980ba3ef07df7f7916c5456c05736e49befb1f524039afc8c45e"
 paper_digest_api_reader_plan_sha256: "fc15355a1534a34914eadb5a7833f0732929f7e01f9b1345891fc96d565ff28e"
@@ -52,8 +52,16 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[Active noise cancellation extends the benefit of AI speech enhancement in real hearing-aid recordings](https://arxiv.org/abs/2610.17287v1)*
 
-> 标签：#语音增强 | #信号处理 | #主动降噪 | #助听器
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[语音增强](/audio-paper-digest-blog/papers/?concept=task.speech-enhancement)；[主动降噪](/audio-paper-digest-blog/papers/?concept=task.active-noise-control)
+- **研究方法**：[信号处理](/audio-paper-digest-blog/papers/?concept=method.signal-processing)
+- **应用**：[助听器](/audio-paper-digest-blog/papers/?concept=application.hearing-aids)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**6.3/10** | 创新 1/2 | 技术严谨 1.2/1.5 | 实验充分 1/1.5 | 清晰度 0.8/1 | 影响力 1/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 

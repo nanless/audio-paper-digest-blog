@@ -20,7 +20,7 @@ paper_digest_primary_task: "文本到语音"
 paper_digest_tags_contract: "paper-tag-flat-tags-v2"
 paper_digest_tags_selection_contract: "paper-tag-selection-v2"
 paper_digest_tags_registry_version: "paper-tag-catalog-v2"
-paper_digest_tags_registry_sha256: "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7"
+paper_digest_tags_registry_sha256: "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.tts","label":"文本到语音"},{"facet":"method","id":"method.test-time-adaptation","label":"测试时自适应"},{"facet":"artifact","id":"artifact.benchmark","label":"基准测试"},{"facet":"setting","id":"setting.cross-lingual","label":"跨语言"}]
 paper_digest_primary_method: "测试时自适应"
 paper_digest_score: 6.0
@@ -29,7 +29,7 @@ paper_digest_document_type: "数据集与基准"
 paper_digest_one_sentence: "针对参考语音与待合成文本语言不同时无对齐模型按字节估计时长导致失配的问题，论文构建英语与九种印度语言双向评测基准，提出只在推理期引入语言平均每字符时长的修正策略，并在双语与多语 A-DMA 模型上用可懂度、相似度和自然度指标验证改进的范围与局限。"
 paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Adarsh Arigala"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Arjun Gangwar"},{"affiliations":["机构信息未在 arXiv HTML 中可靠披露"],"name":"Srinivasan Umesh"}]
 paper_digest_abstract_sha256: "82cc1e294d180db713101a1e84110713a30454a6a1f7ad42786ac49681d9e566"
-paper_digest_sidecars: {"citation.bib":{"sha256":"642e2a773446865f979ea807bc4c38ce1f39aa7ee0b97752a8c125a136c5c704","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14826/citation.bib"},"citation.json":{"sha256":"1350631ff45cb9a63a2bc32c8be7787e94f9af90d00b488dedff225729950308","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14826/citation.json"},"citation.ris":{"sha256":"e20579be7565b3bc29ebb433ec71f8314d277122d13334922ce39cff5d0b7d0d","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14826/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"7e13537440984dbbf69af9e903f65d516b9d49b44fb2f8a9651014d4ccd68815","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14826/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"642e2a773446865f979ea807bc4c38ce1f39aa7ee0b97752a8c125a136c5c704","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14826/citation.bib"},"citation.json":{"sha256":"1350631ff45cb9a63a2bc32c8be7787e94f9af90d00b488dedff225729950308","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14826/citation.json"},"citation.ris":{"sha256":"e20579be7565b3bc29ebb433ec71f8314d277122d13334922ce39cff5d0b7d0d","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14826/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"0e413d190498f92a619755ccf7430f8c424e1d1dd0933f710a3331d008101271","url":"/audio-paper-digest-blog/data/papers/2026-10-15/2610-14826/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "b6a79b8161852f4711e9b0d5f80454e98425695e91efa5469ade0f219f08ebda"
 paper_digest_api_reader_plan_sha256: "68203556c31b40f1933fd3859820e8e70f32b2a64d437c16308217790fce260b"
@@ -52,8 +52,17 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > 英文题目：*[Cross-Lingual TTS for Indian Languages: A Benchmark and Inference-Time Duration Estimation Strategies](https://arxiv.org/abs/2610.14826v1)*
 
-> 标签：#文本到语音 | #测试时自适应 | #基准测试 | #跨语言
->
+<!--paper-tag-hierarchy-v1:start-->
+
+**研究分类**
+
+- **研究任务**：[语音合成](/audio-paper-digest-blog/papers/?concept=task.speech-synthesis) → [文本到语音](/audio-paper-digest-blog/papers/?concept=task.tts)
+- **研究方法**：[迁移学习](/audio-paper-digest-blog/papers/?concept=method.transfer) → [领域适应](/audio-paper-digest-blog/papers/?concept=method.domain-adaptation) → [测试时自适应](/audio-paper-digest-blog/papers/?concept=method.test-time-adaptation)
+- **研究条件**：[跨语言](/audio-paper-digest-blog/papers/?concept=setting.cross-lingual)
+- **研究产物**：[基准测试](/audio-paper-digest-blog/papers/?concept=artifact.benchmark)
+
+<!--paper-tag-hierarchy-v1:end-->
+
 > 评分：**6.0/10** | 创新 1/2 | 技术严谨 1/1.5 | 实验充分 1/1.5 | 清晰度 0.7/1 | 影响力 0.8/1.5 | 开源 0.2/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
 
 
