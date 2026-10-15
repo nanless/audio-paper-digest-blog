@@ -2,12 +2,27 @@
 {{- $content := printf "%s" .content -}}
 {{- $page := .page -}}
 {{- $protected := dict -}}
+{{- $tagStart := "<!--paper-tag-hierarchy-v1:start-->" -}}
+{{- $tagEnd := "<!--paper-tag-hierarchy-v1:end-->" -}}
+{{- $tagStartCount := sub (len (split $content $tagStart)) 1 -}}
+{{- $tagEndCount := sub (len (split $content $tagEnd)) 1 -}}
 {{- $prefix := printf "READER-PROTECTED-%s-" (crypto.SHA256 $content) -}}
 {{- if not (in $content $prefix) -}}
   {{- range $index, $block := findRE `(?is)<pre\b[^>]*>.*?</pre>|<code\b[^>]*>.*?</code>|<script\b[^>]*>.*?</script>|<style\b[^>]*>.*?</style>|<textarea\b[^>]*>.*?</textarea>` $content -}}
     {{- $marker := printf "%s%d-END" $prefix $index -}}
     {{- $protected = merge $protected (dict $marker $block) -}}
     {{- $content = replace $content $block $marker -}}
+  {{- end -}}
+  {{- /* The generated Markdown keeps a standalone classification fallback.
+        Hide only its unique complete block when the paper header has verified
+        navigation records. Count original markers; code examples remain protected. */ -}}
+  {{- if and (eq $tagStartCount 1) (eq $tagEndCount 1) -}}
+    {{- $tagBlocks := findRE `(?s)<!--paper-tag-hierarchy-v1:start-->.*?<!--paper-tag-hierarchy-v1:end-->` $content -}}
+    {{- if and (eq (len $tagBlocks) 1) (eq ($page.Params.paper_digest_page_type | default "") "paper") -}}
+      {{- if gt (len (partial "tag_navigation_records.html" $page)) 0 -}}
+        {{- $content = replace $content (index $tagBlocks 0) "" -}}
+      {{- end -}}
+    {{- end -}}
   {{- end -}}
   {{- /* A repeated opening title keeps its anchor without duplicating the header.
         Other H1s are actual chapters and remain visible below. */ -}}
