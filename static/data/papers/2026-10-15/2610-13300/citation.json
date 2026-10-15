@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.13300v1",
+  "arxivId": "2610.13300",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.13300v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Brown University"
+      ],
+      "name": "Jingcheng Ni"
+    },
+    {
+      "affiliations": [
+        "Brown University"
+      ],
+      "name": "Zekun Li"
+    },
+    {
+      "affiliations": [
+        "MIT"
+      ],
+      "name": "Zhiyang Dou"
+    },
+    {
+      "affiliations": [
+        "Brown University"
+      ],
+      "name": "Xiaoyan Cong"
+    },
+    {
+      "affiliations": [
+        "Yale University"
+      ],
+      "name": "Ziyao Zeng"
+    },
+    {
+      "affiliations": [
+        "Brown University"
+      ],
+      "name": "Hongyang Du"
+    },
+    {
+      "affiliations": [
+        "Brown University"
+      ],
+      "name": "Randall Balestriero"
+    },
+    {
+      "affiliations": [
+        "The University of Hong Kong"
+      ],
+      "name": "Taku Komura"
+    },
+    {
+      "affiliations": [
+        "Brown University"
+      ],
+      "name": "Srinath Sridhar"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.13300v1",
+  "originalTitle": "Sonic-AMG: Streaming Human Motion Generation from Spatial Audio",
+  "pdfUrl": "https://arxiv.org/pdf/2610.13300v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

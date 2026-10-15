@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.16260v1",
+  "arxivId": "2610.16260",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.16260v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mingwei Fu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zheshu Song"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhikai Zhou"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shen Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shidong Shang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mengxiao Zhu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.16260v1",
+  "originalTitle": "ScreenASR-Bench: A Tiered Benchmark for Speech Recognition with Visual Context",
+  "pdfUrl": "https://arxiv.org/pdf/2610.16260v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

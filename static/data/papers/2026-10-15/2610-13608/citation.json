@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.13608v1",
+  "arxivId": "2610.13608",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.13608v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Quentin Le Tellier"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Albert Rilliard"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Olivier Perrotin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Marc Evrard"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.13608v1",
+  "originalTitle": "Vocal Intensity Conversion with Continuous SPL Control via Adversarial Training",
+  "pdfUrl": "https://arxiv.org/pdf/2610.13608v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

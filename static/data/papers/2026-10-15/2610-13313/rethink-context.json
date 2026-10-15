@@ -1,0 +1,80 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.13313v1",
+  "abstract": "Speech anonymization is evaluated with automatic speaker verification attackers whose performance depends on the attribute distribution of both their training and evaluation data, which may bias privacy estimates for some speaker groups. To alleviate this issue, we introduce VoxAnon, a dataset built from VoxCeleb1 and 2 with training and evaluation splits balanced across gender, age, accent, and pitch. We extract and cross-check attributes using two complementary methods, balance trial lists per subgroup, and draw test/enrollment utterances from distinct video sources in order to limit linguistic and session bias. Comparing VoxAnon with unbalanced training and test data across four attackers and three anonymizers, we show that attribute imbalance changes which subgroups appear hardest to re-identify, in directions that depend on the attribute. In the balanced setting, residual disparities persist, mostly tied to accent and pitch, and depend on the anonymizer/attacker pair. Code and trial lists are publicly available.",
+  "abstractSha256": "ac52c525821ac0e6a5007b8b3fd39ba4183163f2436944156d5db240b5a9a426",
+  "arxivId": "2610.13313",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.13313v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "数据集构建",
+    "primaryTask": "说话人匿名化",
+    "rankBucket": "前25%",
+    "score": 8.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.anonymization",
+          "label": "说话人匿名化"
+        },
+        {
+          "facet": "method",
+          "id": "method.dataset-curation",
+          "label": "数据集构建"
+        },
+        {
+          "facet": "task",
+          "id": "task.speaker-verification",
+          "label": "说话人验证"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.fairness",
+          "label": "公平性"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "数据集构建",
+      "primaryMethodId": "method.dataset-curation",
+      "primaryTask": "说话人匿名化",
+      "primaryTaskId": "task.anonymization",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Orane Dufour"
+    },
+    {
+      "affiliations": [
+        "Université de Lorraine, CNRS",
+        "Inria, LORIA, F-54000 Nancy, France"
+      ],
+      "name": "Paul Magron"
+    },
+    {
+      "affiliations": [
+        "LIA, Avignon University",
+        "F-84911 Avignon, France"
+      ],
+      "name": "Mickael Rouvier"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文针对说话人验证攻击者的训练与评测数据属性不平衡会扭曲匿名化隐私估计的问题，构建了在性别年龄口音音高上平衡的 VoxAnon 数据集，用四种攻击者与三种匿名器的对照证明不平衡会改变子群难易排序，而平衡后仍残留与口音音高相关的差异。",
+  "originalTitle": "VoxAnon: A balanced dataset for a fair evaluation of speech anonymization",
+  "pdfUrl": "https://arxiv.org/pdf/2610.13313v1.pdf",
+  "readerTitle": "VoxAnon：为语音匿名化提供属性平衡的公平评测",
+  "schemaVersion": 2
+}

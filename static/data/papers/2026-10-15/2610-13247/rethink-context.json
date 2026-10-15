@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.13247v1",
+  "abstract": "Open audio-language models are used as judges of generated music: given a clip and its text prompt, the model rates the clip, and the judge is validated by how well its ratings correlate with expert ratings. The correlation does not show what the judge responds to: the music, the text prompt, or the way the question is asked. We propose four probes that test each of these, three of them read against a control computed from the human ratings: removing the audio, replacing the clip with another model's clip for the same prompt, swapping the order of two clips in pairwise judging, and rewording the instruction. We apply them to five open judges on all 2,748 clips of MusicEval, and the last two to the SongEval songs. Without audio, no judge exceeds what the prompt alone predicts from the human ratings, and for prompt alignment every judge falls below it. With audio, every judge follows the clip it hears when rating prompt alignment, two do when rating musical quality, and the strongest judge's quality score tracks the experts' alignment rating more than their quality rating. The pairwise verdicts of the four smaller judges follow the position of a clip in the pair (its slot) rather than its quality on both rating sets. For musical quality, rewording the instruction moves the correlation of most judges as much as changing the judge. MusicEval's prompt assignment bounds any prompt-only judge at the model level. We recommend reporting the four probes with every music judge.",
+  "abstractSha256": "6eb1e4f92a5f30795c8d6412f6154648db6c65ceb104f05e7256a91df7a1456c",
+  "arxivId": "2610.13247",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.13247v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "评测协议",
+    "primaryTask": "音频质量评估",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-quality",
+          "label": "音频质量评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.audio-language",
+          "label": "音频大模型"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "评测协议",
+      "primaryMethodId": "method.evaluation-protocol",
+      "primaryTask": "音频质量评估",
+      "primaryTaskId": "task.audio-quality",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Institute of Computer Science, Warsaw University of Technology"
+      ],
+      "name": "Mateusz Modrzejewski"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tomasz Radzikowski"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文针对音频语言模型评价生成音乐时相关性无法说明依据的问题，用去掉音频、同提示替换、成对调序和改写指令四个带对照探针检验五个公开评判模型，发现对齐评分都跟随实际播放的音频而质量评分只有部分跟随，且小模型的成对选择跟随位置而指令措辞的影响可达更换模型量级。",
+  "originalTitle": "What Do Audio-Language Judges of Generated Music Listen For? Four Probes with Controls from Expert Ratings",
+  "pdfUrl": "https://arxiv.org/pdf/2610.13247v1.pdf",
+  "readerTitle": "生成音乐评判模型到底在听什么：四个带对照的探针",
+  "schemaVersion": 2
+}

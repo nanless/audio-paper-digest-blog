@@ -1,0 +1,90 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.15181v1",
+  "abstract": "Word-aligned prosody is increasingly used to detect depression and posttraumatic stress disorder (PTSD), yet the stability and clinical relevance of these measurements remain unclear. We examine stability at two levels. At the word level, we ask whether a speaker produces the same word in a similar speaker-specific way across different utterance contexts. At the speaker level, we ask whether averaging prosody across many words produces consistent speaker scores across separate recordings. Drawing on principles of psychological measurement, we compare these representations in four corpora spanning acted, spontaneous, and clinical speech. Word-specific deviations show little cross-context recurrence (0.01-0.16), whereas speaker summaries are highly consistent, reaching 0.997 in ESD, 0.73-0.90 in MSP-Podcast, and 0.84-0.996 in DAIC-WOZ and PTSD-STOP. Despite this consistency, associations with depression or PTSD severity do not exceed 0.15; equivalence tests exclude effects of 0.30 in all analyses and 0.20 in DAIC-WOZ, while within-person associations with daily PTSD symptoms are near zero ($|ρ|\\leq0.04$). Thus, aggregation yields stable speaker-level prosodic measures, but these measures do not detectably track depression or PTSD severity in the studied corpora. Code is available at https://github.com/jen900704/word-aligned-prosody.",
+  "abstractSha256": "b8c3d9cd3f88fbd722d39f7b87032a42f0c4f8146dda420bc7eee253c010cf68",
+  "arxivId": "2610.15181",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.15181v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "心理测量",
+    "primaryTask": "病理语音评估",
+    "rankBucket": "前50%",
+    "score": 6.7,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.pathological-speech",
+          "label": "病理语音评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.psychometrics",
+          "label": "心理测量"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.prosody",
+          "label": "韵律"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "application",
+          "id": "application.speech-biomarker",
+          "label": "语音生物标志物"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "心理测量",
+      "primaryMethodId": "method.psychometrics",
+      "primaryTask": "病理语音评估",
+      "primaryTaskId": "task.pathological-speech",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hsiang-Chen Yeh"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Aurosweta Mahapatra"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shreeram Suresh Chandra"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ryan L. Boyd"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Berrak Sisman"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文检验词级韵律能否作为抑郁与 PTSD 的行为标记，发现词特异偏差跨语境几乎不重复，而按说话人聚合后高度可重复，但仍与症状严重度无可检测关联。",
+  "originalTitle": "Word-Aligned Prosody Reflects Speaker Differences More Than Depression or PTSD Severity",
+  "pdfUrl": "https://arxiv.org/pdf/2610.15181v1.pdf",
+  "readerTitle": "词对齐韵律：说话人差异远大于抑郁或创伤后应激严重度",
+  "schemaVersion": 2
+}

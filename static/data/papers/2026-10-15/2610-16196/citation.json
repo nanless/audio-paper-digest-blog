@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.16196v1",
+  "arxivId": "2610.16196",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.16196v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Seaone Ok"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Seungu Han"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Eungbeom Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kyogu Lee"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.16196v1",
+  "originalTitle": "Towards Privacy-Preserving ASR: Speaker-Level Machine Unlearning",
+  "pdfUrl": "https://arxiv.org/pdf/2610.16196v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

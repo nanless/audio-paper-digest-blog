@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.17745v1",
+  "arxivId": "2610.17745",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.17745v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Xiaoyu Niu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Yuqi Meng"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Zihuan Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Ehsan Vatankhah"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Neal Hall"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.17745v1",
+  "originalTitle": "Modeling and Design of a Diaphragm-Integrated Photonic Waveguide Microphone",
+  "pdfUrl": "https://arxiv.org/pdf/2610.17745v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

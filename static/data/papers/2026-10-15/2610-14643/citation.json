@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.14643v1",
+  "arxivId": "2610.14643",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.14643v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Praphul Singh"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Akshat Agarwal"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ratul Ghosh"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Aashna Kanuga"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Devashish Khatwani"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Anurag Dwarakanath"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sri Gadde"
+    },
+    {
+      "affiliations": [
+        "Oracle Health AI"
+      ],
+      "name": "Krishnaram Kenthapadi"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.14643v1",
+  "originalTitle": "AegisVox: Factorized Privacy and Clinical Preservation for Long-Form Speech",
+  "pdfUrl": "https://arxiv.org/pdf/2610.14643v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

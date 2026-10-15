@@ -1,0 +1,109 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.16390v1",
+  "abstract": "A central goal of quantum machine learning is to identify applications in which small quantum circuits can improve task performance while remaining executable on real hardware. We investigate deepfake (synthetic) speech detection, a largely unexplored application in this area, where reliable confidence scores are as important as discrimination performance because deployment decisions are made at fixed thresholds and overconfident errors can be costly. We introduce QBFF, which routes a compressed speech representation through a small 8-qubit variational circuit (VQC) used as a drop-in bottleneck, with a matched classical bottleneck as the control. The quantum circuit yields better-calibrated confidence in most matched comparisons, including out-of-distribution evaluation, though the downstream deployment-cost benefit is model-dependent. We then run the same circuit on a real IBM quantum processor. To our knowledge, this is the first anti-spoofing pipeline to run on a QPU; hardware execution demonstrates feasibility, with lower subset EER and $C_{llr}$ but higher mean actDCF than the matched classical reference. Together, these results show that hardware-executable quantum bottlenecks can improve score reliability, with gains that vary by evaluation setting.",
+  "abstractSha256": "d7883d5ca1d0576e7609d36b9a26c5d520bd613a7c40b7aba5d8d770b4d4d9c5",
+  "arxivId": "2610.16390",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.16390v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "不确定性估计与校准",
+    "primaryTask": "语音伪造检测",
+    "rankBucket": "前50%",
+    "score": 6.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-spoofing",
+          "label": "语音伪造检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.uncertainty-estimation",
+          "label": "不确定性估计与校准"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "不确定性估计与校准",
+      "primaryMethodId": "method.uncertainty-estimation",
+      "primaryTask": "语音伪造检测",
+      "primaryTaskId": "task.speech-spoofing",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Anton Firc"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nouhaila Innan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Vojtěch Staněk"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kamil Malinka"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Martin Perešini"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zbyněk Lička"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Walid El Maouaki"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Alberto Marchisio"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Muhammad Shafique"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文把压缩语音表示送入 8 比特变分量子电路做瓶颈变换，在匹配经典对照下主要改善固定阈值下的部署代价与校准，最强域外证据是 AASIST 上 EER 相对降低 28% 而真机验证只证明可行且代价不稳定。",
+  "originalTitle": "QBFF: Deep Quantum Bottleneck for Automatic Speaker Verification Anti-Spoofing",
+  "pdfUrl": "https://arxiv.org/pdf/2610.16390v1.pdf",
+  "readerTitle": "量子瓶颈如何改变语音防伪造的分数可靠性",
+  "schemaVersion": 2
+}

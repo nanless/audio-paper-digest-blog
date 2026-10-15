@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.16430v1",
+  "arxivId": "2610.16430",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.16430v1",
+  "authors": [
+    {
+      "affiliations": [
+        "School of Electrical and Computer Engineering, Ben-Gurion University of the Negev, Israel"
+      ],
+      "name": "Hanan Beit-On"
+    },
+    {
+      "affiliations": [
+        "Neuromorphic Lab, Israel"
+      ],
+      "name": "Eli Shapira"
+    },
+    {
+      "affiliations": [
+        "School of Electrical and Computer Engineering, Ben-Gurion University of the Negev, Israel"
+      ],
+      "name": "Boaz Rafaely"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.16430v1",
+  "originalTitle": "Spiking Neural Beamforming for Multichannel Speech Enhancement on the Edge",
+  "pdfUrl": "https://arxiv.org/pdf/2610.16430v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

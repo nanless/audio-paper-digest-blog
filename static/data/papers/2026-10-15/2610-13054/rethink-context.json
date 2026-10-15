@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.13054v1",
+  "abstract": "Recently, generative neural synthesizers have enabled zero-shot instrument cloning from reference recordings and timbre generation from text prompts. However, existing systems generate complete audio segments offline, precluding their use as playable instruments. We present LiveSynth, a streaming neural synthesizer with flexible timbre control and interactive generation capabilities, including zero-shot instrument cloning and text-to-instrument synthesis. A feedback-free causal Transformer conditioned on MIDI events and a CLAP timbre embedding outputs continuous audio latents at 100 Hz, which a causal variational autoencoder decodes into audio. Frame-wise timbre conditioning enables continuous timbre morphing, while MIDI-conditioning dropout enables autonomous continuation from a performed prefix. On the NSynth and Slakh datasets, LiveSynth achieved timbre similarity and spectral reconstruction quality comparable to offline baselines. On an M3 MacBook Air, LiveSynth required 8.8 ms of computation per 10 ms audio frame (an RTF of 0.88) with 10 ms algorithmic latency, enabling real-time interaction with a performer.",
+  "abstractSha256": "e5095a2c04afec9b2a15785c7f93221c0a64eee1ad0176939f486a01014b4e6c",
+  "arxivId": "2610.13054",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.13054v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "Transformer",
+    "primaryTask": "音乐生成",
+    "rankBucket": "前50%",
+    "score": 7.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-generation",
+          "label": "音乐生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.transformer",
+          "label": "Transformer"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.real-time",
+          "label": "实时处理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "Transformer",
+      "primaryMethodId": "method.transformer",
+      "primaryTask": "音乐生成",
+      "primaryTaskId": "task.music-generation",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kyungsu Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yejin Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kyogu Lee"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "LiveSynth 用流式 MIDI 加 CLAP 音色向量逐帧生成连续音频隐变量再经因果 VAE 解码，在 NSynth 和 Slakh 上取得与离线基线可比的音色相似度和更低的频谱距离，代价是音符准确率和制作质量偏低，且实时性结论只在 M3 MacBook Air 上 10 ms 帧长下成立。",
+  "originalTitle": "LiveSynth: A Streaming Neural Synthesizer for Instrument Cloning and Text-to-Instrument",
+  "pdfUrl": "https://arxiv.org/pdf/2610.13054v1.pdf",
+  "readerTitle": "能边弹边换音色的流式神经合成器 LiveSynth",
+  "schemaVersion": 2
+}

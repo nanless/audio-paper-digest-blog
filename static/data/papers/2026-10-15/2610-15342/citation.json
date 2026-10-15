@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.15342v1",
+  "arxivId": "2610.15342",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.15342v1",
+  "authors": [
+    {
+      "affiliations": [
+        "the School of Big Data and Statistics, Anhui University, Hefei 230039, China"
+      ],
+      "name": "Hanyu Xuan"
+    },
+    {
+      "affiliations": [
+        "the School of Big Data and Statistics, Anhui University, Hefei 230039, China"
+      ],
+      "name": "Haoran Xu"
+    },
+    {
+      "affiliations": [
+        "the School of Big Data and Statistics, Anhui University, Hefei 230039, China"
+      ],
+      "name": "Min Yin"
+    },
+    {
+      "affiliations": [
+        "the School of Information Science and Technology, University of Science and Technology of China, Hefei, China"
+      ],
+      "name": "Shuo Wang"
+    },
+    {
+      "affiliations": [
+        "the Shenzhen University Medical School, Shenzhen University, Shenzhen 518060, China"
+      ],
+      "name": "Cheng Zhao"
+    },
+    {
+      "affiliations": [
+        "the College of Information Technology, United Arab Emirates University, Abu Dhabi, 15551, United Arab Emirates"
+      ],
+      "name": "Kun Li"
+    },
+    {
+      "affiliations": [
+        "the Institute of Artificial Intelligence, Hefei Comprehensive National Science Center, Hefei, 230026, China"
+      ],
+      "name": "Fei Wang"
+    },
+    {
+      "affiliations": [
+        "the College of Computing and Data Science, Nanyang Technological University, Singapore 639798, Singapore"
+      ],
+      "name": "Zhiliang Wu"
+    },
+    {
+      "affiliations": [
+        "the Shenzhen University Medical School, Shenzhen University, Shenzhen 518060, China"
+      ],
+      "name": "Guanghui Yue"
+    },
+    {
+      "affiliations": [
+        "the School of Artificial Intelligence, Zhejiang University, Hangzhou 310007, China"
+      ],
+      "name": "Hehe Fan"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.15342v1",
+  "originalTitle": "SIMPLE: Semantic Structure-Aligned Prompt Learning for Open-Vocabulary Audio-Visual Event Localization",
+  "pdfUrl": "https://arxiv.org/pdf/2610.15342v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

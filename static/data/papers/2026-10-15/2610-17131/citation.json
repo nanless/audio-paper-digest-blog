@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.17131v1",
+  "arxivId": "2610.17131",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.17131v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chenlong Wei"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hanling Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mingjin Lou"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yufan Shi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yandong Sun"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sheldon Yu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiaohui Zhu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiaobo Jin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yiwei Wang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.17131v1",
+  "originalTitle": "SonicWorld: Source-Centric Latent Dynamics for Spatial Audio Reasoning",
+  "pdfUrl": "https://arxiv.org/pdf/2610.17131v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

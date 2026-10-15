@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.18469v1",
+  "arxivId": "2610.18469",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.18469v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Johns Hopkins University"
+      ],
+      "name": "Mingrui Liang"
+    },
+    {
+      "affiliations": [
+        "The University of Tokyo"
+      ],
+      "name": "Kentaro Onda"
+    },
+    {
+      "affiliations": [
+        "Carnegie Mellon University"
+      ],
+      "name": "Shinji Watanabe"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.18469v1",
+  "originalTitle": "PhonoVoxtLM: Exploring Single-Codebook Phonological Tokens for Speech Understanding and Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.18469v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

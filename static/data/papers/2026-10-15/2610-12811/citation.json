@@ -1,0 +1,39 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.12811v1",
+  "arxivId": "2610.12811",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.12811v1",
+  "authors": [
+    {
+      "affiliations": [
+        "University of Illinois Urbana-Champaign",
+        "Adobe Research"
+      ],
+      "name": "Shivanshu Shekhar"
+    },
+    {
+      "affiliations": [
+        "Adobe Research"
+      ],
+      "name": "Raghavendra Addanki"
+    },
+    {
+      "affiliations": [
+        "University of Illinois Urbana-Champaign"
+      ],
+      "name": "Tong Zhang"
+    },
+    {
+      "affiliations": [
+        "Adobe Research"
+      ],
+      "name": "Uttaran Bhattacharya"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.12811v1",
+  "originalTitle": "Spend Where It Matters: Particle Search with MH Refinement for Budget-Constrained Audio-Visual Alignment",
+  "pdfUrl": "https://arxiv.org/pdf/2610.12811v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

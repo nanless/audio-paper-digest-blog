@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.17838v1",
+  "abstract": "One-shot personalization of autoregressive (AR) text-to-speech (TTS) models remains challenging because supervised fine-tuning (SFT) on a single reference pair rapidly degrades generation quality. We identify fixed, off-policy supervision as a key cause of failure in one-shot SFT for AR TTS, leading to blank or near-empty outputs at inference. Diversifying the training data with zero-shot pseudo-pairs eliminates this failure but yields little improvement in speaker similarity and increases word error rate because the targets remain fixed and teacher-forced. We therefore propose two on-policy approaches for one-shot speaker personalization: Group Relative Policy Optimization (GRPO) with a speaker-similarity reward and On-Policy Self-Distillation (OPSD) with soft supervision from a reference-conditioned teacher. Both on-policy methods improve speaker similarity while preserving intelligibility, with different trade-offs: GRPO achieves the strongest overall performance, whereas OPSD enables substantially faster adaptation without external reward evaluation. Further analysis confirms that these gains stem from on-policy supervision rather than target diversity, establishing on-policy training as an effective framework for one-shot AR TTS personalization.",
+  "abstractSha256": "4c25f567da86bbe9e53859b9973a5307279be260ee5a1dd484bfbdc8b1becbba",
+  "arxivId": "2610.17838",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.17838v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "强化学习",
+    "primaryTask": "语音克隆",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.voice-cloning",
+          "label": "语音克隆"
+        },
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.reinforcement",
+          "label": "强化学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "强化学习",
+      "primaryMethodId": "method.reinforcement",
+      "primaryTask": "语音克隆",
+      "primaryTaskId": "task.voice-cloning",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sangkwon Park"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Che Hyun Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Heeseung Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sungroh Yoon"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文针对只有一对参考文本语音时固定目标监督微调导致推理提前结束的问题，提出在当前策略采样轨迹上学习的 GRPO 和 OPSD，在 LLaSA-1B 与 Seed-TTS-Eval 英文子集上提高说话人相似度并保持可懂度，但 GRPO 每步耗时远高于 OPSD。",
+  "originalTitle": "Beyond Fixed Targets: On-Policy One-Shot Speaker Personalization for Autoregressive Text-To-Speech Models",
+  "pdfUrl": "https://arxiv.org/pdf/2610.17838v1.pdf",
+  "readerTitle": "单条参考语音如何做自回归语音个性化而不产生空白输出",
+  "schemaVersion": 2
+}

@@ -1,0 +1,31 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.13432v1",
+  "arxivId": "2610.13432",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.13432v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Computer Science",
+        "Columbia University, NYC, NY, USA"
+      ],
+      "name": "Thai Quoc On"
+    },
+    {
+      "affiliations": [
+        "Mechanical Engineering Dept. and",
+        "Electrical Engineering Dept.",
+        "Columbia University, NYC, NY, USA",
+        "and Recognition Technologies, Inc.",
+        "South Salem, NY, USA"
+      ],
+      "name": "Homayoon Beigi"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.13432v1",
+  "originalTitle": "Does Financial Speech Need Continual Learning Regularization? A Study of EWC and mini-KFAC on Earnings Call ASR",
+  "pdfUrl": "https://arxiv.org/pdf/2610.13432v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

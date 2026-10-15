@@ -1,0 +1,90 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.13550v1",
+  "abstract": "Recent speech LLMs can leverage rich paralinguistic cues, enabling more complex and personalized interactions. However, little work investigates how this sensitivity can lead to stereotyping, and existing evaluations largely measure demographic disparities without distinguishing beneficial personalization from stereotypical behavior. We introduce BASIS-Bench, a benchmark designed to disentangle these two aspects through three axes: (1) demographic robustness, measuring disparities in content-based tasks across speakers and demographic classification capabilities; (2) stereotypical bias, measuring whether perceived demographic cues trigger unprompted stereotypical behavior; and (3) personalization, measuring whether models can tailor responses to demographic characteristics when explicitly requested. We evaluate eight recent speech LLMs and find that, despite often recognizing demographic cues, most fail to translate them into appropriate personalization. Explicit demographic labels improve personalization but also amplify stereotypical associations already present in the textual backbones. These findings highlight the need to train speech LLMs not only to perceive demographic cues, but to learn when they should shape their responses.",
+  "abstractSha256": "a8b4b397d05f23554c477892e2a244eeef3b128259462e94ffb62b0058346419",
+  "arxivId": "2610.13550",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.13550v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "语音属性识别",
+    "rankBucket": "前50%",
+    "score": 6.9,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-attributes",
+          "label": "语音属性识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.fairness",
+          "label": "公平性"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "语音属性识别",
+      "primaryTaskId": "task.speech-attributes",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kshitij Ambilduke"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Caroline Brun"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Thibaut Thonet"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Vassilina Nikoulina"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Marcely Zanon Boito"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文针对语音同时带来有用人口线索和有害刻板联想的问题，提出区分是否被明确要求使用人口信息的三轴评测，用八个语音大模型显示能听出性别年龄不等于会恰当使用，且显式标签同时提升个性化和刻板选择。",
+  "originalTitle": "Personalization Without Stereotyping: Do Speech LLMs Know When to Turn a Deaf Ear?",
+  "pdfUrl": "https://arxiv.org/pdf/2610.13550v1.pdf",
+  "readerTitle": "何时该听、何时该充耳不闻：语音大模型的个性化与刻板偏见拆分",
+  "schemaVersion": 2
+}

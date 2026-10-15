@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.13447v1",
+  "abstract": "Speech recognition on low-cost microcontrollers is, in practice, limited to keyword spotting or a fixed list of commands. We present Oído, an inference engine that runs open-vocabulary English speech recognition entirely on an ESP32-S3 (240 MHz dual-core Xtensa LX7, 512 KB of SRAM, 8 MB of PSRAM, 16 MB of flash, no neural accelerator). Oído executes a 13M-parameter Conformer-CTC model with int8 weights, per-frame dynamic int8 activations and int8 attention on the chip's SIMD instructions, with a schedule designed around flash and PSRAM bandwidth. On LibriSpeech test-clean/test-other the on-device arithmetic reaches 3.70%/8.23% word error rate (WER), within 0.12 points of full precision, and 3.33%/7.15% with an on-chip 1.3M-parameter language model; a transducer head gives 2.99%/6.67% and an int4 variant fits in 8.3 MB. This is 2.3-2.8x fewer errors than the vendor's recognizer on the same chip, and fewer than Whisper tiny.en and Moonshine tiny in full precision on a laptop, including in real noise and reverberation. Measured on a physical board, the firmware runs at 1.97x the duration of the audio on one core, with transcripts identical to an instruction-exact emulator: accurate, but not yet real time (a 4 s command is transcribed about 8.7 s after it ends). The two-core schedule gives wrong results on silicon and is disabled. A streaming variant shows partial text while the speaker talks and delivers the final text 4.1-11.1 s after clips of 3.6-10.6 s (7.2-22.4 s in utterance mode) at 4.86%/11.03% WER; a Spanish model makes 34-60% fewer errors than multilingual Whisper tiny. Code and models are released.",
+  "abstractSha256": "d2e469af67341e0b9ac4a2d8adb56bdf336a09f14238a516795728d94cece743",
+  "arxivId": "2610.13447",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.13447v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "模型量化",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 7.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.quantization",
+          "label": "模型量化"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.on-device",
+          "label": "端侧运行"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "模型量化",
+      "primaryMethodId": "method.quantization",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Daniel Varela Sánchez"
+    },
+    {
+      "affiliations": [
+        "Lokutor (Hashing Works, S.L.L.), Madrid, Spain"
+      ],
+      "name": "Guillermo Martín-Coello Juárez"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "Oído 把 13M 参数 Conformer-CTC 以整句整块加按帧动态 int8 的方式装进 ESP32-S3 并在 LibriSpeech 上做到 3.70%/8.23%，代价是单核约 2 倍实时、文本要在说话结束后数秒才出现。",
+  "originalTitle": "Oído: Open-Vocabulary Speech Recognition on a $5 Microcontroller without a Neural Accelerator",
+  "pdfUrl": "https://arxiv.org/pdf/2610.13447v1.pdf",
+  "readerTitle": "在 5 美元单片机上跑开放词汇英语识别：Oído 如何放下 13M 参数 Conformer",
+  "schemaVersion": 2
+}

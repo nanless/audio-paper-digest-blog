@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.13687v1",
+  "arxivId": "2610.13687",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.13687v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Artificial Intelligence, Indian Institute of Technology Hyderabad"
+      ],
+      "name": "Saumyaranjan Mohanty"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Aravind Reddy"
+    },
+    {
+      "affiliations": [
+        "Department of Artificial Intelligence, Indian Institute of Technology Hyderabad"
+      ],
+      "name": "Konda Reddy Mopuri"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.13687v1",
+  "originalTitle": "X-AVDD: Cross-Attentive Audio-Visual Dataset Distillation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.13687v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

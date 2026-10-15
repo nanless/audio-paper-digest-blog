@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.17149v1",
+  "abstract": "Temporal grounding is fundamental to audio understanding, yet large audio language models (LALMs) remain weak at it on long audio, where hallucinations compound and annotated data is scarce. Existing benchmarks cover only short clips or offer coarse, synthetic annotations. We introduce EgoSCAPE, a manually verified benchmark created from Ego4D with 700 real audios of durations up to 5 minutes, annotated with dense captions, sound sources, audio timelines, and temporal grounding queries. We further propose ATTEST, a GRPO-based reinforcement learning framework that improves temporal grounding without changing the base model's architecture or token vocabulary. ATTEST combines (i) a counterfactual grounding reward penalizing predictions that survive removal of their acoustic evidence, (ii) an attention-density reward encouraging generation to attend to its own claimed time spans, and (iii) token-wise advantages giving segment-level credit for long dense captions. ATTEST outperforms prior temporal grounding methods on existing dense captioning and grounding benchmarks, with fewer hallucinations. Together, EgoSCAPE and ATTEST establish a rigorous evaluation-training recipe that brings temporally grounded audio understanding closer to practical, long-form deployment.",
+  "abstractSha256": "9e9be6ef2fdc7db64f2e3fcf25b4e1da14c1706f083102d0f36517aa41c7c808",
+  "arxivId": "2610.17149",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.17149v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "强化学习",
+    "primaryTask": "音频时间定位",
+    "rankBucket": "前50%",
+    "score": 7.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.temporal-grounding",
+          "label": "音频时间定位"
+        },
+        {
+          "facet": "method",
+          "id": "method.reinforcement",
+          "label": "强化学习"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.long-audio",
+          "label": "长音频处理"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.hallucination-faithfulness",
+          "label": "幻觉与忠实度"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "强化学习",
+      "primaryMethodId": "method.reinforcement",
+      "primaryTask": "音频时间定位",
+      "primaryTaskId": "task.temporal-grounding",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Meta Superintelligence Labs",
+        "University of Southern California"
+      ],
+      "name": "Ashutosh Chaubey"
+    },
+    {
+      "affiliations": [
+        "Meta Superintelligence Labs"
+      ],
+      "name": "Jinxi Guo"
+    },
+    {
+      "affiliations": [
+        "Meta Superintelligence Labs"
+      ],
+      "name": "Minh Tran"
+    },
+    {
+      "affiliations": [
+        "Meta Superintelligence Labs"
+      ],
+      "name": "Michael Andersland"
+    },
+    {
+      "affiliations": [
+        "Meta Superintelligence Labs"
+      ],
+      "name": "Ozlem Kalinli"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对 5 分钟长音频中事件定位与密集描述易幻觉的问题，论文用 EgoSCAPE 评测与 ATTEST 强化学习约束模型只说音频中有证据的时间段，代价是需要多轮采样与注意力统计的训练开销。",
+  "originalTitle": "ATTEST: Evidence-Grounded Reinforcement Learning for Long-Audio Temporal Understanding",
+  "pdfUrl": "https://arxiv.org/pdf/2610.17149v1.pdf",
+  "readerTitle": "长音频时间理解：用证据约束抑制幻觉的强化学习",
+  "schemaVersion": 2
+}

@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.15082v1",
+  "arxivId": "2610.15082",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.15082v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Zhejiang University"
+      ],
+      "name": "Yihang Zhang"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University"
+      ],
+      "name": "Weicai Yan"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University"
+      ],
+      "name": "Qifei Zhang"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University"
+      ],
+      "name": "Yangyang Wu"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University"
+      ],
+      "name": "Tao Jin"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.15082v1",
+  "originalTitle": "GAMW: Generation-Aware Mel-Domain Watermarking for TTS Traceability",
+  "pdfUrl": "https://arxiv.org/pdf/2610.15082v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

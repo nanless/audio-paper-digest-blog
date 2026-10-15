@@ -1,0 +1,108 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.15350v1",
+  "abstract": "We present Gugak-VocalSet, the first publicly available audio dataset for Korean traditional singing with dense annotations of sigimsae, a structured pitch contour system of vocal expressions. Gugak-VocalSet contains 24.5 hours of unaccompanied solo vocal recordings across 305 tracks of representative repertoire curated by the National Gugak Center, performed by 20 professional singers in a controlled studio environment with fixed key and tempo. In addition to genre, lyrics, and mood/timbre tags, the dataset provides a unified sigimsae ontology and approximately 68,000 segments (71,700 instances including multi-label) of audio-grounded sigimsae annotations; the ontology adopts a functional-position-based hierarchy designed for consistent application across genres, and 14 expert annotators specializing in Korean traditional music performed segment-level labeling accordingly. Baseline experiments on sigimsae classification and event detection show that domain-informed F0 representations remain competitive with, and on classification surpass, frozen probing of a general-purpose music foundation model, while pitch and spectral cues play complementary roles in event-level detection. Companion page: https://www.danbinaerin.com/Gugak-VocalSet/",
+  "abstractSha256": "62610576f67cc32907785db677ed0f8e081d3f8c96cfbe58057322e5b477ba26",
+  "arxivId": "2610.15350",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.15350v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "数据集构建",
+    "primaryTask": "音频事件检测",
+    "rankBucket": "前50%",
+    "score": 6.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.event-detection",
+          "label": "音频事件检测"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "task",
+          "id": "task.music-understanding",
+          "label": "音乐分析"
+        },
+        {
+          "facet": "method",
+          "id": "method.dataset-curation",
+          "label": "数据集构建"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "数据集构建",
+      "primaryMethodId": "method.dataset-curation",
+      "primaryTask": "音频事件检测",
+      "primaryTaskId": "task.event-detection",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Danbinaerin Han"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wonil Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Seah Hong"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Dongjoo Moon"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jaeok Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jongpil Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chaewon Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Juhan Nam"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文用 305 首棚录独唱和 68000 余段音频对齐的装饰音标注解决韩语传统声乐缺乏可计算语料的问题，基线显示音高曲线在分类上超过冻结通用音乐模型，而频谱在线索定位上互补，代价是固定调与速度限制了自然表达。",
+  "originalTitle": "Gugak-VocalSet: A Multi-Genre Studio-Quality Dataset of Korean Traditional Singing with Sigimsae Annotations",
+  "pdfUrl": "https://arxiv.org/pdf/2610.15350v1.pdf",
+  "readerTitle": "国乐声乐数据集如何把装饰音变成可计算的事件",
+  "schemaVersion": 2
+}

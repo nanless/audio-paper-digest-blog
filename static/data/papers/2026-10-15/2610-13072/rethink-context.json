@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.13072v1",
+  "abstract": "Joint audio-video diffusion models generate synchronized content, but editing existing clips requires target changes without disrupting non-target structure or cross-modal correspondence. We present AV-FlowEdit, a training-free and inversion-free framework for prompt-driven audio-video editing. Our key insight is that source--target flow differences provide both cross-modal editing directions and preservation cues. Under shared perturbations, they jointly update the video and audio branches, supporting visual-only, audio-only, and joint edits while retaining pretrained cross-modal interactions. To suppress drift accumulated during sampling, Cross-Modal Event-Aware Spectral Trajectory Preservation combines flow saliency, aligned audio activity, multiscale low-frequency displacement, and diffusion-stage scheduling. This adaptively preserves unsupported regions while allowing intended audio-visual events. AV-FlowEdit requires no model training, external masks, or optimization-based inversion. Experiments show strong prompt alignment and temporal consistency, together with competitive audio quality and cross-modal coherence.",
+  "abstractSha256": "92ab1c095e3b5e166605776f0b19aa57f09eec4710ace8b2a63ea639c170eab2",
+  "arxivId": "2610.13072",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.13072v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "流匹配",
+    "primaryTask": "音视频生成",
+    "rankBucket": "前50%",
+    "score": 5.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-generation",
+          "label": "音视频生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "流匹配",
+      "primaryMethodId": "method.flow-matching",
+      "primaryTask": "音视频生成",
+      "primaryTaskId": "task.av-generation",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shaohua Pan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiao Liu"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "AV-FlowEdit 针对已有音视频片段的提示词编辑问题，用冻结联合模型的源-目标流差异同时更新视频和音频，并用事件感知的多尺度低频校正抑制非目标漂移，代价是大幅语义改动会拉低与源视频的视觉相似度。",
+  "originalTitle": "AV-FlowEdit: Training-Free Prompt-Driven Audio-Visual Editing with Event-Aware Spectral Trajectory Preservation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.13072v1.pdf",
+  "readerTitle": "不反演、不训练如何同时改声音和画面：AV-FlowEdit 的联合编辑与保持机制",
+  "schemaVersion": 2
+}

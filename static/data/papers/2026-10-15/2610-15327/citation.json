@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.15327v1",
+  "arxivId": "2610.15327",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.15327v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mengzhe Geng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Max W. Y. Lam"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuewen Cao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shoukang Hu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jing Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Marc Tessier"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xu Li"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.15327v1",
+  "originalTitle": "CIViC: Evidence Gates for Audio-Conditioned Visual Prediction on Proxy Tasks",
+  "pdfUrl": "https://arxiv.org/pdf/2610.15327v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

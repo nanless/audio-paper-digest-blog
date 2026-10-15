@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.14676v1",
+  "abstract": "We present CAST-ASD (Causal Attention over Speakers and Time), a causal joint model for active speaker detection (ASD). Recent ASD models improve performance by jointly processing all faces in a scene, but operate offline, with the full clip available before any frame is labelled. Low-latency causal detectors instead process each face independently. CAST-ASD combines joint face reasoning with fully causal inference. It applies scene-level attention across faces within the current frame and causal temporal attention over each face's history, enabling information sharing across speakers with zero lookahead. Its parameter count does not grow with the number of faces. On MSDWild, where most negative face-frames contain a visible competing speaker, CAST-ASD reduces competing-speaker false alarms by 32% relative to the causal per-face detector it extends, with larger gains as scene occupancy increases. It outperforms all causal baselines on both validation splits while using only one-tenth the inter-speaker parameters of a three-block fixed-roster convolution. Code and models are available at https://github.com/prathamg007/CAST-ASD.",
+  "abstractSha256": "b2608c21f82b2f80a94f9bb7ebb21a0459326fc8f9368e64d0faff2c77ddd8b5",
+  "arxivId": "2610.14676",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.14676v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "注意力机制",
+    "primaryTask": "说话人分离标注",
+    "rankBucket": "前25%",
+    "score": 8.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.diarization",
+          "label": "说话人分离标注"
+        },
+        {
+          "facet": "method",
+          "id": "method.attention",
+          "label": "注意力机制"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.causal",
+          "label": "严格因果"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "注意力机制",
+      "primaryMethodId": "method.attention",
+      "primaryTask": "说话人分离标注",
+      "primaryTaskId": "task.diarization",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Pratham Gupta"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Haotian Qi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tushar Sandhan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Gabriel Skantze"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文要解决多人同框时把声音归属到正确人脸的在线判断问题，用当前帧跨人脸比较加单人历史因果建模实现零前视，在 MSDWild 多人验证集上把竞争性误报相对降低约三分之一，代价是每个块增加 1.57M 参数和跨人脸注意的平方计算量。",
+  "originalTitle": "CAST-ASD: Causal Attention over Speakers and Time for Online Active Speaker Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2610.14676v1.pdf",
+  "readerTitle": "同时看全场又不看未来：CAST-ASD 怎么做在线说话人检测",
+  "schemaVersion": 2
+}

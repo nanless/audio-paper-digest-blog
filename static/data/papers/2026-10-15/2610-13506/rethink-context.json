@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.13506v1",
+  "abstract": "Autoregressive Transformer and Conformer models have achieved state-of-the-art performance in automatic speech recognition (ASR). However, their sequential token generation mechanism imposes a significant bottleneck during decoding, resulting in substantial inference latency. While speculative decoding has emerged as a promising lossless acceleration technique, existing ASR-oriented approaches either suffer from low draft acceptance rates due to suboptimal draft quality or rely on specially designed external draft models, which limit their generality and practicality. To overcome these limitations, we propose EAGLE-ASR, a novel framework that accelerates ASR inference via EAGLE-style speculative decoding while strictly preserving lossless output quality. Specifically, we introduce Speech-Draft, a lightweight autoregressive module that serves as a universal draft model by jointly leveraging encoder acoustic features and hierarchical decoder representations from the target ASR model. Furthermore, we adopt a multi-step generation strategy with self-distilled data to train the Speech-Draft, enabling it to better approximate the target model's output distribution and maintain causal consistency during multi-token generation. Extensive experiments on representative Whisper and Conformer AED models demonstrate that EAGLE-ASR achieves significant lossless speedups of up to $1.9\\times$ and $2.4\\times$, respectively, consistently outperforming existing speculative decoding baselines for ASR. Our proposed framework further generalizes effectively to multilingual ASR and speech translation tasks, establishing EAGLE-ASR as a practical and universally applicable solution for accelerating modern ASR systems without compromising recognition accuracy.",
+  "abstractSha256": "7c801bcf222af147e91d69f21d6f38d74b28e94bbf1d2bc351a6709117001d50",
+  "arxivId": "2610.13506",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.13506v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "自回归模型",
+    "primaryTask": "语音识别",
+    "rankBucket": "前25%",
+    "score": 8.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-translation",
+          "label": "语音翻译"
+        },
+        {
+          "facet": "method",
+          "id": "method.autoregressive",
+          "label": "自回归模型"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "自回归模型",
+      "primaryMethodId": "method.autoregressive",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "the College of Intelligence and Computing, Tianjin University, Tianjin 300350, China"
+      ],
+      "name": "Sen Zhang"
+    },
+    {
+      "affiliations": [
+        "the College of Intelligence and Computing, Tianjin University, Tianjin 300350, China"
+      ],
+      "name": "Xianghu Yue"
+    },
+    {
+      "affiliations": [
+        "ASUS Intelligent Cloud Services, Singapore 486030"
+      ],
+      "name": "Yiming Chen"
+    },
+    {
+      "affiliations": [
+        "the College of Intelligence and Computing, Tianjin University, Tianjin 300350, China"
+      ],
+      "name": "Wenhuan Lu"
+    },
+    {
+      "affiliations": [
+        "the College of Intelligence and Computing, Tianjin University, Tianjin 300350, China"
+      ],
+      "name": "Jianguo Wei"
+    },
+    {
+      "affiliations": [
+        "the School of Artificial Intelligence, The Chinese University of Hong Kong, Shenzhen, Guangdong 518172, China, also with the Department of Electrical and Computer Engineering, National University of Singapore, Singapore 117583"
+      ],
+      "name": "Haizhou Li"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对自回归语音识别逐词生成慢的问题，论文用复用目标模型声学与解码器表示的轻量 Speech-Draft 做草稿加并行验证，在 LibriSpeech 上 Whisper 达 1.91 倍、Conformer 达 2.43 倍且识别结果不变，代价是需额外训练草稿模块并调草稿长度。",
+  "originalTitle": "Lossless Inference Acceleration for ASR via EAGLE-Style Speculative Decoding",
+  "pdfUrl": "https://arxiv.org/pdf/2610.13506v1.pdf",
+  "readerTitle": "EAGLE-ASR：为语音识别定制的无损推测解码加速",
+  "schemaVersion": 2
+}

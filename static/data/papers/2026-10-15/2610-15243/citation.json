@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.15243v1",
+  "arxivId": "2610.15243",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.15243v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Darius Pétermann"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wootaek Lim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Seungkwon Beack"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Minje Kim"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.15243v1",
+  "originalTitle": "HE-NAC: High-Efficiency Neural Audio Coding via Hierarchical and Residual Multi-Band Quantization",
+  "pdfUrl": "https://arxiv.org/pdf/2610.15243v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

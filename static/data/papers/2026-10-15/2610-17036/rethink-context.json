@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.17036v1",
+  "abstract": "Effective vocal coaching connects performance issues with corrective advice, but recordings paired with expert diagnoses and advice are scarce. Online singing communities provide a potential source of supervision, but observations and advice are scattered across unstructured comments. We introduce PitchIn, audio-language models for natural-language vocal coaching, and the PeerCoach Dataset: 14,445 instruction examples covering Focused QA, Overall Feedback, and Recognition QA. We compare target combinations on Qwen2.5-Omni and train PitchIn on Focused QA and Overall Feedback using Qwen2.5-Omni and MOSS-Music. On VocalCoachBench, the proportion of requested diagnosis-correction pairs matching an expert issue with valid advice rises from 21.3% to 61.0% for Qwen2.5-Omni and from 31.4% to 51.2% for MOSS-Music. Direct training on source comments yields only 19.8% for Qwen2.5-Omni. For Qwen, Focused QA alone reaches 65.6%, but adding Overall Feedback improves alignment with expert reviews and human preference. Both models improve expert-review alignment over pretrained baselines and are significantly preferred for usefulness (92.0% and 67.3%, respectively). Demo examples are available at https://hayeonbang.github.io/PitchIn.",
+  "abstractSha256": "c875a05df34f5257b6681cefe5fec5e1f4cadee108b5841550f89b09faec5cdb",
+  "arxivId": "2610.17036",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.17036v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "指令微调",
+    "primaryTask": "音频问答",
+    "rankBucket": "前50%",
+    "score": 6.7,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-question-answering",
+          "label": "音频问答"
+        },
+        {
+          "facet": "task",
+          "id": "task.music-understanding",
+          "label": "音乐分析"
+        },
+        {
+          "facet": "method",
+          "id": "method.instruction-tuning",
+          "label": "指令微调"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "指令微调",
+      "primaryMethodId": "method.instruction-tuning",
+      "primaryTask": "音频问答",
+      "primaryTaskId": "task.audio-question-answering",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hayeon Bang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hounsu Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Joonyong Park"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jung-Jae Yu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Juhan Nam"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文要解决演唱录音缺专家诊断配对的问题，把 Reddit 评论整理成 Focused QA 和 Overall Feedback 来微调音频语言模型，在 VocalCoachBench 上把有效诊断加纠正的比例从 21.3% 提高到 61.0%，代价是严格匹配专家诊断仍很低且识别类辅助任务没有带来开放式指导增益。",
+  "originalTitle": "PitchIn: Natural-Language Vocal Coaching from Unstructured Community Feedback",
+  "pdfUrl": "https://arxiv.org/pdf/2610.17036v1.pdf",
+  "readerTitle": "把分散的社区评论变成声乐教练：PitchIn 解读",
+  "schemaVersion": 2
+}

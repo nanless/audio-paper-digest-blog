@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.14508v1",
+  "arxivId": "2610.14508",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.14508v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yifeng Mao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ziye Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yutong Shen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Feiran Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wenjuan Han"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.14508v1",
+  "originalTitle": "PAG-Agent: Zero-Shot Personalized Music Album Generation via Aesthetic Profile Distillation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.14508v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

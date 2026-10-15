@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.18587v1",
+  "abstract": "Multimodal Emotion Recognition (MER) aims to understand human emotions by integrating information from multiple modalities such as speech and text. Psychological studies suggest that emotions exhibit latent hierarchical structured relationships in their semantic representations. However, most MER approaches rely on Euclidean representations, which capture fine-grained cross-modal interactions but do not explicitly provide a geometric prior for organizing hierarchical emotional structures. To mitigate this gap, we propose GeoMER, a joint Euclidean-Hyperbolic modeling framework that introduces hyperbolic emotion-core routing to capture higher-level, abstract emotional representations for MER. The proposed framework jointly models token-level cross-modal semantic interactions and latent emotion representations in two complementary geometric spaces. Specifically, GeoMER consists of a Euclidean Multimodal Fusion Module (EuclFusion) for multimodal representation fusion and a Hyperbolic Geometric Core Routing (HypGeoRoute) module that performs geometry-aware core assignment and aggregation in a hyperbolic manifold to capture more abstract feature representations. The HypGeoRoute module complements the Euclidean token-level modeling. We experiment on the IEMOCAP multimodal MER benchmark and demonstrate that the proposed method achieves the best performance, with 83.54% weighted accuracy and 83.35% unweighted accuracy, outperforming Euclidean baselines, including MemoCMT.",
+  "abstractSha256": "c74dc3ca9ac0fccb8786f5c3b48ae6ca327d7d8ca87a1d4f0f408c142025192c",
+  "arxivId": "2610.18587",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.18587v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "语音情感识别",
+    "rankBucket": "前50%",
+    "score": 5.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.emotion-recognition",
+          "label": "语音情感识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.attention",
+          "label": "注意力机制"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "语音情感识别",
+      "primaryTaskId": "task.emotion-recognition",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Newcastle University, Newcastle upon Tyne, United Kingdom"
+      ],
+      "name": "Ting Zhu"
+    },
+    {
+      "affiliations": [
+        "Newcastle University, Newcastle upon Tyne, United Kingdom"
+      ],
+      "name": "Huizhi Liang"
+    },
+    {
+      "affiliations": [
+        "Newcastle University, Newcastle upon Tyne, United Kingdom"
+      ],
+      "name": "Boguslaw Obara"
+    },
+    {
+      "affiliations": [
+        "Taiyuan University of Technology, Shanxi, China"
+      ],
+      "name": "Shufei Duan"
+    },
+    {
+      "affiliations": [
+        "Newcastle University, Newcastle upon Tyne, United Kingdom"
+      ],
+      "name": "Varun Ojha"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "GeoMER 针对语音加文本情绪识别中细粒度跨模态对齐与抽象情绪结构难以兼顾的问题，用欧氏分支做词元级融合、用双曲几何核心路由组织抽象情绪表示，在 IEMOCAP 四分类上报告 83.54% 加权准确率和 83.35% 非加权准确率，代价是双分支与双曲运算带来的额外复杂度。",
+  "originalTitle": "GeoMER: A Joint Euclidean-Hyperbolic Geometry Framework for Multimodal Emotion Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2610.18587v1.pdf",
+  "readerTitle": "GeoMER：欧氏与双曲联合建模的多模态情绪识别",
+  "schemaVersion": 2
+}

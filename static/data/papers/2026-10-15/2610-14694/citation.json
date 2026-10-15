@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.14694v1",
+  "arxivId": "2610.14694",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.14694v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wenbing Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Qihang Lu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zihan Sun"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Peilei Jia"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yingming Gao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ya Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jun Gao"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.14694v1",
+  "originalTitle": "VoTSpeech: Decoupling Voice Design from Speech Generation in Instruction-Following TTS",
+  "pdfUrl": "https://arxiv.org/pdf/2610.14694v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

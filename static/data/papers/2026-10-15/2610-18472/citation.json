@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.18472v1",
+  "arxivId": "2610.18472",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.18472v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Jiawei Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Ziyu Wan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Nanye Ma"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Long Zhao"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Dong Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Hongyu Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Qifeng Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Dongdong Chen"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.18472v1",
+  "originalTitle": "Simplifying and Improving On-Policy Distillation for Few-Step Diffusion",
+  "pdfUrl": "https://arxiv.org/pdf/2610.18472v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

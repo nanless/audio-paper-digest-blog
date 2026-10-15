@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.17619v1",
+  "abstract": "In cascaded voice agents, ASR errors can have markedly different downstream consequences: a small transcription error may leave a tool call unchanged or alter its intent or arguments. Conventional word error rate (WER), however, does not capture these differences. We introduce SpeechEvalX, a paired diagnostic protocol that evaluates how task roles affected by ASR errors influence structured tool calls. Controlled edits are matched by source utterance, edit count, and operation, while task-role labels are compared with lexical severity, BERT cosine distance, Semantic-WER, and binary criticality. Across 594 source utterances, joint call accuracy falls from 82.3% with reference transcripts to 71.9-74.9% across three ASR front ends. Number and negation edits cause 21.9-25.7 percentage-point losses, versus 1.4-2.9 points for control edits. Detailed task-role labels improve source-grouped ROC-AUC from 0.73 to 0.78 over binary criticality, showing that downstream impact depends strongly on the task role affected.",
+  "abstractSha256": "cfdde25ddde3273e549a4af3af5f35d6cd9e596e91fddc11e32690bdda3aa01e",
+  "arxivId": "2610.17619",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.17619v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "评测协议",
+    "primaryTask": "语音代理规划与工具使用",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.voice-agent-planning",
+          "label": "语音代理规划与工具使用"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "评测协议",
+      "primaryMethodId": "method.evaluation-protocol",
+      "primaryTask": "语音代理规划与工具使用",
+      "primaryTaskId": "task.voice-agent-planning",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiaolong Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shijie Su"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Naqi Xiong"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文用同一句话配对比较不同位置的单字改动，说明数字与否定等任务角色比功能词更容易让结构化工具调用失败，并用跨源分组预测证明细粒度角色比二元关键性多出可验证的诊断信息。",
+  "originalTitle": "When Does an ASR Error Matter? Task-Role Diagnostics for Tool-Using Voice Agents",
+  "pdfUrl": "https://arxiv.org/pdf/2610.17619v1.pdf",
+  "readerTitle": "语音助手听错一个词，何时会办错事：按任务角色诊断工具调用",
+  "schemaVersion": 2
+}

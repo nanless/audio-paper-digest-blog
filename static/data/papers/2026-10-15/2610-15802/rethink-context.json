@@ -1,0 +1,103 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.15802v1",
+  "abstract": "Generating a full song from lyrics and a style description requires long-range musical planning without sacrificing vocal and instrumental detail. Low-rate discrete semantic tokens make this tractable, but quantization constrains the information available to acoustic rendering, while separately optimized stages prevent downstream generation objectives from shaping the planner. We propose joint discrete and continuous modeling for high-fidelity song generation. A VQ tokenizer supplies tokens for autoregressive planning, and a separately trained SSL-derived variational encoder supplies continuous semantic targets. Conditioned on the completed token plan and differentiable readouts of the planner's predictive states, a full-sequence flow model generates semantic features for acoustic rendering. Its flow-matching gradients reach the language model through the readouts, without differentiating through token sampling; the standard pathway keeps continuous features out of autoregressive feedback. On 192 shared prompts, its 48D configuration improves SongEval from 4.152 to 4.269 and reduces micro-PER from 20.26% to 14.47% relative to a discrete baseline, while receiving substantially higher expert listening scores. We further analyze the system through downstream semantic probes and conditioned reconstruction.",
+  "abstractSha256": "f839d49128673a7cbd3c74412efab5cfa305a9359590e0d9333cd8e88a2da94a",
+  "arxivId": "2610.15802",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.15802v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "流匹配",
+    "primaryTask": "歌唱生成",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.singing",
+          "label": "歌唱生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "method",
+          "id": "method.autoregressive",
+          "label": "自回归模型"
+        },
+        {
+          "facet": "method",
+          "id": "method.vector-quantization",
+          "label": "向量量化"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "流匹配",
+      "primaryMethodId": "method.flow-matching",
+      "primaryTask": "歌唱生成",
+      "primaryTaskId": "task.singing",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zheqi Dai"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhiyue Wu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ruibin Yuan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Haolin He"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chunyat Wu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xuerui Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Qiuqiang Kong"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chao Yan"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文用离散词元做长时规划、用连续语义特征做声音渲染并让流匹配损失回传语言模型，在 192 个共用提示上 Joint-STD-48D 相对离散基线提升 SongEval 并降低音素错误率，但更宽特征与不同渲染路线各有取舍且增益来源尚未分离。",
+  "originalTitle": "High-Fidelity Song Generation with Joint Discrete and Continuous Modeling",
+  "pdfUrl": "https://arxiv.org/pdf/2610.15802v1.pdf",
+  "readerTitle": "离散规划加连续语义：高保真歌曲生成如何兼顾长结构与声音细节",
+  "schemaVersion": 2
+}

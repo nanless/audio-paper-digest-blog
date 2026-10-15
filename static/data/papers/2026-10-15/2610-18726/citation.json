@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.18726v1",
+  "arxivId": "2610.18726",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.18726v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jie Chi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zakaria Aldeneh"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Masha Fedzechkina"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Maureen de Seyssel"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Natalie Schluter"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.18726v1",
+  "originalTitle": "Code-Switching Detection via Language-Selective Dimensions in Speech Foundation Models",
+  "pdfUrl": "https://arxiv.org/pdf/2610.18726v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

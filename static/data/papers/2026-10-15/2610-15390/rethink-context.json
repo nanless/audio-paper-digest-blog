@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.15390v1",
+  "abstract": "Audio Large Language Models (Audio LLMs) are embedded in agents for smart homes, vehicles, wearables, and embodied systems, where acoustic inputs can propagate from perception into persistent state and consequential execution. This setting extends security analysis beyond model behavior to the system conditions that determine how acoustic inputs can influence agent behavior and external actions. Existing surveys examine acoustic security, LLM-based agents, and edge deployment in isolation, leaving their security interactions in deployed Audio LLM-based agents insufficiently characterized. This survey introduces an Acoustic Sensing-to-Action (S2A) system model that traces these security implications along the path from acoustic sensing to external execution, while accounting for edge-cloud runtime and lifecycle transformation. We use the model to synthesize attacks, defenses, and evaluation methods across the acoustic, agent, and edge-system literature. The synthesis shows that security gaps can emerge within components and at the transitions between stages, where protections developed for one stage do not necessarily provide end-to-end assurance in the deployed system. These findings motivate security evaluation that follows acoustic influence from sensing to action across persistent state, system boundaries, and changing deployment conditions in real-world agents.",
+  "abstractSha256": "0d025a93d0a9fd05e796436a816e8c8ab52069dd6c1c9980d27d3bf0ad44eceb",
+  "arxivId": "2610.15390",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.15390v1",
+  "assessment": {
+    "documentType": "综述",
+    "primaryMethod": "文献综述方法",
+    "primaryTask": "语音代理规划与工具使用",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.voice-agent-planning",
+          "label": "语音代理规划与工具使用"
+        },
+        {
+          "facet": "method",
+          "id": "method.literature-review",
+          "label": "文献综述方法"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.security",
+          "label": "音频安全"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.on-device",
+          "label": "端侧运行"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "文献综述方法",
+      "primaryMethodId": "method.literature-review",
+      "primaryTask": "语音代理规划与工具使用",
+      "primaryTaskId": "task.voice-agent-planning",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Binhong Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Haidong Kang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yanfeng Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hong-Ning Dai"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Guo Yu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shangce Gao"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "本文针对边缘部署的音频大模型智能体提出声学感知到动作的系统模型，沿六个阶段整合攻击、防御与评测证据，指出单点防护不能保证端到端安全，结论成立依赖于最终部署形态、权限绑定与跨阶段传播是否被完整评测。",
+  "originalTitle": "From Acoustic Sensing to Physical Actions: A Comprehensive Survey of Security Risks in Edge-Deployed Audio LLM-Based Agents",
+  "pdfUrl": "https://arxiv.org/pdf/2610.15390v1.pdf",
+  "readerTitle": "从声音听到动手：边缘音频智能体为何要按 sensing-to-action 全链路谈安全",
+  "schemaVersion": 2
+}

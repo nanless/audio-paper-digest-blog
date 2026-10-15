@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.14299v1",
+  "abstract": "Recent Speech Full-Duplex (FDX) models are capable of engaging in naturalistic conversation by listening and speaking at the same time. Building on this foundation, recent architectures introduce internal thinking streams to enhance their intelligence. To guarantee these streams process successfully in real time, existing methods enforce a fixed decoding rate, which assumes a hardware profile capable of a specific latency. We argue this static approach is severely suboptimal. Because internal thinking is intrinsically asynchronous, an ideal FDX model should sustain real-time conversational flow while allowing each stream to decode at its own hardware-adaptive rate. Thinking streams must process as fast as the hardware allows to deliver accurate answers faster. To solve this, we propose RUBATO, a novel multistream positional encoding that assigns independent clocks to entirely decouple the streams. This structural isolation empowers the model to zero-shot interpolate across any inference decoding speed. It drastically simplifies dataset construction by requiring training on only two extreme decoding speeds while smoothly adapting to any intermediate rate during deployment. RUBATO demonstrates consistent robustness across five spoken reasoning tasks. On Spoken GSM8K, a baseline model collapses to 1.7% accuracy at interpolated speeds. Conversely, RUBATO-Full sustains 48.7% to 51.1% accuracy across all rates, leveraging faster hardware to achieve a 6.5x shorter time-to-answer with a constant time-to-first-response. This advantage holds on BIG-Bench Audio and amplifies significantly during complex full-duplex interruptions. Specifically, when a user interjects while the model is actively speaking and reasoning, RUBATO-Full achieves 40.0% to 45.1% accuracy, whereas the baseline fails completely.",
+  "abstractSha256": "22ecb64569e14e180e47b9a0d35a08be13cc6cabc2db145749db585f3e76d24f",
+  "arxivId": "2610.14299",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.14299v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "动态计算与早退",
+    "primaryTask": "全双工语音交互",
+    "rankBucket": "前25%",
+    "score": 7.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.full-duplex",
+          "label": "全双工语音交互"
+        },
+        {
+          "facet": "method",
+          "id": "method.dynamic-computation",
+          "label": "动态计算与早退"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-reasoning",
+          "label": "音频推理"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.real-time",
+          "label": "实时处理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "动态计算与早退",
+      "primaryMethodId": "method.dynamic-computation",
+      "primaryTask": "全双工语音交互",
+      "primaryTaskId": "task.full-duplex",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "The University of Texas at Austin",
+        "FAIR, Meta Superintelligence Labs"
+      ],
+      "name": "Yi-Jen Shih"
+    },
+    {
+      "affiliations": [
+        "FAIR, Meta Superintelligence Labs"
+      ],
+      "name": "Puyuan Peng"
+    },
+    {
+      "affiliations": [
+        "FAIR, Meta Superintelligence Labs"
+      ],
+      "name": "Haohe Liu"
+    },
+    {
+      "affiliations": [
+        "The University of Texas at Austin"
+      ],
+      "name": "David Harwath"
+    },
+    {
+      "affiliations": [
+        "FAIR, Meta Superintelligence Labs"
+      ],
+      "name": "Abdelrahman Mohamed"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对全双工语音模型中实时音频与内部思考共用一条位置时间轴导致变速推理时错位的问题，Rubato 用实时钟与思考钟两套独立位置计数实现零样本变速插值，在只训练两种极端思考预算下保持准确率并随算力提升缩短给出答案的时间，代价是推理需维护多套键缓存与合成数据依赖。",
+  "originalTitle": "RUBATO: Decoupled Clocks Allow Full-Duplex Models to Think as Fast as They Can",
+  "pdfUrl": "https://arxiv.org/pdf/2610.14299v1.pdf",
+  "readerTitle": "边听边说边想：Rubato 用两套时钟解开实时音频与异步思考的绑定",
+  "schemaVersion": 2
+}

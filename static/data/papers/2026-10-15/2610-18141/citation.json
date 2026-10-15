@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.18141v1",
+  "arxivId": "2610.18141",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.18141v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yu Mi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Licheng Pan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jiayi Zhu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Qirui Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yitong Qiao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Changtong Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tao Wei"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University Ant Group Institute of Computing Technology, CAS"
+      ],
+      "name": "Fei Sun"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhixuan Chu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kui Ren"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.18141v1",
+  "originalTitle": "Mitigating Cross-Modal Hallucinations by Correcting Modality Misrouting in Omnimodal LLMs",
+  "pdfUrl": "https://arxiv.org/pdf/2610.18141v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.16826v1",
+  "abstract": "Deepfake speech detectors are typically evaluated as binary classifiers on fixed benchmarks, but deployed systems face evolving attacks, codecs, speakers, and recording conditions, with labels unavailable during operation. This makes it difficult to know when a detector operates in familiar conditions and can be relied on. We propose an unsupervised drift monitor that operates on the internal embeddings of a deployed detector. The monitor compares each input against bona fide and spoof references using regularized Mahalanobis distances. These distances define trusted, ambiguous, and novel regions of the detector embedding space, allowing unfamiliar inputs to be routed for review. We evaluate the monitor on four modern detectors on three datasets. The monitor raises alerts for dataset mismatches and substantially reduces the security-critical case of accepting deepfakes at the cost of reduced automatic coverage. The results also show that drift affects both classes: bona fide recordings can move away from the training reference, increasing alert rates even in in-domain settings. Our findings suggest that deployed deepfake speech detectors should be treated not only as a binary classification, but also as a reliability problem.",
+  "abstractSha256": "ce65bdf38754c8f7ec4bf2990b781c7c34c57d15586b04b8cdcc1d5cdb50a6e7",
+  "arxivId": "2610.16826",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.16826v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "无监督学习",
+    "primaryTask": "音频深度伪造检测",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-deepfake",
+          "label": "音频深度伪造检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.unsupervised",
+          "label": "无监督学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.uncertainty-estimation",
+          "label": "不确定性估计与校准"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "无监督学习",
+      "primaryMethodId": "method.unsupervised",
+      "primaryTask": "音频深度伪造检测",
+      "primaryTaskId": "task.audio-deepfake",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lukáš Prokeš"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Vojtěch Staněk"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Anton Firc"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kamil Malinka"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文针对部署中无标签条件下无法判断检测器是否处于熟悉条件的问题，在固定检测器嵌入上用两个参考的正则马氏距离做可信与告警分流，实验显示未被拦截的伪造误接受率降到 1% 以下，但代价是自动覆盖率明显下降且真语音漂移也会触发大量告警。",
+  "originalTitle": "Unsupervised Data Drift Monitoring for Deployed Deepfake Speech Detectors",
+  "pdfUrl": "https://arxiv.org/pdf/2610.16826v1.pdf",
+  "readerTitle": "部署后语音伪造检测器何时不可信：基于嵌入的无监督漂移监测",
+  "schemaVersion": 2
+}

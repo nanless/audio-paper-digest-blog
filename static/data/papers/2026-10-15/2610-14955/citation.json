@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.14955v1",
+  "arxivId": "2610.14955",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.14955v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sojeong An"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nathan Pruyne"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chris Donahue"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Dasaem Jeong"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.14955v1",
+  "originalTitle": "Transfer Learning for Rhythm Game Chart Generation from Music Transcription and Across Games",
+  "pdfUrl": "https://arxiv.org/pdf/2610.14955v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

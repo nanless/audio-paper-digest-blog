@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.17813v1",
+  "arxivId": "2610.17813",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.17813v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sangkwon Park"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Dongwook Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Youngho Cho"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Donghun Kang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Heeseung Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sungroh Yoon"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.17813v1",
+  "originalTitle": "SSEmb: Training a Generalizable Speech Retrieval Model Using Only Automatic Speech Recognition Data",
+  "pdfUrl": "https://arxiv.org/pdf/2610.17813v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

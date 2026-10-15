@@ -1,0 +1,109 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.15464v1",
+  "abstract": "This paper presents the NPU-ASLP music restoration system developed for Track 1 of the China Computer Federation (CCF) Advanced Audio Technology Competition (AATC) 2026 Challenge. The task aims to recover clean music from mobile-device-captured recordings affected by coupled degradations from playback devices, acoustic propagation, environmental noise and recording terminals. System development is further constrained by limited and imperfectly aligned real data pairs and a strict model-complexity budget. In our system, we adopt TF-MoE as the backbone for its dual-axis modeling of cross-band and temporal dependencies, whose Top-1 routing activates a single expert per token to bound computation under the strict budget. We extend it with two task-specific adaptations: a scale-aware encoder and a complex mapping decoder. The former encodes normalized complex spectra jointly with per-band log-RMS to preserve the band-energy cues discarded by band-wise normalization. The latter directly estimates the clean complex spectrum rather than masking the input, thereby repairing coupled degradations. To address the limited, imperfectly aligned real recordings, we further build a challenge-calibrated playback--propagation--recording simulator that generates 1,572.12 h of sample-aligned data across 202 acoustic conditions. The final system contains 2.951M parameters and requires 82.659 GMACs for a 10-s input. On the official blind test, it achieved -49.067 dB SI-SNR, 1.273 LSD, 2.540 FAD, and 3.495 ViSQOL. It ranked third in LSD, FAD, and ViSQOL and received the third prize in the challenge.",
+  "abstractSha256": "13a825fa178fa0e95d87c5f230efb48b7b178bdf92fc8f528ad1bb3605653f08",
+  "arxivId": "2610.15464",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.15464v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "混合专家模型",
+    "primaryTask": "音频修复",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-restoration",
+          "label": "音频修复"
+        },
+        {
+          "facet": "method",
+          "id": "method.moe",
+          "label": "混合专家模型"
+        },
+        {
+          "facet": "method",
+          "id": "method.time-frequency",
+          "label": "时频分析"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "混合专家模型",
+      "primaryMethodId": "method.moe",
+      "primaryTask": "音频修复",
+      "primaryTaskId": "task.audio-restoration",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zeyu Zhu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yike Zhu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xingchen Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chaoren Yu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jingyi Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yurun Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jierui Guo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chunjiang He"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lei Xie"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对播放器染色、空间传播与手机录音链路耦合导致的音乐退化，该系统用尺度感知编码加直接复数谱映射的双轴 Top-1 稀疏专家模型复原，并以 202 种条件下 1572.12 小时对齐仿真数据提供监督，最终以 2.951M 参数取得盲测 LSD 1.273、FAD 2.540、ViSQOL 3.495 的第三名成绩。",
+  "originalTitle": "The NPU-ASLP System for Music Restoration in the CCF-AATC 2026 Challenge",
+  "pdfUrl": "https://arxiv.org/pdf/2610.15464v1.pdf",
+  "readerTitle": "手机翻录音乐如何复原：NPU-ASLP 系统的尺度感知与对齐仿真",
+  "schemaVersion": 2
+}

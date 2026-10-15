@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.13370v1",
+  "abstract": "Mixture-of-Experts (MoE) models have become the standard architecture for frontier LLMs. The multiple parallel experts in each transformer block theoretically enable expert specialization according to categories such as domains, languages, or modalities during pretraining. However, when data is imbalanced across categories, minority categories can become concentrated in a small fraction of the expert pool or spread inefficiently across them, effectively limiting their available capacity. In this work, we demonstrate that category-conditioned expert-selection biases can preferentially route tokens from different categories toward specialized expert pools. By applying biases based on input category, we provide a simple way to induce soft category-aligned specialization. This intervention encourages categories toward distinct expert subsets while retaining cross-category sharing when useful. More importantly, it enables the over-allocation of expert capacity to categories that would otherwise be disadvantaged by data scarcity. We observe performance improvements across modalities, low-resource languages, and code in models up to 10.6B parameters. At our smallest and largest model scales, these gains are equivalent to allocating 18.5% and 2.7% additional baseline training tokens, respectively. Overall, our results show that expert biases can serve as a lightweight control for category-level expert allocation, making room for low-resource categories while retaining standard MoE inference.",
+  "abstractSha256": "ed2af7a5275d2180f471c74a93ab5c3a0552cc9ddaeeafa55a092345365c5127",
+  "arxivId": "2610.13370",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.13370v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "混合专家模型",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 5.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.moe",
+          "label": "混合专家模型"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.low-resource",
+          "label": "低资源"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "混合专家模型",
+      "primaryMethodId": "method.moe",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ayush K. Tarun"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Clara Meister"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Antoine Bosselut"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "COAX 在预训练选专家时按数据类别加软偏置，让低资源类别被引向更大的指定专家子集，在多语言与多模态混合上改善了低资源验证损失，而推理时可去掉偏置保持标准 MoE 流程，代价是小规模下可观的训练吞吐开销。",
+  "originalTitle": "Overcoming Data Imbalances with Expert Selection Biases",
+  "pdfUrl": "https://arxiv.org/pdf/2610.13370v1.pdf",
+  "readerTitle": "用类别偏置给长尾数据留出专家容量：COAX 解读",
+  "schemaVersion": 2
+}

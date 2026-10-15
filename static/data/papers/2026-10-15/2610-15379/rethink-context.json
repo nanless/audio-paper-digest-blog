@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.15379v1",
+  "abstract": "Speaker anonymization (SA) aims to conceal speaker identity while preserving linguistic content and emotion, but existing streaming systems often lose emotion information through discrete content bottlenecks or require emotion-specific modeling. We present LiveAnon, a voice-conversion-based streaming SA system that directly conditions an autoregressive codec language model on hidden features from a pretrained streaming ASR encoder, preserving emotion without emotion-specific supervision. To reduce codec-generation latency, we introduce capped RVQ decoding, which preserves dependencies among coarse codebooks while predicting the remaining codebooks in parallel. Under VPC24, LiveAnon improves intelligibility and emotion preservation over fixed-target Stream-Voice-Anon (SVA), a strong prior streaming SA system, matches emotion-prompted SVA in emotion preservation, and achieves the strongest semi-informed privacy among streaming systems. Under VPC26, it ranks second across all metrics among the evaluated anonymization systems, demonstrating a strong privacy-utility balance.",
+  "abstractSha256": "3161404a549f33e1564b7b98337d05cb28f9c7212d3619242c6af6e521d9abf6",
+  "arxivId": "2610.15379",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.15379v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "自回归模型",
+    "primaryTask": "说话人匿名化",
+    "rankBucket": "前50%",
+    "score": 7.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.anonymization",
+          "label": "说话人匿名化"
+        },
+        {
+          "facet": "task",
+          "id": "task.voice-conversion",
+          "label": "语音转换"
+        },
+        {
+          "facet": "method",
+          "id": "method.autoregressive",
+          "label": "自回归模型"
+        },
+        {
+          "facet": "method",
+          "id": "method.neural-codec",
+          "label": "神经编解码与离散单元"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "自回归模型",
+      "primaryMethodId": "method.autoregressive",
+      "primaryTask": "说话人匿名化",
+      "primaryTaskId": "task.anonymization",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yejin Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kyungsu Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Seungu Han"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kyogu Lee"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "LiveAnon 用冻结的流式语音识别编码器特征直接驱动自回归编解码器语言模型做语音转换，并用截断的残差量化延迟同时控制隐私、情感保留和延迟，代价是仍依赖编码器分块带来的数百毫秒算法延迟。",
+  "originalTitle": "LiveAnon: Improving Privacy and Utility in Streaming Speaker Anonymization with Codec Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2610.15379v1.pdf",
+  "readerTitle": "流式说话人匿名化如何在保留情感的同时隐藏身份",
+  "schemaVersion": 2
+}

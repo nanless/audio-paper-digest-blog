@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.14594v1",
+  "abstract": "Spiking Neural Networks offer event-driven, energy-efficient computation for speech command recognition, yet most existing methods follow fixed computation paths, allocating redundant computation to easy samples while providing limited insight into how evidence evolves during inference. To address these challenges, we introduce SpikCTU, a compact spiking network with adaptive recurrent computation for speech command recognition. Specifically, a hybrid spiking embedding module preserves continuous input information alongside spike features to construct a fixed temporal memory. A shared Continuous Thinking Unit (CTU) repeatedly reads this memory using keys derived from spikes and continuous values, and updates a binary recurrent state with lightweight stage adapters. Furthermore, combining a fixed base prediction with accumulated corrections at each step enables learned aggregation over all steps or confidence-based early exit using only the predictions available so far. Experiments on three speech command recognition benchmarks show that SpikCTU achieves competitive accuracy with only 0.16--0.17M parameters, and the early exit strategy can substantially further reduce computational cost without compromising accuracy. In addition, trajectory and attention analyses reveal that recurrent steps enable error correction and progressively refine predictions. Code is available at https://github.com/Rivflyyy/spikctu.",
+  "abstractSha256": "afebe99cd0dfa4bb24a3ae37eb19eda9d69b7acf52b4674f12842db14672baea",
+  "arxivId": "2610.14594",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.14594v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "动态计算与早退",
+    "primaryTask": "关键词检测",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.keyword-detection",
+          "label": "关键词检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.dynamic-computation",
+          "label": "动态计算与早退"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "动态计算与早退",
+      "primaryMethodId": "method.dynamic-computation",
+      "primaryTask": "关键词检测",
+      "primaryTaskId": "task.keyword-detection",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Li Jin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jiang Wenbin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chen Tao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wen Fei"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文把语音指令识别拆成一次编码得到固定记忆、多次共享循环读记忆并修正预测，在三个基准上用 0.16-0.17M 参数取得可比精度，早退能减少循环步数但总能耗节省有限。",
+  "originalTitle": "SpikCTU: A Compact Spiking Network with Adaptive Recurrent Computation for Speech Command Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2610.14594v1.pdf",
+  "readerTitle": "SpikCTU：固定记忆加共享循环推理的紧凑脉冲语音指令识别",
+  "schemaVersion": 2
+}

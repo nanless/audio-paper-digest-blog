@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.13175v1",
+  "abstract": "Recent advances in speech synthesis technology have enabled the generation of speech with diverse characteristics. One such characteristic is a foreign accent. In our preliminary experiments, we found that UTMOS, a widely used automatic speech quality assessment system, tended to assign lower scores to speech with stronger foreign accents, even though it is produced by a human speaker. This observation raised a question: How do humans evaluate the naturalness of foreign-accented speech? We conducted a large-scale subjective evaluation involving both native and non-native listeners under different evaluation instructions. The results showed that humans also considered accentedness when evaluating naturalness, but that defining naturalness in terms of human-likeness and selecting raters who have greater exposure to the target accent may enable more appropriate evaluation. This study aims to provide a starting point for future discussions on fairer and more appropriate evaluation of synthetic speech with a foreign accent.",
+  "abstractSha256": "b8de01d5ba689f9ec4739bc4b0b4248b133f3447f2eefd8fc4e6e966ac0ba517",
+  "arxivId": "2610.13175",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.13175v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "众包评测",
+    "primaryTask": "语音质量评估",
+    "rankBucket": "前50%",
+    "score": 5.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-quality",
+          "label": "语音质量评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.crowdsourced-evaluation",
+          "label": "众包评测"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.accent-dialect",
+          "label": "口音与方言"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "众包评测",
+      "primaryMethodId": "method.crowdsourced-evaluation",
+      "primaryTask": "语音质量评估",
+      "primaryTaskId": "task.speech-quality",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kentaro Onda"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Satoru Fukayama"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Daisuke Saito"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nobuaki Minematsu"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文用同一批日式英语做分析再合成以对齐口音强度，对比四种指示语和两类评测者并对照三种自动打分，说明笼统问自然度会把口音当缺陷，而问像人声程度并请熟悉该口音的人来听能更公平地比出系统差异。",
+  "originalTitle": "How Should We Evaluate Naturalness for Synthetic Speech with a Foreign Accent?",
+  "pdfUrl": "https://arxiv.org/pdf/2610.13175v1.pdf",
+  "readerTitle": "带外国口音的合成语音，自然度该怎么评",
+  "schemaVersion": 2
+}

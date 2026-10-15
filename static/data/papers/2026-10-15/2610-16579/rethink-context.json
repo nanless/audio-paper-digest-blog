@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.16579v1",
+  "abstract": "Code-switching (CS) speech, characterized by language alternation within a single utterance, is prevalent in multilingual communities and poses challenges to automatic speech recognition (ASR) due to rapid language transitions. We propose LLM-HB, a language-aware large language model-guided hotword biasing framework for code-switching ASR (CS-ASR). The framework incorporates a mixture-of-experts (MoE) adaptor and an auxiliary language prediction head to better capture and differentiate multilingual representations, while hotwords are injected through LLM-based prompting. Experiments on the ASRU2019 code-switching challenge test set demonstrate that LLM-HB achieves a 20.30% relative reduction in mixed error rate (MER) over the baseline, reaching 5.85% MER under a 15-distractor hotword setting. To the best of our knowledge, this is the first work to integrate LLM-guided biasing into code-switching ASR. We further release the extracted ASRU2019 hotword list to support future research.",
+  "abstractSha256": "693a3ceea38f59cd21809c87d2bf49d55bcc71ffeabddb3104600e25442ac587",
+  "arxivId": "2610.16579",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.16579v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "混合专家模型",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.moe",
+          "label": "混合专家模型"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.code-switching",
+          "label": "代码转换"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.llm",
+          "label": "大语言模型"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "混合专家模型",
+      "primaryMethodId": "method.moe",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuxuan He"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Genshun Wan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Pengcheng Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Gongping Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jianqing Gao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yanmin Qian"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对一句内中英交替难认准、稀有词和人名易错的问题，该工作把混合专家适配、辅助语言预测和热词提示组合进语音大模型流程，在 ASRU2019 混读测试集 15 个干扰词条件下把混合错误率从 7.34% 降到 5.85%，代价是需要约 2200 小时多数据训练和预先给定热词表。",
+  "originalTitle": "LLM-HB: Language-Aware LLM-Guided Hotword Biasing for Code-Switching ASR",
+  "pdfUrl": "https://arxiv.org/pdf/2610.16579v1.pdf",
+  "readerTitle": "用大模型提示做热词偏置的中英混读语音识别",
+  "schemaVersion": 2
+}

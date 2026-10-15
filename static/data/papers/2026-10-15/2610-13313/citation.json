@@ -1,0 +1,34 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.13313v1",
+  "arxivId": "2610.13313",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.13313v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Orane Dufour"
+    },
+    {
+      "affiliations": [
+        "Université de Lorraine, CNRS",
+        "Inria, LORIA, F-54000 Nancy, France"
+      ],
+      "name": "Paul Magron"
+    },
+    {
+      "affiliations": [
+        "LIA, Avignon University",
+        "F-84911 Avignon, France"
+      ],
+      "name": "Mickael Rouvier"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.13313v1",
+  "originalTitle": "VoxAnon: A balanced dataset for a fair evaluation of speech anonymization",
+  "pdfUrl": "https://arxiv.org/pdf/2610.13313v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

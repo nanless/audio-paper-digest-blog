@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.17048v1",
+  "arxivId": "2610.17048",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.17048v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sergei Polezhaev"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Saba Anjum"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Michael Gormish"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.17048v1",
+  "originalTitle": "SpectralBridge: Adding High-Frequency Capability to Large Audio-Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2610.17048v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

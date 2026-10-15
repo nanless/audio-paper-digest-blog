@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.16338v1",
+  "arxivId": "2610.16338",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.16338v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kaisi Guan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ying Ba"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wenjing Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xihua Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chen Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jing Lyu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ruihau Song"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.16338v1",
+  "originalTitle": "SyncReward: Human-Aligned Synchronization Reward for Audio-Visual Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.16338v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

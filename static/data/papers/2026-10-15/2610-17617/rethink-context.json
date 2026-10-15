@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.17617v1",
+  "abstract": "Real-world audio recordings for deepfake detection rarely consist solely of speech; they often are mixtures of speech and background events that themselves may also be synthetic. When processing these mixtures, it remains unclear whether detectors attend to the speech or the background event, and where their spectral evidence lies. We study this on the CompSpoof V2 database, whose mixtures pair independently real-or-fake speech and event components. Our results show that all systems detect fake events more accurately than fake speech. However, this performance gap is largely driven by poor generalization to an unseen fake speech domain, rather than a true difference in difficulty. Furthermore, sub-band probing reveals that the front-end encoder dictates where a countermeasure focuses its frequency evidence. To enable reliable deployment in real-world scenarios, future countermeasures should address out-of-domain generalization failures and carefully select front-end encoders aligned with their target acoustic evidence. Our source code and checkpoints are released at https://github.com/nii-yamagishilab/AntiDeepfake-AudioLLM.",
+  "abstractSha256": "7f51dd9cb34641c112ba17ba8ca99f0c93904972a76142dca07b2c8bd0f49cb6",
+  "arxivId": "2610.17617",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.17617v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "统计分析",
+    "primaryTask": "音频深度伪造检测",
+    "rankBucket": "前50%",
+    "score": 6.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-deepfake",
+          "label": "音频深度伪造检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        },
+        {
+          "facet": "method",
+          "id": "method.lora",
+          "label": "LoRA"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.environmental",
+          "label": "环境声"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "统计分析",
+      "primaryMethodId": "method.statistical-analysis",
+      "primaryTask": "音频深度伪造检测",
+      "primaryTaskId": "task.audio-deepfake",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wanying Ge"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xin Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Junichi Yamagishi"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文用语音和背景声各自独立真假的混合数据，比较四种检测器对假语音与假背景声的敏感度和依赖频段，发现假背景声更好检但差距主要来自对未见过假语音的泛化失败，且前端编码器决定了证据集中在哪个频段。",
+  "originalTitle": "What Do Deepfake Audio Detectors Hear? From Self-Supervised Models to Audio LLMs",
+  "pdfUrl": "https://arxiv.org/pdf/2610.17617v1.pdf",
+  "readerTitle": "混叠录音里检测器到底在听谁：语音还是背景声",
+  "schemaVersion": 2
+}

@@ -1,0 +1,51 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.17738v1",
+  "arxivId": "2610.17738",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.17738v1",
+  "authors": [
+    {
+      "affiliations": [
+        "The University of Melbourne",
+        "University of Birmingham"
+      ],
+      "name": "Jiaheng Dong"
+    },
+    {
+      "affiliations": [
+        "Wuhan University"
+      ],
+      "name": "Shihong Tan"
+    },
+    {
+      "affiliations": [
+        "Wuhan University"
+      ],
+      "name": "Gongping Huang"
+    },
+    {
+      "affiliations": [
+        "The University of Melbourne"
+      ],
+      "name": "Jean Honorio"
+    },
+    {
+      "affiliations": [
+        "University of Birmingham"
+      ],
+      "name": "Abhirup Ghosh"
+    },
+    {
+      "affiliations": [
+        "The University of Melbourne"
+      ],
+      "name": "Ting Dang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.17738v1",
+  "originalTitle": "DuplexAct: How Interactive Are Frontier Full-Duplex Spoken Language Models?",
+  "pdfUrl": "https://arxiv.org/pdf/2610.17738v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

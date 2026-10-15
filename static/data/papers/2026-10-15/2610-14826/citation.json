@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.14826v1",
+  "arxivId": "2610.14826",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.14826v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Adarsh Arigala"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Arjun Gangwar"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Srinivasan Umesh"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.14826v1",
+  "originalTitle": "Cross-Lingual TTS for Indian Languages: A Benchmark and Inference-Time Duration Estimation Strategies",
+  "pdfUrl": "https://arxiv.org/pdf/2610.14826v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

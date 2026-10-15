@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.12796v1",
+  "arxivId": "2610.12796",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.12796v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Khubaib Ahmed"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ahsan Adeel"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nasir Saleem"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kia Dashtipour"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ahsan Ulhaq"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Amir Hussain"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.12796v1",
+  "originalTitle": "Efficient Audio-Visual Speech Enhancement via Reinforcement Learning-Based Neural Architecture Search",
+  "pdfUrl": "https://arxiv.org/pdf/2610.12796v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

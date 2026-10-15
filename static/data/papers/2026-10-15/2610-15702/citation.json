@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.15702v1",
+  "arxivId": "2610.15702",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.15702v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yi Tian"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiaohuan Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yufei tang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xinyu Lin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hongliang Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chengbin Hou"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Degen Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Rongshan Yu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.15702v1",
+  "originalTitle": "RespFocus: Learning Temporal Evidence for Weakly Supervised Respiratory Sound Classification",
+  "pdfUrl": "https://arxiv.org/pdf/2610.15702v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.17036v1",
+  "arxivId": "2610.17036",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.17036v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hayeon Bang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hounsu Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Joonyong Park"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jung-Jae Yu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Juhan Nam"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.17036v1",
+  "originalTitle": "PitchIn: Natural-Language Vocal Coaching from Unstructured Community Feedback",
+  "pdfUrl": "https://arxiv.org/pdf/2610.17036v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.18597v1",
+  "arxivId": "2610.18597",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.18597v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Peiwei Chang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yongqiang Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuelan Cheng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Liting Gao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yishun Lu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Li Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mark D. Plumbley"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Philip J. B. Jackson"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wenwu Wang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.18597v1",
+  "originalTitle": "PhysicsSliders: Learning Physical Controls for Audio Foley Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.18597v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

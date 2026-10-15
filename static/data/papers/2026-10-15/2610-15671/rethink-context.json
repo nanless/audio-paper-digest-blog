@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.15671v1",
+  "abstract": "Eyewear that senses articulation with inaudible ultrasound can now recognize silent speech over an open vocabulary, but its accuracy is limited by the cost of training data. We present SoniGAN, which synthesizes the ultrasonic echo profiles of silent articulation from text and uses them as synthetic supervision. A voice-cloned text-to-speech (TTS) model reads a text corpus, and a two-stage generator synthesizes echo profiles from representations of the spoken content of that audio. Pretraining a recognizer on 104 hours of the synthesized data improves the word error rate (WER) of a public open-vocabulary benchmark by 2.3 points. Adding the sessions the corpus discards for a faulty microphone brings the system to 22.2% without any language model. Lexicon-constrained decoding, LLM rescoring, and ensembling further bring it to 14.9%, the first minimally obtrusive silent speech interface to fall inside the error range in which users report no loss of willingness to use silent speech input.",
+  "abstractSha256": "37bb734076de1b6c3ef78a3df24d21a12d4d85a931b649675bad0751430027af",
+  "arxivId": "2610.15671",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.15671v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "生成对抗网络",
+    "primaryTask": "静默语音接口",
+    "rankBucket": "前50%",
+    "score": 6.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.silent-speech",
+          "label": "静默语音接口"
+        },
+        {
+          "facet": "method",
+          "id": "method.gan",
+          "label": "生成对抗网络"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.pretraining",
+          "label": "预训练"
+        },
+        {
+          "facet": "method",
+          "id": "method.contrastive",
+          "label": "对比学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.tool-augmentation",
+          "label": "工具增强与约束解码"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "生成对抗网络",
+      "primaryMethodId": "method.gan",
+      "primaryTask": "静默语音接口",
+      "primaryTaskId": "task.silent-speech",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jiacheng Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ruidong Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "François Guimbretière"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Cheng Zhang"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对眼镜超声静音识别配对数据难收集的问题，论文用语音克隆 TTS 加两阶段生成器从文本合成回波包络与条纹，并在 104 小时合成数据预训练后把词错误率从 25.9% 降到 23.6%，叠加故障会话与解码后到 14.9%，代价是需要 TTS 语音、两阶段对抗训练与语言模型重打分。",
+  "originalTitle": "Synthesizing Ultrasonic Echo Profiles from Text for Open-Vocabulary Silent Speech Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2610.15671v1.pdf",
+  "readerTitle": "从文本合成超声回波：为眼镜静音语音识别造训练数据",
+  "schemaVersion": 2
+}

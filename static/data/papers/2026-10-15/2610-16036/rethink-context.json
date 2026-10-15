@@ -1,0 +1,115 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.16036v1",
+  "abstract": "Recent diffusion- and conditional flow matching (CFM)-based emotional voice conversion (EVC) systems achieve strong conversion quality. However, they typically rely on multiple sampling steps, because the conditioning specifies which emotion to impose while its acoustic realization is left to the sampler. In this paper, we propose Prime-EVC, a one-step expressive EVC architecture based on emotion-primed flow matching. Our key idea is to reallocate the emotional conversion between the conditioning and the sampler: a FiLM-fused speaker-emotion style, an emotional variance adaptor, and direct emotion and spectro-temporal supervision assemble an emotion-rich conditioning upstream, rendering the residual conversion left to the CFM decoder attainable within one Euler step. Experiments on the ESD corpus demonstrate that single-step Prime-EVC surpasses five representative EVC systems on every quality metric and exceeds 4- and 100-step DurFlex-EVC in subjective naturalness and emotion while running 3.4--50 times faster than both.",
+  "abstractSha256": "e3d54dfdb64507428c8fd6fc76c831c0a30be327459d0528d520cd24ed8032a7",
+  "arxivId": "2610.16036",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.16036v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "流匹配",
+    "primaryTask": "语音转换",
+    "rankBucket": "前50%",
+    "score": 6.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.voice-conversion",
+          "label": "语音转换"
+        },
+        {
+          "facet": "task",
+          "id": "task.prosody-style-control",
+          "label": "韵律与风格控制"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "流匹配",
+      "primaryMethodId": "method.flow-matching",
+      "primaryTask": "语音转换",
+      "primaryTaskId": "task.voice-conversion",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yu Pan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiaojuan Cai"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Liang Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yang Hou"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tianjiao Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuguang Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jixun Yao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hiroshi Koide"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lei Ma"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jianjun Zhao"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "Prime-EVC 把目标情感的音高能量与说话人相关的风格提前做进条件 μ 中，再用 DiT 条件流匹配解码器一步生成梅尔谱，在 ESD 英文集上以单步取得 UTMOS 3.37 与 EECS 0.87，代价是条件分支更复杂且结论只在相同划分与声码器下成立。",
+  "originalTitle": "Prime-EVC: One-Step Expressive Emotional Voice Conversion via Emotion-Primed Flow Matching",
+  "pdfUrl": "https://arxiv.org/pdf/2610.16036v1.pdf",
+  "readerTitle": "把情感做进条件里：Prime-EVC 如何用一步完成富有表现力的情感语音转换",
+  "schemaVersion": 2
+}

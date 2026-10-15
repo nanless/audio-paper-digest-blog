@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.14594v1",
+  "arxivId": "2610.14594",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.14594v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Li Jin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jiang Wenbin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chen Tao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wen Fei"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.14594v1",
+  "originalTitle": "SpikCTU: A Compact Spiking Network with Adaptive Recurrent Computation for Speech Command Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2610.14594v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,103 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.17761v1",
+  "abstract": "Automatic Speech Recognition (ASR) system evaluations have consistently revealed performance disparities along lines of race, gender, socioeconomic status, and language variety. While these disparities are well-documented, they are often (implicitly or explicitly) treated as issues that subsequent, larger, and more universal models will correct. We challenge this assumption of steady progress in reducing accent-related performance disparities, conducting a longitudinal evaluation of 16 prominent systems released between 2021-2025 across 8 datasets representing diverse English accent varieties. We find that the performance disparity between Mainstream US English (MUSE) and minority accents is stubborn, not reliably declining as a function of time. Specifically, while systems are reliably performant on MUSE, minority accents are subject to risks of large performance degradations between generations of systems, sometimes worsening by 65% absolute Word Error Rate. We argue that standard ASR benchmarks enact an implicit language policy privileging Mainstream US English varieties. As such, these performance disparities reflect systemic failures of language technology development infrastructure that disproportionately affect underrepresented speaker populations.",
+  "abstractSha256": "cee8153c7908ff3cdcb3658a221491657045137fc19b97df7baac37ec8b54760",
+  "arxivId": "2610.17761",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.17761v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "统计分析",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.accent-dialect",
+          "label": "口音与方言"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.fairness",
+          "label": "公平性"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "统计分析",
+      "primaryMethodId": "method.statistical-analysis",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Alexander Metzger"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Aruna Srivastava"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ruslan Mukhamedvaleev"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Eunjung Yeo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Syed Ishtiaque Ahmed"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nina Markl"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sachin Kumar"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Farhan Samir"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文用 16 个 2021-2025 年语音识别系统在 8 个多口音数据集上对比主流美国英语与少数英语口音的词错误率，发现差距长期存在且少数口音更容易在换代时大幅退化，而主流口音始终被基准测试稳定保护。",
+  "originalTitle": "Connecting the Dots: Enduring Performance Gaps in ASR Systems Between Standard and Minority English Varieties",
+  "pdfUrl": "https://arxiv.org/pdf/2610.17761v1.pdf",
+  "readerTitle": "主流英语一直好用，少数口音为何时好时坏：一次跨四年的语音识别纵向复查",
+  "schemaVersion": 2
+}

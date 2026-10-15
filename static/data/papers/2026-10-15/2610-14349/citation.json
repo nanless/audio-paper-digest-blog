@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.14349v1",
+  "arxivId": "2610.14349",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.14349v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Georgios Batzolis"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Georgios Kontos"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bruno Trentini"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Pranam Chatterjee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Micha Livne"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mark Girolami"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Luca Ambrogioni"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.14349v1",
+  "originalTitle": "Multimodal Co-Generation With Continuous Bitstream Diffusion",
+  "pdfUrl": "https://arxiv.org/pdf/2610.14349v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

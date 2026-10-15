@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.16229v1",
+  "abstract": "Harnessing rich modality features has recently gained prominence in multi-modal recommendation systems (MRSs). To delineate user modality preferences, existing works focus on modality fusion, which can be achieved via attentive summation or concatenation. In this work, we introduce the modality inhibitance effect - a phenomenon which limits existing MRSs when these models transit from dual-modal to tri-modal configurations resulting in significant performance degradation. In particular, apart from the modal-specific contamination encapsulated in the newly introduced modality, the inclusion of new features results in excessive informational redundancy, thereby severely impeding effective integration within current approaches. To address the modality inhibitance effect, we propose a new multi-scale modality wavelet (MMWave) multi-modal recommender, which aims to fully capitalize on essential modality features and suppress modal-specific noise. This is acheived by employing wavelet decomposition from a multi-scale (time \\& frequency) perspective, ensuring that only essential (non-redundant) features of each modality are extracted. We then account for the latent associations between item modality features by designing a new structure-aware multi-modal graph learning module that captures high-order latent structural information pertaining to items. To modulate the relative contributions of modality features and achieve effective integration, we then propose a new adaptive modality regulator component that employs a new cross-weight integration strategy. Experiments conducted on four real-world datasets validate the efficacy of our proposed model. The source code for this work has been made publicly available at https://github.com/kennethorq/MMWave.",
+  "abstractSha256": "a2204f9fef88ca2a706282cd0fe101c4d78b6f59f1a7aaef30e0f491bb5a96cd",
+  "arxivId": "2610.16229",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.16229v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "音频检索",
+    "rankBucket": "前50%",
+    "score": 6.7,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-retrieval",
+          "label": "音频检索"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.gnn",
+          "label": "图神经网络"
+        },
+        {
+          "facet": "method",
+          "id": "method.contrastive",
+          "label": "对比学习"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "音频检索",
+      "primaryTaskId": "task.audio-retrieval",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Rongqing Kenneth Ong"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Andy W. H. Khong"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文针对融合模型从双模态到三模态时性能下降的模态抑制问题，提出先做小波分解提纯单模态再做结构感知图传播与交叉加权融合的 MMWave，并在四个数据集上以全排序检索验证效果与开销。",
+  "originalTitle": "Tackling the Modality Inhibitance Effect with Wavelet-based Modality Integration in Multi-modal Recommendation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.16229v1.pdf",
+  "readerTitle": "多模态推荐里加模态反而变差：MMWave 如何提取与整合特征",
+  "schemaVersion": 2
+}

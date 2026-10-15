@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.17761v1",
+  "arxivId": "2610.17761",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.17761v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Alexander Metzger"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Aruna Srivastava"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ruslan Mukhamedvaleev"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Eunjung Yeo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Syed Ishtiaque Ahmed"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nina Markl"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sachin Kumar"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Farhan Samir"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.17761v1",
+  "originalTitle": "Connecting the Dots: Enduring Performance Gaps in ASR Systems Between Standard and Minority English Varieties",
+  "pdfUrl": "https://arxiv.org/pdf/2610.17761v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,128 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.17821v1",
+  "abstract": "Music source separation (MSS) has been conventionally addressed by discriminative methods. Recently, flow matching has emerged as a strong generative paradigm for modeling complex data distributions, with successful applications across diverse domains. These advances motivate us to systematically investigate flow matching for MSS in a four-source (Vocals, Bass, Drums, Other) setting in full-band stereo. Specifically, we investigate prediction targets, flow paths, single-source versus multi-source modeling, and mixture consistency constraints. Beyond the signal-level metrics commonly used for MSS, such as signal-to-distortion ratio, we further evaluate MSS methods using embedding-based metrics, as well as a listening test, providing a comprehensive benchmark. On MUSDB18-HQ, our proposed model exhibits competitive performance in both objective and subjective tests, highlighting the potential of flow matching for generative MSS. Demo: https://ik4sumii.github.io/FLOMSS/",
+  "abstractSha256": "3846d6be60882c405965d75f036f816ad61296874a5866942e4295ab4e52c95b",
+  "arxivId": "2610.17821",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.17821v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "流匹配",
+    "primaryTask": "音乐源分离",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-separation",
+          "label": "音乐源分离"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "流匹配",
+      "primaryMethodId": "method.flow-matching",
+      "primaryTask": "音乐源分离",
+      "primaryTaskId": "task.music-separation",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shuyang Cui"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhi Zhong"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Keisuke Toyama"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Koichi Saito"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Qiyu Wu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yukara Ikemiya"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Junghyun Koo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kin Wai Cheuk"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Woosung Choi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Giorgio Fabbro"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wei-Hsiang Liao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shusuke Takahashi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuki Mitsufuji"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文把音乐分离写成以混合为条件的生成问题，用流匹配学习从混合到各乐器的传输，在 MUSDB18-HQ 上用频谱与嵌入指标超过同骨干判别基线和已有生成方法，但波形重建类的 SDR 仍弱于强判别方法。",
+  "originalTitle": "FLOMSS: Generative Source Separation by Flow Matching",
+  "pdfUrl": "https://arxiv.org/pdf/2610.17821v1.pdf",
+  "readerTitle": "FLOMSS：用条件流匹配做四轨全频立体声音乐分离",
+  "schemaVersion": 2
+}

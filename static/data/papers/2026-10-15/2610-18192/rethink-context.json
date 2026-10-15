@@ -1,0 +1,101 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.18192v1",
+  "abstract": "Supervised fine tuning (SFT) is commonly monitored through training and evaluation loss, but loss does not fully characterize how model functionality evolves along the same trajectory. We study this gap through dialect adaptation of Qwen3-ASR, MiMo-Audio, and FireRed-LLM across learning rates from $10^{-5}$ to $10^{-3}$. Character error rate (CER) reveals pronounced transient collapse and recovery whose severity and temporal structure are only weakly reflected by loss. Bidirectional layer patching reveals strong cross checkpoint functional incompatibility during recoverable collapse, with model dependent depth profiles that reorganize during recovery. Pairwise gradient similarity alone does not reliably indicate optimization stability, whereas raw gradient spectral analysis provides a clearer structural distinction between stable and unstable optimization: successfully converged runs approach a broad and temporally stable spectral energy distribution, while failed runs remain spectrally concentrated or exhibit persistent fluctuations. Finally, AdamW update transfer bypasses pronounced early collapse, yet substantial Mandarin degradation still emerges later in training. These results motivate three separable SFT dynamics: collapse, repair, and drift, and show that transient collapse is not necessary for persistent source domain degradation.",
+  "abstractSha256": "975879c1342b78e47739282d8fae4fa188faab64b6b012764baacc893986cff1",
+  "arxivId": "2610.18192",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.18192v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "SFT",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.sft",
+          "label": "SFT"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.accent-dialect",
+          "label": "口音与方言"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "SFT",
+      "primaryMethodId": "method.sft",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Intelligence Science and Technology, Kyoto University",
+        "Xiaowei, WXG, Tencent"
+      ],
+      "name": "Yichi Wang"
+    },
+    {
+      "affiliations": [
+        "Department of Intelligence Science and Technology, Kyoto University",
+        "Xiaowei, WXG, Tencent"
+      ],
+      "name": "Wangjin Zhou"
+    },
+    {
+      "affiliations": [
+        "Department of Intelligence Science and Technology, Kyoto University",
+        "Xiaowei, WXG, Tencent"
+      ],
+      "name": "Yizhou Zhang"
+    },
+    {
+      "affiliations": [
+        "Communication University of China",
+        "Xiaowei, WXG, Tencent"
+      ],
+      "name": "Xin Gu"
+    },
+    {
+      "affiliations": [
+        "Xiaowei, WXG, Tencent"
+      ],
+      "name": "Wei Tan"
+    },
+    {
+      "affiliations": [
+        "Xiaowei, WXG, Tencent"
+      ],
+      "name": "Yi Zhao"
+    },
+    {
+      "affiliations": [
+        "Xiaowei, WXG, Tencent"
+      ],
+      "name": "Gong Zhi"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文在方言适应中同步跟踪损失与字错率，把快速崩溃、随后修复与长期普通话漂移拆成三个可分离过程，并用层拼接、梯度谱与更新迁移证明绕开早期崩溃仍会出现源域退化。",
+  "originalTitle": "Collapse, Repair, and Drift: Dissecting Fine Tuning Dynamics in Speech Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2610.18192v1.pdf",
+  "readerTitle": "微调为何先崩溃再恢复 yet 普通话仍变差：语音模型方言适应的全轨迹拆解",
+  "schemaVersion": 2
+}

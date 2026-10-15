@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.13662v1",
+  "abstract": "Given the challenges associated with obtaining large volumes of real-world audio, the advancement of Automatic Speech Recognition (ASR) systems increasingly depends on synthetic data. This study focuses on the call center-banking domain, providing a targeted analysis of ASR models in this context. We evaluate real and synthetic datasets, using Word Error Rate (WER) and Character Error Rate (CER) as metrics, and employ a speech quality model to assess the impact on ASR performance. Our research compares Text-to-Speech (TTS) and advanced voice conversion methods, including KNNVC, Seed-VC, and Vec2Wav2, revealing significant improvements in speech quality and ASR accuracy, particularly with Seed-VC. Additionally, our domain-specific experimentation provides insight into the unique challenges and opportunities that arise when applying ASR technologies to industry-relevant settings. This highlights the potential of voice conversion technologies to enhance ASR systems, guiding future research in diverse linguistic scenarios, and paving the way for the broader application of ASR innovations across various fields.",
+  "abstractSha256": "ceeb6b2803a68d32ea4a673e0651d6a4a9a1845292f42cb9b870790040ea5862",
+  "arxivId": "2610.13662",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.13662v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "数据增强",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 5.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.augmentation",
+          "label": "数据增强"
+        },
+        {
+          "facet": "task",
+          "id": "task.voice-conversion",
+          "label": "语音转换"
+        },
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "数据增强",
+      "primaryMethodId": "method.augmentation",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yunus Emre Ozkose"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ali Haznedaroglu"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文在土耳其语银行客服录音上比较只用真实数据、只用合成数据和真实加合成三种训练方式，发现只用合成远不如真实，真实加合成在 10 小时和 20 小时时明显降低词错误率而 50 小时收益消失，其中 Seed-VC 和 Vec2Wav2 的增广效果相对更好但多次重复转换会带来退化。",
+  "originalTitle": "Enhancing Speech Recognition through Text-to-Speech and Voice Conversion Augmentation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.13662v1.pdf",
+  "readerTitle": "合成语音能替代真实录音训练识别吗：TTS 与声音转换增广的土耳其客服实验",
+  "schemaVersion": 2
+}

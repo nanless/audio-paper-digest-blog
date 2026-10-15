@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.18726v1",
+  "abstract": "Code-switching (CS), the alternation between languages within an utterance, is common in multilingual speech but underrepresented in pretraining corpora. Increasing CS coverage requires finding relevant utterances in large speech collections so that they can be included in training data. One way to find such utterances is to transcribe the speech and detect language alternation in the text, but this depends on obtaining accurate multilingual transcriptions. We propose a lightweight method that detects CS directly from speech. It uses frame-level language information in pretrained speech encoders to determine whether both languages are present within an utterance. Specifically, we identify language-selective hidden-state dimensions using monolingual recordings and aggregate their frame-level activations into a CS prediction. With a small CS set used to tune a decision rule, we show that the Whisper-small encoder achieves a mean F1 of $0.798$ across 14 language pairs in CS-FLEURS, compared with $0.776$ for a CNN and $0.751$ for a HuBERT linear baseline trained for monolingual language identification. Our findings suggest that pretrained speech encoders already encode the information needed to identify CS utterances, and they provide a lightweight tool for building more representative multilingual corpora.",
+  "abstractSha256": "ae7c94b5279e31968e246467bf23d45e86a39898c4b65a1896ef0ac57562c375",
+  "arxivId": "2610.18726",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.18726v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "统计分析",
+    "primaryTask": "语言识别",
+    "rankBucket": "前50%",
+    "score": 6.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.language-identification",
+          "label": "语言识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.code-switching",
+          "label": "代码转换"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "统计分析",
+      "primaryMethodId": "method.statistical-analysis",
+      "primaryTask": "语言识别",
+      "primaryTaskId": "task.language-identification",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jie Chi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zakaria Aldeneh"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Masha Fedzechkina"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Maureen de Seyssel"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Natalie Schluter"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "该论文要从整句语音直接判断是否出现语码转换，方法是只用单语语音找出对两种语言反应不同的编码器维度，再把这些维度上的帧级激活聚合成整句判决，在 CS-FLEURS 上 Whisper-small 平均 F1 为 0.798，但结论只在给定评测集和少量标注调参条件下成立，且未验证野外无标注挖掘流程。",
+  "originalTitle": "Code-Switching Detection via Language-Selective Dimensions in Speech Foundation Models",
+  "pdfUrl": "https://arxiv.org/pdf/2610.18726v1.pdf",
+  "readerTitle": "用语音编码器里对语言敏感的维度直接发现语码转换",
+  "schemaVersion": 2
+}

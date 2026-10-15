@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.18120v1",
+  "abstract": "Deep learning models of speech seldom represent the source-filter process by which speech is produced, relying instead on latent features with no physical correspondence to articulation or phonation. We propose SoFilNet, a self-supervised, differentiable Source-Filter Network that estimates the parameters of speech production directly from the raw waveform: a source, specified by fundamental frequency (F0), voicing and the aperiodicity of five frequency bands, and a filter, specified by ordered formant poles, additional poles that shape the rest of the spectral envelope, and antiresonance zeros. The model is trained only to reconstruct the input speech; no formant or pitch annotation is used. Since per-bin spectral losses favor blurred spectra wherever the model is uncertain, we train F0 and voicing against autocorrelation pseudo-labels refined with the model's own filter, aperiodicity against the periodic fraction of each band, and formant sharpness against spectral contrast. On VTR-FORMANTS, the estimated formants attain the lowest mean error among the reported methods, including supervised trackers, and on the unseen PTDB-TUG corpus the F0 frame error matches the best classical tracker and is lower than that of all learned trackers. The parameters are also consistent with speech production theory: aperiodicity rises with frequency and orders phone classes by the turbulence of their excitation, and the zeros deepen on nasal consonants, the lower one rising with place of articulation.",
+  "abstractSha256": "c48a95b4ce3a45e81870f879f10a0b5f2a93e9632e7161cb4f34774daccecf89",
+  "arxivId": "2610.18120",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.18120v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "自监督学习",
+    "primaryTask": "语音属性识别",
+    "rankBucket": "前50%",
+    "score": 7.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-attributes",
+          "label": "语音属性识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.self-supervised",
+          "label": "自监督学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.phonation",
+          "label": "发声与构音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "自监督学习",
+      "primaryMethodId": "method.self-supervised",
+      "primaryTask": "语音属性识别",
+      "primaryTaskId": "task.speech-attributes",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nani Meka"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Raghavan Ramesh"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sri Rama Murty Kodukula"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "SoFilNet 只用重建语音做监督就同时估计基频、清浊、五带非周期性与有序共振峰和反共振零点，在 VTR 共振峰与跨库基频上取得最低平均误差，代价是幅度谱建模与固定极零点结构带来的简化。",
+  "originalTitle": "Self-Supervised Source-Filter Model of Speech Production",
+  "pdfUrl": "https://arxiv.org/pdf/2610.18120v1.pdf",
+  "readerTitle": "从波形直接估计发声参数：自监督源-滤波器网络 SoFilNet 解读",
+  "schemaVersion": 2
+}

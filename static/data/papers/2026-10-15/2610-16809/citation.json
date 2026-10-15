@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.16809v1",
+  "arxivId": "2610.16809",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.16809v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ikram El Hadi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nihad Elbari"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kawtar Tlemçani"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Théo Mariotte"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Meysam Shamsi"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.16809v1",
+  "originalTitle": "Predicting Audio Popularity: A Comparative Study of Metadata and Acoustic Features Across Music and Sound Effects",
+  "pdfUrl": "https://arxiv.org/pdf/2610.16809v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

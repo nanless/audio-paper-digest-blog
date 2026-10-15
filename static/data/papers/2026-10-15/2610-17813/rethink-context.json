@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.17813v1",
+  "abstract": "End-to-end speech-to-text retrieval is becoming an important capability for voice agents, allowing spoken queries to retrieve relevant documents without intermediate transcription. Training these retrievers typically depends on large collections of spoken query-document pairs that are costly to acquire and difficult to extend across domains and languages. We introduce \\ours, which replaces such task-specific supervision with speech-transcript pairs from standard ASR corpora. A lightweight adapter projects the output of a frozen speech encoder into the retrieval space of a frozen pretrained text embedding model. \\ours is competitive with cascaded ASR-then-retrieve systems while reducing inference latency, and outperforms existing publicly available speech embedding models. It also transfers to text-to-speech and speech-to-speech retrieval without additional training. Controlled analyses validate the speech-transcript alignment paradigm, demonstrating robustness to reduced training data and consistent gains from larger corpora. Further ablations of loss functions and trainable modules establish practical guidelines for the framework. Model weights and codes are to be released.",
+  "abstractSha256": "7be1ddb5d6f4b5322062f839280009350f2ee7a26e7ca64f73928e2bdfeea222",
+  "arxivId": "2610.17813",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.17813v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "Adapter",
+    "primaryTask": "音频检索",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-retrieval",
+          "label": "音频检索"
+        },
+        {
+          "facet": "method",
+          "id": "method.adapter",
+          "label": "Adapter"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "Adapter",
+      "primaryMethodId": "method.adapter",
+      "primaryTask": "音频检索",
+      "primaryTaskId": "task.audio-retrieval",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sangkwon Park"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Dongwook Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Youngho Cho"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Donghun Kang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Heeseung Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sungroh Yoon"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "SSEmb 只用标准语音转写对训练轻量适配器，把冻结语音编码器接到冻结文本检索向量空间，实现直接语音查文本，在英文与多语言及口语文档检索上接近级联系统且时延更低。",
+  "originalTitle": "SSEmb: Training a Generalizable Speech Retrieval Model Using Only Automatic Speech Recognition Data",
+  "pdfUrl": "https://arxiv.org/pdf/2610.17813v1.pdf",
+  "readerTitle": "只用语音转写数据训练语音检索模型",
+  "schemaVersion": 2
+}

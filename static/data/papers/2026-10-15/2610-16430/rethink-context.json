@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.16430v1",
+  "abstract": "Speech enhancement with wearable and edge devices requires architectures that balance enhancement quality against power and memory resources. Spiking Neural Networks (SNNs) offer a promising path towards this goal through sparse, event-driven computation, but existing SNN-based speech enhancement methods are largely restricted to single-channel processing and therefore cannot exploit the spatial diversity available from microphone arrays. In this work, we propose a fully SNN framework for multichannel speech enhancement based on a fully connected architecture (FC-SNN) with sequential spike encoding, derived from a compact artificial neural network (ANN) baseline via leaky integrate-and-fire neurons. We characterize how enhancement performance scales with model size and spike-train length relative to ANN and classical beamforming baselines, and report the resulting parameter counts and computational complexity. We further compare direct and rate spike encoding, revealing a clear trade-off between event-driven computation and enhancement performance, and use these results to identify favorable configurations for edge devices.",
+  "abstractSha256": "9cc7e2a13b731b95c4863b5d110db065a667660f070def4c22ee889b8c0ec3da",
+  "arxivId": "2610.16430",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.16430v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "波束成形",
+    "primaryTask": "语音增强",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-enhancement",
+          "label": "语音增强"
+        },
+        {
+          "facet": "method",
+          "id": "method.beamforming",
+          "label": "波束成形"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.microphone-array",
+          "label": "麦克风阵列"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.on-device",
+          "label": "端侧运行"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "波束成形",
+      "primaryMethodId": "method.beamforming",
+      "primaryTask": "语音增强",
+      "primaryTaskId": "task.speech-enhancement",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "School of Electrical and Computer Engineering, Ben-Gurion University of the Negev, Israel"
+      ],
+      "name": "Hanan Beit-On"
+    },
+    {
+      "affiliations": [
+        "Neuromorphic Lab, Israel"
+      ],
+      "name": "Eli Shapira"
+    },
+    {
+      "affiliations": [
+        "School of Electrical and Computer Engineering, Ben-Gurion University of the Negev, Israel"
+      ],
+      "name": "Boaz Rafaely"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文把多通道复数掩码估计问题交给全连接脉冲网络，用直接编码与率编码两种脉冲序列实现多麦克风空间信息的利用，并在固定仿真条件下刻画了模型宽度与脉冲长度带来的增强质量与计算代价权衡。",
+  "originalTitle": "Spiking Neural Beamforming for Multichannel Speech Enhancement on the Edge",
+  "pdfUrl": "https://arxiv.org/pdf/2610.16430v1.pdf",
+  "readerTitle": "用脉冲网络做多通道语音增强：在边缘端如何兼顾空间信息与计算代价",
+  "schemaVersion": 2
+}

@@ -1,0 +1,96 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.16382v1",
+  "abstract": "Behavior-conditioned animal vocalization generation aims to synthesize vocalizations from natural-language descriptions of animal behaviors, social interactions, and contexts. This task remains largely unexplored, with limited behavioral text supervision and substantial variation in vocalization duration. We construct the Behavior-Vocalization Dataset (BeVo) by integrating public bioacoustic data from six species with natural-language behavioral conditions derived from species-specific ethological and bioacoustic literature, totaling 31,191 events. We then adapt a rectified-flow-based generator with Event-Aware variable-length modeling, which encodes vocalizations at their actual durations and uses masks to prevent attention to padded latent positions and exclude these positions from the training loss. We evaluate vocalization discriminability, acoustic distribution fidelity, and language-aligned representation fidelity. Experiments show that task-specific adaptation improves all evaluated metrics compared with its zero-shot baseline, while Event-Aware modeling further increases vocalization-anchor macro accuracy from 59.86% to 61.99% and reduces Frechet Audio Distance from 1.40 to 1.22. Conditioning analyses further show that behavioral conditions improve target-anchor discriminability, while swapping behavior shifts generations toward the corresponding vocalization anchors. Demos are available on our project page.",
+  "abstractSha256": "d4564276f8bdbab0b114380adade36fc25b5c8ad3c3bb7c713d8c382985b6ade",
+  "arxivId": "2610.16382",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.16382v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "流匹配",
+    "primaryTask": "音频生成",
+    "rankBucket": "前50%",
+    "score": 5.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-generation",
+          "label": "音频生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.bioacoustics",
+          "label": "生物声学"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "流匹配",
+      "primaryMethodId": "method.flow-matching",
+      "primaryTask": "音频生成",
+      "primaryTaskId": "task.audio-generation",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xinlong Deng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yong Tian"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jian Guan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Qiuqiang Kong"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jie Jiang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yin Cao"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文以行为文本控制动物叫声生成，用发声锚点把六个物种录音与文献行为知识成组配对，在 TangoFlux 上微调并用事件感知变长掩码聚焦真实事件，主结果支持微调全面改善与变长进一步提升判别力和声学保真度，但结论只限于已见行为的新表述与给定目标时长条件。",
+  "originalTitle": "Behavior-Conditioned Animal Vocalization Generation: Event-Aware Modeling and Multidimensional Evaluation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.16382v1.pdf",
+  "readerTitle": "行为描述如何生成动物叫声：BeVo 数据与事件感知建模解读",
+  "schemaVersion": 2
+}

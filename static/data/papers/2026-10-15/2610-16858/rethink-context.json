@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.16858v1",
+  "abstract": "Target speaker extraction (TSE) aims to recover a target speaker's speech from a speech mixture using an enrollment utterance. Recent codec-based generative approaches formulate TSE as conditional speech token generation and achieve promising perceptual quality. However, most existing systems rely on unified codec tokens that entangle linguistic content, speaker characteristics, and acoustic details, forcing a single model to jointly handle target selection, content semantic, and acoustic reconstruction. In this paper, we investigate whether disentangled semantic-acoustic codec representations are better suited to TSE. We first show that simply replacing unified codec tokens with semantic-acoustic tokens is insufficient and can even degrade performance when both remain handled by a unified generative model. Motivated by this observation, we propose a task-aware discriminative-generative framework, where a discriminative branch extracts target-related semantic information, while a generative branch predicts coarse acoustic tokens and refines them under semantic guidance. This specialization separates what is said from how it sounds while coordinating both factors in a factorized codec space. Experiments on Libri2Mix show that our method reduces dWER from 0.388 to 0.118 compared with a unified-codec baseline, while maintaining competitive perceptual quality and speaker consistency. Ablation studies confirm that the gains arise from task-aware semantic-acoustic modeling rather than representation disentanglement alone.",
+  "abstractSha256": "7628d685ae7286b94b9eb8d31f1ca1ee9572aa26fb3008837af874262591082c",
+  "arxivId": "2610.16858",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.16858v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "神经编解码与离散单元",
+    "primaryTask": "目标说话人提取",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.target-speaker",
+          "label": "目标说话人提取"
+        },
+        {
+          "facet": "method",
+          "id": "method.neural-codec",
+          "label": "神经编解码与离散单元"
+        },
+        {
+          "facet": "method",
+          "id": "method.autoregressive",
+          "label": "自回归模型"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "神经编解码与离散单元",
+      "primaryMethodId": "method.neural-codec",
+      "primaryTask": "目标说话人提取",
+      "primaryTaskId": "task.target-speaker",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wang Xiang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bang Zeng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ming Li"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "该文研究编解码器词元怎样用于目标说话人提取，提出判别语义分支加生成声学分支的分工结构，在 Libri2Mix 上把可比基线的 dWER 从 0.388 降到 0.118，代价是依赖两阶段结构和冻结的 DualCodec 编解码器。",
+  "originalTitle": "What Makes Codec Tokens Effective for Target Speaker Extraction? A Semantic-Acoustic Disentanglement Perspective",
+  "pdfUrl": "https://arxiv.org/pdf/2610.16858v1.pdf",
+  "readerTitle": "语义和声学分开建模的目标说话人提取",
+  "schemaVersion": 2
+}

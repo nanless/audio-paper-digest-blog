@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.15773v1",
+  "arxivId": "2610.15773",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.15773v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zheqi Dai"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Boyang Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhiyue Wu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yiyang Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xinming Shi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ruibin Yuan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xuerui Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chao Yan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Qiuqiang Kong"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.15773v1",
+  "originalTitle": "HMU-Bench: Hierarchical Music Understanding Benchmark for Omni Models",
+  "pdfUrl": "https://arxiv.org/pdf/2610.15773v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,126 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.18073v1",
+  "abstract": "Understanding human emotion is essential for multimodal systems that interpret both the content of an interaction and the speaker's expressive state. However, connecting paralinguistic cues to generated answers remains challenging, particularly when vocal expression diverges from visual appearance. We propose DualAffect, a dual-path architecture that integrates visually conditioned acoustic features and temporally organized acoustic tokens into a shared language decoder. The two pathways reuse the same acoustic encoding. The fusion pathway associates sound with visual content through visual queries, while the direct pathway compresses the valid acoustic sequence into ordered tokens through an independent projector. This design gives the decoder access to both joint audiovisual context and acoustic evidence organized along its own timeline. Mixed-task adaptation with task-dependent output preservation supports emotion recognition and general audiovisual question answering within the same model. DualAffect achieves an average metric of 67.89 on CA-MER and accuracies of 62.88% on the EmotionTalk test set and 49.87% on Daily-Omni. Pathway interventions show that the trained decoder uses direct acoustic evidence alongside existing fusion. With model parameters and fusion inputs fixed, zeroing the direct tokens reduces EmotionTalk validation accuracy by 9.75 percentage points and the CA-MER average metric by 2.66 points. The largest CA-MER subset effect occurs when the overall emotion agrees with audio but differs from vision. These findings identify acoustic representation organization as a practical design axis for connecting paralinguistic perception to unified audiovisual generation. Code is available at https://github.com/YiboWang2002/DualAffect.",
+  "abstractSha256": "787f2f5bbfb3f2f955ccf5675032f342d8d90c4c3cf37b5753b7f2eab167b6aa",
+  "arxivId": "2610.18073",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.18073v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "语音情感识别",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.emotion-recognition",
+          "label": "语音情感识别"
+        },
+        {
+          "facet": "task",
+          "id": "task.av-question-answering",
+          "label": "音视频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.lora",
+          "label": "LoRA"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "语音情感识别",
+      "primaryTaskId": "task.emotion-recognition",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yibo Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jisheng Dang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bimei Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Junhong Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jiongpei Hou"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jingwen Zhao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wenjun Ma"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hong Peng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bin Hu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Qi Tian"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tat-Seng Chua"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文针对声音表情与画面不一致时生成式回答容易跟随视觉的问题，用共享 WavLM 编码上的视觉查询融合与直接时间积分两路组织输入同一解码器，在 CA-MER 平均指标 67.89 与 EmotionTalk 测试集 62.88% 等条件下验证了直接声学通路的作用，代价是增加 16 个声学 token 与混合任务适配的约束设计。",
+  "originalTitle": "DualAffect: Dual-Path Paralinguistic Integration for Generative Audiovisual Emotion Understanding",
+  "pdfUrl": "https://arxiv.org/pdf/2610.18073v1.pdf",
+  "readerTitle": "双路径如何把声音表情送进视听问答的生成器",
+  "schemaVersion": 2
+}

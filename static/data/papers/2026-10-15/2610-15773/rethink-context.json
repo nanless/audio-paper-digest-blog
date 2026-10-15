@@ -1,0 +1,109 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.15773v1",
+  "abstract": "Music-understanding benchmarks should identify both the evidence available to a model and the operations a correct answer requires. We introduce HMU-Bench, a bilingual benchmark with notation and audio components. ABC Q&A contains 1,029 Chinese-English question pairs across six musical domains, labeled as extraction, single-step inference, or multi-step inference. Audio Q&A contains 460 question pairs on 92 recordings, spanning five scope-difficulty configurations. All music is Suno-generated, and questions and references are human-reviewed. Reference-based evaluation of seven omni models yields high notation scores for the strongest systems, but no model averages above 1.4 on the 0-4 audio scale. Notation and audio rankings show little correlation. A transposition case study also reveals octave errors missed by LLM grading. These findings motivate separate modality reporting and event-level checks for symbolic outputs. Data, annotations, evaluator prompts, and graded responses will be released at https://github.com/stepaudiollm/hmu-bench.",
+  "abstractSha256": "216a0f83a999b7cec29b87cd702b7c743a0d87a263d8036c6bc9d30ae49352cb",
+  "arxivId": "2610.15773",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.15773v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "音乐分析",
+    "rankBucket": "前50%",
+    "score": 6.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-understanding",
+          "label": "音乐分析"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-question-answering",
+          "label": "音频问答"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "音乐分析",
+      "primaryTaskId": "task.music-understanding",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zheqi Dai"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Boyang Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhiyue Wu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yiyang Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xinming Shi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ruibin Yuan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xuerui Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chao Yan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Qiuqiang Kong"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "HMU-Bench 用 1029 对乐谱问答和 460 对音频问答考查同一批全模态模型，最强系统乐谱得分接近 3.9 而音频最高仅 1.33，且两类排名几乎无关，局部困难音频与移调八度错误进一步暴露了评分与定位短板。",
+  "originalTitle": "HMU-Bench: Hierarchical Music Understanding Benchmark for Omni Models",
+  "pdfUrl": "https://arxiv.org/pdf/2610.15773v1.pdf",
+  "readerTitle": "既看谱又听录音：HMU-Bench 如何分层考查全模态模型的音乐理解",
+  "schemaVersion": 2
+}

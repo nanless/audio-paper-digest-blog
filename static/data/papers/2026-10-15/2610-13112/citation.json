@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.13112v1",
+  "arxivId": "2610.13112",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.13112v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mohammad Khalooei"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mohammad Sabokrou"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.13112v1",
+  "originalTitle": "Does Location Matter? A Black-Box Causal Audit Reveals Model-Dependent Audio Grounding in LALM Hallucination",
+  "pdfUrl": "https://arxiv.org/pdf/2610.13112v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

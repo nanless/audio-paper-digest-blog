@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.17461v1",
+  "arxivId": "2610.17461",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.17461v1",
+  "authors": [
+    {
+      "affiliations": [
+        "TTI-Chicago"
+      ],
+      "name": "Ju-Chieh Chou"
+    },
+    {
+      "affiliations": [
+        "Stony Brook University"
+      ],
+      "name": "Jiawei Zhou"
+    },
+    {
+      "affiliations": [
+        "TTI-Chicago"
+      ],
+      "name": "Karen Livescu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.17461v1",
+  "originalTitle": "Distilling Text LMs into Speech-to-Speech LMs by Matching Internal Text Predictions",
+  "pdfUrl": "https://arxiv.org/pdf/2610.17461v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

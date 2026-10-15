@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.14141v1",
+  "arxivId": "2610.14141",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.14141v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Vanderbilt University"
+      ],
+      "name": "Xindong Zheng"
+    },
+    {
+      "affiliations": [
+        "Vanderbilt University"
+      ],
+      "name": "Jiashu Zhu"
+    },
+    {
+      "affiliations": [
+        "Vanderbilt University"
+      ],
+      "name": "Ke Li"
+    },
+    {
+      "affiliations": [
+        "Vanderbilt University"
+      ],
+      "name": "Dan Lin"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.14141v1",
+  "originalTitle": "MixedTruth: Component-Level Detection of Synthetic Speech and Synthetic Background in Mixed Audio",
+  "pdfUrl": "https://arxiv.org/pdf/2610.14141v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.13013v1",
+  "arxivId": "2610.13013",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.13013v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Muhammad Usama"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yeoreum Jung"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.13013v1",
+  "originalTitle": "Evidential Multimodal Transformers with Dempster-Shafer Fusion for Emotion Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2610.13013v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

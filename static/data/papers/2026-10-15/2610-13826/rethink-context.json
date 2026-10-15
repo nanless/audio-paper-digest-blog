@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.13826v1",
+  "abstract": "Recent advances in automatic pronunciation assessment (APA) have driven a shift from scripted to free-form assessment. However, existing methods often rely on multi-stage pipelines with forced alignment and separate feature extractors, limiting their practicality across response settings. In light of this, we propose OpenPA, a novel APA framework that leverages Whisper's cross-attention mechanism to jointly predict word- and utterance-level pronunciation scores without forced alignment. Through mixed-transcript adaptation and adaptive substitution weighting, OpenPA accommodates heterogeneous transcripts across closed- and open-response settings within a single model. Trained solely on speechocean762, OpenPA achieves the strongest overall performance among evaluated systems under in-domain closed and simulated open-response conditions, while maintaining its performance zero-shot on MultiPA. An additional cross-task evaluation on oral-cancer speech suggests its potential applicability beyond non-native speech.",
+  "abstractSha256": "203b81577ead043d5c0d2eb28aa21afcbe4384fcd9360e36b4eecbbe7a5b707b",
+  "arxivId": "2610.13826",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.13826v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "端到端学习",
+    "primaryTask": "发音评估",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.pronunciation-assessment",
+          "label": "发音评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.end-to-end-learning",
+          "label": "端到端学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.lora",
+          "label": "LoRA"
+        },
+        {
+          "facet": "task",
+          "id": "task.pathological-speech",
+          "label": "病理语音评估"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "端到端学习",
+      "primaryMethodId": "method.end-to-end-learning",
+      "primaryTask": "发音评估",
+      "primaryTaskId": "task.pronunciation-assessment",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Fu-An Chao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bi-Cheng Yan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Berlin Chen"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "OpenPA 针对闭合跟读与开放自由作答两种条件，用 Whisper 编码器-解码器加`<score>`标记同时做单词级和语句级评分，只在 speechocean762 上训练，在域内和 MultiPA 零样本上报告了单词级 PCC 提升，代价是韵律相关语句指标未全面领先且病理语音迁移仍是探索性结论。",
+  "originalTitle": "OpenPA: Forced-alignment-free Multi-granular Pronunciation Assessment with Mixed-transcript Adaptation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.13826v1.pdf",
+  "readerTitle": "不用强制对齐怎么做单词和语句两级发音评分",
+  "schemaVersion": 2
+}

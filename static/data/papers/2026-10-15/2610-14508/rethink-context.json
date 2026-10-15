@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.14508v1",
+  "abstract": "Large Music Models (LMMs) can synthesize high-fidelity audio and support increasingly flexible prompt control, yet modeling the subjective preferences of an individual listener remains underexplored. We present PAG-Agent, a zero-shot multimodal framework that uses an explicit Personal Aesthetic Profile to bridge user preference inference and music generation control. A multimodal LLM distills favorite-song audio and contextual user information into this structured representation, which a planning LLM translates into generation instructions for existing music synthesizers. We further introduce PA-Eval, which evaluates personalization through the Aesthetic Consistency Score (ACS) for target-user alignment and the Aesthetic Specificity Index (ASI) for cross-user specificity. Experiments with Personal-100 on multiple MLLM and music-generation backbones show consistent improvements over generic and direct conditioning. A 50-participant follow-up study further shows a correlation $r=0.64$ between ACS and subjective preference.",
+  "abstractSha256": "6eb78168bae91bc3a72dc70b9650badfabe1bae5fec76137530f80e2dff76b84",
+  "arxivId": "2610.14508",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.14508v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "音乐生成",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-generation",
+          "label": "音乐生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "音乐生成",
+      "primaryTaskId": "task.music-generation",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yifeng Mao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ziye Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yutong Shen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Feiran Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wenjuan Han"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "PAG-Agent 用最爱的歌曲与用户背景先提炼显式审美档案再生成专辑，并在 Personal-100 上用一致性与特异性指标验证个性化效果，而通用音质并未同步提升。",
+  "originalTitle": "PAG-Agent: Zero-Shot Personalized Music Album Generation via Aesthetic Profile Distillation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.14508v1.pdf",
+  "readerTitle": "从喜欢的歌到专属专辑：PAG-Agent 如何做零样本个性化音乐生成",
+  "schemaVersion": 2
+}

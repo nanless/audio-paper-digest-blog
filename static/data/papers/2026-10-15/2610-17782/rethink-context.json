@@ -1,0 +1,61 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.17782v1",
+  "abstract": "Forced aligners locate each word of a known transcript in the audio, and many speech pipelines depend on them. In our own data, a widely used CTC aligner inserts a pause at nearly every word boundary, and we found almost no aligner evaluated on telephone audio. We compare nine aligner configurations against human word boundaries on read, conversational and telephone English. The Montreal Forced Aligner (MFA) is the most precise, while CTC aligners consistently start words late, because most frames inside a word go to the blank token. We then fine-tune Whisper with LoRA to predict each word's start and end as timestamp tokens, training only on boundaries placed by people: 47 hours in 87 languages. The resulting aligner is more precise than MFA on every English test condition, and than MFA's own Korean and Dutch models. With FA-Bench's protocol and code on TIMIT, its word-boundary error is 11.6 ms, against 18.2 ms for the best published system. Two choices matter most on telephone conversations: placing the timestamp slots after the word they time, and training on noisy transcripts, which also makes the aligner nearly insensitive to errors in the transcript. The released model reaches 16.0 ms on real landline calls, against 36.5 ms for MFA. The models are available at https://huggingface.co/collections/Scicom-intl/force-alignment",
+  "abstractSha256": "ab467cb5a64feef8366f8d6a5a23cc4a4daa516920f3240b551122223372b4c9",
+  "arxivId": "2610.17782",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.17782v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "LoRA",
+    "primaryTask": "强制对齐",
+    "rankBucket": "前50%",
+    "score": 7.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.forced-alignment",
+          "label": "强制对齐"
+        },
+        {
+          "facet": "method",
+          "id": "method.lora",
+          "label": "LoRA"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        },
+        {
+          "facet": "method",
+          "id": "method.augmentation",
+          "label": "数据增强"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "LoRA",
+      "primaryMethodId": "method.lora",
+      "primaryTask": "强制对齐",
+      "primaryTaskId": "task.forced-alignment",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Scicom (MSC) Berhad, Malaysia"
+      ],
+      "name": "Husein Zolkepli"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文先量出已有对齐器在人工词边界上的误差和电话信道下的退化，再只用人标边界训练 Whisper 直接预测词起止时间戳，在英语、韩语、荷兰语和多语测试上超过蒙特利尔强制对齐器，而电话增强、槽位后置和带噪文本训练是关键代价与收益所在。",
+  "originalTitle": "Where Words Begin and End",
+  "pdfUrl": "https://arxiv.org/pdf/2610.17782v1.pdf",
+  "readerTitle": "词从哪里开始到哪里结束：电话语音上的强制对齐",
+  "schemaVersion": 2
+}

@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.17838v1",
+  "arxivId": "2610.17838",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.17838v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sangkwon Park"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Che Hyun Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Heeseung Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sungroh Yoon"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.17838v1",
+  "originalTitle": "Beyond Fixed Targets: On-Policy One-Shot Speaker Personalization for Autoregressive Text-To-Speech Models",
+  "pdfUrl": "https://arxiv.org/pdf/2610.17838v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

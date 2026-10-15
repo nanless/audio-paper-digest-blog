@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.15350v1",
+  "arxivId": "2610.15350",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.15350v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Danbinaerin Han"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wonil Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Seah Hong"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Dongjoo Moon"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jaeok Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jongpil Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chaewon Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Juhan Nam"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.15350v1",
+  "originalTitle": "Gugak-VocalSet: A Multi-Genre Studio-Quality Dataset of Korean Traditional Singing with Sigimsae Annotations",
+  "pdfUrl": "https://arxiv.org/pdf/2610.15350v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.13353v1",
+  "arxivId": "2610.13353",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.13353v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zilong Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kong Aik Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zezhong Jin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Man-Wai Mak"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tatsuya Kawahara"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.13353v1",
+  "originalTitle": "EmoGavel: Grounding-Aware Reinforcement Learning with Verifiable Rewards for Multimodal Emotion Preference Learning",
+  "pdfUrl": "https://arxiv.org/pdf/2610.13353v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

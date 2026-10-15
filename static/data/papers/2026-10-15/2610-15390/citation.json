@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.15390v1",
+  "arxivId": "2610.15390",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.15390v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Binhong Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Haidong Kang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yanfeng Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hong-Ning Dai"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Guo Yu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shangce Gao"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.15390v1",
+  "originalTitle": "From Acoustic Sensing to Physical Actions: A Comprehensive Survey of Security Risks in Edge-Deployed Audio LLM-Based Agents",
+  "pdfUrl": "https://arxiv.org/pdf/2610.15390v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

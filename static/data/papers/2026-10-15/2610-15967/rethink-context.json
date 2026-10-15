@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.15967v1",
+  "abstract": "We consider the problem of mono-to-stereo audio upmixing: generating a high-fidelity two-channel stereo signal from a single-channel recording. The task is fundamentally ill-posed i.e., many stereo signals are consistent with a given mono recording. An effective upmixer must therefore generate a realistic, musically coherent stereo image while preserving the underlying audio content. Previous approaches have relied on signal-processing driven decorrelation, ambience extraction and supervised learning, offering limited spatial control or requiring task-specific training. In response, we propose Aura (Audio Upmixing using Reward-tilted Flows), which reformulates upmixing as a generative inverse problem using a pretrained flow prior. To enable controllable spatial imaging, we design a reward-tilted posterior sampler whose reward penalizes divergences between generated and target distributions of inter-channel cues. Composing forward operators further enables joint restoration and upmixing without retraining or fine-tuning. Objective and subjective evaluations on real-world music recordings from MUSDB18-HQ demonstrate our method's effectiveness relative to several baselines.",
+  "abstractSha256": "e8f81bbf6cfbdad0490678c7d57cad3491ce12227e19c1e74833186de454854e",
+  "arxivId": "2610.15967",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.15967v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "流匹配",
+    "primaryTask": "空间音频渲染",
+    "rankBucket": "前50%",
+    "score": 6.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.spatial-rendering",
+          "label": "空间音频渲染"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.spatial-audio",
+          "label": "空间音频信号"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "流匹配",
+      "primaryMethodId": "method.flow-matching",
+      "primaryTask": "空间音频渲染",
+      "primaryTaskId": "task.spatial-rendering",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sattwik Basu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Gautam Bhattacharya"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Alan Seefeldt"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "该文把单声道转立体声看作已知下混算子的逆问题，用冻结的立体声流模型做先验保证真实感，再用声道间相干与声级差分布奖励在推理时塑造声像，并在 MUSDB18-HQ 上以空间真实感见长但中频波形保真度有所牺牲。",
+  "originalTitle": "Controllable Mono-to-Stereo Upmixing using Reward-tilted Flows",
+  "pdfUrl": "https://arxiv.org/pdf/2610.15967v1.pdf",
+  "readerTitle": "单声道如何长出可控的立体声：奖励倾斜流先验的上混解读",
+  "schemaVersion": 2
+}

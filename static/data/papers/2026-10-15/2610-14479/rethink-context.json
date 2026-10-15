@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.14479v1",
+  "abstract": "While language therapy is the primary treatment for post-stroke aphasia, limited clinical resources often restrict patient access to proper care. Addressing this gap requires reliable training simulations for medical professionals. However, current AI efforts focus almost exclusively on speech processing, leaving speech generation largely unexplored. This study introduces AphaVoice, a novel text-to-speech (TTS) framework explicitly engineered to synthesize highly realistic aphasic speech. Evaluated against state-of-the-art TTS systems, AphaVoice demonstrates a superior ability to capture the clinical feature of dysfluency, outperforming existing models in temporal metrics while consistently maintaining speaker identity. By leveraging latent space shifting, the model also supports multi-speaker generation without sacrificing phonetic realism. Ultimately, AphaVoice provides a scalable, high-fidelity tool for medical training and clinical simulation related to aphasia.",
+  "abstractSha256": "19bed9f4b4f6c7a0ab4e292eb2f4f98c23921ddc73c45524c7d53c937517559a",
+  "arxivId": "2610.14479",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.14479v1",
+  "assessment": {
+    "documentType": "模型报告",
+    "primaryMethod": "SFT",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前50%",
+    "score": 5.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.sft",
+          "label": "SFT"
+        },
+        {
+          "facet": "task",
+          "id": "task.prosody-style-control",
+          "label": "韵律与风格控制"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.speech-disorders",
+          "label": "言语障碍"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "SFT",
+      "primaryMethodId": "method.sft",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Al Varrel Putra Kusuma"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Fernando Bello"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Joshua Brown"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文针对治疗师缺乏失语症沟通练习对象的问题，用失语症语料微调轻量非自回归语音合成模型并加入停顿口吃处理与向量偏移扩增说话人，在语速停顿和可懂度指标上复现了失语症特征，但结论只在五十句脚本合成与所选临床指标范围内成立。",
+  "originalTitle": "AphaVoice: Text-to-Speech Model for Aphasia Patient Simulation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.14479v1.pdf",
+  "readerTitle": "为失语症模拟生成带停顿和口吃的慢速语音",
+  "schemaVersion": 2
+}

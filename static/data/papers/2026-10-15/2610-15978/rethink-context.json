@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.15978v1",
+  "abstract": "Linking speakers across independently recorded rooms is difficult because microphone, room, and codec mismatch distort speaker embeddings. We study visitor linking without visitor enrollment or identity labels in simulated outpatient workflows. The proposed method combines per-device embedding centering, concurrency constraints, room-type-specific visit constraints, and a clustering threshold calibrated from concurrent visitors and identified staff voices. On simulated days built from VOiCES recordings, with companions, return visits, walk-ins, silent visits, and acoustic leakage, it improves B$^3$-F1 over the best label-free baseline for all 11 extractors, by 5.3-14.6 points (all 95\\% intervals exclude zero). ECAPA-TDNN reaches 86.6, compared with 76.4 for the best label-free baseline and 87.7 for the best oracle-informed baseline. Gains persist across the reported workflow perturbations, but depend on removing duplicated cross-room speech: without this step, the method wins for only 2 of 11 extractors. Single-visit patients also remain vulnerable to false merges. These results support structure-aware linking while identifying preprocessing and identity-safety limitations that must be addressed before clinical deployment.",
+  "abstractSha256": "138d3280609e96c13aee36e78153a43e818823b6e5229bcef777ecaf83fe2659",
+  "arxivId": "2610.15978",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.15978v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "无监督学习",
+    "primaryTask": "说话人分离标注",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.diarization",
+          "label": "说话人分离标注"
+        },
+        {
+          "facet": "method",
+          "id": "method.unsupervised",
+          "label": "无监督学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "application",
+          "id": "application.medical",
+          "label": "医疗音频"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "无监督学习",
+      "primaryMethodId": "method.unsupervised",
+      "primaryTask": "说话人分离标注",
+      "primaryTaskId": "task.diarization",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Suhas BN"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nikitha K"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "该文研究门诊多房间录音中无访客注册时的访客跨房链接，用逐设备中心化加并发与房间类型约束和员工语音校准阈值做聚类，在 VOiCES 仿真日上对 11 种嵌入全面超越无标签基线，但高度依赖跨房重复语音去除且单访患者仍易误合并。",
+  "originalTitle": "Unsupervised Cross-device Speaker Diarization And Linking Through Spatiotemporal Structure",
+  "pdfUrl": "https://arxiv.org/pdf/2610.15978v1.pdf",
+  "readerTitle": "跨房间说话人链接：用时间表结构弥补跨设备失配",
+  "schemaVersion": 2
+}

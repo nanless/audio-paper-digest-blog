@@ -1,0 +1,115 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.18141v1",
+  "abstract": "Omnimodal large language models (OLLMs) are susceptible to cross-modal hallucinations under audio-visual interference. We find that, for a substantial fraction of incorrect joint predictions, the question-relevant unimodal branch can still recover the correct answer, suggesting that task-relevant evidence can remain recoverable from the relevant modality even when it is not reflected in the joint prediction. We refer to this recoverable failure pattern as \\emph{modality misrouting}. We propose CaRe (Conflict-aware Residual Intervention), a training-free inference-time method for identifying and correcting modality misrouting. CaRe uses a text-only modality probe to identify a candidate modality-specific counterfactual branch, and flags potential misrouting when its prediction conflicts with the original joint prediction. For such cases, CaRe computes a residual direction from the discrepancy between the counterfactual and fused representations and uses it to steer the original multimodal state toward the relevant modality evidence, while retaining both modalities in the original audio-visual inference path. The intervention strength is adapted based on the confidence of the counterfactual branch. Experiments on CMM and AVHBench across two OLLMs show that CaRe consistently outperforms the evaluated inference-time hallucination-mitigation baselines.",
+  "abstractSha256": "4040a1214758603ad76f443fc03eea92631d5a1b750fa34b5b8cc3b0759f9269",
+  "arxivId": "2610.18141",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.18141v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "测试时自适应",
+    "primaryTask": "音视频问答",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-question-answering",
+          "label": "音视频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.test-time-adaptation",
+          "label": "测试时自适应"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.hallucination-faithfulness",
+          "label": "幻觉与忠实度"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "测试时自适应",
+      "primaryMethodId": "method.test-time-adaptation",
+      "primaryTask": "音视频问答",
+      "primaryTaskId": "task.av-question-answering",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yu Mi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Licheng Pan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jiayi Zhu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Qirui Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yitong Qiao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Changtong Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tao Wei"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University Ant Group Institute of Computing Technology, CAS"
+      ],
+      "name": "Fei Sun"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhixuan Chu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kui Ren"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文针对全模态大模型中问题相关证据仍在单模态分支可恢复却在联合预测中丢失的模态误路由问题，提出免训练的 CaRe 两阶段冲突检测与残差纠偏，并在 CMM 和 AVHBench 上以额外反事实推理为代价取得一致提升。",
+  "originalTitle": "Mitigating Cross-Modal Hallucinations by Correcting Modality Misrouting in Omnimodal LLMs",
+  "pdfUrl": "https://arxiv.org/pdf/2610.18141v1.pdf",
+  "readerTitle": "当音频和视频互相干扰时，如何把走错路的融合表示拉回来",
+  "schemaVersion": 2
+}

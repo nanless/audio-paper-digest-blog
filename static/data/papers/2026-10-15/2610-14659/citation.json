@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.14659v1",
+  "arxivId": "2610.14659",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.14659v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Beihang University"
+      ],
+      "name": "Daijin Hu"
+    },
+    {
+      "affiliations": [
+        "Beihang University"
+      ],
+      "name": "Xi Wang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.14659v1",
+  "originalTitle": "RASSG: Repair-Aware Semantic Survival Gating for Streaming Tool Execution",
+  "pdfUrl": "https://arxiv.org/pdf/2610.14659v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

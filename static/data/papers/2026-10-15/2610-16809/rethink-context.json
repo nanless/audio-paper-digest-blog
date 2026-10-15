@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.16809v1",
+  "abstract": "This study addresses the prediction of audio popularity on an online sharing platform by leveraging both metadata and acoustic feature representations. Two distinct categories of audio content are considered: music and sound effects. Popularity is formulated as a supervised classification task based on two target variables: the number of downloads and the average user rating. We conduct a comparative evaluation of multiple machine learning models, including Random Forest, XGBoost, and a Neural Network model. Experiments are performed across different feature sets, including metadata, platform-provided descriptors, and eGeMAPS acoustic features. Results indicate that metadata consistently provide the most informative representation for predicting popularity. Nevertheless, acoustic features alone achieve performance significantly above chance level, demonstrating that intrinsic properties of the audio signal contribute to popularity prediction.",
+  "abstractSha256": "5f872790fadf9ba96accad30295a690f9ac0c96022ce1781a2dac65527b5d446",
+  "arxivId": "2610.16809",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.16809v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "集成学习",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 5.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.ensemble-learning",
+          "label": "集成学习"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.comparison",
+          "label": "模型比较"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.interpretability",
+          "label": "可解释性"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "集成学习",
+      "primaryMethodId": "method.ensemble-learning",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ikram El Hadi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nihad Elbari"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kawtar Tlemçani"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Théo Mariotte"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Meysam Shamsi"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文把 Freesound 上的下载量和平均评分转成下载三分类与评分四分类，用元数据、平台声学描述子、eGeMAPS 和 MERT 四类特征比较随机森林、XGBoost 和 MLP，发现下载量靠元数据预测最好而音乐评分靠平台声学描述子最好，但 eGeMAPS 和 MERT 在短音效上基本失效。",
+  "originalTitle": "Predicting Audio Popularity: A Comparative Study of Metadata and Acoustic Features Across Music and Sound Effects",
+  "pdfUrl": "https://arxiv.org/pdf/2610.16809v1.pdf",
+  "readerTitle": "音频流行度可以预测吗：元数据与声音特征在音乐和音效上的比较",
+  "schemaVersion": 2
+}

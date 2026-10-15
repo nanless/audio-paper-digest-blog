@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.15575v1",
+  "arxivId": "2610.15575",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.15575v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jincheng Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "György Fazekas"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Charalampos Saitis"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.15575v1",
+  "originalTitle": "Self-Representation Alignment in Diffusion Models for Video Background Music Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.15575v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,102 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.16338v1",
+  "abstract": "Recent years have witnessed rapid progress in joint audio--visual generation. However, audio--visual synchronization remains a challenge, as generated speech and sound often temporally misalign with visual events. A key bottleneck is the lack of human-annotated data, reliable evaluation benchmarks, and synchronization-aware evaluation models for generated audio--visual outputs. To address these limitations, we conduct a comprehensive study spanning data, benchmarking, and reward modeling. We first introduce SyncReward-Data-80K, a dataset containing 80K professional synchronization ratings for clips from eight audio--visual generators. A taxonomy-guided construction pipeline covers four sound-event families: Speech, Onset, Instrument, and Ambient. We further construct \\textbf{SyncReward-Bench}, a held-out benchmark of 1K clips, each independently rated by multiple professionals. Using this benchmark, we systematically evaluate specialized synchronization metrics and omni-modal models, revealing their substantial misalignment with human judgments. Finally, we develop SyncReward, a reward model that combines semantic--temporal contrastive pretraining on real clips with human supervision on generated clips. As an evaluation metric, SyncReward achieves the strongest agreement with human ratings among the evaluated methods. As a reward, it improves synchronization through inference-time best-of-$N$ selection and reinforcement learning based post-training. We will release the data, benchmark, model, and code at https://github.com/WeChatCV/SyncReward.",
+  "abstractSha256": "2d4eac2f7678a3ce6246abbfe152266c8020888db2ae20fdb9c686e76076d863",
+  "arxivId": "2610.16338",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.16338v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "偏好优化",
+    "primaryTask": "音画同步",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-synchronization",
+          "label": "音画同步"
+        },
+        {
+          "facet": "method",
+          "id": "method.preference-optimization",
+          "label": "偏好优化"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "method",
+          "id": "method.contrastive",
+          "label": "对比学习"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "偏好优化",
+      "primaryMethodId": "method.preference-optimization",
+      "primaryTask": "音画同步",
+      "primaryTaskId": "task.av-synchronization",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kaisi Guan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ying Ba"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wenjing Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xihua Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chen Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jing Lyu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ruihau Song"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文针对联合生成的音画不同步问题，用 80K 条专业同步评分和两阶段奖励模型做评测与优化，在自建 1K 基准上与人类最一致，但只优化同步可能牺牲提示词保真度。",
+  "originalTitle": "SyncReward: Human-Aligned Synchronization Reward for Audio-Visual Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.16338v1.pdf",
+  "readerTitle": "生成视频声音对不上口型怎么办：SyncReward 如何学人类判断",
+  "schemaVersion": 2
+}

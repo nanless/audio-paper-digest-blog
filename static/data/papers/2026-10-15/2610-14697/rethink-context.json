@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.14697v1",
+  "abstract": "Speech-conditioned generation maps speech signals to target audio outputs. Prior end-to-end speech-conditioned generative models achieve high fidelity in clean acoustic conditions, but their performance degrades substantially under environmental noise. While prior noise-robust approaches have achieved significant success in feature-level purification, maintaining consistent generation under clean and noisy conditioning remains a key challenge. To address this, we propose AlignAudio, a noise-robust generative framework based on dual alignment: (i) aligning the representations of clean and noisy speech to preserve semantic cues, and (ii) enforcing generation-level consistency within a flow matching paradigm to improve conditioning fidelity. Experiments on speech-to-audio (STA) and voice conversion (VC) tasks demonstrate that AlignAudio maintains performance comparable to baselines on clean speech while significantly outperforming them across various noisy conditions. Furthermore, the proposed dual-alignment strategy is applicable to both single- and multi-stream speech conditioning and can be integrated into different flow matching-based generation frameworks and post-training settings. Audio demonstrations and qualitative comparisons: \\href{https://alignaudio.github.io/AlignAudio}{\\textcolor{cyan}{\\textit{https://alignaudio.github.io/AlignAudio}}}.",
+  "abstractSha256": "ede7161d0d0495dd270d44ffff55d35be4a5015e97f64bb7fcab41ae92d01e4a",
+  "arxivId": "2610.14697",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.14697v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "流匹配",
+    "primaryTask": "音频生成",
+    "rankBucket": "前50%",
+    "score": 6.7,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-generation",
+          "label": "音频生成"
+        },
+        {
+          "facet": "task",
+          "id": "task.voice-conversion",
+          "label": "语音转换"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "流匹配",
+      "primaryMethodId": "method.flow-matching",
+      "primaryTask": "音频生成",
+      "primaryTaskId": "task.audio-generation",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yixuan Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xuenan Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zeyu Xie"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mengyue Wu"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对带噪语音条件导致生成语义偏移与轨迹不稳的问题，AlignAudio 先用适配器拉近干净与带噪表征，再用方向一致约束拉齐干净与带噪条件下的流匹配速度场，在语音到音频与语音转换任务上用噪声、域外与实录条件验证了条件保真度的提升与干净条件的保持。",
+  "originalTitle": "AlignAudio: A Unified Dual-Alignment Framework for Noise-Robust Speech-Conditioned Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.14697v1.pdf",
+  "readerTitle": "噪声下语音条件生成为何退化：AlignAudio 的双重对齐思路",
+  "schemaVersion": 2
+}

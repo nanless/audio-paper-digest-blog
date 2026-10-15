@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.13687v1",
+  "abstract": "Audio-visual dataset distillation aims to synthesize a small dataset from a large paired audio-visual dataset, while nearly preserving the training utility for neural networks. Existing approaches such as DM and AVDD face two critical limitations: 1) they are memory-intensive, making them difficult to scale to complex architectures and higher samples-per-class (SPC) settings, and 2) they often fail to preserve strong cross-modal semantic correspondence. To tackle these issues, we propose X-AVDD, a cross-attention-based distillation method that explicitly captures inter-modal relationships during synthesis. By decoupling cross-modal alignment from joint optimization, X-AVDD is substantially more memory-efficient, reducing end-to-end synthesis cost by $\\sim 8\\times$ GPU-hours, while producing highly aligned synthetic data. Empirically, X-AVDD significantly outperforms other audio-visual distillation methods. On VGGSound, an audio-visual dataset of short YouTube clips, X-AVDD improves top-1 test accuracy from $8.2\\%\\rightarrow24.0\\%$ at SPC=$10$ and $9.8\\%\\rightarrow26.5\\%$ at SPC=$20$. Furthermore, X-AVDD improves cross-architecture generalization (e.g., $25.5\\%\\rightarrow35.3\\%$ for a ViT target on AVE dataset at SPC $=50$) and successfully scales to complex architectures such as AudioCLIP, achieving $62.3\\%$ accuracy using only $5.65\\%$ of the full dataset, against the full dataset accuracy of $72.4\\%$ while completing in $9\\times$ lower training time compared to the full dataset.",
+  "abstractSha256": "2057d8086126aa066c4e4b14f0469a4028d31be2bef023496e221064cbe49544",
+  "arxivId": "2610.13687",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.13687v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "音视频理解",
+    "rankBucket": "前50%",
+    "score": 6.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-understanding",
+          "label": "音视频理解"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.attention",
+          "label": "注意力机制"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "音视频理解",
+      "primaryTaskId": "task.av-understanding",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Artificial Intelligence, Indian Institute of Technology Hyderabad"
+      ],
+      "name": "Saumyaranjan Mohanty"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Aravind Reddy"
+    },
+    {
+      "affiliations": [
+        "Department of Artificial Intelligence, Indian Institute of Technology Hyderabad"
+      ],
+      "name": "Konda Reddy Mopuri"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "X-AVDD 针对配对音频-视觉数据集蒸馏，用先训练带双向交叉注意力的教师模型再按类匹配交叉注意力后嵌入的方法合成每类少量样本，在四个音频-视觉事件识别基准上提高小数据训练精度，并把合成总耗时从 10 小时降到 1.3 小时。",
+  "originalTitle": "X-AVDD: Cross-Attentive Audio-Visual Dataset Distillation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.13687v1.pdf",
+  "readerTitle": "用很少的配对样本保留声音和画面的对应关系：X-AVDD 解读",
+  "schemaVersion": 2
+}

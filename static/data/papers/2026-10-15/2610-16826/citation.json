@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.16826v1",
+  "arxivId": "2610.16826",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.16826v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lukáš Prokeš"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Vojtěch Staněk"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Anton Firc"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kamil Malinka"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.16826v1",
+  "originalTitle": "Unsupervised Data Drift Monitoring for Deployed Deepfake Speech Detectors",
+  "pdfUrl": "https://arxiv.org/pdf/2610.16826v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

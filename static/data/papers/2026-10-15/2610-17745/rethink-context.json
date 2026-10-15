@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.17745v1",
+  "abstract": "Can an integrated optical readout improve the useful operating range of a miniature microphone? We address this question with an analytical model of a diaphragm carrying the sensing arm of a Mach-Zehnder interferometer (MZI). The model links pressure-induced bending to waveguide elongation and then to photocurrent, allowing mechanical sensitivity and optical detection limits to be assessed separately. Optical shot noise and back-cavity thermomechanical noise set the pressure resolution, while a 10% total harmonic distortion criterion defines acoustic overload. Two operating regimes are examined: a compact MEMS microphone with 1 mW optical input and a measurement microphone with 100 mW optical input. For the compact case, a 1 mm diameter, 1 micrometer thick, stress-free silicon diaphragm and 100% modulation efficiency give a predicted signal-to-noise ratio of 78 dB and acoustic overload pressure of 124 dB. The higher-power case lowers the modeled noise floor and increases dynamic range relative to the selected measurement microphone benchmark. These estimates rely on favorable assumptions and do not establish a substantial overall advantage in conventional microphone applications. Remote optical interrogation offers a separate motivation for harsh-environment sensing, but the temperature tolerance of the proposed sensing head remains unverified. The analysis identifies the design tradeoffs and measurements needed to test the predicted performance.",
+  "abstractSha256": "9bdb4580c446e0e6beb0b3b7652d4640b247eb6c21e771a5eadebf14fcae5186",
+  "arxivId": "2610.17745",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.17745v1",
+  "assessment": {
+    "documentType": "理论研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "音频质量评估",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-quality",
+          "label": "音频质量评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "method",
+          "id": "method.formal-analysis",
+          "label": "形式化分析"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.theory",
+          "label": "理论分析"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "音频质量评估",
+      "primaryTaskId": "task.audio-quality",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Xiaoyu Niu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Yuqi Meng"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Zihuan Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Ehsan Vatankhah"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Neal Hall"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "该文用振膜弯曲到波导伸长再到马赫-曾德干涉光电流的解析链，评估光学散粒噪声与背腔热机械噪声决定的压力分辨率和以 10% 总谐波失真定义的过载，在 1 mW 紧凑情形给出 78 dB 信噪比与 124 dB 过载、在 100 mW 测量情形主要改善压力分辨率，但均附带有利假设而不构成对常规话筒的全面优势。",
+  "originalTitle": "Modeling and Design of a Diaphragm-Integrated Photonic Waveguide Microphone",
+  "pdfUrl": "https://arxiv.org/pdf/2610.17745v1.pdf",
+  "readerTitle": "把波导做进振膜的话筒：弯曲如何变成光电流",
+  "schemaVersion": 2
+}

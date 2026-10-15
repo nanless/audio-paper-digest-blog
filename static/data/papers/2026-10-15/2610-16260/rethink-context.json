@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.16260v1",
+  "abstract": "Current ASR models perform well on general benchmarks but still struggle with acoustically ambiguous words. Visual context can aid recognition in screen-based scenarios, yet existing benchmarks provide limited insight into the benefits of different types of visual evidence. To address this gap, we introduce ScreenASR-Bench , a tiered benchmark with three progressively challenging levels: Explicit Textual Evidence (ETE), based on direct on-screen text; Explicit Visual Evidence (EVE), using visible content rather than on-screen text; and Implicit Semantic Evidence (ISE), requiring scene-level inference. Extensive experiments on ASR models, Large Audio-Language Models (LALMs) and Omni models show that incorporating visual context substantially improves recall over the audio-only setting across all three model families. The gains are largest for ETE and smallest for ISE, indicating that models leverage direct visual evidence more effectively than indirect semantic cues. To facilitate future research on visually grounded speech recognition, we publicly release ScreenASR-Bench.",
+  "abstractSha256": "3256b0858be826f8058f4ed714c798583421644067d388586ef89b38fd912192",
+  "arxivId": "2610.16260",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.16260v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "音视频语音识别",
+    "rankBucket": "前50%",
+    "score": 5.9,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-asr",
+          "label": "音视频语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "音视频语音识别",
+      "primaryTaskId": "task.av-asr",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mingwei Fu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zheshu Song"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhikai Zhou"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shen Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shidong Shang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mengxiao Zhu"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文针对屏幕场景下仅靠音频难以判定的关键词，构建按视觉证据直接程度分三层的评测集 ScreenASR-Bench，用关键词召回与归一化视觉增益度量三类模型在纯音频与加入视觉条件下的变化，最强的提升出现在可直接读屏的层级而间接语义层级提升最小。",
+  "originalTitle": "ScreenASR-Bench: A Tiered Benchmark for Speech Recognition with Visual Context",
+  "pdfUrl": "https://arxiv.org/pdf/2610.16260v1.pdf",
+  "readerTitle": "屏幕前的语音识别：用分层视觉证据补上听不清的关键词",
+  "schemaVersion": 2
+}

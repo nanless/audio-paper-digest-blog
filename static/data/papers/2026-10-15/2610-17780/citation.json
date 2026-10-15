@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.17780v1",
+  "arxivId": "2610.17780",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.17780v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chen Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Pin-Jui Ku"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ankita Pasad"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ante Jukić"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhehuai Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Boris Ginsburg"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.17780v1",
+  "originalTitle": "Full-duplex Spoken Language Modeling with Discrete Diffusion",
+  "pdfUrl": "https://arxiv.org/pdf/2610.17780v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

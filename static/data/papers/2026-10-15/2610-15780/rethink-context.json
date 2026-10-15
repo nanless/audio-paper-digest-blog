@@ -1,0 +1,96 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.15780v1",
+  "abstract": "The Flow Matching objective supervises the velocity field at intermediate states, whereas waveform metrics are evaluated after decoding and may be non-differentiable. To align Flow Matching models with waveform-level and perceptual quality objectives during post-training, FlowGRPO optimizes their trajectories using endpoint rewards. In this work, we focus on music separation and use multi-resolution short-time Fourier transform (MRSTFT), scale-invariant signal-to-distortion ratio (SI-SDR), and Virtual Speech Quality Objective Listener (ViSQOL) as reward components. Before policy optimization, we analyze the relationship between data quality factors and the within-group gap between the maximum and mean rollout rewards for each component. This analysis motivates a revised ViSQOL reward that matches channel-wise root-mean-square (RMS) levels and evaluates the interval from the first to the last active frame, retaining inactive frames within that interval. We also apply a sample-quality filter based on predefined waveform checks. Together, the revised reward and quality filter enable FlowGRPO to improve the pretrained vocal separator in both separation performance and perceptual quality.",
+  "abstractSha256": "4ff309b953a202257bf5883dae8840a0e5da91ab6e270c1cb68ba8fc6962b563",
+  "arxivId": "2610.15780",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.15780v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "强化学习",
+    "primaryTask": "音乐源分离",
+    "rankBucket": "前50%",
+    "score": 5.9,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-separation",
+          "label": "音乐源分离"
+        },
+        {
+          "facet": "method",
+          "id": "method.reinforcement",
+          "label": "强化学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.post-training",
+          "label": "后训练"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "强化学习",
+      "primaryMethodId": "method.reinforcement",
+      "primaryTask": "音乐源分离",
+      "primaryTaskId": "task.music-separation",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lishi Zuo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chong-Xin Gan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zezhong Jin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Youzhi Tu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Man-Wai Mak"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "KongAik Lee"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "该文研究潜空间流匹配人声分离在波形指标不可微时的后训练对齐，用组内最优与均值差距分析指导 ViSQOL 改写与样本过滤，使 FlowGRPO 在原评价指标上提升分离与感知质量，但结论只在内部 50 秒测试与固定阈值下成立且 MRSTFT 单奖励仍保留最低谱损失。",
+  "originalTitle": "FlowGRPO for Vocal Separation: From Reward Analysis to Reward Design",
+  "pdfUrl": "https://arxiv.org/pdf/2610.15780v1.pdf",
+  "readerTitle": "用人声分离讲清 FlowGRPO：先分析奖励差距，再改奖励设计",
+  "schemaVersion": 2
+}

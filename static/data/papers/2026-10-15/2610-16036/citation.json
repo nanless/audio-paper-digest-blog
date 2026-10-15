@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.16036v1",
+  "arxivId": "2610.16036",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.16036v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yu Pan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiaojuan Cai"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Liang Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yang Hou"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tianjiao Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuguang Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jixun Yao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hiroshi Koide"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lei Ma"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jianjun Zhao"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.16036v1",
+  "originalTitle": "Prime-EVC: One-Step Expressive Emotional Voice Conversion via Emotion-Primed Flow Matching",
+  "pdfUrl": "https://arxiv.org/pdf/2610.16036v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

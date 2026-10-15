@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.14673v1",
+  "arxivId": "2610.14673",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.14673v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiangyu Jing"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hongqing Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Liming Shi"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.14673v1",
+  "originalTitle": "FAM-gate: field-aware metadata attention with prior-constrained vector gating for audio classification",
+  "pdfUrl": "https://arxiv.org/pdf/2610.14673v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

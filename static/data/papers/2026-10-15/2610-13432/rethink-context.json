@@ -1,0 +1,72 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.13432v1",
+  "abstract": "Earnings call transcription presents a realistic continual learning scenario where Automatic Speech Recognition (ASR) systems are updated with new recordings but risk catastrophic forgetting of previously learned financial speech patterns. Adapting Whisper-small from a general-domain speech corpus to the Earnings22 benchmark reveals the opposite: all evaluated methods exhibit improvement on held-out financial speech from the same domain during adaptation rather than forgetting. This task complementarity makes regularization counterproductive. Nevertheless, when regularization is warranted, a layer-wise mini-Kronecker-Factored Approximate Curvature (mini-KFAC) approximation seems to achieve lower word error rates (WERs) and more stable optimization than standard diagonal Elastic Weight Consolidation (EWC). The results suggest that task complementarity should be assessed before applying continual learning constraints, and prefer mini-KFAC EWC over diagonal EWC when needed.",
+  "abstractSha256": "2827efd4801d484afef7bf2ac77b37f25b9af259d39b89b95fae68b82f416abd",
+  "arxivId": "2610.13432",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.13432v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "持续学习",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 5.7,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.continual",
+          "label": "持续学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.regularization",
+          "label": "正则化"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "持续学习",
+      "primaryMethodId": "method.continual",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Computer Science",
+        "Columbia University, NYC, NY, USA"
+      ],
+      "name": "Thai Quoc On"
+    },
+    {
+      "affiliations": [
+        "Mechanical Engineering Dept. and",
+        "Electrical Engineering Dept.",
+        "Columbia University, NYC, NY, USA",
+        "and Recognition Technologies, Inc.",
+        "South Salem, NY, USA"
+      ],
+      "name": "Homayoon Beigi"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "把 Whisper-small 从 TED 演讲语音调到 Earnings22 财报语音时，同域两分区上都出现负遗忘，不加正则的微调取得最低词错误率，而需要正则时 mini-KFAC 比对角 EWC 更低更稳，但差异在 5 个种子下不显著。",
+  "originalTitle": "Does Financial Speech Need Continual Learning Regularization? A Study of EWC and mini-KFAC on Earnings Call ASR",
+  "pdfUrl": "https://arxiv.org/pdf/2610.13432v1.pdf",
+  "readerTitle": "财报电话语音还需要持续学习正则吗：EWC 与 mini-KFAC 的对照解读",
+  "schemaVersion": 2
+}

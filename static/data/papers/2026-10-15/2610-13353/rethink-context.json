@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.13353v1",
+  "abstract": "Multimodal emotion preference learning uses pairwise comparisons to identify which open-ended emotion descriptions align more closely with human judgments. However, existing methods primarily focus on the final preference decision and provide little explicit supervision for localizing and correcting erroneous content. To address this limitation, we propose EmoGavel, a Grounding-Aware reinforcement learning framework with Verifiable rewards for multimodal Emotion preference Learning. We first introduce grounded supervised fine-tuning (Grounded SFT), which exploits controlled-error construction information to jointly learn preference prediction, error localization, repair, and missing-evidence recovery. We then optimize these verifiable outcomes with grounding-aware group relative policy optimization (GA-GRPO), combining preference-gated grounding rewards with dynamic zero-variance rescue to prioritize preference correctness and recover learning signals from all-wrong groups. Experiments on EmoPrefer and controlled-error evaluation sets show that EmoGavel improves both natural preference prediction and controlled-error discrimination while maintaining strong error-grounding performance. Our code and model checkpoints will be released once the paper is accepted.",
+  "abstractSha256": "3c867e8cab4a500e092d524e17d78219db46ffb5007b5b3fbde11787059d912d",
+  "arxivId": "2610.13353",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.13353v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "强化学习",
+    "primaryTask": "语音情感识别",
+    "rankBucket": "前50%",
+    "score": 5.9,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.emotion-recognition",
+          "label": "语音情感识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.reinforcement",
+          "label": "强化学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.preference-optimization",
+          "label": "偏好优化"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "强化学习",
+      "primaryMethodId": "method.reinforcement",
+      "primaryTask": "语音情感识别",
+      "primaryTaskId": "task.emotion-recognition",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zilong Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kong Aik Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zezhong Jin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Man-Wai Mak"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tatsuya Kawahara"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对开放式情感描述偏好只给二选一标签而缺少错误定位监督的问题，EmoGavel 用受控错误构造的可验证目标先做接地监督微调再做偏好门控的组相对强化学习，在 EmoPrefer-Data 上自然偏好达到 79.75% 加权 F1、四类受控错误平均 88.20% 并保持 77.27% 接地总分，但缺失证据恢复略有下降且结论适用范围限于四种预设错误。",
+  "originalTitle": "EmoGavel: Grounding-Aware Reinforcement Learning with Verifiable Rewards for Multimodal Emotion Preference Learning",
+  "pdfUrl": "https://arxiv.org/pdf/2610.13353v1.pdf",
+  "readerTitle": "EmoGavel：让偏好判断说出错误在哪并给出修正",
+  "schemaVersion": 2
+}

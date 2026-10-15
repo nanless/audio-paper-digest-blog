@@ -1,0 +1,45 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.17149v1",
+  "arxivId": "2610.17149",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.17149v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Meta Superintelligence Labs",
+        "University of Southern California"
+      ],
+      "name": "Ashutosh Chaubey"
+    },
+    {
+      "affiliations": [
+        "Meta Superintelligence Labs"
+      ],
+      "name": "Jinxi Guo"
+    },
+    {
+      "affiliations": [
+        "Meta Superintelligence Labs"
+      ],
+      "name": "Minh Tran"
+    },
+    {
+      "affiliations": [
+        "Meta Superintelligence Labs"
+      ],
+      "name": "Michael Andersland"
+    },
+    {
+      "affiliations": [
+        "Meta Superintelligence Labs"
+      ],
+      "name": "Ozlem Kalinli"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.17149v1",
+  "originalTitle": "ATTEST: Evidence-Grounded Reinforcement Learning for Long-Audio Temporal Understanding",
+  "pdfUrl": "https://arxiv.org/pdf/2610.17149v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

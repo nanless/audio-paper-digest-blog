@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.14817v1",
+  "abstract": "State-of-the-art beat tracking is based on neural networks that model beats and downbeats as individual events, often followed by a separate Dynamic Bayesian Network (DBN) enforcing musical consistency. We propose a novel architecture that combines deep learning with differentiable theory-based modules: Specifically, we design a system that first predicts a tatum grid, then groups tatum events to beats and downbeats, explicitly modelling multiple options for the current tempo and time signature in a bar-pointer-like fashion. Our approach improves continuity metrics compared to existing DBN-free systems and is more versatile than the de-facto standard DBN, but still falls behind the best DBN-based methods on average. Given the many design choices and hyperparameters involved, we assume we have not yet explored the full potential of this idea and publish our code and invite others to explore this further.",
+  "abstractSha256": "82280c30cc0631fbed72ff15ae49513f839697f4370d4b6576917084bde336e9",
+  "arxivId": "2610.14817",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.14817v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "Transformer",
+    "primaryTask": "节拍跟踪",
+    "rankBucket": "前50%",
+    "score": 5.7,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.beat-tracking",
+          "label": "节拍跟踪"
+        },
+        {
+          "facet": "method",
+          "id": "method.transformer",
+          "label": "Transformer"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "Transformer",
+      "primaryMethodId": "method.transformer",
+      "primaryTask": "节拍跟踪",
+      "primaryTaskId": "task.beat-tracking",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Robert Kihlborg"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "André Holzapfel"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jan Schlüter"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "该文把节拍跟踪拆成先学局部等脉冲塔图姆网格再在网格上判断每拍含几个脉冲、每小节含几拍，用可微分的网格加子网格分布代替逐帧独立概率，在下拍连续性上超过同基座的无后处理基线，但平均仍落后于带动态贝叶斯网络的最优方法，且网格漏拍会直接限制最终上限。",
+  "originalTitle": "Explore This! Beat and Downbeat Tracking From a Learned Tatum Grid",
+  "pdfUrl": "https://arxiv.org/pdf/2610.14817v1.pdf",
+  "readerTitle": "从学会的塔图姆网格出发做拍号与下拍跟踪",
+  "schemaVersion": 2
+}

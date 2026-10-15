@@ -1,0 +1,97 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.14834v1",
+  "abstract": "Speech representation learning requires a discrete modeling interface while preserving high waveform fidelity. Existing approaches rarely achieve both: discrete tokens ease modeling but lose fine-grained acoustic information, while continuous latents preserve fidelity but require specialized generative objectives. We introduce SemiCodec, a novel Semi-discrete neural speech Codec with synchronized discrete tokens and continuous latents. Direct joint optimization may create a reconstruction shortcut through the continuous pathway, leaving the discrete tokens insufficiently grounded. To address this issue, we propose a Preserve-then-Ground training paradigm that first establishes a high-fidelity synthesis space and then grounds SSL-guided discrete tokens within it. Experiments show that SemiCodec outperforms fully discrete codecs in reconstruction quality and intelligibility while remaining competitive with continuous representations in acoustic fidelity and speaker preservation. Audio samples are available at https://pennyw1-se.github.io/SemiCodec-Demo-Page/",
+  "abstractSha256": "1e0d6ecd07e8862f33a24906e3d0a98b352587528adff543b6bb34377e314136",
+  "arxivId": "2610.14834",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.14834v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "神经编解码与离散单元",
+    "primaryTask": "语音编码",
+    "rankBucket": "前50%",
+    "score": 7.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-coding",
+          "label": "语音编码"
+        },
+        {
+          "facet": "method",
+          "id": "method.neural-codec",
+          "label": "神经编解码与离散单元"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        },
+        {
+          "facet": "method",
+          "id": "method.vae",
+          "label": "变分自编码器"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "神经编解码与离散单元",
+      "primaryMethodId": "method.neural-codec",
+      "primaryTask": "语音编码",
+      "primaryTaskId": "task.speech-coding",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kecan Mao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nan Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhaoyang Meng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhengyao Ma"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yingming Gao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yi Zhao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ya Li"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对离散语音编码易丢声学细节而连续隐变量难做离散建模的问题，SemiCodec 用同步的离散 token 加连续隐变量做波形重建，并用先保留后接地两阶段训练缓解连续通路捷径，在 LibriSpeech test-other 上以 25 帧每秒实现 PESQ-WB 4.03 与 WER 5.02%，代价是仍需保留连续通路和两阶段训练。",
+  "originalTitle": "SemiCodec: Bridging Speech Tokenization and High-fidelity Reconstruction with Semi-discrete Representations",
+  "pdfUrl": "https://arxiv.org/pdf/2610.14834v1.pdf",
+  "readerTitle": "SemiCodec：用半离散表示同时保留离散接口和高保真重建",
+  "schemaVersion": 2
+}

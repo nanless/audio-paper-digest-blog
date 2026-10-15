@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.13440v1",
+  "arxivId": "2610.13440",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.13440v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Electrical Engineering",
+        "Columbia University",
+        "New York, NY, USA"
+      ],
+      "name": "Xu He"
+    },
+    {
+      "affiliations": [
+        "Mechanical Engineering Dept. and",
+        "Electrical Engineering Dept.",
+        "Columbia University, NYC, NY, USA",
+        "and Recognition Technologies, Inc.",
+        "South Salem, NY, USA"
+      ],
+      "name": "Homayoon Beigi"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.13440v1",
+  "originalTitle": "Revisiting Accent Classification with DistilHuBERT: Speaker-Disjoint Evaluation and Cross-Corpus Generalization",
+  "pdfUrl": "https://arxiv.org/pdf/2610.13440v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

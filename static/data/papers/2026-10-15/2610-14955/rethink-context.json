@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.14955v1",
+  "abstract": "Rhythm games ask the player to act in time with a recording, following a chart: a sequence of actions, each with a time and, depending on the game, a lane, type, or playfield position. Charts are hand-written per recording and difficulty. Automatic generation from audio has been studied with pipeline and end-to-end approaches, and recent work reuses pre-trained audio encoders, but never compares them with one trained from scratch. None of these targets automatic music transcription (AMT), yet most chart times are note onsets, which AMT models locate. We freeze a pre-trained audio encoder, an AMT model in particular, and train only a linear projection and a Transformer decoder on charts. With MuScriptor, this fits human charts more closely than encoders trained from scratch and places more accurate note types than MERT, a music encoder pre-trained without transcription labels. Joint training on three osu! modes raises event F1 on the mode with the fewest charts from 0.492 to 0.506, while charts from Clone Hero, similar in layout, lower it to 0.482. Transfer between games thus appears to depend on charting style and the music covered.",
+  "abstractSha256": "1cc993f1156a2ec5807ca995067bb5d63fb172714ec71d54f21d9b9b0fbf623f",
+  "arxivId": "2610.14955",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.14955v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "迁移学习",
+    "primaryTask": "符号音乐生成",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.symbolic-music",
+          "label": "符号音乐生成"
+        },
+        {
+          "facet": "task",
+          "id": "task.transcription",
+          "label": "音乐转录"
+        },
+        {
+          "facet": "method",
+          "id": "method.transfer",
+          "label": "迁移学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.multitask",
+          "label": "多任务学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "迁移学习",
+      "primaryMethodId": "method.transfer",
+      "primaryTask": "符号音乐生成",
+      "primaryTaskId": "task.symbolic-music",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sojeong An"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nathan Pruyne"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chris Donahue"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Dasaem Jeong"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文研究如何用冻结的自动音乐转录编码器加谱面解码器生成节奏游戏谱面，并在谱面最少的模式上用跨模式联合训练把事件 F1 从 0.492 提到 0.506，而与 Clone Hero 联合反而降到 0.482。",
+  "originalTitle": "Transfer Learning for Rhythm Game Chart Generation from Music Transcription and Across Games",
+  "pdfUrl": "https://arxiv.org/pdf/2610.14955v1.pdf",
+  "readerTitle": "从音乐转录借耳朵，为节奏游戏写谱：冻结编码器与跨游戏联合训练",
+  "schemaVersion": 2
+}

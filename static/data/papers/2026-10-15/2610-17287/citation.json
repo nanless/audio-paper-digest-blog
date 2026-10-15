@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.17287v1",
+  "arxivId": "2610.17287",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.17287v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Andrew T. Sabin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Linkai Li"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.17287v1",
+  "originalTitle": "Active noise cancellation extends the benefit of AI speech enhancement in real hearing-aid recordings",
+  "pdfUrl": "https://arxiv.org/pdf/2610.17287v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

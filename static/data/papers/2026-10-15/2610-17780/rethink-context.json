@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.17780v1",
+  "abstract": "We introduce Diffuplex, a full-duplex spoken language model based on discrete diffusion that achieves an unprecedented balance between linguistic intelligence and response efficiency. With thinking mode, Diffuplex delivers 13.0 tokens per forward pass, reaching an average of 1872 tokens per second and substantially surpassing the frontier autoregressive (AR) models in decoding speed. Without thinking, Diffuplex matches the first-audio latency of existing full-duplex models while achieving markedly stronger linguistic intelligence. This capability is enabled by separating when to say from what to say at the training level, rather than compressing both into a single autoregressive timeline. During inference, Diffuplex continuously tracks the user speech through an AR interaction policy, while independently generating and refining response content through parallel diffusion. Consequently, semantic computation is no longer bounded by the perception audio frame rate, allowing intelligence and responsiveness to improve simultaneously. Taken together, these results establish a new paradigm for spoken agents that can sustain real-time dialogue while devoting parallel computation to intelligent response generation. Training code and checkpoints will be avaliable soon.",
+  "abstractSha256": "230cb774deca55b6a68aeadbad30517f86aec56a6fbf3a9f6e9eca5feb656862",
+  "arxivId": "2610.17780",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.17780v1",
+  "assessment": {
+    "documentType": "模型报告",
+    "primaryMethod": "扩散模型",
+    "primaryTask": "全双工语音交互",
+    "rankBucket": "前50%",
+    "score": 7.4,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.full-duplex",
+          "label": "全双工语音交互"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-dialogue",
+          "label": "语音对话系统"
+        },
+        {
+          "facet": "method",
+          "id": "method.diffusion",
+          "label": "扩散模型"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.real-time",
+          "label": "实时处理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "扩散模型",
+      "primaryMethodId": "method.diffusion",
+      "primaryTask": "全双工语音交互",
+      "primaryTaskId": "task.full-duplex",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chen Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Pin-Jui Ku"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ankita Pasad"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ante Jukić"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhehuai Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Boris Ginsburg"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "Diffuplex 用自回归策略决定何时说话、用语音条件离散扩散并行生成说什么，在 VoiceBench 上以思考模式达到 86.9 分并实现每前向 13.0 词元、1872 词元每秒的解码速度，代价是需要三阶段训练与提前固定前缀带来的延迟质量折中。",
+  "originalTitle": "Full-duplex Spoken Language Modeling with Discrete Diffusion",
+  "pdfUrl": "https://arxiv.org/pdf/2610.17780v1.pdf",
+  "readerTitle": "把何时说话和说什么分开：全双工语音建模 Diffuplex 解读",
+  "schemaVersion": 2
+}

@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.16135v1",
+  "abstract": "Omni-modal large language models (Omni-LLMs) extend LLMs to process heterogeneous modalities (e.g., vision, audio, and IMU signals) alongside language, enabling a broader range of multimodal tasks. Yet we find that these models often fail to express information from non-textual modalities even when they perceive it correctly. We term this disconnect knows-but-cannot-say. To investigate this phenomenon, we introduce Token-level Modality Alignment (TMA), which measures the alignment between individual modality representations and response representations. Our analysis shows that non-textual representations are less aligned with response tokens and receive less attention than textual representations, suggesting a potential explanation for uneven modality preferences. Motivated by these findings, we propose OmniCatalyst, a simple perceive $\\rightarrow$ infer strategy that complements the original modality inputs with self-generated text, making non-textual knowledge more accessible. Across seven Omni-LLMs, OmniCatalyst consistently improves performance (+7.29%) and yields more balanced modality preferences, with further gains from diverse training strategies. Further analysis demonstrates that the knowledge extraction phases increase TMA, suggesting that improved alignment makes non-textual information more accessible during response generation. In summary, our findings uncover how Omni-LLMs can better express modality knowledge through language. Our code is available at https://github.com/naver-ai/OmniLLM.",
+  "abstractSha256": "70bc39e98157f1726db4caa00c258e2ee477f78a8aca0e257867ad944542a0a9",
+  "arxivId": "2610.16135",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.16135v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "音视频问答",
+    "rankBucket": "前50%",
+    "score": 5.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-question-answering",
+          "label": "音视频问答"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-reasoning",
+          "label": "音频推理"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.llm",
+          "label": "大语言模型"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "音视频问答",
+      "primaryTaskId": "task.av-question-answering",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Na Min An"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Taekyung Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Jaemyung Yu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Hyunjung Shim"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Dongyoon Han"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文针对全模态问答中感知到却用不上的问题，用词级对齐诊断定位生成可及性瓶颈，再以自我生成的模态描述补足弱模态，主要证据是跨七个模型的平均提升与弱模态对齐回升，代价是增加描述生成开销。",
+  "originalTitle": "Omni-Modal LLMs Know More Than They Say",
+  "pdfUrl": "https://arxiv.org/pdf/2610.16135v1.pdf",
+  "readerTitle": "全模态大模型知道却说不出：对齐诊断与自我补述",
+  "schemaVersion": 2
+}

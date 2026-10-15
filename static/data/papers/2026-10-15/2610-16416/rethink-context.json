@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.16416v1",
+  "abstract": "Compressed music restoration aims to recover high-fidelity audio from lossy codecs such as MP3 by restoring missing spectral content and reducing coding artifacts. Recently, generative adversarial networks and band-split models have made progress in compressed music restoration. However, existing methods either operate without explicitly modeling phase or rely on predefined frequency partitions, which may limit restoration performance and the use of input-dependent frequency information. To address these issues, we propose MPASCNet, a Magnitude-Phase-Aware Adaptive Spectral Compression network. Instead of using fixed bands, MPASCNet combines magnitude and phase features to guide cross-attention, adaptively compressing full-resolution spectral features into compact tokens. These tokens are then processed by a spectro-temporal backbone to model spectral-temporal dependencies. Finally, separate decoder branches reconstruct the full-resolution magnitude and wrapped phase spectra. Experiments on MP3 restoration show that MPASCNet outperforms the Apollo and AEROMamba baselines across multiple restoration metrics while using only 6.49 M parameters. The code is available at https://github.com/xinghour/MPASCNet.",
+  "abstractSha256": "54b319c7ff11b21e11bb3f52dc7fa24a0424f10ea72e1765e091268e113a709d",
+  "arxivId": "2610.16416",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.16416v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "注意力机制",
+    "primaryTask": "音频修复",
+    "rankBucket": "前25%",
+    "score": 8.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-restoration",
+          "label": "音频修复"
+        },
+        {
+          "facet": "method",
+          "id": "method.attention",
+          "label": "注意力机制"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "method",
+          "id": "method.time-frequency",
+          "label": "时频分析"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "注意力机制",
+      "primaryMethodId": "method.attention",
+      "primaryTask": "音频修复",
+      "primaryTaskId": "task.audio-restoration",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xinlong Deng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yu Xia"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Qiuqiang Kong"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yin Cao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jie Jiang"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对 MP3 低码率造成的带宽缺失与编码失真，MPASCNet 用幅度和包裹相位共同指导频点到紧凑 token 的自适应压缩与分支重建，在 MedleyDB 非重叠评测上以 6.49 M 参数取得整体 17.65 dB SDR 和 17.27 dB SI-SNR，但增益只在原文的混合训练与三类评测条件下成立。",
+  "originalTitle": "MPASCNet: Magnitude-Phase-Aware Adaptive Spectral Compression for Compressed Music Restoration",
+  "pdfUrl": "https://arxiv.org/pdf/2610.16416v1.pdf",
+  "readerTitle": "MPASCNet：用幅度相位联合压缩恢复 MP3 丢失的高频与细节",
+  "schemaVersion": 2
+}

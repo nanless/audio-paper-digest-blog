@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.14676v1",
+  "arxivId": "2610.14676",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.14676v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Pratham Gupta"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Haotian Qi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tushar Sandhan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Gabriel Skantze"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.14676v1",
+  "originalTitle": "CAST-ASD: Causal Attention over Speakers and Time for Online Active Speaker Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2610.14676v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

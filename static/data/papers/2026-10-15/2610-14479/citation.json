@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.14479v1",
+  "arxivId": "2610.14479",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.14479v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Al Varrel Putra Kusuma"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Fernando Bello"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Joshua Brown"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.14479v1",
+  "originalTitle": "AphaVoice: Text-to-Speech Model for Aphasia Patient Simulation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.14479v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

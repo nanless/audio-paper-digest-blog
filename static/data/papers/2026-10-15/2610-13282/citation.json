@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.13282v1",
+  "arxivId": "2610.13282",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.13282v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yushi Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zeyan Song"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiaobin Rong"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chengwei Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jun Gao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jing Lu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.13282v1",
+  "originalTitle": "Frontend-Assisted Large Audio-Language Models for SLT2026 SmartGlasses Challenge",
+  "pdfUrl": "https://arxiv.org/pdf/2610.13282v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

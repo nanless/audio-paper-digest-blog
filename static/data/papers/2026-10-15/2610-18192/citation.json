@@ -1,0 +1,60 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.18192v1",
+  "arxivId": "2610.18192",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.18192v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Intelligence Science and Technology, Kyoto University",
+        "Xiaowei, WXG, Tencent"
+      ],
+      "name": "Yichi Wang"
+    },
+    {
+      "affiliations": [
+        "Department of Intelligence Science and Technology, Kyoto University",
+        "Xiaowei, WXG, Tencent"
+      ],
+      "name": "Wangjin Zhou"
+    },
+    {
+      "affiliations": [
+        "Department of Intelligence Science and Technology, Kyoto University",
+        "Xiaowei, WXG, Tencent"
+      ],
+      "name": "Yizhou Zhang"
+    },
+    {
+      "affiliations": [
+        "Communication University of China",
+        "Xiaowei, WXG, Tencent"
+      ],
+      "name": "Xin Gu"
+    },
+    {
+      "affiliations": [
+        "Xiaowei, WXG, Tencent"
+      ],
+      "name": "Wei Tan"
+    },
+    {
+      "affiliations": [
+        "Xiaowei, WXG, Tencent"
+      ],
+      "name": "Yi Zhao"
+    },
+    {
+      "affiliations": [
+        "Xiaowei, WXG, Tencent"
+      ],
+      "name": "Gong Zhi"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.18192v1",
+  "originalTitle": "Collapse, Repair, and Drift: Dissecting Fine Tuning Dynamics in Speech Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2610.18192v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

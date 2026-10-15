@@ -1,0 +1,72 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.12802v1",
+  "abstract": "A conversational speech model has to decide, at every pause, whether to speak. Existing evaluations test boundary detection, policy adherence, or aggregate statistics, not this decision. We place real-time speech systems at 427 pauses and 482 turn ends from 176 unscripted conversations in Seamless Interaction, give each the conversation so far, and score what it generates against what the person did: whether and how soon it speaks at a pause; its latency, length, and wording at a turn end; and whether it can answer a question about the preceding 30 to 120 seconds. Across six systems, the hosted APIs (GPT Realtime, Gemini 3.1 Flash Live, Grok Voice) respond at almost every pause whichever endpointer they use; only their latency, about 1 to 4 s with silence-based endpointers and about 8 s with semantic turn detection, decides whether the words land inside the pause. The full-duplex models (PersonaPlex, Moshi) are the only systems that regularly stay silent and the only ones that interrupt within a human reaction time. Hosted systems reply longer than the person. Given the history as text, hosted systems recall 41 to 60% of conversation facts under a Claude Opus 5.5 judge and 19 to 26% under a strict word matcher; hearing it as audio, full-duplex models recall 17 to 22% and 12 to 15%. We release the labels, points, harness, and every output.",
+  "abstractSha256": "21e22154e8261018db9a3b5579abab0b688eb10dd6f40bdb1cc0711a40c574a6",
+  "arxivId": "2610.12802",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.12802v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "轮次切换",
+    "rankBucket": "前50%",
+    "score": 6.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.turn-taking",
+          "label": "轮次切换"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-question-answering",
+          "label": "音频问答"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "轮次切换",
+      "primaryTaskId": "task.turn-taking",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "People Make Things"
+      ],
+      "name": "Arya Bastani"
+    },
+    {
+      "affiliations": [
+        "People Make Things"
+      ],
+      "name": "Iman Modarressi"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文把实时语音系统放到 176 段闲聊的真实停顿和话轮末尾，比较它是否像真人一样保持沉默或接话，最强证据是托管 API 几乎从不沉默而全双工模型才会沉默，代价是历史输入通道不同且标注和触发方式影响结论适用范围。",
+  "originalTitle": "People Making Conversation: Evaluating How Naturally Speech Models Converse",
+  "pdfUrl": "https://arxiv.org/pdf/2610.12802v1.pdf",
+  "readerTitle": "在真人停顿处考语音对话：该沉默时沉默吗",
+  "schemaVersion": 2
+}

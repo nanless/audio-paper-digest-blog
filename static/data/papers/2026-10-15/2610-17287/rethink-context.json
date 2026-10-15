@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.17287v1",
+  "abstract": "Active noise cancellation (ANC) is common in headphones but rare in hearing aids, and its value for understanding speech in noise is not established. Algorithms that improve signal-to-noise ratio (SNR) act only on the hearing aid's amplified path, while unprocessed sound also reaches the eardrum directly through the vent, limiting the SNR improvement that is realized. Our earlier simulations predicted that attenuating this direct path with ANC would substantially increase the benefit of such processing. We tested that prediction in three hardware conditions: a standard receiver-in-canal (RIC) hearing aid, and an ANC-capable RIC with ANC off and on. Each was fit to NAL-NL2 targets for an N3 hearing loss and recorded on KEMAR with an AI speech-enhancement algorithm (AI-SE) off and on, in seven realistic scenes above 70 dB SPL. Speech and noise spectra were estimated from each recording with a binary time-frequency mask derived from the clean speech. AI-SE produced a similar peak benefit of about 4 dB in the high frequencies in all three conditions, but that benefit stayed at or above 1 dB only above 1500, 600, and 130 Hz for the standard RIC, ANC RIC (ANC off), and ANC RIC (ANC on), respectively, closely tracking the measured attenuation of the direct path. With AI-SE on, ANC RIC (ANC on) improved SII-weighted SNR by 5.1 dB relative to the open ear, compared with 3.3 dB for ANC RIC (ANC off) and 1.6 dB for the standard RIC. With AI-SE off, enabling ANC added only 0.2 dB. ANC is therefore an enabling technology: on its own it added little, but by attenuating the direct path it allowed SNR-enhancing processing to deliver substantially greater benefit at the eardrum, extending that benefit to much lower frequencies.",
+  "abstractSha256": "05e04364a2e1f57f20420e7a7941c14782782f10997bfcf8bbdd5198b9c5d9a3",
+  "arxivId": "2610.17287",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.17287v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "语音增强",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-enhancement",
+          "label": "语音增强"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "task",
+          "id": "task.active-noise-control",
+          "label": "主动降噪"
+        },
+        {
+          "facet": "application",
+          "id": "application.hearing-aids",
+          "label": "助听器"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "语音增强",
+      "primaryTaskId": "task.speech-enhancement",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Andrew T. Sabin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Linkai Li"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "该研究在吵闹真实场景的人体模型录音上验证：AI 语音增强在放大通路内各设备改善相近，但只有压住未经处理的直接声通路后，其信噪比改善才能从高频扩展到低频，宽带加权信噪比因此明显提高，而单独开主动降噪几乎不改善信噪比。",
+  "originalTitle": "Active noise cancellation extends the benefit of AI speech enhancement in real hearing-aid recordings",
+  "pdfUrl": "https://arxiv.org/pdf/2610.17287v1.pdf",
+  "readerTitle": "主动降噪如何让助听器里的 AI 语音增强在鼓膜处真正起效",
+  "schemaVersion": 2
+}

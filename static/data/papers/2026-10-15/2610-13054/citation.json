@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.13054v1",
+  "arxivId": "2610.13054",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.13054v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kyungsu Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yejin Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kyogu Lee"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.13054v1",
+  "originalTitle": "LiveSynth: A Streaming Neural Synthesizer for Instrument Cloning and Text-to-Instrument",
+  "pdfUrl": "https://arxiv.org/pdf/2610.13054v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,115 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.15342v1",
+  "abstract": "Open-vocabulary audio-visual event localization aims to infer explicit segment-level categories for both seen and unseen audio-visual events. Existing solutions rely heavily on hand-crafted prompt templates, whose predictions are highly sensitive to subtle wording variations. Learnable prompts remove this manual tuning burden, but when trained solely on seen events, they tend to overfit to seen categories and distort the inter-event semantic topology required for generalization to unseen categories, a failure we term semantic topology drift. In this paper, we propose SIMPLE, a semantic structure-aligned prompt learning framework that aligns cross-category semantic topology between learnable and hand-crafted prompts across asynchronous audio and visual streams. Specifically, our SIMPLE combines Learnable Continuous Prompt Tuning (LCPT) with Semantic Topology Consistency Regularization (STCR). The LCPT automates prompt engineering through data-driven optimization, while the STCR module aligns the category-wise similarity distributions of learnable and hand-crafted prompts under random category subset sampling to alleviate semantic topology drift. Comprehensive experiments and analyses on the OV-AVEBench demonstrate that our SIMPLE framework achieves state-of-the-art performance on the seen and unseen splits, while using roughly half the trainable parameters and roughly one-third the training time.",
+  "abstractSha256": "9734a0dc09b68cddeaa14e19113cdb111b4dac392947546dba66f02d26d68993",
+  "arxivId": "2610.15342",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.15342v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "提示学习",
+    "primaryTask": "音频事件检测",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.event-detection",
+          "label": "音频事件检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.prompt-learning",
+          "label": "提示学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.regularization",
+          "label": "正则化"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "提示学习",
+      "primaryMethodId": "method.prompt-learning",
+      "primaryTask": "音频事件检测",
+      "primaryTaskId": "task.event-detection",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "the School of Big Data and Statistics, Anhui University, Hefei 230039, China"
+      ],
+      "name": "Hanyu Xuan"
+    },
+    {
+      "affiliations": [
+        "the School of Big Data and Statistics, Anhui University, Hefei 230039, China"
+      ],
+      "name": "Haoran Xu"
+    },
+    {
+      "affiliations": [
+        "the School of Big Data and Statistics, Anhui University, Hefei 230039, China"
+      ],
+      "name": "Min Yin"
+    },
+    {
+      "affiliations": [
+        "the School of Information Science and Technology, University of Science and Technology of China, Hefei, China"
+      ],
+      "name": "Shuo Wang"
+    },
+    {
+      "affiliations": [
+        "the Shenzhen University Medical School, Shenzhen University, Shenzhen 518060, China"
+      ],
+      "name": "Cheng Zhao"
+    },
+    {
+      "affiliations": [
+        "the College of Information Technology, United Arab Emirates University, Abu Dhabi, 15551, United Arab Emirates"
+      ],
+      "name": "Kun Li"
+    },
+    {
+      "affiliations": [
+        "the Institute of Artificial Intelligence, Hefei Comprehensive National Science Center, Hefei, 230026, China"
+      ],
+      "name": "Fei Wang"
+    },
+    {
+      "affiliations": [
+        "the College of Computing and Data Science, Nanyang Technological University, Singapore 639798, Singapore"
+      ],
+      "name": "Zhiliang Wu"
+    },
+    {
+      "affiliations": [
+        "the Shenzhen University Medical School, Shenzhen University, Shenzhen 518060, China"
+      ],
+      "name": "Guanghui Yue"
+    },
+    {
+      "affiliations": [
+        "the School of Artificial Intelligence, Zhejiang University, Hangzhou 310007, China"
+      ],
+      "name": "Hehe Fan"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文针对开放词汇音视事件定位中手工模板敏感与可学习提示偏向已见类的问题，用跨音频视觉的连续提示调优加语义拓扑一致性正则保持类间相似结构，在 OV-AVEBench 上已见平均 71.2% 与未见平均 61.7% 的条件下取得提升，代价是仍依赖冻结编码器与合成类别代理。",
+  "originalTitle": "SIMPLE: Semantic Structure-Aligned Prompt Learning for Open-Vocabulary Audio-Visual Event Localization",
+  "pdfUrl": "https://arxiv.org/pdf/2610.15342v1.pdf",
+  "readerTitle": "SIMPLE：用语义结构对齐的可学习提示做开放词汇音视事件定位",
+  "schemaVersion": 2
+}

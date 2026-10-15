@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.13826v1",
+  "arxivId": "2610.13826",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.13826v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Fu-An Chao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bi-Cheng Yan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Berlin Chen"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.13826v1",
+  "originalTitle": "OpenPA: Forced-alignment-free Multi-granular Pronunciation Assessment with Mixed-transcript Adaptation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.13826v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.13600v1",
+  "abstract": "Large Audio Language Models (LALMs) achieve strong performance on speech-text tasks, but standard audio encoders produce hundreds of tokens for even short audio clips. Because self-attention scales quadratically in sequence length, this inflates inference-time compute substantially. Current training-free token compression methods prune or merge tokens based solely on coarse attention or feature similarity. However, treating audio tokens as generic, isotropic features smooths over spectral transitions, destroying fine-grained phonetic transitions essential for decoding speech. In contrast, speech signals exhibit highly structured temporal patterns where information density peaks at acoustic transitions. We propose AudioTETRIS, a training-free, two-stage framework that uses the audio encoder's representation geometry as an acoustic prior for token importance before applying attention-based compression. Instead of discarding encoder structure after the encoding stage, AudioTETRIS propagates this prior directly into the LLM decoder to compute a per-token fused score. This score drives progressive top-$k$ token selection across decoder layers without requiring additional training or auxiliary models. Evaluated on Qwen2-Audio-7B, Phi-4-Multimodal, and Audio Flamingo 3, AudioTETRIS retains near-uncompressed performance on several speech tasks using only 25% of audio tokens, matches or surpasses full-token accuracy at moderate compression rates, and consistently outperforms existing training-free baselines.",
+  "abstractSha256": "45a9c907f5e4a1b735b22761014983aebfa16db3a9ded6b56ee5017fd60b68be",
+  "arxivId": "2610.13600",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.13600v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "模型剪枝",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-translation",
+          "label": "语音翻译"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-question-answering",
+          "label": "音频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.pruning",
+          "label": "模型剪枝"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "模型剪枝",
+      "primaryMethodId": "method.pruning",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shreya Sajid"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Anna Vettoruzzo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Joaquin Vanschoren"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对音频编码器产生过长音频 Token 序列导致解码器自注意力开销过大的问题，AudioTETRIS 用编码器隐状态的帧间变化构造音素过渡先验，再与随深度切换的解码器注意力分数相乘做逐层 top-k 剪枝，在 Qwen2-Audio 等三个模型上用 25% Token 保持接近未压缩精度，但高压缩下转写任务仍先退化且需一次校准确定交叉层。",
+  "originalTitle": "AudioTETRIS: Token Elimination via Transitional Importance Signals for Efficient Audio LLMs",
+  "pdfUrl": "https://arxiv.org/pdf/2610.13600v1.pdf",
+  "readerTitle": "留下过渡、删掉冗余：AudioTETRIS 如何压缩音频大模型的音频 Token",
+  "schemaVersion": 2
+}

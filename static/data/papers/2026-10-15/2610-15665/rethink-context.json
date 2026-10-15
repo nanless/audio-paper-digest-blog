@@ -1,0 +1,93 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.15665v1",
+  "abstract": "We present AnyEdit, a unified, separation-free framework for speech and singing voice editing that preserves real-world acoustic environments, including noise, reverberation, and background music. Recent unified generative models already achieve strong speech and singing generation in clean conditions, but real-world vocal editing remains challenging because the model must revise content while simultaneously preserving speaker identity, prosody, and the surrounding acoustic scene. Directly modeling noisy audio end-to-end entangles semantic editing with environmental acoustics, weakening the core vocal generation capability. We therefore adopt a two-stage design that preserves clean-domain editing ability while deferring acoustic rendering to a separate stage: an instruction-guided autoregressive editor first predicts clean prosody and content-style tokens, supported by a teacher-student noise-robust prosody tokenizer that distills clean prosodic tokens from degraded recordings; a flow-matching acoustic model then performs in-context rendering conditioned on the source acoustic context, so the edited segment inherits surrounding noise, reverberation, and background sound while maintaining consistent speaker timbre. To stabilize unedited regions, we introduce unmodified-area-aware supervision; after pre-training, we further apply direct preference optimization on mined real-to-real singing pairs. We also release AnyEditBench, a benchmark covering both speech and singing voice editing under clean, simulated, and in-the-wild acoustic conditions. Experiments on Chinese and English speech and singing datasets showed that AnyEdit consistently outperforms strong baselines in content accuracy, subjective quality, and background consistency under noisy and reverberant conditions. Demo: https://any-edit.github.io/. AnyEditBench: https://huggingface.co/datasets/Ririiiii/anyeditbench.",
+  "abstractSha256": "031c0d3abbf102711ebc62eb81d7b51f530778f4fe41e720a632810ea7acfb8b",
+  "arxivId": "2610.15665",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.15665v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "流匹配",
+    "primaryTask": "语音编辑",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-editing",
+          "label": "语音编辑"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "task",
+          "id": "task.singing",
+          "label": "歌唱生成"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "流匹配",
+      "primaryMethodId": "method.flow-matching",
+      "primaryTask": "语音编辑",
+      "primaryTaskId": "task.speech-editing",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong, Shenzhen"
+      ],
+      "name": "Yunjia Zhang"
+    },
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong, Shenzhen"
+      ],
+      "name": "Junan Zhang"
+    },
+    {
+      "affiliations": [
+        "Institute of Media Technology and Experience Design, Huawei"
+      ],
+      "name": "Jing Yang"
+    },
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong, Shenzhen"
+      ],
+      "name": "Xueyao Zhang"
+    },
+    {
+      "affiliations": [
+        "Institute of Media Technology and Experience Design, Huawei"
+      ],
+      "name": "Fan Fan"
+    },
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong, Shenzhen",
+        "City University of Macau",
+        "Amphion Technology Co., Ltd."
+      ],
+      "name": "Zhizheng Wu"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "AnyEdit 把带噪编辑拆成干净语义编辑与上下文声学渲染两步，用噪声鲁棒韵律与流匹配渲染保持背景，在真实与模拟带噪集上内容与背景连续性更好，但长音频与瞬态声仍受限。",
+  "originalTitle": "AnyEdit: A Unified Framework for Speech and Singing Voice Editing with Real-World Environmental Consistency",
+  "pdfUrl": "https://arxiv.org/pdf/2610.15665v1.pdf",
+  "readerTitle": "带环境声一起改：AnyEdit 如何做语音与歌声的局部编辑",
+  "schemaVersion": 2
+}

@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.17728v1",
+  "arxivId": "2610.17728",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.17728v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yewon Han"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jisu Jeon"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Suhyun Choi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Juan Yeo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Minsoo Jo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Gihoon Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hyunggyu Lim"
+    },
+    {
+      "affiliations": [
+        "Graduate School of Data Science, Seoul National University"
+      ],
+      "name": "Taesup Kim"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.17728v1",
+  "originalTitle": "Safety for Whom? Benchmarking Understanding Beyond Refusal in Egocentric Multimodal Assistants",
+  "pdfUrl": "https://arxiv.org/pdf/2610.17728v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

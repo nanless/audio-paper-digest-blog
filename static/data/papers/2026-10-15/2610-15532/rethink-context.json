@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.15532v1",
+  "abstract": "Sleep-disordered breathing, including snoring, hypopnea, and obstructive apnea, is the hallmark of obstructive sleep apnea, whose severity is quantified by the Apnea-Hypopnea Index (AHI). As conventional polysomnography is costly and clin- ically demanding, microphone-only detection has emerged as a noninvasive alternative for screening. We propose ALE- Confidence Fusion Sound Event Detection (ACF-SED), the first framework that directly injects the per-frame confidence map of an Adaptive Line Enhancer (ALE) into Transformer atten- tion biasing and feature modulation, rather than as mere pre- processing. A Multi-Resolution ALE Bank aggregates three parallel NLMS filters at distinct decorrelation delays, while a Confidence-Guided Cross-Path block couples event and noise streams via gated cross-attention. On the Audio-Polygraphy Dataset for Sleep Apnea Analysis, ACF-SED achieves state- of-the-art detection across Event-F1, Segment-F1, and PSDS, enabling end-to-end AHI estimation.",
+  "abstractSha256": "197048c8d2fdc80dc3960bd31975cacde981c6e182ba1820d2866bc6492cff3a",
+  "arxivId": "2610.15532",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.15532v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "自适应滤波",
+    "primaryTask": "音频事件检测",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.event-detection",
+          "label": "音频事件检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.adaptive-filtering",
+          "label": "自适应滤波"
+        },
+        {
+          "facet": "method",
+          "id": "method.attention",
+          "label": "注意力机制"
+        },
+        {
+          "facet": "application",
+          "id": "application.medical",
+          "label": "医疗音频"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "自适应滤波",
+      "primaryMethodId": "method.adaptive-filtering",
+      "primaryTask": "音频事件检测",
+      "primaryTaskId": "task.event-detection",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chanwoo Park"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chanwoo Kim"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对仅用环境音频检测鼾声、低通气和阻塞性呼吸暂停并估计 AHI 的问题，论文提出把多分辨率自适应线增强器的置信图直接送入注意力偏置和特征调制，在 APSAA 上取得 Event-F1 0.7105 的最好结果，代价是三路滤波加双流建模带来额外计算和单中心小样本的适用限制。",
+  "originalTitle": "Sleep Sound Event Detection Powered by Learnable Multi-Resolution Adaptive Line Enhancer",
+  "pdfUrl": "https://arxiv.org/pdf/2610.15532v1.pdf",
+  "readerTitle": "只用麦克风做睡眠事件检测：自适应滤波的内部状态如何进入注意力",
+  "schemaVersion": 2
+}

@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.13175v1",
+  "arxivId": "2610.13175",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.13175v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kentaro Onda"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Satoru Fukayama"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Daisuke Saito"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nobuaki Minematsu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.13175v1",
+  "originalTitle": "How Should We Evaluate Naturalness for Synthetic Speech with a Foreign Accent?",
+  "pdfUrl": "https://arxiv.org/pdf/2610.13175v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

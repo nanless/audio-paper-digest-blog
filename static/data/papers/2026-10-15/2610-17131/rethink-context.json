@@ -1,0 +1,109 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.17131v1",
+  "abstract": "Dynamic spatial audio reasoning requires a model to associate changing acoustic observations with the correct source and recover its spatial state at a queried time or interval, a challenge intensified by overlapping speech and source motion. To study this problem, we introduce Sonic-Bench, comprising 2.8K first-order Ambisonics clips and 28.8K target-specific question-answer pairs across 480 simulated indoor scenes. The benchmark covers localization, distance estimation, and motion reasoning in single- and dual-source settings. We further propose SonicWorld, which integrates physical, learned acoustic, and semantic features into persistent source states through learned transitions and recurrent updates, and projects them into an Omni LLM for spatial reasoning. Compared with Spatial-Omni on the Sonic-Bench test split, SonicWorld improves direction accuracy from 31.98% to 34.69% and reduces azimuth error from 57.22° to 48.01°. In zero-shot transfer to Spatial LibriSpeech, SonicWorld retains strong localization performance, achieving 73.98% direction accuracy and 19.29° azimuth error, compared with 27.14% and 70.74° for Spatial-Omni.",
+  "abstractSha256": "58f24966b4c580de709d2e8c5398d91ec4c50eca14f262a83804bc37bab12e25",
+  "arxivId": "2610.17131",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.17131v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "状态空间模型",
+    "primaryTask": "音频问答",
+    "rankBucket": "前25%",
+    "score": 8.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-question-answering",
+          "label": "音频问答"
+        },
+        {
+          "facet": "task",
+          "id": "task.localization",
+          "label": "声源定位"
+        },
+        {
+          "facet": "method",
+          "id": "method.state-space",
+          "label": "状态空间模型"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "状态空间模型",
+      "primaryMethodId": "method.state-space",
+      "primaryTask": "音频问答",
+      "primaryTaskId": "task.audio-question-answering",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chenlong Wei"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hanling Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mingjin Lou"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yufan Shi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yandong Sun"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sheldon Yu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiaohui Zhu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiaobo Jin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yiwei Wang"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对重叠与运动下指定声源在指定时刻位置难定位的问题，SonicWorld 用持续声源状态组织声学证据，在 Sonic-Bench 上把单声源方向准确率从 43.75% 提升到 50.00%，代价是需要完整片段离线推理与两阶段微调。",
+  "originalTitle": "SonicWorld: Source-Centric Latent Dynamics for Spatial Audio Reasoning",
+  "pdfUrl": "https://arxiv.org/pdf/2610.17131v1.pdf",
+  "readerTitle": "把重叠语音对准到声源：SonicWorld 如何做空间问答",
+  "schemaVersion": 2
+}

@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.15059v1",
+  "abstract": "Current state-of-the-art Speech Emotion Recognition (SER) systems rely on lots of training data, which is available only for a few languages such as English. For low-resource languages, using a cross-lingual model or adapting it to the target language might be an alternative to training a mono-lingual model from scratch. However, it is not clear what constitutes a \"low-resource\", i.e. where model adaptation loses its edge over the mono-lingual approach. We investigate this topic by training and adapting several SER models on English and Mandarin data, focusing on the emotional attributes of arousal, valence and dominance. Our results show that, for arousal, model adaptation is beneficial even with two hours of data, while for valence 10-20 hours of adaptation material is required to match the performance of a mono-lingual model trained with 100 hours of data. This indicates that task-specific model adaptation may be an effective approach in low-resource speech emotion recognition problems.",
+  "abstractSha256": "fd87e010ce8e3e458bdc2ed55d66e34d87e6159357b8c1f6eaf91da33fe3a1ea",
+  "arxivId": "2610.15059",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.15059v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "迁移学习",
+    "primaryTask": "语音情感识别",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.emotion-recognition",
+          "label": "语音情感识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.transfer",
+          "label": "迁移学习"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.cross-lingual",
+          "label": "跨语言"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.low-resource",
+          "label": "低资源"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "迁移学习",
+      "primaryMethodId": "method.transfer",
+      "primaryTask": "语音情感识别",
+      "primaryTaskId": "task.emotion-recognition",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Dániel Halmai"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Gábor Gosztolya"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文用约 100 小时英语 MSP-Podcast 训练的 WavLM Large 模型，再用 1 到 20 小时汉语普通话 BIIC-Podcast 做适应，与只用汉语普通话从头训练对比，发现唤醒度只需 2 小时即可追平 100 小时单语模型，而效价需要 20 小时，代价是小数据下直接训练不稳定且效价与优势度整体更难预测。",
+  "originalTitle": "How Language-Independent Are Emotional Attributes? A Study on Training Data Scaling and Cross-Lingual Generalization",
+  "pdfUrl": "https://arxiv.org/pdf/2610.15059v1.pdf",
+  "readerTitle": "情绪维度有多语言无关？英语到汉语普通话的缩放与跨语言适应",
+  "schemaVersion": 2
+}

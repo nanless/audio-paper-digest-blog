@@ -1,0 +1,145 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.16076v1",
+  "abstract": "Nonverbal vocalizations (NVVs), such as laughter and sighs, convey meaning alongside words. NVV-aware speech systems must recognize and generate these events while preserving lexical accuracy and perceptual quality. Yet differences in annotation, resources, and evaluation complicate comparisons, and aggregate scores can obscure specific weaknesses. We review ten system descriptions from the NVVSpeech Challenge 2026, covering understanding and generation in Chinese and English across 16 event categories. Our analysis examines supervision construction, task adaptation, and inference-time or preference-based feedback. Results reveal persistent recognition difficulties with breath and gasp and trade-offs between event recognition and lexical accuracy, as well as between generation intelligibility and acoustic quality, with human listening providing complementary evaluation evidence. These findings identify priorities for advancing NVV-aware speech understanding, controllable generation, and comparable evaluation.",
+  "abstractSha256": "f84387e93ba57f5666beb8d223ca0d619f780933534102ec051d8948a16d9afd",
+  "arxivId": "2610.16076",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.16076v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Liumeng Xue"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuang Cao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jingbin Hu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Qirui Zhan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Huakang Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yibin Zheng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yunxiang Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Houdun Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Su Feng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Haibin Wu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zheng Lian"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wei Xue"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bengu Wu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hui Bu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lei Xie"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "NVVSpeech 挑战赛用中英双语 16 类非言语发声的统一任务比较了理解与可控生成的十个系统，发现呼吸与喘息最难、事件控制与字词保真存在权衡，自动评分与人工听感并不完全一致。",
+  "originalTitle": "The NVVSpeech Challenge 2026: Overview and Lessons for Speech Understanding and Generation with Nonverbal Vocalizations",
+  "pdfUrl": "https://arxiv.org/pdf/2610.16076v1.pdf",
+  "readerTitle": "笑声、叹息也要听懂和生成：NVVSpeech 挑战赛在做什么",
+  "schemaVersion": 2
+}

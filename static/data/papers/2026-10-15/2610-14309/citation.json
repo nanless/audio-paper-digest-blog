@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.14309v1",
+  "arxivId": "2610.14309",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.14309v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Cihan Xiao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuan Tseng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Matthew Wiesner"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Desh Raj"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Leibny Paola Garcia Perera"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sanjeev Khudanpur"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "David Harwath"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.14309v1",
+  "originalTitle": "ASSET: Adaptive Speech Segmentation via Reinforcement Learning",
+  "pdfUrl": "https://arxiv.org/pdf/2610.14309v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,72 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.14659v1",
+  "abstract": "Streaming speech assistants can launch tools before users finish speaking, overlapping execution with incoming speech to reduce user waiting time. However, subsequent self-corrections can invalidate apparently stable arguments, causing stale execution whose irreversible effects persist even after the final call is corrected. We propose Repair-Aware Semantic Survival Gating (RASSG) to jointly control tool launch and cancellation during streaming speech. RASSG launches a tool when three consecutive speech recognition results arrive with identical nonempty arguments, then combines calibrated argument invalidity risk with execution costs to decide cancellation at the last feasible opportunity before effects become irreversible. Evaluation on ReCAST, FDB-v3, and Audio2Tool uses a controlled execution clock with fixed tool runtimes and cancellation parameters. On ReCAST's prospective-repair subset, RASSG reduces the stale execution rate from LocalAgreement-2's 50.00% to 3.15%, with a mean delay of 3.676s across successful trajectories. The stale reduction also holds against every early-execution baseline on both public speech datasets. Ablations with identical initial launches support active cancellation, showing the value of controlling ongoing calls before their effects become irreversible. Code and data are available at https://github.com/daijinhu/RASSG.",
+  "abstractSha256": "93630a27bafe82561f76441e80b17cd339bd0f89ed3ac9012b2e0829866927b5",
+  "arxivId": "2610.14659",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.14659v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "不确定性估计与校准",
+    "primaryTask": "语音代理规划与工具使用",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.voice-agent-planning",
+          "label": "语音代理规划与工具使用"
+        },
+        {
+          "facet": "method",
+          "id": "method.uncertainty-estimation",
+          "label": "不确定性估计与校准"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "不确定性估计与校准",
+      "primaryMethodId": "method.uncertainty-estimation",
+      "primaryTask": "语音代理规划与工具使用",
+      "primaryTaskId": "task.voice-agent-planning",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Beihang University"
+      ],
+      "name": "Daijin Hu"
+    },
+    {
+      "affiliations": [
+        "Beihang University"
+      ],
+      "name": "Xi Wang"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "RASSG 针对流式语音中用户修正参数会导致已启动工具产生不可逆陈旧执行的问题，用三次识别一致启动加校准无效风险在最后可取消时刻否决继续执行，在受控执行时钟下把 ReCAST 修正子集的陈旧率从 50.00% 降到 3.15%，代价是保留 3.676 s 成功延迟并依赖固定工具时间假设。",
+  "originalTitle": "RASSG: Repair-Aware Semantic Survival Gating for Streaming Tool Execution",
+  "pdfUrl": "https://arxiv.org/pdf/2610.14659v1.pdf",
+  "readerTitle": "边说边执行又要能撤回：RASSG 如何处理语音中的自我修正",
+  "schemaVersion": 2
+}

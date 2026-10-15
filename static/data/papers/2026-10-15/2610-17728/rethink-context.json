@@ -1,0 +1,108 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.17728v1",
+  "abstract": "Egocentric multimodal assistants see through the user's eyes and guide what the user does next, so their outputs directly shape physical actions, including those that affect bystanders. Yet existing safety evaluations do not distinguish whom a response would harm, and score only whether a model refuses. Pooling all harms into one refusal rate hides two failures: a model may protect one target but not another, and it may refuse without understanding the risk, or understand it and comply anyway. We present STOU, a benchmark of 2,902 egocentric video-audio and video-text queries whose potential harm targets the user (Self), co-present individuals (The Others), or society at large (Others). Our evaluation decouples safety understanding from refusal behavior: beyond refusal, we score whether the model recognizes the user's intent, the presence and target of harm, and its downstream consequences. Across 10 open and closed source omnimodal and multimodal LLMs, we find that refusal varies systematically with the harm target, and that models often recognize a harm yet still assist with it. These results show that refusal rates alone cannot certify an assistant as safe, and that safety alignment must account for who would be harmed. Project page: https://onedayoneyeah.github.io/safety-for-whom",
+  "abstractSha256": "9e576a8864d84ff3812ac9732a41fa633607ab3623ad0ee360a870559882df1a",
+  "arxivId": "2610.17728",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.17728v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "音视频问答",
+    "rankBucket": "前50%",
+    "score": 6.4,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-question-answering",
+          "label": "音视频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.evaluation",
+          "label": "模型评估"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "音视频问答",
+      "primaryTaskId": "task.av-question-answering",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yewon Han"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jisu Jeon"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Suhyun Choi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Juan Yeo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Minsoo Jo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Gihoon Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hyunggyu Lim"
+    },
+    {
+      "affiliations": [
+        "Graduate School of Data Science, Seoul National University"
+      ],
+      "name": "Taesup Kim"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文针对第一视角助手只看拒答率会掩盖伤害对象差异与不懂装拒问题，提出 2,902 条视频加语音查询的 STOU 基准并分离测试拒答与理解，发现理解后仍协助与对佩戴者伤害最弱是主要代价。",
+  "originalTitle": "Safety for Whom? Benchmarking Understanding Beyond Refusal in Egocentric Multimodal Assistants",
+  "pdfUrl": "https://arxiv.org/pdf/2610.17728v1.pdf",
+  "readerTitle": "为谁的安全？第一视角助手的拒绝与理解",
+  "schemaVersion": 2
+}

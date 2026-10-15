@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.18587v1",
+  "arxivId": "2610.18587",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.18587v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Newcastle University, Newcastle upon Tyne, United Kingdom"
+      ],
+      "name": "Ting Zhu"
+    },
+    {
+      "affiliations": [
+        "Newcastle University, Newcastle upon Tyne, United Kingdom"
+      ],
+      "name": "Huizhi Liang"
+    },
+    {
+      "affiliations": [
+        "Newcastle University, Newcastle upon Tyne, United Kingdom"
+      ],
+      "name": "Boguslaw Obara"
+    },
+    {
+      "affiliations": [
+        "Taiyuan University of Technology, Shanxi, China"
+      ],
+      "name": "Shufei Duan"
+    },
+    {
+      "affiliations": [
+        "Newcastle University, Newcastle upon Tyne, United Kingdom"
+      ],
+      "name": "Varun Ojha"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.18587v1",
+  "originalTitle": "GeoMER: A Joint Euclidean-Hyperbolic Geometry Framework for Multimodal Emotion Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2610.18587v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

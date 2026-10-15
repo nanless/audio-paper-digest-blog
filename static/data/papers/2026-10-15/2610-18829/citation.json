@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.18829v1",
+  "arxivId": "2610.18829",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.18829v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xuyang Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shihao Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xinyu Wei"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Minghan Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zeqing Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zuhao Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zichen Wen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lei Zhang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.18829v1",
+  "originalTitle": "OmniCompass: A Holistic Benchmark for Omni-Modal Video Grounding and Understanding",
+  "pdfUrl": "https://arxiv.org/pdf/2610.18829v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

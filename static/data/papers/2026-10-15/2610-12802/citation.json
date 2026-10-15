@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.12802v1",
+  "arxivId": "2610.12802",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.12802v1",
+  "authors": [
+    {
+      "affiliations": [
+        "People Make Things"
+      ],
+      "name": "Arya Bastani"
+    },
+    {
+      "affiliations": [
+        "People Make Things"
+      ],
+      "name": "Iman Modarressi"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.12802v1",
+  "originalTitle": "People Making Conversation: Evaluating How Naturally Speech Models Converse",
+  "pdfUrl": "https://arxiv.org/pdf/2610.12802v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

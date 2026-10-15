@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.16273v1",
+  "abstract": "Speech timing is fundamental for speech models to recognize words accurately, but how word-timing information is represented in speech models remains underexplored. We study this question using the framework of representational geometry, which investigates whether and how concepts are represented in low-dimensional subspaces of the representation space. Prior work in cognitive neuroscience has shown that when HuBERT feature sequences are averaged across words of the same duration, they form near-circular trajectories from word onset to word offset in a two-dimensional \"temporal subspace.\" Here we show that this circular structure of word timing is a general property of deep speech representations, by demonstrating its emergence in nine additional speech models covering both supervised and self-supervised. We then move beyond averaged word segments and show that in HuBERT, the circular trajectories are consistent enough at the level of individual words to perform word segmentation. Our approach, Rotary Segmentation (RoSeg), achieves 64.3% boundary F-score on Librispeech by detecting word boundaries when cycles complete in the temporal subspace. Although supervision is needed to identify a good subspace, nevertheless this result demonstrates much stronger implicit word knowledge in HuBERT than has previously been shown.",
+  "abstractSha256": "e0ac83bc0dcdb927c71f3739e74df3601f13af9a638c8dbbb8c225ea0f61db2d",
+  "arxivId": "2610.16273",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.16273v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "统计分析",
+    "primaryTask": "语音属性识别",
+    "rankBucket": "前50%",
+    "score": 6.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-attributes",
+          "label": "语音属性识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.interpretability",
+          "label": "可解释性"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "统计分析",
+      "primaryMethodId": "method.statistical-analysis",
+      "primaryTask": "语音属性识别",
+      "primaryTaskId": "task.speech-attributes",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Burin Naowarat"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hao Tang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sharon Goldwater"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文用平均词段的二维投影发现圆周式词计时轨迹，再用旋转切分在 HuBERT 第 9 层上以 64.3% 边界 F1 和 39.8% 词 F1 切分出单个词，而未训练模型与对数梅尔特征不能做到同等实例级切分。",
+  "originalTitle": "Deep Speech Representations Track Word Timing along a Low-Dimensional Circular Trajectory",
+  "pdfUrl": "https://arxiv.org/pdf/2610.16273v1.pdf",
+  "readerTitle": "深层语音表征如何用二维圆周跟踪词内时间",
+  "schemaVersion": 2
+}

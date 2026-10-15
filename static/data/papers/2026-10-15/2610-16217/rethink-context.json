@@ -1,0 +1,103 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.16217v1",
+  "abstract": "Temporal audio grounding requires locating every occurrence of a queried target, making both occurrence counts and interval boundaries essential. We propose RefTAG, a post-training framework for verifiable temporal self-correction. Its Reflection Chain-of-Thought (Re-CoT) protocol combines draft intervals, discrete count and boundary actions, and revised intervals in one response. Supervised fine-tuning on these trajectories (Re-CoT-SFT) teaches the protocol; reinforcement learning (RL) jointly rewards final localization and revision outcomes. Across 8,228 queries, Re-CoT-SFT improves query-weighted mIoU over final-answer SFT by 1.74 percentage points. RL further improves TAG-Bench multi-target mIoU by 0.40 points and R@0.5 by 0.86 points. The final model achieves 38.50% TAG-Bench mIoU and 51.01% mean mIoU across three datasets, outperforming the evaluated open-source MOSS-Audio and FireRedAudio models and the commercial Gemini-3.1-Pro on both measures. These results demonstrate that explicitly coupling count- and boundary-aware revision with joint reward optimization provides an effective and verifiable path to temporal audio grounding.",
+  "abstractSha256": "44ee330bbaa0011358a71072026446cc591732207ed1e88f3b7ffc3205b77ca7",
+  "arxivId": "2610.16217",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.16217v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "强化学习",
+    "primaryTask": "音频时间定位",
+    "rankBucket": "前50%",
+    "score": 6.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.temporal-grounding",
+          "label": "音频时间定位"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-reasoning",
+          "label": "音频推理"
+        },
+        {
+          "facet": "method",
+          "id": "method.reinforcement",
+          "label": "强化学习"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.audio-language",
+          "label": "音频大模型"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "强化学习",
+      "primaryMethodId": "method.reinforcement",
+      "primaryTask": "音频时间定位",
+      "primaryTaskId": "task.temporal-grounding",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuhang Dai"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xin Shu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhennan Lin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mingchen Shao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chengyou Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiangang Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jianwei Yu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lei Xie"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对自然语言查询在音频中所有出现位置都要找全找准的问题，RefTAG 让模型先写草稿区间再做数量与边界诊断并给出修订，并用最终定位质量与修订效果的联合奖励做强化学习，在 8228 条查询上把平均定位精度做到 51.01%，代价是一次回答要走完草稿加诊断加修订的完整结构。",
+  "originalTitle": "RefTAG: Reflection-aware Temporal Audio Grounding in Large Audio Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2610.16217v1.pdf",
+  "readerTitle": "先给草稿再自我修正：RefTAG 如何做语音中的时间定位",
+  "schemaVersion": 2
+}

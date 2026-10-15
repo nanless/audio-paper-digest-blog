@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.16196v1",
+  "abstract": "Automatic Speech Recognition (ASR) systems are commonly designed to transcribe linguistic content independently of speaker identity. However, speaker-specific information can persist within the latent representations of ASR models, raising privacy concerns when training data includes sensitive individuals. While machine unlearning has been studied in several speech tasks, applying speaker unlearning to ASR remains challenging due to the strong entanglement of linguistic and speaker-related information in speech representations. In this work, we conduct a layer-wise analysis of Self-Supervised Learning (SSL) based ASR representations, revealing that speaker identity is primarily encoded in intermediate encoder layers. Based on this observation, we explore a feature-level unlearning strategy that targets these identity structures. Experiments on the VCTK corpus show that the proposed approach removes the influence of specific speakers while maintaining robust transcription performance.",
+  "abstractSha256": "e7107b0282ce7e792b2a54942fe315419dba1e56d6d51edccdaa1af431fff3b5",
+  "arxivId": "2610.16196",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.16196v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "正则化",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 5.9,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "task",
+          "id": "task.privacy-attack-defense",
+          "label": "音频隐私攻击与防御"
+        },
+        {
+          "facet": "method",
+          "id": "method.regularization",
+          "label": "正则化"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "正则化",
+      "primaryMethodId": "method.regularization",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Seaone Ok"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Seungu Han"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Eungbeom Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kyogu Lee"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文针对语音识别隐表示残留说话人痕迹的隐私问题，提出在第 6 层辅助嵌入上先聚类找质心再推离的 SAID 方法，在 VCTK 上以遗忘集成员推断 52.6% 接近重训练金模型 52.7% 为最强证据，代价是保留集词错误率高于微调类基线。",
+  "originalTitle": "Towards Privacy-Preserving ASR: Speaker-Level Machine Unlearning",
+  "pdfUrl": "https://arxiv.org/pdf/2610.16196v1.pdf",
+  "readerTitle": "让语音识别忘记特定说话人同时还能正常转写",
+  "schemaVersion": 2
+}

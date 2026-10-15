@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.14961v1",
+  "abstract": "We present HiPAD, a single fusion network submitted to all six sub-tracks of the MPDD-AVG 2026 depression-detection challenge, covering the Elder and Young cohorts and three modality sets (gait, audio-visual, and both), each combined with personality descriptions. The network encodes each available modality with a shared BiLSTM, zero-pads absent modalities, and applies cross-modal attention only when at least two of gait, audio and video are present. Personality, which dominates our results, is kept out of the attention and fused by concatenation. Because the architecture is identical in every sub-track, differences between them reflect the data rather than the model, and we use this to study three questions. Our main finding is that the personality description, roughly 150 tokens about who the subject is, carries more depression signal than audio, video, and gait combined: gait plus personality alone (TLS 0.647) beats every configuration that includes audio and video. First, a four-level ablation of the personality description (L0-L3) quantifies this: removing every personality-derived feature, including the Big Five scores that earlier MPDD ablations keep, lowers the Track-Level Score by 0.499 to 0.507 and leaves the model at chance. Second, domain-adapting the personality encoder with LoRA (7B) or QLoRA (72B) on PHQ-8/9 data raises binary Cohen's $κ$ by 0.13 but lowers the overall score by distorting the PHQ-9 regression; a frozen RoBERTa-large encoder does better at this sample size. Third, at fixed architecture, handcrafted clinical features (eGeMAPS, OpenFace action units) outperform generic deep features (wav2vec2, DenseNet) on the audio-visual tracks. The unified system reaches a cross-track G-Score of 0.482; with under 100 subjects per cohort, the limiting factors are the size of the representation and the calibration of the outputs, not the choice of architecture.",
+  "abstractSha256": "2a5b34205b6c1c552a1904ad15b9be87fe09789896728791267dab9add884a06",
+  "arxivId": "2610.14961",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.14961v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "病理语音评估",
+    "rankBucket": "前50%",
+    "score": 5.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.pathological-speech",
+          "label": "病理语音评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "application",
+          "id": "application.mental-health",
+          "label": "精神健康筛查"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.llm",
+          "label": "大语言模型"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "病理语音评估",
+      "primaryTaskId": "task.pathological-speech",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Kozminski University, Warsaw, Poland",
+        "WarsawIQ, Warsaw, Poland"
+      ],
+      "name": "Karol Chlasta"
+    },
+    {
+      "affiliations": [
+        "WarsawIQ, Warsaw, Poland"
+      ],
+      "name": "Piotr Struzik"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文用同一 BiLSTM 融合结构参加六个步态与音视频抑郁检测子赛道，发现约 150 词的人格描述带来约 0.5 的赛道分提升，而领域微调大模型虽提高二分类一致性却破坏 PHQ-9 回归校准，在每队列不足百人时小容量加深集成更稳妥。",
+  "originalTitle": "HiPAD: A Unified Gait, Audio-Visual, and Personality Fusion Network for Depression Detection, with a Hierarchical Personality Ablation and the Calibration Limits of Domain-Adapted LLMs",
+  "pdfUrl": "https://arxiv.org/pdf/2610.14961v1.pdf",
+  "readerTitle": "HiPAD：用同一融合网络看清人格描述在抑郁检测中的分量",
+  "schemaVersion": 2
+}

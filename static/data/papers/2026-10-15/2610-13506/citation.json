@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.13506v1",
+  "arxivId": "2610.13506",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.13506v1",
+  "authors": [
+    {
+      "affiliations": [
+        "the College of Intelligence and Computing, Tianjin University, Tianjin 300350, China"
+      ],
+      "name": "Sen Zhang"
+    },
+    {
+      "affiliations": [
+        "the College of Intelligence and Computing, Tianjin University, Tianjin 300350, China"
+      ],
+      "name": "Xianghu Yue"
+    },
+    {
+      "affiliations": [
+        "ASUS Intelligent Cloud Services, Singapore 486030"
+      ],
+      "name": "Yiming Chen"
+    },
+    {
+      "affiliations": [
+        "the College of Intelligence and Computing, Tianjin University, Tianjin 300350, China"
+      ],
+      "name": "Wenhuan Lu"
+    },
+    {
+      "affiliations": [
+        "the College of Intelligence and Computing, Tianjin University, Tianjin 300350, China"
+      ],
+      "name": "Jianguo Wei"
+    },
+    {
+      "affiliations": [
+        "the School of Artificial Intelligence, The Chinese University of Hong Kong, Shenzhen, Guangdong 518172, China, also with the Department of Electrical and Computer Engineering, National University of Singapore, Singapore 117583"
+      ],
+      "name": "Haizhou Li"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.13506v1",
+  "originalTitle": "Lossless Inference Acceleration for ASR via EAGLE-Style Speculative Decoding",
+  "pdfUrl": "https://arxiv.org/pdf/2610.13506v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.14673v1",
+  "abstract": "User-generated audio collections frequently contain textual metadata such as titles, tags, and descriptions. Effectively leveraging these complementary fields requires accounting for both field het erogeneity and varying semantic relevance relative to the acoustic content. We propose FAM-Gate, a two-stage framework for metadata-enriched audio classification. In the first stage, field-aware metadata-view attention dynamically aggregates multiple metadata views using audio-guided weighting, explicit field-identity embeddings, a shared identity-initialized projection, and mean-anchored regularized aggregation. In the second stage, a prior-constrained vector gate performs bounded, dimension-wise fusion of audio and metadata representations centered around an acoustic prior. Ex periments on BSD10K, BSD35K, and FSD50K show consistent improvements in both hierarchical single-label and multi-label classification. Compared with matched random-view scalar-fusion base lines, FAM-Gate improves the hierarchical F-score by 2.53 and 5.72 percentage points on BSD10K and BSD35K, respectively, while increasing macro mAP and macro F1 by 5.07 and 10.25 percentage points on FSD50K.",
+  "abstractSha256": "018cdec107e4b9e0c760701ef423379982f8b87c2131768c9806f13c2b9f1148",
+  "arxivId": "2610.14673",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.14673v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 5.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.attention",
+          "label": "注意力机制"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiangyu Jing"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hongqing Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Liming Shi"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对标题标签描述字段结构与噪声不同以及单标量融合不区分通道的问题，FAM-Gate 用音频引导的字段注意力先聚合元数据，再用以音频为先验的向量门按维度融合，在 BSD 与 FSD50K 的匹配五种子评测中提升层级与宏平均指标，代价是总参数增加约 0.19% 与每样本多编码三个文本视图。",
+  "originalTitle": "FAM-gate: field-aware metadata attention with prior-constrained vector gating for audio classification",
+  "pdfUrl": "https://arxiv.org/pdf/2610.14673v1.pdf",
+  "readerTitle": "带字段元数据的音频分类：先按录音选字段，再按维度融合声语义",
+  "schemaVersion": 2
+}

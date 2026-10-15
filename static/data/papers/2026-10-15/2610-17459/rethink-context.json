@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.17459v1",
+  "abstract": "We present a perceptual audio coder in which the entropy-coding model and the bit allocation co-adapt across blocks without model side information. Mantissas are coded by a hybrid of bit packing and arithmetic coding with per-band probability models learned online. Encoder and decoder accumulate identical histograms from decoded blocks and advance the same model state. The model enters bit allocation directly: per-band rate--distortion frontiers combine measured perceptual distortion with entropy-coded rate estimates under the current model, and a dynamic program attains the exact minimum of total objective perceptual distortion for each block's budget under the model's rate estimates, with reservoir carry-over. Under a strict per-block rate, entropy-coding-aware bit allocation lowers this distortion (band noise-to-mask ratio in linear scale) by 15-24% relative to the same solver without it, and co-adaptation removes a further 3-4% (up to 15% on oboe) that a backward-adaptive coder alone cannot realize in one pass; a MUSHRA test at 80 kbps per channel confirms the ranking.",
+  "abstractSha256": "0bdc335183f8f7a88e8996a49c6cb42c71705a5a11c48f30faf9125dc9d7ae1d",
+  "arxivId": "2610.17459",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.17459v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "音频编码",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-coding",
+          "label": "音频编码"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-quality",
+          "label": "音频质量评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.subjective-evaluation",
+          "label": "主观评测"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "音频编码",
+      "primaryTaskId": "task.audio-coding",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Soohyun Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jiwon Jeong"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Marina Bosi"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "该论文把随解码数据在线学习的熵编码代价直接送入感知比特分配，用动态规划在块预算下求最小总噪声掩蔽比，并用严格按块与带储备的对照分离出熵感知与协同适应的增量，代价是动态规划编码端约 20 倍于拉格朗日方法的计算量。",
+  "originalTitle": "Co-Adaptive Entropy Modeling and Rate-Distortion-Optimal Bit Allocation for Perceptual Audio Coding",
+  "pdfUrl": "https://arxiv.org/pdf/2610.17459v1.pdf",
+  "readerTitle": "熵模型与比特分配如何同一步调适应：一种感知音频编码的闭环设计",
+  "schemaVersion": 2
+}

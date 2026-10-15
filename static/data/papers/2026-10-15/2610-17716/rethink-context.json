@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.17716v1",
+  "abstract": "Electrolaryngeal (EL) speech suffers from severe acoustic mismatches with normal speech, resulting in degraded naturalness and intelligibility. These mismatches also make sequence-to-sequence voice conversion struggle to learn robust intermediate representations, hindering EL-speech-to-normal-speech conversion (EL2SP) performance. To address this, we propose a novel multimodal contrastive representation learning framework to 1) achieve richer multimodal-representation learning, and 2) facilitate the transferability of multimodal representations to speech-only EL2SP. First, EL speech and text representations are fused to learn multimodal representations for target speech generation, during which cross-modal contrastive learning is employed to encourage a semantically consistent speech--text representation space. Next, the fused representations are treated as a fixed target to guide speech-only representation learning through cross-stage contrastive learning, enabling multimodal knowledge to be transferred to the EL2SP task while preserving architectural and inference simplicity. Experimental results demonstrate that the proposed method consistently outperforms both the speech-only and multimodal-based baselines.",
+  "abstractSha256": "014bb81e63eb4d7e93a84418af31a1420dca3449be621678d378c66a3278d182",
+  "arxivId": "2610.17716",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.17716v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "对比学习",
+    "primaryTask": "语音转换",
+    "rankBucket": "前50%",
+    "score": 5.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.voice-conversion",
+          "label": "语音转换"
+        },
+        {
+          "facet": "method",
+          "id": "method.contrastive",
+          "label": "对比学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "对比学习",
+      "primaryMethodId": "method.contrastive",
+      "primaryTask": "语音转换",
+      "primaryTaskId": "task.voice-conversion",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ding Ma"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jinyi Mi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jiajun He"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kazuhiro Kobayashi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Naoki Nishio"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tomoki Toda"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对电子喉语音与正常语音差异大导致序列到序列转换表示不稳的问题，论文用第一阶段语音文本对比对齐加融合、第二阶段把融合表示作为固定教师蒸馏给纯语音编码器的方法，在两个小规模日语患者数据集上优于纯语音和普通多模态基线，但结论只在原文的数据划分、合成数据增强和评价工具条件下成立。",
+  "originalTitle": "Multimodal Contrastive Representation Learning Based Voice Conversion for Electrolaryngeal Speech Enhancement",
+  "pdfUrl": "https://arxiv.org/pdf/2610.17716v1.pdf",
+  "readerTitle": "用语音加文本的两阶段对比学习改善电子喉语音转换",
+  "schemaVersion": 2
+}

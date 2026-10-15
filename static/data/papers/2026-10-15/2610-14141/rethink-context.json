@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.14141v1",
+  "abstract": "Modern generative audio can fabricate not only voices but also the acoustic environments that provide evidence of when and where speech occurred. This capability undermines a longstanding forensic assumption that background sound provides reliable evidence of a recording's provenance. Yet existing detectors produce only a single real-or-synthetic verdict, leaving analysts unable to determine whether the voice, the environment, or both were manipulated. In this paper, we propose a component-level forensic detector, namely TruMix, which classifies recordings into eight categories spanning the presence and authenticity of speech and background. TruMix has a unique multi-path architecture that jointly analyzes speech-oriented and background-oriented spectral evidence, contextual information from the mixed waveform, and low-level synthesis artifacts. This design avoids the artifact propagation inherent in conventional separate-then-detect pipelines while enabling generalization across independent speech and environmental-sound generators. We also curated MixedTruth, a 4,917-hour benchmark covering all eight categories under diverse mixing conditions. Extensive experiments show that TruMix achieves 98.51% AUC for component-level attribution, significantly outperforms ten state-of-the-art synthetic-speech detectors in conventional binary classification, and exhibits strong robustness across four attack tiers.",
+  "abstractSha256": "a459070e8f95d1de9ff7cdcfe80aebca43b957d3ab60957ced5b1811ceb7091d",
+  "arxivId": "2610.14141",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.14141v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "Transformer",
+    "primaryTask": "音频深度伪造检测",
+    "rankBucket": "前50%",
+    "score": 7.4,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-deepfake",
+          "label": "音频深度伪造检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.transformer",
+          "label": "Transformer"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "Transformer",
+      "primaryMethodId": "method.transformer",
+      "primaryTask": "音频深度伪造检测",
+      "primaryTaskId": "task.audio-deepfake",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Vanderbilt University"
+      ],
+      "name": "Xindong Zheng"
+    },
+    {
+      "affiliations": [
+        "Vanderbilt University"
+      ],
+      "name": "Jiashu Zhu"
+    },
+    {
+      "affiliations": [
+        "Vanderbilt University"
+      ],
+      "name": "Ke Li"
+    },
+    {
+      "affiliations": [
+        "Vanderbilt University"
+      ],
+      "name": "Dan Lin"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文把混合音频的取证从整段二分类扩展为语音与背景各自的存在与真假八分类，用分离引导加混合波形与伪影证据联合推理的 TruMix 在 MixedTruth 上达到宏平均 AUC 约 98.51%，代价是约 98.8M 参数的多路 Transformer 与结构化推理流程。",
+  "originalTitle": "MixedTruth: Component-Level Detection of Synthetic Speech and Synthetic Background in Mixed Audio",
+  "pdfUrl": "https://arxiv.org/pdf/2610.14141v1.pdf",
+  "readerTitle": "混合音频里谁真谁假：语音和背景分开验的 TruMix 解读",
+  "schemaVersion": 2
+}

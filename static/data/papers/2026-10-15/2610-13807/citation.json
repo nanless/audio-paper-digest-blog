@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.13807v1",
+  "arxivId": "2610.13807",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.13807v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Katsumi Ibaraki"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "David Chiang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.13807v1",
+  "originalTitle": "Error Rate is Not Enough: Costs of Augmentation in Low-Resource ASR",
+  "pdfUrl": "https://arxiv.org/pdf/2610.13807v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

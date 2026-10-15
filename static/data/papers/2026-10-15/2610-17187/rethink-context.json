@@ -1,0 +1,168 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.17187v1",
+  "abstract": "Continuous latent representations underlie recent diffusion-based lyrics-to-song and text-to-music systems, yet aligning lyric conditions with these latents remains difficult: existing systems resort to generator-side machinery such as sentence-level timestamps, auxiliary alignment objectives, or semi-autoregressive decoding, while the latents they predict are still produced by autoencoders trained purely for reconstruction. We address this difficulty from the representation side. We propose MSVAE (Music Semantic Variational Autoencoder), which structures its continuous latent around two complementary semantic streams: work-level compositional content and lyric-level linguistic-vocal content. Partitioned dual-stream alignment makes both streams explicit by aligning disjoint latent subspaces with frozen lead-sheet and ASR references, while a semantic-first gated residual posterior derives its base from a frozen music-SSL encoder and admits acoustic information only through gated, bounded corrections. MSVAE achieves competitive stereo reconstruction and stronger MARBLE probing than continuous-autoencoder baselines, and improves downstream lyrics-to-song and text-to-music generation. Notably, with only an untimed phoneme prefix and no lyric timing, MSVAE yields the lowest phoneme error rate, whereas all baseline representations require sentence-level alignment to produce intelligible vocals.",
+  "abstractSha256": "4eece230ac22b181ce3d2daf603907bc1f2d0bda461399e282e84d4b12e5d0d4",
+  "arxivId": "2610.17187",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.17187v1",
+  "assessment": {
+    "documentType": "模型报告",
+    "primaryMethod": "变分自编码器",
+    "primaryTask": "歌唱生成",
+    "rankBucket": "前50%",
+    "score": 7.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.singing",
+          "label": "歌唱生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.vae",
+          "label": "变分自编码器"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-coding",
+          "label": "音频编码"
+        },
+        {
+          "facet": "task",
+          "id": "task.music-understanding",
+          "label": "音乐分析"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "变分自编码器",
+      "primaryMethodId": "method.vae",
+      "primaryTask": "歌唱生成",
+      "primaryTaskId": "task.singing",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Guobin Ma"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuepeng Jiang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Dake Guo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Huakang Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuan Zhou"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lingxin Xiong"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wenkai Cheng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jingbin Hu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hanke Xie"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chunbo Hao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wenhao Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ziqian Ning"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jixun Yao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jian Zhao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhonglin Jiang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yong Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lei Xie"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Pengcheng Zhu"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "MSVAE 针对歌词与连续音频隐变量难对齐的问题，把 64 维隐变量切成两个 32 维子空间分别对齐曲谱与语音识别参考，并以冻结音乐自监督特征为后验基底加门控声学修正，在保持重建的同时用无时间标注的音素前缀实现可懂歌声，代价是两阶段大语料训练与多判别器联合优化。",
+  "originalTitle": "MSVAE: Rethinking Musical Semantics in Continuous Latent Spaces",
+  "pdfUrl": "https://arxiv.org/pdf/2610.17187v1.pdf",
+  "readerTitle": "MSVAE：把作曲内容和歌词内容分开组织的音乐语义变分自编码器",
+  "schemaVersion": 2
+}

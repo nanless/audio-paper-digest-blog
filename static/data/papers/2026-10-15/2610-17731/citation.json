@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.17731v1",
+  "arxivId": "2610.17731",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.17731v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kaishen Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yucheng Pan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xuehao Cui"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hanling Tian"
+    },
+    {
+      "affiliations": [
+        "University of Maryland, College Park"
+      ],
+      "name": "Heng Huang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.17731v1",
+  "originalTitle": "Understanding Machine Taste: Aesthetic Agreement Across Foundation Models in K-pop",
+  "pdfUrl": "https://arxiv.org/pdf/2610.17731v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

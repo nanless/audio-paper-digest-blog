@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.12958v1",
+  "abstract": "Diffusion-based TTS has demonstrated strong capability in emotional speech generation. However, existing emotion alignment methods primarily reinforce target emotional expressions while overlooking modeling of competing emotional modes, limiting fine-grained controllability. This issue becomes more pronounced under classifier-free guidance (CFG), which relies on contrasting conditional trajectories to shape generation. We propose Emotion Bidirectional Preference Optimization (Emo-BPO), a simple effective framework that jointly learns emotion-aligned and emotion-contrastive score functions from reordered same-text emotional pairs. Our method requires neither auxiliary reward models nor additional annotations, and can be seamlessly integrated into existing diffusion-based TTS systems to improve emotional controllability and expressiveness.",
+  "abstractSha256": "f61bdfb1ec8f2f9f179e53cc124f82df2a51c3362690434d56a1b1ac20b2cdd6",
+  "arxivId": "2610.12958",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.12958v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "扩散模型",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前50%",
+    "score": 6.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "task",
+          "id": "task.prosody-style-control",
+          "label": "韵律与风格控制"
+        },
+        {
+          "facet": "method",
+          "id": "method.diffusion",
+          "label": "扩散模型"
+        },
+        {
+          "facet": "method",
+          "id": "method.preference-optimization",
+          "label": "偏好优化"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "扩散模型",
+      "primaryMethodId": "method.diffusion",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jiacheng Shi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hongfei Du"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xinyuan Song"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Y. Alicia Hong"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yanfu Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ye Gao"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对扩散式情感合成只强化目标情绪而缺少对竞争情绪建模的问题，Emo-BPO 用同文本倒序情绪对联合学习对齐与对比两个分数分支并在推理时做对比引导，在 ESD 与 EmoVoiceDB 条件下提升了情绪与韵律相似度和主客观情绪准确率，而可懂度保持接近但未超过自回归大模型基线。",
+  "originalTitle": "Emo-BPO: Emotion Bidirectional Preference Optimization for Diffusion-based Emotional TTS",
+  "pdfUrl": "https://arxiv.org/pdf/2610.12958v1.pdf",
+  "readerTitle": "用双向偏好区分情绪：Emo-BPO 如何改进扩散式情感语音合成",
+  "schemaVersion": 2
+}

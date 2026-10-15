@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.15960v1",
+  "abstract": "Text-conditioned symbolic music generation has attracted growing interest with the development of generative models. Yet two questions remain underexplored: what aspects of music the conditioning text should describe, and how the corresponding data should be collected and trained to improve controllability and text-music alignment. We address these challenges with TASTE, a taxonomy-aware framework for symbolic music generation with a main focus on piano pieces. First, we introduce a taxonomy of musical elements that specifies how a piece can be captured through textual description in a musically grounded way. The taxonomy comprises a set of metadata tags (genre, emotion, section plan, etc.) together with a free-form description of music imagery. This structure decomposes textual input to match the generation goal more coherently and precisely. Second, we build a data pipeline for collecting, annotating, and retrieving public symbolic piano resources, yielding a corpus of 432K MIDI files labeled at multiple levels of granularity. Finally, we design a staged training procedure that leverages this multi-granularity data across two model families: an autoregressive model and a non-autoregressive diffusion model. Both objective and subjective evaluations show that our models achieve superior musical-element control, text-description alignment, and overall music quality. We will release the full pipeline, all annotated datasets, and the model checkpoints.",
+  "abstractSha256": "dc7cc19846f71150b0feca859496581345d5a1728001ee17442bd0d35622abb5",
+  "arxivId": "2610.15960",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.15960v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "自回归模型",
+    "primaryTask": "符号音乐生成",
+    "rankBucket": "前50%",
+    "score": 7.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.symbolic-music",
+          "label": "符号音乐生成"
+        },
+        {
+          "facet": "task",
+          "id": "task.music-structure-analysis",
+          "label": "音乐结构分析"
+        },
+        {
+          "facet": "method",
+          "id": "method.autoregressive",
+          "label": "自回归模型"
+        },
+        {
+          "facet": "method",
+          "id": "method.diffusion",
+          "label": "扩散模型"
+        },
+        {
+          "facet": "method",
+          "id": "method.dataset-curation",
+          "label": "数据集构建"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "自回归模型",
+      "primaryMethodId": "method.autoregressive",
+      "primaryTask": "符号音乐生成",
+      "primaryTaskId": "task.symbolic-music",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "University of California, San Diego",
+        "University of Rochester"
+      ],
+      "name": "Mingyang Yao"
+    },
+    {
+      "affiliations": [
+        "University of California, San Diego"
+      ],
+      "name": "Jingyue Huang"
+    },
+    {
+      "affiliations": [
+        "University of California, San Diego"
+      ],
+      "name": "Ke Chen"
+    },
+    {
+      "affiliations": [
+        "University of California, San Diego"
+      ],
+      "name": "Taylor Berg-Kirkpatrick"
+    },
+    {
+      "affiliations": [
+        "University of California, San Diego"
+      ],
+      "name": "Shlomo Dubnov"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "TASTE 把文字拆成标签、段落计划和意象三路条件，用三层弱监督数据和两类模型实现可控钢琴生成，在情感与结构对齐上提升明显，但伴奏与演奏风格仍受标签可靠性限制。",
+  "originalTitle": "TASTE: Taxonomy-Aware Symbolic Piano Generation from Textual Description",
+  "pdfUrl": "https://arxiv.org/pdf/2610.15960v1.pdf",
+  "readerTitle": "TASTE：用分类体系把文字意图变成可控的钢琴符号生成",
+  "schemaVersion": 2
+}

@@ -1,0 +1,97 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.14694v1",
+  "abstract": "Instruction-following text-to-speech (TTS) typically leaves voice design implicit, as conventional speaker embeddings encode reference audio rather than text-driven targets. We propose VoTSpeech, which decouples voice design from speech generation via an explicit intermediate voice latent. Built on a shared language model backbone, VoTSpeech first predicts a continuous voice latent from text instructions using a flow-based module. This latent serves as a shared condition for both the language model and the Acoustic DiT, guiding autoregressive sequence modeling and acoustic latent generation, respectively, before an audio VAE decoder converts the acoustic latents into waveforms. To capture speaker identity and complementary acoustic nuances, the voice latent is jointly supervised by speaker embeddings and temporally pooled audio VAE features. With task-specific adaptation, VoTSpeech performs strongly on InstructTTSEval-ZH, demonstrating competitive capabilities against strong open-source models while maintaining high naturalness. These results confirm that explicit voice latent design and its conditioning interface effectively empower text-driven voice design for controllable speech synthesis. Code, model, and audio samples are available at https://github.com/ywbn/VoTSpeech .",
+  "abstractSha256": "2d61e0f0b8401ccb644e4352fc77addce80d9453eb773100de959170b4b11083",
+  "arxivId": "2610.14694",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.14694v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "流匹配",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "task",
+          "id": "task.prosody-style-control",
+          "label": "韵律与风格控制"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.llm",
+          "label": "大语言模型"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "流匹配",
+      "primaryMethodId": "method.flow-matching",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wenbing Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Qihang Lu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zihan Sun"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Peilei Jia"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yingming Gao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ya Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jun Gao"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "VoTSpeech 针对纯文字指令缺显式声音目标的问题，用流匹配预测连续声音隐变量并双路引导大语言模型与声学扩散变换器，在中文指令评测的描述风格与角色扮演任务上占优，但结论只在同一中文训练与统一评判条件下成立，且推理多出声音采样开销。",
+  "originalTitle": "VoTSpeech: Decoupling Voice Design from Speech Generation in Instruction-Following TTS",
+  "pdfUrl": "https://arxiv.org/pdf/2610.14694v1.pdf",
+  "readerTitle": "先想好声音再说话：VoTSpeech 把声音设计与语音生成分开",
+  "schemaVersion": 2
+}

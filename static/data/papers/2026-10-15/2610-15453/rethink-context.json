@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.15453v1",
+  "abstract": "Neural audio codecs achieve remarkable performance but operate as closed ecosystems with rigidly co-trained encoderdecoder pairs, severely hindering interoperability. To resolve this, we propose BridgeCodec, a versatile framework that decouples these pairs by translating latent representations between mismatched, frozen endpoints. We formulate this cross-codec translation as a Schrödinger Bridge optimal transport problem, enabling robust mapping between disparate distributions without predefined noise priors. To efficiently capture longrange speech temporal dependencies, we integrate a Mambaenhanced U-Net architecture. We validate BridgeCodec on an extreme deployment scenario: mapping a lightweight 8 kHz source encoder directly to a 48 kHz target decoder at an ultralow bitrate of 1 kbps. Experimental results demonstrate that BridgeCodec achieves superior wideband reconstruction and high perceptual quality, successfully bridging heavily bottlenecked, heterogeneous codecs.",
+  "abstractSha256": "d48b4c3f08f03c103effec579d558ee35a3a66add9484788af817110ce44e3de",
+  "arxivId": "2610.15453",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.15453v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "扩散模型",
+    "primaryTask": "语音编码",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-coding",
+          "label": "语音编码"
+        },
+        {
+          "facet": "task",
+          "id": "task.bandwidth-extension",
+          "label": "带宽扩展"
+        },
+        {
+          "facet": "method",
+          "id": "method.diffusion",
+          "label": "扩散模型"
+        },
+        {
+          "facet": "method",
+          "id": "method.state-space",
+          "label": "状态空间模型"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "扩散模型",
+      "primaryMethodId": "method.diffusion",
+      "primaryTask": "语音编码",
+      "primaryTaskId": "task.speech-coding",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zijian Lin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jing Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jinghao Luo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhuo Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Fan Fan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhiyong Wu"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "BridgeCodec 要解决冻结的 8 kHz 源编码器与 48 kHz 目标解码器无法直接通信的问题，用 Schrödinger Bridge 在潜在空间做最优传输并以 Mamba 增强的 U-Net 建模长时依赖，在 1 kbps 传输下实现 48 kHz 重建，代价是需要两阶段训练且高频内容带有生成性幻觉。",
+  "originalTitle": "BridgeCodec: Mamba Enhanced Neural Audio Codec with Schrödinger Bridge at Low Bitrate",
+  "pdfUrl": "https://arxiv.org/pdf/2610.15453v1.pdf",
+  "readerTitle": "BridgeCodec：在冻结编解码器之间做潜在特征搬运的低码率互通框架",
+  "schemaVersion": 2
+}

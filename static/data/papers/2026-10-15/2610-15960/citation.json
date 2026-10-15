@@ -1,0 +1,45 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.15960v1",
+  "arxivId": "2610.15960",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.15960v1",
+  "authors": [
+    {
+      "affiliations": [
+        "University of California, San Diego",
+        "University of Rochester"
+      ],
+      "name": "Mingyang Yao"
+    },
+    {
+      "affiliations": [
+        "University of California, San Diego"
+      ],
+      "name": "Jingyue Huang"
+    },
+    {
+      "affiliations": [
+        "University of California, San Diego"
+      ],
+      "name": "Ke Chen"
+    },
+    {
+      "affiliations": [
+        "University of California, San Diego"
+      ],
+      "name": "Taylor Berg-Kirkpatrick"
+    },
+    {
+      "affiliations": [
+        "University of California, San Diego"
+      ],
+      "name": "Shlomo Dubnov"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.15960v1",
+  "originalTitle": "TASTE: Taxonomy-Aware Symbolic Piano Generation from Textual Description",
+  "pdfUrl": "https://arxiv.org/pdf/2610.15960v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

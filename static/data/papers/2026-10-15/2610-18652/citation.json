@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.18652v1",
+  "arxivId": "2610.18652",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.18652v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Peiwei Chang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Li Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mark D. Plumbley"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Philip J. B. Jackson"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wenwu Wang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.18652v1",
+  "originalTitle": "AMemOps: Evaluating Memory Updates in Long Audio Streams",
+  "pdfUrl": "https://arxiv.org/pdf/2610.18652v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

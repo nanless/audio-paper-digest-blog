@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.13198v1",
+  "arxivId": "2610.13198",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.13198v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yongqiang Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Peiwei Chang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuelan Cheng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiatian Zhu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wenwu Wang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.13198v1",
+  "originalTitle": "QC-MI-OVSEL: Benchmarking Query-Conditioned Multi-Instance Open-Vocabulary Sound Event Localization",
+  "pdfUrl": "https://arxiv.org/pdf/2610.13198v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

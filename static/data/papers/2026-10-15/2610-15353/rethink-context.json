@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.15353v1",
+  "abstract": "As speech generation and real-time spoken dialogue systems advance, neural mean opinion score (MOS) predictors are increasingly used to evaluate speech quality. However, many existing predictors are trained primarily on English read speech and generalize inconsistently across languages and speaking styles. In particular, their reliability on Korean speech has not been adequately validated. We propose KOMOS, a Korean MOS predictor for evaluating the overall quality of both read and spontaneous speech. To train and evaluate KOMOS, we collect 5,000 ratings from 29 native Korean listeners for 1,000 utterances spanning real recordings, synthesized speech, and degraded speech. KOMOS achieves an utterance-level Spearman rank correlation (SRCC) of 0.900, compared with 0.703 for UTMOS v1 and 0.767 for UTMOS v2. The inference code is publicly available at https://github.com/upskyy/komos and the trained model at https://huggingface.co/upskyy/komos.",
+  "abstractSha256": "e114c73d8ea1f4eea972542dbb03951f2429607f3e7a4ed042e6c83d2777bfc8",
+  "arxivId": "2610.15353",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.15353v1",
+  "assessment": {
+    "documentType": "模型报告",
+    "primaryMethod": "SFT",
+    "primaryTask": "语音质量评估",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-quality",
+          "label": "语音质量评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.sft",
+          "label": "SFT"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "method",
+          "id": "method.subjective-evaluation",
+          "label": "主观评测"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "SFT",
+      "primaryMethodId": "method.sft",
+      "primaryTask": "语音质量评估",
+      "primaryTaskId": "task.speech-quality",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sangchun Ha"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Junwon Moon"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kyuhong Shim"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对现有 MOS 预测在韩语上校准不良的问题，KOMOS 用 29 名韩国听众对 1000 条语音的 5000 个打分微调 Whisper-medium 编码器与听众条件预测头，在测试集上取得 SRCC 0.900 与 LCC 0.950，但结论只在该韩语数据划分与 seen-system 条件下成立。",
+  "originalTitle": "KOMOS: Automatic Mean Opinion Score Estimation for Korean Speech",
+  "pdfUrl": "https://arxiv.org/pdf/2610.15353v1.pdf",
+  "readerTitle": "KOMOS：面向朗读与日常口语的韩语语音质量预测",
+  "schemaVersion": 2
+}

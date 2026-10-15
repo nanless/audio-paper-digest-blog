@@ -1,0 +1,83 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.16049v1",
+  "abstract": "Existing audio deepfake detection (ADD) methods frequently exhibit limited generalization, as fixed bottleneck architectures fail to adapt to the heterogeneous information densities inherent in diverse spoofing artifacts. Moreover, standard augmentation often leads to a pathological robustness-accuracy trade-off. In this paper, we propose a unified ADD framework to address these challenges. Our approach integrates: (1) an Adaptive Audio Feature Integration (AAFI) module that dynamically selects optimal latent dimensions via a compression pool and a stochastic exploration mechanism, ensuring flexible representations across multiple types of dynamic attacks; and (2) a Mel-Band Adversarial Perturbation (Mel-BAP) strategy that applies targeted regularization in the mel-spectrogram domain to encourage the model to learn invariant decision boundaries. Extensive evaluations on benchmarks including ADD 2022, FakeOrReal, and In-the-Wild demonstrate that our model based on Whisper-small achieves a state-of-the-art average Equal Error Rate (EER) of 1.51%. Compared to existing SOTA models such as the 3-billion-parameter Resemble-Detect-3B-Omni, our framework reduces the parameter count by up to 91.6% while achieving a 60.7% improvement in average EER. In a separate cross-lingual evaluation, the Whisper-base configuration achieves EERs of 3.91-5.65% on five unseen languages. The framework also maintains strong resilience to real-world acoustic distortions. This work provides a scalable and efficient \"plug-in\" solution for enhancing trust and security in the audio Web ecosystem.",
+  "abstractSha256": "35febdbccc678ca1203d32a125e740c08bfc3ccd87b463fb0b21969fbcb93a6f",
+  "arxivId": "2610.16049",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.16049v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "对抗训练",
+    "primaryTask": "音频深度伪造检测",
+    "rankBucket": "前25%",
+    "score": 8.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-deepfake",
+          "label": "音频深度伪造检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.adversarial-training",
+          "label": "对抗训练"
+        },
+        {
+          "facet": "method",
+          "id": "method.moe",
+          "label": "混合专家模型"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "对抗训练",
+      "primaryMethodId": "method.adversarial-training",
+      "primaryTask": "音频深度伪造检测",
+      "primaryTaskId": "task.audio-deepfake",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Yangtze Delta Region Institute of Tsinghua University",
+        "Jiaxing, China"
+      ],
+      "name": "Jianqiao Cui"
+    },
+    {
+      "affiliations": [
+        "University of Southampton",
+        "Southampton, UK"
+      ],
+      "name": "Haoxian Zhu"
+    },
+    {
+      "affiliations": [
+        "Taiyuan University of Technology",
+        "Taiyuan, China"
+      ],
+      "name": "Hanbiao Meng"
+    },
+    {
+      "affiliations": [
+        "Imperial College London",
+        "London, UK"
+      ],
+      "name": "Yanghao Zhang"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文用随输入选择压缩宽度的自适应特征融合与只扰动高频梅尔带的对抗正则来做音频真伪判别，在英中双语训练后在多个未见数据集上取得更低的等错误率，但结论只在原文的数据划分、冻结编码器和评测协议下成立，且对抗训练增加了训练开销。",
+  "originalTitle": "Adaptive Compression and Targeted Perturbation: A Unified Framework for Generalized Audio Deepfake Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2610.16049v1.pdf",
+  "readerTitle": "随输入换压缩宽度、只扰动高频梅尔带：音频伪造检测的泛化框架",
+  "schemaVersion": 2
+}

@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.16276v1",
+  "arxivId": "2610.16276",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.16276v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yingda Shen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yao Qian"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Dekun Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yufei Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Junan Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chong Jing"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Han Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuxiang Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhizheng Wu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.16276v1",
+  "originalTitle": "What Matters in Preference Post-Training of Continuous Autoregressive Speech Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2610.16276v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

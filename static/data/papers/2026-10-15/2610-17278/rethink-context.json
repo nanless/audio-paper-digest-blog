@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.17278v1",
+  "abstract": "Automatic speech recognition (ASR) remains challenging for low-resource languages, where the scarcity of transcribed speech limits the development of accurate systems. This challenge is particularly acute for African languages such as Ewe, which has millions of speakers but remains underrepresented in publicly available ASR resources and benchmarks. In this work, we consolidate, normalize, and partition existing Ewe speech resources into a standardized 174-hour Ewe ASR benchmark, the largest to date to our knowledge. We fine-tune and evaluate pretrained speech models, including Whisper and AfriHuBERT, to establish strong baselines on our benchmark. Whisper-medium achieves a word error rate (WER) of 37.98%, while AfriHuBERT achieves 39.70% on the test set. We further provide a qualitative analysis of common recognition errors. We release the benchmark under the name Nufo, derived from the Ewe word for \"talk\", accompanied by models and evaluation resources, to facilitate future research on Ewe and other underrepresented African languages.",
+  "abstractSha256": "b5009f2d728a966fafbef0efeeb38a1c9cac8c8830aaa9504ca1474a816f9d74",
+  "arxivId": "2610.17278",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.17278v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 5.9,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.low-resource",
+          "label": "低资源"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Christ Kekeli Keli"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Steve Sanogo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Patrice Sebastiano"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hamad Aldenawi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ryan Whetten"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文把 WAXAL、BibleTTS 与 Mina 三处埃维语资源去重拼成 174.82 小时固定评测基准，并在其上微调 Whisper 与 AfriHuBERT，最好的 Whisper-medium 在 1443 句固定测试集上词错误率为 37.98%，代价是仍有标点与变音符号带来的虚高误差和专有名词脆弱性。",
+  "originalTitle": "Nufo: A Benchmark for Ewe Automatic Speech Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2610.17278v1.pdf",
+  "readerTitle": "Nufo：把分散的埃维语语音拼成 174 小时可比基准",
+  "schemaVersion": 2
+}

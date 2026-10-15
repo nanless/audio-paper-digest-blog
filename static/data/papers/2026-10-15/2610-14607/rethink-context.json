@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.14607v1",
+  "abstract": "Voice activity detection (VAD) sits in front of almost every streaming speech recognizer, yet the choice of detector is often made by feel rather than by measurement. We report a frame-level offline benchmark of three detectors on the test-clean split of LibriVAD-small: the neural TEN VAD, the neural Silero VAD and a simple RMS energy baseline. The evaluation covers 2,214 noisy utterances (about 7.1 hours) built from LibriSpeech, nine noise families and six SNR levels from -5 to 20 dB. At a 16 ms hop, TEN VAD reaches a ROC AUC of 0.917, an average precision of 0.968 and an F1 of 0.913. A sweep over 20, 30, 40 and 50 ms windows shows TEN to be almost insensitive to frame length (AUC 0.916 to 0.919), while RMS stays near 0.75 to 0.77. Silero matches TEN only near its native 32 ms input size and drops to 0.63 at 20 ms. We hypothesize that this is likely caused by our fixed-frame protocol rather than by the model itself. Zero padding, sub-chunk averaging and unreset model state are the likely factors, but we have not ablated them. In a per-condition breakdown of TEN, babble noise at low SNR stays close to chance. We also show that F1 at a fixed 0.5 threshold is a weak metric on this data, because a trivial all-speech detector already scores 0.854. All settings needed to reproduce the results are given in the paper.",
+  "abstractSha256": "3777ee3e4686fb3bcc0ea3202fc023dc254167e43e74c6f4b798111768e82c4e",
+  "arxivId": "2610.14607",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.14607v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "语音活动检测",
+    "rankBucket": "前50%",
+    "score": 6.9,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.vad",
+          "label": "语音活动检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "语音活动检测",
+      "primaryTaskId": "task.vad",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Alok Kumar"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mohit Srivastava"
+    },
+    {
+      "affiliations": [
+        "OneByZero AI"
+      ],
+      "name": "Anupam Purwar"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文在 LibriVAD-small 的 test-clean 上离线比较 TEN、Silero 与 RMS 能量基线，回答窗长如何改变帧级排序质量，最强证据是 TEN 在 16 ms 取得 AUC 0.917 且 20 到 50 ms 几乎不变，而 Silero 只在 30 ms 附近最好，代价是结论限于离线排序而不含端点延迟。",
+  "originalTitle": "Window Size Matters: Benchmarking Voice Activity Detectors in Noise",
+  "pdfUrl": "https://arxiv.org/pdf/2610.14607v1.pdf",
+  "readerTitle": "窗长为何重要：噪声下语音活动检测的离线基准解读",
+  "schemaVersion": 2
+}

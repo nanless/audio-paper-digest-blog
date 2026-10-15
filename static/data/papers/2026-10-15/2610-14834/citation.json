@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.14834v1",
+  "arxivId": "2610.14834",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.14834v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kecan Mao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nan Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhaoyang Meng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhengyao Ma"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yingming Gao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yi Zhao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ya Li"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.14834v1",
+  "originalTitle": "SemiCodec: Bridging Speech Tokenization and High-fidelity Reconstruction with Semi-discrete Representations",
+  "pdfUrl": "https://arxiv.org/pdf/2610.14834v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

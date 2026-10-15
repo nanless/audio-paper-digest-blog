@@ -1,0 +1,45 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.14299v1",
+  "arxivId": "2610.14299",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.14299v1",
+  "authors": [
+    {
+      "affiliations": [
+        "The University of Texas at Austin",
+        "FAIR, Meta Superintelligence Labs"
+      ],
+      "name": "Yi-Jen Shih"
+    },
+    {
+      "affiliations": [
+        "FAIR, Meta Superintelligence Labs"
+      ],
+      "name": "Puyuan Peng"
+    },
+    {
+      "affiliations": [
+        "FAIR, Meta Superintelligence Labs"
+      ],
+      "name": "Haohe Liu"
+    },
+    {
+      "affiliations": [
+        "The University of Texas at Austin"
+      ],
+      "name": "David Harwath"
+    },
+    {
+      "affiliations": [
+        "FAIR, Meta Superintelligence Labs"
+      ],
+      "name": "Abdelrahman Mohamed"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.14299v1",
+  "originalTitle": "RUBATO: Decoupled Clocks Allow Full-Duplex Models to Think as Fast as They Can",
+  "pdfUrl": "https://arxiv.org/pdf/2610.14299v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

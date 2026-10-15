@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.16229v1",
+  "arxivId": "2610.16229",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.16229v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Rongqing Kenneth Ong"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Andy W. H. Khong"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.16229v1",
+  "originalTitle": "Tackling the Modality Inhibitance Effect with Wavelet-based Modality Integration in Multi-modal Recommendation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.16229v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

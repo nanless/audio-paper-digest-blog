@@ -1,0 +1,72 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.14232v1",
+  "abstract": "Automatic speech recognition produces words but drops the non-verbal content of a recording: the breaths, coughs, sighs and laughter of the speaker, and the horns, music or barking around them. We describe Speech Event Detector, a 5.8-million-parameter convolutional-Transformer model that outputs probabilities every 40 ms for 54 event classes (20 speaker vocalizations and 34 background sounds), together with post-processing that converts these probabilities into timestamped events and a procedure for merging the events into a Whisper transcript. The model is trained on material drawn from seven public datasets whose labels come in incompatible forms: single detected regions, free-text tags with timestamps, temporally strong ontology labels, symbols embedded in transcripts, isolated recordings and environmental recordings. We unify them using rule-based label mapping, recover timestamps for transcript-embedded labels through CTC forced alignment, locating 6,360 of 8,620 sounds, and combine about 168 hours of real annotated training recordings with synthetic mixtures and augmentation using real background noise. Per-class thresholds for two operating profiles are tuned on real held-out recordings, and performance is estimated using two-fold cross-validation. On whole held-out recordings from four datasets, considering the 48 classes with at least ten held-out events, the sensitive profile detects an average of 49 percent of a class's events, covering 67 percent of all 9,367 events, at a macro precision of 0.30. The balanced profile achieves a macro recall of 0.37 at a precision of 0.36, with macro event F1 scores of 0.32 and 0.33, respectively. The detector runs about 39 times faster than real time on eight CPU threads.",
+  "abstractSha256": "25020e9d3cdea53c21e4a67af2ec3ffcfbb7b62c40e971e1f93ed739b017b844",
+  "arxivId": "2610.14232",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.14232v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "数据增强",
+    "primaryTask": "音频事件检测",
+    "rankBucket": "前50%",
+    "score": 6.9,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.event-detection",
+          "label": "音频事件检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.augmentation",
+          "label": "数据增强"
+        },
+        {
+          "facet": "method",
+          "id": "method.cnn",
+          "label": "CNN"
+        },
+        {
+          "facet": "method",
+          "id": "method.transformer",
+          "label": "Transformer"
+        },
+        {
+          "facet": "task",
+          "id": "task.forced-alignment",
+          "label": "强制对齐"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "数据增强",
+      "primaryMethodId": "method.augmentation",
+      "primaryTask": "音频事件检测",
+      "primaryTaskId": "task.event-detection",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ayush Kumar Bar"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Promila Ghosh"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文要解决 Whisper 只出词而丢掉呼吸笑声喇叭声的问题，用统一七个异构数据集的卷积加 Transformer 每 40 毫秒输出 54 类概率的做法，在重叠留出数据的留出集上敏感档找到约三分之二事件但宏观精度只有 0.30，代价是阈值与评估都偏乐观且弱类仍不可用。",
+  "originalTitle": "Speech event detector: Timestamped detection of non-verbal vocalizations and background sounds for rich speech transcription",
+  "pdfUrl": "https://arxiv.org/pdf/2610.14232v1.pdf",
+  "readerTitle": "给语音转写的耳朵补上非词语声音：54 类事件的时间戳检测",
+  "schemaVersion": 2
+}

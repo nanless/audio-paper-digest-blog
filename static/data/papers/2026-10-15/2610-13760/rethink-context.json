@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.13760v1",
+  "abstract": "Speaker verification (SV) systems now achieve very low error rates on standard public protocols, but those results do not fully describe deployment generalization. VoxCeleb-style evaluations remain useful anchors for English in-the-wild media speech. Scenario-specific evaluations and challenges are also valuable. However, neither setting directly shows whether the same system remains reliable across diverse deployment scenarios. We introduce OpenSVBench, a public benchmark for cross-scenario SV evaluation. Its fixed public core contains 26 trial sets organized into 11 scenario groups, with 9.15M verification trials, frozen target/non-target keys, and metadata for scenario-wise reporting. Around this core, the online leaderboard acts as a diagnostic evaluation interface rather than only a ranked list. It accepts score packages from new systems, evaluates them with frozen keys and common scoring, and reports trial-set breakdowns, scenario-group metrics, macro EER/minDCF, model-wise profiles, and scenario-wise comparisons. We evaluate 18 public checkpoints spanning x-vector, ECAPA-TDNN, CAMPPlus, ResNet and ERes variants, ReDimNet2, SAM-ResNet, and pretrained Transformer speaker recipes. The results show clear cross-scenario gaps: systems with similar macro EER can have different scenario profiles, strong performance in one scenario does not guarantee strong performance in another, and same-scenario trial sets can still expose source and protocol gaps.",
+  "abstractSha256": "ed641c1ad2357b426c62f4664cb70cfe730b35faea6fceed756e85afa4046473",
+  "arxivId": "2610.13760",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.13760v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "说话人验证",
+    "rankBucket": "前50%",
+    "score": 7.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speaker-verification",
+          "label": "说话人验证"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "说话人验证",
+      "primaryTaskId": "task.speaker-verification",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Qituan Shangguan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bosen Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shuai Wang"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文针对单一媒体语音协议无法反映部署泛化的问题，把 16 个公开来源整理为 26 个固定试音对集合与 11 个场景组，用冻结键值和统一打分比较 18 个检查点的场景画像，发现平均误差相近的系统失效模式不同且同场景内也存在来源差异。",
+  "originalTitle": "OpenSVBench: Diagnosing Speaker Verification Generalization Across Deployment Scenarios",
+  "pdfUrl": "https://arxiv.org/pdf/2610.13760v1.pdf",
+  "readerTitle": "OpenSVBench：把说话人确认放在 11 种部署场景下统一诊断",
+  "schemaVersion": 2
+}

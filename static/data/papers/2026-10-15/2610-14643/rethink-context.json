@@ -1,0 +1,103 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.14643v1",
+  "abstract": "Clinical speech reveals identity through both spoken identifiers and voice, yet its pauses, delivery, and speaker roles can also carry useful clinical evidence. Protecting that speech therefore requires more than preserving its words. We present AegisVox, a factorized framework that assigns consistent surrogate voices and edits identifier-bearing turns using document-consistent replacements. Across 390 public simulated or non-patient conversations totaling 63.6 hours, a matched comparison of two speech renderers separates replacement realization from retained identifiers, speaker linkage, and clinical preservation. Text-to-speech rendering realizes 535/601 planned replacements versus 453/601 for the codec-based speech editor. However, similar aggregate clinical preservation conceals more model-labeled contradictions, and conversation-wide speaker scores conceal greater edited-speech linkage under a score-direction sensitivity analysis. Fresh transcription of original audio provides a reference for interpreting the clinical measurement chain; an independent judge tests sensitivity to model-based assessment. Better replacement realization can therefore coexist with worse clinical or speaker-linkage measurements. AegisVox supports use-specific evaluation of those tradeoffs, not a guarantee of identifier removal or clinical safety.",
+  "abstractSha256": "0727cc78452d351fe7b095b88628aa6b437e49d4f5cbf87f72f41cdc3544699d",
+  "arxivId": "2610.14643",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.14643v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "评测协议",
+    "primaryTask": "音频隐私攻击与防御",
+    "rankBucket": "前50%",
+    "score": 7.4,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.privacy-attack-defense",
+          "label": "音频隐私攻击与防御"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-editing",
+          "label": "语音编辑"
+        },
+        {
+          "facet": "application",
+          "id": "application.medical",
+          "label": "医疗音频"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "评测协议",
+      "primaryMethodId": "method.evaluation-protocol",
+      "primaryTask": "音频隐私攻击与防御",
+      "primaryTaskId": "task.privacy-attack-defense",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Praphul Singh"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Akshat Agarwal"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ratul Ghosh"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Aashna Kanuga"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Devashish Khatwani"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Anurag Dwarakanath"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sri Gadde"
+    },
+    {
+      "affiliations": [
+        "Oracle Health AI"
+      ],
+      "name": "Krishnaram Kenthapadi"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "AegisVox 把长临床对话的说话人声音转换与标识词替换分开处理，在 390 段公开模拟对话上比较两种整轮重读方案，发现替换实现率提高的同时可能伴随更多模型判定的矛盾和编辑区声音可关联性。",
+  "originalTitle": "AegisVox: Factorized Privacy and Clinical Preservation for Long-Form Speech",
+  "pdfUrl": "https://arxiv.org/pdf/2610.14643v1.pdf",
+  "readerTitle": "长语音里既换声音又换说法：AegisVox 如何分开处理身份与病情",
+  "schemaVersion": 2
+}

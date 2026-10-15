@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.18120v1",
+  "arxivId": "2610.18120",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.18120v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nani Meka"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Raghavan Ramesh"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sri Rama Murty Kodukula"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.18120v1",
+  "originalTitle": "Self-Supervised Source-Filter Model of Speech Production",
+  "pdfUrl": "https://arxiv.org/pdf/2610.18120v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

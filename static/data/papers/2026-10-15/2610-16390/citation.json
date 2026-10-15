@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.16390v1",
+  "arxivId": "2610.16390",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.16390v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Anton Firc"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nouhaila Innan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Vojtěch Staněk"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kamil Malinka"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Martin Perešini"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zbyněk Lička"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Walid El Maouaki"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Alberto Marchisio"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Muhammad Shafique"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.16390v1",
+  "originalTitle": "QBFF: Deep Quantum Bottleneck for Automatic Speaker Verification Anti-Spoofing",
+  "pdfUrl": "https://arxiv.org/pdf/2610.16390v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

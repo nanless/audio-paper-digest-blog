@@ -1,0 +1,97 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.14309v1",
+  "abstract": "Speech large language models (LLMs) are often built using pretrained acoustic encoders as an audio interface to an LLM decoder. However, LLMs scale poorly with input sequence length, while acoustic encoders tend to produce substantially longer sequences than typical textual inputs. This motivates learning to compress encoder outputs while preserving task-oriented information. To this end, we introduce ASSET, a reinforcement learning (RL)-based framework that learns to adaptively compress encoder outputs by first partitioning them into variable-duration segments and then pooling each segment into a continuous audio token. We use group-relative policy optimization (GRPO) to train a segmenter with task performance feedback and a token-rate penalty. In automatic speech recognition (ASR) experiments, ASSET achieves performance comparable to a transcript-assisted character-boundary oracle with approximately 25% fewer audio tokens on English LibriSpeech, while improving on a phone-boundary oracle at a similar token rate on Mandarin AISHELL. Exploratory experiments on non-ASR tasks further illustrate how learned segmentation changes when the framework is adapted to tasks beyond transcription.",
+  "abstractSha256": "f1e9575f6a3361559a2cf43a64f4a96c216ff6d816ec0879e666f358c7f2414c",
+  "arxivId": "2610.14309",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.14309v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "强化学习",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.reinforcement",
+          "label": "强化学习"
+        },
+        {
+          "facet": "task",
+          "id": "task.emotion-recognition",
+          "label": "语音情感识别"
+        },
+        {
+          "facet": "task",
+          "id": "task.speaker-counting",
+          "label": "说话人计数"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "强化学习",
+      "primaryMethodId": "method.reinforcement",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Cihan Xiao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuan Tseng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Matthew Wiesner"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Desh Raj"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Leibny Paola Garcia Perera"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sanjeev Khudanpur"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "David Harwath"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "ASSET 针对语音大模型音频前缀过长的问题，用可学习的边界策略把冻结编码器帧切成变长段再池化为音频 token，以转录损失加保留比带惩罚为奖励训练切分，在 LibriSpeech-960h 上以 10.9/10.6 Hz 取得 2.79/5.63% 词错误率，在 AISHELL-1 上以 7.7 tokens/s 取得 7.53% 字错误率，代价是依赖字符或音素对齐冷启动与三阶段训练。",
+  "originalTitle": "ASSET: Adaptive Speech Segmentation via Reinforcement Learning",
+  "pdfUrl": "https://arxiv.org/pdf/2610.14309v1.pdf",
+  "readerTitle": "ASSET：从任务反馈中学习语音切分以压缩大模型音频前缀",
+  "schemaVersion": 2
+}

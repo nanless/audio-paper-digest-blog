@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.18652v1",
+  "abstract": "Audio memory must recognise recurring sources across acoustic changes while keeping their attributes up to date. Overall accuracy does not reveal how these demands interact. We introduce Audio Memory Operations (AMemOps), a benchmark for latest-attribute retrieval, preservation of unchanged attributes and absent-source rejection in long audio streams. Paired controls vary recordings, training identities and earlier events to examine their effects on updating. Training on other recordings of the test instruments increases a reference delta-rule memory's update advantage over matched attention by 13.4 percentage points. At retrieval delays of 120\\,s, matched histories separate benefits of consistent repetition from costs of conflicting earlier values, while additive-memory controls identify benefits of erasure.",
+  "abstractSha256": "4134383b3bf11fd1def5b4926bb32a4831be5a7303c5d3bd5c21797621fbc7e2",
+  "arxivId": "2610.18652",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.18652v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "音频问答",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-question-answering",
+          "label": "音频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.long-audio",
+          "label": "长音频处理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "音频问答",
+      "primaryTaskId": "task.audio-question-answering",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Peiwei Chang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Li Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mark D. Plumbley"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Philip J. B. Jackson"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wenwu Wang"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "AMemOps 用增益与声像位置可控的长音频流检验最新属性取回、未变属性保留与缺席拒绝，用录音、熟悉度与冲突历史配对控制比较固定尺寸递推记忆与注意力，说明更新优势在什么录音与历史条件下出现以及擦除的作用。",
+  "originalTitle": "AMemOps: Evaluating Memory Updates in Long Audio Streams",
+  "pdfUrl": "https://arxiv.org/pdf/2610.18652v1.pdf",
+  "readerTitle": "长音频流里记住声源并更新属性：AMemOps 如何拆开识别、保留与更新",
+  "schemaVersion": 2
+}

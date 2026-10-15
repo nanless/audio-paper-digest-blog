@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.15243v1",
+  "abstract": "High-fidelity audio coding requires faithful reconstruction of perceptually important high-frequency components, which are often lost due to the aggressive temporal decimation and quantization of neural codecs. State-of-the-art neural audio coding methods rely on adversarial learning to hallucinate these missing components, yielding perceptually plausible but imprecise reconstructions; a limitation for high-fidelity music applications. As a remedy, we propose high-efficiency neural audio coding (HE-NAC), which provides a multi-band extension of the popular residual vector quantization (RVQ) scheme. HE-NAC introduces an effective training mechanism that harmonizes a bitrate-free blind upsampling process, residual learning to compensate it with minimal bitrate, and a multi-head decoder architecture for band-specific reconstruction. As a result, HE-NAC achieves a balanced trade-off, reliably reconstructing the core-band ($\\leq$ 3 kHz) component while preserving overall sound fidelity. Subjective listening tests and objective evaluations demonstrate that HE-NAC outperforms both the DAC baseline and MPEG HE-AAC at equal or lower bitrates.",
+  "abstractSha256": "564f51b09792d737658808bd6d0f946c1715e086ea38bd3de809954f8c74a495",
+  "arxivId": "2610.15243",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.15243v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "向量量化",
+    "primaryTask": "音频编码",
+    "rankBucket": "前25%",
+    "score": 8.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-coding",
+          "label": "音频编码"
+        },
+        {
+          "facet": "method",
+          "id": "method.vector-quantization",
+          "label": "向量量化"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "向量量化",
+      "primaryMethodId": "method.vector-quantization",
+      "primaryTask": "音频编码",
+      "primaryTaskId": "task.audio-coding",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Darius Pétermann"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wootaek Lim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Seungkwon Beack"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Minje Kim"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "HE-NAC 针对 32 kHz 音乐在约 18 到 23 kbps 下高频易丢失的问题，用核心频段打底加中高频段残差补偿的三路残差向量量化与分阶段训练，在听感测试中超过同码率 DAC 与 24 kbps 商用 HE-AAC，代价是解码头更多与高频客观波形指标仍不高。",
+  "originalTitle": "HE-NAC: High-Efficiency Neural Audio Coding via Hierarchical and Residual Multi-Band Quantization",
+  "pdfUrl": "https://arxiv.org/pdf/2610.15243v1.pdf",
+  "readerTitle": "HE-NAC：用分频段残差量化保住音乐高频细节",
+  "schemaVersion": 2
+}

@@ -1,0 +1,27 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.14961v1",
+  "arxivId": "2610.14961",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.14961v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Kozminski University, Warsaw, Poland",
+        "WarsawIQ, Warsaw, Poland"
+      ],
+      "name": "Karol Chlasta"
+    },
+    {
+      "affiliations": [
+        "WarsawIQ, Warsaw, Poland"
+      ],
+      "name": "Piotr Struzik"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.14961v1",
+  "originalTitle": "HiPAD: A Unified Gait, Audio-Visual, and Personality Fusion Network for Depression Detection, with a Hierarchical Personality Ablation and the Calibration Limits of Domain-Adapted LLMs",
+  "pdfUrl": "https://arxiv.org/pdf/2610.14961v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,90 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.17731v1",
+  "abstract": "As foundation models enter creative industries, understanding their aesthetic preferences becomes an important step toward AI-assisted creative decision making. In this work, we investigate how foundation models evaluate creative content and characterize their ``machine taste'' using K-pop songs and music videos as a testbed. We formulate aesthetic evaluation as a pairwise ranking problem and systematically examine pairwise inter-model agreement, group-level consensus, and cross-modal preference alignment. Our results reveal stronger pairwise inter-model agreement and group-level consensus in visual evaluation than in audio evaluation, while preferences across the two modalities remain weakly aligned. We further examine how visual consensus rankings relate to real-world popularity using historical YouTube viewership data, finding positive but varying correlations across artist groups. These findings provide initial insights into machine aesthetic preferences and lay the groundwork for future AI-assisted creative decision making that considers creative content, artist identity, audience preferences, and market dynamics.",
+  "abstractSha256": "114e7182a648bd4cdb68f4624c0e0193dd45e1089467696dcecc76030b7cea43",
+  "arxivId": "2610.17731",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.17731v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "评测协议",
+    "primaryTask": "音乐分析",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-understanding",
+          "label": "音乐分析"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.comparison",
+          "label": "模型比较"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "评测协议",
+      "primaryMethodId": "method.evaluation-protocol",
+      "primaryTask": "音乐分析",
+      "primaryTaskId": "task.music-understanding",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kaishen Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yucheng Pan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xuehao Cui"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hanling Tian"
+    },
+    {
+      "affiliations": [
+        "University of Maryland, College Park"
+      ],
+      "name": "Heng Huang"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "该文把审美评价做成同艺人组内两两比较再汇总排序，用音频语言模型评歌曲、用视觉语言模型只看画面评 MV，发现视觉排序的模型间一致性明显高于音频，而音频与视觉共识几乎不对齐，与早期 YouTube 播放量的正相关也因艺人组而异。",
+  "originalTitle": "Understanding Machine Taste: Aesthetic Agreement Across Foundation Models in K-pop",
+  "pdfUrl": "https://arxiv.org/pdf/2610.17731v1.pdf",
+  "readerTitle": "机器品味是否存在：K-pop 歌曲与 MV 的跨模型审美一致性解读",
+  "schemaVersion": 2
+}

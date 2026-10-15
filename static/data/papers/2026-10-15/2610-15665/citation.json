@@ -1,0 +1,52 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.15665v1",
+  "arxivId": "2610.15665",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.15665v1",
+  "authors": [
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong, Shenzhen"
+      ],
+      "name": "Yunjia Zhang"
+    },
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong, Shenzhen"
+      ],
+      "name": "Junan Zhang"
+    },
+    {
+      "affiliations": [
+        "Institute of Media Technology and Experience Design, Huawei"
+      ],
+      "name": "Jing Yang"
+    },
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong, Shenzhen"
+      ],
+      "name": "Xueyao Zhang"
+    },
+    {
+      "affiliations": [
+        "Institute of Media Technology and Experience Design, Huawei"
+      ],
+      "name": "Fan Fan"
+    },
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong, Shenzhen",
+        "City University of Macau",
+        "Amphion Technology Co., Ltd."
+      ],
+      "name": "Zhizheng Wu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.15665v1",
+  "originalTitle": "AnyEdit: A Unified Framework for Speech and Singing Voice Editing with Real-World Environmental Consistency",
+  "pdfUrl": "https://arxiv.org/pdf/2610.15665v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

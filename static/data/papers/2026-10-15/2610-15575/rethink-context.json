@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.15575v1",
+  "abstract": "Diffusion models have been widely used for various generative tasks. However, recent studies have demonstrated that the internal representations learned in the diffusion models' denoising process are insufficiently meaningful, which can hinder the generation performance. To address this, we propose a novel diffusion U-Net architecture enhanced by explicitly aligning the weaker representation from the earlier layer conditioned on higher noise with the better representation from the later layer conditioned on lower noise during training, which we use for the challenging multimodal task of video background music generation. Our diffusion U-Net Self-Representation Alignment (U-SRA) employs an alignment loss to effectively guide our diffusion model to learn good internal representations, thereby enabling it to produce higher-quality symbolic music conditioned on video features. We employ a cross-attention mechanism to synchronize music with video segments. Experiments on a benchmark video-music dataset demonstrate that the proposed U-SRA approach for video background music generation surpasses the state-of-the-art across key evaluation metrics, including video-music alignment and overall music quality.",
+  "abstractSha256": "6b612ccb89050de83582b9b2daaa4b8f182a0d9b0c98c011b6d77997428409e3",
+  "arxivId": "2610.15575",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.15575v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "扩散模型",
+    "primaryTask": "符号音乐生成",
+    "rankBucket": "前50%",
+    "score": 5.9,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.symbolic-music",
+          "label": "符号音乐生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.diffusion",
+          "label": "扩散模型"
+        },
+        {
+          "facet": "task",
+          "id": "task.video-to-audio",
+          "label": "视频到声音生成"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "扩散模型",
+      "primaryMethodId": "method.diffusion",
+      "primaryTask": "符号音乐生成",
+      "primaryTaskId": "task.symbolic-music",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jincheng Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "György Fazekas"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Charalampos Saitis"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文针对视频条件下的符号音乐生成中扩散模型内部表示质量不足的问题，提出用高噪声下浅层表示向低噪声下深层表示对齐的 U-SRA 方法，在 BGM909 上以检索精度和接近真实数据的音高节奏指标超过 Diff-BGM，代价是需要额外的教师分支与对齐投影计算。",
+  "originalTitle": "Self-Representation Alignment in Diffusion Models for Video Background Music Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.15575v1.pdf",
+  "readerTitle": "视频配乐的扩散模型自表示对齐：U-SRA 如何学到更好的内部表示",
+  "schemaVersion": 2
+}

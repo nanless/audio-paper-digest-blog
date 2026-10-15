@@ -1,0 +1,114 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.16276v1",
+  "abstract": "Continuous autoregressive speech language models combine an autoregressive (AR) backbone with a diffusion or flow-matching head. Preference post-training requires choosing how to construct pairs and which modules to update. Controlled interventions show that a perturbed acoustic patch changes subsequent backbone states, yet larger representation changes do not necessarily reduce speech quality. We construct preference pairs through noise or inference-configuration perturbations and formulate a preference update based on reference-relative flow-matching errors. Updating the backbone with a fixed head yields stronger reward improvements than head-only adaptation in our evaluated setting. Across flow-time and module ablations, the lowest training loss does not consistently produce the best speech. These findings support preference post-training that considers both acoustic sampling and autoregressive conditioning, with training choices validated on generated utterances.",
+  "abstractSha256": "e27dc8ed339da517f8c2315c0754c4876814fd1c81753ad9eeabd04d28a012e6",
+  "arxivId": "2610.16276",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.16276v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "偏好优化",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前50%",
+    "score": 6.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.preference-optimization",
+          "label": "偏好优化"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "method",
+          "id": "method.autoregressive",
+          "label": "自回归模型"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.post-training",
+          "label": "后训练"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "偏好优化",
+      "primaryMethodId": "method.preference-optimization",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yingda Shen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yao Qian"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Dekun Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yufei Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Junan Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chong Jing"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Han Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuxiang Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhizheng Wu"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文研究连续自回归语音模型在偏好后训练中如何构造偏好对、在哪个流噪声水平比较以及更新自回归主干还是声学头，发现固定声学头只更新主干后部层在所测条件下带来更大的自动奖励提升，但训练损失更低并不等于生成语音更好。",
+  "originalTitle": "What Matters in Preference Post-Training of Continuous Autoregressive Speech Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2610.16276v1.pdf",
+  "readerTitle": "连续自回归语音语言模型的偏好后训练：采样、流时间与更新位置",
+  "schemaVersion": 2
+}

@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.13608v1",
+  "abstract": "Vocal intensity conversion renders a recorded utterance at a different vocal intensity, rather than simply scaling its amplitude, while preserving its content and speaker identity. Existing systems control intensity through a reference utterance or a few discrete categories. Instead, we control the conversion with any target sound pressure level (SPL) on a continuous dB scale. A lightweight converter, trained as a conditional cycle-consistent GAN without parallel data, transforms the features of a frozen speech encoder, from which a pretrained vocoder resynthesizes the speech. We compare three representations, log-mel spectrograms, WavLM, and SpeechTokenizer, and introduce an objective protocol that measures the achieved intensity change against the target one on a calibrated corpus. With WavLM, the converter achieves a measured 83% of the target change in intensity and also shifts the fundamental frequency. A perceptual evaluation confirms that perceived vocal intensity increases with the target level on amplitude-normalized stimuli.",
+  "abstractSha256": "31e60309a630326f4a7bf1c2ace84556a09cccf22059759819a3c4874747d709",
+  "arxivId": "2610.13608",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.13608v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "生成对抗网络",
+    "primaryTask": "语音转换",
+    "rankBucket": "前25%",
+    "score": 8.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.voice-conversion",
+          "label": "语音转换"
+        },
+        {
+          "facet": "method",
+          "id": "method.gan",
+          "label": "生成对抗网络"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-attributes",
+          "label": "语音属性识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.subjective-evaluation",
+          "label": "主观评测"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "生成对抗网络",
+      "primaryMethodId": "method.gan",
+      "primaryTask": "语音转换",
+      "primaryTaskId": "task.voice-conversion",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Quentin Le Tellier"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Albert Rilliard"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Olivier Perrotin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Marc Evrard"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "该文把人声强度转换定义为按连续 dB SPL 目标改写 frozen 特征，再用条件循环 GAN 训练轻量转换器，WavLM 上实现约 83% 的目标强度变化，但绝对感知水平仍依赖源录音且韵律频谱改变量小于自然差异。",
+  "originalTitle": "Vocal Intensity Conversion with Continuous SPL Control via Adversarial Training",
+  "pdfUrl": "https://arxiv.org/pdf/2610.13608v1.pdf",
+  "readerTitle": "用人声音量大小本身做控制：连续声压级人声强度转换",
+  "schemaVersion": 2
+}

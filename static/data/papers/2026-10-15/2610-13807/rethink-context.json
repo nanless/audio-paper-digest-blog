@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.13807v1",
+  "abstract": "Data augmentation is standard practice for low-resource automatic speech recognition (ASR), but its benefits are almost always reported as aggregate error rates, leaving open why and when a method helps. On four low-resource languages and English at five data sizes, we cross two augmentations that modify existing audio (speed perturbation and SpecAugment) with two that modify text transcriptions and synthesize audio from it. We analyze errors at the phoneme level and find that they help for complementary reasons. SpecAugment has the most reliable aggregate improvements, but increases tone and palatalization errors, whereas text-based methods introduce consonant insertions; in combination, each reduces the errors the other introduces. This complementarity is predictable. Tone and palatalization are each signaled by a single acoustic property and occur least frequently in training (lowest training exposure), and text-based methods that flatten word frequency raise their frequency by 37--38%, reversing those errors while further improving aggregate error. The improvement from combining the methods exceeds the sum of their individual improvements; the superadditivity vanishes by 100 hours, limiting the complementarity to the low-resource regime. Where specific error types matter, we recommend selecting augmentation by training exposure and acoustic properties, both measurable before any training.",
+  "abstractSha256": "2e217ddd0f5df3b56e2d0bf561038c2d414294df0b1ba552a62a44dc20ecb35c",
+  "arxivId": "2610.13807",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.13807v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "数据增强",
+    "primaryTask": "语音识别",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.augmentation",
+          "label": "数据增强"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.low-resource",
+          "label": "低资源"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.phonetics",
+          "label": "语音学与音系"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "数据增强",
+      "primaryMethodId": "method.augmentation",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Katsumi Ibaraki"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "David Chiang"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文在四个低资源语言和不同数据量的英语上比较改造音频与文本合成两类增强，发现 SpecAugment 总体错误率最稳但增加声调和腭化错误，而随机替换词的文本合成能提高稀有词频率并修复这两类错误，两者联用产生超可加改进但只在低资源区间成立。",
+  "originalTitle": "Error Rate is Not Enough: Costs of Augmentation in Low-Resource ASR",
+  "pdfUrl": "https://arxiv.org/pdf/2610.13807v1.pdf",
+  "readerTitle": "只看错误率会漏掉什么：低资源语音识别中数据增强的代价",
+  "schemaVersion": 2
+}

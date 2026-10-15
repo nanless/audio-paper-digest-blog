@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.15082v1",
+  "abstract": "As text-to-speech (TTS) systems continue to advance, provenance tracking and security verification of synthesized speech have become increasingly important. Audio watermarking provides active provenance by embedding imperceptible, machine-recoverable information into speech. However, existing post-hoc methods typically modify the waveform after synthesis, leaving the watermark vulnerable to compound perturbations. To address this limitation, we propose GAMW, a watermark injection framework integrated into the TTS generation process. Before waveform synthesis, GAMW embeds a content-adaptive multi-bit watermark residual into the generated representation, and its decoding objective combines focal modulation with dynamic per-bit weighting. We train and evaluate GAMW separately on two TTS backbones. With a 16-bit payload, GAMW improves decoding accuracy over the strongest baseline by 9.2 and 23.5 percentage points under individual and compound perturbations, respectively, while maintaining competitive speech quality. Reliable clean-speech decoding is also retained at higher payloads. Code is available at https://github.com/ZConJugaTe/GAMW.",
+  "abstractSha256": "bf14d05dfb4a648888857d48c51c4efc5ee777511bdc35ee936d1b5f079c1b5e",
+  "arxivId": "2610.15082",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.15082v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "注意力机制",
+    "primaryTask": "音频水印",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.watermarking",
+          "label": "音频水印"
+        },
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.attention",
+          "label": "注意力机制"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "注意力机制",
+      "primaryMethodId": "method.attention",
+      "primaryTask": "音频水印",
+      "primaryTaskId": "task.watermarking",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Zhejiang University"
+      ],
+      "name": "Yihang Zhang"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University"
+      ],
+      "name": "Weicai Yan"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University"
+      ],
+      "name": "Qifei Zhang"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University"
+      ],
+      "name": "Yangyang Wu"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University"
+      ],
+      "name": "Tao Jin"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "GAMW 针对合成语音事后加水印易被复合处理抹除的问题，把内容自适应的多比特残差写进冻结 TTS 产生的梅尔谱再经冻结声码器发声，并用聚焦调节加动态逐比特加权学习解码，在两条 TTS 链路上保持语音质量的同时提升了单种与复合扰动下的解出率。",
+  "originalTitle": "GAMW: Generation-Aware Mel-Domain Watermarking for TTS Traceability",
+  "pdfUrl": "https://arxiv.org/pdf/2610.15082v1.pdf",
+  "readerTitle": "在语音合成中间环节嵌入可追溯水印：GAMW 方法解读",
+  "schemaVersion": 2
+}

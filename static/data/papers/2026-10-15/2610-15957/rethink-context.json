@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.15957v1",
+  "abstract": "Transformer models trained on symbolic music have become remarkably capable. However, it is yet unclear how they represent music structure, and whether understanding their internal representations can be used to unlock methods for model control. We examine this through a case study of harmonic analysis: when a music transformer navigates a cadence, what does it internally \"know\" about its harmonic context, and can that knowledge be used to affect the generation? Using Aria, a LLaMA-based symbolic music transformer evaluated on Bach chorales, we find that harmonic decisions are causally localized progressively from middle layers onward. Linear probes show that mode becomes decodable in the same layer range where patching identifies growing causal effect, while key identity emerges later. We then confirm these representations are actionable for music generation control: steering via latent directions corresponding to harmonic changes reliably produces a deceptive or minor resolution, while preserving structural coherence and generation quality. This demonstrates that, at inference time, the model's internal harmonic knowledge can be directly manipulated to control the harmonic output.",
+  "abstractSha256": "68d9156787d8e881ef2be390845c4b7ac9deafdf002c4c9201e6ed63b717f5b8",
+  "arxivId": "2610.15957",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.15957v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "统计分析",
+    "primaryTask": "符号音乐生成",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.symbolic-music",
+          "label": "符号音乐生成"
+        },
+        {
+          "facet": "task",
+          "id": "task.music-understanding",
+          "label": "音乐分析"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.interpretability",
+          "label": "可解释性"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "统计分析",
+      "primaryMethodId": "method.statistical-analysis",
+      "primaryTask": "符号音乐生成",
+      "primaryTaskId": "task.symbolic-music",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Adi Silberschein"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Megan Wei"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tamar Rott Shaham"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文以巴赫众赞歌终止式为切口，说明 Aria 模型的和声决策从中间层开始逐步形成，先出现调式后出现具体调性，并证明沿探针方向做推理时干预可以稳定改变终止走向且保持结构完整，但结论只在众赞歌这类规范和声语料上得到验证。",
+  "originalTitle": "Harmonic Representations in Symbolic Music Transformers are Localized and Controllable",
+  "pdfUrl": "https://arxiv.org/pdf/2610.15957v1.pdf",
+  "readerTitle": "符号音乐 Transformer 里的和声知识藏在哪，又怎么直接调动它",
+  "schemaVersion": 2
+}

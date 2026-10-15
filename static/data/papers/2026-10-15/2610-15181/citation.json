@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.15181v1",
+  "arxivId": "2610.15181",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.15181v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hsiang-Chen Yeh"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Aurosweta Mahapatra"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shreeram Suresh Chandra"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ryan L. Boyd"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Berrak Sisman"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.15181v1",
+  "originalTitle": "Word-Aligned Prosody Reflects Speaker Differences More Than Depression or PTSD Severity",
+  "pdfUrl": "https://arxiv.org/pdf/2610.15181v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

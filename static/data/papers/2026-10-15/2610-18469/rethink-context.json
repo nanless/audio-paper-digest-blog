@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.18469v1",
+  "abstract": "We investigate how speech token representations can support both understanding and generation within a unified speech language model. We present PhonoVoxtLM, built on the existing VoxtLM framework using phonological tokens designed to retain linguistic content and prosodic information. The existing tokenizer is jointly trained for speech recognition and resynthesis. Its single-codebook units serve as both speech inputs and generation targets, without additional speech-token prediction modules. Experiments show improvements over HuBERT-based baselines across understanding and generation under different training-data scales. Further comparisons with WavLM-based tokens reveal trade-offs between recognition and synthesis, highlighting the importance of evaluating shared representations across both capabilities. We further extend the framework to spoken question answering through fine-tuning with replay. The adapted model improves answering performance over similarly adapted HuBERT baselines while retaining advantages on the original speech tasks. Our findings support single-codebook representations designed for both content and prosody as a practical choice for unified multitask speech modeling.",
+  "abstractSha256": "409ce56a8809302cb32dec3aef8763fb227ca757c890e49b94c21891682bc083",
+  "arxivId": "2610.18469",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.18469v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "神经编解码与离散单元",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-question-answering",
+          "label": "音频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.autoregressive",
+          "label": "自回归模型"
+        },
+        {
+          "facet": "method",
+          "id": "method.neural-codec",
+          "label": "神经编解码与离散单元"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "神经编解码与离散单元",
+      "primaryMethodId": "method.neural-codec",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Johns Hopkins University"
+      ],
+      "name": "Mingrui Liang"
+    },
+    {
+      "affiliations": [
+        "The University of Tokyo"
+      ],
+      "name": "Kentaro Onda"
+    },
+    {
+      "affiliations": [
+        "Carnegie Mellon University"
+      ],
+      "name": "Shinji Watanabe"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文把保留内容与韵律的单码本语音单元同时用作统一模型的输入与生成目标，在相同框架和数据下比较识别、判别与合成，并在问答微调后检验保留情况，但合成只用自动指标且局限于英语朗读语音。",
+  "originalTitle": "PhonoVoxtLM: Exploring Single-Codebook Phonological Tokens for Speech Understanding and Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.18469v1.pdf",
+  "readerTitle": "一个码本同时做理解与生成：PhonoVoxtLM 的语音单元选择",
+  "schemaVersion": 2
+}

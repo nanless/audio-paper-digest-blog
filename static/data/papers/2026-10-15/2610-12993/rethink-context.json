@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.12993v1",
+  "abstract": "Recent zero-shot Text-to-Speech (TTS) systems can clone unseen speakers, yet controllable expressiveness remains limited by a gap between semantic intent and acoustic realization. Text descriptions offer a natural control interface but provide weak acoustic grounding, whereas speech style prompts provide concrete prosody but entangle style with the prompt speaker's timbre. To bridge this gap, we propose E3-System, a unified intent-to-speech framework for expressive zero-shot TTS that couples three requirements: Expressive style modeling, Explicit timbre-style control, and Easy-to-use natural-language interaction. Given a target speaker and either a natural-language style description or a speech style prompt, E3-System generates expressive speech while preserving the target timbre. The key idea is to close the full control loop: building a large expressive style space, grounding user intent into usable acoustic style references, and synthesizing speech with disentangled timbre and style. To realize this loop, EmoData provides a thousand-hour multilingual emotional speech dataset, Style-RAG grounds text descriptions into high-quality acoustic style prompts from these data, and Dual-TTS transfers the grounded style to arbitrary target speakers through VC-augmented timbre-style disentanglement. Experiments show that E3-System achieves strong speech quality, speaker preservation, and explicit expressive controllability.",
+  "abstractSha256": "1c22227cbd91ee67e1dceac4146473e5120eaa43b8906336e9436090e172ec74",
+  "arxivId": "2610.12993",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.12993v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "检索增强",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前50%",
+    "score": 6.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "task",
+          "id": "task.prosody-style-control",
+          "label": "韵律与风格控制"
+        },
+        {
+          "facet": "method",
+          "id": "method.retrieval-augmented",
+          "label": "检索增强"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "method",
+          "id": "method.dataset-curation",
+          "label": "数据集构建"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "检索增强",
+      "primaryMethodId": "method.retrieval-augmented",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yiqiao Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiaolong Lin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhenpeng Zhan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhizheng Wu"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "E3-System 针对零样本语音合成中文字意图缺乏声学依据、音色与风格纠缠的问题，用 1012 小时多语种 EmoData 构建风格空间、用 Style-RAG 把文字意图映射为语音风格提示、用 Dual-TTS 实现音色与风格解耦合成，在双提示条件下直接语音提示与检索文字控制分别达到不同的可懂度与相似度平衡。",
+  "originalTitle": "E3-System: Expressive EmoData, Explicitly Controllable, Easy-to-Use TTS",
+  "pdfUrl": "https://arxiv.org/pdf/2610.12993v1.pdf",
+  "readerTitle": "E3-System：用检索到的风格语音让任意音色说出指定情感",
+  "schemaVersion": 2
+}

@@ -1,0 +1,104 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.15956v1",
+  "arxivId": "2610.15956",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.15956v1",
+  "authors": [
+    {
+      "affiliations": [
+        "University of California, Irvine"
+      ],
+      "name": "Wenjun Huang"
+    },
+    {
+      "affiliations": [
+        "University of Pennsylvania"
+      ],
+      "name": "Shenghao Fu"
+    },
+    {
+      "affiliations": [
+        "Carnegie Mellon University"
+      ],
+      "name": "Yian Jin"
+    },
+    {
+      "affiliations": [
+        "Purdue University Northwest"
+      ],
+      "name": "Yang Ni"
+    },
+    {
+      "affiliations": [
+        "Michigan State University"
+      ],
+      "name": "Yifan Li"
+    },
+    {
+      "affiliations": [
+        "Independent Researcher"
+      ],
+      "name": "Lichi Li"
+    },
+    {
+      "affiliations": [
+        "Dartmouth College"
+      ],
+      "name": "Xingjian Diao"
+    },
+    {
+      "affiliations": [
+        "University of California, Irvine"
+      ],
+      "name": "Pengfei Zhang"
+    },
+    {
+      "affiliations": [
+        "University of California, Irvine"
+      ],
+      "name": "Yutong Song"
+    },
+    {
+      "affiliations": [
+        "University of California, Irvine"
+      ],
+      "name": "Hanning Chen"
+    },
+    {
+      "affiliations": [
+        "University of California, Los Angeles"
+      ],
+      "name": "Jiarui Cui"
+    },
+    {
+      "affiliations": [
+        "University of Notre Dame"
+      ],
+      "name": "Tianyu Yang"
+    },
+    {
+      "affiliations": [
+        "University of California, Irvine"
+      ],
+      "name": "Shilong Li"
+    },
+    {
+      "affiliations": [
+        "Michigan State University"
+      ],
+      "name": "Yu Kong"
+    },
+    {
+      "affiliations": [
+        "University of California, Irvine"
+      ],
+      "name": "Mohsen Imani"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.15956v1",
+  "originalTitle": "ADAPT: Audio-Depth Action Planning with Transition-Aware Rewards for Lights-Out Industrial Navigation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.15956v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

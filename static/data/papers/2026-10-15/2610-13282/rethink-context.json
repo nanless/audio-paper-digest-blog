@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.13282v1",
+  "abstract": "This paper describes our systems for the Track 1 time-stamped speaker-attributed ASR task of the SmartGlasses Challenge. To handle overlapping speech, background noise and far-field conditions in two-person conversations, we employ SoulX-Transcriber, a multimodal large language model that takes full-length audio as input and generates structured transcriptions. In addition, we investigate the effect of speech frontend processing, including a rule-based Guided Source Separation method and a data-driven speech separation model, both of which improve performance on the validation set. Considering inference stability, our final submission uses the fine-tuned SoulX-Transcriber system, achieving a tcpCER of 6.22 on the test set.",
+  "abstractSha256": "6415b3087c3223b6707b193e5f2ee3ef3fab1593a2f06c1b92d2240435b1ea72",
+  "arxivId": "2610.13282",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.13282v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "SFT",
+    "primaryTask": "多说话人语音识别",
+    "rankBucket": "前50%",
+    "score": 5.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.multi-talker-asr",
+          "label": "多说话人语音识别"
+        },
+        {
+          "facet": "task",
+          "id": "task.diarization",
+          "label": "说话人分离标注"
+        },
+        {
+          "facet": "method",
+          "id": "method.sft",
+          "label": "SFT"
+        },
+        {
+          "facet": "method",
+          "id": "method.beamforming",
+          "label": "波束成形"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "SFT",
+      "primaryMethodId": "method.sft",
+      "primaryTask": "多说话人语音识别",
+      "primaryTaskId": "task.multi-talker-asr",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yushi Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zeyan Song"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiaobin Rong"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chengwei Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jun Gao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jing Lu"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文针对智能眼镜四通道双人日常对话的重叠与远场转写问题，比较直接微调 SoulX-Transcriber 与 GSS 和多通道 DPRNN 前端辅助两路解码的差异，验证集上前端在高重叠时更优但最终以更稳定的直接微调系统提交并在测试集取得 tcpCER 6.22，代价是前端失真与零填充带来的幻觉和分段解码处理。",
+  "originalTitle": "Frontend-Assisted Large Audio-Language Models for SLT2026 SmartGlasses Challenge",
+  "pdfUrl": "https://arxiv.org/pdf/2610.13282v1.pdf",
+  "readerTitle": "智能眼镜双人对话的带时间戳说话人转写：直接解码与前端辅助的比较",
+  "schemaVersion": 2
+}

@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.16217v1",
+  "arxivId": "2610.16217",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.16217v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuhang Dai"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xin Shu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhennan Lin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mingchen Shao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chengyou Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiangang Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jianwei Yu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lei Xie"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.16217v1",
+  "originalTitle": "RefTAG: Reflection-aware Temporal Audio Grounding in Large Audio Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2610.16217v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

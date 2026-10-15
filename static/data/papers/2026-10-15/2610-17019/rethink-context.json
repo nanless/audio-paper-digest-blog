@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.17019v1",
+  "abstract": "Whisper-style ASR models provide strong zero-shot transcription, but their residual errors are not evenly distributed across datasets, recording conditions, and metadata-based groups. We study when lightweight low-rank adaptation (LoRA) improves Whisper and whether observed gains require group-specific adapters. Across Common Voice, LibriSpeech, and VoxPopuli, we compare zero-shot Whisper, pooled LoRA, and group-specific LoRA under matched within-group splits. We find that adaptation is not uniformly beneficial: gains are concentrated in difficult Common Voice groups, are consistent on VoxPopuli, and largely disappear on low-error LibriSpeech. Crucially, pooled LoRA often matches, and sometimes clearly outperforms, group-specific LoRA. Gains over zero-shot should therefore be tested against matched pooled adaptation before being interpreted as evidence of personalization.",
+  "abstractSha256": "f25d4ff0d413e5f7feee1fa527f463ba2bb7e249b19086a0cbc891f8b949c4d9",
+  "arxivId": "2610.17019",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.17019v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "LoRA",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.lora",
+          "label": "LoRA"
+        },
+        {
+          "facet": "method",
+          "id": "method.domain-adaptation",
+          "label": "领域适应"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.evaluation",
+          "label": "模型评估"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "LoRA",
+      "primaryMethodId": "method.lora",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sergei Katkov"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Antonio Liotta"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文用组内划分在三个英语数据集上对照零样本、混合 LoRA 与分组 LoRA，发现增益集中在基线错误大且集中的地方，而混合适配常能持平或超过分组适配，因此超过零样本不能直接当作个性化的证据。",
+  "originalTitle": "Understanding Personalization Gains in Whisper",
+  "pdfUrl": "https://arxiv.org/pdf/2610.17019v1.pdf",
+  "readerTitle": "Whisper 个性化增益从何而来：困难组、混合适配与分组适配的对照",
+  "schemaVersion": 2
+}

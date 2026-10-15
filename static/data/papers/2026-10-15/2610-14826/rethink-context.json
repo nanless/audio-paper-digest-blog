@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.14826v1",
+  "abstract": "Recent alignment-free Text-to-Speech (TTS) models achieve high synthesis quality by removing explicit alignment modules and simplifying training. However, they often struggle in cross-lingual scenarios due to differences in character durations across languages, leading to duration mismatch and degraded speech quality. Existing approaches typically address this issue using explicit duration predictors, increasing model complexity. Systematic evaluation of TTS performance for Indian languages in cross-lingual settings remains under-explored due to the lack of standardized evaluation benchmarks. In this work, we construct a cross-lingual evaluation benchmark covering English and nine Indian languages and propose a language-aware inference-time duration estimation strategy for alignment-free TTS that incorporates language-specific duration-per character statistics without retraining or architectural modifications. We further develop heuristic formulations that refine duration estimation based on language-dependent duration variations. Experiments on bilingual and multilingual A-DMA models demonstrate improved speech naturalness, intelligibility, and speaker similarity while reducing duration mismatch.",
+  "abstractSha256": "82cc1e294d180db713101a1e84110713a30454a6a1f7ad42786ac49681d9e566",
+  "arxivId": "2610.14826",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.14826v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "测试时自适应",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.test-time-adaptation",
+          "label": "测试时自适应"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.cross-lingual",
+          "label": "跨语言"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "测试时自适应",
+      "primaryMethodId": "method.test-time-adaptation",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Adarsh Arigala"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Arjun Gangwar"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Srinivasan Umesh"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对参考语音与待合成文本语言不同时无对齐模型按字节估计时长导致失配的问题，论文构建英语与九种印度语言双向评测基准，提出只在推理期引入语言平均每字符时长的修正策略，并在双语与多语 A-DMA 模型上用可懂度、相似度和自然度指标验证改进的范围与局限。",
+  "originalTitle": "Cross-Lingual TTS for Indian Languages: A Benchmark and Inference-Time Duration Estimation Strategies",
+  "pdfUrl": "https://arxiv.org/pdf/2610.14826v1.pdf",
+  "readerTitle": "跨语言时长不匹配：印度语言无对齐语音合成的评测基准与推理期时长估计",
+  "schemaVersion": 2
+}

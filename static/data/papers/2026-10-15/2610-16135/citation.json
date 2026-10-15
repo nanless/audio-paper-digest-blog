@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.16135v1",
+  "arxivId": "2610.16135",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.16135v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Na Min An"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Taekyung Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Jaemyung Yu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Hyunjung Shim"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Dongyoon Han"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.16135v1",
+  "originalTitle": "Omni-Modal LLMs Know More Than They Say",
+  "pdfUrl": "https://arxiv.org/pdf/2610.16135v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

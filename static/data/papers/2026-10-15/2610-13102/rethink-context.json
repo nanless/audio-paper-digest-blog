@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.13102v1",
+  "abstract": "Broadcast archives offer scale and diversity for self-supervised learning (SSL) but contain substantial noisy, non-speech, and multilingual content. Prior work typically relies on voice activity detection or language identification (LID) to extract speech, ensuring presence rather than quality. Whether and how to filter unlabeled speech by quality for SSL, particularly from noisy broadcasts, remains underexplored. We present a large-scale Finnish SSL study starting from 2.1M hours of unconstrained broadcast audio. We propose automatic speech recognition (ASR) confidence as a proxy for pretraining data quality and show 3-7% relative WER improvements over LID-based filtering despite a smaller training set. We further address the lack of controlled architectural comparisons in speech SSL by evaluating Transformer, Macaron-Net, Conformer, and E-Branchformer at matched parameter budgets. Our models improve upon prior Finnish SSL baselines, particularly at Base scale and out-of-domain.",
+  "abstractSha256": "4874d4c90462bd7cfc7f3df1b64c7f5885386991e65715f9399b0f4289dc05cc",
+  "arxivId": "2610.13102",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.13102v1",
+  "assessment": {
+    "documentType": "模型报告",
+    "primaryMethod": "自监督学习",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.self-supervised",
+          "label": "自监督学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.conformer",
+          "label": "Conformer"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.pretraining",
+          "label": "预训练"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "自监督学习",
+      "primaryMethodId": "method.self-supervised",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yaroslav Getman"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tamás Grósz"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tommi Lehtonen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mikko Kurimo"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文用 VAD、去重和 ASR 置信度把 210 万小时广播音频筛到 47.1 万小时做 wav2vec 2.0 预训练，并在相同参数量下比较四种编码器，Base 规模卷积增强结构域外优势最大，X-Large 规模差距缩小。",
+  "originalTitle": "From 2.1M Hours of Raw Broadcast Audio to Finnish Speech SSL: Confidence Filtering and Architectural Analysis at Scale",
+  "pdfUrl": "https://arxiv.org/pdf/2610.13102v1.pdf",
+  "readerTitle": "从 210 万小时广播音频做芬兰语语音自监督：质量筛选与编码器比较",
+  "schemaVersion": 2
+}

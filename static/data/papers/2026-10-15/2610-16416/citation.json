@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.16416v1",
+  "arxivId": "2610.16416",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.16416v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xinlong Deng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yu Xia"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Qiuqiang Kong"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yin Cao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jie Jiang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.16416v1",
+  "originalTitle": "MPASCNet: Magnitude-Phase-Aware Adaptive Spectral Compression for Compressed Music Restoration",
+  "pdfUrl": "https://arxiv.org/pdf/2610.16416v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.17124v1",
+  "arxivId": "2610.17124",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.17124v1",
+  "authors": [
+    {
+      "affiliations": [
+        "MIT CSAIL"
+      ],
+      "name": "Cheng-Kuang Chang"
+    },
+    {
+      "affiliations": [
+        "MIT CSAIL"
+      ],
+      "name": "Alexander H. Liu"
+    },
+    {
+      "affiliations": [
+        "MIT-IBM Watson AI Lab"
+      ],
+      "name": "Brian Kingsbury"
+    },
+    {
+      "affiliations": [
+        "MIT-IBM Watson AI Lab"
+      ],
+      "name": "Hilde Kuehne"
+    },
+    {
+      "affiliations": [
+        "MIT-IBM Watson AI Lab"
+      ],
+      "name": "Rogerio Feris"
+    },
+    {
+      "affiliations": [
+        "MIT-IBM Watson AI Lab"
+      ],
+      "name": "Samuel Thomas"
+    },
+    {
+      "affiliations": [
+        "MIT CSAIL"
+      ],
+      "name": "James Glass"
+    },
+    {
+      "affiliations": [
+        "MIT CSAIL"
+      ],
+      "name": "Kai-Wei Chang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.17124v1",
+  "originalTitle": "D2: High-Capability Full-Duplex Spoken Language Models from Half-Duplex Backbones",
+  "pdfUrl": "https://arxiv.org/pdf/2610.17124v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

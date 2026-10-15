@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.17461v1",
+  "abstract": "Text language models (LMs) acquire broad linguistic and factual capabilities through large-scale pretraining, while comparable capabilities remain difficult to learn from speech alone. Recent work has shown that knowledge distillation from pretrained text LMs offers a promising way to transfer their linguistic and factual capabilities to speech models. However, existing distillation approaches have largely focused on speech-input, text-output models. This idea has yet to be explored for {\\it speech-to-speech} models, which operate on both speech input and speech output. In this work we introduce a speech-to-speech pretraining method that creates an internal text interface for knowledge transfer while preserving the speech-only input and output. The model first consumes speech context without its transcription, switches to text prediction, and then uses the predicted text to lead future speech generation word by word. It also provides an interface for knowledge distillation: the internal text predictions can be directly distilled from the base text LM. To the best of our knowledge, this is the first application of text LM distillation to a speech-to-speech LM. Under matched training conditions, the proposed sequence construction substantially improves the generative perplexity of spoken continuations over speech-only and interleaved speech-text models, approaching the performance of a text-leading inner-monologue model with external ASR prompt transcription. More importantly, distillation improves factual performance under both text and speech evaluation, indicating better retention of knowledge from the base text language model.",
+  "abstractSha256": "9e9382eff275e5f1c6beb5424e115db8bb15fee91b61624c29aed7eb615413ee",
+  "arxivId": "2610.17461",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.17461v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "知识蒸馏",
+    "primaryTask": "语音合成",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-synthesis",
+          "label": "语音合成"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.speech",
+          "label": "语音大模型"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        },
+        {
+          "facet": "method",
+          "id": "method.autoregressive",
+          "label": "自回归模型"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "知识蒸馏",
+      "primaryMethodId": "method.distillation",
+      "primaryTask": "语音合成",
+      "primaryTaskId": "task.speech-synthesis",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "TTI-Chicago"
+      ],
+      "name": "Ju-Chieh Chou"
+    },
+    {
+      "affiliations": [
+        "Stony Brook University"
+      ],
+      "name": "Jiawei Zhou"
+    },
+    {
+      "affiliations": [
+        "TTI-Chicago"
+      ],
+      "name": "Karen Livescu"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文用先预测文本词再生成对应语音段的序列构造解决语音到语音续写的内容建模问题，最强证据是在相同模型和数据下生成困惑度从 151.7 降到 58.9，蒸馏与文本回放进一步保留事实知识，代价是需要词级对齐和双头生成。",
+  "originalTitle": "Distilling Text LMs into Speech-to-Speech LMs by Matching Internal Text Predictions",
+  "pdfUrl": "https://arxiv.org/pdf/2610.17461v1.pdf",
+  "readerTitle": "在语音输入输出内部先想文本再说语音",
+  "schemaVersion": 2
+}

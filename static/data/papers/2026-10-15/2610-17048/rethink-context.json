@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.17048v1",
+  "abstract": "Large audio-language models (LALMs) have become highly capable on a wide range of tasks spanning speech, music, and environmental sound. However, many modern LALMs resample input audio to 16 kHz mono, making all frequencies above 8 kHz unobservable. We present SpectralBridge, a lightweight extension that gives such a model access to the 8-16 kHz band by joining low- and upper-band representations with time-aligned paired cross-frequency attention. Applied to Audio Flamingo Next, the method trains only a small adapter and rank-8 LoRA modules, while leaving the original audio encoder, audio projector, and base language model frozen. SpectralBridge improves both zero-shot transfer and downstream fine-tuning: it raises zero-shot balanced accuracy on the ESC-50 audio classification dataset from 75.5 to 90.5, and when fine-tuned on Insect-10, a 10-way insect species task we construct from InsectSet459 recordings, under the same budget as a LoRA fine-tuned baseline, it reaches 55.4 balanced accuracy against the baseline's 26.2. On a benchmark where the answer depends only on the 8-16 kHz band, it gains 30 mAP over the frozen model. Erasing the upper-band stream from the trained model removes these gains, showing that they come from the high-frequency signal itself rather than from extra tokens or the adapted prompt format.",
+  "abstractSha256": "132a894b8f4afddd9ae0e92660dc31afd9d3e48b86eec30947b4720eecabb86b",
+  "arxivId": "2610.17048",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.17048v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "Adapter",
+    "primaryTask": "音频问答",
+    "rankBucket": "前50%",
+    "score": 6.4,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-question-answering",
+          "label": "音频问答"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.adapter",
+          "label": "Adapter"
+        },
+        {
+          "facet": "method",
+          "id": "method.lora",
+          "label": "LoRA"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "Adapter",
+      "primaryMethodId": "method.adapter",
+      "primaryTask": "音频问答",
+      "primaryTaskId": "task.audio-question-answering",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sergei Polezhaev"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Saba Anjum"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Michael Gormish"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对 16 kHz 音频语言模型看不见 8 kHz 以上信号的问题，论文用搬移频带加同时刻双视图融合复用冻结编码器，在高频决定答案的对照测试上取得明显提升，但结论依赖特定的构造评测与微调预算。",
+  "originalTitle": "SpectralBridge: Adding High-Frequency Capability to Large Audio-Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2610.17048v1.pdf",
+  "readerTitle": "SpectralBridge：给冻结的音频语言模型补上 8–16 kHz 听觉",
+  "schemaVersion": 2
+}

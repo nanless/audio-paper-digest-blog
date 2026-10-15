@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.13198v1",
+  "abstract": "We study query-conditioned multi-instance open-vocabulary sound event localization (QC-MI-OVSEL), where a system must recover all active physical sources matching a natural-language category query, including when the queried category is absent. We introduce the QC-MI-OVSEL benchmark, a 40,000-scene first-order Ambisonics benchmark with 80,000 balanced present/absent query views over 83 classes, including 17 novel classes excluded from training and development. Each frame is annotated with the activity and 3-D direction of every query-matching source, with up to three simultaneous targets. We further propose Q-RSet, which uses query-conditioned source slots and responsibility-based evidence aggregation for source-set prediction. Experiments show improved source recovery, localization recall, cardinality estimation, exact-set recovery, and absent-query suppression over complementary baselines. Analysis indicates that novel categories, paraphrased queries, and higher source multiplicity mainly impair source discovery and set completion, while directional accuracy remains comparatively stable for successfully recovered sources.",
+  "abstractSha256": "0ca5e1b2b3deafeccd47dbe277b1a204e864aef8a48a2f49849b8f6a3857fcde",
+  "arxivId": "2610.13198",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.13198v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "联合声音事件检测定位",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.seld",
+          "label": "联合声音事件检测定位"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.spatial-audio",
+          "label": "空间音频信号"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "联合声音事件检测定位",
+      "primaryTaskId": "task.seld",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yongqiang Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Peiwei Chang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuelan Cheng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiatian Zhu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wenwu Wang"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文提出查询条件下的同类多声源集合定位任务，用 40,000 场景基准检验包含缺席查询在内的集合恢复，Q-RSet 以查询加权的声源槽与证据汇聚实现最多 3 个同类源的活动与方向预测，主测试 F1 为 50.36% 但方向误差与空查询误报仍有明显代价。",
+  "originalTitle": "QC-MI-OVSEL: Benchmarking Query-Conditioned Multi-Instance Open-Vocabulary Sound Event Localization",
+  "pdfUrl": "https://arxiv.org/pdf/2610.13198v1.pdf",
+  "readerTitle": "用一句话查询找回同一类所有声源：QC-MI-OVSEL 任务与 Q-RSet",
+  "schemaVersion": 2
+}

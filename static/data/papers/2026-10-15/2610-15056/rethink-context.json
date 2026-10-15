@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.15056v1",
+  "abstract": "Large language models can post-edit ASR by using linguistic context to compare N-best hypotheses and rewrite the transcript when needed, often improving WER without retraining the recognizer. However, prompt-only correction is brittle: it may over-edit when top-1 is correct and hallucinate when the reference is absent, and often needs very large models. We propose oracle-guided fine-tuning that turns N-best lists into supervision via three curated pools: corrections (reference in the list but not top-1) to teach selection, regularizers (top-1 correct) to discourage unnecessary rewrites, and hard negatives (reference absent) to suppress hallucination. Fine-tuning on this data provides more effective supervision than random subset fine-tuning for learning a hybrid select-or-rewrite policy, with the clearest gains from around 3B parameters on the proprietary dataset but less conclusive results on CommonVoice, a divergence suggesting that public read-speech text may overlap with LLM pretraining and mask genuine post-editing gains.",
+  "abstractSha256": "1f671dd8a614281907b98467de227550f2a5fed73bdb0a13812ec56a4e48538b",
+  "arxivId": "2610.15056",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.15056v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "指令微调",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 5.7,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.instruction-tuning",
+          "label": "指令微调"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.llm",
+          "label": "大语言模型"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.hallucination-faithfulness",
+          "label": "幻觉与忠实度"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "指令微调",
+      "primaryMethodId": "method.instruction-tuning",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shiran Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Gaohui Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sergio Burdisso"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Thibault Bañeras-Roux"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shashi Kumar"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Petr Motlicek"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文研究只给文本 N-Best 列表时大模型如何做生成式改写，用参考答案把训练分成可纠正、已正确、无答案三类来教选择与克制，在私有对话数据上从 3B 左右开始稳定优于同量随机数据，而在 CommonVoice 上结论不稳定。",
+  "originalTitle": "Select or Rewrite: Oracle-Guided Fine-Tuning for Generative ASR Post-Editing from N-Best Hypotheses",
+  "pdfUrl": "https://arxiv.org/pdf/2610.15056v1.pdf",
+  "readerTitle": "选还是改：用 N-Best 列表教大模型做语音识别后处理",
+  "schemaVersion": 2
+}

@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.12993v1",
+  "arxivId": "2610.12993",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.12993v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yiqiao Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiaolong Lin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhenpeng Zhan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhizheng Wu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.12993v1",
+  "originalTitle": "E3-System: Expressive EmoData, Explicitly Controllable, Easy-to-Use TTS",
+  "pdfUrl": "https://arxiv.org/pdf/2610.12993v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

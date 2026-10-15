@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.15671v1",
+  "arxivId": "2610.15671",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.15671v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jiacheng Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ruidong Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "François Guimbretière"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Cheng Zhang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.15671v1",
+  "originalTitle": "Synthesizing Ultrasonic Echo Profiles from Text for Open-Vocabulary Silent Speech Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2610.15671v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

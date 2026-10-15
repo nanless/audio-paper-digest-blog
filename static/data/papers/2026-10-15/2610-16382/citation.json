@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.16382v1",
+  "arxivId": "2610.16382",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.16382v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xinlong Deng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yong Tian"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jian Guan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Qiuqiang Kong"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jie Jiang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yin Cao"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.16382v1",
+  "originalTitle": "Behavior-Conditioned Animal Vocalization Generation: Event-Aware Modeling and Multidimensional Evaluation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.16382v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

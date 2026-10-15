@@ -1,0 +1,114 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.13300v1",
+  "abstract": "Modeling human reactions to spatial audio requires understanding both what is heard and where it comes from. Prior work generates motion offline from complete acoustic and spatial input sequences. Humans, however, react to sounds without knowing what they will hear next. We present Sonic-AMG, to our knowledge the first framework for streaming human motion generation from spatial audio. The model encodes acoustic content and body-relative source geometry as separate tokens. Conditioned on these tokens, a causal transformer with a flow head generates continuous motion latents, from which a causal decoder reconstructs motion segments. Standard teacher-forced training derives motion histories and body-relative source locations from ground-truth motion, whereas streaming inference relies on generated motion for both, resulting in a training-inference mismatch. To reduce this history discrepancy, we introduce rehearsal training, which combines full-sequence teacher-forced supervision with supervised prediction along short autoregressive self-rollouts. To keep spatial conditioning consistent with generated motion, we propose spatial feedback, which recomputes body-relative source locations from generated root poses during both rehearsal training and inference. On SAM, Sonic-AMG achieves state-of-the-art FID and R-precision. It further supports real-time online generation of coherent reactions across sound events and source locations. Project page: https://jingchengni.com/sonic-amg/.",
+  "abstractSha256": "939e0711ab5d674badb65d33ed443390eb121dcfc2ca1620ce5bb62e03f68dc4",
+  "arxivId": "2610.13300",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.13300v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "自回归模型",
+    "primaryTask": "音频交互",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-interaction",
+          "label": "音频交互"
+        },
+        {
+          "facet": "method",
+          "id": "method.autoregressive",
+          "label": "自回归模型"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.spatial-audio",
+          "label": "空间音频"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.real-time",
+          "label": "实时处理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "自回归模型",
+      "primaryMethodId": "method.autoregressive",
+      "primaryTask": "音频交互",
+      "primaryTaskId": "task.audio-interaction",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Brown University"
+      ],
+      "name": "Jingcheng Ni"
+    },
+    {
+      "affiliations": [
+        "Brown University"
+      ],
+      "name": "Zekun Li"
+    },
+    {
+      "affiliations": [
+        "MIT"
+      ],
+      "name": "Zhiyang Dou"
+    },
+    {
+      "affiliations": [
+        "Brown University"
+      ],
+      "name": "Xiaoyan Cong"
+    },
+    {
+      "affiliations": [
+        "Yale University"
+      ],
+      "name": "Ziyao Zeng"
+    },
+    {
+      "affiliations": [
+        "Brown University"
+      ],
+      "name": "Hongyang Du"
+    },
+    {
+      "affiliations": [
+        "Brown University"
+      ],
+      "name": "Randall Balestriero"
+    },
+    {
+      "affiliations": [
+        "The University of Hong Kong"
+      ],
+      "name": "Taku Komura"
+    },
+    {
+      "affiliations": [
+        "Brown University"
+      ],
+      "name": "Srinath Sridhar"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "Sonic-AMG 针对双耳音频流加世界系声源位置输入，用 what 与 where 分离表征加因果 Transformer 与流头逐段生成动作，并以排练训练和空间反馈缓解历史与空间条件失配，在 SAM 上取得最优 FID 与 R-precision 且保持实时流式生成，但结论限于 SAM 划分与已知声源位置条件。",
+  "originalTitle": "Sonic-AMG: Streaming Human Motion Generation from Spatial Audio",
+  "pdfUrl": "https://arxiv.org/pdf/2610.13300v1.pdf",
+  "readerTitle": "Sonic-AMG：从空间音频流式生成人体反应动作",
+  "schemaVersion": 2
+}

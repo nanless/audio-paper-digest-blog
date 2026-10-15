@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.15453v1",
+  "arxivId": "2610.15453",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.15453v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zijian Lin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jing Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jinghao Luo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhuo Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Fan Fan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhiyong Wu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.15453v1",
+  "originalTitle": "BridgeCodec: Mamba Enhanced Neural Audio Codec with Schrödinger Bridge at Low Bitrate",
+  "pdfUrl": "https://arxiv.org/pdf/2610.15453v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

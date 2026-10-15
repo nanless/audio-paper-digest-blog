@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.14993v1",
+  "abstract": "Audio source separation models must preserve fine spectral structure while keeping the cost of the separator tractable. Band-split architectures reduce this cost by manually partitioning the spectrum into predefined frequency bands and encoding each band as a token, but the same boundaries are used for every mixture. Because informative spectral structure varies with source content, fixed boundaries can merge discriminative components or spend tokens where little resolution is needed. We introduce Dynamic Band Splitting (DBS), an end-to-end framework that adapts boundary locations and band widths to each mixture under a fixed band-token budget. DBS predicts content-conditioned boundary scores within frequency blocks, selects a prescribed number of boundaries using hard Top-$K$, and applies content-dependent pooling to obtain compact band tokens. After separation, it smooths and expands these tokens to the original STFT grid, refines them along frequency, and decodes complex masks with a frequency-shared head. DBS improved separation over the corresponding static models on DnR v2, MUSDB18-HQ, and EchoSet, with DBS-BSRNN achieving relative gain of 29.0% in average SI-SDR on DnR v2. These results and boundary analyses on DnR v2 show that content-adaptive frequency partitioning benefits multiple separator backbones under a fixed band-token budget. Code and audio demos are available at https://cslikai.cn/Dynamic-Band-Splitting",
+  "abstractSha256": "e7f131f8ff6ce2033ea959645e2737a73365b323f6b487c29da09b23131ef6ad",
+  "arxivId": "2610.14993",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.14993v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "动态计算与早退",
+    "primaryTask": "音频分离",
+    "rankBucket": "前50%",
+    "score": 7.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-separation",
+          "label": "音频分离"
+        },
+        {
+          "facet": "method",
+          "id": "method.dynamic-computation",
+          "label": "动态计算与早退"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "动态计算与早退",
+      "primaryMethodId": "method.dynamic-computation",
+      "primaryTask": "音频分离",
+      "primaryTaskId": "task.audio-separation",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bingzhe Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kai Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiaolin Hu"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文针对固定频带划分难以兼顾不同混合内容的问题，提出随混合自适应移动边界的动态频带切分框架，在三个数据集上用固定带数对照验证了划分自适应的增益，并以消融说明了分块预算与重建细化的代价。",
+  "originalTitle": "Learning Where to Split: Dynamic Band Splitting for Audio Source Separation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.14993v1.pdf",
+  "readerTitle": "在固定 token 预算下学会在哪里切分频带",
+  "schemaVersion": 2
+}

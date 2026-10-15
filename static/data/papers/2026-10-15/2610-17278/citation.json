@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.17278v1",
+  "arxivId": "2610.17278",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.17278v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Christ Kekeli Keli"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Steve Sanogo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Patrice Sebastiano"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hamad Aldenawi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ryan Whetten"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.17278v1",
+  "originalTitle": "Nufo: A Benchmark for Ewe Automatic Speech Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2610.17278v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.13102v1",
+  "arxivId": "2610.13102",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.13102v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yaroslav Getman"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tamás Grósz"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tommi Lehtonen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mikko Kurimo"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.13102v1",
+  "originalTitle": "From 2.1M Hours of Raw Broadcast Audio to Finnish Speech SSL: Confidence Filtering and Architectural Analysis at Scale",
+  "pdfUrl": "https://arxiv.org/pdf/2610.13102v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

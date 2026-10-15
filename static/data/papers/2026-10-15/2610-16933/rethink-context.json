@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.16933v1",
+  "abstract": "Recent work has investigated Omni-modal Large Language Models (OLLMs), models which can take multiple modalities and their combinations as input, as a way forward to have systems really capable of interacting with their environment. Uncertainty quantification (UQ) for OLLMs, however, remains an open problem: existing methods largely target at most two modalities at a time, require access to model internals, or re-invocation of the evaluated model. We propose a model-agnostic UQ framework that scores a Chain-of-Thought response entirely through external omni-modal embeddings, measuring the grounding of the reasoning in the multimodal input and its internal coherence. Our contribution is the family of signals and an empirical characterisation of when it is reliable, rather than any single estimator: we find the geometric scores to be largely redundant with one another (mean within-split rank correlation 0.91-0.94) but strongly complementary to answer-dispersion baselines, and their reliability to depend on the generator and the modality. The resulting confidence estimates require no access to logits, hidden states or gradients of the evaluated model and no additional inference from it; they do require segmenting the reasoning trace with an auxiliary model and, for the aggregated score, a labelled calibration set that we show can be as small as 25 examples (although we also show that such a set buys little over fixing one signal a priori). On UNO-Bench, with both a closed and an open model, our scores yield small gains over self-consistency (systematic with the closed generator, mixed with the open one) and are competitive with self-verbalisation and internal-state baselines, especially in open-ended, omni-modal questions where previous state-of-the-art baselines struggle.",
+  "abstractSha256": "ef2d276248020dc74c3673c0784b2aab33eb36ccbd0f9d41a12f21b3728bcf9c",
+  "arxivId": "2610.16933",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.16933v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "不确定性估计与校准",
+    "primaryTask": "音视频问答",
+    "rankBucket": "前50%",
+    "score": 5.7,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-question-answering",
+          "label": "音视频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.uncertainty-estimation",
+          "label": "不确定性估计与校准"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.multimodal",
+          "label": "多模态模型"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "不确定性估计与校准",
+      "primaryMethodId": "method.uncertainty-estimation",
+      "primaryTask": "音视频问答",
+      "primaryTaskId": "task.av-question-answering",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Iacopo Ghinassi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hy Nguyen Gia La"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Luke Ong"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文针对全模态大模型的答案可信度问题，用外部全模态编码器把输入和思维链映射到同一空间算贴合与连贯，再给多数投票加权，在 UNO-Bench 上随生成器和模态小幅改善且在开放式全模态问答上相对最稳，代价是需要辅助切分和少量标注校准。",
+  "originalTitle": "Estimating Uncertainty of Omnimodal Large Language Models via External Omnimodal Embeddings",
+  "pdfUrl": "https://arxiv.org/pdf/2610.16933v1.pdf",
+  "readerTitle": "不看内部参数，只看推理过程：用外部全模态向量估计不确定性",
+  "schemaVersion": 2
+}

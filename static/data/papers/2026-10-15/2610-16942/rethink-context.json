@@ -1,0 +1,127 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.16942v1",
+  "abstract": "Large audio-language models (LALMs) are fast becoming a general interface to sound, yet how far their broad pretraining carries into specialized domains remains largely open. Vessel monitoring, maritime safety, and ocean sensing all depend on recognizing underwater signals, but to our knowledge LALMs have not been systematically evaluated on them. Annotated recordings are costly to collect, and a faithful synthetic alternative has to bring together many interacting factors: the structure of detection pulses, communication waveforms, and ship-radiated noise, and the sound-speed profile, geometry, and multipath propagation through which each reaches the receiver. We address this by proposing \\textbf{UA-Bench}, to our knowledge the first large-scale benchmark for evaluating LALMs on underwater acoustic signal recognition. It comprises 375,051 audio records that couple parameterized sources with modeled propagation, so that every record can be traced to the conditions that produced it. The records span these three signal families, and each carries a three-level label hierarchy (13 leaf classes), a templated multi-turn dialogue, and source and channel metadata. We evaluate on a balanced 2,600-record subset with a gated coarse-to-fine protocol that locates each error at source routing, fine-grained classification, or output format, and add a paired silent-audio control to test whether the waveform is actually used. Nine open LALMs, evaluated without task-specific adaptation, reach only 2.0\\%--13.1\\% leaf accuracy, against a random reference of 7.7\\%. The waveform helps source routing far more than leaf recognition (for one model, +29.5 versus +2.3 points over silence), and just four models gain reliably at the leaf level, by at most 4.7 points. UA-Bench thus gives a reference point for these models, and its released training partition supports follow-up adaptation work.",
+  "abstractSha256": "42828abffea823998724a2658506dfdf4b9fbedbe601244564ad24d05314f0fa",
+  "arxivId": "2610.16942",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.16942v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 6.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.audio-language",
+          "label": "音频大模型"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhe Sun"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Liang An"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jiayu Yao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ronglai Qian"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jianing Cai"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ziwei Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Qing Fan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhiyuan Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yujun Cai"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hongli Cao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yiwei Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiaoyan Wang"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "UA-Bench 用 375,051 条参数可追溯的合成水下音频考查通用音频语言模型，九个开源模型细粒度准确率仅 2.0%–13.1%，波形主要帮助粗粒度路由而对细分类提升至多 4.7 个百分点。",
+  "originalTitle": "UA-Bench: Benchmarking Large Audio-Language Models on Underwater Acoustic Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2610.16942v1.pdf",
+  "readerTitle": "水下声音识别考验通用音频大模型：UA-Bench 的构造与发现",
+  "schemaVersion": 2
+}

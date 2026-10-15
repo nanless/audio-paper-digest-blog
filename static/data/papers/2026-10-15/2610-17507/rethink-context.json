@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.17507v1",
+  "abstract": "More than 1.5 billion people have hearing loss. When several people talk at once, hearing aids amplify every voice alike. Auditory attention decoding (AAD) aims to solve this by reading a listener's brain signals to find the attended talker, letting the device amplify only them. A real device will not see the brain alone; smart glasses and earbuds also track eyes, head, and scene. These behavioral signals help, as people often look at who they listen to. However, they show where a listener looks, not whom they hear. A decoder relying heavily on them fails when a listener cannot move their head or listens without looking - exactly when a brain-based device is needed. A multimodal decoder must use these signals without letting them replace the electroencephalogram (EEG). Accuracy alone cannot show whether it does. We present MERIT, a decoder and evaluation method asking: how much accuracy does each input earn? MERIT shuffles each input stream across test examples, measures the accuracy drop, and splits the result across streams using Shapley values. It also blocks two shortcuts: candidate audio is checked before training so it cannot reveal the answer, and the scoring function cannot beat chance if it ignores the brain. On a public dataset with EEG, eye tracking, head motion, and scene video, MERIT improves on the published benchmark, reaching 0.82 four-way accuracy within listeners and 0.74 on unseen listeners (chance is 0.25). The measurement reveals what accuracy hides: adding behavioral streams raises overall accuracy but almost halves the brain's share of it. On two other datasets, the same tests find a label imbalance in a widely used benchmark and flag results that accuracy alone would report as brain decoding.",
+  "abstractSha256": "3ce1cdc37ab334ddf72b152493c49dab5e8fc9703419937006e2ac8746a67085",
+  "arxivId": "2610.17507",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.17507v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "言语神经解码",
+    "rankBucket": "前50%",
+    "score": 6.4,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.neural-speech-decoding",
+          "label": "言语神经解码"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.neural",
+          "label": "脑信号"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "言语神经解码",
+      "primaryTaskId": "task.neural-speech-decoding",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ali Alavi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Donald S. Williamson"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对鸡尾酒会中从脑电解码注意对象的问题，Merit 用去均值相关打分堵住音频捷径，用分流打乱与 Shapley 值度量每个输入的贡献，在 MAESTRO 上达到四选一 0.82 与未见被试 0.74 的准确率，同时发现加入行为信号流会让脑电的贡献几乎减半。",
+  "originalTitle": "Merit: Making every modality earn its contribution in multimodal attention decoding",
+  "pdfUrl": "https://arxiv.org/pdf/2610.17507v1.pdf",
+  "readerTitle": "Merit：让每个输入都挣得自己的那份多模态注意解码",
+  "schemaVersion": 2
+}

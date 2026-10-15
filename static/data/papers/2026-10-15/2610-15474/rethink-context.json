@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.15474v1",
+  "abstract": "We introduce Non-musical Audio to Symbolic Music Transformation (NASMT), a novel task that converts non-musical audio into symbolic music representations. Unlike automatic music transcription, which assumes musical input and a unique correct score, NASMT is inherently one-to-many and requires evaluation along two axes: input correspondence and musicality. We present Sori, an encoder--decoder Transformer that addresses this task through domain adversarial training (DAT), which bridges the gap between musical and non-musical audio in the encoder's feature space, and classifier-free guidance (CFG) with a continuous parameter~$γ$ that controls the trade-off between correspondence and musicality at inference time. Across objective metrics and a listening study, Sori provides effective continuous control via $γ$ and compares favorably with instrument-agnostic transcription models. Sori supports real-time streaming on a consumer CPU. Audio examples are available at https://soridemo0320.github.io/sori-demo/.",
+  "abstractSha256": "377be1dbd96d5dbe2a570e9477e71573ef705bcaf1884b6c0c83d8775ea27cae",
+  "arxivId": "2610.15474",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.15474v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "领域适应",
+    "primaryTask": "符号音乐生成",
+    "rankBucket": "前50%",
+    "score": 6.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.symbolic-music",
+          "label": "符号音乐生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.domain-adaptation",
+          "label": "领域适应"
+        },
+        {
+          "facet": "method",
+          "id": "method.transformer",
+          "label": "Transformer"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "领域适应",
+      "primaryMethodId": "method.domain-adaptation",
+      "primaryTask": "符号音乐生成",
+      "primaryTaskId": "task.symbolic-music",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kyungsu Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yejin Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kyogu Lee"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对非音乐音频到符号音乐的一对多转换问题，Sori 用只在音乐音频上训练的编码器加双解码器结构配合域对抗训练和无分类器引导，在 AudioSet 评测上用连续参数控制贴合输入与音乐性之间的权衡，并以平均实时率 0.82 在消费级 CPU 上实现流式推理。",
+  "originalTitle": "Sori: Streamable and Controllable Model for Non-musical Audio to Symbolic Music Transformation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.15474v1.pdf",
+  "readerTitle": "把日常声音变成符号音乐：Sori 的可流式可控转换",
+  "schemaVersion": 2
+}

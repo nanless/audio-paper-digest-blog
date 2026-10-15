@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.13500v1",
+  "arxivId": "2610.13500",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.13500v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yanxiang Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Haoyuan Deng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jinyu Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hongyi Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Dingshan Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Runlin Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Weifeng Su"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.13500v1",
+  "originalTitle": "Phonology-Aware Speaker Extraction Frontend for Audio LLMs",
+  "pdfUrl": "https://arxiv.org/pdf/2610.13500v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

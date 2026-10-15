@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.15059v1",
+  "arxivId": "2610.15059",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.15059v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Dániel Halmai"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Gábor Gosztolya"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.15059v1",
+  "originalTitle": "How Language-Independent Are Emotional Attributes? A Study on Training Data Scaling and Cross-Lingual Generalization",
+  "pdfUrl": "https://arxiv.org/pdf/2610.15059v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

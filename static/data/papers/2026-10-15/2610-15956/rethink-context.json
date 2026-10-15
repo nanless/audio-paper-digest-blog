@@ -1,0 +1,150 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.15956v1",
+  "abstract": "Vision-language-action models for embodied navigation typically rely on RGB observations, limiting their applicability in lights-out industrial environments where visible illumination may be unavailable. We study illumination-independent navigation using spatial audio for target localization and depth for obstacle-aware geometry. To support this setting, we introduce DarkNav-Bench, a benchmark with 24 industrial scenes and four progressively challenging acoustic conditions. We further propose ADAPT, an audio-depth action-planning framework equipped with spatial-audio perception and optimized for closed-loop navigation through reinforcement learning (RL). Our key RL contribution, transition-aware reward shaping (TARS), defines a pose-aware shortest-action potential over a position-heading graph. Unlike conventional geodesic-progress rewards, TARS accounts for both feasible movements and in-place rotations, providing action-consistent feedback for policy optimization. Experiments show that ADAPT consistently outperforms training-based navigation baselines and zero-shot multimodal models on both seen and unseen scenes. On unseen environments, it achieves 90.6% success under Clean conditions and retains 60.0% success under the most challenging Localized Noise setting. These results demonstrate the potential of spatial audio and depth as complementary modalities for reliable RGB-free navigation in lights-out industrial environments.",
+  "abstractSha256": "420b62ea8218bab9d8101b5a517816f2a1d1430ed18875dc2728b0438c2a093e",
+  "arxivId": "2610.15956",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.15956v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "强化学习",
+    "primaryTask": "声源定位",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.localization",
+          "label": "声源定位"
+        },
+        {
+          "facet": "method",
+          "id": "method.reinforcement",
+          "label": "强化学习"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "application",
+          "id": "application.industrial",
+          "label": "工业应用"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.spatial-audio",
+          "label": "空间音频信号"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "强化学习",
+      "primaryMethodId": "method.reinforcement",
+      "primaryTask": "声源定位",
+      "primaryTaskId": "task.localization",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "University of California, Irvine"
+      ],
+      "name": "Wenjun Huang"
+    },
+    {
+      "affiliations": [
+        "University of Pennsylvania"
+      ],
+      "name": "Shenghao Fu"
+    },
+    {
+      "affiliations": [
+        "Carnegie Mellon University"
+      ],
+      "name": "Yian Jin"
+    },
+    {
+      "affiliations": [
+        "Purdue University Northwest"
+      ],
+      "name": "Yang Ni"
+    },
+    {
+      "affiliations": [
+        "Michigan State University"
+      ],
+      "name": "Yifan Li"
+    },
+    {
+      "affiliations": [
+        "Independent Researcher"
+      ],
+      "name": "Lichi Li"
+    },
+    {
+      "affiliations": [
+        "Dartmouth College"
+      ],
+      "name": "Xingjian Diao"
+    },
+    {
+      "affiliations": [
+        "University of California, Irvine"
+      ],
+      "name": "Pengfei Zhang"
+    },
+    {
+      "affiliations": [
+        "University of California, Irvine"
+      ],
+      "name": "Yutong Song"
+    },
+    {
+      "affiliations": [
+        "University of California, Irvine"
+      ],
+      "name": "Hanning Chen"
+    },
+    {
+      "affiliations": [
+        "University of California, Los Angeles"
+      ],
+      "name": "Jiarui Cui"
+    },
+    {
+      "affiliations": [
+        "University of Notre Dame"
+      ],
+      "name": "Tianyu Yang"
+    },
+    {
+      "affiliations": [
+        "University of California, Irvine"
+      ],
+      "name": "Shilong Li"
+    },
+    {
+      "affiliations": [
+        "Michigan State University"
+      ],
+      "name": "Yu Kong"
+    },
+    {
+      "affiliations": [
+        "University of California, Irvine"
+      ],
+      "name": "Mohsen Imani"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文研究无可见光工业场景下只用空间音频找方向、只用深度看路的导航问题，用三阶段训练的 ADAPT 和位置朝向图上的剩余动作数奖励 TARS 实现，在未见过的工厂中 Clean 条件成功率 90.6% 而最难的局部噪声下保持 60.0%，代价是依赖仿真中的特权地图和固定鸣叫信标。",
+  "originalTitle": "ADAPT: Audio-Depth Action Planning with Transition-Aware Rewards for Lights-Out Industrial Navigation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.15956v1.pdf",
+  "readerTitle": "关灯工厂里只靠声音和深度导航：ADAPT 如何找声源并避障",
+  "schemaVersion": 2
+}

@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.13013v1",
+  "abstract": "Softmax-based multimodal emotion recognition methods often assign high confidence even when sensor data are corrupted or contradictory, for example when facial expressions suggest positive valence while vocal prosody indicates negative arousal. We present an Evidential Multimodal Transformer with Dempster-Shafer Fusion (EMT-DS) that addresses this problem through formal uncertainty quantification. EMT-DS models predictions as Subjective Opinions (Dirichlet distributions), separating epistemic uncertainty (lack of evidence) from aleatoric uncertainty (sensor noise). Modality-specific transformer encoders produce belief mass distributions that are fused with Dempster's Rule of Combination, which normalizes the joint belief mass by a conflict coefficient 1/(1-c), so that contradictory evidence is explicitly quantified as conflict and the fused prediction becomes diffuse rather than being forced into an unjustified consensus. Under subject-independent and speaker-independent evaluation on four benchmarks, EMT-DS achieves 84.3% accuracy on IEMOCAP versus 81.7% for the best baseline (p < 0.01), 82.4% on DEAP under leave-one-subject-out evaluation versus 78.1%, and 96.8% on the highly imbalanced KEMDy20, and it improves accuracy on CMU-MOSEI by 2.4 points over the strongest evidential baseline. In controlled ablation, it reduces Expected Calibration Error from 0.153 (softmax transformer) to 0.042. It maintains 71.2% accuracy under severe Gaussian noise on audio features (sigma = 1.0), where attention baselines drop to 45.3%, and degrades gracefully when entire modalities are absent. The fusion step has O(MK^2) complexity, compared with O(M^2 d^2) for cross-modal attention. The learned conflict metric also flags likely errors: reviewing 20% of samples captures 80% of misclassifications, which supports selective prediction in clinical and safety-critical systems.",
+  "abstractSha256": "f74da0baf9bd7ceb42d53c0f261a1f1197b8863a320a9d566de8647cb414a409",
+  "arxivId": "2610.13013",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.13013v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "语音情感识别",
+    "rankBucket": "前50%",
+    "score": 6.9,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.emotion-recognition",
+          "label": "语音情感识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.uncertainty-estimation",
+          "label": "不确定性估计与校准"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "语音情感识别",
+      "primaryTaskId": "task.emotion-recognition",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Muhammad Usama"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yeoreum Jung"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对多模态情绪识别中 softmax 被迫自信的问题，论文提出每个模态输出狄利克雷证据并用 Dempster-Shafer 规则融合，在四个数据集上同时提升精度与校准，而代价是需要调冲突权重与 KL 退火且依赖条件独立假设。",
+  "originalTitle": "Evidential Multimodal Transformers with Dempster-Shafer Fusion for Emotion Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2610.13013v1.pdf",
+  "readerTitle": "用证据和冲突做多模态情绪识别：EMT-DS 解读",
+  "schemaVersion": 2
+}

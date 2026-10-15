@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.13072v1",
+  "arxivId": "2610.13072",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.13072v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shaohua Pan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiao Liu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.13072v1",
+  "originalTitle": "AV-FlowEdit: Training-Free Prompt-Driven Audio-Visual Editing with Event-Aware Spectral Trajectory Preservation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.13072v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

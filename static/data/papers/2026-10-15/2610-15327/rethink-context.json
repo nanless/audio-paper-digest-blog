@@ -1,0 +1,97 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.15327v1",
+  "abstract": "Removing audio can shift a visual predictor's output without showing whether the task uses the intended audio information. We introduce Conditional Input and Visual Interpretation Checks (CIViC), a four-gate protocol that links an interpretation to an intervention, held-out task comparison, or endpoint control. We demonstrate CIViC on actor-disjoint face-raster tests, a synthetic audio-feature mixture, and source-video-disjoint SpeakerVid proxy tasks. In the static face-raster test, cross-actor audio replacement meets the registered detection rule with a small effect; on a separate temporal endpoint, constant-audio fits score better than audio-trained fits in four matched seeds. In the synthetic mixture, the condition-augmented fit has higher 1,000-step RMSE than the audio-only fit (0.1807 vs. 0.1707), with the gap shrinking during training. In the SpeakerVid proxy, the five-feature-zero fit (five low-level audio summaries zeroed; identity, dialogue, and condition inputs retained) has lower whole-frame grayscale RMSE than aligned audio across four held-out conditions and five paired seeds, while aligned audio has lower segment-drift error. The results show that output activation, held-out error, and endpoint controls support different interpretations across these proxy tasks.",
+  "abstractSha256": "4d2b60ec3f0519c5f131131c31c9181bb7fd0380cc42db923627eba174770a78",
+  "arxivId": "2610.15327",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.15327v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "评测协议",
+    "primaryTask": "音视频生成",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-generation",
+          "label": "音视频生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "评测协议",
+      "primaryMethodId": "method.evaluation-protocol",
+      "primaryTask": "音视频生成",
+      "primaryTaskId": "task.av-generation",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mengzhe Geng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Max W. Y. Lam"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuewen Cao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shoukang Hu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jing Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Marc Tessier"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xu Li"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文针对音频条件视觉预测中去掉音频就下结论的问题，提出把解释与干预、留出任务比较和端点对照绑定的 CIViC 四门诊断，并在演员不重叠的人脸光栅、合成特征混合与来源视频不重叠的 SpeakerVid 代理任务上给出通过与失败并存的证据。",
+  "originalTitle": "CIViC: Evidence Gates for Audio-Conditioned Visual Prediction on Proxy Tasks",
+  "pdfUrl": "https://arxiv.org/pdf/2610.15327v1.pdf",
+  "readerTitle": "去掉音频输出变了，能说明模型用了音频吗：CIViC 的四个证据门",
+  "schemaVersion": 2
+}

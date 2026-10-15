@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.15780v1",
+  "arxivId": "2610.15780",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.15780v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lishi Zuo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chong-Xin Gan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zezhong Jin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Youzhi Tu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Man-Wai Mak"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "KongAik Lee"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.15780v1",
+  "originalTitle": "FlowGRPO for Vocal Separation: From Reward Analysis to Reward Design",
+  "pdfUrl": "https://arxiv.org/pdf/2610.15780v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

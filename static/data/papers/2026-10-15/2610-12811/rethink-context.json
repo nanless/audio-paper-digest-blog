@@ -1,0 +1,80 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.12811v1",
+  "abstract": "Reward-guided inference-time alignment can improve joint audio-visual generation, but optimizing multiple alignment objectives requires many expensive model evaluations, making existing methods costly under limited compute. Particle-based search enables global exploration but incurs estimation error with a finite population, while Metropolis-Hastings (MH) can refine candidates locally but benefits from a strong initialization. We introduce \\textbf{S}pend \\textbf{W}here \\textbf{I}t \\textbf{M}atters (\\modelname), a two-stage, training-free, reward-agnostic framework that combines particle search with MH refinement under a fixed compute budget. In the first stage, we adaptively allocate particles across denoising checkpoints using online variance estimates, minimizing estimation variance while concentrating compute where it is most useful. This search provides a promising candidate for MH refinement, which uses local noise-and-denoise proposals on completed outputs to further improve reward. By starting from a strong candidate, MH can recover additional reward without requiring a larger particle population or costly global exploration. We show that, at matched compute, combining particle search with MH refinement achieves higher rewards than either approach alone. On \\textsc{JavisBench-Mini}, at closely matched compute, \\modelname achieves mean relative gains across seven metrics of $30.7\\%$ over BoN and $14.1\\%$ over EvoSearch with JavisDiT++, and $9.2\\%$ over BoN and $17.0\\%$ over EvoSearch with LTX-2. Beyond joint audio-visual generation, we also demonstrate the benefits of adaptive particle allocation on SD1.5 image generation, improving AestheticScore by $2.2\\%$ and ImageReward by $6.0\\%$ over uniform allocation.",
+  "abstractSha256": "93b6edcbf6d71c8475f71628f61cd543a76aa440c43a3760858c21ae13defe5e",
+  "arxivId": "2610.12811",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.12811v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "动态计算与早退",
+    "primaryTask": "音视频生成",
+    "rankBucket": "前50%",
+    "score": 7.4,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-generation",
+          "label": "音视频生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.dynamic-computation",
+          "label": "动态计算与早退"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "动态计算与早退",
+      "primaryMethodId": "method.dynamic-computation",
+      "primaryTask": "音视频生成",
+      "primaryTaskId": "task.av-generation",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "University of Illinois Urbana-Champaign",
+        "Adobe Research"
+      ],
+      "name": "Shivanshu Shekhar"
+    },
+    {
+      "affiliations": [
+        "Adobe Research"
+      ],
+      "name": "Raghavendra Addanki"
+    },
+    {
+      "affiliations": [
+        "University of Illinois Urbana-Champaign"
+      ],
+      "name": "Tong Zhang"
+    },
+    {
+      "affiliations": [
+        "Adobe Research"
+      ],
+      "name": "Uttaran Bhattacharya"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文针对联合音画生成中多目标对齐需要大量模型评估的问题，提出先做方差引导的自适应粒子搜索再做短链局部修正的两阶段推理对齐方法，在匹配计算量下提升七个对齐指标并用图像实验验证分配策略的通用性，代价是需要维护在线调度参数和两阶段奖励设置。",
+  "originalTitle": "Spend Where It Matters: Particle Search with MH Refinement for Budget-Constrained Audio-Visual Alignment",
+  "pdfUrl": "https://arxiv.org/pdf/2610.12811v1.pdf",
+  "readerTitle": "把有限计算花在刀刃上：粒子搜索加局部修正的音画对齐",
+  "schemaVersion": 2
+}

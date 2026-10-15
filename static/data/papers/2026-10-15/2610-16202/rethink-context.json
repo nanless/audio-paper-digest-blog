@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.16202v1",
+  "abstract": "Spatially encoded speech conveys not only linguistic information but also spatial cues. This enables listeners to distinguish and localize speakers, contributing to more natural and realistic auditory experiences in applications such as remote conferencing and immersive media. Neural speech codecs (NSCs) enable high-quality reconstruction of monaural speech at increasingly low bitrates while preserving linguistic information, but their ability to effectively preserve spatial cues remains limited. We propose FOAdapter, a plug-and-play spatial tokenizer that leverages a pretrained monaural speech codec to efficiently represent both linguistic and spatial information in first-order ambisonic (FOA) speech at low bitrates. Comprehensive evaluation demonstrates that FOAdapter consistently preserves spatial information across all evaluated codecs. Source code and audio examples are available on our demo website.",
+  "abstractSha256": "3c2dbd3f62cb0b60c8c6d5da84a8f41aed4e243c6b15b2e17ad16f57f5b18c57",
+  "arxivId": "2610.16202",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.16202v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "Adapter",
+    "primaryTask": "语音编码",
+    "rankBucket": "前25%",
+    "score": 8.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-coding",
+          "label": "语音编码"
+        },
+        {
+          "facet": "method",
+          "id": "method.adapter",
+          "label": "Adapter"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.spatial-audio",
+          "label": "空间音频信号"
+        },
+        {
+          "facet": "method",
+          "id": "method.neural-codec",
+          "label": "神经编解码与离散单元"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "Adapter",
+      "primaryMethodId": "method.adapter",
+      "primaryTask": "语音编码",
+      "primaryTaskId": "task.speech-coding",
+      "registrySha256": "0a0847314ab2059d95efac33376414498e598a1f02a1486869bee0efc481d1f7",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kirak Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yoonjeong Park"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Juhan Nam"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sungyoung Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Minje Kim"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "FOAdapter 冻结单声道编码只传 W 声道内容，再用一条 275 bit/s 的空间码流恢复四声道 FOA，在 Spatial LibriSpeech 上把方向误差稳定到约 7 度，代价是语音客观质量低于同骨干的四通道独立编码。",
+  "originalTitle": "FOAdapter: A Plug-and-Play Spatial Tokenizer for Low-Bitrate FOA Speech Coding",
+  "pdfUrl": "https://arxiv.org/pdf/2610.16202v1.pdf",
+  "readerTitle": "FOAdapter：给冻结单声道编码外挂一条空间码流的低码率 FOA 语音编码",
+  "schemaVersion": 2
+}
