@@ -1,0 +1,22 @@
+{{- $concepts := .concepts -}}
+{{- $selectedIds := slice -}}
+{{- $visible := slice -}}
+{{- range .selected -}}
+  {{- $selectedIds = $selectedIds | append .id -}}
+  {{- $visible = $visible | append .id -}}
+  {{- range .ancestorIds }}{{ $visible = $visible | append . }}{{ end -}}
+{{- end -}}
+{{- $facets := slice (dict "id" "task" "name" "研究任务") (dict "id" "method" "name" "研究方法") (dict "id" "setting" "name" "研究条件") (dict "id" "signal" "name" "信号") (dict "id" "application" "name" "应用") (dict "id" "research_focus" "name" "研究重点") (dict "id" "artifact" "name" "研究产物") (dict "id" "scientific_topic" "name" "科学主题") (dict "id" "model_family" "name" "模型家族") -}}
+<div class="classification-cards" data-classification-presentation="hierarchy-cards-v1">
+{{- range $facet := $facets -}}
+  {{- $nodes := where $concepts "facet" $facet.id -}}
+  {{- $hasSelected := false -}}
+  {{- range $nodes }}{{ if in $selectedIds .id }}{{ $hasSelected = true }}{{ end }}{{ end -}}
+  {{- if $hasSelected -}}
+    <section class="classification-card" aria-label="{{ $facet.name }}" data-classification-facet="{{ $facet.id }}">
+      <p class="classification-card__label">{{ $facet.name }}</p>
+      {{ partial "tag_hierarchy_tree.html" (dict "concepts" $nodes "visible" $visible "selected" $selectedIds "parent" "") }}
+    </section>
+  {{- end -}}
+{{- end -}}
+</div>

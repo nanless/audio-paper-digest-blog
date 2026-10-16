@@ -1,0 +1,24 @@
+{{- $nodes := .concepts -}}
+{{- $visible := .visible -}}
+{{- $selected := .selected -}}
+{{- $parent := .parent -}}
+<ul class="classification-tree{{ if $parent }} classification-tree--children{{ end }}">
+{{- range $node := $nodes -}}
+  {{- $ancestors := $node.ancestorIds | default slice -}}
+  {{- $nodeParent := "" -}}
+  {{- if $ancestors }}{{ $nodeParent = index $ancestors (sub (len $ancestors) 1) }}{{ end -}}
+  {{- if and (in $visible $node.id) (eq $nodeParent $parent) -}}
+    {{- $children := false -}}
+    {{- range $child := $nodes -}}
+      {{- $path := $child.ancestorIds | default slice -}}
+      {{- if and (in $visible $child.id) $path -}}
+        {{- if eq (index $path (sub (len $path) 1)) $node.id }}{{ $children = true }}{{ end -}}
+      {{- end -}}
+    {{- end -}}
+    <li data-classification-concept="{{ $node.id }}"{{ if in $selected $node.id }} data-direct-classification="true"{{ end }}>
+      <a class="classification-node{{ if in $selected $node.id }} classification-node--direct{{ end }}" href="{{ printf "%s?concept=%s" ("papers/" | relURL) ($node.id | urlquery) }}">{{ $node.zh }}</a>
+      {{- if $children }}{{ partial "tag_hierarchy_tree.html" (dict "concepts" $nodes "visible" $visible "selected" $selected "parent" $node.id) }}{{ end -}}
+    </li>
+  {{- end -}}
+{{- end -}}
+</ul>

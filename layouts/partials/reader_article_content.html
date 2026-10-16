@@ -24,6 +24,18 @@
       {{- end -}}
     {{- end -}}
   {{- end -}}
+  {{- /* Aggregate classification blocks use the same verified tree cards as
+        individual papers. Replay the complete fallback before replacing it. */ -}}
+  {{- if and (gt $tagStartCount 0) (eq $tagStartCount $tagEndCount) (ne ($page.Params.paper_digest_page_type | default "") "paper") -}}
+    {{- $tagBlocks := findRE `(?s)<!--paper-tag-hierarchy-v1:start-->.*?<!--paper-tag-hierarchy-v1:end-->` $content -}}
+    {{- if eq (len $tagBlocks) $tagStartCount -}}
+      {{- $concepts := (partialCached "tag_display_assets.html" "global").snapshot.concepts -}}
+      {{- range $block := $tagBlocks -}}
+        {{- $replacement := partial "tag_hierarchy_block.html" (dict "page" $page "block" $block "concepts" $concepts) -}}
+        {{- $content = replace $content $block $replacement -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
   {{- /* A repeated opening title keeps its anchor without duplicating the header.
         Other H1s are actual chapters and remain visible below. */ -}}
   {{- $headline := .headline | default $page.Title | default "" -}}

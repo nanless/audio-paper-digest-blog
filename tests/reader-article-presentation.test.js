@@ -8,7 +8,11 @@ const crypto = require('node:crypto');
 const { spawnSync } = require('node:child_process');
 const repo = path.resolve(__dirname, '..');
 const key = 'posts/conference-interspeech-2026-conference-paper-id-wu26e-interspeech-7a15fe005a.md';
-const source = fs.readFileSync(path.join(repo, 'content', key), 'utf8');
+// The exact historical repair binds committed bytes. A pending conference
+// migration may have different working-tree bytes and must not become a fixture.
+const committedSource = spawnSync('git', ['show', 'HEAD:content/'+key], {cwd:repo, encoding:'utf8'});
+assert.equal(committedSource.status, 0, committedSource.stderr);
+const source = committedSource.stdout;
 const sha = value => crypto.createHash('sha256').update(value).digest('hex');
 
 test('reader presentation preserves heading anchors and code, and repairs only the exact six coordinate links', t => {

@@ -47,6 +47,19 @@
 /* 历史研究类型和角色沿用同一阅读层级。 */
 .paper-tags-scope { display:flex; flex-wrap:wrap; gap:.5rem; margin:.35rem 0 .85rem; font-size:.82rem; color:var(--secondary); }
 .paper-tags-scope span { padding:.18rem .55rem; border:1px solid var(--border); border-radius:999px; }
+.classification-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr)); gap:12px; }
+.classification-card { min-width:0; border:1px solid var(--rw-border); border-radius:10px; padding:12px; background:var(--rw-surface); }
+.paper-tags .classification-card__label { margin:0 0 8px; color:var(--rw-muted); font-size:.82rem; line-height:1.5; font-weight:700; }
+.paper-tags .paper-tags__title { margin:0 0 14px; font-size:1.05rem; }
+.paper-tags .classification-tree { list-style:none; margin:0; padding:0; }
+.paper-tags .classification-tree > li { margin:0; padding:0; }
+.paper-tags .classification-tree--children { border-inline-start:1px solid var(--rw-border); padding-inline-start:12px; margin-inline-start:9px; }
+.paper-tags a.classification-node { display:inline-flex; align-items:center; max-width:100%; min-height:36px; padding:5px 8px; margin:3px 0; color:var(--rw-muted); font-size:.85rem; line-height:1.5; overflow-wrap:anywhere; box-shadow:none; text-decoration:none; }
+.paper-tags a.classification-node--direct { color:var(--rw-brand); background:var(--rw-brand-soft); border:1px solid var(--rw-border); border-radius:7px; font-weight:650; }
+.paper-tags a.classification-node:hover { text-decoration:underline; text-underline-offset:3px; }
+.paper-tags a.classification-node:focus-visible { outline:2px solid var(--rw-brand); outline-offset:3px; }
+.paper-tags--aggregate { margin:20px 0; }
+@media (max-width:600px) { .classification-cards { grid-template-columns:1fr; } }
 .paper-tags-method-na { margin:.7rem 0; font-size:.88rem; }
 .paper-tags-method-na summary { cursor:pointer; color:var(--secondary); }
 .paper-tags-method-na p { overflow-wrap:anywhere; }

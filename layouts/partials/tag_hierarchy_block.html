@@ -1,0 +1,53 @@
+{{- /* Upgrade only an exact replay of the generated classification block.
+      Unknown labels, links, ancestors or extra prose retain the original HTML. */ -}}
+{{- $block := .block -}}
+{{- $concepts := .concepts -}}
+{{- $selected := slice -}}
+{{- $seen := slice -}}
+{{- $valid := true -}}
+{{- $rows := findRE `(?s)<li><strong>[^<]+</strong>：.*?</li>` $block -}}
+{{- range $row := $rows -}}
+  {{- $paths := split (replaceRE `(?s)^<li><strong>[^<]+</strong>：(.*?)</li>$` `${1}` $row) "；" -}}
+  {{- range $path := $paths -}}
+    {{- $links := findRE `<a href="[^"]+">[^<]+</a>` $path -}}
+    {{- if not $links -}}
+      {{- $valid = false -}}
+    {{- else -}}
+      {{- $last := index $links (sub (len $links) 1) -}}
+      {{- $id := replaceRE `^<a href="[^"]*\?concept=([a-z0-9_.-]+)">[^<]+</a>$` `${1}` $last -}}
+      {{- $matches := where $concepts "id" $id -}}
+      {{- if or (ne (len $matches) 1) (in $seen $id) -}}
+        {{- $valid = false -}}
+      {{- else -}}
+        {{- $selected = $selected | append (index $matches 0) -}}
+        {{- $seen = $seen | append $id -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- if or (lt (len $selected) 1) (gt (len $selected) 5) }}{{ $valid = false }}{{ end -}}
+{{- $markdown := "<!--paper-tag-hierarchy-v1:start-->\n\n**研究分类**\n\n" -}}
+{{- $facets := slice (dict "id" "task" "name" "研究任务") (dict "id" "method" "name" "研究方法") (dict "id" "setting" "name" "研究条件") (dict "id" "signal" "name" "信号") (dict "id" "application" "name" "应用") (dict "id" "research_focus" "name" "研究重点") (dict "id" "artifact" "name" "研究产物") (dict "id" "scientific_topic" "name" "科学主题") (dict "id" "model_family" "name" "模型家族") -}}
+{{- range $facet := $facets -}}
+  {{- $paths := slice -}}
+  {{- range where $selected "facet" $facet.id -}}
+    {{- $nodes := slice -}}
+    {{- $ids := (.ancestorIds | default slice) | append .id -}}
+    {{- range $id := $ids -}}
+      {{- range where $concepts "id" $id -}}
+        {{- $label := .zh -}}
+        {{- range (slice "\\" "`" "*" "_" "{" "[" "]" "}" "(" ")" "|") }}{{ $label = replace $label . (printf "\\%s" .) }}{{ end -}}
+        {{- $nodes = $nodes | append (printf "[%s](%s?concept=%s)" $label ("papers/" | relURL) (.id | urlquery)) -}}
+      {{- end -}}
+    {{- end -}}
+    {{- $paths = $paths | append (delimit $nodes " → ") -}}
+  {{- end -}}
+  {{- if $paths }}{{ $markdown = printf "%s- **%s**：%s\n" $markdown $facet.name (delimit $paths "；") }}{{ end -}}
+{{- end -}}
+{{- $markdown = printf "%s\n<!--paper-tag-hierarchy-v1:end-->" $markdown -}}
+{{- $expected := printf "%s" (.page.RenderString (dict "display" "block") $markdown) -}}
+{{- if and $valid (eq (strings.TrimSpace $block) (strings.TrimSpace $expected)) -}}
+  {{- $cards := partial "tag_hierarchy_cards.html" (dict "selected" $selected "concepts" $concepts) -}}
+  {{- $block = printf `<section class="paper-tags paper-tags--aggregate" aria-label="论文研究分类"><p class="paper-tags__title"><strong>研究分类</strong></p>%s</section>` $cards -}}
+{{- end -}}
+{{- return $block -}}
