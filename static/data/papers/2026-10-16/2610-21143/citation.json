@@ -1,0 +1,75 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.21143v1",
+  "arxivId": "2610.21143",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.21143v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Institute of Automation, Chinese Academy of Sciences",
+        "School of Artificial Intelligence, University of Chinese Academy of Sciences"
+      ],
+      "name": "Yingzhuo Deng"
+    },
+    {
+      "affiliations": [
+        "Institute of Automation, Chinese Academy of Sciences",
+        "School of Artificial Intelligence, University of Chinese Academy of Sciences"
+      ],
+      "name": "Chong Li"
+    },
+    {
+      "affiliations": [
+        "Institute of Automation, Chinese Academy of Sciences",
+        "School of Artificial Intelligence, University of Chinese Academy of Sciences"
+      ],
+      "name": "Bingxin Liu"
+    },
+    {
+      "affiliations": [
+        "School of Artificial Intelligence, University of Chinese Academy of Sciences"
+      ],
+      "name": "Yi Shu"
+    },
+    {
+      "affiliations": [
+        "Institute of Automation, Chinese Academy of Sciences",
+        "School of Artificial Intelligence, University of Chinese Academy of Sciences"
+      ],
+      "name": "Tianyu Peng"
+    },
+    {
+      "affiliations": [
+        "Institute of Automation, Chinese Academy of Sciences",
+        "School of Artificial Intelligence, University of Chinese Academy of Sciences"
+      ],
+      "name": "Can Xie"
+    },
+    {
+      "affiliations": [
+        "Institute of Automation, Chinese Academy of Sciences",
+        "School of Artificial Intelligence, University of Chinese Academy of Sciences"
+      ],
+      "name": "Siyao Song"
+    },
+    {
+      "affiliations": [
+        "Institute of Automation, Chinese Academy of Sciences"
+      ],
+      "name": "Shuo Ren"
+    },
+    {
+      "affiliations": [
+        "Institute of Automation, Chinese Academy of Sciences",
+        "School of Artificial Intelligence, University of Chinese Academy of Sciences"
+      ],
+      "name": "Jiajun Zhang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.21143v1",
+  "originalTitle": "CoSTA: Compressed Speech Token Adaptation for Efficient Spoken Dialogue Models",
+  "pdfUrl": "https://arxiv.org/pdf/2610.21143v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

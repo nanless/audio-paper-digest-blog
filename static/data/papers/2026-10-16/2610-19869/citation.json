@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.19869v1",
+  "arxivId": "2610.19869",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.19869v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yixian Tan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Aulia Adila"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jonathan Heng"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kunat Pipatanakul"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Donghang Wu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Anocha Sutaveephamochanon"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.19869v1",
+  "originalTitle": "SEA-HELM Audio: Evaluating Multilingual ASR-LLM Pipeline Performance Across SEA-HELM Subsets",
+  "pdfUrl": "https://arxiv.org/pdf/2610.19869v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.19716v1",
+  "arxivId": "2610.19716",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.19716v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Chen Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "ChuFan Yu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Botian Jiang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jingqi Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Wenxuan Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yitian Gong"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhaoye Fei"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xipeng Qiu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.19716v1",
+  "originalTitle": "Soloist: A Generative Model for Blind Voice Separation in the Wild",
+  "pdfUrl": "https://arxiv.org/pdf/2610.19716v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

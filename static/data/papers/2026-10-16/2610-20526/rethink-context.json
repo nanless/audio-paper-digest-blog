@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.20526v1",
+  "abstract": "Pretrained unimodal models offer a flexible route to multimodal prediction through collaboration, but this collaboration can become less accurate than a surviving unimodal model when modalities are missing. We study this setting using fixed surviving-model anchors and find that collaborative gains can weaken or reverse as inputs disappear, even when the anchor's own input is unchanged. Our diagnostics further reveal reduced recovery of modality-specific information after aggregation and state-dependent collaborative representations. We propose Lluna, which combines a direct private prediction path from adapted unimodal features with a common graph-based collaboration branch that provides a residual correction. Progressive Collaboration Consistency organizes richer-to-poorer guidance along single-modality removals, aligning normalized common representations while task supervision adapts predictions to the available evidence. Across eight datasets spanning affective computing, scene understanding, and medical prediction, Lluna achieves the best evaluated average performance over non-full input states, improving Mean-Missing by 4.26\\% on average relative to the strongest evaluated baseline. The fixed-anchor diagnostic also shows positive gains in mean collaboration under minimal inputs on all eight tasks. Code is available at https://github.com/AIFrontierLab/Lluna.",
+  "abstractSha256": "b82cd8545f5ae5d5222f43441f815cf1bed41673e4c09f8358bd548ab379cc6f",
+  "arxivId": "2610.20526",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.20526v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "图神经网络",
+    "primaryTask": "多模态情感极性分析",
+    "rankBucket": "前25%",
+    "score": 7.7,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.multimodal-sentiment",
+          "label": "多模态情感极性分析"
+        },
+        {
+          "facet": "method",
+          "id": "method.gnn",
+          "label": "图神经网络"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "图神经网络",
+      "primaryMethodId": "method.gnn",
+      "primaryTask": "多模态情感极性分析",
+      "primaryTaskId": "task.multimodal-sentiment",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Haoyue Bai"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yinyi Luo"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Heqing Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xiaoyuan Yi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "James Evans"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jindong Wang"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文研究冻结单模态模型在缺模态推理中协作增益衰减的问题，提出保留私有预测通路并用兼容图公共分支做残差修正、再用渐进一致性约束公共表示的方法，在八个数据集的缺失状态平均指标上取得最优且在最小输入下保持正协作增益，但结论只在受控整模态移除和固定评测协议下成立。",
+  "originalTitle": "Lluna: Collaborative Unimodal Models for Missing-Modality Inference",
+  "pdfUrl": "https://arxiv.org/pdf/2610.20526v1.pdf",
+  "readerTitle": "缺模态时单模态模型还能协作吗：Lluna 的私有预测与公共残差协作",
+  "schemaVersion": 2
+}

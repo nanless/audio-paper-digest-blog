@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.19553v1",
+  "arxivId": "2610.19553",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.19553v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jeseung Lim"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jiseong Woo"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Heeseung Kim"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.19553v1",
+  "originalTitle": "Speaking Longer Than Learned: Training-Free Long-Form Generation for Full-Stream Text-to-Speech",
+  "pdfUrl": "https://arxiv.org/pdf/2610.19553v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

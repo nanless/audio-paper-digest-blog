@@ -1,0 +1,90 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.19774v1",
+  "abstract": "Zero-shot text-to-speech (TTS) typically conditions on a short speech prompt, which conveys timbre but provides only limited evidence of a speaker's prosodic patterns. We formulate Long-Prompt Zero-Shot TTS, a task that uses long speech prompts at inference time to reproduce speaker-specific prosody without target-speaker fine-tuning. We introduce LP-TTS-Bench, a bilingual benchmark of 37 speakers with 63.95 prompt hours and 2,728 held-out test utterances. Beyond intelligibility and timbre similarity, LP-TTS-Bench evaluates timing, prominence, intonation, and model-based prosody metrics, enabling multidimensional evaluation of prosody reproduction. As a reference system, we develop LPTTS, whose hierarchical Long-Prompt Encoder compresses long speech prompts into a fixed number of continuous prosody vectors. Experiments show improvements in several prosodic dimensions over a short-prompt baseline, with overall gains as prompt duration increases up to approximately 10 minutes and saturation at longer durations.",
+  "abstractSha256": "e0a95ccf771e263ffdae95b4739ad4578dfc272b71f6e5b04e98149675ff354d",
+  "arxivId": "2610.19774",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.19774v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "task",
+          "id": "task.prosody-style-control",
+          "label": "韵律与风格控制"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Dekun Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Renjie Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yingda Shen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Qinke Ni"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhizheng Wu"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文把几分钟到几十分钟提示条件下不微调即复现韵律作为新任务，用 37 人双语基准和分维度指标检验以 32 个向量压缩长提示的参考系统，发现提示增至约 10 分钟多项韵律指标改善而更长后趋于饱和。",
+  "originalTitle": "Long-Prompt Zero-Shot TTS: Benchmarking Prosody Reproduction Beyond Voice Cloning",
+  "pdfUrl": "https://arxiv.org/pdf/2610.19774v1.pdf",
+  "readerTitle": "长提示零样本语音合成：为复现说话人韵律而设的任务与基准",
+  "schemaVersion": 2
+}

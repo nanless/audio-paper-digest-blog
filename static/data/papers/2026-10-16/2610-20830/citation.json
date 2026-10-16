@@ -1,0 +1,86 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.20830v1",
+  "arxivId": "2610.20830",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.20830v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Harvard University"
+      ],
+      "name": "Zhonghao Shi"
+    },
+    {
+      "affiliations": [
+        "Harvard University"
+      ],
+      "name": "Zackary Rackauckas"
+    },
+    {
+      "affiliations": [
+        "University of Southern California"
+      ],
+      "name": "Jasmine Yip"
+    },
+    {
+      "affiliations": [
+        "University of Michigan"
+      ],
+      "name": "Savannah Halpern"
+    },
+    {
+      "affiliations": [
+        "University of Michigan"
+      ],
+      "name": "Simon Campos"
+    },
+    {
+      "affiliations": [
+        "University of Michigan"
+      ],
+      "name": "Lauren Brace"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Emma Yang"
+    },
+    {
+      "affiliations": [
+        "University of Southern California"
+      ],
+      "name": "Tiantian Feng"
+    },
+    {
+      "affiliations": [
+        "University of Southern California"
+      ],
+      "name": "Xuan Shi"
+    },
+    {
+      "affiliations": [
+        "University of Southern California"
+      ],
+      "name": "Shrikanth Narayanan"
+    },
+    {
+      "affiliations": [
+        "University of Michigan"
+      ],
+      "name": "Teresa Satterfield"
+    },
+    {
+      "affiliations": [
+        "Harvard University"
+      ],
+      "name": "Ying Xu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.20830v1",
+  "originalTitle": "PEDBench: Can Speech Models Detect Phonetic Errors?",
+  "pdfUrl": "https://arxiv.org/pdf/2610.20830v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

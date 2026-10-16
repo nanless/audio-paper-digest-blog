@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.19127v1",
+  "arxivId": "2610.19127",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.19127v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Wabash College, Crawfordsville, Indiana, USA"
+      ],
+      "name": "Abdul Basit Tonmoy"
+    },
+    {
+      "affiliations": [
+        "Wabash College, Crawfordsville, Indiana, USA"
+      ],
+      "name": "Arman Luthra"
+    },
+    {
+      "affiliations": [
+        "Purdue University, West Lafayette, Indiana, USA"
+      ],
+      "name": "Guang Lin"
+    },
+    {
+      "affiliations": [
+        "Wabash College, Crawfordsville, Indiana, USA"
+      ],
+      "name": "Qixin Deng"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.19127v1",
+  "originalTitle": "AdaFrame: Hierarchical Multimodal Deduplication with Adaptive Information Budgeting for Cost-Efficient Video Advertisement Analysis",
+  "pdfUrl": "https://arxiv.org/pdf/2610.19127v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

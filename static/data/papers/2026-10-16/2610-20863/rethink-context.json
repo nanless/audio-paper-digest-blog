@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.20863v1",
+  "abstract": "Unsupervised speech denoising methods such as MixIT and noisy-target training can be trained directly on noisy recordings, avoiding the sim-to-real gap of synthetic training data, but remain well below supervised performance. Teacher--student self-training, as in RemixIT, narrows this gap by remixing a teacher's estimates into new mixtures that supervise a student; however, since the student is trained only toward the teacher's estimates, teacher errors, in particular over-suppressed speech, are never recovered and propagate as the teacher is updated from the student. We propose SNOAR, a self-training framework that corrects the teacher's estimates before use: the noise leaked into its speech estimate is removed by differential noise filtering (DNF), and part of the noisy observation is added back in to restore suppressed speech and attenuate artifacts. We show that the two corrections depend on each other, as without DNF the loop collapses to the identity mapping. Compared to RemixIT, SNOAR is more stable along training and outperforms it in signal-based, perceptual, and word error rate metrics, reaching 97\\% of the SI-SDR improvement of a fully-supervised topline on WHAM!; on real CHiME-3 recordings, it improves every metric of three different teachers, while RemixIT degrades their perceptual quality.",
+  "abstractSha256": "30824d0e18410183f77e86f02145d888fcc4789a467187fa6ca4ffd5bc07781a",
+  "arxivId": "2610.20863",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.20863v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "自监督学习",
+    "primaryTask": "语音增强",
+    "rankBucket": "前50%",
+    "score": 7.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-enhancement",
+          "label": "语音增强"
+        },
+        {
+          "facet": "method",
+          "id": "method.self-supervised",
+          "label": "自监督学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "自监督学习",
+      "primaryMethodId": "method.self-supervised",
+      "primaryTask": "语音增强",
+      "primaryTaskId": "task.speech-enhancement",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Carnegie Mellon University, USA"
+      ],
+      "name": "Samuele Cornell"
+    },
+    {
+      "affiliations": [
+        "Johns Hopkins University, USA"
+      ],
+      "name": "Matthew Maciejewski"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "SNOAR 在重混之前先用教师自身的噪声估计滤除语音通道的残留噪声再按比例加回原始含噪观测，在 WHAM!上从 MixIT 教师接近监督上限，在真实 CHiME-3 上稳定改善感知与识别，而代价是加回比例与滤波必须搭配使用。",
+  "originalTitle": "SNOAR: Self-training with Noise filtering, Observation adding, and Remixing for Speech Denoising Without Clean References",
+  "pdfUrl": "https://arxiv.org/pdf/2610.20863v1.pdf",
+  "readerTitle": "没有干净语音时怎样做教师学生自训练去噪",
+  "schemaVersion": 2
+}

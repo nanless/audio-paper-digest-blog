@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.21998v1",
+  "arxivId": "2610.21998",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.21998v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yuhan Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jun Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Fengxi Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhengxue Cheng"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Li Song"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.21998v1",
+  "originalTitle": "Frame-Wise Streaming for Efficient Learned Speech Compression",
+  "pdfUrl": "https://arxiv.org/pdf/2610.21998v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

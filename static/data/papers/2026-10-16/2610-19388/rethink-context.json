@@ -1,0 +1,75 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.19388v1",
+  "abstract": "Massively multilingual speech modeling has made remarkable progress in recent years, yet existing training resources and benchmarks still underrepresent much of the linguistic long tail. To address this gap, we introduce ELARSpeech, a large-scale multilingual speech resource comprising 30,202 hours of speech across 675 underrepresented languages, curated from the Endangered Languages Archive. Combining human-annotated and unlabeled recordings, the corpus spans diverse recording conditions, domains, and language families. Beyond corpus construction, our experiments show how ELARSpeech supports extending ASR and TTS capabilities to diverse underrepresented languages, with further benefits from pseudo-labeling unlabeled data. At the same time, our speech representation analysis reveals remaining limitations in transferring existing multilingual models to the linguistic long tail. Together, ELARSpeech provides both a resource and a testbed for extending multilingual speech technology further into the linguistic long tail. We publicly release the dataset, all trained ASR and TTS models, and the complete data construction pipeline to facilitate research on long-tail multilingual speech technologies.",
+  "abstractSha256": "63ffd918872d50f5663eaabc7aad48e2173d9fd05fef1692aaa5a50c780d8dd3",
+  "arxivId": "2610.19388",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.19388v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "数据集构建",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.dataset-curation",
+          "label": "数据集构建"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "数据集构建",
+      "primaryMethodId": "method.dataset-curation",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Yonsei University"
+      ],
+      "name": "Sangmin Lee"
+    },
+    {
+      "affiliations": [
+        "McGill University",
+        "Mila - Quebec AI Institute"
+      ],
+      "name": "Yejin Jeon"
+    },
+    {
+      "affiliations": [
+        "McGill University",
+        "Mila - Quebec AI Institute"
+      ],
+      "name": "David Ifeoluwa Adelani"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "ELARSpeech 从濒危语言档案馆整理出 30202 小时、675 种语言的语音，用标注与非标注两部分支撑识别与合成的低资源适配，并用表征评测指出已有大规模多语模型的迁移局限，代价是异构档案噪声与跨语联合训练的干扰。",
+  "originalTitle": "ELARSpeech: A 30K-Hour Dataset Across 675 Underrepresented Languages for Long-Tail Multilingual Speech Technologies",
+  "pdfUrl": "https://arxiv.org/pdf/2610.19388v1.pdf",
+  "readerTitle": "把档案馆里的田野录音变成 675 种语言的语音数据：ELARSpeech 解读",
+  "schemaVersion": 2
+}

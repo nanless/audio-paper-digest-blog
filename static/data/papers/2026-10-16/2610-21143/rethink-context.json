@@ -1,0 +1,116 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.21143v1",
+  "abstract": "Spoken Dialogue Models (SDMs) typically share a speech-token space for generation and synthesis, leading to long autoregressive sequences and costly inference. Lower-rate speech tokenizers shorten sequences but may introduce compression-quality trade-offs and costly replacement without breaking this coupling. To address this limitation, we propose CoSTA, a compatibility-preserving post-hoc framework that decouples generation and synthesis token spaces while retaining the original speech tokenizer and decoder. CoSTA extends the generation token space with compressed representations via mean-initialized vocabulary extension, pronunciation adaptation, and dialogue adaptation, followed by deterministic expansion back to the original speech-token space before synthesis. On bilingual speech-dialogue benchmarks, CoSTA achieves approximately $1.7\\times$ expanded speech-token generation speed, lower full-response latency, and higher throughput while preserving response quality. Analyses show more sustained interaction under limited budgets and a practical trade-off among compression, decoding efficiency, and quality. Further experiments demonstrate cross-architecture transfer and complementarity to low-rate tokenization.",
+  "abstractSha256": "3b4f853bfd4cd1d0f25a52c816a49cc3dc19cffaa143a4484a626d9d7af5ad08",
+  "arxivId": "2610.21143",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.21143v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "参数高效微调",
+    "primaryTask": "语音对话系统",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-dialogue",
+          "label": "语音对话系统"
+        },
+        {
+          "facet": "method",
+          "id": "method.peft",
+          "label": "参数高效微调"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "参数高效微调",
+      "primaryMethodId": "method.peft",
+      "primaryTask": "语音对话系统",
+      "primaryTaskId": "task.speech-dialogue",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Institute of Automation, Chinese Academy of Sciences",
+        "School of Artificial Intelligence, University of Chinese Academy of Sciences"
+      ],
+      "name": "Yingzhuo Deng"
+    },
+    {
+      "affiliations": [
+        "Institute of Automation, Chinese Academy of Sciences",
+        "School of Artificial Intelligence, University of Chinese Academy of Sciences"
+      ],
+      "name": "Chong Li"
+    },
+    {
+      "affiliations": [
+        "Institute of Automation, Chinese Academy of Sciences",
+        "School of Artificial Intelligence, University of Chinese Academy of Sciences"
+      ],
+      "name": "Bingxin Liu"
+    },
+    {
+      "affiliations": [
+        "School of Artificial Intelligence, University of Chinese Academy of Sciences"
+      ],
+      "name": "Yi Shu"
+    },
+    {
+      "affiliations": [
+        "Institute of Automation, Chinese Academy of Sciences",
+        "School of Artificial Intelligence, University of Chinese Academy of Sciences"
+      ],
+      "name": "Tianyu Peng"
+    },
+    {
+      "affiliations": [
+        "Institute of Automation, Chinese Academy of Sciences",
+        "School of Artificial Intelligence, University of Chinese Academy of Sciences"
+      ],
+      "name": "Can Xie"
+    },
+    {
+      "affiliations": [
+        "Institute of Automation, Chinese Academy of Sciences",
+        "School of Artificial Intelligence, University of Chinese Academy of Sciences"
+      ],
+      "name": "Siyao Song"
+    },
+    {
+      "affiliations": [
+        "Institute of Automation, Chinese Academy of Sciences"
+      ],
+      "name": "Shuo Ren"
+    },
+    {
+      "affiliations": [
+        "Institute of Automation, Chinese Academy of Sciences",
+        "School of Artificial Intelligence, University of Chinese Academy of Sciences"
+      ],
+      "name": "Jiajun Zhang"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "CoSTA 针对语音对话模型生成与合成共用长语音 token 序列导致推理贵的问题，用 BPE 压缩扩展生成词表并经发音与对话两阶段适配、推理时确定性展开回原空间，在 Step-Audio 2 mini 上实现约 1.7 倍展开后语音 token 生成速度并保持质量，代价是一次性增加约 6% 词表参数与两阶段适配训练。",
+  "originalTitle": "CoSTA: Compressed Speech Token Adaptation for Efficient Spoken Dialogue Models",
+  "pdfUrl": "https://arxiv.org/pdf/2610.21143v1.pdf",
+  "readerTitle": "CoSTA：让对话模型少说几步、合成时再展开的语音 token 解耦",
+  "schemaVersion": 2
+}

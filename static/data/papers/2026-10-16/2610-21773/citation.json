@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.21773v1",
+  "arxivId": "2610.21773",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.21773v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Longjie Luo"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhongshu Hou"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yuepeng Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Gang Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shidong Shang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Fan Zhou"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.21773v1",
+  "originalTitle": "CF-AVSS: A Coarse-to-Fine Audio-Visual Speech Separation Framework with Target-Speaker Refinement and Post-Fusion for Real-World AVSE Challenge",
+  "pdfUrl": "https://arxiv.org/pdf/2610.21773v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

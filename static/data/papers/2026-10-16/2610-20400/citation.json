@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.20400v1",
+  "arxivId": "2610.20400",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.20400v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Meenakshi Krishnan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "You Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ramani Duraiswami"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "C. Phillip Brown"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.20400v1",
+  "originalTitle": "HRTF Upsampling and Personalization via Neural Operators",
+  "pdfUrl": "https://arxiv.org/pdf/2610.20400v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

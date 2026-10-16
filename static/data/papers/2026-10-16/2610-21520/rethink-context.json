@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.21520v1",
+  "abstract": "Joint Acoustic Scene Classification (ASC) and Audio Tagging (AT) models traditionally rely on unconstrained multihead architectures. However, this design ignores the natural hierarchical dependency between sounds and acoustic scenes. In this work, we investigate a hierarchical (sequential) conditioning paradigm that predicts scene categories directly from intermediate event probabilities. Through a large-scale empirical benchmark with 66 full training runs across three state-of-the-art backbones (PaSST, PANNs, and BEATs) and different loss-weighting settings (beta in [0.0, 1.0]), we show that hierarchical conditioning achieves competitive classification performance while altering multitask optimization dynamics. Unlike multihead baselines, which sequentially solve the easier ASC task before optimizing AT, the hierarchical architecture enables synchronized dual-task learning for specific loss-weighting settings (beta in [0.6, 0.9]). Furthermore, we propose a multi-perspective interpretability framework that combines an analysis of the information bottleneck, manifold geometry, and Formal Concept Analysis (FCA) on a Term-Frequency Inverse-Document-Frequency (TF-IDF) event representation, providing complementary insights into event-scene relationships. Our findings reveal that hierarchical conditioning systematically yields lower conditional entropy, higher mutual information, and superior latent cluster separability (higher Silhouette scores), establishing a more structured and semantically faithful intermediate feature space.",
+  "abstractSha256": "0a0f0023cbc5ed04664f24fea944d521ba4bc139b13b314e0315c21bc448a600",
+  "arxivId": "2610.21520",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.21520v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多任务学习",
+    "primaryTask": "声学场景分类",
+    "rankBucket": "前50%",
+    "score": 5.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.scene-classification",
+          "label": "声学场景分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.multitask",
+          "label": "多任务学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.formal-concept-analysis",
+          "label": "形式概念分析"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.interpretability",
+          "label": "可解释性"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "多任务学习",
+      "primaryMethodId": "method.multitask",
+      "primaryTask": "声学场景分类",
+      "primaryTaskId": "task.scene-classification",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Claudia Montero-Ramírez"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Alba Martínez-Serrano"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Carmen Peláez-Moreno"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文比较并行多头与事件到场景的分层条件架构在联合声学场景分类与音频标注中的训练动态与表示结构，发现分层结构分类性能相当但在特定损失权重下实现同步学习，并以更低条件熵和更高互信息形成更集中的事件瓶颈，代价是完全依赖事件词表可能丢失环境整体质感。",
+  "originalTitle": "Hierarchical Interpretable Multitask Audio Representation Learning: An Analysis of Event-Scene Relationships through the Information Bottleneck",
+  "pdfUrl": "https://arxiv.org/pdf/2610.21520v1.pdf",
+  "readerTitle": "用事件瓶颈做场景预测：分层多任务音频表示如何组织事件与场景关系",
+  "schemaVersion": 2
+}

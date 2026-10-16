@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.19981v1",
+  "abstract": "Continuous multimodal sentiment analysis estimates polarity and intensity from linguistic, acoustic, and visual cues that may disagree. Hard judgments compress sentiment alternatives, while learned fusion interfaces tie task adaptation to model representations. We introduce Shared Sentiment Evidence (SSE), an output-space interface with fixed view and sentiment-option semantics across frozen backbones. Four queries yield five-option distributions whose probabilities, entropy, and cross-view relations form a 28-dimensional vector for CatBoost regression. On CH-SIMS-v2 and CMU-MOSI, the Qwen-based interface improves on supervised joint-only readout. Matched Ridge and CatBoost controls assess the contributions of additional views, deterministic summaries, and nonlinear readout. With the same interface specification and fixed readout settings, separately fitted heads also improve on joint-only prediction for three additional frozen backbones. These results support learning continuous sentiment from reusable output coordinates.",
+  "abstractSha256": "20305c51a11433feea2d27060755589dcc46d4debb4f28de46c873ca3efdec1f",
+  "arxivId": "2610.19981",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.19981v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "多模态情感极性分析",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.multimodal-sentiment",
+          "label": "多模态情感极性分析"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "多模态情感极性分析",
+      "primaryTaskId": "task.multimodal-sentiment",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shuobo Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ruiqi Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shaobo Qiao"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shixu Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Feng Xu"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文用文本音频视频四个视角下五个情感选项的分布加熵与分布差异组成 28 维向量训练 CatBoost 回归器，在 CH-SIMS-v2 和 MOSI 上优于只学联合视角分布的对照，代价是每个片段需四次冻结模型查询。",
+  "originalTitle": "Shared Sentiment Evidence from Frozen Multimodal Models for Continuous Sentiment Prediction",
+  "pdfUrl": "https://arxiv.org/pdf/2610.19981v1.pdf",
+  "readerTitle": "冻结多模态大模型输出如何做连续情感预测",
+  "schemaVersion": 2
+}

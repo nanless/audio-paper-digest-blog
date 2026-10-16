@@ -1,0 +1,33 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.19722v1",
+  "arxivId": "2610.19722",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.19722v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhe Cao"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jichao Zhang"
+    },
+    {
+      "affiliations": [
+        "organization=School of Marine Science and Technology, Northwestern Polytechnical University, city=Xi’an, postcode=710072, country=China",
+        "organization=Research and Development Institute of Northwestern Polytechnical University in Shenzhen, city=Shenzhen, postcode=518063, country=China"
+      ],
+      "name": "Xiao-Lei Zhang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.19722v1",
+  "originalTitle": "ONCship: A Large-Scale Underwater Acoustic Corpus for Ship Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2610.19722v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

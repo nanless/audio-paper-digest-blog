@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.21452v1",
+  "arxivId": "2610.21452",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.21452v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Tsinghua University"
+      ],
+      "name": "Siyin Wang"
+    },
+    {
+      "affiliations": [
+        "Tsinghua University"
+      ],
+      "name": "Wenyi Yu"
+    },
+    {
+      "affiliations": [
+        "Tsinghua University"
+      ],
+      "name": "Terumi Chiba"
+    },
+    {
+      "affiliations": [
+        "ByteDance"
+      ],
+      "name": "Xianzhao Chen"
+    },
+    {
+      "affiliations": [
+        "ByteDance"
+      ],
+      "name": "Xiaohai Tian"
+    },
+    {
+      "affiliations": [
+        "ByteDance"
+      ],
+      "name": "Jun Zhang"
+    },
+    {
+      "affiliations": [
+        "ByteDance"
+      ],
+      "name": "Lu Lu"
+    },
+    {
+      "affiliations": [
+        "Tsinghua University"
+      ],
+      "name": "Chao Zhang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.21452v1",
+  "originalTitle": "Full-Duplex Interaction with Speech, Expressions and Gestures",
+  "pdfUrl": "https://arxiv.org/pdf/2610.21452v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

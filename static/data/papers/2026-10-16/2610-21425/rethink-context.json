@@ -1,0 +1,61 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.21425v1",
+  "abstract": "Sparse plane wave decomposition (SPWD) is a physics-driven model-based approach for analyzing sound fields that is suitable for real-time operation. SPWD is used in different contexts such as direction of arrival (DOA) estimation and sound field separation. SPWD employs spherical Dirichlet kernels to decompose sound fields represented as steered response maps into a finite number of plane waves using sparse recovery techniques. This article proposes a multiscale generalized sparse plane wave decomposition approach that uses an optimal spherical kernel and a multiscale sparse decomposition method to improve recovery performance. The utility of the proposed approach is shown by comparisons with the original SPWD approach via extensive numerical simulations.",
+  "abstractSha256": "fcae14add2adad633cb3ed39b065db784a8c839b1909718591f3eae033970cc6",
+  "arxivId": "2610.21425",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.21425v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "稀疏逆问题求解",
+    "primaryTask": "声场重建",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.sound-field",
+          "label": "声场重建"
+        },
+        {
+          "facet": "method",
+          "id": "method.sparse-reconstruction",
+          "label": "稀疏逆问题求解"
+        },
+        {
+          "facet": "task",
+          "id": "task.localization",
+          "label": "声源定位"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.spatial-audio",
+          "label": "空间音频信号"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "稀疏逆问题求解",
+      "primaryMethodId": "method.sparse-reconstruction",
+      "primaryTask": "声场重建",
+      "primaryTaskId": "task.sound-field",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Huseyin Hacihabiboglu"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "该文研究球谐域声场如何分解为少数平面波，提出压低旁瓣并消除背瓣的广义球面核与跨阶联合稀疏恢复，在信噪比 20 dB 以上和高阶时提高支撑恢复，但振幅误差和定位误差略有代价。",
+  "originalTitle": "Multiscale Generalized Sparse Plane Wave Decomposition in the Spherical Harmonic Domain",
+  "pdfUrl": "https://arxiv.org/pdf/2610.21425v1.pdf",
+  "readerTitle": "多尺度广义稀疏平面波分解：用更干净的球面核与跨阶一致性找声源方向",
+  "schemaVersion": 2
+}

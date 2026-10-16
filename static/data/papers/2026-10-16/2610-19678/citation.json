@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.19678v1",
+  "arxivId": "2610.19678",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.19678v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ziyang Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Wenyi Yu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Wen Wu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xuenan Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Chao Zhang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.19678v1",
+  "originalTitle": "TVPara: Paralinguistic Captioning of Expressive TV-Series Speech in Complex Acoustic Environments",
+  "pdfUrl": "https://arxiv.org/pdf/2610.19678v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

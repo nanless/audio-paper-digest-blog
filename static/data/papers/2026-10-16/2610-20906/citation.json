@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.20906v1",
+  "arxivId": "2610.20906",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.20906v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Sankalp Vaish"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Rishank Singh"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Sumukh Veeramalla"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Caroline Summerour"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "John A. Batsis"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xiaohui Liang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.20906v1",
+  "originalTitle": "Task-Centric Multimodal Learning for Cognitive Impairment Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2610.20906v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.20955v1",
+  "arxivId": "2610.20955",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.20955v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Signal Analysis and Interpretation Lab (SAIL), University of Southern California"
+      ],
+      "name": "Jihwan Lee"
+    },
+    {
+      "affiliations": [
+        "Signal Analysis and Interpretation Lab (SAIL), University of Southern California"
+      ],
+      "name": "Tiantian Feng"
+    },
+    {
+      "affiliations": [
+        "Signal Analysis and Interpretation Lab (SAIL), University of Southern California"
+      ],
+      "name": "Minu Kim"
+    },
+    {
+      "affiliations": [
+        "Center for Language and Speech Processing, Johns Hopkins University"
+      ],
+      "name": "Junhyeok Lee"
+    },
+    {
+      "affiliations": [
+        "Signal Analysis and Interpretation Lab (SAIL), University of Southern California"
+      ],
+      "name": "Sean Foley"
+    },
+    {
+      "affiliations": [
+        "Signal Analysis and Interpretation Lab (SAIL), University of Southern California"
+      ],
+      "name": "Thanathai Lertpetchpun"
+    },
+    {
+      "affiliations": [
+        "Center for Language and Speech Processing, Johns Hopkins University"
+      ],
+      "name": "Najim Dehak"
+    },
+    {
+      "affiliations": [
+        "Signal Analysis and Interpretation Lab (SAIL), University of Southern California"
+      ],
+      "name": "Dani Byrd"
+    },
+    {
+      "affiliations": [
+        "Signal Analysis and Interpretation Lab (SAIL), University of Southern California"
+      ],
+      "name": "Shrikanth Narayanan"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.20955v1",
+  "originalTitle": "Probing Neural Audio Codecs with Speaker Traits and Speech Characteristics",
+  "pdfUrl": "https://arxiv.org/pdf/2610.20955v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

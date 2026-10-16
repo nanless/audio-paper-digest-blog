@@ -1,0 +1,108 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.21452v1",
+  "abstract": "Human face-to-face conversation requires coordinating speech, gestures and expressions across both speaking and listening. We present ELLSA 2, an end-to-end full-duplex dialogue model that jointly optimizes speech interaction and streaming gesture-expression generation. An autoregressive, chunk-wise synthesizer combines pretrained acoustic features with distinct listening and speaking hidden states from the dialogue backbone and speech synthesizer, enabling continuous non-verbal generation even when the model is verbally silent. To translate dialogue understanding into vivid semantic gestures, we introduce contextual semantic calls and template guidance, separating whether to invoke an available semantic gesture from how to realize it. We also establish a curated data and evaluation pipeline for dialog-aware co-speech gesture generation and investigate reference-based multimodal large language models (MLLMs) as automatic judges. Experiments show that ELLSA 2 remains highly competitive with open-source full-duplex speech interaction models and outperforms cascaded baselines across dialog-aware gesture and expression metrics. Semantic template guidance further significantly improves semantic gesture quality. Strong system-level correlations with human judgments support these reference-based scores as useful preliminary metrics for full-duplex and semantic gesture assessment. Together, these results advance dialogue modeling from spoken responses toward coordinated multimodal interaction.",
+  "abstractSha256": "11acecef3b130f3b4440149f72f4fb0844d29d678bd50a288272057428451e88",
+  "arxivId": "2610.21452",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.21452v1",
+  "assessment": {
+    "documentType": "模型报告",
+    "primaryMethod": "端到端学习",
+    "primaryTask": "全双工语音交互",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.full-duplex",
+          "label": "全双工语音交互"
+        },
+        {
+          "facet": "method",
+          "id": "method.end-to-end-learning",
+          "label": "端到端学习"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-driven-gesture",
+          "label": "语音驱动手势生成"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "端到端学习",
+      "primaryMethodId": "method.end-to-end-learning",
+      "primaryTask": "全双工语音交互",
+      "primaryTaskId": "task.full-duplex",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Tsinghua University"
+      ],
+      "name": "Siyin Wang"
+    },
+    {
+      "affiliations": [
+        "Tsinghua University"
+      ],
+      "name": "Wenyi Yu"
+    },
+    {
+      "affiliations": [
+        "Tsinghua University"
+      ],
+      "name": "Terumi Chiba"
+    },
+    {
+      "affiliations": [
+        "ByteDance"
+      ],
+      "name": "Xianzhao Chen"
+    },
+    {
+      "affiliations": [
+        "ByteDance"
+      ],
+      "name": "Xiaohai Tian"
+    },
+    {
+      "affiliations": [
+        "ByteDance"
+      ],
+      "name": "Jun Zhang"
+    },
+    {
+      "affiliations": [
+        "ByteDance"
+      ],
+      "name": "Lu Lu"
+    },
+    {
+      "affiliations": [
+        "Tsinghua University"
+      ],
+      "name": "Chao Zhang"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文用一个全双工对话主干同时驱动语音合成与手势表情合成，并用语义调用加模板库补足稀疏的语义手势，在保持语音问答与轮流准确率的同时提升了对话手势与表情指标，但结论只在所建 138 段人工验证集与所用参考型评测条件下成立。",
+  "originalTitle": "Full-Duplex Interaction with Speech, Expressions and Gestures",
+  "pdfUrl": "https://arxiv.org/pdf/2610.21452v1.pdf",
+  "readerTitle": "边听边说边做手势：全双工对话如何同时生成语音、表情和手势",
+  "schemaVersion": 2
+}

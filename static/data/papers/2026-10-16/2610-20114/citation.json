@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.20114v1",
+  "arxivId": "2610.20114",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.20114v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Mengke Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yanda Shao"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Tianhe Wu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kai Feng"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.20114v1",
+  "originalTitle": "ACR-Net: Mitigating Semantic Dominance via Contrastive Acoustic-Semantic Decoupling",
+  "pdfUrl": "https://arxiv.org/pdf/2610.20114v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

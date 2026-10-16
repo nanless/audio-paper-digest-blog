@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.21803v1",
+  "abstract": "Speech enhancement systems are commonly trained using randomly sampled mini-batches, which may contain limited diversity in intrinsic acoustic characteristics of the clean speech signals. Motivated by previous findings linking clean speech characteristics to enhancement performance, we propose a feature-stratified mini-batch sampling strategy that divides training examples into quantiles according to a clean-speech characteristic and enforces equal representation within each mini-batch. Experiments across two large-scale English and Spanish speech datasets and a smaller dataset containing neurotypical and pathological speech demonstrate improvements over standard random mini-batch sampling across multiple objective enhancement metrics. Ablation studies demonstrate that the gains are robust across training runs, while their magnitude depends on the acoustic characteristic used for stratification. The proposed strategy requires no modification to the enhancement model or training objective, providing a simple and complementary approach to speech enhancement training.",
+  "abstractSha256": "02591739c01432f65237c2ef1506a05cecd4da4c6bf0a6d850605886aa602f90",
+  "arxivId": "2610.21803",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.21803v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "统计分析",
+    "primaryTask": "语音增强",
+    "rankBucket": "前50%",
+    "score": 5.9,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-enhancement",
+          "label": "语音增强"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "统计分析",
+      "primaryMethodId": "method.statistical-analysis",
+      "primaryTask": "语音增强",
+      "primaryTaskId": "task.speech-enhancement",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Mingchi Hou"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ina Kodrasi"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文针对随机组批可能让单批梯度只看到狭窄干净语音区间的问题，提出按干净语音特征分位数均衡组批的采样策略，在英语、西班牙语和帕金森病理语音上用回归与生成两类模型验证了多指标改善，但增益大小随特征、模型和数据集组合而变化，且几乎不增加训练改动。",
+  "originalTitle": "Rethinking Batch Composition: Promoting Feature Diversity for Speech Enhancement",
+  "pdfUrl": "https://arxiv.org/pdf/2610.21803v1.pdf",
+  "readerTitle": "让每个小批量都看到不同干净语音：特征分层组批",
+  "schemaVersion": 2
+}

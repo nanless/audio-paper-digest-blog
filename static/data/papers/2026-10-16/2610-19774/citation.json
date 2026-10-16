@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.19774v1",
+  "arxivId": "2610.19774",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.19774v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Dekun Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Renjie Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yingda Shen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Qinke Ni"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhizheng Wu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.19774v1",
+  "originalTitle": "Long-Prompt Zero-Shot TTS: Benchmarking Prosody Reproduction Beyond Voice Cloning",
+  "pdfUrl": "https://arxiv.org/pdf/2610.19774v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

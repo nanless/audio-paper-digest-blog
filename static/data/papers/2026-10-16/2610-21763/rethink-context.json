@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.21763v1",
+  "abstract": "Audio-enabled large language models (AuLLMs) allow users to interact with them simply by talking to them, without the need for an intermediate transcription. This expands the model's accessibility and capabilities by encoding non-verbal cues. However, using non-verbal cues may lead to biased behaviour based on the attributes inferred (or assumed) from them. In this work, we focus on the gender attribute and show that models' perception of it can be unlearned using adversarial methods without a loss in performance on other benchmarked tasks. Such models are useful in situations where gender inference is unwanted. However, in other practical settings, gender perception (without bias) may be desired.As a less radical measure, we distil the gender-agnostic model, creating a model that perceives gender but responds similarly to the gender-agnostic teacher, unless explicitly asked.We apply our newly proposed methods to three AuLLMs and obtain satisfactory results in the gender-unlearning part and partially satisfactory results in the distilling part.",
+  "abstractSha256": "defc45573daa685c527fe9651f091b3145a26e5af3ad529bd061fb95488a5d60",
+  "arxivId": "2610.21763",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.21763v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "对抗训练",
+    "primaryTask": "语音属性识别",
+    "rankBucket": "前50%",
+    "score": 5.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-attributes",
+          "label": "语音属性识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.adversarial-training",
+          "label": "对抗训练"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.fairness",
+          "label": "公平性"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "对抗训练",
+      "primaryMethodId": "method.adversarial-training",
+      "primaryTask": "语音属性识别",
+      "primaryTaskId": "task.speech-attributes",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Adnan Al Ali"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jindřich Libovický"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Anne Lauscher"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文针对语音大模型从声音推断性别并产生刻板关联的问题，先用对抗训练去掉编码器中的性别信号，再用蒸馏保留性别感知但压低无关场景的偏差，第一步能把显式检测压到接近随机而第二步只在部分模型上轻微改善且受数据集与回答风格制约。",
+  "originalTitle": "Bias Mitigation in Audio-Enabled LLMs through Adversarial Training and Distillation Methods",
+  "pdfUrl": "https://arxiv.org/pdf/2610.21763v1.pdf",
+  "readerTitle": "让语音大模型听不见性别与学会有分寸地听见性别",
+  "schemaVersion": 2
+}

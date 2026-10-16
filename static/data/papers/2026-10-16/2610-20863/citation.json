@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.20863v1",
+  "arxivId": "2610.20863",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.20863v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Carnegie Mellon University, USA"
+      ],
+      "name": "Samuele Cornell"
+    },
+    {
+      "affiliations": [
+        "Johns Hopkins University, USA"
+      ],
+      "name": "Matthew Maciejewski"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.20863v1",
+  "originalTitle": "SNOAR: Self-training with Noise filtering, Observation adding, and Remixing for Speech Denoising Without Clean References",
+  "pdfUrl": "https://arxiv.org/pdf/2610.20863v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

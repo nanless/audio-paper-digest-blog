@@ -1,0 +1,127 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.20830v1",
+  "abstract": "Phonetic error detection (PED) aims to identify phoneme-level substitutions, deletions, and insertions and is essential for educational and clinical speech assessment and intervention. Despite recent advances in speech models for phoneme recognition, their ability to reliably detect fine-grained phonetic errors remains unclear because of a lack of high-quality evaluation data. To address this gap, we introduce PEDBench, the first PED benchmark spanning a continuum from natural to controlled speech. It comprises real-world recordings of spoken errors made by children (N=334), scripted error productions by human actors (N=1,188), and synthetic error productions generated using phone-conditioned text-to-speech (N=1,083). All phonetic annotations were transcribed and verified by two phonetically trained annotators. Our evaluation of 13 state-of-the-art speech models shows that they fail to reliably detect phonetic errors, even under controlled conditions with acted and synthetic speech, where acoustic variability is reduced. The models also exhibit low precision, frequently misclassifying correctly pronounced phonemes as errors. Our speech-language models, fine-tuned on synthetic data, outperform commercial and open-source baselines on word-level PED, although a sim-to-real domain gap remains. We plan to publicly release our code and recipes, along with our acted and synthetic datasets, to support the development of more accurate PED systems.",
+  "abstractSha256": "ac5b538c9940a9d9ca1b27b47c893a94ec3379626cda36086561fee295fa197f",
+  "arxivId": "2610.20830",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.20830v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "发音评估",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.pronunciation-assessment",
+          "label": "发音评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "发音评估",
+      "primaryTaskId": "task.pronunciation-assessment",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Harvard University"
+      ],
+      "name": "Zhonghao Shi"
+    },
+    {
+      "affiliations": [
+        "Harvard University"
+      ],
+      "name": "Zackary Rackauckas"
+    },
+    {
+      "affiliations": [
+        "University of Southern California"
+      ],
+      "name": "Jasmine Yip"
+    },
+    {
+      "affiliations": [
+        "University of Michigan"
+      ],
+      "name": "Savannah Halpern"
+    },
+    {
+      "affiliations": [
+        "University of Michigan"
+      ],
+      "name": "Simon Campos"
+    },
+    {
+      "affiliations": [
+        "University of Michigan"
+      ],
+      "name": "Lauren Brace"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Emma Yang"
+    },
+    {
+      "affiliations": [
+        "University of Southern California"
+      ],
+      "name": "Tiantian Feng"
+    },
+    {
+      "affiliations": [
+        "University of Southern California"
+      ],
+      "name": "Xuan Shi"
+    },
+    {
+      "affiliations": [
+        "University of Southern California"
+      ],
+      "name": "Shrikanth Narayanan"
+    },
+    {
+      "affiliations": [
+        "University of Michigan"
+      ],
+      "name": "Teresa Satterfield"
+    },
+    {
+      "affiliations": [
+        "Harvard University"
+      ],
+      "name": "Ying Xu"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "PEDBench 围绕发音错误检测这一细粒度听辨任务，用三档可控程度不同的新数据检验 13 个语音模型，并验证合成错音数据微调语音-语言模型的效果与跨到真实儿童语音时的落差。",
+  "originalTitle": "PEDBench: Can Speech Models Detect Phonetic Errors?",
+  "pdfUrl": "https://arxiv.org/pdf/2610.20830v1.pdf",
+  "readerTitle": "语音模型能听出读错的音吗：PEDBench 解读",
+  "schemaVersion": 2
+}

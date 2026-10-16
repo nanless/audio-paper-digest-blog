@@ -1,0 +1,61 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.20465v1",
+  "abstract": "Generating datasets with audio plugins requires preserving how each audio observation was produced. vst-bench-ml is a Python package that samples plugin parameters, coordinates rendering through a separately installed host, and records software identities, rendering settings, and output hashes for later verification. A sealed manifest binds this evidence and supports offline integrity checks without loading the plugin. A companion repository provides a sample-free VST3 test plugin, a deterministic offline host, and additional checks linking rendering attempts to recorded outputs. On a pinned macOS arm64 and Python 3.12 stack, functional validation of the pre-release versions reproduced package and host tests. Two runs in fresh processes reproduced the same render-plan hash and all eight expected output hashes, covering four sampled parameter configurations and two fixed MIDI signals; 12 negative cases also passed. Later licensed 0.1.0 release candidates passed producer-run continuous integration and local validation. Version 0.1.1 adds public Git source repositories, package-index installation, and user documentation; a separate release check reproduced the expected plan and output hashes. These checks establish integrity and repeatability within the tested setup; they do not establish portability, scientific suitability, or perceptual quality.",
+  "abstractSha256": "0ba9c7cf81cdd94ab5d752028bc570790a6ed890696ff60cefcbd42e482dd719",
+  "arxivId": "2610.20465",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.20465v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "数据集构建",
+    "primaryTask": "音频生成",
+    "rankBucket": "前50%",
+    "score": 5.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-generation",
+          "label": "音频生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.dataset-curation",
+          "label": "数据集构建"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.open-source-tool",
+          "label": "开源工具"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "数据集构建",
+      "primaryMethodId": "method.dataset-curation",
+      "primaryTask": "音频生成",
+      "primaryTaskId": "task.audio-generation",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Youssef Hemimy"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "vst-bench-ml 用参数采样加独立宿主渲染来生成音频，并用密封清单绑定软件身份与文件哈希，在固定的 macOS arm64 与 Python 3.12 环境下复现了计划哈希与八个输出哈希，但不证明跨平台可移植与科学适用性。",
+  "originalTitle": "vst-bench-ml: Auditable Dataset Generation for Audio Plugins",
+  "pdfUrl": "https://arxiv.org/pdf/2610.20465v1.pdf",
+  "readerTitle": "给音频插件数据集留下可核查的生产记录",
+  "schemaVersion": 2
+}

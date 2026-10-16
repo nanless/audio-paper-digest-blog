@@ -1,0 +1,20 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.21150v1",
+  "arxivId": "2610.21150",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.21150v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yang Xiao"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.21150v1",
+  "originalTitle": "VoxTurn: Answering Several Turn-Taking Questions in One Pass with One Model",
+  "pdfUrl": "https://arxiv.org/pdf/2610.21150v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

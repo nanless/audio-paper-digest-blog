@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.21614v1",
+  "arxivId": "2610.21614",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.21614v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ying Fang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhifu Gao"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Qing Gu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jiajun He"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kangqi Jing"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xiangang Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yu Pu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Wupeng Wang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.21614v1",
+  "originalTitle": "Qwen-Audio-Jev: A Unified Interface for Audio Decisions",
+  "pdfUrl": "https://arxiv.org/pdf/2610.21614v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

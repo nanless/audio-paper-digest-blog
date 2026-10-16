@@ -1,0 +1,103 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.21011v1",
+  "abstract": "Identifying individual dogs from barks in real-world videos remains challenging and largely unexplored. Solving this problem would enable long-term behavioral analysis, veterinary monitoring, and animal welfare monitoring by attributing vocalizations and behaviors to the correct individual. Real-world videos are challenging because multiple dogs may bark simultaneously, become occluded, or move in and out of view. Prior studies show that canine vocalizations and visual appearance contain discriminative identity information, but these modalities have largely been studied independently. We present a multimodal dog-fingerprinting framework combining visual identification, multiple-object tracking, and canine vocal fingerprinting to associate bark events with individual dogs while maintaining persistent profiles. The framework synchronizes bark events with tracked dogs and updates profiles using visual appearance and vocal characteristics, enabling identification despite occlusion, overlapping vocalizations, and off-screen barking. We also introduce a benchmark of 46 real-world videos containing 213 manually annotated bark events. Our framework correctly localizes the active visible dog in 61.83% of visible events at IoU $\\geq 0.30$ and achieves a 91.33% F1 score for visible versus off-screen barking detection.",
+  "abstractSha256": "2531886f7f68a85d3ae0d5411b0bd45fdb0ea0eccc4253486c60c2e06b9dc37e",
+  "arxivId": "2610.21011",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.21011v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "音视频发声对象分割",
+    "rankBucket": "前50%",
+    "score": 5.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-sounding-object-segmentation",
+          "label": "音视频发声对象分割"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "application",
+          "id": "application.bioacoustics",
+          "label": "生物声学监测"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "音视频发声对象分割",
+      "primaryTaskId": "task.av-sounding-object-segmentation",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Aryahvishwa Babu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kingsley Jin"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Lillian Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Tuan M. Dang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Theron S. Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jeorge Joshi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Annie Cao"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kenny Q. Zhu"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文把吠叫事件与可见犬只轨迹关联到持续存在的犬只档案，视觉分支做检测跟踪与吠叫打分、音频分支做注册式声纹比对、融合层维护档案，在 46 个视频 213 个事件上可见定位 61.83% 而遮挡与画外音仍是主要代价。",
+  "originalTitle": "Audio-Visual Dog Identification and Tracking in Real-World Videos",
+  "pdfUrl": "https://arxiv.org/pdf/2610.21011v1.pdf",
+  "readerTitle": "在真实多犬视频里把每声吠叫归到同一只犬",
+  "schemaVersion": 2
+}

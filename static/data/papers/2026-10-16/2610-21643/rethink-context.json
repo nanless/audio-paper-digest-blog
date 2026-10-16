@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.21643v1",
+  "abstract": "Although the amplitude estimation of sinusoids is a linear and tractable problem when their frequencies are known, the accuracy of signal modeling is fundamentally limited by the inevitable frequency mismatches produced by existing methods. Quasi-harmonic modeling (QHM) and its extensions (aQHM and eaQHM) offer the ability to refine frequency estimates while extracting amplitudes; however, their extraction and correction capabilities remain limited. In this paper, we first revisit QHM methods from the perspective of frequency mismatches, and reveal that their performances are essentially constrained by the order of the model. Specifically, QHM methods are linear models and thus incapable of capturing higher-order frequency variations, leading to suboptimal modeling accuracy. Second, to address this limitation, we propose a higher-order modeling framework that enables more precise approximation of signal components. Eventually, we qualitatively characterize the optimization problem and employ the Levenberg--Marquardt (LM) algorithm for parameter estimation. As a result, the proposed method allows for significantly improved estimation of amplitudes, frequencies, and phases of sinusoidal components, enabling more accurate signal modeling. Experiments on both simulation study and speech signals demonstrate the superiority of the high-order model in frequency refinement and parameter extraction and its robustness under additive noise conditions.",
+  "abstractSha256": "60f447cc5bb22dec27a9447eefc01a72692680b51f7d05796e0aff3e1a4b7a4c",
+  "arxivId": "2610.21643",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.21643v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "一般线谱参数估计",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.line-spectral-estimation",
+          "label": "一般线谱参数估计"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.formal-analysis",
+          "label": "形式化分析"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "一般线谱参数估计",
+      "primaryTaskId": "task.line-spectral-estimation",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shaowen Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Tomoki Toda"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文把频率初值偏差看成待逼近的指数项，指出准谐波模型只做了一阶近似，提出高阶正弦模型并用 LM 算法逐帧估计振幅与偏差，在仿真和语音上得到更准的参数与重构，但代价是迭代计算量高于一次最小二乘。",
+  "originalTitle": "High-Order Sinusoidal Modeling for Precise Parameter Refinement",
+  "pdfUrl": "https://arxiv.org/pdf/2610.21643v1.pdf",
+  "readerTitle": "高阶正弦建模如何修准频率偏差",
+  "schemaVersion": 2
+}

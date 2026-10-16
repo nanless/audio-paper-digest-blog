@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.19893v1",
+  "arxivId": "2610.19893",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.19893v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Simone Lugani"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Christof Pichler"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hannes Wegleiter"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Christoph Feilmayr"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Rodolfo Zunino"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Edoardo Ragusa"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.19893v1",
+  "originalTitle": "Few-Shot Adaptation for Anomalous Sound Detection at Low False-Positive Rate",
+  "pdfUrl": "https://arxiv.org/pdf/2610.19893v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

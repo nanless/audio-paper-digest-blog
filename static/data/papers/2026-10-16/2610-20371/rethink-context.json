@@ -1,0 +1,61 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.20371v1",
+  "abstract": "Lumped-element networks give transparent, passive models of acoustic impedances whose low- and high-frequency limits can be read from the circuit, but a systematic, arbitrarily accurate construction for non-rational impedances is lacking. Continued fractions, one- and two-point Padé approximants and their identity with ladder networks and Cauer synthesis are introduced in tutorial form and applied to two examples: the radiation impedance of a baffled circular piston and the throat impedance of a horn with a piston mouth. The even contraction of the piston's continued fraction has positive coefficients, certified by interval arithmetic for the first 100 pairs, and yields a ladder of positive resistances, masses and compliances; with 14 elements the error is 4e-4 up to ka = 5. Beranek's four-element network is, to about 2%, the order-two two-point Padé approximant. A horn modelled as a cascade of waveguide sections is a continued fraction whose tail is the mouth impedance; the infinite exponential horn is a periodic continued fraction, an exact high-pass ladder. The piston networks are passive at every certified order (up to 202 elements) and are extended without changing existing elements; for a finite horn the error of the mouth network passes one to one to the throat impedance.",
+  "abstractSha256": "197a49570e704694184d563a734b96c6d921c123aa0dc25611fdc8c7e93880b5",
+  "arxivId": "2610.20371",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.20371v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "声学响应预测",
+    "rankBucket": "前50%",
+    "score": 6.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.acoustic-response-prediction",
+          "label": "声学响应预测"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.physical-acoustics",
+          "label": "物理声学与声信号机理"
+        },
+        {
+          "facet": "method",
+          "id": "method.formal-analysis",
+          "label": "形式化分析"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "声学响应预测",
+      "primaryTaskId": "task.acoustic-response-prediction",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ronald M. Aarts"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文针对障板活塞辐射阻抗与带活塞负载的号筒喉阻抗这类非有理超越阻抗，用连分式与单点和两点帕德逼近构造可任意加阶的无源梯形网络，14 个元件在 ka 达 5 时误差约 4×10-4，代价是高精度算术构造与高频波纹处的误差下限。",
+  "originalTitle": "Continued fractions and passive ladder networks for acoustic impedances: the baffled piston and the horn",
+  "pdfUrl": "https://arxiv.org/pdf/2610.20371v1.pdf",
+  "readerTitle": "连分式与无源梯形网络：障板活塞与号筒阻抗的系统构造",
+  "schemaVersion": 2
+}

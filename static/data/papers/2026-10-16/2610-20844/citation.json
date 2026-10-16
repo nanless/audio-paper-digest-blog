@@ -1,0 +1,52 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.20844v1",
+  "arxivId": "2610.20844",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.20844v1",
+  "authors": [
+    {
+      "affiliations": [
+        "National Yang Ming Chiao Tung University, Taiwan",
+        "Tranxform AI"
+      ],
+      "name": "Edwin Arkel Rios"
+    },
+    {
+      "affiliations": [
+        "Indian Institute of Technology Hyderabad, India"
+      ],
+      "name": "Sneh Sourabh"
+    },
+    {
+      "affiliations": [
+        "Institut national des langues et civilisations orientales, France",
+        "Université Sorbonne Nouvelle, France"
+      ],
+      "name": "Jocelyn Zaruma"
+    },
+    {
+      "affiliations": [
+        "Cohere Labs Community"
+      ],
+      "name": "Girish Ewoorkar"
+    },
+    {
+      "affiliations": [
+        "Cohere"
+      ],
+      "name": "Julian Mack"
+    },
+    {
+      "affiliations": [
+        "National Yang Ming Chiao Tung University, Taiwan"
+      ],
+      "name": "Bo-Cheng Lai"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.20844v1",
+  "originalTitle": "Zero-Shot Spoken Language Understanding with SLAM-ASR: What Do Monolingual ASR-Trained Linear Projectors Enable?",
+  "pdfUrl": "https://arxiv.org/pdf/2610.20844v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

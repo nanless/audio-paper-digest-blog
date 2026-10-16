@@ -1,0 +1,89 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.22049v1",
+  "arxivId": "2610.22049",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.22049v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Karavela"
+      ],
+      "name": "Corentin Caris"
+    },
+    {
+      "affiliations": [
+        "Karavela",
+        "UNICOG, CNRS, INSERM, CEA, Paris-Saclay University",
+        "LSCP, EHESS, ENS, CNRS, PSL University"
+      ],
+      "name": "Louis Jalouzot"
+    },
+    {
+      "affiliations": [
+        "Karavela"
+      ],
+      "name": "Nona Rajabi"
+    },
+    {
+      "affiliations": [
+        "Karavela"
+      ],
+      "name": "Géraud Ilinca"
+    },
+    {
+      "affiliations": [
+        "Karavela"
+      ],
+      "name": "Ahmed Hassayoune"
+    },
+    {
+      "affiliations": [
+        "Karavela"
+      ],
+      "name": "Asilbek Muminov"
+    },
+    {
+      "affiliations": [
+        "Karavela"
+      ],
+      "name": "Thaddée Delebarre"
+    },
+    {
+      "affiliations": [
+        "Karavela"
+      ],
+      "name": "Clara Fonteneau"
+    },
+    {
+      "affiliations": [
+        "Karavela"
+      ],
+      "name": "Charles Maussion"
+    },
+    {
+      "affiliations": [
+        "Karavela",
+        "Inria, CEA, Paris-Saclay University"
+      ],
+      "name": "Bertrand Thirion"
+    },
+    {
+      "affiliations": [
+        "Karavela"
+      ],
+      "name": "Alexis Thual"
+    },
+    {
+      "affiliations": [
+        "Karavela"
+      ],
+      "name": "Antoine Collas"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.22049v1",
+  "originalTitle": "Decoding Naturalistic Speech from fMRI with Temporal Modeling and Multimodal Alignment",
+  "pdfUrl": "https://arxiv.org/pdf/2610.22049v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

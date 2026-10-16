@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.20105v1",
+  "abstract": "Modern audio watermarks achieve strong robustness with learned encoder-decoder models, but their behavior under new processing is established empirically. CochlearMark is introduced as a training-free audio watermark that uses auditory-nerve phase-locking as its feature representation. A small waveform perturbation is optimized against a keyed random projection of this representation, and the same projection is used for detection, with no trained encoder or decoder. Because phase-locking represents temporal fine structure, the resulting robustness has a direct physiological interpretation: the mark is retained when this structure is preserved and lost when it is disrupted or rebuilt. Across speech, music, and environmental audio, CochlearMark achieves signal-edit robustness and imperceptibility comparable to trained neural baselines while requiring only a lightweight computational footprint. Among the evaluated training-free methods, CochlearMark is the only one to retain substantial detectability under neural-codec re-encoding.",
+  "abstractSha256": "057859f5b15d84335ec3b73b944587c7cd46ad44e6b2a3e29b43632463e83106",
+  "arxivId": "2610.20105",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.20105v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "音频水印",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.watermarking",
+          "label": "音频水印"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.environmental",
+          "label": "环境声"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "音频水印",
+      "primaryTaskId": "task.watermarking",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Qin Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Strahinja Nikolic"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Milos Cernak"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "CochlearMark 把水印藏在听神经锁相特征经密钥投影后的得分里，用很小的波形扰动把得分推过阈值，在语音音乐环境音上保持可听性与常规编辑鲁棒性，但在神经编解码低码率与改内容变换下会失效。",
+  "originalTitle": "CochlearMark: Audio Watermarking via Phase Locked Auditory Nerve Representations",
+  "pdfUrl": "https://arxiv.org/pdf/2610.20105v1.pdf",
+  "readerTitle": "用听神经锁相做无训练音频水印：CochlearMark 解读",
+  "schemaVersion": 2
+}

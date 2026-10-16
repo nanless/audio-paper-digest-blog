@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.20400v1",
+  "abstract": "Head-related transfer function (HRTF) spatial upsampling from sparse measurements is a fundamental challenge in personalized binaural audio. We formulate HRTF upsampling as an operator learning problem and introduce SPARO, a neural operator that maps sparse measurements at a set of spatial directions to the HRTF field, a continuous representation that can be queried at arbitrary positions. SPARO projects the measurements onto a learned set of spherical latent modes, processes the latent modes with Transformer blocks, and decodes the resulting representations at query directions. On SONICOM, using the LAP24 measurement configuration, SPARO attains the best log-spectral distortion (LSD) and interaural level difference (ILD) error at every sparsity level from 3 to 100 measurements (18% lower LSD and 43% lower ILD error than the strongest baseline at 100 measurements) while remaining competitive in interaural time difference (ITD) error. It reconstructs a dense HRTF 15 to 373 times faster than the leading neural-field method RANF. We further validate the approach on HUTUBS, demonstrating its effectiveness across HRTF datasets.",
+  "abstractSha256": "9061142b6dc362d5a915dee422ab2caaac04c63f21000bf941f749ca1ef334c7",
+  "arxivId": "2610.20400",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.20400v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "神经算子",
+    "primaryTask": "声场重建",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.sound-field",
+          "label": "声场重建"
+        },
+        {
+          "facet": "method",
+          "id": "method.neural-operator",
+          "label": "神经算子"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.spatial-audio",
+          "label": "空间音频信号"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "神经算子",
+      "primaryMethodId": "method.neural-operator",
+      "primaryTask": "声场重建",
+      "primaryTaskId": "task.sound-field",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Meenakshi Krishnan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "You Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ramani Duraiswami"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "C. Phillip Brown"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文把 HRTF 空间上采样看成跨被试共享的上采样算子学习问题，用 SPARO 把稀疏观测映射到可任意查询的声场，在 SONICOM 上 LSD 和 ILD 全面最低而推理比 RANF 快 15 到 373 倍，代价是仍需分别训练幅度与 ITD 两个网络并做短时测试优化。",
+  "originalTitle": "HRTF Upsampling and Personalization via Neural Operators",
+  "pdfUrl": "https://arxiv.org/pdf/2610.20400v1.pdf",
+  "readerTitle": "从稀疏测量到任意方向：用神经算子做 HRTF 上采样",
+  "schemaVersion": 2
+}

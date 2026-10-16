@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.19553v1",
+  "abstract": "Recent full-stream text-to-speech (TTS) models enable low-latency personalized synthesis as input text arrives. However, sustaining generation beyond the lengths seen during training without additional training remains largely unexplored. We systematically analyze VoXtream2, which extends generation by periodically discarding past context while retaining the acoustic prompt. We find that this strategy does not prevent degradation: pronunciation accuracy deteriorates near the end of the training range due to the range of positions in which the model operates rather than the loss of past context, while speaker similarity gradually declines throughout generation. Based on these findings, we propose two training-free modifications that reduce the attention window and strengthen attention to the acoustic prompt. Experiments show that these modifications preserve pronunciation accuracy and speaker similarity throughout long-form generation while retaining the naturalness of the original model. Ablations further show complementary effects of the two modifications.",
+  "abstractSha256": "efc3442d413fa92594d88b33b8c5a20453e161d16e4b831b0c82f9563db76f87",
+  "arxivId": "2610.19553",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.19553v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "注意力机制",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前50%",
+    "score": 7.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.attention",
+          "label": "注意力机制"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.long-context",
+          "label": "长上下文"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "注意力机制",
+      "primaryMethodId": "method.attention",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jeseung Lim"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jiseong Woo"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Heeseung Kim"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对全流式零样本语音合成在超过训练长度后发音和音色保持不住的问题，论文通过缩小注意力窗口并增强对声音提示的偏置，在不训练的情况下维持了长语音的稳定性和自然度，代价是发音准确率仍不及专门做长语音训练的模型。",
+  "originalTitle": "Speaking Longer Than Learned: Training-Free Long-Form Generation for Full-Stream Text-to-Speech",
+  "pdfUrl": "https://arxiv.org/pdf/2610.19553v1.pdf",
+  "readerTitle": "学到 50 秒之后还能接着说：全流式语音合成的长度外推",
+  "schemaVersion": 2
+}

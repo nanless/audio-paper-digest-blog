@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.22321v1",
+  "arxivId": "2610.22321",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.22321v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Zhejiang University"
+      ],
+      "name": "Yuruo Wu"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University"
+      ],
+      "name": "Kaihang Pan"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University"
+      ],
+      "name": "Kai Shen"
+    },
+    {
+      "affiliations": [
+        "HiThink Research"
+      ],
+      "name": "Jiacheng Li"
+    },
+    {
+      "affiliations": [
+        "Fudan University"
+      ],
+      "name": "Shuyuan Tu"
+    },
+    {
+      "affiliations": [
+        "Lanzhou University"
+      ],
+      "name": "Jisheng Dang"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University"
+      ],
+      "name": "Li Tuoyu"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University"
+      ],
+      "name": "Juncheng Li"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University"
+      ],
+      "name": "Siliang Tang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.22321v1",
+  "originalTitle": "AVC-Reward: Event-Centric Audio-Video Consistency Evaluation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.22321v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

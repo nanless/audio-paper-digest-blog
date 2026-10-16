@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.22221v1",
+  "arxivId": "2610.22221",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.22221v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zainab Afolabi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Vadim Selyutin"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhao Gao"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Babs Khalidson"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Mohamed Ghoneim"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.22221v1",
+  "originalTitle": "How Much Physics Can Vision Learn from Audio? Probing and Distilling Damping Structure",
+  "pdfUrl": "https://arxiv.org/pdf/2610.22221v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,51 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.21691v1",
+  "arxivId": "2610.21691",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.21691v1",
+  "authors": [
+    {
+      "affiliations": [
+        "T. Li, S. Geirnaert, and A. Bertrand are with the Department of Electrical Engineering (ESAT), STADIUS Center for Dynamical Systems, Signal Processing and Data Analytics and with Leuven.AI – KU Leuven institute for AI."
+      ],
+      "name": "Tianyi Li"
+    },
+    {
+      "affiliations": [
+        "T. Li, S. Geirnaert, and A. Bertrand are with the Department of Electrical Engineering (ESAT), STADIUS Center for Dynamical Systems, Signal Processing and Data Analytics and with Leuven.AI – KU Leuven institute for AI.",
+        "S. Geirnaert is also with KU Leuven, Department of Neurosciences, Research Group ExpORL."
+      ],
+      "name": "Simon Geirnaert"
+    },
+    {
+      "affiliations": [
+        "D. Van den Broek, E. Bellon, and B. De Smedt are with the Faculty of Psychology and Educational Sciences, KU Leuven, 3000 Leuven, Belgium."
+      ],
+      "name": "Davina Van den Broek"
+    },
+    {
+      "affiliations": [
+        "D. Van den Broek, E. Bellon, and B. De Smedt are with the Faculty of Psychology and Educational Sciences, KU Leuven, 3000 Leuven, Belgium."
+      ],
+      "name": "Elien Bellon"
+    },
+    {
+      "affiliations": [
+        "D. Van den Broek, E. Bellon, and B. De Smedt are with the Faculty of Psychology and Educational Sciences, KU Leuven, 3000 Leuven, Belgium."
+      ],
+      "name": "Bert De Smedt"
+    },
+    {
+      "affiliations": [
+        "T. Li, S. Geirnaert, and A. Bertrand are with the Department of Electrical Engineering (ESAT), STADIUS Center for Dynamical Systems, Signal Processing and Data Analytics and with Leuven.AI – KU Leuven institute for AI."
+      ],
+      "name": "Alexander Bertrand"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.21691v1",
+  "originalTitle": "A hidden Markov model for unsupervised EEG-based tracking of auditory attention to a single voice",
+  "pdfUrl": "https://arxiv.org/pdf/2610.21691v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.19981v1",
+  "arxivId": "2610.19981",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.19981v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shuobo Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ruiqi Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shaobo Qiao"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shixu Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Feng Xu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.19981v1",
+  "originalTitle": "Shared Sentiment Evidence from Frozen Multimodal Models for Continuous Sentiment Prediction",
+  "pdfUrl": "https://arxiv.org/pdf/2610.19981v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,93 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.20844v1",
+  "abstract": "The SLAM-ASR framework connects the features of a frozen speech encoder as input to a frozen LLM decoder to enable speech transcription. In this work we ask whether this training-on speech transcription-provides the LLM with the capability to also perform spoken language understanding (SLU) tasks, by training monolingual projectors on 11 languages. When prompted to answer a yes/no question about the input speech, the mean instruction following rate (IFR) is 49.8%. When not following the instruction, these models default back to transcription. The transcription quality-measured by the character error rate (CER)-is not sufficient to predict IFR. Remarkably, when the model is instructed to answer the topic question as a single digit option, the mean IFR rises to 81.3%. Our models score a mean 23.2% topic balanced accuracy (BAcc) against 14.3% chance. However, the same decoder scores a mean 71.5% BAcc when using reference transcripts as text input. This indicates a failure of the projector to transfer information for the SLU tasks.",
+  "abstractSha256": "0e71886694b41013b6c4cce58ea48f3338553d726399000102b2536325f8a48a",
+  "arxivId": "2610.20844",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.20844v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "口语理解",
+    "rankBucket": "前50%",
+    "score": 5.7,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.spoken-understanding",
+          "label": "口语理解"
+        },
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-question-answering",
+          "label": "音频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "口语理解",
+      "primaryTaskId": "task.spoken-understanding",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "National Yang Ming Chiao Tung University, Taiwan",
+        "Tranxform AI"
+      ],
+      "name": "Edwin Arkel Rios"
+    },
+    {
+      "affiliations": [
+        "Indian Institute of Technology Hyderabad, India"
+      ],
+      "name": "Sneh Sourabh"
+    },
+    {
+      "affiliations": [
+        "Institut national des langues et civilisations orientales, France",
+        "Université Sorbonne Nouvelle, France"
+      ],
+      "name": "Jocelyn Zaruma"
+    },
+    {
+      "affiliations": [
+        "Cohere Labs Community"
+      ],
+      "name": "Girish Ewoorkar"
+    },
+    {
+      "affiliations": [
+        "Cohere"
+      ],
+      "name": "Julian Mack"
+    },
+    {
+      "affiliations": [
+        "National Yang Ming Chiao Tung University, Taiwan"
+      ],
+      "name": "Bo-Cheng Lai"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文用 11 种语言各自训练的线性映射连接冻结语音编码器和冻结解码器，发现模型能按数字选项格式作答，但主题理解远低于直接读参考文本，差距指向映射的对齐不足。",
+  "originalTitle": "Zero-Shot Spoken Language Understanding with SLAM-ASR: What Do Monolingual ASR-Trained Linear Projectors Enable?",
+  "pdfUrl": "https://arxiv.org/pdf/2610.20844v1.pdf",
+  "readerTitle": "只用听写训练的线性映射能让语言模型听懂语音吗",
+  "schemaVersion": 2
+}

@@ -1,0 +1,39 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.21613v1",
+  "arxivId": "2610.21613",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.21613v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Tongji University"
+      ],
+      "name": "Haojie Hu"
+    },
+    {
+      "affiliations": [
+        "Tongji University"
+      ],
+      "name": "Senda Chen"
+    },
+    {
+      "affiliations": [
+        "Tongji University"
+      ],
+      "name": "Ying Shen"
+    },
+    {
+      "affiliations": [
+        "IEIT SYSTEMS (Beijing) Co., Ltd.",
+        "Tongji University"
+      ],
+      "name": "Lin Zhang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.21613v1",
+  "originalTitle": "To Think or Not to Think: Pre-Decisional Reasoning Budgets for Referring Audio-Visual Segmentation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.21613v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

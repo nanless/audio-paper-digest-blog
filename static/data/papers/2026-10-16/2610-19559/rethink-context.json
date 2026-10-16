@@ -1,0 +1,97 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.19559v1",
+  "abstract": "Lipreading remains challenging due to the inherent ambiguity of visual speech cues and their sensitivity to head pose and video resolution. In this work, we propose FLARE, a framework for robust visual speech representation learning via cross-modal distillation and joint face-lip modeling. FLARE leverages semantically rich Whisper representations as the acoustic teacher signal, converting them into discrete distillation targets through a random-projection quantizer and pretraining the model with a masked prediction objective. To capture complementary visual information, FLARE employs a dual-stream architecture that jointly processes lip region-of-interest (ROI) and full-face inputs, where the lip stream captures finegrained articulatory motion and the face stream encodes broader facial dynamics. During pretraining, auxiliary audio input is incorporated to facilitate cross-modal alignment, and modality dropout is applied to encourage robust visual-only representations. For downstream lipreading, FLARE serves as a visual encoder coupled with either a lightweight Transformer decoder or an LLM-based decoder. Evaluated on LRS2, LRS3, and the out-of-domain WildVSR benchmark, FLARE achieves strong lipreading performance, with word error rates of 11.7%, 13.2%, and 34.3%, respectively. A progressive design study confirms the contribution of each major component. Further analyses demonstrate that joint face-lip modeling improves robustness under degraded video resolution and large head pose variation, while yielding more phoneme-discriminative visual representations. Code and pretrained models are available at https://github.com/jxzhanggg/FLARE.",
+  "abstractSha256": "a703f46bdbe7b41a2be56032b2a24ca26ee5e0d81f5397482c51b79387141257",
+  "arxivId": "2610.19559",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.19559v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "知识蒸馏",
+    "primaryTask": "唇读",
+    "rankBucket": "前25%",
+    "score": 8.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.lip-reading",
+          "label": "唇读"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        },
+        {
+          "facet": "method",
+          "id": "method.self-supervised",
+          "label": "自监督学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.llm",
+          "label": "大语言模型"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "知识蒸馏",
+      "primaryMethodId": "method.distillation",
+      "primaryTask": "唇读",
+      "primaryTaskId": "task.lip-reading",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "School of Artificial Intelligence and Computer Science, Shaanxi Normal University"
+      ],
+      "name": "Jing-Xuan Zhang"
+    },
+    {
+      "affiliations": [
+        "iFLYTEK Research, iFLYTEK Co., Ltd."
+      ],
+      "name": "Genshun Wan"
+    },
+    {
+      "affiliations": [
+        "iFLYTEK Research, iFLYTEK Co., Ltd."
+      ],
+      "name": "Jianqing Gao"
+    },
+    {
+      "affiliations": [
+        "iFLYTEK Research, iFLYTEK Co., Ltd."
+      ],
+      "name": "Jia Pan"
+    },
+    {
+      "affiliations": [
+        "School of Artificial Intelligence and Computer Science, Shaanxi Normal University",
+        "Key Laboratory of Intelligent Computing and Service Technology for Folk SongMinistry of Culture and Tourism"
+      ],
+      "name": "Yumei Zhang"
+    },
+    {
+      "affiliations": [
+        "School of Artificial Intelligence and Computer Science, Shaanxi Normal University"
+      ],
+      "name": "Lichen Zhang"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "FLARE 针对唇读中视觉线索模糊且对姿态和分辨率敏感的问题，用 Whisper 深层语音表示经随机投影量化做掩码预测预训练，并用脸与唇双流联合建模加辅助音频和模态丢弃学习视觉表示，最好的大模型加语言模型解码在 LRS2、LRS3 和 WildVSR 上取得 11.7%、13.2% 和 34.3% 的词错误率，但双视觉分支增加了计算开销且跨任务迁移尚未验证。",
+  "originalTitle": "Learning Visual Speech Representations via Cross-Modal Distillation and Joint Face-Lip Modeling",
+  "pdfUrl": "https://arxiv.org/pdf/2610.19559v1.pdf",
+  "readerTitle": "只看嘴能读出说什么吗：FLARE 如何向声音借知识并同时看脸和嘴唇",
+  "schemaVersion": 2
+}

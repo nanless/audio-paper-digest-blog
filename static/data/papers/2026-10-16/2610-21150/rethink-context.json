@@ -1,0 +1,66 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.21150v1",
+  "abstract": "A cascaded voice agent must decide, throughout each silence of its user, whether the user has finished their turn: answering too early cuts the user off, answering too late makes the agent slow. It often needs related decisions too: will the user soon go on, is speech during its own turn an interruption or a backchannel, is a sound speech at all. With open detectors, each extra decision costs another model or another call, and on the 14-language eot-bench they cut users off in more than a quarter of mid-turn pauses. Because they are trained on segmented utterances, this mismatch is the largest single source of error. We present VoxTurn, a 0.8B speech LLM that casts these decisions as multiple-choice questions, scores the hidden state of each option, and answers any set of them in one forward pass with a block-isolating attention mask, exactly as if asked one at a time. Trained on real conversational pauses with labels derived from their timing, and re-queried while a silence lasts, VoxTurn reaches 11.5% false cut-offs in English at a 300 ms latency budget, comparable to two commercial detectors, and a 14-language mean of 19.9%, the lowest among open models, at 8.3 ms per decision. In Pipecat and LiveKit it cuts off 17% and 9% of turns, and it ranks fifth of 24 in TurnBench end-of-turn detection without any TurnBench training data. The model, code and framework plugins are released.",
+  "abstractSha256": "0bcc877dec324ef07b72714a679aaabc209f56b7afd2957897a0845b92bf6e11",
+  "arxivId": "2610.21150",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.21150v1",
+  "assessment": {
+    "documentType": "模型报告",
+    "primaryMethod": "多任务学习",
+    "primaryTask": "轮次切换",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.turn-taking",
+          "label": "轮次切换"
+        },
+        {
+          "facet": "method",
+          "id": "method.multitask",
+          "label": "多任务学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "多任务学习",
+      "primaryMethodId": "method.multitask",
+      "primaryTask": "轮次切换",
+      "primaryTaskId": "task.turn-taking",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yang Xiao"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "VoxTurn 把轮次结束等多个判断写成选择题并用一次前向同时给出答案，在真实对话停顿上训练并在静音中反复查询，在 eot-bench 英语 300 ms 预算下误抢断 11.5%，单次判断约 8.3 ms。",
+  "originalTitle": "VoxTurn: Answering Several Turn-Taking Questions in One Pass with One Model",
+  "pdfUrl": "https://arxiv.org/pdf/2610.21150v1.pdf",
+  "readerTitle": "一次前向同时回答多个轮次判断：VoxTurn 的做法与证据",
+  "schemaVersion": 2
+}

@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.21941v1",
+  "abstract": "Recent post-training approaches have shown that self-supervised speech encoders can be adapted to learn a single utterance-level speech attribute through knowledge distillation. In this work, we investigate whether a single speech encoder can simultaneously preserve multiple complementary utterance-level speech representations. We propose a multi-attribute multi-teacher distillation framework that learns semantic, speaker, language, and emotion representations from four frozen teacher models using a shared SSL backbone and attribute-specific branches. Experiments on multilingual semantic retrieval, speaker verification, language identification, and speech emotion recognition show that the proposed model achieves performance close to dedicated single-task students while requiring only a single shared encoder. Furthermore, the learned layer aggregation strategies reveal that different speech attributes naturally emerge at different depths of the SSL encoder, providing new insights into the organization of speech representations.",
+  "abstractSha256": "6b384a23e9f5f76f33cd257a7ed288c42811b2c529c4d9db997dc49425d2c368",
+  "arxivId": "2610.21941",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.21941v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "知识蒸馏",
+    "primaryTask": "预训练专家模型整合",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.pretrained-expert-consolidation",
+          "label": "预训练专家模型整合"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        },
+        {
+          "facet": "method",
+          "id": "method.multitask",
+          "label": "多任务学习"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "知识蒸馏",
+      "primaryMethodId": "method.distillation",
+      "primaryTask": "预训练专家模型整合",
+      "primaryTaskId": "task.pretrained-expert-consolidation",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "LIA Avignon Université Avignon, France"
+      ],
+      "name": "Maryem Bouziane"
+    },
+    {
+      "affiliations": [
+        "LIA Avignon Université Avignon, France"
+      ],
+      "name": "Salima Mdhaffar"
+    },
+    {
+      "affiliations": [
+        "LIA Avignon Université Avignon, France"
+      ],
+      "name": "Yannick Estève"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文用一个共享语音编码器加四个属性分支同时向语义、说话人、语言、情感四个冻结教师做余弦蒸馏，在多语义检索、说话人确认、语言辨识和情感识别上接近单任务学生，代价是小幅性能折损和一次多教师联合训练。",
+  "originalTitle": "Learning Speech Attribute Representations via Multi-Teacher Distillation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.21941v1.pdf",
+  "readerTitle": "一个语音编码器同时记住说什么、谁在说、哪种语言和什么情绪",
+  "schemaVersion": 2
+}

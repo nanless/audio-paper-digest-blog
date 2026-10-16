@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.19722v1",
+  "abstract": "Recent advances in deep learning have significantly improved underwater acoustic vessel recognition. However, existing publicly available datasets are typically limited in scale, hindering large-scale representation learning and downstream task evaluation. To address this limitation, we introduce ONCship, a large-scale underwater acoustic dataset comprising 4521 hours of curated recordings from Ocean Networks Canada (ONC) hydrophones and Automatic Identification System (AIS) data. We evaluate the proposed dataset across three tasks: self-supervised representation learning, vessel-type classification, and MMSI-Level Vessel Classification. Experiments on DeepShip and ShipsEar demonstrate the effectiveness of ONCship for acoustic representation learning, with joint pre-training on ONCship and AudioSet achieving a classification accuracy of 62.45% on DeepShip through linear probing. Furthermore, incorporating ONCship as auxiliary training data improves downstream vessel-type classification performance. Beyond conventional vessel-type classification, we further investigate MMSI-Level Vessel Classification, treating each vessel as a distinct identity. Experimental results show that models fine-tuned with different loss functions achieve Top-1 accuracies exceeding 53% and Top-5 accuracies approaching 69%, demonstrating the feasibility of distinguishing individual vessels through MMSI-Level Vessel Classification. Overall, ONCship provides a valuable resource for underwater acoustic representation learning and vessel recognition, while its rich vessel-level metadata enables further exploration of MMSI-Level Vessel Classification.",
+  "abstractSha256": "ea54b43f2ca7025410eee38cdec265fc8750d906905d64d7771acba38e2c5e53",
+  "arxivId": "2610.19722",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.19722v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "数据集构建",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "method",
+          "id": "method.dataset-curation",
+          "label": "数据集构建"
+        },
+        {
+          "facet": "method",
+          "id": "method.self-supervised",
+          "label": "自监督学习"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "数据集构建",
+      "primaryMethodId": "method.dataset-curation",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhe Cao"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jichao Zhang"
+    },
+    {
+      "affiliations": [
+        "organization=School of Marine Science and Technology, Northwestern Polytechnical University, city=Xi’an, postcode=710072, country=China",
+        "organization=Research and Development Institute of Northwestern Polytechnical University in Shenzhen, city=Shenzhen, postcode=518063, country=China"
+      ],
+      "name": "Xiao-Lei Zhang"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文从 20000 小时原始水声存档中整理出 4521 小时带船只轨迹关联的 ONCship 语料，用同一模型的三种预训练来源对比和两类下游任务检验其作用，联合预训练在 DeepShip 上达到 62.45% 准确率而单船身份识别 Top-1 超过 53%。",
+  "originalTitle": "ONCship: A Large-Scale Underwater Acoustic Corpus for Ship Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2610.19722v1.pdf",
+  "readerTitle": "ONCship：用 4521 小时水下录音研究船只类型与单船身份识别",
+  "schemaVersion": 2
+}

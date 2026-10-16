@@ -1,0 +1,102 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.21588v1",
+  "abstract": "Audio-visual large language models (AV-LLMs) have made strong progress in multimodal understanding, yet most treat audio as monaural semantic content, limiting their ability to reason about where sounds originate and how they relate to the visual scene. Recent spatial audio-visual studies address parts of this problem, but often focus on specific abilities, such as spatial correspondence or direction and distance reasoning. In this work, we introduce HLR-AVSceneQA, a comprehensive benchmark with a hear-localize-reason hierarchy that evaluates whether models can recognize what is heard, localize sound sources in egocentric and allocentric views, and use these localized sources to reason about how they relate to the visual scene. We further introduce HLR-LLM, which augments a strong audio-visual foundation model with a binaural spatial audio branch alongside its monaural semantic audio pathway. We train HLR-LLM with a curriculum that incorporates final-stage chain-of-thought supervision for multi-step spatial reasoning. Experiments show that existing AV-LLMs remain limited in spatial grounding and relational reasoning, while HLR-LLM substantially improves spatial audio-visual scene understanding without compromising semantic audio-visual perception.",
+  "abstractSha256": "3c3787d9e6268b0d032fc651dd0f1f0a924e830c97bf4b0c5348dd88d7398f83",
+  "arxivId": "2610.21588",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.21588v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "课程学习",
+    "primaryTask": "音视频问答",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-question-answering",
+          "label": "音视频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.curriculum",
+          "label": "课程学习"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.spatial-audio",
+          "label": "空间音频信号"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "课程学习",
+      "primaryMethodId": "method.curriculum",
+      "primaryTask": "音视频问答",
+      "primaryTaskId": "task.av-question-answering",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "POSTECH"
+      ],
+      "name": "Kim Sung-Bin"
+    },
+    {
+      "affiliations": [
+        "KAIST"
+      ],
+      "name": "Lee Jung-Mok"
+    },
+    {
+      "affiliations": [
+        "KAIST"
+      ],
+      "name": "Jinwoo Jung"
+    },
+    {
+      "affiliations": [
+        "POSTECH"
+      ],
+      "name": "Oh Hyun-Bin"
+    },
+    {
+      "affiliations": [
+        "Hankuk University of Foreign Studies"
+      ],
+      "name": "Hyeonggon Ryu"
+    },
+    {
+      "affiliations": [
+        "The University of Texas at Austin"
+      ],
+      "name": "David Harwath"
+    },
+    {
+      "affiliations": [
+        "KAIST"
+      ],
+      "name": "Tae-Hyun Oh"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文用普通视场图像加双耳音频构造听见定位推理三层问答，并给强视听大模型外加一条空间音频支路加三阶段课程训练，在仿真基准上提升定位与关系推理并在真实录音上做迁移验证，但结论只在该仿真划分与离散评价条件下成立。",
+  "originalTitle": "Hear, Localize, and Reason: Spatially Aware Scene Understanding for Audio-Visual LLMs",
+  "pdfUrl": "https://arxiv.org/pdf/2610.21588v1.pdf",
+  "readerTitle": "听见、定位再推理：带空间听觉的视听场景理解",
+  "schemaVersion": 2
+}

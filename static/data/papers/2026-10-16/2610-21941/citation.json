@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.21941v1",
+  "arxivId": "2610.21941",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.21941v1",
+  "authors": [
+    {
+      "affiliations": [
+        "LIA Avignon Université Avignon, France"
+      ],
+      "name": "Maryem Bouziane"
+    },
+    {
+      "affiliations": [
+        "LIA Avignon Université Avignon, France"
+      ],
+      "name": "Salima Mdhaffar"
+    },
+    {
+      "affiliations": [
+        "LIA Avignon Université Avignon, France"
+      ],
+      "name": "Yannick Estève"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.21941v1",
+  "originalTitle": "Learning Speech Attribute Representations via Multi-Teacher Distillation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.21941v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

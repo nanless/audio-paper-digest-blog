@@ -1,0 +1,96 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.20906v1",
+  "abstract": "Dementia affects millions of older adults worldwide, yet early detection remains difficult outside clinical settings. Traditional models primarily rely on text or voice-based responses, capturing only a limited view of human cognition despite the inherently multimodal nature of human expression. This work proposes a contactless, multimodal screening framework that leverages video, audio, and text signals collected during structured voice-based interactions with Amazon Alexa. By incorporating these modalities, our approach captures a more holistic representation of human behavior encompassing speech patterns, vocal characteristics, facial expressions, and linguistic structure, which may enable more accurate detection of cognitive decline. Different participants completed three conversational tasks designed to probe spontaneous speech, comprehension, and recall. We pursued three objectives: (1) evaluate which of the three Alexa tasks provides the most informative cognitive signals, (2) compare the effectiveness of unimodal models, and (3) assess the benefits of multimodal fusion models. Task-level analysis shows that the video model achieves its best performance on Command-Reading, with an accuracy of 0.65 (AUC 0.69), while the audio model performs best on Question-Answering, reaching an accuracy of 0.67 (AUC 0.73). In contrast, the multimodal model demonstrates consistently stable performance across tasks, achieving an accuracy of 0.76 (AUC 0.75) on Command-Reading and 0.76 (AUC 0.73) on Question-Answering. These findings demonstrate that multimodal behavioral cues captured through naturalistic interactions can reliably distinguish MCI from healthy aging, highlighting the limitations of traditional diagnostic paradigms and supporting the shift toward multimodal, real-world cognitive assessment frameworks.",
+  "abstractSha256": "adc9292178097ef52975166be03eb40c9c76dbb931f8902d9445a65a62db9a98",
+  "arxivId": "2610.20906",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.20906v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "病理语音评估",
+    "rankBucket": "后50%",
+    "score": 5.4,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.pathological-speech",
+          "label": "病理语音评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "application",
+          "id": "application.speech-biomarker",
+          "label": "语音生物标志物"
+        },
+        {
+          "facet": "application",
+          "id": "application.smart-speaker",
+          "label": "智能音箱"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "病理语音评估",
+      "primaryTaskId": "task.pathological-speech",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Sankalp Vaish"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Rishank Singh"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Sumukh Veeramalla"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Caroline Summerour"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "John A. Batsis"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xiaohui Liang"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文用 35 名老人在三种 Alexa 对话任务中同步采集的视频、音频和文本特征做轻度认知障碍二分类，核心证据是单模态随任务波动而三模态融合在任务 1 和任务 3 上都达到 0.76 准确率，但结论只在小样本、MoCA 标签和任务内评测条件下成立。",
+  "originalTitle": "Task-Centric Multimodal Learning for Cognitive Impairment Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2610.20906v1.pdf",
+  "readerTitle": "在家里和音箱说话就能辅助筛查轻度认知障碍吗",
+  "schemaVersion": 2
+}

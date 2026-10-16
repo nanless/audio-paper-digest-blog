@@ -1,0 +1,51 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.20310v1",
+  "arxivId": "2610.20310",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.20310v1",
+  "authors": [
+    {
+      "affiliations": [
+        "University of Georgia"
+      ],
+      "name": "Yi Chen Liu"
+    },
+    {
+      "affiliations": [
+        "College of Engineering",
+        "Virginia Commonwealth University"
+      ],
+      "name": "Syed Irfan Ali Meerza"
+    },
+    {
+      "affiliations": [
+        "University of Georgia"
+      ],
+      "name": "Jiawei Yu"
+    },
+    {
+      "affiliations": [
+        "University of Tennessee, Knoxville"
+      ],
+      "name": "Xi Guo"
+    },
+    {
+      "affiliations": [
+        "Cornell University"
+      ],
+      "name": "Samuel Bright"
+    },
+    {
+      "affiliations": [
+        "University of Georgia"
+      ],
+      "name": "Jian Liu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.20310v1",
+  "originalTitle": "MUSEBENCH: A Benchmark for AI-Generated Music Detection and Artifact Analysis",
+  "pdfUrl": "https://arxiv.org/pdf/2610.20310v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

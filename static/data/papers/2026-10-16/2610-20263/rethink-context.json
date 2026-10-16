@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.20263v1",
+  "abstract": "Every multilingual speech pipeline begins with a language decision, an error there propagates silently through recognition, translation and routing. In India it spans 22 scheduled languages across four language families, heard over short, noisy, narrowband and code-mixed audio. Foundational speech models increasingly present language identification (LID) as an inherent latent, generalized capability. Autoregressive decoders in speech models emit a special language ID token, and modern LLMs with audio capabilities can name the language when prompted. We test this assumption on identical clips and find that whisper and similar speech models has tokens for only 15 of the 23 languages, on one second inputs Gemini 3.5 Flash reaches 0.52 macro-F1 and GPT-audio 0.14. We present Anuvani LID, a dedicated 115M parameter LID conformer model trained on 54,643 hours of Indian speech spanning 22 Indian languages and Indian accented English. Along with designed and controlled studies on 102 condition benchmark with speaker and corpus held out tests. Across 37 conditions, it reaches 0.914 mean macro-F1, 5.2 points above Gemini 3.5 Flash and ahead of 14 other systems. It is 24 points ahead of Gemini at one second, scores 0.897 on all 23 languages where no other system exceeds 0.713, and is calibrated to an ECE of 0.008. Reliable Indian LID still requires a robust, dedicated and calibrated model.",
+  "abstractSha256": "28a3c57af62faa737b986b9202de94e0cfe1e4b1a0c8b93285bbfa3aa29308cb",
+  "arxivId": "2610.20263",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.20263v1",
+  "assessment": {
+    "documentType": "模型报告",
+    "primaryMethod": "SFT",
+    "primaryTask": "语言识别",
+    "rankBucket": "前25%",
+    "score": 7.7,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.language-identification",
+          "label": "语言识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.sft",
+          "label": "SFT"
+        },
+        {
+          "facet": "method",
+          "id": "method.augmentation",
+          "label": "数据增强"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "SFT",
+      "primaryMethodId": "method.sft",
+      "primaryTask": "语言识别",
+      "primaryTaskId": "task.language-identification",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Central Institute of Indian Languages"
+      ],
+      "name": "Stephen Fernandes"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Narayan Choudhary"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文要解决印度 22 种 scheduled 语言加印度英语在短、噪声、窄带和混码语音下的首步语种判断问题，用 115.6M 参数的专用 Conformer 在 54643 小时上训练，在 37 个同 clip 条件下平均 macro-F1 达 0.914，代价是需要大规模多语训练和多轴评测设计。",
+  "originalTitle": "Anuvani-LID: Robust and Calibrated Spoken Language Identification for Indian Languages",
+  "pdfUrl": "https://arxiv.org/pdf/2610.20263v1.pdf",
+  "readerTitle": "Anuvani-LID：面向印度语言的稳健且校准的口语语种识别",
+  "schemaVersion": 2
+}

@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.21998v1",
+  "abstract": "Speech compression is increasingly important in scenarios such as real-time and satellite communication. Neural codecs have shown superior Rate-Distortion (RD) performance over traditional signal-processing codecs. Models with long-range dependency encoders/decoders and entropy models outperform convolution-based structures, but they still lack streaming support since they rely on sequence-level correlations. In this paper, we propose StreamLSC, a frame-level streaming learned speech compression model built on three fundamental components of streaming networks, i.e. Boundary-Cached Causal Convolution, Intra-Frame Layer Normalization, and RNN-mode RWKV. Our model incorporates a streamable entropy quantizer module, ensuring efficient context model while preserving causal constraints. Experiments show that the streaming model achieves performance comparable to its offline counterpart, attaining state-of-the-art rate-distortion results, significant gains in subjective evaluations, -51.37% (ViSQOL) and -53.99% (PESQ) BD-RATE savings on average, and improvements of 0.2154 and 0.5156 in BD-ViSQOL and BD-PESQ.",
+  "abstractSha256": "d07f817bab741a757ad766bdf89fbd22fb69e98d088f95055c72e4e7db42a412",
+  "arxivId": "2610.21998",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.21998v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "神经编解码与离散单元",
+    "primaryTask": "语音编码",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-coding",
+          "label": "语音编码"
+        },
+        {
+          "facet": "method",
+          "id": "method.neural-codec",
+          "label": "神经编解码与离散单元"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        },
+        {
+          "facet": "method",
+          "id": "method.autoregressive",
+          "label": "自回归模型"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "神经编解码与离散单元",
+      "primaryMethodId": "method.neural-codec",
+      "primaryTask": "语音编码",
+      "primaryTaskId": "task.speech-coding",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yuhan Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jun Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Fengxi Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhengxue Cheng"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Li Song"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "StreamLSC 针对超低码率下严格逐帧因果的语音压缩问题，用帧内归一化、边界缓存因果卷积与 RWKV 循环状态做主干并配帧级熵模型，在 LibriTTS 上以约 1.1 kbps 取得与离线版本相当的率失真表现，但模型达 149.2M 参数且实时系数为 0.0539。",
+  "originalTitle": "Frame-Wise Streaming for Efficient Learned Speech Compression",
+  "pdfUrl": "https://arxiv.org/pdf/2610.21998v1.pdf",
+  "readerTitle": "逐帧可流式传输的低码率语音压缩 StreamLSC",
+  "schemaVersion": 2
+}

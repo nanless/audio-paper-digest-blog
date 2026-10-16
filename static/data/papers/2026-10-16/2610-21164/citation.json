@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.21164v1",
+  "arxivId": "2610.21164",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.21164v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Md Asif Akram"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Arif Faisal"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Sakir Hossain Faruque"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Sharun Akter Khushbu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.21164v1",
+  "originalTitle": "Automatic Sentence Completion Using Bengali Audio Speech with a Transformer-Based Early Speech Recognition System",
+  "pdfUrl": "https://arxiv.org/pdf/2610.21164v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

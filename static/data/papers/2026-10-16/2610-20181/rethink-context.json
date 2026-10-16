@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.20181v1",
+  "abstract": "Voice-based conversational agents are increasingly deployed in real-world settings, where environmental noise often degrades the interactive experience. Therefore, robust acoustic adaptability is essential to maintain natural and intelligible human-computer communication. However, most existing systems remain acoustically insensitive and fail to emulate the human Lombard effect, in which speakers involuntarily adjust their vocal production to preserve intelligibility in the presence of noise. As a result, their communicative reliability degrades under adverse acoustic conditions. To remain intelligible in noisy environments, conversational agents require a mechanism to emulate noise-induced adaptive behavior during synthesis. We propose NIL-TTS, a noise-induced Lombard TTS framework. We integrate a feature-wise linear modulation (FiLM) mechanism into a flow-matching backbone for dynamic vocal adaptation. A two-stage training paradigm is utilized: initial supervised fine-tuning on paired Lombard corpora, followed by Flow-GRPO post-training to optimize for intelligibility. Evaluations confirm that NIL-TTS autonomously adjusts its output in response to varying noise conditions, exhibiting key correlates of the human Lombard effect. Driven by these adaptive modulations, the synthesized speech achieves significant intelligibility improvements that scale proportionally with noise intensity. Ultimately, this work presents a flow-matching and reinforcement learning-based advancement within the adaptive Lombard speech synthesis paradigm for challenging real-world scenarios.",
+  "abstractSha256": "c4732119fc4ccb49f56c712efe5a904eb5c8958e74747e2cd660978e78f15e95",
+  "arxivId": "2610.20181",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.20181v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "强化学习",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.reinforcement",
+          "label": "强化学习"
+        },
+        {
+          "facet": "task",
+          "id": "task.intelligibility",
+          "label": "语音可懂度评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "强化学习",
+      "primaryMethodId": "method.reinforcement",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhaoyang Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Dingding Yao"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Chengzhong Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Junfeng Li"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "NIL-TTS 为解决噪声下合成语音听不清的问题，在流匹配语音合成主干上加入噪声感知通路，先用配对的 Lombard 数据做监督微调，再用 Flow-GRPO 以可懂度奖励直接优化，在 Seed-TTS 中英文评测中低信噪比下显著降低词错误率，而推理开销几乎不变。",
+  "originalTitle": "Noise-Aware Lombard Speech Synthesis via Flow-GRPO for Intelligibility Optimization",
+  "pdfUrl": "https://arxiv.org/pdf/2610.20181v1.pdf",
+  "readerTitle": "噪声下让人听清的语音合成：NIL-TTS 如何感知噪声并调整发声",
+  "schemaVersion": 2
+}

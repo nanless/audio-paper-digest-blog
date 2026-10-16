@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.21164v1",
+  "abstract": "Dementia severely impairs communication abilities and turns everyday conversations into challenging experiences. Individuals affected by dementia frequently struggle to express their thoughts or complete sentences, making it difficult for family members and caregivers to understand their needs. This study proposes a novel approach to assist dementia patients by developing an integrated system that detects signs of dementia through Bangla speech and text analysis and provides sentence auto-completion support during conversations. To achieve this, recorded voices from individuals with and without dementia were analysed, and key acoustic features were extracted to capture vocal patterns associated with cognitive decline. A transformer-based model was employed to transcribe voice signals into text for linguistic analysis. In the classification task, several Machine Learning (ML) and Deep Learning (DL) models were evaluated using both acoustic and textual representations, and the LSTM model architectures demonstrated strong capabilities for modelling contextual patterns in speech and language data. For the sentence auto-completion task, a sequential learning model based on a Bidirectional LSTM (Bi-LSTM) network with an attention mechanism was developed to sequentially complete partially expressed Bangla sentences during conversation. This research bridges the gap in dementia analysis in an underrepresented language and implements a sentence auto-completion framework for cognitive disorders.",
+  "abstractSha256": "99c27ba70b364c205d869e82f4bd755a276badca7c398be07996935210467b92",
+  "arxivId": "2610.21164",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.21164v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "RNN",
+    "primaryTask": "病理语音评估",
+    "rankBucket": "后50%",
+    "score": 5.4,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.pathological-speech",
+          "label": "病理语音评估"
+        },
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.rnn",
+          "label": "RNN"
+        },
+        {
+          "facet": "method",
+          "id": "method.transformer",
+          "label": "Transformer"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "RNN",
+      "primaryMethodId": "method.rnn",
+      "primaryTask": "病理语音评估",
+      "primaryTaskId": "task.pathological-speech",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Md Asif Akram"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Arif Faisal"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Sakir Hossain Faruque"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Sharun Akter Khushbu"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "该研究用 740 段孟加拉语朗读语音做痴呆与非痴呆分类并用转写文本做补全，语音长短期记忆网络报告 97.30% 准确率、文本最好约 83.7%、补全测试约 59.74%，但结论只在朗读式小样本和转写校正条件下成立。",
+  "originalTitle": "Automatic Sentence Completion Using Bengali Audio Speech with a Transformer-Based Early Speech Recognition System",
+  "pdfUrl": "https://arxiv.org/pdf/2610.21164v1.pdf",
+  "readerTitle": "孟加拉语语音如何同时做痴呆筛查与说话补全",
+  "schemaVersion": 2
+}

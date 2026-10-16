@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.19499v1",
+  "abstract": "Text-to-speech (TTS) based on masked diffusion models (MDMs) achieves competitive zero-shot speech synthesis performance. Unlike autoregressive (AR) models, MDMs define a corruption process that maps clean speech-token sequences to masked maps and learn a reverse denoising process to recover the reference tokens. However, MDMs commit to intermediate predictions that cannot be revised in subsequent inference steps. Consequently, prediction errors accumulate and propagate, degrading synthesized speech quality. We present Revise-TTS, a single-stage framework that applies hierarchical binary quantization (HBQ) and generative refinement networks (GRN) to zero-shot speech generation. First, we replace finite scalar quantization (FSQ) with HBQ to introduce a scalable binary representation for speech tokens with an explicit coarse-to-fine structure. Second, GRN is trained to reconstruct the token sequence from a mixture of ground-truth and random tokens. During inference, iterative refinement enables self-correction by randomly discarding a small proportion of previously predicted tokens with new predictions. Experiments and ablation studies demonstrate that Revise-TTS achieves competitive zero-shot speech synthesis performance using HBQ. It can further be extended to any MDM-based TTS task as an alternative training and inference method.",
+  "abstractSha256": "bffaf2033f944e9b8120371d8dfa2a4bc603c1f8f960db0d30cdc16095fd7f88",
+  "arxivId": "2610.19499",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.19499v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "扩散模型",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前50%",
+    "score": 5.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.diffusion",
+          "label": "扩散模型"
+        },
+        {
+          "facet": "method",
+          "id": "method.neural-codec",
+          "label": "神经编解码与离散单元"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.zero-shot",
+          "label": "零样本"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "扩散模型",
+      "primaryMethodId": "method.diffusion",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Wanli Sun"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Dan Su"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Anton Ragni"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对掩码扩散模型一旦提交预测就不能修改而累积错误的问题，论文用分层二进制量化提供由粗到细的语音表示，并用生成式精修网络以真假混合输入训练和随机丢弃重预测的迭代方式修正错误，在匹配码本下优于有限标量量化，中文可懂度有优势但说话人相似度仍有代价。",
+  "originalTitle": "Revise-TTS: A Non-Masking Refinement Framework for Masked Diffusion Models in Text-to-Speech",
+  "pdfUrl": "https://arxiv.org/pdf/2610.19499v1.pdf",
+  "readerTitle": "Revise-TTS：让掩码扩散语音合成可以回头改错",
+  "schemaVersion": 2
+}

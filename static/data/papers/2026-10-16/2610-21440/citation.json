@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.21440v1",
+  "arxivId": "2610.21440",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.21440v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Mingzhe Lu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jinhao Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yunpeng Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hang Su"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Lichun Fan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jian Luan"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.21440v1",
+  "originalTitle": "SITAR: A Situational Distortion Metric for Automatic Speech Recognition Evaluation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.21440v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

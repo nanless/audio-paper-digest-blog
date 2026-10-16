@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.19445v1",
+  "abstract": "Neural instrument synthesizers can clone the timbre of a solo instrument, letting music producers make music with the sound they desire. However, an instrument of interest is often embedded in a fully produced, multi-instrument recording, beyond the reach of existing methods. Source separation before timbre cloning is an approach, but it may suffer from separation artifacts and is also likely a detour for the task. In this work, we propose Point-and-Play, a system that clones the timbre of a cued source directly from a polyphonic mixture and uses it to synthesize new pitches and velocities. To achieve this, we introduce a Cue-Gated Statistics Pooling (CGSP) module that extracts the timbre code of the cued instrument from adapted CLAP embeddings of the music mixture. This extracted timbre code is then used to condition a separately trained note synthesizer together with pitch and velocity inputs. Experiments show that our proposed system outperforms separate-then-clone baselines in terms of timbre fidelity and synthesis quality, achieving comparable performance with that cloned from a clean solo instrument.",
+  "abstractSha256": "7d3c6a08826cd1449fafedadb14b599f5bceb72800fa64f9acf001f775723228",
+  "arxivId": "2610.19445",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.19445v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "对比学习",
+    "primaryTask": "音乐生成",
+    "rankBucket": "前50%",
+    "score": 6.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-generation",
+          "label": "音乐生成"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-retrieval",
+          "label": "音频检索"
+        },
+        {
+          "facet": "method",
+          "id": "method.contrastive",
+          "label": "对比学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "对比学习",
+      "primaryMethodId": "method.contrastive",
+      "primaryTask": "音乐生成",
+      "primaryTaskId": "task.music-generation",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Baotong Tian"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhiyao Duan"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文把从多乐器混音中按提示抽出目标音色并合成新音高和力度作为新任务，用提示门控统计池化从混合中提取音色码再驱动音符合成器，在 27 个未见 NSynth 音色上文本提示达到 CLAP 0.706 并优于已测先分离再复刻流程，但音高信息仍有残留且同类多乐器点选仍待解决。",
+  "originalTitle": "Point-and-Play: Instrument Timbre Cloning from Music Mixtures",
+  "pdfUrl": "https://arxiv.org/pdf/2610.19445v1.pdf",
+  "readerTitle": "从混合音乐中点选一种乐器并复刻其音色",
+  "schemaVersion": 2
+}

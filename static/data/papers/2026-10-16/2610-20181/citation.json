@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.20181v1",
+  "arxivId": "2610.20181",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.20181v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhaoyang Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Dingding Yao"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Chengzhong Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Junfeng Li"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.20181v1",
+  "originalTitle": "Noise-Aware Lombard Speech Synthesis via Flow-GRPO for Intelligibility Optimization",
+  "pdfUrl": "https://arxiv.org/pdf/2610.20181v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

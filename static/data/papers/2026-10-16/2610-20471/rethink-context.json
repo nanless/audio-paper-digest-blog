@@ -1,0 +1,61 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.20471v1",
+  "abstract": "Residual scalar quantization can produce highly dependent indices when successive stages reuse identical, unscaled grids. This case study examines that behavior in a frozen neural audio codec and develops an exact recoding procedure that reduces storage while preserving its decoder inputs. Analysis of the repeated-grid recurrence identifies predictable stage sequences; finite-precision checks motivate preserving every original index through explicit exception records. The model weights and reconstruction graph remain fixed. On the studied 62- and 512-file cohorts, a predictor, adaptive coding and explicit file selection reduce complete stored bytes. The final 512-file rate is 129.591 kbps including headers, 25.943% below an original-index XZ control. Original recorded CPU runs establish bitwise latent and waveform preservation; independent readers verify exact index and metadata recovery in subsequent saved-stream experiments. Later coding choices use previously studied cohorts, and fresh encoding requires generating three alternatives. The engineering result is implementation-specific storage reduction with exact index recovery; the underlying lossy reconstruction quality remains unchanged.",
+  "abstractSha256": "b890cd7614d01bb18b0e898255ccd65a5f9335ba7fd96d0f8b003d17da128634",
+  "arxivId": "2610.20471",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.20471v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "神经编解码与离散单元",
+    "primaryTask": "音频编码",
+    "rankBucket": "前50%",
+    "score": 5.7,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-coding",
+          "label": "音频编码"
+        },
+        {
+          "facet": "method",
+          "id": "method.neural-codec",
+          "label": "神经编解码与离散单元"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "神经编解码与离散单元",
+      "primaryMethodId": "method.neural-codec",
+      "primaryTask": "音频编码",
+      "primaryTaskId": "task.audio-coding",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "St. Thomas University, Miami Gardens, Florida, USA"
+      ],
+      "name": "Youssef Hemimy"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "本文在冻结双路径神经音频编解码器上分析重复无缩放标量网格的残差量化规律，用预测加例外完整保存的方法降低索引存储，并在 62 与 512 文件上验证比特级还原与码率下降及其适用条件。",
+  "originalTitle": "Quantizer Redundancy and Exact Index Recoding in a Frozen Neural Audio Codec",
+  "pdfUrl": "https://arxiv.org/pdf/2610.20471v1.pdf",
+  "readerTitle": "冻结音频编解码器的量化器冗余与索引精确重编码",
+  "schemaVersion": 2
+}

@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.20526v1",
+  "arxivId": "2610.20526",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.20526v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Haoyue Bai"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yinyi Luo"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Heqing Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xiaoyuan Yi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "James Evans"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jindong Wang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.20526v1",
+  "originalTitle": "Lluna: Collaborative Unimodal Models for Missing-Modality Inference",
+  "pdfUrl": "https://arxiv.org/pdf/2610.20526v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

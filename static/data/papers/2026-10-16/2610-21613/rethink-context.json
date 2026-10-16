@@ -1,0 +1,80 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.21613v1",
+  "abstract": "Multimodal reasoning systems increasingly assume that longer chain-of-thought (CoT) uniformly improves downstream grounding. We show that this assumption fails in referring audio-visual segmentation (Ref-AVS): simple queries can be harmed by excessive reasoning, creating an \"overthinking trap\" associated with phrase and localization drift, while genuinely ambiguous queries still benefit from multi-step reasoning. To systematically study this, we construct counterfactual reasoning-budget labels under a five-fold out-of-fold evaluation protocol. Our results recast adaptive Ref-AVS reasoning as a pre-decisional representation problem: before the first generated token, the generation-onset state contains linearly decodable information predictive of whether additional reasoning will improve segmentation. A linear probe predicts binary reasoning need with 70.1% accuracy, substantially outperforming text-only features and uncertainty-based proxy signals. As a router, the onset-state controller improves over downstream confidence routing and closely matches Short-then-Decide while using far fewer tokens. Proxy comparisons show that the onset representation contains predictive information not fully recovered by the evaluated hand-crafted features. Reusing this onset state for lightweight, single forward-pass routing reduces autoregressive token consumption by 60% while retaining about 96% of always-long performance. It further provides a cost-quality trade-off on $R^2$-AVSBench without target-label tuning, rather than an accuracy improvement over always-long. Error analysis links harmful long reasoning to phrase and localization drift, illustrating the benefit of bypassing unnecessary reasoning on simple queries. Ultimately, our results support efficient adaptive reasoning in Ref-AVS through pre-decisional internal representations.",
+  "abstractSha256": "ba9421e0412756556cdd21eea331fe6dce46aef0fd70d09d93d84c15b145419c",
+  "arxivId": "2610.21613",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.21613v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "动态计算与早退",
+    "primaryTask": "音视频发声对象分割",
+    "rankBucket": "前50%",
+    "score": 6.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-sounding-object-segmentation",
+          "label": "音视频发声对象分割"
+        },
+        {
+          "facet": "method",
+          "id": "method.dynamic-computation",
+          "label": "动态计算与早退"
+        },
+        {
+          "facet": "method",
+          "id": "method.representation-probing",
+          "label": "表示探测"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "动态计算与早退",
+      "primaryMethodId": "method.dynamic-computation",
+      "primaryTask": "音视频发声对象分割",
+      "primaryTaskId": "task.av-sounding-object-segmentation",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Tongji University"
+      ],
+      "name": "Haojie Hu"
+    },
+    {
+      "affiliations": [
+        "Tongji University"
+      ],
+      "name": "Senda Chen"
+    },
+    {
+      "affiliations": [
+        "Tongji University"
+      ],
+      "name": "Ying Shen"
+    },
+    {
+      "affiliations": [
+        "IEIT SYSTEMS (Beijing) Co., Ltd.",
+        "Tongji University"
+      ],
+      "name": "Lin Zhang"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "该文针对指代性音视频分割中固定长推理会损害简单样本的问题，用生成开始前的多模态隐状态预测每个样本需要的推理量，并以轻量路由器在零、短、长三档之间选择，以约 40% 推理词元保留约 96% 常长推理性能。",
+  "originalTitle": "To Think or Not to Think: Pre-Decisional Reasoning Budgets for Referring Audio-Visual Segmentation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.21613v1.pdf",
+  "readerTitle": "推理越多越好吗：指向性音视频分割的预决策推理预算",
+  "schemaVersion": 2
+}

@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.19134v1",
+  "arxivId": "2610.19134",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.19134v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Tianchi Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Nicholas Moratelli"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Khurram Azeem Hashmi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Mohammadreza Zolfaghari"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Rishabh Jain"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Louis Lu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Changdae Park"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Amril Nazir"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.19134v1",
+  "originalTitle": "CAFE: Confining Feature Distillation to Language-Routed Adapters for Compact Multilingual Automatic Speech Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2610.19134v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

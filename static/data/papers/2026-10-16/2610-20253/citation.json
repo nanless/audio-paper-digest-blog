@@ -1,0 +1,39 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.20253v1",
+  "arxivId": "2610.20253",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.20253v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ming-Hao Hsu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yuxiang Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yingda Shen"
+    },
+    {
+      "affiliations": [
+        "School of Data Science",
+        "The Chinese University of Hong Kong, Shenzhen, China"
+      ],
+      "name": "Zhizheng Wu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.20253v1",
+  "originalTitle": "Repairing Speech Access After Text Updates with Frozen Affine Fields",
+  "pdfUrl": "https://arxiv.org/pdf/2610.20253v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,109 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.20955v1",
+  "abstract": "Neural audio codecs are increasingly used for low-bitrate speech coding and serve as tokenizers for speech language models, yet it remains unclear how their codebook hierarchies encode speaker traits and speech characteristics. We systematically study 17 multi-codebook neural audio codecs across seven traits: sex, age, accent, voice quality, emotion, speech flow, and non-verbal sounds. For each codec, we reconstruct speech using partial codebooks and use machine listeners to compare trait predictions on each reconstruction. We measure prediction agreement with reweighted Cohen's \\k{appa}, and define trait depth as a proxy for the codebook depth by which each trait is encoded and recoverable. Overall, sex has the shallowest trait depth, followed by speech flow, whereas voice quality and age group require deeper stacks; emotion, accent, and non-verbal sounds fall in between. Within each trait, speech-flow classes are at relatively similar trait depths, whereas emotion, accent, and non-verbal sounds differ more. Additionally, we explore how certain codec design choices relate to trait depths. These findings show that codebook hierarchies are trait-dependent and may not exhibit uniform coarse-to-fine structures, motivating trait-specific codec evaluation and design for future applications.",
+  "abstractSha256": "42635f9c75bf669d63c90baa7310975f16411a7c1b5f9fb3b92a4a6bc59183b0",
+  "arxivId": "2610.20955",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.20955v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "表示探测",
+    "primaryTask": "音频编码",
+    "rankBucket": "前50%",
+    "score": 6.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-coding",
+          "label": "音频编码"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-attributes",
+          "label": "语音属性识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.representation-probing",
+          "label": "表示探测"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "表示探测",
+      "primaryMethodId": "method.representation-probing",
+      "primaryTask": "音频编码",
+      "primaryTaskId": "task.audio-coding",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Signal Analysis and Interpretation Lab (SAIL), University of Southern California"
+      ],
+      "name": "Jihwan Lee"
+    },
+    {
+      "affiliations": [
+        "Signal Analysis and Interpretation Lab (SAIL), University of Southern California"
+      ],
+      "name": "Tiantian Feng"
+    },
+    {
+      "affiliations": [
+        "Signal Analysis and Interpretation Lab (SAIL), University of Southern California"
+      ],
+      "name": "Minu Kim"
+    },
+    {
+      "affiliations": [
+        "Center for Language and Speech Processing, Johns Hopkins University"
+      ],
+      "name": "Junhyeok Lee"
+    },
+    {
+      "affiliations": [
+        "Signal Analysis and Interpretation Lab (SAIL), University of Southern California"
+      ],
+      "name": "Sean Foley"
+    },
+    {
+      "affiliations": [
+        "Signal Analysis and Interpretation Lab (SAIL), University of Southern California"
+      ],
+      "name": "Thanathai Lertpetchpun"
+    },
+    {
+      "affiliations": [
+        "Center for Language and Speech Processing, Johns Hopkins University"
+      ],
+      "name": "Najim Dehak"
+    },
+    {
+      "affiliations": [
+        "Signal Analysis and Interpretation Lab (SAIL), University of Southern California"
+      ],
+      "name": "Dani Byrd"
+    },
+    {
+      "affiliations": [
+        "Signal Analysis and Interpretation Lab (SAIL), University of Southern California"
+      ],
+      "name": "Shrikanth Narayanan"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "该文用部分码本重建加机器听众一致性的方法，测量 17 个多码本编解码器在七类特征上的恢复深度，发现性别最浅、嗓音质量和年龄组最深，且结论只在所用听众、数据集和相对阈值下成立。",
+  "originalTitle": "Probing Neural Audio Codecs with Speaker Traits and Speech Characteristics",
+  "pdfUrl": "https://arxiv.org/pdf/2610.20955v1.pdf",
+  "readerTitle": "神经音频编解码器的码本层级保留了哪些说话人特征",
+  "schemaVersion": 2
+}

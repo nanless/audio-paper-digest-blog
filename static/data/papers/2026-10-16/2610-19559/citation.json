@@ -1,0 +1,51 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.19559v1",
+  "arxivId": "2610.19559",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.19559v1",
+  "authors": [
+    {
+      "affiliations": [
+        "School of Artificial Intelligence and Computer Science, Shaanxi Normal University"
+      ],
+      "name": "Jing-Xuan Zhang"
+    },
+    {
+      "affiliations": [
+        "iFLYTEK Research, iFLYTEK Co., Ltd."
+      ],
+      "name": "Genshun Wan"
+    },
+    {
+      "affiliations": [
+        "iFLYTEK Research, iFLYTEK Co., Ltd."
+      ],
+      "name": "Jianqing Gao"
+    },
+    {
+      "affiliations": [
+        "iFLYTEK Research, iFLYTEK Co., Ltd."
+      ],
+      "name": "Jia Pan"
+    },
+    {
+      "affiliations": [
+        "School of Artificial Intelligence and Computer Science, Shaanxi Normal University",
+        "Key Laboratory of Intelligent Computing and Service Technology for Folk SongMinistry of Culture and Tourism"
+      ],
+      "name": "Yumei Zhang"
+    },
+    {
+      "affiliations": [
+        "School of Artificial Intelligence and Computer Science, Shaanxi Normal University"
+      ],
+      "name": "Lichen Zhang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.19559v1",
+  "originalTitle": "Learning Visual Speech Representations via Cross-Modal Distillation and Joint Face-Lip Modeling",
+  "pdfUrl": "https://arxiv.org/pdf/2610.19559v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

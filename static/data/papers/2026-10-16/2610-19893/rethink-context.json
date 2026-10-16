@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.19893v1",
+  "abstract": "Reliable fault detection is crucial for industrial machinery in large-scale facilities, where unexpected failures can cause costly downtime and production interruptions. Although acoustic monitoring provides a scalable solution for machine condition monitoring, its deployment is often constrained by high false-positive rates. We propose a two-step approach to automatic anomalous sound detection: first, when only normal operating audio samples are available, a regularized unsupervised model is deployed; then, after the first machine fault, a few-shot adaptation strategy exploits the anomalous samples acquired during the fault to improve the system. This adaptation increases the area under the precision-recall curve (AUPR) from 23.0 to 64.0 and improves detection in the low false-positive-rate region, with the partial area under the receiver operating characteristic curve (pAUROC) increasing from 39.6 to 72.8. We also show that covariance regularization improves both prediction accuracy and training stability in the unsupervised model. These results provide a practical strategy for acoustic anomaly detection systems, enabling improved accuracy and reduced false alarms.",
+  "abstractSha256": "14dab2d62375dc3a02fab243545f08d4a4504e81c2be74675e81c390f9ffc4c4",
+  "arxivId": "2610.19893",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.19893v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "变分自编码器",
+    "primaryTask": "异常声音检测",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.anomaly-detection",
+          "label": "异常声音检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.vae",
+          "label": "变分自编码器"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.few-shot",
+          "label": "少样本"
+        },
+        {
+          "facet": "application",
+          "id": "application.industrial",
+          "label": "工业应用"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "变分自编码器",
+      "primaryMethodId": "method.vae",
+      "primaryTask": "异常声音检测",
+      "primaryTaskId": "task.anomaly-detection",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Simone Lugani"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Christof Pichler"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hannes Wegleiter"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Christoph Feilmayr"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Rodolfo Zunino"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Edoardo Ragusa"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文解决高炉料仓多机并行强噪声下误报过高导致声学监测难落地的问题，用卷积变分自编码器加高斯混合模型先做无监督建模再用单次故障做小样本微调，在该厂实测数据上把 AUPR 从 23.0 提到 64.0、受限误报区 pAUROC 从 39.6 提到 72.8，代价是需要一次真实故障样本和额外的微调与增强流程。",
+  "originalTitle": "Few-Shot Adaptation for Anomalous Sound Detection at Low False-Positive Rate",
+  "pdfUrl": "https://arxiv.org/pdf/2610.19893v1.pdf",
+  "readerTitle": "先只听正常声再用一次故障做小样本修正的异常声音检测",
+  "schemaVersion": 2
+}

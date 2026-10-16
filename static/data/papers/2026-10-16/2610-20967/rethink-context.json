@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.20967v1",
+  "abstract": "State-of-the-art text-to-music models increasingly rely on scaling model capacity, data, and compute, while still learning musical structure directly from dense audio. Yet melody, rhythm, harmony, and structure can be represented compactly in symbolic form. We introduce MIDI-REPA, a representation-alignment framework that derives MIDI supervision from automatic music transcription (AMT) to align intermediate representations of a flow-matching DiT. Building on the 122M-parameter FluxAudio-S baseline from the 2026 ICME Academic Text-To-Music Challenge, we investigate what, where, and when to align. Aligning a MuScriptor-derived piano roll with an early DiT layer throughout the full flow trajectory performs the best. Without additional training data or techniques, MIDI-REPA remains competitive on the ATTM objective metrics while remaining trainable on a single RTX 3090 in about 31 hours. Our results highlight symbolic supervision as a simple and inexpensive learning signal for improving text-to-music generation. We release our transcription pipeline, JamendoMIDI, training code, and audio samples at https://midi-repa.vaclis.net.",
+  "abstractSha256": "59881c3522eeff5c860aa0f4d424b0d704654716d777c69728a3ef2048f3a2af",
+  "arxivId": "2610.20967",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.20967v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "流匹配",
+    "primaryTask": "音乐生成",
+    "rankBucket": "前25%",
+    "score": 7.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-generation",
+          "label": "音乐生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "流匹配",
+      "primaryMethodId": "method.flow-matching",
+      "primaryTask": "音乐生成",
+      "primaryTaskId": "task.music-generation",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Song-Ze Yu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Fang-Duo Tsai"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yi-Hsuan Yang"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "MIDI-REPA 在 122M 参数的流匹配 DiT 上，用自动转谱得到的钢琴卷帘对齐早期中间层并贯穿全轨迹，在相同数据和单卡约 31 小时成本下提升了文本一致性和音频质量。",
+  "originalTitle": "MIDI-REPA: Improving Text-to-Music Generation with Symbolic Representation Alignment",
+  "pdfUrl": "https://arxiv.org/pdf/2610.20967v1.pdf",
+  "readerTitle": "用符号乐谱盯住中间层：MIDI-REPA 如何改进文本生成音乐",
+  "schemaVersion": 2
+}

@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.19127v1",
+  "abstract": "Uniform frame sampling for vision-language model (VLM)-based video analysis often floods multimodal backbones with redundant content, while existing keyframe selection methods are typically optimized for human viewing rather than downstream extraction accuracy. We propose AdaFrame, a content-adaptive preprocessing cascade that reduces visual redundancy without sacrificing extraction fidelity. Three progressively finer filters, perceptual hashing, learned perceptual image patch similarity (LPIPS), and CLIP-based semantic clustering, efficiently eliminate redundant frames before costly cross-modal inference. Per-video frame budgets are determined using Intrinsic Semantic Dimensionality (ISD), which estimates each video's semantic complexity through singular value decomposition of its frame embeddings. Experiments on 500 video advertisements from the Pitt Ads Dataset show that AdaFrame reduces the frame count by 48 percent and VLM inference cost by 75 percent compared with uniform sampling, while achieving 86.0 percent topic accuracy, an improvement of 1.6 percentage points, and 79.4 percent sentiment accuracy, an improvement of 7.5 percentage points.",
+  "abstractSha256": "c39d5686471751eeb3d4bd6e91f4400c8a747dde75c1e54998179af43e929c8e",
+  "arxivId": "2610.19127",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.19127v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "聚类与类别匹配",
+    "primaryTask": "视频摘要与片段选择",
+    "rankBucket": "前50%",
+    "score": 5.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.video-summarization",
+          "label": "视频摘要与片段选择"
+        },
+        {
+          "facet": "method",
+          "id": "method.clustering",
+          "label": "聚类与类别匹配"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "聚类与类别匹配",
+      "primaryMethodId": "method.clustering",
+      "primaryTask": "视频摘要与片段选择",
+      "primaryTaskId": "task.video-summarization",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Wabash College, Crawfordsville, Indiana, USA"
+      ],
+      "name": "Abdul Basit Tonmoy"
+    },
+    {
+      "affiliations": [
+        "Wabash College, Crawfordsville, Indiana, USA"
+      ],
+      "name": "Arman Luthra"
+    },
+    {
+      "affiliations": [
+        "Purdue University, West Lafayette, Indiana, USA"
+      ],
+      "name": "Guang Lin"
+    },
+    {
+      "affiliations": [
+        "Wabash College, Crawfordsville, Indiana, USA"
+      ],
+      "name": "Qixin Deng"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对视频广告结构化信息抽取中均匀采样冗余大、关键镜头易漏检的问题，AdaFrame 用哈希投票、感知相似度和语义聚类三级去重加自适应帧预算，在 500 条 Pitt 广告上把平均帧数压到 24.6 帧并把情感准确率做到 79.4%，代价是需要先算 CLIP 嵌入和音频转写等预处理开销。",
+  "originalTitle": "AdaFrame: Hierarchical Multimodal Deduplication with Adaptive Information Budgeting for Cost-Efficient Video Advertisement Analysis",
+  "pdfUrl": "https://arxiv.org/pdf/2610.19127v1.pdf",
+  "readerTitle": "AdaFrame：为视频广告分析省下视觉语言模型调用量的自适应去重",
+  "schemaVersion": 2
+}

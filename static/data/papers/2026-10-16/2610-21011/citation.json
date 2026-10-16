@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.21011v1",
+  "arxivId": "2610.21011",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.21011v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Aryahvishwa Babu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kingsley Jin"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Lillian Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Tuan M. Dang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Theron S. Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jeorge Joshi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Annie Cao"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kenny Q. Zhu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.21011v1",
+  "originalTitle": "Audio-Visual Dog Identification and Tracking in Real-World Videos",
+  "pdfUrl": "https://arxiv.org/pdf/2610.21011v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

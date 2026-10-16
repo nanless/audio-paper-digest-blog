@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.20114v1",
+  "abstract": "Speech Emotion Recognition (SER) models and Audio LLMs fail when vocal tone contradicts textual semantics. Extensive training on congruent data engenders a rigid semantic prior, causing \"Semantic Dominance\", a severe text bias during cross-modal conflicts. We introduce the ASPIRE benchmark of adversarial audio-text pairs across four conflict types, alongside two metrics: Semantic Overconfidence Penalty (SOP) and Latent Decoupling Degree (LDD). Unlike fusion methods that merely re-weight collapsed features, our Acoustic Conflict Resolution Network (ACR-Net) uses Cross-Modal Attention and Contrastive Decoupling Loss to disentangle contradictory representations into orthogonal latent spaces. Experiments show existing models fail under polarity conflicts due to extreme semantic overconfidence. Conversely, ACR-Net preserves acoustic fidelity, maintaining high LDD to drive SOP near zero, achieving superior Acoustic Accuracy (ACC) in both adversarial and standard scenarios.",
+  "abstractSha256": "35689f89f09bd80007fc48e5807d286e97f50ad9e29b085f7ea584b4252394bd",
+  "arxivId": "2610.20114",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.20114v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "对比学习",
+    "primaryTask": "语音情感识别",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.emotion-recognition",
+          "label": "语音情感识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.contrastive",
+          "label": "对比学习"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "对比学习",
+      "primaryMethodId": "method.contrastive",
+      "primaryTask": "语音情感识别",
+      "primaryTaskId": "task.emotion-recognition",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Mengke Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yanda Shao"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Tianhe Wu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kai Feng"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文研究语音语调与文本语义矛盾时的语音情感识别，提出用对抗合成数据诊断语义偏向并用解耦结构保留声音证据，在对抗与常规场景下以声音准确率为主要证据，同时保留了超参数与适用条件的限制。",
+  "originalTitle": "ACR-Net: Mitigating Semantic Dominance via Contrastive Acoustic-Semantic Decoupling",
+  "pdfUrl": "https://arxiv.org/pdf/2610.20114v1.pdf",
+  "readerTitle": "声音难过而文字开心时，模型该信谁",
+  "schemaVersion": 2
+}

@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.21467v1",
+  "arxivId": "2610.21467",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.21467v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Wei Zeng"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ye Wang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.21467v1",
+  "originalTitle": "DuET: Note-Frame Dual Encoding for Piano Performance-to-Score Transcription",
+  "pdfUrl": "https://arxiv.org/pdf/2610.21467v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

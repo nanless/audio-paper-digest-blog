@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.20327v2",
+  "abstract": "India's 22 scheduled languages are spoken by over a billion people in conversations that mix languages, often within one turn, overlap freely, and take place over telephones, in meetings, and in media. Knowing who spoke when, the task of speaker diarization, is essential to speech applications for such conversation: voice agents conversing with several people at once, speaker attributed transcription of meetings and calls, contact center analytics, and media monitoring. We present a systematic study of speaker diarization across all 22 languages on IndicDiarBench and introduce Anuvani-Diarization, which adapts a self-supervised end-to-end segmentation model to Indian conversation with uncertainty aware silver supervision. Evaluated zero shot alongside nine recent diarization systems, it reaches a duration weighted diarization error rate (DER) of 16.78% on all 1,164 recordings, the lowest of all systems we ran and second only to the best published result (16.0%), and leads the three strongest rivals in 14 of 22 languages. It matches its parent on six international benchmarks. We also show that the benchmark's utterance level annotation convention is a hidden variable worth 1.9 to 4.1 DER points, depending on the system, and that a convention learned from other Indian transcriptions does not transfer.",
+  "abstractSha256": "3504ca719b8e46a4b39b16cea41ae33b0641ce10e6838397aabb0a6985ff8004",
+  "arxivId": "2610.20327",
+  "arxivVersion": 2,
+  "arxivVersionedId": "2610.20327v2",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "领域适应",
+    "primaryTask": "说话人分离标注",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.diarization",
+          "label": "说话人分离标注"
+        },
+        {
+          "facet": "method",
+          "id": "method.domain-adaptation",
+          "label": "领域适应"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "领域适应",
+      "primaryMethodId": "method.domain-adaptation",
+      "primaryTask": "说话人分离标注",
+      "primaryTaskId": "task.diarization",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Central Institute of Indian Languages"
+      ],
+      "name": "Stephen Fernandes"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Narayan Choudhary"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文在全部 22 种印度 scheduled 语言的 1164 段录音上零样本比较九个说话人日志系统，用印度电话银标签适配分割网络得到时长加权 16.78% 的错误率，并证明话语内停顿是否切分这一标注口径能带来 1.9 到 4.1 个百分点的系统性差异。",
+  "originalTitle": "Anuvani-Diarization: Zero Shot Speaker Diarization and Annotation Conventions Across 22 Languages",
+  "pdfUrl": "https://arxiv.org/pdf/2610.20327v2.pdf",
+  "readerTitle": "印度二十二种语言里谁在何时说话：Anuvani-Diarization 的零样本适配与标注口径分析",
+  "schemaVersion": 2
+}

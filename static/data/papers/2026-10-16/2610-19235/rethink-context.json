@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.19235v1",
+  "abstract": "Automatic stuttering systems primarily detect dysfluencies after they have occurred, limiting their use for anticipatory intervention. We address this gap by formulating stuttering prediction as continuous causal time-to-event forecasting, where a model estimates the risk of an upcoming stuttering onset every 100 ms using only preceding speech. To support this task, we augment FluencyBank Timestamped for 36 speakers with manually reviewed repetitions, prolongations, and blocks, yielding 2,872 forecasting events. We then model the temporal evolution of frozen Whisper-large-v3 speech representations using a compact causal Conformer with 3.67M trainable parameters. The proposed approach achieves an AUROC of 0.63. Temporal analysis further shows that explicitly modeling preceding speech states outperforms simply increasing the static acoustic window, while a discrete-time survival formulation provides coherent forecasts from 300 ms to 1.5 s using a single model. These results provide initial evidence that stuttering onset is preceded by measurable temporal information in speech and establish a framework for future anticipatory stuttering systems.",
+  "abstractSha256": "86fe76b4dfc215826c428ace637065589a0f5aff2b16957a41a554a2e05fdb93",
+  "arxivId": "2610.19235",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.19235v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "Conformer",
+    "primaryTask": "病理语音评估",
+    "rankBucket": "前50%",
+    "score": 5.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.pathological-speech",
+          "label": "病理语音评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.conformer",
+          "label": "Conformer"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.causal",
+          "label": "严格因果"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "Conformer",
+      "primaryMethodId": "method.conformer",
+      "primaryTask": "病理语音评估",
+      "primaryTaskId": "task.pathological-speech",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Tampu Ravi Kumar"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ayoub Daliri"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Vivek Gupta"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "该文把口吃预测做成每 100 毫秒只用过去语音估计未来起始风险的时间到事件预报，用冻结 Whisper 加 3.67M 因果 Conformer 在 36 人 2872 个事件上达到 300 毫秒视界 AUROC 0.63，代价是平均精度仍低且误报频繁。",
+  "originalTitle": "From Detection To Anticipation: Continuous Onset Forecasting For Stuttered Speech",
+  "pdfUrl": "https://arxiv.org/pdf/2610.19235v1.pdf",
+  "readerTitle": "从事后检测到提前预报：口吃起始的连续因果预测",
+  "schemaVersion": 2
+}

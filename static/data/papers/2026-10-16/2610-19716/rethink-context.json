@@ -1,0 +1,103 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.19716v1",
+  "abstract": "Real-world voice separation must recover individual voices from overlapping speech, environmental noise, and music, yet isolated source recordings are rarely available for supervision. We introduce Soloist, a generative model for blind voice separation that autoregressively generates individual voice streams as audio-codec sequences conditioned on the mixture, without requiring a target-speaker query or a predefined voice count. We propose a two-stage training paradigm to learn from synthetic mixtures and adapt to real recordings. The first stage combines supervised separation on synthetic mixtures with isolated source targets and an auxiliary task that predicts speaker timelines from real recordings, learning who speaks when from natural acoustics. The second stage applies reinforcement learning to real recordings, with rewards supplied by a model judge that compares candidate separations based on voice purity and content preservation without isolated source targets. Across diverse scenarios, Soloist recovers clean speech from multi-speaker overlap and noisy recordings, and extracts singing vocals from music accompaniment while maintaining relatively high pitch accuracy and intelligibility. On real-world recordings with unknown voice counts, Soloist also separates voices well. Finally, we integrate Soloist into a full-duplex conversation processing pipeline that assembles separated outputs into continuous speaker tracks, demonstrating its practical utility in real conversations.",
+  "abstractSha256": "e82d301ac300877ca443eb768456b4a1a1cd71558a82b6d8bd3e90830b4440ee",
+  "arxivId": "2610.19716",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.19716v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "自回归模型",
+    "primaryTask": "语音分离",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-separation",
+          "label": "语音分离"
+        },
+        {
+          "facet": "method",
+          "id": "method.autoregressive",
+          "label": "自回归模型"
+        },
+        {
+          "facet": "method",
+          "id": "method.reinforcement",
+          "label": "强化学习"
+        },
+        {
+          "facet": "task",
+          "id": "task.music-separation",
+          "label": "音乐源分离"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "自回归模型",
+      "primaryMethodId": "method.autoregressive",
+      "primaryTask": "语音分离",
+      "primaryTaskId": "task.speech-separation",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Chen Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "ChuFan Yu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Botian Jiang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jingqi Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Wenxuan Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yitian Gong"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhaoye Fei"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xipeng Qiu"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "Soloist 把盲人声分离做成按人声个数串行生成音频编解码序列，用合成混合加说话人时间线做监督，再用模型评价器在真实录音上做强化学习，在已知个数和未知个数条件下都保留了内容和音高，代价是生成式重合成与评价器不稳定性需要多重门限和修复流程来约束。",
+  "originalTitle": "Soloist: A Generative Model for Blind Voice Separation in the Wild",
+  "pdfUrl": "https://arxiv.org/pdf/2610.19716v1.pdf",
+  "readerTitle": "Soloist：在没有孤立人声时如何分离真实录音中的人声",
+  "schemaVersion": 2
+}

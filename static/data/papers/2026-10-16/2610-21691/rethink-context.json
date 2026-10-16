@@ -1,0 +1,92 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.21691v1",
+  "abstract": "Objective: Absolute auditory attention decoding (aAAD) aims to track how strongly a listener attends to a single speech source using electroencephalography (EEG). Unlike selective auditory attention decoding, aAAD lacks a competing speech reference, making reliable attention tracking challenging.   Approach: We propose a fully unsupervised aAAD pipeline combining neural envelope tracking (NET) with hidden Markov model (HMM)-based temporal inference. Using EEG signals and the target speech envelope, the framework estimates a continuous attention trajectory without explicit attention-state labels. We evaluate the approach using EEG recordings from 30 adults, investigate the impact of analysis window length, and compare HMM post-processing with moving-average (MA) smoothing and alternative EEG features.   Main results: With 1-s analysis windows, non-causal HMM post-processing improves the area under the receiver operating characteristic curve (AUC) for all 30 participants, increasing mean AUC from 0.547 for raw NET to 0.832. A 5-s window achieves the highest mean AUC of 0.858. Compared with non-causal MA smoothing, the HMM achieves higher AUC across the examined smoothing scales. Individual switch detection times are comparable, while the HMM generally achieves lower group-level detection times. NET also outperforms alpha power and spectral entropy as an observation feature in the unsupervised HMM framework.   Significance: The proposed framework provides a label-free approach for estimating temporal fluctuations in auditory attention, demonstrating the utility of probabilistic temporal inference for continuous attention tracking in single-speaker listening scenarios.",
+  "abstractSha256": "7de543bb774da707231dc40fed1b92a2aeb9fd957dad2a8c30f7072973292ed2",
+  "arxivId": "2610.21691",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.21691v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "无监督学习",
+    "primaryTask": "语音属性识别",
+    "rankBucket": "前50%",
+    "score": 5.9,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-attributes",
+          "label": "语音属性识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.unsupervised",
+          "label": "无监督学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.neural",
+          "label": "脑信号"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "无监督学习",
+      "primaryMethodId": "method.unsupervised",
+      "primaryTask": "语音属性识别",
+      "primaryTaskId": "task.speech-attributes",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "T. Li, S. Geirnaert, and A. Bertrand are with the Department of Electrical Engineering (ESAT), STADIUS Center for Dynamical Systems, Signal Processing and Data Analytics and with Leuven.AI – KU Leuven institute for AI."
+      ],
+      "name": "Tianyi Li"
+    },
+    {
+      "affiliations": [
+        "T. Li, S. Geirnaert, and A. Bertrand are with the Department of Electrical Engineering (ESAT), STADIUS Center for Dynamical Systems, Signal Processing and Data Analytics and with Leuven.AI – KU Leuven institute for AI.",
+        "S. Geirnaert is also with KU Leuven, Department of Neurosciences, Research Group ExpORL."
+      ],
+      "name": "Simon Geirnaert"
+    },
+    {
+      "affiliations": [
+        "D. Van den Broek, E. Bellon, and B. De Smedt are with the Faculty of Psychology and Educational Sciences, KU Leuven, 3000 Leuven, Belgium."
+      ],
+      "name": "Davina Van den Broek"
+    },
+    {
+      "affiliations": [
+        "D. Van den Broek, E. Bellon, and B. De Smedt are with the Faculty of Psychology and Educational Sciences, KU Leuven, 3000 Leuven, Belgium."
+      ],
+      "name": "Elien Bellon"
+    },
+    {
+      "affiliations": [
+        "D. Van den Broek, E. Bellon, and B. De Smedt are with the Faculty of Psychology and Educational Sciences, KU Leuven, 3000 Leuven, Belgium."
+      ],
+      "name": "Bert De Smedt"
+    },
+    {
+      "affiliations": [
+        "T. Li, S. Geirnaert, and A. Bertrand are with the Department of Electrical Engineering (ESAT), STADIUS Center for Dynamical Systems, Signal Processing and Data Analytics and with Leuven.AI – KU Leuven institute for AI."
+      ],
+      "name": "Alexander Bertrand"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文解决只有一路目标语音时如何从脑电估计注意力强弱起伏，用逐窗包络跟踪相关作证据再以两状态隐马尔可夫模型做前后文整合，在 30 人 75 分钟听课数据上把 1 秒窗平均区分度从 0.547 提升到 0.832，代价是单人转折定位仍有二十多秒误差且需要足够的专注基线。",
+  "originalTitle": "A hidden Markov model for unsupervised EEG-based tracking of auditory attention to a single voice",
+  "pdfUrl": "https://arxiv.org/pdf/2610.21691v1.pdf",
+  "readerTitle": "单人语音注意力的无监督脑电追踪：包络跟踪证据加隐马尔可夫时间推理",
+  "schemaVersion": 2
+}

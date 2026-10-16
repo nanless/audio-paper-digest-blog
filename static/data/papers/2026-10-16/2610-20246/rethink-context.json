@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.20246v1",
+  "abstract": "Although the open-source Opus audio codec is widely used for digital audio streaming, its perceptual transparency threshold for high-bitrate music compression remains insufficiently evaluated. To establish this threshold, this study evaluates Opus across a two-phase ITU-R BS.1116-3 double-blind framework, analyzing Difference Grades using a Linear Mixed-Effects Model (LMM) and Two One-Sided Tests (TOST) for statistical equivalence. In a first phase with 21 qualified listeners and 23 music excerpts, 128 kbps achieves statistical in-distinguishability ($p = 0.456$) but narrowly fails strict equivalence to the uncompressed reference ($p = 0.064$). In Phase 2, Best Linear Unbiased Predictors (BLUPs) isolate the 10 most critical listeners and 8 most challenging samples for a stress-test. Under these worst-case conditions, 128 kbps is conclusively detected as degraded ($p = 0.030$), whereas 160 kbps successfully reaches perceptual transparency ($p = 0.747$) and strict statistical equivalence ($p = 0.024$). The study concludes that 160 kbps demonstrates perceptual transparency to uncompressed CD quality in critical listening environments. For reproducibility, we publicly release results for both phases, anonymized subject background info and sample characteristics.",
+  "abstractSha256": "0ef5ed5646cfe133baa2bf5249fefdf080d4e84687272f71b5a172f5fdf09223",
+  "arxivId": "2610.20246",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.20246v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "心理声学实验",
+    "primaryTask": "音频质量评估",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-quality",
+          "label": "音频质量评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.psychoacoustic-experiment",
+          "label": "心理声学实验"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "心理声学实验",
+      "primaryMethodId": "method.psychoacoustic-experiment",
+      "primaryTask": "音频质量评估",
+      "primaryTaskId": "task.audio-quality",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Benjamin Martin"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Romain Hennequin"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "该研究用两阶段盲听加混合模型检验 Opus 音乐压缩的可感知透明阈值，发现 128 kbps 只对普通听众不显著而 160 kbps 才能在挑剔听众加难样本的压力测试下同时通过差异检验与等效性检验。",
+  "originalTitle": "Evaluating perceptual transparency of lossy music audio compression with Opus codec",
+  "pdfUrl": "https://arxiv.org/pdf/2610.20246v1.pdf",
+  "readerTitle": "Opus 音乐压缩在什么码率下听不出与无损的区别",
+  "schemaVersion": 2
+}

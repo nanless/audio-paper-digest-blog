@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.21403v1",
+  "arxivId": "2610.21403",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.21403v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Guangdong University of Technology"
+      ],
+      "name": "Guimin Hu"
+    },
+    {
+      "affiliations": [
+        "University of Copenhagen"
+      ],
+      "name": "Qiwei Peng"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.21403v1",
+  "originalTitle": "Beyond Invariance: Factor-wise Selective Treatment of Shifts for Multimodal Learning",
+  "pdfUrl": "https://arxiv.org/pdf/2610.21403v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

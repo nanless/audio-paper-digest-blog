@@ -1,0 +1,90 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.19678v1",
+  "abstract": "Large audio-language models (LALMs) struggle to parse paralinguistics (e.g., emotion, pace, pitch) in speech that combines intense emotion with complex acoustic environments. Strengthening this ability calls for training data that reflects such conditions. However, existing corpora rely heavily on studio-recorded speech, offering limited emotional and acoustic diversity. To address this gap, we introduce TVPara, a paralinguistic captioning dataset built from TV series. Speech in TV series often carries diverse emotional expression and co-occurs with scene-specific background sound, providing expressive emotion and complex acoustic environments at scale. Constructed via LALM pre-annotation and human correction, TVPara includes two tasks: Single-Utterance (~492h) and Multi-Utterance (~213h) Paralinguistic Captioning. Fine-tuning open-source LALMs on TVPara yields an average relative improvement of 31.26% in paralinguistic understanding under complex acoustic environments. The gains further generalize to an unseen TV series and to cleaner, cross-domain speech.",
+  "abstractSha256": "a3ee8a6003cacf100078b4443df4882faf9a7f8d05a532a9bd3684ddd3ada5e6",
+  "arxivId": "2610.19678",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.19678v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "数据集构建",
+    "primaryTask": "音频字幕生成",
+    "rankBucket": "前50%",
+    "score": 6.4,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-captioning",
+          "label": "音频字幕生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.dataset-curation",
+          "label": "数据集构建"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.sft",
+          "label": "SFT"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "数据集构建",
+      "primaryMethodId": "method.dataset-curation",
+      "primaryTask": "音频字幕生成",
+      "primaryTaskId": "task.audio-captioning",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ziyang Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Wenyi Yu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Wen Wu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xuenan Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Chao Zhang"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "TVPara 针对电视剧中强烈情感与场景背景声共存时大音频语言模型描述不准的问题，用预标注加人工校对构建单句与多句两类描述数据，并在两款开源模型上微调后以四维相似度打分验证了复杂声学下的提升与跨域迁移，同时暴露了适配器容量不足时的拟合偏差代价。",
+  "originalTitle": "TVPara: Paralinguistic Captioning of Expressive TV-Series Speech in Complex Acoustic Environments",
+  "pdfUrl": "https://arxiv.org/pdf/2610.19678v1.pdf",
+  "readerTitle": "电视剧语音的副语言描述：TVPara 如何同时处理强烈情感与复杂背景声",
+  "schemaVersion": 2
+}

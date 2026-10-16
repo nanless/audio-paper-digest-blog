@@ -1,0 +1,47 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.20965v1",
+  "arxivId": "2610.20965",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.20965v1",
+  "authors": [
+    {
+      "affiliations": [
+        "University of California,",
+        "Riverside"
+      ],
+      "name": "Robert Moseley"
+    },
+    {
+      "affiliations": [
+        "University of California,",
+        "Riverside"
+      ],
+      "name": "Md Kaykobad Reza"
+    },
+    {
+      "affiliations": [
+        "Amazon"
+      ],
+      "name": "Ameya Patil"
+    },
+    {
+      "affiliations": [
+        "Amazon"
+      ],
+      "name": "Edward Ayrapetian"
+    },
+    {
+      "affiliations": [
+        "University of California,",
+        "Riverside"
+      ],
+      "name": "Salman Asif"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.20965v1",
+  "originalTitle": "MSP: Modality Self-Play for Training Multimodal LLMs Without Paired Cross-Modal Data",
+  "pdfUrl": "https://arxiv.org/pdf/2610.20965v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

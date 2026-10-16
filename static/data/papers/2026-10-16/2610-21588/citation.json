@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.21588v1",
+  "arxivId": "2610.21588",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.21588v1",
+  "authors": [
+    {
+      "affiliations": [
+        "POSTECH"
+      ],
+      "name": "Kim Sung-Bin"
+    },
+    {
+      "affiliations": [
+        "KAIST"
+      ],
+      "name": "Lee Jung-Mok"
+    },
+    {
+      "affiliations": [
+        "KAIST"
+      ],
+      "name": "Jinwoo Jung"
+    },
+    {
+      "affiliations": [
+        "POSTECH"
+      ],
+      "name": "Oh Hyun-Bin"
+    },
+    {
+      "affiliations": [
+        "Hankuk University of Foreign Studies"
+      ],
+      "name": "Hyeonggon Ryu"
+    },
+    {
+      "affiliations": [
+        "The University of Texas at Austin"
+      ],
+      "name": "David Harwath"
+    },
+    {
+      "affiliations": [
+        "KAIST"
+      ],
+      "name": "Tae-Hyun Oh"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.21588v1",
+  "originalTitle": "Hear, Localize, and Reason: Spatially Aware Scene Understanding for Audio-Visual LLMs",
+  "pdfUrl": "https://arxiv.org/pdf/2610.21588v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,88 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.20965v1",
+  "abstract": "Large multimodal models have achieved remarkable progress by scaling model capacity and training on massive paired multimodal data. However, this paradigm introduces a fundamental bottleneck: aligned multimodal datasets are expensive to curate, difficult to scale across diverse modality combinations, and increasingly constrain further progress. We introduce Modality Self-Play (MSP), a training framework for multimodal foundation models based on proxy-mediated modality composition. Instead of relying on paired cross-modal data, MSP uses anchor-supporting proxy textual descriptions of unseen modalities as semantic bridges during training. Given an observed modality (e.g., image or audio), the model generates proxy descriptions for complementary unseen modalities, which are then encoded and aligned with the observed modality through learned bridges, enabling cross-modal interaction without real paired non-text supervision.   Our central hypothesis is that proxy text, combined with contrastively trained pretrained encoders, provides sufficient semantic structure for multimodal composition to emerge. We show that MSP enables zero-shot modality composition: models trained only with a real anchor modality and accompanying proxy descriptions can integrate and reason over multiple modalities at inference time despite never observing real paired non-text data during training. Empirically, MSP achieves state-of-the-art or competitive performance on multiple multimodal benchmarks. Ablation studies further demonstrate that learned bridges improve alignment, while anchor-supporting proxy descriptions enable effective cross-modal composition. MSP removes the need for real paired non-text (e.g., audio-vision) supervision, while continuing to rely on modality-text pairs, pretrained contrastive encoders, and modality-distribution bridge calibration.",
+  "abstractSha256": "3f1a7adce685e4ea33cf9f3b4d09f8909a482c53ab171271ff6d626aac254905",
+  "arxivId": "2610.20965",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.20965v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "音视频问答",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-question-answering",
+          "label": "音视频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.lora",
+          "label": "LoRA"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-captioning",
+          "label": "音频字幕生成"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "音视频问答",
+      "primaryTaskId": "task.av-question-answering",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "University of California,",
+        "Riverside"
+      ],
+      "name": "Robert Moseley"
+    },
+    {
+      "affiliations": [
+        "University of California,",
+        "Riverside"
+      ],
+      "name": "Md Kaykobad Reza"
+    },
+    {
+      "affiliations": [
+        "Amazon"
+      ],
+      "name": "Ameya Patil"
+    },
+    {
+      "affiliations": [
+        "Amazon"
+      ],
+      "name": "Edward Ayrapetian"
+    },
+    {
+      "affiliations": [
+        "University of California,",
+        "Riverside"
+      ],
+      "name": "Salman Asif"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "MSP 用单模态加为缺失模态生成的代理文本来训练，使推理时能联合使用真实音频与视觉，在 AVQA 等三项问答上取得有竞争力的准确率，但仍依赖模态文本对、对比编码器与桥校准，且代理质量决定效果上限。",
+  "originalTitle": "MSP: Modality Self-Play for Training Multimodal LLMs Without Paired Cross-Modal Data",
+  "pdfUrl": "https://arxiv.org/pdf/2610.20965v1.pdf",
+  "readerTitle": "不用音频配视频也能做音视频问答：代理文本自玩训练解读",
+  "schemaVersion": 2
+}
