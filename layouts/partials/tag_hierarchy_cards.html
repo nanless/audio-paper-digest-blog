@@ -1,4 +1,5 @@
 {{- $concepts := .concepts -}}
+{{- $primaryRoles := .primaryRoles | default dict -}}
 {{- $selectedIds := slice -}}
 {{- $visible := slice -}}
 {{- range .selected -}}
@@ -13,10 +14,10 @@
   {{- $hasSelected := false -}}
   {{- range $nodes }}{{ if in $selectedIds .id }}{{ $hasSelected = true }}{{ end }}{{ end -}}
   {{- if $hasSelected -}}
-    <section class="classification-card" aria-label="{{ $facet.name }}" data-classification-facet="{{ $facet.id }}">
+    <div class="classification-card" role="group" aria-label="{{ $facet.name }}" data-classification-facet="{{ $facet.id }}">
       <p class="classification-card__label">{{ $facet.name }}</p>
-      {{ partial "tag_hierarchy_tree.html" (dict "concepts" $nodes "visible" $visible "selected" $selectedIds "parent" "") }}
-    </section>
+      {{ partial "tag_hierarchy_tree.html" (dict "concepts" $nodes "visible" $visible "selected" $selectedIds "parent" "" "primaryRoles" $primaryRoles) }}
+    </div>
   {{- end -}}
 {{- end -}}
 </div>

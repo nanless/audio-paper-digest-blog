@@ -22,7 +22,9 @@
     <p class="paper-tags-scope"><span>{{ index $types $proof.researchType }}</span><span>{{ index $scopes $proof.domainScope }}</span></p>
   {{- end }}
   {{- if not $v2 }}
-  {{ partial "tag_hierarchy_cards.html" (dict "selected" $selected "concepts" $concepts) }}
+  {{- $primaryRoles := dict -}}
+  {{- range $primary }}{{ $primaryRoles = merge $primaryRoles (dict .id (cond (eq .facet "task") "主任务" "主方法")) }}{{ end -}}
+  {{ partial "tag_hierarchy_cards.html" (dict "selected" $selected "concepts" $concepts "primaryRoles" $primaryRoles) }}
   {{- else }}
   {{- if $primary }}<div class="paper-tags-primary">
     {{ range $primary }}<div><strong>{{ if and (eq $proof.classificationContract "historical-source-taxonomy-classification-v3") (eq $role.kind "method") (eq .id $role.conceptId) }}主要研究机制{{ else if $v2 }}{{ index (dict "task" "主要研究任务" "scientific_topic" "主要研究主题" "research_focus" "主要研究重点" "artifact" "主要研究产物" "method" "主要研究方法") .facet }}{{ else }}{{ if eq .facet "task" }}主任务{{ else }}主方法{{ end }}{{ end }}</strong>{{ partial "tag_path.html" (dict "concept" . "concepts" $concepts) }}</div>{{ end }}
@@ -37,6 +39,8 @@
   </details>{{ end }}
   {{- end }}
   <p class="tag-note">{{ if $v2 }}路径末项为直接分类，前面的名称表示现行目录中的上级方向；核验历史分类时，仍使用当时保存的词表。{{ else }}仅展示本篇研究方向及其上级；带底色的标签为直接分类，点击名称可在论文库筛选。{{ end }}</p>
+  {{- $issuedRegistry := .Params.paper_digest_tags_registry_sha256 | default .Params.paper_digest_taxonomy_registry_sha256 | default "" -}}
+  {{- if and (not $v2) (or $proof.evidenceContract (and $issuedRegistry (ne $issuedRegistry $registry.registrySha256))) }}<p class="tag-note">核验历史分类时，仍使用当时保存的词表。</p>{{ end }}
   {{- if in (slice "source-only-taxonomy" "source-only-tags" "source-only-taxonomy-v2" "controlled-current-page-source-taxonomy-v2" "source-only-taxonomy-v3" "source-bound-current-page-fullsite-taxonomy-v3" "source-bound-independent-review-qualification") $proof.evidenceType }}<p class="tag-note">只补研究分类：依据原论文与独立审核，导读正文未重写或重新审核。</p>
   {{- else if $proof.evidenceContract }}<p class="tag-note">分类依据历史论文来源与分析记录核验。</p>{{ end }}
 </section>
