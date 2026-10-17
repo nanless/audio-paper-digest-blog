@@ -29,3 +29,18 @@ test('deployment waits for both successful gates and never deploys pull requests
   assert.match(jobs.deploy, /uses: actions\/deploy-pages@v4/);
   assert.match(workflow, /concurrency:\s*\n  group: "pages"\s*\n  cancel-in-progress: false/);
 });
+
+test('only the Pages build uses its measured runner allowance and reports actual resources', () => {
+  assert.match(jobs.build, /^    env:\s*\n      GOMEMLIMIT: '6GiB'\s*\n      GOMAXPROCS: '4'\s*\n    steps:/m);
+  assert.doesNotMatch(jobs.unit + jobs.deploy, /GOMEMLIMIT|GOMAXPROCS|HUGO_NUMWORKERMULTIPLIER/);
+  assert.doesNotMatch(workflow.slice(0, workflow.indexOf('jobs:')), /^env:/m,
+    'resource changes must not leak into the independent unit gate');
+  assert.match(jobs.build, /name: Report build resources[\s\S]*uname -m[\s\S]*getconf _NPROCESSORS_ONLN[\s\S]*free -h/);
+  for (const value of ['"$GOMEMLIMIT"', '"$GOMAXPROCS"', '"${HUGO_NUMWORKERMULTIPLIER:-1}"']) {
+    assert.ok(jobs.build.includes(value), 'log the effective environment, not a hardcoded claim');
+  }
+  const builder = fs.readFileSync(path.join(__dirname, '../scripts/build-site.js'), 'utf8');
+  assert.ok(builder.includes("GOMEMLIMIT: process.env.GOMEMLIMIT || '3GiB'"));
+  assert.ok(builder.includes("GOMAXPROCS: process.env.GOMAXPROCS || '2'"));
+  assert.ok(builder.includes("HUGO_NUMWORKERMULTIPLIER: process.env.HUGO_NUMWORKERMULTIPLIER || '1'"));
+});
