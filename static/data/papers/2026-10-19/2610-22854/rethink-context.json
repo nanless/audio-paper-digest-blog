@@ -1,0 +1,90 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.22854v1",
+  "abstract": "Automated respiratory sound classification (RSC) aims to identify normal and adventitious respiratory sounds, such as crackles and wheezes. Most existing methods formulate RSC as a flat four-class classification problem over norma, crackle, wheeze and both. However, unlike conventional classification tasks with semantically independent and mutually exclusive categories, the commonly used four-class RSC labels have a compositional structure and can be represented by two clinically meaningful sound attributes: crackle presence and wheeze presence. Existing flat classifiers do not explicitly exploit this structure, which may increase the learning burden by treating the four labels as independent targets. Meanwhile, crackles and wheezes exhibit distinct temporal characteristics, with sparse transient crackle events and sustained continuous wheeze patterns, making a single temporal aggregation strategy less suitable for modeling different adventitious sound evidence. To address these limitations, we propose an Acoustic-Aware Asymmetric Framework (AAAF) for RSC. AAAF reformulates four-class recognition as two sound-attribute detection tasks and recovers the final category through logical composition during inference. Built upon a pretrained BEATs encoder, AAAF employs branch-specific multi-layer fusion and asymmetric temporal aggregation to capture localized crackle evidence and sustained wheeze patterns. Auxiliary normal--abnormal supervision and a batch-adaptive dynamic loss are further introduced to improve global discrimination and robustness under imbalanced labels. Experiments on ICBHI and SPRSound demonstrate that AAAF improves overall RSC performance and generalizes across datasets, achieving a state-of-the-art four-class Score of 65.30% on ICBHI.",
+  "abstractSha256": "ed6ff366c53e764c5b82642f2fe756e9af1f96e61c24ee3bddd23df1c583e0a4",
+  "arxivId": "2610.22854",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.22854v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多任务学习",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 5.7,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.multitask",
+          "label": "多任务学习"
+        },
+        {
+          "facet": "application",
+          "id": "application.medical",
+          "label": "医疗音频"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.biosignal",
+          "label": "生理信号"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.pretraining",
+          "label": "预训练"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "多任务学习",
+      "primaryMethodId": "method.multitask",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xinhong Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Li Xiao"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ziyang Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yuhong Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Weiping Tu"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文把正常、爆裂音、哮鸣音、两者兼有四分类改写为爆裂音存在与哮鸣音存在两个二分类任务，用不同时间聚合分别处理短促瞬态与持续谐波证据，在 ICBHI 四分类 Score 达到 65.30%，代价是需要调两个分支阈值并依赖预训练 BEATs 编码器。",
+  "originalTitle": "Clinically Informed Acoustic-Aware Attribute Modeling for Respiratory Sound Classification",
+  "pdfUrl": "https://arxiv.org/pdf/2610.22854v1.pdf",
+  "readerTitle": "把四分类拆成两个属性检测：AAAF 如何分别捕捉爆裂音与哮鸣音",
+  "schemaVersion": 2
+}

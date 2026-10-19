@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.23063v1",
+  "abstract": "Dynamic music emotion recognition usually estimates concurrent or lag-aligned labels from audio that has already been observed. We instead forecast the change in consensus arousal when the upcoming music is scheduled but all later affect labels remain hidden. Evaluation holds out complete songs, encodes each eligible 4-s chunk independently, predicts arousal innovation, and compares the correct future with displaced segments from the same song. On PMEmo and a 1,494-song DEAM evaluation pool excluded from engineering development, a complete past/future MuQ representation raises concordance correlation coefficient (CCC) by 0.389--0.507 over recent affect and remains 0.268--0.382 above a calibrated nonlinear state model. A future-only trajectory contains no past or current audio and still exceeds that state model by 0.150--0.249. The earliest legal future chunk, which ends 5.5--11 s before the target, also remains informative. Correct placement exceeds an overlapping 5-s shift by 0.100--0.209 and the acoustic-nearest eligible same-song segment by 0.078--0.105, with positive song-cluster lower bounds. These results show that both scheduled content and its within-song position carry forecast information under the stated observation rules. The study provides a leakage-controlled reference for known-future music forecasting without treating predictive substitutions as causal interventions.",
+  "abstractSha256": "2d375a4604466e77088e74371a524f96c654a5348bf98a1c79fbd52d38876029",
+  "arxivId": "2610.23063",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.23063v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "统计分析",
+    "primaryTask": "声音感知情感估计",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-affect-estimation",
+          "label": "声音感知情感估计"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.music-information",
+          "label": "音乐信息检索"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "统计分析",
+      "primaryMethodId": "method.statistical-analysis",
+      "primaryTask": "声音感知情感估计",
+      "primaryTaskId": "task.audio-affect-estimation",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Bin Wen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Dai-Qiao Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Tien-Ping Tan"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文把已排期的未来音乐当作已知协变量，在隐藏未来标签、整首留出和分块独立编码的规则下预测共识唤醒度变化，用 MuQ 轨迹和同首错位对照证明未来内容及其位置都带来增量预测信息。",
+  "originalTitle": "Known Music, Unknown Response: Leakage-Audited Dynamic Arousal Forecasting With Scheduled Future Music",
+  "pdfUrl": "https://arxiv.org/pdf/2610.23063v1.pdf",
+  "readerTitle": "已知音乐、未知反应：带泄漏审计的动态唤醒度变化预测",
+  "schemaVersion": 2
+}

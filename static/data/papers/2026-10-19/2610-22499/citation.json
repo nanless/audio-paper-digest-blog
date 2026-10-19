@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.22499v1",
+  "arxivId": "2610.22499",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.22499v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Junseok Ahn"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jaehyun Park"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jeongsoo Choi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Joon Son Chung"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ji-Hoon Kim"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.22499v1",
+  "originalTitle": "JAVIS: Joint Audio-Visual Interaction and Streaming for Real-Time Conversational Agents",
+  "pdfUrl": "https://arxiv.org/pdf/2610.22499v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

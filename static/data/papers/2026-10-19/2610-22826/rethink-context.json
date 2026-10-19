@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.22826v1",
+  "abstract": "Respiratory sound classification distinguishes four categories: Normal, Crackle, Wheeze, and Both (crackle and wheeze). Existing knowledge distillation transfers four-class predictions without explicitly exploiting shared respiratory events, potentially limiting the transfer of event-specific knowledge across individual abnormal classes and the Both class. We propose PAC-KD, a pathology-aware compositional knowledge distillation framework that learns crackle and wheeze presence through two dedicated specialists. Their complementary knowledge is transferred to a unified four-class student, enabling it to effectively capture pathology-specific attributes while preserving class-level discrimination. Furthermore, stable conflict calibration adaptively regulates specialist guidance according to its consistency with classification supervision, mitigating potential supervision conflicts. Experiments on ICBHI and SPRSound achieve Scores of 65.28\\% and 89.54\\%, respectively, outperforming strong knowledge distillation baselines on both datasets.",
+  "abstractSha256": "3051ea03e2c4cd015cfeeeea83c1d264b9cb35f9e86cdaad590975224155f46e",
+  "arxivId": "2610.22826",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.22826v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "知识蒸馏",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 6.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        },
+        {
+          "facet": "application",
+          "id": "application.medical",
+          "label": "医疗音频"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "知识蒸馏",
+      "primaryMethodId": "method.distillation",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Li Xiao"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Weiping Tu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Youqiang Zheng"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Dan Chen"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对 Both 类同时含有爆裂音和哮鸣音造成的四分类困难 PAC-KD 用两个二分类病理专家分别学习两种事件存在性再蒸馏给四分类学生并按梯度一致性调节权重 在 ICBHI 和 SPRSound 上平均 Score 最高但特异度有所下降",
+  "originalTitle": "PAC-KD: Pathology-Aware Compositional Knowledge Distillation for Respiratory Sound Classification",
+  "pdfUrl": "https://arxiv.org/pdf/2610.22826v1.pdf",
+  "readerTitle": "把共现呼吸音拆开学习 PAC-KD 组合蒸馏解读",
+  "schemaVersion": 2
+}

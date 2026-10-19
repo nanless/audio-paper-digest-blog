@@ -1,0 +1,90 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.22936v1",
+  "abstract": "Existing acoustic simulation tools either generate room impulse responses (RIRs) efficiently in parameterized rooms or rely on preconstructed three-dimensional scenes, making it difficult to build large numbers of editable residential multi-room environments. We present AcousticAgent, a floorplan-centric acoustic simulation platform that converts structured floorplans into editable, acoustically connected multi-room scenes. AcousticAgent jointly models room geometry and connectivity, furniture, materials, sound sources, and microphone configurations. A scene-oriented Acoustic Materials Database maps semantic elements to acoustic parameters, while a floorplan-aware hybrid geometrical-acoustics solver generates multichannel RIRs and reverberant audio. The platform also supports directional and moving sources, distributed microphones, and VLM-assisted scene construction from floorplan images and text. Using AcousticAgent, we construct FP-RIR, a dataset covering 15,376 residential floorplans with diverse room topologies, propagation conditions, and source--receiver configurations. We validate its acoustic fidelity against real-world measurements and evaluate whole-home source localization, speech enhancement, and far-field speech processing under single-device and distributed microphone settings. The results demonstrate the effectiveness of floorplan-aware modeling for large-scale residential acoustic simulation and the benefits of distributed spatial processing in multi-room environments. AcousticAgent and FP-RIR provide scalable and configurable resources for developing and evaluating residential speech systems.",
+  "abstractSha256": "ece94ec4f0e731f51f6d194ae54996de17b4abe604ba4be7a11be55483cb7c9a",
+  "arxivId": "2610.22936",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.22936v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "信号处理",
+    "primaryTask": "语音增强",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-enhancement",
+          "label": "语音增强"
+        },
+        {
+          "facet": "task",
+          "id": "task.localization",
+          "label": "声源定位"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "语音增强",
+      "primaryTaskId": "task.speech-enhancement",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhiqi Ai"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Han Cheng"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shiyi Mu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yongjin Zhou"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shugong Xu"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文要解决住宅多房间语音数据难批量构造的问题，用结构化平面图转可编辑声学场景加混合几何声学求解生成多通道房间脉冲响应与混响语音，并用实测校验与分布式定位增强实验验证其覆盖与增益，代价是仍依赖几何声学近似与受控仿真条件。",
+  "originalTitle": "AcousticAgent: A Floorplan-Centric Simulation Platform for Distributed Multi-Room Speech Processing",
+  "pdfUrl": "https://arxiv.org/pdf/2610.22936v1.pdf",
+  "readerTitle": "用平面图批量造出多房间语音房：AcousticAgent 解读",
+  "schemaVersion": 2
+}

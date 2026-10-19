@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.23117v1",
+  "abstract": "Dysarthric audio-visual speech recognition (DAVSR) enhances performance by integrating complementary visual cues. However, existing research is largely confined to word-level tasks with limited vocabularies, which severely restricts real-world communication for dysarthric speakers. Furthermore, performance remains heavily dependent on supervised fine-tuning with speaker-specific data; significant variations in age, etiology, and severity cause traditional methods to struggle with unseen speakers. To address these domain shifts and the scarcity of continuous multimodal resources, we first introduce a \"source speech search-segmentation\" pipeline to construct a structured sentence-level corpus from raw CDSD videos. We then propose the use of unsupervised Test-Time Adaptation (TTA) for sentence-level DAVSR using Sequential-level Generalized Entropy Minimization (SGEM). Our evaluations across the state-of-the-art AV-SUPERB and ViSpeR frameworks demonstrate that TTA consistently alleviates Character Error Rate (CER) degradation for unseen pathological speakers. Paired t-tests verify that these improvements are statistically significant (p < 0.05), highlighting TTA as a promising paradigm for advancing speaker-adaptive assistive speech interfaces.",
+  "abstractSha256": "a5711cc592af4eefb92ae3bf3f8c84085d32a10f014dc5ae8de19bb03e17a5cd",
+  "arxivId": "2610.23117",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.23117v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "测试时自适应",
+    "primaryTask": "音视频语音识别",
+    "rankBucket": "前50%",
+    "score": 5.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-asr",
+          "label": "音视频语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.test-time-adaptation",
+          "label": "测试时自适应"
+        },
+        {
+          "facet": "task",
+          "id": "task.pathological-speech",
+          "label": "病理语音评估"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "测试时自适应",
+      "primaryMethodId": "method.test-time-adaptation",
+      "primaryTask": "音视频语音识别",
+      "primaryTaskId": "task.av-asr",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shiyao Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hui Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jiaming Zhou"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shiwan Zhao"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yong Qin"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文把构音障碍音视频识别从单词级推到句子级，用搜索切分从原始视频造出对齐语料，再用无标注的测试时适应逐句调模型，在未见说话人上多数条件下降低字错率，但绝对误差仍高且依赖预训练基础。",
+  "originalTitle": "Advancing Sentence-Level Dysarthric Audio-Visual Speech Recognition via Test-Time Adaptation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.23117v1.pdf",
+  "readerTitle": "从找句子到测时适应：构音障碍音视频句子识别怎么做",
+  "schemaVersion": 2
+}

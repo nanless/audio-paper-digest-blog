@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.22960v1",
+  "abstract": "Text-to-speech models built on score matching and flow matching produce natural speech, but only by calling the decoder many times, which makes synthesis slow. Existing ways to cut the number of calls either distill from a multi-step teacher or add a stage on top of a pretrained model, leaving single-step TTS without a pretrained TTS model unexplored. We question whether pretraining a TTS model is necessary, and propose DriftTTS, which adopts generative drifting, an objective that moves iterative sampling from inference into training. Drifting assumes samples of fixed shape, whereas speech has variable length; we address this issue with segment drifting. On LJSpeech, DriftTTS matches the multi-step quality of Matcha-TTS and RapFlow-TTS in a single decoder call, while being faster. To our knowledge, this is the first application of generative drifting to text-to-speech.",
+  "abstractSha256": "8020d235139c596b0251910af4536cd0aee16ac356f1afc8ba9e4061a79ebcd3",
+  "arxivId": "2610.22960",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.22960v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "生成模型",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.generative",
+          "label": "生成模型"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "生成模型",
+      "primaryMethodId": "method.generative",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jaehyun Ahn"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Dohyun Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Heeseung Kim"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "DriftTTS 针对多步声学模型推理慢的问题，把迭代采样搬到训练中用漂移目标学习从文本先验到梅尔谱的直接映射，在 LJSpeech 上一次解码达到接近多步基线的自然度和可懂度，但结论只在单说话人、相同声码器和评测条件下成立。",
+  "originalTitle": "DriftTTS: One-stage Single Step Text-to-Speech via Generative Drifting",
+  "pdfUrl": "https://arxiv.org/pdf/2610.22960v1.pdf",
+  "readerTitle": "DriftTTS：不用预训练、一次解码就合成语音的单阶段方法",
+  "schemaVersion": 2
+}

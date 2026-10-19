@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.22989v1",
+  "abstract": "Evaluating musical perception in multimodal language models requires separating audio evidence from answers recoverable through metadata or external tools. We present the Music Understanding Benchmark (MUB), a locally assembled collection of 500 identity-masked recordings with existing annotations for tempo, key, time signature, and structural intervals. The collection covers all 24 major/minor key combinations, tempos of 47--180 beats per minute, and 4,676 annotated intervals. Original titles, artists, and platform identifiers are excluded from evaluation inputs. Relative to recent music question-answering and temporal-grounding work, MUB emphasizes scalar tempo prediction and full-recording interval outputs, together with a documented metadata-masking protocol. Saved baseline predictions yield 53.6\\% tempo accuracy for a simple DSP estimator and 98.4\\% time-signature accuracy for a constant 4/4 predictor. We identify important limitations, including an asymmetric legacy key metric, unverified independent annotation agreement, extreme metre imbalance, and unresolved recording-level rights clearance. No contemporary multimodal language model comparison has yet been completed. MUB is therefore an evaluation resource and protocol under validation, rather than a completed demonstration of model capabilities.",
+  "abstractSha256": "39f95b7f298697bdf984dc7d3d143a479617c2b3f3974a8a325f67847b149591",
+  "arxivId": "2610.22989",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.22989v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "音乐分析",
+    "rankBucket": "后50%",
+    "score": 4.9,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-understanding",
+          "label": "音乐分析"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "音乐分析",
+      "primaryTaskId": "task.music-understanding",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kun Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Lyra Tao"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "MUB 把 500 首遮去标题身份的录音配上速度、调式、拍号和全曲结构区间来考查多模态模型是否真从音频听出音乐内容，现有证据只有波形启发式与分布常数两类参考基线且验证尚未完成。",
+  "originalTitle": "MUB: An Identity-Masked Benchmark for Music Understanding in Multimodal Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2610.22989v1.pdf",
+  "readerTitle": "去掉名字还能听懂音乐吗：身份遮蔽的音乐理解评测 MUB",
+  "schemaVersion": 2
+}

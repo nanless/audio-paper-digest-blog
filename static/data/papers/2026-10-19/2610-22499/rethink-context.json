@@ -1,0 +1,90 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.22499v1",
+  "abstract": "Human communication is inherently multimodal, conveying intent not only through linguistic and vocal cues but also through visual signals. However, existing conversational systems have mainly focused on text or speech, leaving out the visual feedback that is essential for natural interaction. In this paper, we propose JAVIS, an end-to-end streaming framework for real-time audio-visual conversational agents. Our key idea is to let the voice and the face speak from a single representation. On top of a shared LLM, a Joint Refined Head produces a unified audio-visual representation, which is fed into dedicated streaming branches for speech and face generation. This end-to-end design avoids intermediate bottlenecks, enabling real-time generation while keeping speech and face tightly synchronized. In addition, we present JAVIS-Syn, a 334-hour synthetic corpus designed to address the lack of expressive audio-visual dialogue data, covering emotionally rich multi-turn conversations and assistant-style exchanges. Experiments show that JAVIS achieves approximately 200$\\times$ lower initial latency than a strong baseline, while outperforming baselines in lip synchronization and facial expression appropriateness.",
+  "abstractSha256": "d71108bb4770bb5e529422fa87f10a9c6c9ed73ebb9eadee943c5ae1e4e44a76",
+  "arxivId": "2610.22499",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.22499v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "端到端学习",
+    "primaryTask": "音视频生成",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-generation",
+          "label": "音视频生成"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-dialogue",
+          "label": "语音对话系统"
+        },
+        {
+          "facet": "method",
+          "id": "method.end-to-end-learning",
+          "label": "端到端学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "端到端学习",
+      "primaryMethodId": "method.end-to-end-learning",
+      "primaryTask": "音视频生成",
+      "primaryTaskId": "task.av-generation",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Junseok Ahn"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jaehyun Park"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jeongsoo Choi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Joon Son Chung"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ji-Hoon Kim"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "JAVIS 针对对话系统缺视觉通道与级联延迟问题，用共享大语言模型加联合精炼头产生统一音视表示并分两支流式生成语音和面部动作，在 VStyle 未见样本上取得更好的唇同步与表情恰当性，并把初始延迟降到 1.27 秒，但结论依赖合成训练数据与特定评测条件。",
+  "originalTitle": "JAVIS: Joint Audio-Visual Interaction and Streaming for Real-Time Conversational Agents",
+  "pdfUrl": "https://arxiv.org/pdf/2610.22499v1.pdf",
+  "readerTitle": "JAVIS：用一个统一表示同时流式生成语音和脸",
+  "schemaVersion": 2
+}

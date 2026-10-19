@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.23678v1",
+  "arxivId": "2610.23678",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.23678v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Séverin Baroudi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yanis Labrak"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Petr Motlicek"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hervé Bredin"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ricard Marxer"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.23678v1",
+  "originalTitle": "Beyond the Benchmark: Conditioning, Domains and Failure Modes of Qwen3-TTS",
+  "pdfUrl": "https://arxiv.org/pdf/2610.23678v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

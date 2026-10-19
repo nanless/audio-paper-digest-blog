@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.23117v1",
+  "arxivId": "2610.23117",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.23117v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shiyao Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hui Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jiaming Zhou"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shiwan Zhao"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yong Qin"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.23117v1",
+  "originalTitle": "Advancing Sentence-Level Dysarthric Audio-Visual Speech Recognition via Test-Time Adaptation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.23117v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

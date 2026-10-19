@@ -1,0 +1,20 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.23409v1",
+  "arxivId": "2610.23409",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.23409v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Tarteel AI"
+      ],
+      "name": "Mahmoud Ashraf"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.23409v1",
+  "originalTitle": "Flash RNN-T: Memory-Efficient Joint Network and Transducer Loss Computation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.23409v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

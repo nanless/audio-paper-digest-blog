@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.23063v1",
+  "arxivId": "2610.23063",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.23063v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Bin Wen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Dai-Qiao Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Tien-Ping Tan"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.23063v1",
+  "originalTitle": "Known Music, Unknown Response: Leakage-Audited Dynamic Arousal Forecasting With Scheduled Future Music",
+  "pdfUrl": "https://arxiv.org/pdf/2610.23063v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

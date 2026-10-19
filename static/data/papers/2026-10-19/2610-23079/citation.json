@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.23079v1",
+  "arxivId": "2610.23079",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.23079v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xintong Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Junchuan Zhao"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ye Wang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.23079v1",
+  "originalTitle": "X-MDD: LLM-Based Mispronunciation Detection and Diagnosis for Unseen Languages with Canonical References",
+  "pdfUrl": "https://arxiv.org/pdf/2610.23079v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

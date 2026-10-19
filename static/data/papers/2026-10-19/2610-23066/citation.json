@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.23066v1",
+  "arxivId": "2610.23066",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.23066v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yutong Wen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ke Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Prem Seetharaman"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Haonan Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Oriol Nieto"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Paris Smaragdis"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Justin Salamon"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zeyu Jin"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.23066v1",
+  "originalTitle": "PromptSep-Speaker: Generative Target Speaker Extraction via Multimodal Prompting and Semantic Alignment",
+  "pdfUrl": "https://arxiv.org/pdf/2610.23066v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

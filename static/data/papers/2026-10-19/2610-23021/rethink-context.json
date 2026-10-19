@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.23021v1",
+  "abstract": "In real-world videos, sound events are often associated with localized and fine-grained visual cues, such as object motion, object-part dynamics, contact events, and interactions between objects. Existing video-to-audio (V2A) methods employ implicit conditioning based on global visual representations or explicit control derived from temporal and spatial cues. However, subtle sound-producing and sound-indicative interactions remain insufficiently captured, leaving room for more precise visual conditioning of sound-event semantics and temporal dynamics. Motivated by this observation, we refer to regions containing such sound-relevant visual evidence as Semantic-Critical Regions (SCRs) and introduce SCR-V2A, a V2A generation framework that explicitly localizes and encodes SCRs as fine-grained visual guidance for audio generation. Specifically, we first identify SCRs through sound-related visual localization. We then transform the localized regions into a control representation through adapter-based dual visual encoding, which jointly captures global visual context and fine-grained sound-relevant evidence. The representation is used to condition a downstream audio generation model. Experiments on both in-domain and out-of-domain benchmarks demonstrate that SCR-V2A achieves strong performance in distribution matching and audio quality while remaining competitive in cross-modal alignment and requiring few trainable parameters. These results highlight the value of prioritizing fine-grained, sound-relevant visual regions for V2A generation.",
+  "abstractSha256": "033d4770c042434e4eb6faab6a21b49a398f7f2e6cc434c5712919662bfe08a5",
+  "arxivId": "2610.23021",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.23021v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "Adapter",
+    "primaryTask": "视频到声音生成",
+    "rankBucket": "前50%",
+    "score": 6.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.video-to-audio",
+          "label": "视频到声音生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.adapter",
+          "label": "Adapter"
+        },
+        {
+          "facet": "method",
+          "id": "method.diffusion",
+          "label": "扩散模型"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "Adapter",
+      "primaryMethodId": "method.adapter",
+      "primaryTask": "视频到声音生成",
+      "primaryTaskId": "task.video-to-audio",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "The University of Sydney, Sydney, Australia"
+      ],
+      "name": "Yun Fang"
+    },
+    {
+      "affiliations": [
+        "The University of Sydney, Sydney, Australia"
+      ],
+      "name": "Wei Guo"
+    },
+    {
+      "affiliations": [
+        "The University of Sydney, Sydney, Australia"
+      ],
+      "name": "Zhuonan Liang"
+    },
+    {
+      "affiliations": [
+        "The University of Sydney, Sydney, Australia"
+      ],
+      "name": "Heng Wang"
+    },
+    {
+      "affiliations": [
+        "The University of Sydney, Sydney, Australia"
+      ],
+      "name": "Weidong Cai"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对视频中发声线索细小且分散的问题，SCR-V2A 先定位与声音事件判别相关的图像区域再做双路视觉条件去控制音频扩散模型，在 VGGSound 上分布匹配最好、在 CountixAV 上保持泛化，但跨模态对齐并非全面最优且依赖定位质量。",
+  "originalTitle": "Semantic-Critical Regions for Video-to-Audio Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.23021v1.pdf",
+  "readerTitle": "盯住发声细节再配音：SCR-V2A 如何用语义关键区域做视频到音频生成",
+  "schemaVersion": 2
+}

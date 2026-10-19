@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.22826v1",
+  "arxivId": "2610.22826",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.22826v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Li Xiao"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Weiping Tu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Youqiang Zheng"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Dan Chen"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.22826v1",
+  "originalTitle": "PAC-KD: Pathology-Aware Compositional Knowledge Distillation for Respiratory Sound Classification",
+  "pdfUrl": "https://arxiv.org/pdf/2610.22826v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

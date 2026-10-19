@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.22535v1",
+  "abstract": "Drum beats are often conceptualized and produced as arrangements of repeated single-drum sound events or one-shots. Drum Analysis-by-Synthesis (AbS) models combine this structural assumption with reconstruction-based training to perform MIR tasks such as drum transcription, drum source separation, and one-shot extraction, offering a flexible alternative to more traditional task-specific supervision. However, leading AbS approaches struggle to generalize to a broad range of drum timbres (e.g., electronic drum kits), rely on high-quality paired audio-transcription training data, and do not model intra-class timbral variation within a single arrangement (e.g., multiple kick sounds). To overcome these limitations, we propose D-Composer, an autoregressive language modeling framework that decomposes drum recordings into labeled sound events and their onset times. In drum transcription and one-shot extraction tasks, D-Composer performs comparably to or better than a state-of-the-art AbS system and task-specific baselines while generalizing to a broader range of drum timbres. Our results demonstrate that when equipped with abundant synthetic data and compact acoustic token representations, language modeling provides a simple recipe for unifying transcription and sound event decomposition.",
+  "abstractSha256": "7a2fc8f7320f5a06c3f142f33e4626a6127a029d7b7ae8e0ed45175a96da81be",
+  "arxivId": "2610.22535",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.22535v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "自回归模型",
+    "primaryTask": "音乐转录",
+    "rankBucket": "前25%",
+    "score": 8.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.transcription",
+          "label": "音乐转录"
+        },
+        {
+          "facet": "task",
+          "id": "task.music-separation",
+          "label": "音乐源分离"
+        },
+        {
+          "facet": "method",
+          "id": "method.autoregressive",
+          "label": "自回归模型"
+        },
+        {
+          "facet": "method",
+          "id": "method.neural-codec",
+          "label": "神经编解码与离散单元"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "自回归模型",
+      "primaryMethodId": "method.autoregressive",
+      "primaryTask": "音乐转录",
+      "primaryTaskId": "task.transcription",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Patrick O'Reilly"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Saumya Pailwan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Annie Chu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jason Smith"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Bryan Pardo"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "D-Composer 针对鼓录音难以拆成可编辑单鼓事件的问题，用合成数据训练编码器解码器语言模型逐事件输出类别、起音时刻和 32 个鼓单音编解码器声学 token，实验在合成与真实鼓数据上比较转录与单音抽取并以更高压缩换取可接受的重建损失。",
+  "originalTitle": "D-Composer: Language Modeling for Simultaneous Drum Transcription and Sound Event Decomposition",
+  "pdfUrl": "https://arxiv.org/pdf/2610.22535v1.pdf",
+  "readerTitle": "D-Composer：把鼓录音拼写成带声音的事件序列",
+  "schemaVersion": 2
+}

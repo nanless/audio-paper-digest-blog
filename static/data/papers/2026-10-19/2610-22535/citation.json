@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.22535v1",
+  "arxivId": "2610.22535",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.22535v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Patrick O'Reilly"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Saumya Pailwan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Annie Chu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jason Smith"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Bryan Pardo"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.22535v1",
+  "originalTitle": "D-Composer: Language Modeling for Simultaneous Drum Transcription and Sound Event Decomposition",
+  "pdfUrl": "https://arxiv.org/pdf/2610.22535v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

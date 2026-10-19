@@ -1,0 +1,90 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.22910v1",
+  "abstract": "Speech bandwidth extension (BWE) aims to recover missing spectral content from band-limited speech. However, most generative BWE methods are designed for fixed input bandwidths and rely on iterative sampling, limiting their flexibility and efficiency. We propose BDR-BWE, a three-stage generative framework for multi-bandwidth speech extension. First, to enable conditional generation from the observed band-limited spectrum, we design a cutoff-aware conditional flow bridge in the compressed complex STFT domain, focusing generation on the missing high-frequency band while preserving observed spectral information. Second, progressive consistency distillation compresses the multi-step flow transport into a one-step generator. Third, adversarial refinement further improves high-frequency detail and harmonic coherence. BDR-BWE achieves state-of-the-art log-spectral distance (LSD) on VCTK across all evaluated bandwidths with one-step inference, while maintaining competitive perceptual quality and generalizing well to EARS. Audio samples are available at https://aizhiqi-work.github.io/bdr-bwe-demo.",
+  "abstractSha256": "1ed6dbb52cfc117e688c17194e48434a5ab32d477ca5661d010ccd85d7b4a677",
+  "arxivId": "2610.22910",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.22910v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "流匹配",
+    "primaryTask": "带宽扩展",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.bandwidth-extension",
+          "label": "带宽扩展"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        },
+        {
+          "facet": "method",
+          "id": "method.gan",
+          "label": "生成对抗网络"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "流匹配",
+      "primaryMethodId": "method.flow-matching",
+      "primaryTask": "带宽扩展",
+      "primaryTaskId": "task.bandwidth-extension",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhiqi Ai"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xu Shen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Mou Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yongjin Zhou"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shugong Xu"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对输入截止频率多变且多步采样太慢的问题，论文用截止感知的流桥学习多步轨迹，再蒸馏为一步生成器并做对抗细化，在 VCTK 多带宽上取得最低对数谱距离且只需 1.80M 参数和一次网络评估。",
+  "originalTitle": "Bridge, Distill, Refine: High-Fidelity One-Step Generation for Multi-Bandwidth Speech Extension",
+  "pdfUrl": "https://arxiv.org/pdf/2610.22910v1.pdf",
+  "readerTitle": "一次前向就能补高频：多带宽语音扩展的三段式做法",
+  "schemaVersion": 2
+}

@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.22440v1",
+  "abstract": "Generative models now synthesise video that is hard to distinguish from genuine footage, and learned detectors that key on a generator's artefacts degrade sharply on unseen models. This paper develops a forensic framework that authenticates video by a signal that generation does not control: the electric network frequency (ENF), the mains-driven hum in audio and flicker in video. A unified two-channel detector extracts the ENF from audio and from rolling-shutter video through one second harmonic estimator and a shared network; a synthetic-injection training method, driven by an Ornstein-Uhlenbeck drift model and anchored to real recordings, overcomes the scarcity of labelled ENF data; a reference-matching channel verifies a claimed time of recording and recovers an unknown one; and a two-axis agentic orchestrator fuses recording authenticity with content-manipulation evidence under an asymmetric rule, escalating expensive detectors only when needed. A central finding reframes the task: an ENF-band flicker is present in generated video at a prominence indistinguishable from real footage, so its presence is not proof of authenticity, and authentication must rest on consistency with an independent reference rather than on presence. On held-out real recordings the detector accepts genuine audio and video at 93% and 100% against naive baselines of 53% and 15%; claimed-time authentication reaches an area under the curve of 1.0; and the agentic cascade matches a flat ensemble while cutting wall-clock time by 54% and frames decoded by 64%, without loss of accuracy.",
+  "abstractSha256": "e447c4f3b02f02f58ca592b7beaea5e8f06891c7b24431bc5dc0d83995b9b895",
+  "arxivId": "2610.22440",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.22440v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "视频伪造检测与溯源",
+    "rankBucket": "前50%",
+    "score": 6.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.video-forgery-detection-attribution",
+          "label": "视频伪造检测与溯源"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "method",
+          "id": "method.model-ensemble",
+          "label": "模型集成"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "视频伪造检测与溯源",
+      "primaryTaskId": "task.video-forgery-detection-attribution",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Ryan Wyton"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Bacha Rehman"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对生成视频难以靠生成痕迹区分的问题，该工作用音频与卷帘快门视频中的电网频率漂移一致性来认证拍摄真实性，并在参考匹配与双轴编排下验证了其条件与代价。",
+  "originalTitle": "An Agentic ENF Framework for Forensic Video Authentication Against Generative AI",
+  "pdfUrl": "https://arxiv.org/pdf/2610.22440v1.pdf",
+  "readerTitle": "电网频率如何为视频真伪提供独立证据",
+  "schemaVersion": 2
+}

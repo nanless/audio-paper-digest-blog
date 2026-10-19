@@ -1,0 +1,103 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.23066v1",
+  "abstract": "Target speaker extraction (TSE) isolates a desired speaker from a multi-speaker mixture using cues that identify the target. Prior work has explored acoustic and textual cues, such as enrollment audio and different types of speaker descriptors, but typically relies on a single cue family. Yet no single cue is both broadly available and reliably discriminative. Moreover, most TSE systems adopt mask-prediction models, which are prone to audible artifacts and generalize poorly across acoustic conditions. To address these limitations, we propose PromptSep-Speaker, a generative TSE model based on latent diffusion that unifies four interchangeable cues: speaker temporal order, transcript, enrollment audio, and speaker caption. The generative formulation delivers higher separation quality and multi-modal prompting improves applicability across scenarios. To fully exploit each cue, we further introduce a frozen WavLM representation with an auxiliary alignment loss that supervises query-mixture cross-attention without extra labeling. Across four evaluation sets and a listening study, PromptSep-Speaker achieves state-of-the-art performance over TSE and universal source separation baselines, improving separation accuracy and quality across cue modalities.",
+  "abstractSha256": "9d2af9ee7f48c29c1e6fc3a1fe034101827143cb236267bc68c32ee80b92b2c4",
+  "arxivId": "2610.23066",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.23066v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "扩散模型",
+    "primaryTask": "目标说话人提取",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.target-speaker",
+          "label": "目标说话人提取"
+        },
+        {
+          "facet": "method",
+          "id": "method.diffusion",
+          "label": "扩散模型"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.subjective-evaluation",
+          "label": "主观评测"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "扩散模型",
+      "primaryMethodId": "method.diffusion",
+      "primaryTask": "目标说话人提取",
+      "primaryTaskId": "task.target-speaker",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yutong Wen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ke Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Prem Seetharaman"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Haonan Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Oriol Nieto"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Paris Smaragdis"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Justin Salamon"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zeyu Jin"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对多人混合语音中只提取目标说话人的问题，PromptSep-Speaker 用潜在扩散一次生成目标语音并支持四种可互换提示，在多组异域评测上提高分离准确率与听感，而去掉对齐损失后目标选择可靠性大幅下降。",
+  "originalTitle": "PromptSep-Speaker: Generative Target Speaker Extraction via Multimodal Prompting and Semantic Alignment",
+  "pdfUrl": "https://arxiv.org/pdf/2610.23066v1.pdf",
+  "readerTitle": "用一句话能说清的提示做目标说话人提取",
+  "schemaVersion": 2
+}

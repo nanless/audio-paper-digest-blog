@@ -1,0 +1,29 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.23745v1",
+  "arxivId": "2610.23745",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.23745v1",
+  "authors": [
+    {
+      "affiliations": [
+        "The University of Tokyo",
+        "Riken"
+      ],
+      "name": "Koki Ryu"
+    },
+    {
+      "affiliations": [
+        "The University of Tokyo",
+        "Riken",
+        "Tohoku University"
+      ],
+      "name": "Hitomi Yanaka"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.23745v1",
+  "originalTitle": "VocalGrad: Evaluating Acoustic Perception in Audio Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2610.23745v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

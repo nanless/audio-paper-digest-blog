@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.23079v1",
+  "abstract": "Mispronunciation detection and diagnosis (MDD) provides phone-level feedback to language learners, but extending it to new languages typically requires collecting and annotating learner speech for each target language. This repeated annotation effort is costly and limits the language coverage of pronunciation feedback. We study whether MDD capabilities learned from annotated learner speech can be applied to languages unseen during MDD training when canonical pronunciation references are available. Our multilingual LLM-based model, X-MDD, uses canonical speech and phones as references to predict the phone sequence actually produced by a learner. It incorporates in-context demonstrations for inference-time adaptation and is further optimized with group relative policy optimization (GRPO) using detection F1 and phone error rate. We further analyze how canonical inputs affect prediction and find that (1) canonical speech and phones jointly contribute to actual-phone prediction, and (2) conflicting speech evidence reduces the tendency to copy canonical phones. Trained only on Mandarin and English, X-MDD achieves a detection F1 of 38.07 on Arabic Qur'anic recitation, compared with 44.14 for a supervised challenge baseline trained on Arabic. It also achieves F1 scores of 78.68 and 58.78 on Mandarin and English, respectively, demonstrating effective multilingual MDD within a single model.",
+  "abstractSha256": "703e1aa62dfa57d33b7e49fe7273a5bd16aa7b20b086a2ecf863160c93841328",
+  "arxivId": "2610.23079",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.23079v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "SFT",
+    "primaryTask": "发音评估",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.pronunciation-assessment",
+          "label": "发音评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.sft",
+          "label": "SFT"
+        },
+        {
+          "facet": "method",
+          "id": "method.reinforcement",
+          "label": "强化学习"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.cross-lingual",
+          "label": "跨语言"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "SFT",
+      "primaryMethodId": "method.sft",
+      "primaryTask": "发音评估",
+      "primaryTaskId": "task.pronunciation-assessment",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xintong Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Junchuan Zhao"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ye Wang"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "X-MDD 把学习者语音、合成的标准语音和标准音素序列一起送入大模型来预测真实发音，只在中文和英文上训练，再靠标准参考和示例迁移到阿拉伯语，代价是召回和诊断精度仍明显低于有监督基线。",
+  "originalTitle": "X-MDD: LLM-Based Mispronunciation Detection and Diagnosis for Unseen Languages with Canonical References",
+  "pdfUrl": "https://arxiv.org/pdf/2610.23079v1.pdf",
+  "readerTitle": "只用中英训练，能给没见过的阿拉伯语挑发音错误吗",
+  "schemaVersion": 2
+}

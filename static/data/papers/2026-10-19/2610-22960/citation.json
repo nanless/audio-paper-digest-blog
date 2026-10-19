@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.22960v1",
+  "arxivId": "2610.22960",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.22960v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jaehyun Ahn"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Dohyun Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Heeseung Kim"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.22960v1",
+  "originalTitle": "DriftTTS: One-stage Single Step Text-to-Speech via Generative Drifting",
+  "pdfUrl": "https://arxiv.org/pdf/2610.22960v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

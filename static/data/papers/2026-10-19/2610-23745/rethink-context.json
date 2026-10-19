@@ -1,0 +1,75 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.23745v1",
+  "abstract": "Recent large audio language models (LALMs) have extended their capabilities beyond lexical speech understanding to tasks requiring paralinguistic and non-linguistic audio understanding, such as emotion recognition. However, these models still struggle to reliably utilize acoustic information, particularly when it co-occurs with spoken linguistic content. Existing benchmarks do not clearly distinguish acoustic perception from higher-level reasoning, making it difficult to identify the source of these failures. To address this issue, we introduce VocalGrad, a benchmark designed to evaluate LALMs' ability to perceive low-level acoustic variations. VocalGrad formulates this problem as a simple binary classification of temporal change direction, enabling evaluation largely independent of higher-level reasoning or semantic understanding. Our benchmark results reveal a substantial gap in acoustic perception between human annotators and state-of-the-art LALMs: while human annotators achieve high accuracy, LALMs perform at near-chance levels. We further conduct linear probing to identify structural bottlenecks in these models. Our analysis reveals two distinct failure modes: for some categories, task-relevant information is preserved in internal representations but not utilized by the language model head; for others, the information becomes progressively less linearly decodable across model layers. Overall, our results reveal substantial limitations of LALMs in modeling acoustic variation under controlled settings and expose representation differences not observable from text outputs.",
+  "abstractSha256": "2a73f2821653219d7229b8decb2d64f82570b446af2062281b843a745d16e7a8",
+  "arxivId": "2610.23745",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.23745v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "语音属性识别",
+    "rankBucket": "前25%",
+    "score": 8.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-attributes",
+          "label": "语音属性识别"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-understanding",
+          "label": "音频理解"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "method",
+          "id": "method.representation-probing",
+          "label": "表示探测"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "语音属性识别",
+      "primaryTaskId": "task.speech-attributes",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "The University of Tokyo",
+        "Riken"
+      ],
+      "name": "Koki Ryu"
+    },
+    {
+      "affiliations": [
+        "The University of Tokyo",
+        "Riken",
+        "Tohoku University"
+      ],
+      "name": "Hitomi Yanaka"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文把声学感知压缩为单一声学因素随时间增强还是减弱的二分类，用 21600 条受控语音和人类 94.4% 对比模型约 50% 的结果证明瓶颈在感知与读出，并用线性探测区分了两种失效模式。",
+  "originalTitle": "VocalGrad: Evaluating Acoustic Perception in Audio Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2610.23745v1.pdf",
+  "readerTitle": "VocalGrad：用增减二分类隔离检验音频大模型的声学感知",
+  "schemaVersion": 2
+}

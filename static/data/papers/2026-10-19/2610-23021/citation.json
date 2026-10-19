@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.23021v1",
+  "arxivId": "2610.23021",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.23021v1",
+  "authors": [
+    {
+      "affiliations": [
+        "The University of Sydney, Sydney, Australia"
+      ],
+      "name": "Yun Fang"
+    },
+    {
+      "affiliations": [
+        "The University of Sydney, Sydney, Australia"
+      ],
+      "name": "Wei Guo"
+    },
+    {
+      "affiliations": [
+        "The University of Sydney, Sydney, Australia"
+      ],
+      "name": "Zhuonan Liang"
+    },
+    {
+      "affiliations": [
+        "The University of Sydney, Sydney, Australia"
+      ],
+      "name": "Heng Wang"
+    },
+    {
+      "affiliations": [
+        "The University of Sydney, Sydney, Australia"
+      ],
+      "name": "Weidong Cai"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.23021v1",
+  "originalTitle": "Semantic-Critical Regions for Video-to-Audio Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.23021v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

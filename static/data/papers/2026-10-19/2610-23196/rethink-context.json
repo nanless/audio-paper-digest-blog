@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.23196v1",
+  "abstract": "Spatial hearing relies on dynamic internal representations to decode spatial information from ever-changing acoustic conditions. A fundamental example is sound localisation, where listeners infer the direction of an invisible sound. Bayesian inference provides a computational account of such a localisation process; however, modelling efforts are largely limited to static listening scenarios. Instead, the free energy principle (FEP) describes perception, learning, and action as joint minimisation of variational free energy (VFE), providing a principled framework to account for dynamic conditions. Here, we take a first step toward applying the FEP to spatial hearing. We characterise how listeners' beliefs evolve across trials, in which they estimated sound direction and received subsequent visual feedback on each trial. Listeners are described by a hierarchical generative model where visual feedback drives gradient descent on VFE, updating beliefs over three independent quantities: lateral and polar localisation precisions and hemifield disambiguation. The model captures individual learning trajectories and reveals components with different dynamics: lateral precision improves, as does hemifield disambiguation, consistent with increased sensitivity of the auditory pathway in decoding vertical direction. Notably, polar precision also increases, most for listeners with the lowest initial precision, suggesting that the observed vertical improvement is driven by both hemifield disambiguation and polar precision. This work establishes spatial hearing as a tractable domain for FEP and motivates future closed-loop experiments with full action-perception cycles.",
+  "abstractSha256": "931469c8188cc3b23957ac85cdef235b25cf5dcc83622a40ad52d0cb363abef6",
+  "arxivId": "2610.23196",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.23196v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "统计分析",
+    "primaryTask": "声源定位",
+    "rankBucket": "后50%",
+    "score": 5.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.localization",
+          "label": "声源定位"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.spatial-audio",
+          "label": "空间音频"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.auditory-cognition",
+          "label": "听觉与音乐认知"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "统计分析",
+      "primaryMethodId": "method.statistical-analysis",
+      "primaryTask": "声源定位",
+      "primaryTaskId": "task.localization",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Dyson School of Design Engineering, Imperial College London, UK"
+      ],
+      "name": "Roberto Barumerli"
+    },
+    {
+      "affiliations": [
+        "Dyson School of Design Engineering, Imperial College London, UK",
+        "Dept. of Information and Communications Engineering, Aalto University, Finland"
+      ],
+      "name": "Nils Meyer-Kahlen"
+    },
+    {
+      "affiliations": [
+        "Dyson School of Design Engineering, Imperial College London, UK"
+      ],
+      "name": "Lorenzo Picinali"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文把有视觉反馈的声音指向任务建模为对变分自由能的在线自然梯度下降，用侧向精度、极角精度和半脑场权重三个信念分量解释个体学习曲线，并用留出似然和极角加权稳健性检验限定结论成立条件。",
+  "originalTitle": "Framing Spatial Hearing within the Free Energy Principle: A Hierarchical Model of Perceptual Learning",
+  "pdfUrl": "https://arxiv.org/pdf/2610.23196v1.pdf",
+  "readerTitle": "用自由能原理解释声音方向学习：分层次信念如何逐试次更新",
+  "schemaVersion": 2
+}

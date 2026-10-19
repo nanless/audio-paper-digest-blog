@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.22962v1",
+  "abstract": "Spectral losses for differentiable digital signal processing (DDSP) commonly compress magnitudes, for example by using log-magnitude terms. Such compression mimics human perception, but whether it helps the optimization is less clear, and is usually found only by comparing trained models. In this work, we show that whether compression helps depends on the system's informative region: the region of its dynamic range that carries the information pointing toward the target. To indicate where this region lies without having to train, we introduce concordance, which measures how well a loss orders candidate parameter settings by their distance from the target. We then compare uncompressed, compressed, and combined losses by fitting a modal plate reverb and a subtractive synthesizer model to target sounds. A third system, selected for its low-energy informative region, tests the relationship in the opposite direction. In every system, the loss that matches the informative region performs best: the uncompressed one where the region lies at high energies, and the compressed one where it lies low. Surprisingly, the common combination of both log-magnitude and linear-magnitude terms performs best in none of the systems. Code and audio examples are available at https://github.com/superstem000/compression-analysis",
+  "abstractSha256": "63bbd9b39222b9ddaca206196f536be2dc3bb9199d493b29f2faa09f01ed64a7",
+  "arxivId": "2610.22962",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.22962v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "声学系统参数估计",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.acoustic-parameter-estimation",
+          "label": "声学系统参数估计"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "method",
+          "id": "method.subjective-evaluation",
+          "label": "主观评测"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "声学系统参数估计",
+      "primaryTaskId": "task.acoustic-parameter-estimation",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Byunghoo Park"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jayeon Yi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Minje Kim"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文研究频谱损失中的幅度压缩是否帮助可微信号模型拟合目标声音，提出一致性度量预判信息区位置，并在三个系统中验证匹配信息区的损失最优而混合损失均非最优。",
+  "originalTitle": "Rethinking Magnitude Compression in Spectral Losses for DDSP Parameter Estimation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.22962v1.pdf",
+  "readerTitle": "压缩频谱损失何时有助于 DDSP 参数估计",
+  "schemaVersion": 2
+}

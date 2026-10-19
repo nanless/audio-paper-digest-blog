@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.22583v1",
+  "abstract": "We show that forced aligners degrade on spontaneous, noisy real-world speech, and that fillers, laughter, and disfluencies corrupt word boundaries, impacting many downstream applications. We revisit the classical GMM-HMM aligner with upsampled WavLM features instead of MFCCs, explicit phone units for fillers and non-lexical vocal events trained on verbatim-annotated spontaneous speech, and a discriminative projection fitted on clean and noise-corrupted feature pairs to improve robustness. The pipeline is self-bootstrapped from 149h of curated audio without manual or external boundary targets. On conversational (Buckeye) and disfluent (FluencyBank) speech it reaches word-boundary MAEs of 20.6 and 76.9ms, 19% and 17% lower than the strongest of ten baselines. Catastrophic misalignments (>200ms) are 2.7 times rarer than Montreal Forced Aligners (MFA) best model even after widening MFA's search beam, which we show removes a large pruning artifact from its conversational error; event units halve the error next to laughter, while being meaningfully more robust than existing aligners.",
+  "abstractSha256": "d7c30dfaf55b7f62ea0920ea044da68bd35f24833de148f6671f1a16033ef78d",
+  "arxivId": "2610.22583",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.22583v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "强制对齐",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.forced-alignment",
+          "label": "强制对齐"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "强制对齐",
+      "primaryTaskId": "task.forced-alignment",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Laurin Wagner"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Mario Zusag"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对自发含噪语音中填充词和笑声污染词边界的问题，论文保留经典 GMM-HMM 结构并换用 WavLM 特征加噪声配对投影与专用事件单元，在 149 小时自举训练下把 Buckeye 和 FluencyBank 词边界误差降到 20.6 与 76.9 毫秒，代价是朗读语音仍略逊于最强 MFA 配置且重度口吃语音绝对误差依然较高。",
+  "originalTitle": "Noise-Robust Forced Alignment for Spontaneous Speech",
+  "pdfUrl": "https://arxiv.org/pdf/2610.22583v1.pdf",
+  "readerTitle": "自发语音为什么难对齐：噪声与笑声下如何保住词边界",
+  "schemaVersion": 2
+}
