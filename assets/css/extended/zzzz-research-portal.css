@@ -87,7 +87,7 @@ input, select, textarea { min-width: 0; }
 .edition-focus--illustrated .edition-focus__actions { margin-top: 16px; }
 .edition-feature { border-top: 1px solid var(--portal-cover-line); padding-top: 18px; margin-top: 22px; }
 .edition-feature__heading .rw-eyebrow { color: var(--portal-cover-muted); font-size: 11px; }
-.edition-feature__heading h3 { font: 550 23px/1.5 var(--portal-serif); color: var(--portal-cover-text); margin: 7px 0 3px; }
+.edition-feature__heading h3 { font: 550 23px/1.5 var(--portal-serif); color: var(--portal-cover-text); margin: 7px 0 3px; text-wrap: balance; }
 .edition-feature__heading h3 a, .edition-feature__figure figcaption a { color: var(--portal-cover-text); }
 .edition-feature__heading h3 a:hover { text-decoration: underline; text-underline-offset: 4px; }
 .edition-feature__heading p { font-size: 14px; line-height: 1.8; color: var(--portal-cover-muted); margin: 0 0 14px; }
