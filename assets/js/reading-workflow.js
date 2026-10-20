@@ -50,8 +50,14 @@
     } catch (_) { return false; }
   }
   function currentHeading(headings, threshold) {
-    var current = headings[0] || null;
-    headings.forEach(function (heading) { if (heading.getBoundingClientRect().top <= threshold) current = heading; });
+    // Headings are collected in normal article flow. Probe their live positions
+    // so images/math changing height do not stale a cached offset array.
+    var low = 0, high = headings.length - 1, current = headings[0] || null;
+    while (low <= high) {
+      var middle = Math.floor((low + high) / 2);
+      if (headings[middle].getBoundingClientRect().top <= threshold) { current = headings[middle]; low = middle + 1; }
+      else high = middle - 1;
+    }
     return current;
   }
   function headingLabel(heading) {
@@ -67,6 +73,16 @@
     if (!article || !workbench) return;
     var headings = Array.from(article.querySelectorAll('h2[id], h3[id]'));
     if (!headings.length) return;
+    function inClosedDisclosure(heading) {
+      var child = heading, parent = heading.parentElement;
+      while (parent && parent !== article) {
+        // A summary remains visible even when its owning details is closed.
+        if (parent.tagName === 'DETAILS' && !parent.open && child.tagName !== 'SUMMARY') return true;
+        child = parent; parent = parent.parentElement;
+      }
+      return false;
+    }
+    var flowHeadings = headings.filter(function (heading) { return !inClosedDisclosure(heading); });
     var trigger = document.getElementById('reading-chapters-trigger');
     var panel = document.getElementById('reading-chapters-panel');
     var close = document.getElementById('reading-chapters-close');
@@ -75,15 +91,40 @@
     var search = document.getElementById('reading-chapters-search');
     var clear = document.getElementById('reading-chapters-clear');
     var empty = document.getElementById('reading-chapters-empty');
-    var searchable = headings.length > 20 && searchGroup && search && clear && empty;
+    var searchable = !!(headings.length > 20 && searchGroup && search && clear && empty);
     var mobileLinks = [];
     var desktopLinks = Array.from(document.querySelectorAll('.workbench-toc a[href^="#"]'));
-    function jumpTo(heading) {
-      window.history.replaceState(null, '', window.location.pathname + window.location.search + '#' + encodeURIComponent(heading.id));
+    function refreshFlowHeadings() {
+      flowHeadings = headings.filter(function (heading) { return !inClosedDisclosure(heading); });
+      update();
+    }
+    function jumpTo(heading, pushHistory) {
+      var parent = heading.parentElement;
+      while (parent && parent !== article) {
+        if (parent.tagName === 'DETAILS') parent.open = true;
+        parent = parent.parentElement;
+      }
+      refreshFlowHeadings();
+      var next = window.location.pathname + window.location.search + '#' + encodeURIComponent(heading.id);
+      window.history[pushHistory ? 'pushState' : 'replaceState'](window.history.state, '', next);
       heading.setAttribute('tabindex', '-1');
       heading.scrollIntoView({ block: 'start', behavior: 'auto' });
       heading.focus({ preventScroll: true });
     }
+    var headingsById = new Map(headings.map(function (heading) { return [heading.id, heading]; }));
+    desktopLinks.forEach(function (link) {
+      link.addEventListener('click', function (event) {
+        // Keep native fragments and modified/new-tab clicks untouched unless
+        // this particular target requires revealing a closed disclosure.
+        if (event.defaultPrevented || event.button > 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+        var id;
+        try { id = decodeURIComponent(link.hash.slice(1)); } catch (_) { id = link.hash.slice(1); }
+        var heading = headingsById.get(id);
+        if (!heading || !inClosedDisclosure(heading)) return;
+        event.preventDefault();
+        jumpTo(heading, true);
+      });
+    });
     function closePanel(returnFocus) {
       if (!panel) return;
       panel.hidden = true;
@@ -92,6 +133,7 @@
       if (returnFocus) trigger.focus();
     }
     if (trigger && panel && close && linksContainer) {
+      linksContainer.setAttribute('aria-label', '文章章节');
       headings.forEach(function (heading) {
         var link = document.createElement('a');
         link.hidden = false;
@@ -99,12 +141,18 @@
         link.textContent = headingLabel(heading);
         link.dataset.headingId = heading.id;
         if (heading.tagName === 'H3') link.className = 'reading-chapters-subsection';
-        link.addEventListener('click', function (event) { event.preventDefault(); closePanel(false); jumpTo(heading); });
+        link.addEventListener('click', function (event) {
+          if (event.defaultPrevented || event.button > 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+          var target = link.getAttribute('target');
+          if ((target && target.toLowerCase() !== '_self') || link.hasAttribute('download')) return;
+          event.preventDefault(); closePanel(false); jumpTo(heading);
+        });
         mobileLinks.push(link);
         linksContainer.appendChild(link);
       });
       if (searchable) {
         searchGroup.hidden = false;
+        trigger.classList.add('reading-chapters-trigger--searchable');
         function filterChapters() {
           var query = search.value.trim().toLocaleLowerCase();
           var visible = 0;
@@ -124,7 +172,8 @@
         panel.hidden = false;
         trigger.setAttribute('aria-expanded', 'true');
         document.body.classList.add('reading-chapters-open');
-        close.focus();
+        if (searchable) search.focus();
+        else close.focus();
       });
       close.addEventListener('click', function () { closePanel(true); });
       panel.addEventListener('click', function (event) { if (event.target === panel) closePanel(true); });
@@ -140,23 +189,46 @@
         }
       });
       var media = window.matchMedia('(max-width: 860px)');
-      if (media.addEventListener) media.addEventListener('change', function (event) { if (!event.matches) closePanel(false); });
+      if (media.addEventListener) media.addEventListener('change', function (event) {
+        if (!event.matches && !searchable) {
+          var wasOpen = !panel.hidden;
+          closePanel(false);
+          if (wasOpen) {
+            var target = currentHeading(flowHeadings, document.documentElement.clientHeight * .25) || article;
+            target.setAttribute('tabindex', '-1'); target.focus({ preventScroll: true });
+          }
+        }
+      });
     }
-    var frame = false;
-    function update() {
-      frame = false;
-      var current = currentHeading(headings, document.documentElement.clientHeight * .25);
-      if (trigger) trigger.textContent = '章节 · ' + headingLabel(current).slice(0, 24);
-      desktopLinks.concat(mobileLinks).forEach(function (link) {
-        var id;
-        try { id = decodeURIComponent(link.hash.slice(1)); } catch (_) { id = link.hash.slice(1); }
-        var selected = id === current.id;
+    var linksById = new Map();
+    desktopLinks.concat(mobileLinks).forEach(function (link) {
+      var id;
+      try { id = decodeURIComponent(link.hash.slice(1)); } catch (_) { id = link.hash.slice(1); }
+      if (!linksById.has(id)) linksById.set(id, []);
+      linksById.get(id).push(link);
+    });
+    var frame = false, activeId = null;
+    function markLinks(id, selected) {
+      (linksById.get(id) || []).forEach(function (link) {
         link.classList.toggle('active', selected);
         if (selected) link.setAttribute('aria-current', 'location');
         else link.removeAttribute('aria-current');
       });
     }
+    function update() {
+      frame = false;
+      var current = currentHeading(flowHeadings, document.documentElement.clientHeight * .25);
+      if (!current) { if (activeId !== null) markLinks(activeId, false); activeId = null; return; }
+      if (current.id === activeId) return;
+      if (trigger) trigger.textContent = (searchable ? '查找章节 · ' : '章节 · ') + headingLabel(current).slice(0, 24);
+      if (activeId !== null) markLinks(activeId, false);
+      markLinks(current.id, true);
+      activeId = current.id;
+    }
     window.addEventListener('scroll', function () { if (!frame) { frame = true; window.requestAnimationFrame(update); } }, { passive: true });
+    // toggle does not bubble; capture observes nested native disclosures. The
+    // complete chapter directory is retained while only visible flow is probed.
+    article.addEventListener('toggle', function (event) { if (event.target && event.target.tagName === 'DETAILS') refreshFlowHeadings(); }, true);
     update();
   }
   return { mount: mount, storageKey: storageKey, normalizeStore: normalizeStore, readStore: readStore,

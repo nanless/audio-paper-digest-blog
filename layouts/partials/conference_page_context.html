@@ -1,0 +1,30 @@
+{{- /* Membership comes only from an explicit edition ID or an exact catalog
+     page link. Never infer a conference from a filename or a shared tag. */ -}}
+{{- $page := . -}}
+{{- $metadata := partial "research_metadata.html" $page -}}
+{{- $declared := $page.Params.paper_digest_conference_id | default "" -}}
+{{- $matches := slice -}}
+{{- $catalog := index hugo.Data "conference-directory" | default dict -}}
+{{- if or $declared (eq $metadata.pageType "conference") -}}
+{{- range $catalog.entries | default slice -}}
+  {{- $entry := . -}}{{- $matched := false -}}
+  {{- if $declared -}}
+    {{- $matched = eq $declared $entry.id -}}
+  {{- else if eq $metadata.pageType "conference" -}}
+    {{- $paths := slice -}}{{- with $entry.summaryPath }}{{ $paths = $paths | append . }}{{ end -}}
+    {{- range $entry.links | default slice }}{{ with .path }}{{ $paths = $paths | append . }}{{ end }}{{ end -}}
+    {{- range $paths -}}{{- with site.GetPage . -}}{{- if eq .RelPermalink $page.RelPermalink }}{{ $matched = true }}{{ end -}}{{- end -}}{{- end -}}
+  {{- end -}}
+  {{- if $matched }}{{ $matches = $matches | append $entry }}{{ end -}}
+{{- end -}}
+{{- end -}}
+{{- $result := dict -}}
+{{- if eq (len $matches) 1 -}}
+  {{- $entry := index $matches 0 -}}
+  {{- with $entry.summaryPath -}}{{- with site.GetPage . -}}
+    {{- if eq (partial "research_metadata.html" .).pageType "conference" -}}
+    {{- $result = dict "entry" $entry "summary" . -}}
+    {{- end -}}
+  {{- end -}}{{- end -}}
+{{- end -}}
+{{- return $result -}}

@@ -1,0 +1,10 @@
+{{- with . -}}
+<div class="edition-feature" aria-labelledby="edition-feature-title">
+  <div class="edition-feature__heading"><span class="rw-eyebrow">本期选读 / EDITOR'S PICK</span><h3 id="edition-feature-title"><a href="{{ .paperUrl }}">{{ .title }}</a></h3><p>{{ .description }}</p></div>
+  <figure class="edition-feature__figure">
+    <a class="edition-feature__image-link" href="{{ .paperUrl }}" aria-label="阅读完整解读：{{ .title }}"><img src="{{ .imageUrl }}" alt="{{ .alt }}" width="{{ .width }}" height="{{ .height }}" loading="eager" decoding="async"></a>
+    <figcaption>{{ .caption }} · <a href="{{ .sourceUrl }}">论文来源</a></figcaption>
+  </figure>
+  <div class="edition-feature__actions"><a class="edition-feature__read" href="{{ .paperUrl }}">读这篇完整解读 <span aria-hidden="true">↗</span></a><a class="edition-feature__original" href="{{ .imageUrl }}">查看完整原图</a></div>
+</div>
+{{- end -}}

@@ -1,0 +1,39 @@
+{{- /* A selected cover is presentation only; it cannot establish paper/source eligibility. */ -}}
+{{- $feature := dict -}}
+{{- $daily := . -}}
+{{- $manifest := index hugo.Data "edition-features" | default dict -}}
+{{- $date := $daily.Date.Format "2006-01-02" -}}
+{{- $record := index ($manifest.editions | default dict) $date | default dict -}}
+{{- $valid := and (eq ($manifest.contract | default "") "edition-feature-v1") (eq ($record.date | default "") $date) (eq ($daily.Params.paper_digest_page_type | default "") "index") -}}
+{{- $paperPath := $record.paperPath | default "" -}}
+{{- $imagePath := $record.imagePath | default "" -}}
+{{- $valid = and $valid (eq (len (findRE `^/posts/[a-z0-9][a-z0-9-]*/$` $paperPath 1)) 1) (eq (len (findRE `^/images/papers/[0-9]{4}\.[0-9]{4,5}/figure-[a-zA-Z0-9-]+\.png$` $imagePath 1)) 1) -}}
+{{- if $valid -}}
+  {{- with site.GetPage $paperPath -}}
+    {{- $paper := . -}}
+    {{- $valid = and (eq ($paper.Params.paper_digest_page_type | default "") "paper") (eq ($paper.Params.paper_digest_arxiv_id | default "") $record.arxivId) (eq ($paper.Params.paper_digest_arxiv_abs_url | default "") $record.sourceUrl) (eq $record.sourceUrl (printf "https://arxiv.org/abs/%s" ($paper.Params.paper_digest_arxiv_versioned_id | default ""))) -}}
+    {{- $inList := false }}{{ $sections := 0 }}{{ $members := 0 -}}
+    {{- range split $daily.RawContent "\n" -}}
+      {{- if findRE `^##[ \t]+` . 1 -}}
+        {{- $inList = strings.Contains . "论文列表" -}}
+        {{- if $inList }}{{ $sections = add $sections 1 }}{{ end -}}
+      {{- else if and $inList (findRE `^###[ \t]+` . 1) -}}
+        {{- $links := findRE `\]\(/[^)]+\)` . -}}
+        {{- if eq (len $links) 1 -}}
+          {{- $target := strings.TrimPrefix "](" (strings.TrimSuffix ")" (index $links 0)) -}}
+          {{- if eq (strings.TrimSuffix "/" $target) (strings.TrimSuffix "/" $paper.RelPermalink) }}{{ $members = add $members 1 }}{{ end -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+    {{- $imageUrl := strings.TrimPrefix "/" $imagePath | relURL -}}
+    {{- $imageFile := printf "static%s" $imagePath -}}
+    {{- $valid = and $valid (eq $sections 1) (eq $members 1) (fileExists $imageFile) (strings.Contains $paper.RawContent (printf "](%s)" $imageUrl)) (strings.Contains $paper.RawContent (printf "原论文 %s" ($record.figure | default ""))) (gt (int ($record.width | default 0)) 0) (gt (int ($record.height | default 0)) 0) (ne ($record.title | default "") "") (ne ($record.alt | default "") "") -}}
+    {{- if $valid -}}
+      {{- /* readFile returns raw bytes as a Go string; SHA256 hashes those bytes without a JSON/UTF-8 conversion. */ -}}
+      {{- if eq (crypto.SHA256 (readFile $imageFile)) ($record.imageSha256 | default "") -}}
+        {{- $feature = merge $record (dict "paperUrl" $paper.RelPermalink "imageUrl" $imageUrl) -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return $feature -}}

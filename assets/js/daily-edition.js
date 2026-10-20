@@ -27,10 +27,38 @@
     });
     return links.length === 1 ? links[0] : null;
   }
+  function arxivSource(href) {
+    var match = String(href || '').match(/^https:\/\/(?:www\.)?arxiv\.org\/(?:abs|pdf)\/(\d{4}\.\d{4,5})(?:v[1-9]\d*)?(?:\.pdf)?\/?(?:[?#].*)?$/i);
+    return match ? { id: match[1], href: String(href) } : null;
+  }
+  function headingOrdinal(heading) {
+    var title = clean(heading.textContent), medals = ['🥇', '🥈', '🥉'];
+    for (var i = 0; i < medals.length; i++) if (title.startsWith(medals[i])) return i + 1;
+    var match = title.match(/^(\d+)\.\s/); return match ? Number(match[1]) : null;
+  }
+  function targetLink(heading, base) {
+    var links = Array.from(heading.querySelectorAll('a[href]')).filter(function (link) { return !link.classList.contains('anchor'); });
+    if (links.length !== 1) return null;
+    var link = links[0], href = link.getAttribute('href');
+    if (articlePath(href, base)) return { link: link, kind: 'article', href: href };
+    var source = arxivSource(href);
+    return source ? { link: link, kind: 'source', href: source.href, sourceId: source.id } : null;
+  }
+  function headerSource(nodes) {
+    // A paper's own metadata precedes scientific subheadings. References in its
+    // analysis cannot supply a missing or ambiguous primary identity.
+    var end = nodes.findIndex(function (node) { return /^H[123]$/.test(node.tagName); });
+    var headers = nodes.slice(0, end < 0 ? nodes.length : end).filter(function (node) { return node.tagName === 'P'; }).slice(0, 3);
+    var sources = new Map();
+    headers.forEach(function (node) { Array.from(node.querySelectorAll('a[href]')).forEach(function (link) {
+      var source = arxivSource(link.getAttribute('href')); if (source) sources.set(source.id, source);
+    }); });
+    return sources.size === 1 && scoreFromNodes(headers) !== null ? Array.from(sources.values())[0] : null;
+  }
   function scoreFromNodes(nodes) {
     for (var i = 0; i < nodes.length; i++) {
       if (nodes[i].tagName !== 'P') continue;
-      var label = clean(nodes[i].textContent), match = label.match(/^评分[：:]\s*(\d+(?:\.\d+)?)\s*\/\s*10\b/) || label.match(/^[🔥⭐✅📝\s]*(\d+(?:\.\d+)?)\s*分(?:\s|\||$)/u);
+      var label = clean(nodes[i].textContent), match = label.match(/^[🔥⭐✅📝\s]*(?:评分[：:]\s*)?(\d+(?:\.\d+)?)\s*\/\s*10\b/u) || label.match(/^[🔥⭐✅📝\s]*(\d+(?:\.\d+)?)\s*分(?:\s|\||$)/u);
       if (match) { var value = Number(match[1]); return value >= 0 && value <= 10 ? value : null; }
     }
     return null;
@@ -48,34 +76,57 @@
       });
     });
     if (!labels.length) {
-      var legacy = nodes.find(function (node) { return node.tagName === 'P' && /^[🔥⭐✅📝\s]*\d+(?:\.\d+)?\s*分/u.test(clean(node.textContent)); });
+      var legacy = nodes.find(function (node) { return node.tagName === 'P' && /^[🔥⭐✅📝\s]*(?:评分[：:]\s*)?\d+(?:\.\d+)?\s*(?:分|\/\s*10)/u.test(clean(node.textContent)); });
       if (legacy) Array.from(clean(legacy.textContent).matchAll(/#([^\s#|]+)/g)).forEach(function (match) { if (!labels.includes(match[1])) labels.push(match[1]); });
+      if (!labels.length) {
+        var first = nodes.find(function (node) { return node.tagName === 'P'; });
+        if (first && /^#[^\s#]+(?:\s+#[^\s#]+)*$/.test(clean(first.textContent))) Array.from(clean(first.textContent).matchAll(/#([^\s#]+)/g)).forEach(function (match) { if (!labels.includes(match[1])) labels.push(match[1]); });
+      }
     }
     return labels;
   }
-  // Only linked H3 members inside the explicit paper-list H2 belong to an edition.
-  // Intro/ranking H3s and headings embedded in old long-form content are excluded.
+  // Prefer the bounded current format. Legacy fallbacks require the complete
+  // numbered cohort or the old H2 paper-card structure, plus source metadata.
   function extractEntries(article, base) {
     if (!article) return [];
     var nodes = Array.from(article.children), listIndex = nodes.findIndex(function (node) { return node.tagName === 'H2' && /^(?:📋\s*)?论文列表\s*#?$/.test(clean(node.textContent)); });
-    if (listIndex < 0) return [];
+    var firstCard = listIndex < 0 ? nodes.findIndex(function (node) { return node.tagName === 'H2' && /^📄\s+\S/.test(clean(node.textContent)); }) : -1;
+    var start = listIndex >= 0 ? listIndex : firstCard;
+    if (start < 0) return [];
     var nextSection = nodes.findIndex(function (node, index) { return index > listIndex && /^H[12]$/.test(node.tagName); });
     var end = nextSection < 0 ? nodes.length : nextSection;
-    var countMatch = nodes.slice(0, listIndex).map(function (node) { return clean(node.textContent); }).join(' ').match(/共分析\s*(\d+)\s*篇论文/);
+    var countMatch = nodes.slice(0, start).map(function (node) { return clean(node.textContent); }).join(' ').match(/共分析\s*(\d+)\s*篇(?:语音\s*\/\s*AI\s*)?论文/);
     if (!countMatch || Number(countMatch[1]) < 1) return [];
-    var members = [];
-    for (var i = listIndex + 1; i < end; i++) {
+    var members = [], strictSources = false;
+    for (var i = listIndex + 1; listIndex >= 0 && i < end; i++) {
       if (nodes[i].tagName !== 'H3') continue;
       var link = paperLink(nodes[i], base);
-      if (link) members.push({ heading: nodes[i], link: link, index: i });
+      if (link) members.push({ heading: nodes[i], link: link, index: i, href: link.getAttribute('href'), kind: 'article' });
+    }
+    if (listIndex < 0) {
+      strictSources = true; end = nodes.length;
+      for (var c = firstCard; c < end; c++) if (nodes[c].tagName === 'H2' && /^📄\s+\S/.test(clean(nodes[c].textContent))) members.push({ heading: nodes[c], index: c, kind: 'source' });
+    } else if (members.length !== Number(countMatch[1])) {
+      members = []; strictSources = true; end = nodes.length;
+      for (var h = listIndex + 1; h < end; h++) {
+        if (nodes[h].tagName !== 'H3' || headingOrdinal(nodes[h]) === null) continue;
+        var target = targetLink(nodes[h], base);
+        if (!target || headingOrdinal(nodes[h]) !== members.length + 1) return [];
+        members.push({ heading: nodes[h], link: target.link, index: h, href: target.href, kind: target.kind, sourceId: target.sourceId });
+      }
     }
     if (members.length !== Number(countMatch[1])) return [];
-    var ids = new Set(), paths = new Set(), entries = [];
+    var ids = new Set(), paths = new Set(), sourceIdentities = new Set(), entries = [];
     for (var n = 0; n < members.length; n++) {
-      var member = members[n], id = member.heading.id, path = articlePath(member.link.getAttribute('href'), base), title = clean(member.link.textContent);
+      var member = members[n], block = nodes.slice(member.index + 1, n + 1 < members.length ? members[n + 1].index : end);
+      var source = strictSources ? headerSource(block) : null;
+      if (strictSources && (!source || member.sourceId && source.id !== member.sourceId)) return [];
+      if (source && sourceIdentities.has(source.id)) return [];
+      if (source) sourceIdentities.add(source.id);
+      if (!member.link) { member.href = source.href; member.sourceId = source.id; }
+      var id = member.heading.id, path = member.kind === 'source' ? 'arxiv:' + source.id : articlePath(member.href, base), title = member.link ? clean(member.link.textContent) : clean(member.heading.textContent).replace(/^📄\s+/, '').replace(/\s*#$/, '');
       if (!id || ids.has(id) || !path || paths.has(path) || !title) return [];
       ids.add(id); paths.add(path);
-      var block = nodes.slice(member.index + 1, n + 1 < members.length ? members[n + 1].index : end);
       var tasks = tasksFromNodes(block, base);
       // Metadata, rather than copied article bodies, forms the small in-page search index.
       var metadata = block.filter(function (node) { return node.tagName === 'BLOCKQUOTE' && /英文题目[：:]/.test(node.textContent); }).slice(0, 1).map(function (node) { return clean(node.textContent); }).join(' ');
@@ -86,8 +137,8 @@
           if (match && !sourceIds.includes(match[1])) sourceIds.push(match[1]);
         });
       });
-      entries.push({ id: id, title: title, href: member.link.getAttribute('href'), score: scoreFromNodes(block), tasks: tasks, order: n,
-        search: searchable([title, metadata, tasks.join(' '), sourceIds.join(' ')].join(' ')) });
+      entries.push({ id: id, title: title, href: member.href, kind: member.kind, score: scoreFromNodes(block), tasks: tasks, order: n,
+        search: searchable([title, metadata, tasks.join(' '), member.sourceId || '', sourceIds.join(' ')].join(' ')) });
     }
     return entries;
   }
@@ -147,7 +198,9 @@
         if (entry.tasks.length) { var directions = document.createElement('span'); directions.textContent = entry.tasks.join(' · '); meta.appendChild(directions); }
         paper.appendChild(meta);
         var actions = document.createElement('div'); actions.className = 'daily-edition__actions';
-        link(actions, '本期正文', '#' + encodeURIComponent(entry.id)); link(actions, '独立全文 ↗', entry.href);
+        link(actions, '本期正文', '#' + encodeURIComponent(entry.id));
+        var target = link(actions, entry.kind === 'source' ? '论文原文 ↗' : '独立全文 ↗', entry.href);
+        if (entry.kind === 'source') { target.setAttribute('target', '_blank'); target.setAttribute('rel', 'noopener noreferrer'); }
         paper.appendChild(actions); item.appendChild(paper); list.appendChild(item);
       });
       status.textContent = '目录匹配 ' + matches.length + ' / ' + entries.length + ' 篇' + (visible.length < matches.length ? ' · 已显示 ' + visible.length + ' 篇' : '');

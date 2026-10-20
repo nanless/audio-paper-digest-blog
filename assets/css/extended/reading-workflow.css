@@ -1,11 +1,15 @@
 .research-tldr--header { margin: 20px 0 0; }
+/* The native disclosure's closed state must also remove the long inner list
+   from layout, including engines animating ::details-content. */
+.research-workbench .workbench-toc details:not([open]) > .inner { display: none; }
 .research-related__card .research-related__reason { color: var(--rw-brand); font-weight: 650; }
 .reading-resume { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; background: var(--rw-accent-soft); border: 1px solid var(--rw-border); border-radius: 10px; padding: 14px; margin-top: 16px; }
 .reading-resume p { flex: 1 1 100%; margin: 0; color: var(--rw-text); font-size: .86rem; }
 .reading-chapters-trigger { display: none; }
+.reading-chapters-trigger--searchable { display: block; position: fixed; right: 24px; bottom: calc(6.5rem + 12px); z-index: 40; max-width: 280px; min-height: 44px; padding: 10px 16px; border: 1px solid var(--rw-border); border-radius: 999px; background: var(--rw-surface); color: var(--rw-brand); font-size: 14px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .reading-chapters-panel { background: rgba(0,0,0,.5); color: var(--rw-text); position: fixed; z-index: 120; inset: 0; padding: 10vh 16px 16px; }
-.reading-chapters-panel__content { background: var(--rw-surface); border: 1px solid var(--rw-border); border-radius: 16px; max-height: 75dvh; overflow: auto; padding: 16px; }
-.reading-chapters-panel__header { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 12px; }
+.reading-chapters-panel__content { background: var(--rw-surface); border: 1px solid var(--rw-border); border-radius: 16px; max-width: 720px; max-height: 75dvh; overflow: auto; padding: 16px; margin-inline: auto; }
+.reading-chapters-panel__header { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 12px; position: sticky; top: -16px; z-index: 1; background: var(--rw-surface); padding-block: 4px; }
 #reading-chapters-search-group { margin-bottom: 12px; }
 #reading-chapters-search-group label { display: block; margin-bottom: 6px; font-size: .9rem; }
 #reading-chapters-search { display: block; width: 100%; min-height: 44px; box-sizing: border-box; border: 1px solid var(--rw-border); border-radius: 8px; padding: 8px 10px; background: var(--rw-surface); color: var(--rw-text); font: inherit; }
@@ -17,6 +21,6 @@
 .reading-chapters-panel nav .reading-chapters-subsection { padding-left: 22px; font-size: .82rem; }
 body.reading-chapters-open { overflow: hidden; }
 @media (max-width: 860px) {
-  .reading-chapters-trigger { display: block; position: fixed; right: 16px; bottom: calc(72px + env(safe-area-inset-bottom)); z-index: 40; max-width: min(280px, calc(100vw - 32px)); min-height: 44px; padding: 10px 16px; border: 1px solid var(--rw-border); border-radius: 999px; background: var(--rw-surface); box-shadow: var(--rw-shadow); color: var(--rw-brand); font-size: .82rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .reading-chapters-trigger { display: block; position: fixed; right: 16px; bottom: calc(6.5rem + 12px + env(safe-area-inset-bottom)); z-index: 40; max-width: min(280px, calc(100vw - 32px)); min-height: 44px; padding: 10px 16px; border: 1px solid var(--rw-border); border-radius: 999px; background: var(--rw-surface); box-shadow: var(--rw-shadow); color: var(--rw-brand); font-size: .82rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 }
 @media print { .reading-resume, .reading-chapters-trigger, .reading-chapters-panel { display: none !important; } }

@@ -14,16 +14,18 @@
     {{- with findRE `共分析[ \t]*[0-9]+[ \t]*篇` (.Description | default "") 1 }}
       {{- $count = replaceRE `[^0-9]` "" (index . 0) }}
     {{- end }}
-    <section class="edition-focus" aria-labelledby="latest-edition-title">
+    {{- $feature := partial "edition_feature_data.html" . }}
+    <section class="edition-focus{{ if $feature }} edition-focus--illustrated{{ end }}" aria-labelledby="latest-edition-title">
       <div class="edition-focus__topline"><span class="rw-eyebrow">最新一期 / DAILY DIGEST</span><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006.01.02" }}</time></div>
       <div class="edition-focus__date" aria-hidden="true"><span class="edition-focus__year">{{ .Date.Format "2006" }}</span><span class="edition-focus__day">{{ .Date.Format "01.02" }}</span></div>
       <h2 id="latest-edition-title">每日论文速递</h2>
       <p class="research-home-hero__lead">{{ if $count }}<strong class="edition-focus__count">{{ $count }}</strong> 篇论文 · 本期全量目录与逐篇解读{{ else }}本期全量目录与逐篇解读{{ end }}</p>
-      <p class="edition-focus__note">从研究概览进入，浏览完整排行，继续阅读每篇论文的方法、实验与局限。</p>
+      {{- if not $feature }}<p class="edition-focus__note">从研究概览进入，浏览完整排行，继续阅读每篇论文的方法、实验与局限。</p>{{ end }}
       <div class="edition-focus__actions research-home-hero__actions">
         <a class="rw-action rw-action--primary" href="{{ .RelPermalink }}">阅读本期完整速递 <span aria-hidden="true">↗</span></a>
         <a class="rw-action" href="#daily-editions">浏览往期 <span aria-hidden="true">↓</span></a>
       </div>
+      {{- partial "edition_feature.html" $feature }}
       <a class="edition-focus__latest" href="{{ .RelPermalink }}">最新速递 · {{ .Date.Format "01-02" }}</a>
     </section>
     {{- else }}

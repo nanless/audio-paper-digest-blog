@@ -50,6 +50,50 @@ test('ambiguous or forged members fail closed; anchors and external resources ca
   assert.equal(api.articlePath('javascript:alert(1)', base), '');
   assert.equal(api.articlePath('https://user:pass@example.test/blog/posts/a/', base), '');
 });
+function numberedLegacy({ sourceOnly = false } = {}) {
+  const body = fixture(3), members = body.children.filter(node => node.tagName === 'H3' && node.id.startsWith('论文-'));
+  members.forEach((heading, index) => { heading.parts[0] = ['🥇 ', '🥈 ', '🥉 '][index];
+    if (sourceOnly) heading.children[0].attrs.href = 'https://arxiv.org/abs/2610.' + (10000 + index) + 'v1';
+  });
+  body.parts.splice(10, 0, el('h2', { id: 'embedded-method' }, '方法概述和架构'));
+  return body;
+}
+test('legacy numbered cohorts cross scientific H2s only with a complete ordered sequence and primary source metadata', () => {
+  const body = numberedLegacy(), before = JSON.stringify(body.parts), entries = api.extractEntries(body, base);
+  assert.equal(entries.length, 3); assert.equal(entries[2].id, '论文-2');
+  assert.equal(JSON.stringify(body.parts), before);
+  for (const mutate of [
+    body => { body.children.find(node => node.id === '论文-1').parts[0] = '🥇 '; },
+    body => { body.children.find(node => node.id === '论文-1').children[0].attrs.href = 'https://outside.test/posts/forged/'; },
+    body => { body.children.find(node => node.id === '论文-1').children[0].attrs.href = '/blog/posts/2026-10-20/'; },
+    body => { body.children.find(node => node.id === '论文-1').children[0].attrs.href = '/blog/posts/title-0/'; },
+    body => { const metadata = body.children.find(node => node.querySelectorAll('a').some(link => link.getAttribute('href')?.includes('2610.10001'))); metadata.children[1].attrs.href = 'https://arxiv.org/abs/2610.10000'; },
+    body => { body.parts.push(el('h3', { id: 'forged-fourth' }, '4. ', el('a', { href: '/blog/posts/extra/' }, 'Extra member'))); },
+    body => { const heading = body.children.find(node => node.id === '论文-1'); heading.appendChild(el('a', { href: '/blog/posts/another/' }, 'Ambiguous')); },
+  ]) { const invalid = numberedLegacy(); mutate(invalid); assert.deepEqual(api.extractEntries(invalid, base), []); }
+});
+test('source-only legacy cards preserve their actual arXiv target, reject mismatched identities and never invent article paths', () => {
+  const body = numberedLegacy({ sourceOnly: true }); body.parts[0].textContent = '共分析 3 篇语音/AI 论文';
+  const entries = api.extractEntries(body, base);
+  assert.equal(entries.length, 3); assert.ok(entries.every(entry => entry.kind === 'source' && entry.href.startsWith('https://arxiv.org/abs/')));
+  const f = browser({ body }), actions = f.nodes['daily-edition-results'].children[0].querySelectorAll('a');
+  assert.equal(actions[2].textContent, '论文原文 ↗'); assert.equal(actions[2].href, 'https://arxiv.org/abs/2610.10000v1');
+  assert.equal(actions[2].getAttribute('target'), '_blank'); assert.equal(actions[2].getAttribute('rel'), 'noopener noreferrer');
+  for (const href of ['https://arxiv.org/abs/2610.19999', 'https://arxiv.org.evil.test/abs/2610.10000', 'https://user:pass@arxiv.org/abs/2610.10000']) {
+    const invalid = numberedLegacy({ sourceOnly: true }); invalid.children.find(node => node.id === '论文-0').children[0].attrs.href = href;
+    assert.deepEqual(api.extractEntries(invalid, base), []);
+  }
+});
+test('old H2 paper cards require one unique primary source in their score metadata and the full declared set', () => {
+  const body = el('div', { id: 'article-body' }, el('p', {}, '共分析 2 篇论文'), el('h2', {}, '⚡ 今日概览'));
+  for (let i = 0; i < 2; i++) body.parts.push(el('h2', { id: 'old-' + i }, '📄 Source paper ' + i), el('p', {}, '#语音识别 #模型'), el('p', {}, '🔥 评分：8.5/10 | ', el('a', { href: 'https://arxiv.org/abs/2604.' + (10000 + i) }, 'arxiv')), el('h3', { id: 'science-' + i }, '模型架构'), el('p', {}, 'Original scientific text.'));
+  const before = JSON.stringify(body.parts), entries = api.extractEntries(body, base);
+  assert.equal(entries.length, 2); assert.equal(entries[0].title, 'Source paper 0'); assert.deepEqual(entries[0].tasks, ['语音识别', '模型']);
+  assert.equal(JSON.stringify(body.parts), before);
+  body.parts[9].children[0].attrs.href = 'https://arxiv.org/abs/2604.10000'; assert.deepEqual(api.extractEntries(body, base), []);
+  body.parts[9].children[0].attrs.href = 'https://arxiv.org/abs/2604.10001'; body.parts[0].textContent = '共分析 3 篇论文';
+  assert.deepEqual(api.extractEntries(body, base), []);
+});
 test('old score formats are supported without mistaking scientific numbers or missing scores for ratings', () => {
   assert.equal(api.scoreFromNodes([el('p', {}, '🔥 ', el('strong', {}, '9.2分'), ' | #语音识别')]), 9.2);
   assert.equal(api.scoreFromNodes([el('p', {}, '模型获得9.2分改善'), el('p', {}, '评分：11/10')]), null);
@@ -161,13 +205,13 @@ test('conference and incomplete/ambiguous editions keep their original page with
 
 // Real generated editions are rendered by Hugo, then parsed by the standard HTML
 // parser. These are production Markdown fixtures, not hand-corrected member lists.
-test('real tracked 25-paper, 245-paper and older long editions yield exactly their original members', () => {
+test('real tracked modern, large and all five legacy edition formats yield exactly their original members', () => {
   const temp = fs.mkdtempSync(path.join(os.tmpdir(), 'daily-edition-real-'));
   try {
     fs.mkdirSync(path.join(temp, 'content/posts'), { recursive: true }); fs.mkdirSync(path.join(temp, 'layouts/_default'), { recursive: true });
     fs.writeFileSync(path.join(temp, 'hugo.yaml'), 'baseURL: https://example.test/blog/\ndisableKinds: [taxonomy, term, sitemap, RSS]\nmarkup:\n  goldmark:\n    renderer:\n      unsafe: true\n');
     fs.writeFileSync(path.join(temp, 'layouts/_default/single.html'), '<main id="article-body">{{ .Content }}</main>');
-    const samples = [['2026-10-19', 25], ['2026-10-11', 245], ['2026-04-19', 42]];
+    const samples = [['2026-10-19', 25], ['2026-10-11', 245], ['2026-04-19', 42], ['2026-04-18', 39], ['2026-05-03', 13], ['2026-05-27', 39], ['2026-07-03', 31], ['2026-07-08', 26]];
     for (const [date] of samples) fs.copyFileSync(path.join(root, 'content/posts', date + '.md'), path.join(temp, 'content/posts', date + '.md'));
     execFileSync('hugo', ['--source', temp, '--destination', path.join(temp, 'public')], { stdio: 'pipe' });
     const parser = `import json,sys\nfrom html.parser import HTMLParser\nclass P(HTMLParser):\n def __init__(self): super().__init__();self.root={'tagName':'ROOT','attrs':{},'children':[]};self.stack=[self.root]\n def handle_starttag(self,t,a):\n  n={'tagName':t.upper(),'attrs':dict(a),'children':[]};self.stack[-1]['children'].append(n)\n  if t not in ['area','base','br','col','embed','hr','img','input','link','meta','param','source','track','wbr']: self.stack.append(n)\n def handle_endtag(self,t):\n  for i in range(len(self.stack)-1,0,-1):\n   if self.stack[i]['tagName']==t.upper(): self.stack=self.stack[:i];break\n def handle_data(self,s):self.stack[-1]['children'].append(s)\np=P();p.feed(sys.stdin.read());print(json.dumps(p.root))`;
@@ -177,9 +221,11 @@ test('real tracked 25-paper, 245-paper and older long editions yield exactly the
       const parsed = inflate(JSON.parse(execFileSync('python3', ['-c', parser], { input: html, encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 })));
       const article = parsed.children.find(node => node.id === 'article-body');
       const entries = api.extractEntries(article, 'https://nanless.github.io/audio-paper-digest-blog/posts/' + date + '/');
-      assert.equal(article.children.filter(node => node.tagName === 'H3').length, count + 2);
+      if (['2026-10-19', '2026-10-11', '2026-04-19'].includes(date)) assert.equal(article.children.filter(node => node.tagName === 'H3').length, count + 2);
       assert.equal(entries.length, count, date); assert.ok(entries.every(entry => Number.isFinite(entry.score)), date + ': ' + JSON.stringify(entries.filter(e => !Number.isFinite(e.score)).slice(0, 4)));
       assert.ok(entries.every(entry => entry.id && entry.href && entry.title));
+      if (['2026-04-18', '2026-05-03'].includes(date)) assert.ok(entries.every(entry => entry.kind === 'source' && /^https:\/\/arxiv.org\/abs\//.test(entry.href)), date);
+      else assert.ok(entries.every(entry => entry.kind === 'article'), date);
     }
   } finally { fs.rmSync(temp, { recursive: true, force: true }); }
 });

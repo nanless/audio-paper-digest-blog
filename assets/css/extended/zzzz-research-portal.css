@@ -79,6 +79,27 @@ input, select, textarea { min-width: 0; }
 .edition-focus .rw-action--primary { background: var(--portal-cover-text); color: var(--portal-cover); border-color: var(--portal-cover-text); }
 .edition-focus .rw-action--primary:hover { background: #e0e6dc; filter: none; }
 .edition-focus__latest { color: var(--portal-cover-muted); font-size: 13px; text-decoration: underline; text-underline-offset: 4px; display: inline-flex; align-items: center; min-height: 36px; margin-top: 8px; }
+/* With a verified paper illustration, the dated topline takes over the large
+   decorative date's job. The complete-edition action stays above the feature. */
+.edition-focus--illustrated .edition-focus__date { display: none; }
+.edition-focus--illustrated .edition-focus__topline time { display: inline; }
+.edition-focus--illustrated h2 { margin-top: 16px; }
+.edition-focus--illustrated .edition-focus__actions { margin-top: 16px; }
+.edition-feature { border-top: 1px solid var(--portal-cover-line); padding-top: 18px; margin-top: 22px; }
+.edition-feature__heading .rw-eyebrow { color: var(--portal-cover-muted); font-size: 11px; }
+.edition-feature__heading h3 { font: 550 23px/1.5 var(--portal-serif); color: var(--portal-cover-text); margin: 7px 0 3px; }
+.edition-feature__heading h3 a, .edition-feature__figure figcaption a { color: var(--portal-cover-text); }
+.edition-feature__heading h3 a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.edition-feature__heading p { font-size: 14px; line-height: 1.8; color: var(--portal-cover-muted); margin: 0 0 14px; }
+.edition-feature__figure { margin: 0; }
+.edition-feature__image-link { display: block; padding: 12px; border-radius: 5px; background: #f3f2ec; }
+.edition-feature__image-link img { display: block; width: 100%; height: auto; object-fit: contain; border-radius: 0; }
+.edition-feature__figure figcaption { margin-top: 8px; font-size: 12px; line-height: 1.8; color: var(--portal-cover-muted); }
+.edition-feature__figure figcaption a { text-decoration: underline; text-underline-offset: 3px; }
+.edition-feature__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 22px; margin-top: 7px; }
+.edition-feature__actions a { min-height: 44px; display: inline-flex; gap: 12px; align-items: center; color: var(--portal-cover-text); }
+.edition-feature__read { font-size: 15px; font-weight: 550; }
+.edition-feature__original { font-size: 13px; text-decoration: underline; text-underline-offset: 4px; }
 .edition-frontpage .portal-tools { border: 0; border-radius: 0; padding: 5px 0; gap: 0; background: transparent; }
 .portal-tools__intro h2 { font-family: var(--portal-serif); font-size: 25px; line-height: 1.6; font-weight: 550; margin: 12px 0 4px; letter-spacing: -.02em; }
 .portal-tools .home-search { flex-wrap: wrap; margin: 18px 0 12px; gap: 8px; }
@@ -125,6 +146,9 @@ input, select, textarea { min-width: 0; }
 .research-paper-header h1 { font-size: clamp(28px,3vw,40px); font-family: var(--portal-serif); font-weight: 600; line-height: 1.5; }
 .research-paper-header__original { font-size: 16px; line-height: 1.8; }
 .research-paper-header__meta, .breadcrumbs { font-size: 13px; }
+/* Disclosures must reveal their content before a chapter link measures and
+   focuses it. Theme height/content-visibility transitions delay that reveal. */
+.research-workbench details::details-content { transition: none; }
 .research-layout { grid-template-columns: 178px minmax(0,720px) 160px; gap: 26px; }
 .research-layout--digest { grid-template-columns: 190px minmax(0,880px); }
 .research-main .post-content { font-size: 18px; line-height: 1.9; }
@@ -263,7 +287,10 @@ input, select, textarea { min-width: 0; }
   .research-main .post-content table { font-size: 14px; }
   .daily-edition { padding: 20px 16px; }
   .daily-edition__header { display: block; }
-  .daily-edition__header h2 { font-size: 23px; }
+  .daily-edition__header h2 { font-size: 22px; margin-bottom: 10px; }
+  .daily-edition__eyebrow { margin-bottom: 3px; }
+  .daily-edition__header .rw-action { margin-bottom: 12px; }
+  .daily-edition__intro { margin-bottom: 10px; }
   .daily-edition__controls { gap: 12px 10px; }
   .daily-edition__field :is(input,select) { font-size: 16px; }
   .daily-edition__item { grid-template-columns: 25px minmax(0,1fr); gap: 10px; }

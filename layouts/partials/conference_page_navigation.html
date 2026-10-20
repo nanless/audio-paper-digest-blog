@@ -1,0 +1,23 @@
+{{- $page := . -}}
+{{- $context := partial "conference_page_context.html" . -}}
+{{- $metadata := partial "research_metadata.html" . -}}
+{{- if or $context (eq $metadata.pageType "conference") -}}
+<nav class="edition-navigation conference-page-navigation" aria-label="本届会议导航">
+  {{- with $context -}}
+    {{- $entry := .entry -}}{{- $summary := .summary -}}
+    {{- if ne $summary.RelPermalink $page.RelPermalink }}<a href="{{ $summary.RelPermalink }}">{{ $entry.name }} {{ $entry.year }} 总览</a>{{ end -}}
+    {{- $seen := slice $summary.RelPermalink $page.RelPermalink -}}
+    {{- $links := $entry.links | default slice -}}
+    {{- if not $links -}}{{- with $entry.categoryPath }}{{ $links = slice (dict "path" . "label" "本届论文导读" "scope" "blog-guides") }}{{ end -}}{{- end -}}
+    {{- range $links -}}
+      {{- $link := . -}}{{- with site.GetPage .path -}}
+        {{- if not (in $seen .RelPermalink) -}}
+          <a href="{{ .RelPermalink }}">{{ if eq $link.scope "blog-guides" }}本届论文导读{{ else }}{{ $link.label | default .LinkTitle }}{{ end }}</a>
+          {{- $seen = $seen | append .RelPermalink -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+  <a href="{{ "conferences/" | relURL }}">全部会议</a>
+</nav>
+{{- end -}}

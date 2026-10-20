@@ -1,0 +1,20 @@
+{
+  "contract": "edition-feature-v1",
+  "editions": {
+    "2026-10-19": {
+      "date": "2026-10-19",
+      "paperPath": "/posts/2026-10-19-jarvis-coordination-deserves-a-brain-of-its-own-2610-23804/",
+      "arxivId": "2610.23804",
+      "sourceUrl": "https://arxiv.org/abs/2610.23804v1",
+      "title": "给协调单独一个大脑",
+      "description": "Jarvis 如何在通话不断时，协调后台任务。",
+      "imagePath": "/images/papers/2610.23804/figure-3-5afc2754b9f83ba8.png",
+      "imageSha256": "5afc2754b9f83ba88aa1d7ad698f7ea9c9a941918797322a902d5c5e49cba185",
+      "width": 659,
+      "height": 219,
+      "figure": "Figure 3",
+      "caption": "Jarvis · 原论文 Figure 3：系统整体架构",
+      "alt": "Jarvis 系统整体架构：快脑保持实时对话，慢脑通过决策脑、任务账本与工作器协调后台任务。"
+    }
+  }
+}

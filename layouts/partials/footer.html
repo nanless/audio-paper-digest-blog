@@ -50,19 +50,28 @@
 
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener("click", function (e) {
+            if (e.defaultPrevented || e.button > 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+            const linkTarget = this.getAttribute("target");
+            if ((linkTarget && linkTarget.toLowerCase() !== "_self") || this.hasAttribute("download")) return;
+            const fragment = this.getAttribute("href").slice(1);
+            let id;
+            try { id = decodeURIComponent(fragment); } catch (_) { id = fragment; }
+            const target = document.getElementById(id);
+            if (!target) return;
             e.preventDefault();
-            var id = this.getAttribute("href").substr(1);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            let parent = target.parentElement;
+            while (parent) {
+                if (parent.tagName === "DETAILS") parent.open = true;
+                parent = parent.parentElement;
             }
+            target.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? "auto" : "smooth" });
+            if (!target.hasAttribute("tabindex")) target.setAttribute("tabindex", "-1");
+            if (typeof target.focus === "function") target.focus({ preventScroll: true });
+            const page = window.location.pathname + window.location.search;
             if (id === "top") {
-                history.replaceState(null, null, " ");
+                history.replaceState(history.state, "", page);
             } else {
-                history.pushState(null, null, `#${id}`);
+                history.pushState(history.state, "", page + "#" + encodeURIComponent(id));
             }
         });
     });

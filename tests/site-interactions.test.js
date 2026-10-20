@@ -36,6 +36,17 @@ test('mobile table of contents starts collapsed and closes after choosing a head
   assert.equal(loadSite().toc.open, true);
 });
 
+test('closed article contents remove the list from layout while the native summary remains usable', () => {
+  const css = fs.readFileSync(path.join(__dirname, '..', 'assets/css/extended/reading-workflow.css'), 'utf8');
+  // site.js removes the open attribute on mobile. A CSS guard is necessary in
+  // browsers that retain the animated details-content box during disclosure.
+  assert.match(css, /\.research-workbench\s+\.workbench-toc\s+details:not\(\[open\]\)\s*>\s*\.inner\s*\{\s*display:\s*none;\s*\}/);
+  assert.doesNotMatch(css, /details:not\(\[open\]\)\s*>\s*(?:summary|\*)\s*\{/);
+  const template = fs.readFileSync(path.join(__dirname, '..', 'layouts/_default/single.html'), 'utf8');
+  assert.match(template, /<details class="toc" open>\s*<summary>/);
+  assert.match(template, /<div class="inner">/);
+});
+
 test('content category filtering reports actual visible counts and recovers from zero results', () => {
   const site = loadSite({ query: 'ＡＳＲ' });
   site.events.input();

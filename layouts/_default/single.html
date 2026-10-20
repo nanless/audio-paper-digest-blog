@@ -40,6 +40,17 @@
       {{- if $task }}<span{{ if .Params.paper_digest_primary_task }} title="本页主要研究任务"{{ end }}>&nbsp;·&nbsp;{{ if .Params.paper_digest_primary_task }}★&nbsp;{{ end }}{{ $task }}</span>{{ end }}
     </div>
     <div class="research-paper-header__actions" aria-label="论文操作">
+      {{- if $isDaily }}<a class="rw-action rw-action--primary" href="#article-body">连续阅读全文 ↓</a>{{ end }}
+      {{- if $isPaper }}<a class="rw-action rw-action--primary" href="#article-body">阅读解读正文 ↓</a>{{ end }}
+      {{- if or $isConferenceSummary $isTask -}}
+        {{- $listAnchor := "" -}}
+        {{- range findRE `(?s)<a\b[^>]*>.*?</a>` (printf "%s" .TableOfContents) -}}
+          {{- if and (not $listAnchor) (findRE `论文列表$` (strings.TrimSpace (. | plainify)) 1) -}}
+            {{- with findRE `href="#[^"]+"` . 1 }}{{ $listAnchor = replaceRE `^href="([^"]+)"$` "$1" (index . 0) }}{{ end -}}
+          {{- end -}}
+        {{- end -}}
+        {{- with $listAnchor }}<a class="rw-action rw-action--primary" href="{{ . | safeURL }}">直达本届论文列表 ↓</a>{{ end -}}
+      {{- end -}}
       <a class="rw-action" href="{{ "papers/" | absURL }}">浏览论文库</a>
       {{- if $isDaily }}<a class="rw-action" href="{{ "index.xml" | absURL }}">订阅日报</a>{{ end }}
     </div>
@@ -54,6 +65,7 @@
     {{- end }}
     {{- if $isPaper }}{{ partial "paper_tags.html" . }}{{ end }}
     {{- if $isDaily }}{{ partial "daily_edition_navigation.html" . }}{{ end }}
+    {{- if not $isDaily }}{{ partial "conference_page_navigation.html" . }}{{ end }}
   </header>
 
   {{- $layoutClass := "research-layout" }}
