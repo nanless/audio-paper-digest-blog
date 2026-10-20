@@ -53,6 +53,7 @@
     </section>
     {{- end }}
     {{- if $isPaper }}{{ partial "paper_tags.html" . }}{{ end }}
+    {{- if $isDaily }}{{ partial "daily_edition_navigation.html" . }}{{ end }}
   </header>
 
   {{- $layoutClass := "research-layout" }}
@@ -68,6 +69,7 @@
     {{- end }}
 
     <div class="research-main">
+      {{- if $isDaily }}{{ partial "daily_edition_tools.html" . }}{{ end }}
       {{- if $isPaper }}{{ partial "paper_toolbar.html" . }}{{ end }}
       {{- $isHidden := (.Param "cover.hiddenInSingle") | default (.Param "cover.hidden") | default false }}
       {{- partial "cover.html" (dict "cxt" . "IsSingle" true "isHidden" $isHidden) }}
@@ -146,6 +148,10 @@
 </article>
 {{- $readingScript := resources.Get "js/reading-workflow.js" | minify | fingerprint }}
 <script defer src="{{ $readingScript.RelPermalink }}" integrity="{{ $readingScript.Data.Integrity }}" crossorigin="anonymous"></script>
+{{- if $isDaily }}
+{{- $dailyScript := resources.Get "js/daily-edition.js" | minify | fingerprint }}
+<script defer src="{{ $dailyScript.RelPermalink }}" integrity="{{ $dailyScript.Data.Integrity }}" crossorigin="anonymous"></script>
+{{- end }}
 
 {{- else }}
 <article class="post-single editorial-single">

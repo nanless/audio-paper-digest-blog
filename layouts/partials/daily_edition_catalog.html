@@ -1,0 +1,7 @@
+{{- /* Cache the qualified daily page list per language for chronological
+      navigation. No content or publication metadata is rewritten. */ -}}
+{{- $editions := slice -}}
+{{- range where site.RegularPages "Section" "posts" -}}
+  {{- if eq (partial "research_metadata.html" .).pageType "daily" -}}{{- $editions = $editions | append . -}}{{- end -}}
+{{- end -}}
+{{- return (sort $editions "Date" "asc") -}}

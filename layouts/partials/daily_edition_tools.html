@@ -1,0 +1,23 @@
+{{- $metadata := partial "research_metadata.html" . -}}
+{{- if eq $metadata.pageType "daily" -}}
+<section class="daily-edition" id="daily-edition-tools" data-page-type="daily" aria-labelledby="daily-edition-title" hidden>
+  <div class="daily-edition__header">
+    <div><p class="daily-edition__eyebrow">THE COMPLETE EDITION · 本期全量目录</p><h2 id="daily-edition-title">找到今天想读的论文</h2></div>
+    <a class="rw-action" href="#article-body">连续阅读完整日报 ↓</a>
+  </div>
+  <p class="daily-edition__intro">在本期全部论文中查找，定位本期正文或打开独立长文。下方完整正文始终保留。</p>
+  <div class="daily-edition__controls">
+    <label class="daily-edition__field" for="daily-edition-query"><span>搜索本期</span><input id="daily-edition-query" type="search" placeholder="题目、方向或 arXiv 编号" autocomplete="off" maxlength="200" aria-controls="daily-edition-results"></label>
+    <label class="daily-edition__field" id="daily-edition-task-field" for="daily-edition-task"><span>研究方向</span><select id="daily-edition-task" aria-controls="daily-edition-results"><option value="">全部方向</option></select></label>
+    <label class="daily-edition__field" for="daily-edition-sort"><span>排列方式</span><select id="daily-edition-sort" aria-controls="daily-edition-results"><option value="original">本期原顺序</option><option value="score">本站评分从高到低</option></select></label>
+    <button class="rw-action" id="daily-edition-clear" type="button">恢复全部</button>
+  </div>
+  <p class="daily-edition__status" id="daily-edition-status" role="status" aria-live="polite" aria-atomic="true"></p>
+  <details class="daily-edition__directory" id="daily-edition-directory">
+    <summary class="daily-edition__summary" id="daily-edition-summary">浏览本期完整目录</summary>
+    <ol class="daily-edition__list" id="daily-edition-results" aria-label="本期论文检索结果"></ol>
+    <p class="daily-edition__empty" id="daily-edition-empty" hidden>本期没有匹配的论文。请换个关键词，或选择“恢复全部”。</p>
+    <button class="rw-action daily-edition__more" id="daily-edition-more" type="button" aria-controls="daily-edition-results" hidden>显示更多论文</button>
+  </details>
+</section>
+{{- end -}}
