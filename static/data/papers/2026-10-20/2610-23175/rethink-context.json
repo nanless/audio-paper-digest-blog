@@ -1,0 +1,87 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.23175v1",
+  "abstract": "Recent speech brain-computer interfaces (BCIs) increasingly rely on large models and complex multi-stage pipelines for neural decoding. However, in speech BCI, where training data are scarce, noisy, and expensive to collect, the benefits of model scaling remain unclear. This work revisits a fundamental question: are large models truly necessary for accurate neural decoding? We propose BEST (Brain-Encoding-Speech-Text), a two-stage framework for efficient neural-to-text decoding. Instead of relying on large generative models or phoneme-centric pipelines, BEST introduces hierarchical intermediate representations and a compact speech-oriented decoder that directly maps neural activity to text. This design preserves essential structure while significantly reducing computational cost, enabling robust generalization in low-resource settings and practical deployment under constrained resources. On the Brain-to-Text '24 and '25 benchmarks, BEST achieves word error rates (WERs) of 6.19% and 1.62%, respectively, using only 3.85% of the parameters required by comparable methods. Beyond these results, we provide three key insights: (1) decoder scaling yields non-monotonic gains; (2) cross-modal alignment is more critical than model size; and (3) overfitting degards sequence-level performance. Representation analysis further reveals a consistent neural-audio-text alignment pathway.",
+  "abstractSha256": "f7e09ebcd0dc1fe0ee6f01dd911cb4f946818e4b0eeb9366ff2099e4d65dae9a",
+  "arxivId": "2610.23175",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.23175v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "Transformer",
+    "primaryTask": "言语神经解码",
+    "rankBucket": "前50%",
+    "score": 7.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.neural-speech-decoding",
+          "label": "言语神经解码"
+        },
+        {
+          "facet": "method",
+          "id": "method.transformer",
+          "label": "Transformer"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.low-resource",
+          "label": "低资源"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.neural",
+          "label": "脑信号"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "Transformer",
+      "primaryMethodId": "method.transformer",
+      "primaryTask": "言语神经解码",
+      "primaryTaskId": "task.neural-speech-decoding",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University",
+        "Nanyang Technological University"
+      ],
+      "name": "Zehui Feng"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Weichuan Wang"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Xiaohan Chen"
+    },
+    {
+      "affiliations": [
+        "Nanyang Technological University"
+      ],
+      "name": "Cuntai Guan"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University",
+        "Zhejiang University"
+      ],
+      "name": "Ting Han"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对植入式语音脑机接口数据少噪声大、常用音素加语言大模型流水线又重又丢信息的问题，论文提出两阶段轻量框架 BEST，用分层神经编码加音素字符融合再接到小型语音翻译器，在 Brain-to-Text’24 和’25 上以远小于基线的参数取得低词错率，并证明对齐比放大模型更关键。",
+  "originalTitle": "Do Speech BCIs Need Larger Models? Rethinking Neural Decoding beyond Scaling",
+  "pdfUrl": "https://arxiv.org/pdf/2610.23175v1.pdf",
+  "readerTitle": "语音脑机接口一定要用大模型吗：BEST 的轻量解码路径",
+  "schemaVersion": 2
+}

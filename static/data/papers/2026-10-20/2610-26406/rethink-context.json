@@ -1,0 +1,61 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.26406v1",
+  "abstract": "oollim is a locally executable system for evaluating L2 English pronunciation accuracy, fluency, and prosody on a consumer computer. The system combines pretrained XLS-R, XEUS, and PhoneticXeus representations with reference-text features and ridge regressions trained on SpeechOcean762, the Korean Learners' L2 Speech Corpus (English), J-AESOP, and their combinations. On 305 independently held-out recordings assessed by three expert raters, several ridge configurations substantially outperform archived Azure API scores obtained in January 2026 in both Spearman correlation and quadratic weighted kappa across all three constructs. These results support expert speech evaluation on consumer hardware using pretrained representations and construct-specific regressions, without neural-model fine-tuning or calibration on the private evaluation data.",
+  "abstractSha256": "ad14e66688694a8173d2b6b8230d360917321314678269433e807fccccfa6db5",
+  "arxivId": "2610.26406",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.26406v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "迁移学习",
+    "primaryTask": "发音评估",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.pronunciation-assessment",
+          "label": "发音评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.transfer",
+          "label": "迁移学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "application",
+          "id": "application.education",
+          "label": "教育"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "迁移学习",
+      "primaryMethodId": "method.transfer",
+      "primaryTask": "发音评估",
+      "primaryTaskId": "task.pronunciation-assessment",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Richard Rose"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文用冻结的 XLS-R、XEUS 与 PhoneticXeus 表征加参考文本特征和岭回归解决三维度发音评分问题，在 305 段独立朗读上以排序和数值一致性对比专家与存档 Azure 分数，并报告了本地 CPU 运行的耗时与内存代价。",
+  "originalTitle": "Expert L2 English Speech Evaluation on a Gaming PC: Accuracy, Fluency, and Prosody with XLS-R, XEUS, and PhoneticXeus",
+  "pdfUrl": "https://arxiv.org/pdf/2610.26406v1.pdf",
+  "readerTitle": "在游戏电脑上本地评价二语英语发音：准确度、流利度和韵律",
+  "schemaVersion": 2
+}

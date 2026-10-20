@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.26614v1",
+  "arxivId": "2610.26614",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.26614v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Robert Cole Molloy"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Rhiannon N. Miller"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Stephen Morgan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Anjalie Field"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.26614v1",
+  "originalTitle": "Conducting Reliable Keyword Estimation with Unreliable ASR in Police Audio Data",
+  "pdfUrl": "https://arxiv.org/pdf/2610.26614v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

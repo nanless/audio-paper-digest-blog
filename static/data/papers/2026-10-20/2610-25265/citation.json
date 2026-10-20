@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.25265v1",
+  "arxivId": "2610.25265",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.25265v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Efthymios Tsaprazlis"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Bowen Yi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Tiantian Feng"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Junghwan Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "David Jurgens"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shrikanth Narayanan"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.25265v1",
+  "originalTitle": "SPARC: Spoken Profile Authorship Recognition Corpus",
+  "pdfUrl": "https://arxiv.org/pdf/2610.25265v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

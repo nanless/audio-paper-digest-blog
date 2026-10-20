@@ -1,0 +1,42 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.26252v1",
+  "arxivId": "2610.26252",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.26252v1",
+  "authors": [
+    {
+      "affiliations": [
+        "ITMO University",
+        "SPC RAS"
+      ],
+      "name": "Walaa Othman"
+    },
+    {
+      "affiliations": [
+        "ITMO University",
+        "MWS AI"
+      ],
+      "name": "Baher Mohammad"
+    },
+    {
+      "affiliations": [
+        "ITMO University",
+        "MWS AI"
+      ],
+      "name": "Stamatios Lefkimmiatis"
+    },
+    {
+      "affiliations": [
+        "ITMO University",
+        "MWS AI"
+      ],
+      "name": "Ammar Ali"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.26252v1",
+  "originalTitle": "SEAM: Spectral Embedding Alignment and Merging for Low-Resource TTS",
+  "pdfUrl": "https://arxiv.org/pdf/2610.26252v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,96 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.24681v1",
+  "abstract": "LeJEPA derives an isotropic Gaussian embedding target by minimizing, under its task assumptions, a Fisher information criterion that controls the task-averaged squared prediction bias. This enables unimodal self-supervised learning without reconstruction decoders, exponential-moving-average teachers, or contrastive negatives. However, its isotropic task prior does not account for the cross-modal structure of multimodal tasks that read shared content. We introduce MM-LeJEPA by extending LeJEPA's task assumptions to multimodal learning. Specifically, we model multimodal tasks as strength-weighted combinations of components that read independent information from the two modalities and components that read the same content from both. Under explicit gradient-moment, correspondence, and symmetry assumptions, we derive a correlated Gaussian target that minimizes a weighted Fisher information functional under a fixed total variance constraint. An analytic transform adapts Sketched Isotropic Gaussian Regularization (SIGReg) to this target, yielding a two-term objective that combines distributional regularization with local-to-global prediction. The extension adds a single scalar hyperparameter, the target cross-modal correlation, and retains the simplicity of LeJEPA. On public audio-visual classification benchmarks, our results are competitive with representative open-source methods. Code will be released.",
+  "abstractSha256": "a162bc52db0dbaef5642dac55193af180bd8b0eacbddd48c75bafbfb91ddf9d3",
+  "arxivId": "2610.24681",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.24681v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "正则化",
+    "primaryTask": "音视频理解",
+    "rankBucket": "前50%",
+    "score": 6.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-understanding",
+          "label": "音视频理解"
+        },
+        {
+          "facet": "method",
+          "id": "method.regularization",
+          "label": "正则化"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "method",
+          "id": "method.self-supervised",
+          "label": "自监督学习"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.pretraining",
+          "label": "预训练"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "正则化",
+      "primaryMethodId": "method.regularization",
+      "primaryTask": "音视频理解",
+      "primaryTaskId": "task.av-understanding",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Haowen Bai"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Rui Gong$"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Meichen Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ming-Xuan Weng"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Bihan Wen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kim-Hui Yap"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "本文把下游任务分成读独立信息和读共享内容两类，推导出音频视频联合嵌入应服从的相关高斯目标，并用白化后的分布正则加局部预测全局来训练，在音频视频分类的冻结探测和微调中与开源基线相当。",
+  "originalTitle": "MM-LeJEPA: Correlated Gaussian Regularization for Multimodal Joint-Embedding Predictive Architectures",
+  "pdfUrl": "https://arxiv.org/pdf/2610.24681v1.pdf",
+  "readerTitle": "MM-LeJEPA：为共享内容设计相关高斯联合嵌入目标",
+  "schemaVersion": 2
+}

@@ -1,0 +1,104 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.24239v1",
+  "abstract": "We empirically analyze two recently proposed encoder-free multimodal LLMs, Gemma-4 12B and Inkling-Small. Unlike previous multimodal LLMs, these models do not use modality-specific encoders to extract tokenized embeddings representing audio and image input; instead, they directly feed windows of samples, pixels, or spectral features to the Transformer language model. We analyze whether the early layers of these models learn to function similarly to dedicated audio and visual encoders. We find that these early layers do in fact act as ``implicit encoders,'' encoding audio and visual inputs in a way that is largely invariant to their cross-modal context. Furthermore, when performing multimodal reasoning tasks, we show that independently encoding the modalities throughout these early model layers achieves the same accuracy as jointly encoding them from the first layer onwards. Finally, we use layer-wise probing to analyze the salient information captured by the implicit encoders and find their behavior to be similar to several popular encoder models.",
+  "abstractSha256": "f54ad55a33e06f2f1a810e04451c0086d09fe01d4918289ee623b49b209f9f09",
+  "arxivId": "2610.24239",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.24239v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "表示探测",
+    "primaryTask": "音视频问答",
+    "rankBucket": "前50%",
+    "score": 5.9,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-question-answering",
+          "label": "音视频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.representation-probing",
+          "label": "表示探测"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-attributes",
+          "label": "语音属性识别"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "表示探测",
+      "primaryMethodId": "method.representation-probing",
+      "primaryTask": "音视频问答",
+      "primaryTaskId": "task.av-question-answering",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "The University of Texas at Austin"
+      ],
+      "name": "David Harwath"
+    },
+    {
+      "affiliations": [
+        "NVIDIA"
+      ],
+      "name": "Desh Raj"
+    },
+    {
+      "affiliations": [
+        "Johns Hopkins University"
+      ],
+      "name": "Xavier Velez"
+    },
+    {
+      "affiliations": [
+        "Johns Hopkins University",
+        "The University of Melbourne"
+      ],
+      "name": "Sandra Arcos-Holzinger"
+    },
+    {
+      "affiliations": [
+        "The University of Texas at Austin"
+      ],
+      "name": "Willie Jeng"
+    },
+    {
+      "affiliations": [
+        "Toyota Technological Institute at Chicago"
+      ],
+      "name": "Karen Livescu"
+    },
+    {
+      "affiliations": [
+        "Johns Hopkins University"
+      ],
+      "name": "Leibny Paola Garcia-Perera"
+    },
+    {
+      "affiliations": [
+        "Johns Hopkins University"
+      ],
+      "name": "Sanjeev Khudanpur"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文以 Gemma-4 12B 和 Inkling-Small 为对象，验证其早期 Transformer 层是否像独立音频与图像编码器一样先各自编码再融合，依据是换跨模态上下文后表征不变、独立编码到 12 层左右仍保持问答精度、层级信息演化与常用语音编码器相似，但细粒度语音与部分视觉任务仍明显落后。",
+  "originalTitle": "Encoder-Free Multimodal LLMs Learn Implicit Encoders",
+  "pdfUrl": "https://arxiv.org/pdf/2610.24239v1.pdf",
+  "readerTitle": "去掉编码器的多模态大模型，是不是在早期层又学了一个编码器",
+  "schemaVersion": 2
+}

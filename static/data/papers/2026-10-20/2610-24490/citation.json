@@ -1,0 +1,21 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.24490v1",
+  "arxivId": "2610.24490",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.24490v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Medical School, RWTH Aachen University, Aachen, Germany",
+        "Kröger Lab, Belgium,"
+      ],
+      "name": "Bernd J. Kröger"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.24490v1",
+  "originalTitle": "Vocal-Tract Acoustics, Aerodynamics, and Overlap-and-Add Synthesis in DYNARTmo",
+  "pdfUrl": "https://arxiv.org/pdf/2610.24490v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

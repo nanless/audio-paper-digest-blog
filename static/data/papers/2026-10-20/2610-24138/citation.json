@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.24138v1",
+  "arxivId": "2610.24138",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.24138v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Luqia Technologies"
+      ],
+      "name": "Qiwu Wen"
+    },
+    {
+      "affiliations": [
+        "Luqia Technologies"
+      ],
+      "name": "Jahangir Alam"
+    },
+    {
+      "affiliations": [
+        "Luqia Technologies"
+      ],
+      "name": "Eric Charton"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.24138v1",
+  "originalTitle": "From Spectrograms to Shallow Speech SSL: Audio-Frontend Design for Generator-Disjoint and Low-Latency Audio--Visual Deepfake Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2610.24138v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.24681v1",
+  "arxivId": "2610.24681",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.24681v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Haowen Bai"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Rui Gong$"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Meichen Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ming-Xuan Weng"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Bihan Wen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kim-Hui Yap"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.24681v1",
+  "originalTitle": "MM-LeJEPA: Correlated Gaussian Regularization for Multimodal Joint-Embedding Predictive Architectures",
+  "pdfUrl": "https://arxiv.org/pdf/2610.24681v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

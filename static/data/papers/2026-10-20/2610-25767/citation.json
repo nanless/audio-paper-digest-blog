@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.25767v1",
+  "arxivId": "2610.25767",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.25767v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jiaqi Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ruinan Jin"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yitong Tang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Beidi Zhao"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Gexin Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Qiong Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xiaoxiao Li"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.25767v1",
+  "originalTitle": "EvalRx: Agentic Diagnosis and Verified Repair of Foundation Models",
+  "pdfUrl": "https://arxiv.org/pdf/2610.25767v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

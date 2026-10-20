@@ -1,0 +1,57 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.24490v1",
+  "abstract": "This paper presents the acoustic and aerodynamic extension of DYNARTmo, a dynamic articulatory model for visualizing and synthesizing speech production. Gestural control trajectories determine vocal-tract geometry, which is converted into an acoustic tube with nasal branching and effective lateral passages. A lumped aerodynamic network relates prescribed glottal motion and pulmonary pressure to airflow and supraglottal pressure storage. Phonatory excitation, oral friction, and glottal aspiration are synthesized as separate contributions. Frame-specific acoustic responses are combined by overlap-and-add, preserving response tails beyond individual control frames. Three German words, ``Tasse'', ``Muse'', and ``Lade'', illustrate the coordination of articulation, pressure, flow, and acoustic sources across vowels, nasals, laterals, fricatives, and plosives. The implementation has been optimized by the author primarily for sound recognizability; independent perceptual evaluation remains outstanding, and fricative-noise naturalness requires further refinement. The model provides an inspectable, articulatorily controlled production plant for future neural simulations of babbling, imitation, and early word acquisition. Further work will improve acoustic realism, reduce empirical source corrections, and extend the sensory information available to developmental learning models.",
+  "abstractSha256": "33e96743e6f2f2131e44daf3510b207e69de870b82c7b17eb13cadc509547da7",
+  "arxivId": "2610.24490",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.24490v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "信号处理",
+    "primaryTask": "语音合成",
+    "rankBucket": "后50%",
+    "score": 5.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-synthesis",
+          "label": "语音合成"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.phonation",
+          "label": "发声与构音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "语音合成",
+      "primaryTaskId": "task.speech-synthesis",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Medical School, RWTH Aachen University, Aachen, Germany",
+        "Kröger Lab, Belgium,"
+      ],
+      "name": "Bernd J. Kröger"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "DYNARTmo 把重叠的手势轨迹逐帧变成声管几何和气流压力，再把声门脉冲响应与连续噪声分别合成叠加，用 Tasse、Muse、Lade 三个德语词走通元音鼻音边音擦音塞音的协调，代价是冻结几何近似和多处听音校准的声源参数，且尚无独立听辨评估。",
+  "originalTitle": "Vocal-Tract Acoustics, Aerodynamics, and Overlap-and-Add Synthesis in DYNARTmo",
+  "pdfUrl": "https://arxiv.org/pdf/2610.24490v1.pdf",
+  "readerTitle": "从手势到声音：DYNARTmo 怎样算声道、算气流再叠出语音",
+  "schemaVersion": 2
+}

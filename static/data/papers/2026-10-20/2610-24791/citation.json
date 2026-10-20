@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.24791v1",
+  "arxivId": "2610.24791",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.24791v1",
+  "authors": [
+    {
+      "affiliations": [
+        "HKUST"
+      ],
+      "name": "Kien T. Pham"
+    },
+    {
+      "affiliations": [
+        "Huawei Research"
+      ],
+      "name": "Yuhao Liu"
+    },
+    {
+      "affiliations": [
+        "Huawei Research"
+      ],
+      "name": "Chong Hou Choi"
+    },
+    {
+      "affiliations": [
+        "HKUST"
+      ],
+      "name": "Zhenqi He"
+    },
+    {
+      "affiliations": [
+        "HKUST"
+      ],
+      "name": "Yanghao Wang"
+    },
+    {
+      "affiliations": [
+        "Huawei Research"
+      ],
+      "name": "Chenyang Lei"
+    },
+    {
+      "affiliations": [
+        "Huawei Research"
+      ],
+      "name": "Rui Liu"
+    },
+    {
+      "affiliations": [
+        "HKUST"
+      ],
+      "name": "Qifeng Chen"
+    },
+    {
+      "affiliations": [
+        "HKUST"
+      ],
+      "name": "Long Chen"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.24791v1",
+  "originalTitle": "UniAVC: Unified Audio-Video Creation via Progressive Training and Asymmetric Scheduling",
+  "pdfUrl": "https://arxiv.org/pdf/2610.24791v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

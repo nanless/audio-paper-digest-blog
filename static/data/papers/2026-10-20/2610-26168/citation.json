@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.26168v1",
+  "arxivId": "2610.26168",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.26168v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Data Science & Artificial Intelligence Research Institute, China Unicom",
+        "Unicom Data Intelligence, China Unicom"
+      ],
+      "name": "Xiang Wang"
+    },
+    {
+      "affiliations": [
+        "Data Science & Artificial Intelligence Research Institute, China Unicom",
+        "Unicom Data Intelligence, China Unicom"
+      ],
+      "name": "Zhaoxiang Liu"
+    },
+    {
+      "affiliations": [
+        "Data Science & Artificial Intelligence Research Institute, China Unicom",
+        "Unicom Data Intelligence, China Unicom"
+      ],
+      "name": "Xiang Chen"
+    },
+    {
+      "affiliations": [
+        "Data Science & Artificial Intelligence Research Institute, China Unicom",
+        "Unicom Data Intelligence, China Unicom"
+      ],
+      "name": "Liqiang He"
+    },
+    {
+      "affiliations": [
+        "Data Science & Artificial Intelligence Research Institute, China Unicom",
+        "Unicom Data Intelligence, China Unicom"
+      ],
+      "name": "Kai Wang"
+    },
+    {
+      "affiliations": [
+        "Data Science & Artificial Intelligence Research Institute, China Unicom",
+        "Unicom Data Intelligence, China Unicom"
+      ],
+      "name": "Shiguo Lian"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.26168v1",
+  "originalTitle": "VISAGENT: An Agent-Based End-to-End Voice Interaction System",
+  "pdfUrl": "https://arxiv.org/pdf/2610.26168v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

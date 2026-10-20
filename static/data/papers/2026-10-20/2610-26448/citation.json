@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.26448v1",
+  "arxivId": "2610.26448",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.26448v1",
+  "authors": [
+    {
+      "affiliations": [
+        "HiLCoE School of Computer Science and Technology"
+      ],
+      "name": "Dagnachew Mekonnen Marilign"
+    },
+    {
+      "affiliations": [
+        "GSMA"
+      ],
+      "name": "Enrique Molero"
+    },
+    {
+      "affiliations": [
+        "gheero"
+      ],
+      "name": "Abrham Haile"
+    },
+    {
+      "affiliations": [
+        "GSMA"
+      ],
+      "name": "Louis Powell"
+    },
+    {
+      "affiliations": [
+        "Saarland University"
+      ],
+      "name": "Israel Abebe Azime"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.26448v1",
+  "originalTitle": "TeleASR-Amharic: A Benchmark for Robust Amharic ASR in Realistic Telecommunication Conditions",
+  "pdfUrl": "https://arxiv.org/pdf/2610.26448v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

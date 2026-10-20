@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.23651v1",
+  "arxivId": "2610.23651",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.23651v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Francesco Vitucci"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Giuseppe Silvi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Francesco Abbrescia"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Anthony Di Furia"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Francesco Scagliola"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.23651v1",
+  "originalTitle": "In Human Memories. Technology, Creativity and Self-Determination: An Ethical Proposal",
+  "pdfUrl": "https://arxiv.org/pdf/2610.23651v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

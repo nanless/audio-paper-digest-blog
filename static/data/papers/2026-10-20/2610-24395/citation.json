@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.24395v1",
+  "arxivId": "2610.24395",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.24395v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xinyu Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Liangjian Wen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jiang Duan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Dongkai Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yong Dai"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jiayu Bai"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jianzhuang Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhen Tian"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Guoping Qiu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhao Kan"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.24395v1",
+  "originalTitle": "MSCR: Jointly Balancing Utilization Across Modalities and Discovering Synergistic Information",
+  "pdfUrl": "https://arxiv.org/pdf/2610.24395v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,80 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.26776v1",
+  "arxivId": "2610.26776",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.26776v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shobhit Banga"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Manas Dhir"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Aaditya Pareek"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Amritansh Walecha"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Bhaskar Singh"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hanuman Sidh"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Manmeet Kaur"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Sagar Jain"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Supriya Paul"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Vanshika Chhabra"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Utkarsh Singh"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.26776v1",
+  "originalTitle": "Monsoon: Scalable Spontaneous Speech Collection for Low-Resource ASR in 50 Languages",
+  "pdfUrl": "https://arxiv.org/pdf/2610.26776v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

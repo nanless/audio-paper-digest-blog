@@ -1,0 +1,96 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.24164v1",
+  "abstract": "Voice agents built as cascaded automatic speech recognition (ASR)->large language model (LLM)-> text-to-speech (TTS) pipelines increasingly rely on conversational TTS: streaming, context conditioned models that adapt delivery to dialogue history. Such models are natural and expressive but offer little explicit control over how rare, trust-critical drug names are pronounced, because these entities are too infrequent, and their vocabulary too fast-growing, to be covered by any amount of pre-, mid-, or post-training. We retrofit phoneme controllability onto a pretrained conversational TTS model without any pre/mid-training, using an ARPAbet vocabulary exten-sion, continued phoneme-augmented supervised fine-tuning (SFT), and a training-free inference-time acoustic-biasing step. On a 7,500 clip clinical drug-pronunciation evaluation, our model raises strict Gemini-judged correctness from 54.6% (no phoneme augmentation) to 90.7%, outperforming every conversational and stateless TTS baseline on the automatic metric. Because no training stage sees a drug name, the entire evaluation is out-of-domain, so the gains reflect learned pronunciation rather than memorization. In a blinded, randomized human study, adult listeners judge 84% of our clips correct, versus 82% for the strongest baseline, with overlapping confidence intervals on a stratified subset. Across all 250 matched clips, Gemini agrees with the human majority on 84.8% of binary labels (k{appa}=0.57).",
+  "abstractSha256": "c7c500854c2ac0a4c33a471d5c1a98b8f6bd0c7b7ead37e81d674028cb652e18",
+  "arxivId": "2610.24164",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.24164v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "SFT",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.sft",
+          "label": "SFT"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "application",
+          "id": "application.medical",
+          "label": "医疗音频"
+        },
+        {
+          "facet": "method",
+          "id": "method.human-evaluation",
+          "label": "人类参与评测"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "SFT",
+      "primaryMethodId": "method.sft",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yashish M. Siriwardena"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Dinesh K. Gnanasekaran"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Tanmay Laud"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shinji Watanabe"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Subhabrata Mukherjee"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shanil Puri"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "本文要解决会话式语音合成读不准罕见药名的问题，用词表扩展加音素增强微调学会读 ARPAbet 音素，再用无需训练的上一轮参考发音稳定输出，在 7,500 条药物评测上把严格正确率从 54.6% 提高到 90.7%，但人工听感优势只在小子集上成立且置信区间重叠。",
+  "originalTitle": "Pronouncing Hard Words: Phoneme Adaptation of a Pretrained Conversational Text to Speech Model",
+  "pdfUrl": "https://arxiv.org/pdf/2610.24164v1.pdf",
+  "readerTitle": "给难读药名加上音素控制：会话式语音合成的发音改造",
+  "schemaVersion": 2
+}

@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.25259v1",
+  "arxivId": "2610.25259",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.25259v1",
+  "authors": [
+    {
+      "affiliations": [
+        "School of Informatics, Xiamen University, China"
+      ],
+      "name": "Kaidi Wang"
+    },
+    {
+      "affiliations": [
+        "School of Electronic Science and Engineering, Xiamen University, China"
+      ],
+      "name": "Wenhao Guan"
+    },
+    {
+      "affiliations": [
+        "School of Informatics, Xiamen University, China"
+      ],
+      "name": "Peijie Chen"
+    },
+    {
+      "affiliations": [
+        "School of Informatics, Xiamen University, China"
+      ],
+      "name": "Weijie Wu"
+    },
+    {
+      "affiliations": [
+        "School of Informatics, Xiamen University, China"
+      ],
+      "name": "Xuetao Lin"
+    },
+    {
+      "affiliations": [
+        "School of Electronic Science and Engineering, Xiamen University, China"
+      ],
+      "name": "Lin Li"
+    },
+    {
+      "affiliations": [
+        "School of Informatics, Xiamen University, China"
+      ],
+      "name": "Qingyang Hong"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.25259v1",
+  "originalTitle": "VoxDub: A Bilingual Lip-Synchronized Audio-Visual Dataset for Automatic Video Dubbing",
+  "pdfUrl": "https://arxiv.org/pdf/2610.25259v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

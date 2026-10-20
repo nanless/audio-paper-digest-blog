@@ -1,0 +1,51 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.24031v1",
+  "arxivId": "2610.24031",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.24031v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Faculty of Information Engineering and Automation, Kunming University of Science and Technology, Kunming, China"
+      ],
+      "name": "Chengxiang Guo"
+    },
+    {
+      "affiliations": [
+        "Faculty of Information Engineering and Automation, Kunming University of Science and Technology, Kunming, China"
+      ],
+      "name": "Jian Wang"
+    },
+    {
+      "affiliations": [
+        "Utrecht University, Utrecht, Netherlands",
+        "The Max Planck Institute for Psycholinguistics, Nijmegen, Netherlands"
+      ],
+      "name": "Lanmiao Liu"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University, Hangzhou, China"
+      ],
+      "name": "Zhan Tang"
+    },
+    {
+      "affiliations": [
+        "Faculty of Information Engineering and Automation, Kunming University of Science and Technology, Kunming, China"
+      ],
+      "name": "Junhua Fei"
+    },
+    {
+      "affiliations": [
+        "Faculty of Information Engineering and Automation, Kunming University of Science and Technology, Kunming, China"
+      ],
+      "name": "Xiao Li"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.24031v1",
+  "originalTitle": "SynerGest: Temporal-Spatial Synergistic Gesture Generation for Dyadic Conversations",
+  "pdfUrl": "https://arxiv.org/pdf/2610.24031v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,92 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.24031v1",
+  "abstract": "Co-speech gesture generation in dyadic conversations for creating immersive virtual avatars remains highly challenging. Existing models often struggle to balance kinematic stability with rhythmic responsiveness and suffer from semantic entanglement, leading to either generic mean-pose regression or unnatural micro-jitters. To address these challenges, we propose SynerGest, a high-fidelity dyadic gesture generation framework grounded in Contrastive Flow Matching (CFM). Specifically, our CFM objective explicitly penalizes mismatched semantic pairs during training, discouraging spatial shortcuts and over-smoothed predictions while improving conditional semantic alignment. Furthermore, to overcome architectural bottlenecks, we introduce the Impulse-Trend Synergistic Attention (ITSA) module. Grounded in the key insight of decoupling \"what moves\" from \"when it moves,\" ITSA models sharp, speech-driven rhythmic impulses separately from continuous kinematic trends, supporting precise audio-motion synchronization and global structural stability. Extensive qualitative and quantitative evaluations on two public datasets demonstrate that SynerGest achieves state-of-the-art performance, delivering contextually responsive and kinematically fluid dyadic interactions.",
+  "abstractSha256": "36d2e6cd69420ff93b4fffc6d878db343a5f64341649caa9fcbe3b687ed80030",
+  "arxivId": "2610.24031",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.24031v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "流匹配",
+    "primaryTask": "语音驱动手势生成",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-driven-gesture",
+          "label": "语音驱动手势生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "method",
+          "id": "method.contrastive",
+          "label": "对比学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.attention",
+          "label": "注意力机制"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "流匹配",
+      "primaryMethodId": "method.flow-matching",
+      "primaryTask": "语音驱动手势生成",
+      "primaryTaskId": "task.speech-driven-gesture",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Faculty of Information Engineering and Automation, Kunming University of Science and Technology, Kunming, China"
+      ],
+      "name": "Chengxiang Guo"
+    },
+    {
+      "affiliations": [
+        "Faculty of Information Engineering and Automation, Kunming University of Science and Technology, Kunming, China"
+      ],
+      "name": "Jian Wang"
+    },
+    {
+      "affiliations": [
+        "Utrecht University, Utrecht, Netherlands",
+        "The Max Planck Institute for Psycholinguistics, Nijmegen, Netherlands"
+      ],
+      "name": "Lanmiao Liu"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University, Hangzhou, China"
+      ],
+      "name": "Zhan Tang"
+    },
+    {
+      "affiliations": [
+        "Faculty of Information Engineering and Automation, Kunming University of Science and Technology, Kunming, China"
+      ],
+      "name": "Junhua Fei"
+    },
+    {
+      "affiliations": [
+        "Faculty of Information Engineering and Automation, Kunming University of Science and Technology, Kunming, China"
+      ],
+      "name": "Xiao Li"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "SynerGest 针对双人对话手势生成，用双路音频条件、对比流匹配和脉冲-趋势解耦注意力，在两个公开数据集上取得更好的运动真实感和节拍对齐，但结论只在原文的数据处理和基线适配条件下成立，且加速主要来自 8 步 ODE 而非注意力本身变快。",
+  "originalTitle": "SynerGest: Temporal-Spatial Synergistic Gesture Generation for Dyadic Conversations",
+  "pdfUrl": "https://arxiv.org/pdf/2610.24031v1.pdf",
+  "readerTitle": "双人对话手势生成：SynerGest 如何兼顾节奏与稳定",
+  "schemaVersion": 2
+}

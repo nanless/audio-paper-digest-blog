@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.24424v1",
+  "arxivId": "2610.24424",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.24424v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jessica Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Marcelo Beramendi Caballero"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ju-Chieh Chou"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Karen Livescu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.24424v1",
+  "originalTitle": "Toward a Universal Local Speech Feature Extractor Through Distillation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.24424v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

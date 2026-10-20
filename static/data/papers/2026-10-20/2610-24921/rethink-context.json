@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.24921v1",
+  "abstract": "Few-shot audio classification requires audio--language models to distinguish variable acoustic events from limited labeled data. PALM's main formulation adapts encoded class representations without changing pretrained encoders, but its class representations remain input-independent and classification uses audio features without class-conditioned refinement. We introduce DF-PALM, a dynamic feature-space prompting framework that combines audio-conditioned class representations with asymmetric cross-attention for audio refinement. Class representations are conditioned after text encoding, held fixed across fusion layers for each input, and reused for final scoring. Both pretrained encoders remain frozen, avoiding audio-conditioned text-encoder passes. With PENGI as the frozen backbone, the main 16-shot evaluation covered 11 benchmarks and six baselines. DF-PALM achieved 80.69% mean accuracy and 80.32% macro-averaged F1, exceeding PALM by 4.11 and 4.30 percentage points, respectively. Paired benchmark-level tests supported both gains after Holm correction. Across four shot settings, DF-PALM achieved the highest mean accuracy and macro-averaged F1 among the four evaluated prompt-learning methods. The gains extended to LAION-CLAP and OpenFLAM, with significant improvements over PALM in both metrics. At 50 candidate classes, operator-counted inference floating-point operations increased by 0.39% relative to PALM. These results support instance-conditioned feature-space adaptation as an effective approach to few-shot audio classification. Our code is publicly available at GitHub https://github.com/sunyulin0421/DF-PALM.",
+  "abstractSha256": "a8a9e5e629ad1551a3cb7e227fcb2a6bc6009e921a97dccc2601c2ad42183024",
+  "arxivId": "2610.24921",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.24921v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "提示学习",
+    "primaryTask": "音频分类",
+    "rankBucket": "前25%",
+    "score": 7.9,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.prompt-learning",
+          "label": "提示学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.few-shot",
+          "label": "少样本"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "提示学习",
+      "primaryMethodId": "method.prompt-learning",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yulin Sun"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shenghua Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yong Dou"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xinwang Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Cheng Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kele Xu"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "DF-PALM 针对少样本音频分类中同一事件录音差异大的问题，在冻结 PENGI 等编码器后对编码后类别表示做音频条件残差调节并用其精炼音频特征，在 11 个基准 16 样本主评测上平均准确率 80.69% 和宏平均 F1 值 80.32%，而 50 类时算子统计推理浮点运算量比 PALM 增加 0.39%。",
+  "originalTitle": "DF-PALM: Dynamic Fusion Prompt Learning for Audio--Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2610.24921v1.pdf",
+  "readerTitle": "DF-PALM：给音频语言模型的类别表示加上随样本变化的动态融合",
+  "schemaVersion": 2
+}

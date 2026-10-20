@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.24696v1",
+  "abstract": "Modern hearing aids combine noise reduction (NR) with wide dynamic range compression (WDRC) to suppress background interference while compensating for the reduced auditory dynamic range associated with hearing loss. Conventional systems typically process NR and WDRC as separate stages, although the output of NR directly affects the signal levels and envelopes that determine subsequent compression. Recent end-to-end neural approaches can jointly optimize these processes, but their dense computation remains challenging for always-on hearing aids. In this work, we propose SpikeAid, a causal end-to-end spiking neural network (SNN) framework for joint NR and WDRC. SpikeAid consists of an NR-Net that constructs complementary speech and noise representations and a WDRC-Net that estimates the corresponding branch gains, with both components jointly optimized according to the final hearing aid objective. To capture the multiscale temporal structures required by joint NR and WDRC in a computationally efficient manner, we further introduce the Delayed Resonate-and-fire Neuron (DRN), which incorporates bio-inspired heterogeneous dendritic delays and resonating dynamics. Experimental results on the hearing aid task show that SpikeAid improves key objective metrics over cascaded processing and outperforms existing spiking speech-processing baselines. Evaluation on the public Intel Neuromorphic Deep Noise Suppression (N-DNS) Challenge further demonstrates state-of-the-art neuromorphic speech-denoising performance with DRN. Finally, we designed an FPGA-based neuromorphic hardware system for efficient deployment of SpikeAid, where it achieves over two orders of magnitude higher energy efficiency than conventional CPU/GPU implementations, demonstrating its potential for energy-efficient hearing aid applications.",
+  "abstractSha256": "ab17a34eba0b3020c695334cf91099e9ef7a0d5aeaf9814644507aec2f3f0b16",
+  "arxivId": "2610.24696",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.24696v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "脉冲神经网络",
+    "primaryTask": "语音增强",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-enhancement",
+          "label": "语音增强"
+        },
+        {
+          "facet": "method",
+          "id": "method.spiking-neural-network",
+          "label": "脉冲神经网络"
+        },
+        {
+          "facet": "application",
+          "id": "application.hearing-aids",
+          "label": "助听器"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "脉冲神经网络",
+      "primaryMethodId": "method.spiking-neural-network",
+      "primaryTask": "语音增强",
+      "primaryTaskId": "task.speech-enhancement",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xiang Hao"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xinyi Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hanwen Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jibin Wu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Richard Hau Yue So"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kay Chen Tan"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "SpikeAid 针对噪声下助听既要降噪又要按压缩曲线放大的耦合问题，用 NR-Net 做语音噪声分支表征、WDRC-Net 估计分支增益并联合优化，以 DRN 神经元兼顾快瞬态和慢包络，在固定压缩配置和离线构造目标下提升目标一致性和感知指标，并以 FPGA 流式实现换来能效提升。",
+  "originalTitle": "SpikeAid: A Streaming Spiking Hearing Aid Framework for Joint Noise Reduction and Wide Dynamic Range Compression",
+  "pdfUrl": "https://arxiv.org/pdf/2610.24696v1.pdf",
+  "readerTitle": "SpikeAid：把降噪和宽动态压缩一起学完的流式脉冲助听框架",
+  "schemaVersion": 2
+}

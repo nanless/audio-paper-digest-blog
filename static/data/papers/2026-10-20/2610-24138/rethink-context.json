@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.24138v1",
+  "abstract": "Video-mediated conversational systems rely on synchronized speech and facial video, making audio--visual input integrity important for reliable perception. We study audio-frontend design in a fixed MRDF (Modality-Regularization-based DeepFake)-based pipeline with AV-HuBERT visual processing and an MSCT (multi-scale cross-modal transformer) fusion encoder. We compare spectrogram-style log-filterbank features with frozen wav2vec~2.0 and WavLM representations, dual-SSL fusion, executed depth, and shallow-layer aggregation. Across three training runs, full wav2vec~2.0 improves mean macro AUROC from $84.19\\%$ to $87.19\\%$ on generator-disjoint MMDF. Six-layer execution further improves detection, and learned non-uniform aggregation adds $2.53$ percentage points, reaching $90.61\\%$. Shallow execution reduces measured inference latency relative to full-depth wav2vec~2.0 across the tested input durations; first-second evaluation reaches $86.85\\%$ macro AUROC. In a single-run comparison, dual-SSL concatenation outperforms either single stream, while one-way cross-attention yields lower detection performance and higher latency than concatenation. Layer-weight analysis shows greater emphasis on early speech layers, while removing the selector's visual input has little effect on detection performance.",
+  "abstractSha256": "65460a153e1640aac4967c41d241f13a59f0443daa3b00ac4c4ab80894cf9691",
+  "arxivId": "2610.24138",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.24138v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "自监督学习",
+    "primaryTask": "视频伪造检测与溯源",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.video-forgery-detection-attribution",
+          "label": "视频伪造检测与溯源"
+        },
+        {
+          "facet": "method",
+          "id": "method.self-supervised",
+          "label": "自监督学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.real-time",
+          "label": "实时处理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "自监督学习",
+      "primaryMethodId": "method.self-supervised",
+      "primaryTask": "视频伪造检测与溯源",
+      "primaryTaskId": "task.video-forgery-detection-attribution",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Luqia Technologies"
+      ],
+      "name": "Qiwu Wen"
+    },
+    {
+      "affiliations": [
+        "Luqia Technologies"
+      ],
+      "name": "Jahangir Alam"
+    },
+    {
+      "affiliations": [
+        "Luqia Technologies"
+      ],
+      "name": "Eric Charton"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "在固定检测器下比较对数滤波器组与冻结语音自监督表示，六层加权浅层执行在生成器不相交测试上平均达到 90.61% 宏 AUROC，并在长输入上降低推理延迟。",
+  "originalTitle": "From Spectrograms to Shallow Speech SSL: Audio-Frontend Design for Generator-Disjoint and Low-Latency Audio--Visual Deepfake Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2610.24138v1.pdf",
+  "readerTitle": "浅层语音表示怎么做音画伪造检测的音频前端",
+  "schemaVersion": 2
+}

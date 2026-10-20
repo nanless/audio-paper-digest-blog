@@ -1,0 +1,102 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.25766v1",
+  "abstract": "LLM-based ASR systems often replace rare and out-of-vocabulary (OOV) words with familiar words that sound similar. Two factors contribute to this error: the model has not learned how an unseen word's sound maps to its spelling, and it may favor a familiar word over the one spoken, a failure we call prior suppression. Providing candidate pronunciations alone may not help: the model can treat a phoneme annotation as a marker that raises a candidate's output probability without checking its pronunciation against the speech. We propose PronCFT, which uses fixed phoneme sequences and trains the model to transcribe speech into phonemes, match them to context candidates, and output the matched spelling. During training, we alter candidate spellings while keeping their pronunciations unchanged, discouraging the model from choosing a familiar spelling without checking how the candidate sounds. A curriculum then gradually removes intermediate outputs to reduce decoding latency and prevent phoneme transcription errors from affecting the final text. The model's retained ability to use pronunciation cues suggests that this ability can be internalized. On an OOV test set filtered from open-source benchmarks, the final model, PronCFT-C, significantly improves recall from 59.89% to 83.57% (+23.68 pp). Wrong-phoneme and spelling-interference tests indicate that the gain depends on phoneme content rather than the presence of an annotation.",
+  "abstractSha256": "f43ec34e72240455c94b7e561accd500cf3767bf9e1cf6d25a4c7e9bc3273446",
+  "arxivId": "2610.25766",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.25766v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "SFT",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.sft",
+          "label": "SFT"
+        },
+        {
+          "facet": "method",
+          "id": "method.curriculum",
+          "label": "课程学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.speech",
+          "label": "语音大模型"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "SFT",
+      "primaryMethodId": "method.sft",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Yifan Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Kaixun Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Mengzhe Geng"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Mingyu Cui"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Shen Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Shidong Shang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Xunying Liu"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对大模型语音识别把未登录词听成常见同音词的问题，PronCFT 用固定的候选发音序列做监督，训练模型先转写发音再匹配候选拼写，在合并的未登录词测试上把召回从 59.89% 提高到 83.57%，而通用词错误率基本不变。",
+  "originalTitle": "PronCFT: Pronunciation Contextual Fine-Tuning for Contextual Biasing of Out-of-Vocabulary Words in LLM-Based ASR",
+  "pdfUrl": "https://arxiv.org/pdf/2610.25766v1.pdf",
+  "readerTitle": "发音证据如何帮助大模型识别生僻词：PronCFT 解读",
+  "schemaVersion": 2
+}

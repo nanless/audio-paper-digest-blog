@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.24622v1",
+  "abstract": "Native real-time audio engines meet audio deadlines but are hard to connect to machine-learning workflows, while tensor frameworks integrate with machine learning but process audio as offline batches without timing guarantees; runtime layers built on them inherit the host's scheduling and deployment footprint. This paper presents Fluxion, a Rust audio DSP runtime for cascaded second-order sections, FIR filters, and delay-line effects. Fluxion implements the parts that are specific to DSP: closed-form filter design, forward kernels, analytic adjoints for the recursion, and stability checks. It relies on existing libraries for the autodiff graph, GPU code generation (tested here on CUDA), and array interchange. One graph algebra is lowered to a differentiable training engine and to an allocation-free real-time engine; between them, a trained graph is checked for stability and frozen into a versioned artifact that an edge device checks again before playback. We compare Fluxion with six framework-hosted and native baselines under one float32 protocol. Among the systems that compute the exact recursion, Fluxion has the highest GPU throughput when data stays on the device and the highest throughput on most CPU workloads, while its CPU training step is slower than those of torchaudio and GRAFX. Its test suite checks the audio thread for allocations with an instrumented allocator, and we report measured latency tails. Fluxion is open source at \\url{https://github.com/matteospanio/fluxion}.",
+  "abstractSha256": "010d5d8927e2acee5f1094bf6644f38bf8e1903e0c9c97b53f19806f67a0fb52",
+  "arxivId": "2610.24622",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.24622v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "编译与语义保持变换",
+    "primaryTask": "音频处理程序编译",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-software-compilation",
+          "label": "音频处理程序编译"
+        },
+        {
+          "facet": "method",
+          "id": "method.compiler-design",
+          "label": "编译与语义保持变换"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.real-time",
+          "label": "实时处理"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.on-device",
+          "label": "端侧运行"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "编译与语义保持变换",
+      "primaryMethodId": "method.compiler-design",
+      "primaryTask": "音频处理程序编译",
+      "primaryTaskId": "task.audio-software-compilation",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Matteo Spanio"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Antonio Rodà"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "Fluxion 用一套图表示同时驱动可微训练引擎和免分配实时引擎，中间经稳定性检查与冻结传递参数，在精确递归滤波的吞吐和边缘部署体积上占优，但 CPU 单步训练仍慢于 torchaudio 与 GRAFX。",
+  "originalTitle": "Fluxion: A Differentiable DSP Runtime from Training GPU to Real-Time Edge",
+  "pdfUrl": "https://arxiv.org/pdf/2610.24622v1.pdf",
+  "readerTitle": "Fluxion：把可微滤波器训练与实时音频部署装进同一个 DSP 运行时",
+  "schemaVersion": 2
+}

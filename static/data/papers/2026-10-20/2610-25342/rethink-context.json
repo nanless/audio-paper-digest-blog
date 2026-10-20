@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.25342v1",
+  "abstract": "General-purpose self-supervised speech encoders provide strong acoustic representations, but their pretraining objectives are not explicitly aligned with the visible articulatory dynamics required by speech-driven 3D facial animation. We propose CASE (Complementary Articulation-aware Speech Encoder), a complementary speech encoder adapted by contrastively aligning short speech clips with continuous 3D lip-mesh VQ-VAE latents. After adaptation, the geometry branch is removed, and the audio-only CASE representation is fused with the baseline SSL speech representation through residual cross-attention, while retaining the motion-decoder architecture and objective. Across four VOCASET baselines, CASE reduces mean lip vertex error by 2.8-6.0%, and mean full-face vertex error decreases in every system. Under the same fusion protocol, CASE yields lower mean LVE than the unadapted AV-SE stream on all four generators, with model-dependent margins. Because adaptation uses Korean speech-geometry pairs and evaluation uses English VOCASET, the result is consistent with cross-language downstream transfer under a shared English-pretrained audio-visual prior.",
+  "abstractSha256": "4d1b2b26e22d5349f4e6d81509b0a20c73908443358f8462637dadfaa65f5a3a",
+  "arxivId": "2610.25342",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.25342v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "对比学习",
+    "primaryTask": "音频驱动三维对象生成",
+    "rankBucket": "前50%",
+    "score": 5.9,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-driven-3d-generation",
+          "label": "音频驱动三维对象生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.contrastive",
+          "label": "对比学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "对比学习",
+      "primaryMethodId": "method.contrastive",
+      "primaryTask": "音频驱动三维对象生成",
+      "primaryTaskId": "task.audio-driven-3d-generation",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jaehong Myung"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Seungho Eum"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Taegon Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hyunjung Chung"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Unsang Park"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对通用语音编码器缺少可见发音几何约束的问题，CASE 用韩语语音-唇部网格对做短片段对比适配，再以残差交叉注意力把纯音频互补特征注入四种原有动画生成器，在英文 VOCASET 上把唇部顶点误差平均降低 2.8-6.0%，代价是增加约 132-135 MB 显存和额外端到端延迟。",
+  "originalTitle": "CASE: Complementary Articulation-Aware Speech Encoder to Enhance Speech-Driven 3D Facial Animation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.25342v1.pdf",
+  "readerTitle": "CASE：给语音驱动 3D 人脸动画补上嘴部几何感知的语音编码器",
+  "schemaVersion": 2
+}

@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.25394v1",
+  "abstract": "Conditional-flow text-to-speech (TTS) models can achieve high synthesis quality with relatively few sampling steps, but collapsing the remaining trajectory to a single update can still cause substantial quality degradation. We propose MixiSpeech, a progressive state distillation framework that converts a multi-step conditional-flow acoustic model into a one-step generator while preserving its architecture and speaker conditioning. Rather than training the one-step model directly, MixiSpeech progressively reduces the global sampling budget through a 10-4-2-1 curriculum, with each student trained to match local teacher-integration endpoints using a masked state-matching objective. We instantiate the framework on a 710-speaker Vietnamese Matcha-TTS model trained from scratch on PhoAudiobook. On 100 shared test text-speaker pairs, direct one-step inference substantially degrades synthesis quality, obtaining 1.6846 UTMOS22-Strong and 6.21% WER compared with 2.2923 and 4.65% for the 10-step teacher. In contrast, the distilled one-step model achieves 2.2678 UTMOS22-Strong, 4.63% WER, and 2.83% CER, recovering most of the quality lost at the one-step operating point while requiring only a single acoustic vector-field evaluation. End-to-end inference time decreases from 0.0662 s for the 10-step teacher to 0.0312 s for MixiSpeech, corresponding to a 2.12 measured speedup. These results show that progressive state distillation can make one-step conditional-flow TTS practical without relying on a large multi-step sampling budget. Project page: https://mixispeech.solanai.us/",
+  "abstractSha256": "e5a62e03c5ffad3efb69c99613902971d00b177e56eff9db329d816f3dae012c",
+  "arxivId": "2610.25394",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.25394v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "知识蒸馏",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "知识蒸馏",
+      "primaryMethodId": "method.distillation",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Tran Quoc Bao Le"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Binh Mai"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Hung Dinh"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Lam Nguyen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Cong Tran"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对越南语多说话人条件流声学模型直接一步采样质量崩溃的问题，MixiSpeech 用 10→4→2→1 课程让一步学生拟合冻结教师的局部积分终点，在 100 组共享文本-说话人评测上恢复到接近 10 步教师的质量，而声学向量场评估降为 1 次、端到端耗时从 0.0662 s 降到 0.0312 s。",
+  "originalTitle": "MixiSpeech: Progressive State Distillation for One-Step Vietnamese TTS",
+  "pdfUrl": "https://arxiv.org/pdf/2610.25394v1.pdf",
+  "readerTitle": "把十步声学采样压成一步：MixiSpeech 的渐进状态蒸馏",
+  "schemaVersion": 2
+}

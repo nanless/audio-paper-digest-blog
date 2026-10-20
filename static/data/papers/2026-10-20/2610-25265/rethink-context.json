@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.25265v1",
+  "abstract": "Speech anonymization has focused on the acoustic signal, leaving open how much speaker information the transcribed words themselves retain. In this work, we study pairwise speaker and demographic-attribute verification from transcribed speech. We introduce SPARC (Spoken Profile Authorship Recognition Corpus), a benchmark built from two podcast corpora comprising over 12,500 speakers, 1.5M quality-filtered utterances, and speaker-level inferred or source-provided labels for sex, age, and accent, and evaluate five attribution models and three LLMs on identity- and attribute-verification trials with episode- and metadata-based topic proxies. LLM adversaries distinguish same-speaker pairs from text alone. Attribute-label agreement is harder to verify, but LLMs perform sex- and accent-label verification above chance. Finally, releasing only short probe texts (50 words) degrades the strongest adversaries the most, offering a partial reduction in observed linkage.",
+  "abstractSha256": "9f10d377d6e4f05933cd14c20ca910074de2bd67051f9265df81e4022fad9b04",
+  "arxivId": "2610.25265",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.25265v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "音频隐私攻击与防御",
+    "rankBucket": "前50%",
+    "score": 6.4,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.privacy-attack-defense",
+          "label": "音频隐私攻击与防御"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "task",
+          "id": "task.speaker-verification",
+          "label": "说话人验证"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "音频隐私攻击与防御",
+      "primaryTaskId": "task.privacy-attack-defense",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Efthymios Tsaprazlis"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Bowen Yi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Tiantian Feng"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Junghwan Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "David Jurgens"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shrikanth Narayanan"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "SPARC 把播客语音转成文字后构造同一说话人与性别口音标签的成对验证，发现大语言模型在跨播客条件下仍能关联说话人，而缩短待测文本只能部分降低这种关联。",
+  "originalTitle": "SPARC: Spoken Profile Authorship Recognition Corpus",
+  "pdfUrl": "https://arxiv.org/pdf/2610.25265v1.pdf",
+  "readerTitle": "去掉声音后文字还能认出谁在说话吗：SPARC 评测解读",
+  "schemaVersion": 2
+}

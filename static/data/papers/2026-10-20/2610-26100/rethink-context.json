@@ -1,0 +1,72 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.26100v1",
+  "abstract": "Answering machine detection (AMD) is a fundamental task in telephony that classifies whether an answered call is picked up by a human or a voicemail (machine). Despite its widespread use across cloud communication platforms, existing approaches rely on proprietary systems with undisclosed architectures, or require computationally expensive models that cannot operate in real time. We propose a lightweight AMD system that combines pretrained audio embeddings with gradient boosting machines, trained to prioritize the correct detection of human-answered calls. We evaluate seven models across two datasets: three models that we propose, a proprietary industry model, two prior academic approaches, and a large language model baseline that relies on automatic speech recognition. Furthermore, we release OpenAMD, the first publicly available AMD dataset comprising of more than 500 recordings in 7 languages. Our best model achieves the highest precision across both datasets while maintaining low inference latency. We assess the robustness of models to additive noise and packet loss, and perform tests of statistical significance to discover per-language and per-gender model performance. Finally, we evaluate our model on an out-of-domain task of detecting robocalls, where it achieves 94.34% recall without any additional training, which is comparable to the industry standard.",
+  "abstractSha256": "62805f62be2e1769ea090be4bf88d0e6533da1c9b1939f5af1fc1fa1f467eeb0",
+  "arxivId": "2610.26100",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.26100v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "集成学习",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 6.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.ensemble-learning",
+          "label": "集成学习"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.real-time",
+          "label": "实时处理"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "集成学习",
+      "primaryMethodId": "method.ensemble-learning",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kemal Altwlkany"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Muamer Paric"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文把应答机检测做成二分类，用冻结的 CNN6 输出 512 维嵌入再接轻量梯度提升机，在两个数据集上都拿到最高精确率并保持毫秒级延迟，代价是抗加性噪声较弱且结论依赖特定的数据划分与统计条件。",
+  "originalTitle": "Multilingual Voicemail and Answering Machine Detection via Pretrained Audio Embeddings and Gradient Boosting Machines",
+  "pdfUrl": "https://arxiv.org/pdf/2610.26100v1.pdf",
+  "readerTitle": "电话接通后是谁在说话：用冻结音频嵌入加梯度提升做多语言留言检测",
+  "schemaVersion": 2
+}

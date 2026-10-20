@@ -1,0 +1,66 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.25371v1",
+  "abstract": "People look up a song by humming it, but also by whistling it or singing it with the wrong words. Published query-by-humming systems and benchmarks focus on hums and sung queries, and no public dataset pairs whistles or wrong-lyrics singing with song recordings. We study both query types with a melody-only retrieval system: a key-normalized pitch track embedded by a 5.2M-parameter contour encoder, with a spectral-peak tracker for whistles. First, a physics-grounded generator renders synthetic whistles and nonsense-syllable singing from the vocal melodies of 11,083 songs. Training on them raises top-1 retrieval of held-out synthetic queries against an 11,050-song gallery from 0.180 to 0.251 for whistles and from 0.193 to 0.264 for wrong-lyrics singing, but the gain does not transfer: on the MLEnd test performers the best synthetic-only model gets 210 of 339 real whistles right at top-1, against 214 for the baseline. Second, a closed-set fine-tune on real MLEnd whistles with performer-disjoint splits raises whistle-to-hum top-1 from 0.631 (95% CI 0.581-0.681) to 0.673 (0.622-0.723), on known songs only. Third, two further generations of synthetic queries also fail to transfer: melody-conditioned whistles and la-la singing from a commercial neural music model leave real-whistle top-1 at 0.631, and an open-source pipeline (YingMusic-Singer-Plus singing with partly wrong, mumbled or nonsense lyrics, a DDSP whistle synthesizer, and a melody-error model fitted on real performers) gives at best 0.619 (paired difference -0.012, 95% CI -0.038 to +0.015). Across physics-based, commercial neural and open-source neural synthetic data, nothing transferred to real whistles, which points to collecting real queries as the missing step. Code is public; models and data will be released.",
+  "abstractSha256": "0116f1ab05fc5763a87e77af496bfcaab0004aa0e0ee0f3e0c72339c2a5d97c6",
+  "arxivId": "2610.25371",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.25371v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "数据增强",
+    "primaryTask": "音乐检索",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-retrieval",
+          "label": "音乐检索"
+        },
+        {
+          "facet": "method",
+          "id": "method.augmentation",
+          "label": "数据增强"
+        },
+        {
+          "facet": "method",
+          "id": "method.contrastive",
+          "label": "对比学习"
+        },
+        {
+          "facet": "task",
+          "id": "task.pitch-melody",
+          "label": "音高与旋律提取"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "数据增强",
+      "primaryMethodId": "method.augmentation",
+      "primaryTask": "音乐检索",
+      "primaryTaskId": "task.music-retrieval",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Independent Researcher"
+      ],
+      "name": "Luigi Rivolta"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文用只看旋律的轮廓检索系统研究口哨和错词演唱两种查询，三代合成查询把合成集首位命中率提高约 7 个百分点却都没有改善真实口哨，而在已知 8 首歌的封闭集内用真实口哨微调才从 0.631 提高到 0.673。",
+  "originalTitle": "Whistle and Wrong Lyrics: Synthetic Queries Are Not Enough for Real-World Query-by-Melody",
+  "pdfUrl": "https://arxiv.org/pdf/2610.25371v1.pdf",
+  "readerTitle": "口哨和唱错词也能找歌吗：合成查询为何救不了真实口哨检索",
+  "schemaVersion": 2
+}

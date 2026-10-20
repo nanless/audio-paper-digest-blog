@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.26253v1",
+  "abstract": "Music structure analysis (MSA) aims to identify functional labels and their boundaries in music. Despite recent progress, three challenges remain. First, fine-grained annotations for MSA are scarce. Second, existing systems often share one encoder between boundary detection and functional labeling despite their different information requirements. Third, most end-to-end systems are audio-only and ignore structural cues from lyrics. To address these issues, we construct SheetSage-MSA, an MSA dataset derived from SheetSage, containing 13,880 cleaned excerpt annotations from 9,010 songs and approximately 82.5 hours of annotated audio. We further propose SCALE (Structural Context from Audio and Lyric Evidence), which uses separate task-specific audio pathways to model local transitions and long-range structural context, and incorporates timestamped lyrics and lyrical recurrence to refine chorus predictions. On the HarmonixSet benchmark, SCALE outperforms the existing state-of-the-art SongFormer by 3.5 and 4.2 percentage points in HR.5F and HR3F, respectively, while improving ACC by 0.9 points. An interactive demo page containing the source code is also available at https://multimodal-music-research-lab.github.io/SCALE/.",
+  "abstractSha256": "edb1c68ac4d79233f97a727db1b1627fb410101944b54c97dcdaf911c450c475",
+  "arxivId": "2610.26253",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.26253v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "音乐结构分析",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-structure-analysis",
+          "label": "音乐结构分析"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "音乐结构分析",
+      "primaryTaskId": "task.music-structure-analysis",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hongbing Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yaolong Ju"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文针对结构标注少、边界与功能标签需求不同、纯音频忽略歌词的问题，用部分标注的 SheetSage-MSA 补充训练，并用边界、功能、歌词三条通路分别建模，在 SongFormBench-HX 上提高边界召回与标签准确，但仍受标注口径不一致和同功能重复段边界难召回的限制。",
+  "originalTitle": "Structural Context from Audio and Lyric Evidence for Music Structure Analysis Using the New SheetSage-MSA Dataset",
+  "pdfUrl": "https://arxiv.org/pdf/2610.26253v1.pdf",
+  "readerTitle": "音频加歌词如何共同判断歌曲结构：SCALE 与 SheetSage-MSA 解读",
+  "schemaVersion": 2
+}

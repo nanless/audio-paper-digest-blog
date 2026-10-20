@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.25892v1",
+  "arxivId": "2610.25892",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.25892v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zezhong Jin"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xiaoyu Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhe Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Chong-Xin Gan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Siqing Qin"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Man-Wai Mak"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kong Aik Lee"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.25892v1",
+  "originalTitle": "Manifold-Constrained Residual Adaptation with Frame-Adaptive Layer Aggregation for Speaker Verification",
+  "pdfUrl": "https://arxiv.org/pdf/2610.25892v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

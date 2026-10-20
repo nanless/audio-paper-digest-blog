@@ -1,0 +1,20 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.24578v1",
+  "arxivId": "2610.24578",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.24578v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Electrical engineering department, Information Technology University (ITU), Lahore, Pakistan."
+      ],
+      "name": "Muhammad Mahboob Ur Rahman"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.24578v1",
+  "originalTitle": "Passive Smartphone-Microphone Phonocardiography for Joint Maternal-Fetal Cardiac Well-Being Monitoring: A Longitudinal Self-Recorded Case Study in Late Pregnancy",
+  "pdfUrl": "https://arxiv.org/pdf/2610.24578v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

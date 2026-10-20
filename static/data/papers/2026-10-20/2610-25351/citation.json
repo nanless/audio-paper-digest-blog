@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.25351v1",
+  "arxivId": "2610.25351",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.25351v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Bi-Cheng Yan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jhih-Rong Guo"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Fu-An Chao"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Berlin Chen"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.25351v1",
+  "originalTitle": "Probing and Mitigating Hallucinations in Speech-augmented Language Models for Automatic Speech Recognition via Small Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2610.25351v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

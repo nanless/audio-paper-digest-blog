@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.24108v1",
+  "arxivId": "2610.24108",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.24108v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yi Fang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Gaurav Srivastava"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Sirui Ding"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xuan Wang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.24108v1",
+  "originalTitle": "Joint, Decoupled, or Agent: When Each Multimodal Alignment Paradigm Wins",
+  "pdfUrl": "https://arxiv.org/pdf/2610.24108v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

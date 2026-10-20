@@ -1,0 +1,109 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.24791v1",
+  "abstract": "Unified audio-video creation requires a single model capable of text-conditioned joint synthesis, bidirectional cross-modal generation, and instruction-guided editing across both modalities. Existing methods rely heavily on paired corpora, which are scarce for joint generation and even rarer for editing. Consequently, they are spent learning single-branch generative and editing capabilities that abundant unimodal data could readily teach, rather than on the cross-modal coupling. Furthermore, prevailing systems apply a single shared noise schedule to both modalities, neglecting two critical limitations. First, due to the significant discrepancy in information density, video requires prolonged high noise to organize spatial and motion structure, whereas the sparser audio signal can settle earlier during the synthesis process, the dynamics a uniform schedule might compromise. Second, lockstep denoising leaves asymmetric workflows, such as conditioning on one modality to synthesize or edit another, untrained. We present UniAVC, which addresses both obstacles. It first trains each branch on unimodal dataset to full generative and editing competence, and subsequently dedicates paired data to exploit cross-modal correspondence. Modality-decoupled schedulers meanwhile warp the noise schedule independently from a shared timestep, while subtasks with one clean modality directly supervise asymmetric configurations. These settings respectively enable intent-aware editing, which preserves one modality intact while enlisting it to constrain the other, and post-inference self-refinement, which regenerates only an unsatisfactory branch against an accepted one. UniAVC thus spans multiple creation tasks from a single set of weights without task-specific adapters.",
+  "abstractSha256": "58b80da085672587d469783cc04c2c53025e3ae6c7bc4ba9d91e67300af98daf",
+  "arxivId": "2610.24791",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.24791v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "扩散模型",
+    "primaryTask": "音视频生成",
+    "rankBucket": "前50%",
+    "score": 6.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-generation",
+          "label": "音视频生成"
+        },
+        {
+          "facet": "task",
+          "id": "task.video-to-audio",
+          "label": "视频到声音生成"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-driven-video",
+          "label": "音频驱动视频生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.diffusion",
+          "label": "扩散模型"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "扩散模型",
+      "primaryMethodId": "method.diffusion",
+      "primaryTask": "音视频生成",
+      "primaryTaskId": "task.av-generation",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "HKUST"
+      ],
+      "name": "Kien T. Pham"
+    },
+    {
+      "affiliations": [
+        "Huawei Research"
+      ],
+      "name": "Yuhao Liu"
+    },
+    {
+      "affiliations": [
+        "Huawei Research"
+      ],
+      "name": "Chong Hou Choi"
+    },
+    {
+      "affiliations": [
+        "HKUST"
+      ],
+      "name": "Zhenqi He"
+    },
+    {
+      "affiliations": [
+        "HKUST"
+      ],
+      "name": "Yanghao Wang"
+    },
+    {
+      "affiliations": [
+        "Huawei Research"
+      ],
+      "name": "Chenyang Lei"
+    },
+    {
+      "affiliations": [
+        "Huawei Research"
+      ],
+      "name": "Rui Liu"
+    },
+    {
+      "affiliations": [
+        "HKUST"
+      ],
+      "name": "Qifeng Chen"
+    },
+    {
+      "affiliations": [
+        "HKUST"
+      ],
+      "name": "Long Chen"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "UniAVC 先在单模态数据上练好视频和音频各自的生成与编辑能力再冻结主干、只用少量配对数据训练跨模态桥，并用两条不对称噪声轨迹加干净分支子任务支持联合生成、跨模态生成与指令编辑，最强证据来自联合编辑与跨模态基准上的可比结果，代价是两阶段大算量与双流全轨迹推理开销。",
+  "originalTitle": "UniAVC: Unified Audio-Video Creation via Progressive Training and Asymmetric Scheduling",
+  "pdfUrl": "https://arxiv.org/pdf/2610.24791v1.pdf",
+  "readerTitle": "UniAVC：用分阶段训练与不对称调度统一音视频生成与编辑",
+  "schemaVersion": 2
+}

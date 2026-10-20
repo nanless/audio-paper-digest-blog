@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.25533v1",
+  "abstract": "Any-to-any generation seeks a single model that translates flexibly among text, image, and audio, yet existing approaches either require fully aligned multimodal tuples or a shared representation that suppresses modality-specific structure. We introduce Modaliff, a novel token-based diffusion model that learns from widely available bimodal pairs while preserving each modality in its native latent sequence. Modaliff assembles conditions and targets into a unified token sequence, with per-token attributes to disambiguate token identities and role-based positional embedding to preserve each modality's internal structure across sequence layouts. This design enables a single denoiser to support diverse generation tasks without task-specific architectural changes or a shared cross-modal latent space. Beyond one-to-one generation, Modaliff supports multiple conditions either by combining single-condition predictions at inference or by lightweight finetuning on captions that jointly describe multiple inputs. Experiments across text, image, and audio show that Modaliff achieves the best fidelity among any-to-any models on most generation tasks while using substantially fewer parameters and training data.",
+  "abstractSha256": "2c8fb253ba6ab7ec7a7bb28ed81176d32321a01520f798ba0b0f4934c38e9996",
+  "arxivId": "2610.25533",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.25533v1",
+  "assessment": {
+    "documentType": "模型报告",
+    "primaryMethod": "扩散模型",
+    "primaryTask": "音频生成",
+    "rankBucket": "前50%",
+    "score": 6.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-generation",
+          "label": "音频生成"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-captioning",
+          "label": "音频字幕生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.diffusion",
+          "label": "扩散模型"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "扩散模型",
+      "primaryMethodId": "method.diffusion",
+      "primaryTask": "音频生成",
+      "primaryTaskId": "task.audio-generation",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Duc Kieu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kien Do"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Minh Khoa Le"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Tung Kieu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Dang Nguyen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Thin Nguyen"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "Modaliff 把条件和目标拼成一条统一令牌序列做去噪，只用双模态对子训练就支持任意方向生成，在多数任务上取得较好的保真度，但结论依赖紧凑语义隐空间和固定评测集。",
+  "originalTitle": "Modaliff: A Unified Token Diffusion Model for Any-to-Any Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.25533v1.pdf",
+  "readerTitle": "Modaliff：用统一令牌序列做文本图像音频互转",
+  "schemaVersion": 2
+}

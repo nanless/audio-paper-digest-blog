@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.24409v1",
+  "arxivId": "2610.24409",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.24409v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Carnegie Mellon University"
+      ],
+      "name": "Jaeyeon Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Chao-Han Huck Yang"
+    },
+    {
+      "affiliations": [
+        "Carnegie Mellon University"
+      ],
+      "name": "Luoyi Zhang"
+    },
+    {
+      "affiliations": [
+        "Carnegie Mellon University"
+      ],
+      "name": "Chan-Jan Hsu"
+    },
+    {
+      "affiliations": [
+        "Carnegie Mellon University"
+      ],
+      "name": "Fernando Ruiloba Portilla"
+    },
+    {
+      "affiliations": [
+        "Carnegie Mellon University"
+      ],
+      "name": "Jinchuan Tian"
+    },
+    {
+      "affiliations": [
+        "Carnegie Mellon University"
+      ],
+      "name": "Shinji Watanabe"
+    },
+    {
+      "affiliations": [
+        "Carnegie Mellon University"
+      ],
+      "name": "Carlos Busso"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.24409v1",
+  "originalTitle": "Long Listening Thoughts: Eliciting Open Auditory Reasoning with Deliberative Perception and Cognitive Refinement",
+  "pdfUrl": "https://arxiv.org/pdf/2610.24409v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

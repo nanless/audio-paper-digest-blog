@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.25766v1",
+  "arxivId": "2610.25766",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.25766v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Yifan Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Kaixun Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Mengzhe Geng"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Mingyu Cui"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Shen Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Shidong Shang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Xunying Liu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.25766v1",
+  "originalTitle": "PronCFT: Pronunciation Contextual Fine-Tuning for Contextual Biasing of Out-of-Vocabulary Words in LLM-Based ASR",
+  "pdfUrl": "https://arxiv.org/pdf/2610.25766v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

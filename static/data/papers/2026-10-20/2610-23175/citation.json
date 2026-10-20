@@ -1,0 +1,46 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.23175v1",
+  "arxivId": "2610.23175",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.23175v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University",
+        "Nanyang Technological University"
+      ],
+      "name": "Zehui Feng"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Weichuan Wang"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Xiaohan Chen"
+    },
+    {
+      "affiliations": [
+        "Nanyang Technological University"
+      ],
+      "name": "Cuntai Guan"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University",
+        "Zhejiang University"
+      ],
+      "name": "Ting Han"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.23175v1",
+  "originalTitle": "Do Speech BCIs Need Larger Models? Rethinking Neural Decoding beyond Scaling",
+  "pdfUrl": "https://arxiv.org/pdf/2610.23175v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

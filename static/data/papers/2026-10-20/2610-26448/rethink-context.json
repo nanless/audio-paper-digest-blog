@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.26448v1",
+  "abstract": "The real-world usability of ASR models remains challenging, particularly for low-resource languages, where existing speech resources are often collected in clean studio environments. In this work, we introduce TeleASR-Amharic, a benchmark for evaluating Amharic ASR under various acoustic and telecommunication conditions. We analyze the major degradations observed in real telecommunications recordings and develop a benchmark that covers multiple channel conditions, environmental disturbances, and telecom-domain variations. Our results show that telecommunication degradation can substantially reduce recognition performance, making even high-performing ASR models impractical under severe conditions. For example, the WER of the best-performing model increases from 0.23 to 0.79 under severe telecommunication degradation, corresponding to a relative increase of 243% in recognition errors. We further investigate the effects of different noise and channel distortions and show that scaling training data and applying carefully designed telecommunication-aware augmentation substantially improve robustness. In particular, our best training configuration achieves a 23.6% relative WER reduction under extreme noise conditions. Together with the release of our telecommunications-domain data, these findings provide a reproducible benchmark for measuring progress in Amharic ASR while highlighting open challenges in developing robust speech technologies for real-world deployment.",
+  "abstractSha256": "72b842b438070707c80e3759ce2f1c5639c8a528fa18967466073a142c293653",
+  "arxivId": "2610.26448",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.26448v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "HiLCoE School of Computer Science and Technology"
+      ],
+      "name": "Dagnachew Mekonnen Marilign"
+    },
+    {
+      "affiliations": [
+        "GSMA"
+      ],
+      "name": "Enrique Molero"
+    },
+    {
+      "affiliations": [
+        "gheero"
+      ],
+      "name": "Abrham Haile"
+    },
+    {
+      "affiliations": [
+        "GSMA"
+      ],
+      "name": "Louis Powell"
+    },
+    {
+      "affiliations": [
+        "Saarland University"
+      ],
+      "name": "Israel Abebe Azime"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文针对干净录音训练的阿姆哈拉语识别在真实电信语音上失效的问题，用同一批录音加可控退化构造多条件基准，测出最强基线在窄带加丢包下词错误率从 0.23 升到 0.79，并证明扩大数据加电信感知增强能把极端噪声下错误相对降低 23.6%。",
+  "originalTitle": "TeleASR-Amharic: A Benchmark for Robust Amharic ASR in Realistic Telecommunication Conditions",
+  "pdfUrl": "https://arxiv.org/pdf/2610.26448v1.pdf",
+  "readerTitle": "电话信道下的阿姆哈拉语识别：TeleASR-Amharic 基准如何测鲁棒性",
+  "schemaVersion": 2
+}

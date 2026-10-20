@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.26112v1",
+  "abstract": "Audio fingerprinting methods identify audio based on its content, even when the content has been possibly corrupted. Despite their applicability and usage in the speech domain, research and advancements in audio fingerprinting traditionally focus on music and are almost exclusively evaluated on music. We provide insights into speech-oriented audio fingerprinting by benchmarking the best performing audio fingerprinting models on speech data while taking into consideration the effects of noise, reverberation, temporal changes, pitch modifications, and lossy compression. Our findings indicate that audio fingerprinting methods based on self-supervised learning outperform classical approaches on speech data, while the performance of these models on speech is inferior compared to the performance that they achieve on music. Results also include an analysis of false positives, showing that fingerprinting methods are more likely to match with an audio of the same speaker rather than an audio of the same text, when mismatches occur.",
+  "abstractSha256": "b308cdb2d813e59fd3204fbc0b436c657b6957a3827d5bcb53124706b61ffc33",
+  "arxivId": "2610.26112",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.26112v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "评测协议",
+    "primaryTask": "音频指纹",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.fingerprinting",
+          "label": "音频指纹"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "评测协议",
+      "primaryMethodId": "method.evaluation-protocol",
+      "primaryTask": "音频指纹",
+      "primaryTaskId": "task.fingerprinting",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kemal Altwlkany"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Elmedin Selmanovic"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Sead Delalić"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Emanuel Lacic"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "本文在语音数据上对比经典方法与两种自监督指纹模型的检索率与开销，核心发现是自监督方法明显更好但语音成绩仍远低于音乐，且错配时更倾向于找对说话人而非找对文本内容。",
+  "originalTitle": "Applicability and Generalization of Audio Fingerprinting Methods to Speech",
+  "pdfUrl": "https://arxiv.org/pdf/2610.26112v1.pdf",
+  "readerTitle": "音乐指纹用到语音上还灵吗：一篇语音指纹泛化评测的解读",
+  "schemaVersion": 2
+}

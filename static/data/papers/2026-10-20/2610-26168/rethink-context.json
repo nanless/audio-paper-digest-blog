@@ -1,0 +1,97 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.26168v1",
+  "abstract": "Voice-based public services have evolved from manual switchboards to intelligent platforms to meet modern user needs. However, current systems remain constrained by rigid menu-driven interaction, fragmented vertical services, and limited extensibility. To address these issues, we present VISAGENT, an agent-based end-to-end voice interaction system for large-scale public services that integrates end-to-end speech interaction, hierarchical agent routing, a scalable voice-agent marketplace, and user memory support. The system replaces menu-driven workflows with natural speech and dynamically dispatches user requests to either a general conversational model or specialized domain agents via a two-level routing paradigm that achieves sub-second intent-to-agent selection over hundreds of agents. User memory informs preference-aware agent selection and supplies relevant preferences and context to selected agents, supporting personalized task execution and reducing the need for users to repeat previously provided information. A voice-agent registration mechanism converts task agents into conversational entities, enabling dynamic onboarding and ecosystem-level extensibility. We validate VISAGENT through a real-world deployment in China's 114 hotline across multiple service domains. Experimental results demonstrate low-latency full-duplex interaction, robust routing scalability, and competitive speech naturalness. More broadly, this work advocates a shift from isolated voice assistants toward agent-centric conversational infrastructures, providing a general blueprint for building extensible voice-agent systems in public services and beyond.",
+  "abstractSha256": "14da9bcfb7c40815323fcbce4c48f60a02ff6675659e22772214a6fa663f5d01",
+  "arxivId": "2610.26168",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.26168v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "工具增强与约束解码",
+    "primaryTask": "语音代理规划与工具使用",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.voice-agent-planning",
+          "label": "语音代理规划与工具使用"
+        },
+        {
+          "facet": "method",
+          "id": "method.tool-augmentation",
+          "label": "工具增强与约束解码"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "task",
+          "id": "task.full-duplex",
+          "label": "全双工语音交互"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "工具增强与约束解码",
+      "primaryMethodId": "method.tool-augmentation",
+      "primaryTask": "语音代理规划与工具使用",
+      "primaryTaskId": "task.voice-agent-planning",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Data Science & Artificial Intelligence Research Institute, China Unicom",
+        "Unicom Data Intelligence, China Unicom"
+      ],
+      "name": "Xiang Wang"
+    },
+    {
+      "affiliations": [
+        "Data Science & Artificial Intelligence Research Institute, China Unicom",
+        "Unicom Data Intelligence, China Unicom"
+      ],
+      "name": "Zhaoxiang Liu"
+    },
+    {
+      "affiliations": [
+        "Data Science & Artificial Intelligence Research Institute, China Unicom",
+        "Unicom Data Intelligence, China Unicom"
+      ],
+      "name": "Xiang Chen"
+    },
+    {
+      "affiliations": [
+        "Data Science & Artificial Intelligence Research Institute, China Unicom",
+        "Unicom Data Intelligence, China Unicom"
+      ],
+      "name": "Liqiang He"
+    },
+    {
+      "affiliations": [
+        "Data Science & Artificial Intelligence Research Institute, China Unicom",
+        "Unicom Data Intelligence, China Unicom"
+      ],
+      "name": "Kai Wang"
+    },
+    {
+      "affiliations": [
+        "Data Science & Artificial Intelligence Research Institute, China Unicom",
+        "Unicom Data Intelligence, China Unicom"
+      ],
+      "name": "Shiguo Lian"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "VISAGENT 针对公共热线多业务分散、菜单转接繁琐的问题，用端到端语音交互加两级路由把通用对话和数百个领域智能体接起来，在 114 真实场景和三组对照评测中验证了低延迟与路由可扩展性，但记忆与跨业务能力尚未充分验证。",
+  "originalTitle": "VISAGENT: An Agent-Based End-to-End Voice Interaction System",
+  "pdfUrl": "https://arxiv.org/pdf/2610.26168v1.pdf",
+  "readerTitle": "VISAGENT：把 114 热线从按键菜单变成能派单的语音智能体网",
+  "schemaVersion": 2
+}

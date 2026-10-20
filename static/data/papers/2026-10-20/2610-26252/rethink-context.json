@@ -1,0 +1,83 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.26252v1",
+  "abstract": "Expanding the vocabulary of conditional text-to-speech (TTS) models typically requires extensive fine-tuning with paired audio, creating a major bottleneck for low-resource and cross-lingual adaptation. To address this, we introduce SEAM, a zero-audio initialization method that constructs embeddings for unseen tokens from known subtokens. Unlike standard pooling strategies that ignore sequential structure, SEAM applies a spectral filter to preserve temporal phonetic order and uses closed-form ridge regression to align the new embeddings with the pretrained conditioning manifold. Across three languages and two TTS architectures, SEAM approaches or matches baseline performance using up to four times less training data, reducing sample complexity by 75\\% compared to random initialization and mean pooling. Our approach provides a lightweight, reproducible, and theoretically grounded solution for vocabulary expansion in low-resource speech synthesis.",
+  "abstractSha256": "48b8e7dcad27b694b5c5a5f94d081deb7f010458fc7c9a08fb4d803355ca5eff",
+  "arxivId": "2610.26252",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.26252v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.low-resource",
+          "label": "低资源"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.cross-lingual",
+          "label": "跨语言"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "ITMO University",
+        "SPC RAS"
+      ],
+      "name": "Walaa Othman"
+    },
+    {
+      "affiliations": [
+        "ITMO University",
+        "MWS AI"
+      ],
+      "name": "Baher Mohammad"
+    },
+    {
+      "affiliations": [
+        "ITMO University",
+        "MWS AI"
+      ],
+      "name": "Stamatios Lefkimmiatis"
+    },
+    {
+      "affiliations": [
+        "ITMO University",
+        "MWS AI"
+      ],
+      "name": "Ammar Ali"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "SEAM 针对条件式 TTS 扩词时新词向量缺乏监督的问题，用子词序列的频谱低通滤波保留语序再以闭式岭回归对齐到预训练流形，在俄语、哈萨克语和法语上以更少微调数据达到接近基线的可懂度和主观偏好，但结论只在可分解、可转写且仍需微调的条件下成立。",
+  "originalTitle": "SEAM: Spectral Embedding Alignment and Merging for Low-Resource TTS",
+  "pdfUrl": "https://arxiv.org/pdf/2610.26252v1.pdf",
+  "readerTitle": "新词没有语音也能做好初始化：SEAM 如何拼出低资源 TTS 的词向量",
+  "schemaVersion": 2
+}

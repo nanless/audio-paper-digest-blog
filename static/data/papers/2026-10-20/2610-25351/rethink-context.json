@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.25351v1",
+  "abstract": "The widespread success of large language models in natural language processing has spurred the development of speech-augmented language models (SLMs) to extend their reasoning capabilities from textual inputs to spoken ones. Despite impressive performance, SLMs remain susceptible to hallucinations, posing challenges in practical utility. To this end, we first probe hallucinations in SLMs for automatic speech recognition (ASR) via the lens of causal mediation and behavioral analysis. To mitigate fabricated ASR hypotheses, we propose AudioSLM, a compact yet effective ASR framework built upon a small language model, which leverages alignment cues and cross-attention layers to synergistically bolster acoustic modeling and cross-modal interactions. Experiments on LibriSpeech reveal that hallucinations arise from multi-head self-attention modules with an excessive attention bias towards textual tokens. AudioSLM considerably eases ASR hallucinations and outperforms some LLM-based ASR models.",
+  "abstractSha256": "c7f0415948ae3c25cc474c70cd43844161beaf7f59f7e81fa5b915b2c333feef",
+  "arxivId": "2610.25351",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.25351v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "语音识别",
+    "rankBucket": "前25%",
+    "score": 7.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.hallucination-faithfulness",
+          "label": "幻觉与忠实度"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.ctc",
+          "label": "CTC"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Bi-Cheng Yan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jhih-Rong Guo"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Fu-An Chao"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Berlin Chen"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "本文把 ASR 幻觉定义为对齐后多出的编造词，用因果敲除和注意力分析定位到偏向文本的多头自注意力，再用 CTC 对齐门控加交叉注意力在 LibriSpeech 上把幻觉率从 52.01% 降到 8.69%，代价是替换率略升且大模型下幻觉反而加重。",
+  "originalTitle": "Probing and Mitigating Hallucinations in Speech-augmented Language Models for Automatic Speech Recognition via Small Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2610.25351v1.pdf",
+  "readerTitle": "语音增强语言模型为什么会编造转写：探测与抑制 ASR 幻觉",
+  "schemaVersion": 2
+}

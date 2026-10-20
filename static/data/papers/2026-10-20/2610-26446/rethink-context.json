@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.26446v1",
+  "abstract": "Ground truth in Speech Emotion Recognition (SER) is often presented as a single categorical fact, yet an acted emotion and the emotion heard by listeners describe different aspects of the same recording. We examine this distinction in Emozionalmente, an acted Italian corpus that provides both an elicited production label and five listener judgements for every clip. Using frozen XLS-R, HuBERT, and WavLM representations with matched probes, we compare three label authorities: the expressed condition, the listeners' hard plurality, and their complete vote distribution. The results tell a consistent story. Recovering the expressed condition is easier than predicting a tie-broken listener plurality, but that gap compares two different questions rather than revealing a general loss of SER ability. As listener agreement weakens, the plurality becomes an increasingly brittle hard target. Training on the full vote distribution does not substantially change which class wins the model's hard decision, but it produces probability assignments that more closely follow the alternatives selected by listeners, especially for ambiguous clips. No authority therefore replaces the others. Expressed labels describe how speech was produced, pluralities provide an operational single-class decision, and vote distributions preserve perceptual uncertainty. For human-facing Internet of Sounds applications, evaluations should state which authority is being predicted, retain its aggregation rule and agreement information, and use distributional scores when disagreement is part of the target.",
+  "abstractSha256": "62d499b236d9330dcd775b3659eb16d0573fd59d126c4292c3428d73b3039843",
+  "arxivId": "2610.26446",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.26446v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "表示探测",
+    "primaryTask": "语音情感识别",
+    "rankBucket": "前50%",
+    "score": 5.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.emotion-recognition",
+          "label": "语音情感识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.representation-probing",
+          "label": "表示探测"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "表示探测",
+      "primaryMethodId": "method.representation-probing",
+      "primaryTask": "语音情感识别",
+      "primaryTaskId": "task.emotion-recognition",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Student Member, IEEE"
+      ],
+      "name": "Marco Giordano"
+    },
+    {
+      "affiliations": [
+        "Graduate Student Member, IEEE"
+      ],
+      "name": "Stefano Giacomelli"
+    },
+    {
+      "affiliations": [
+        "Member, IEEE"
+      ],
+      "name": "Claudia Rinaldi"
+    },
+    {
+      "affiliations": [
+        "Member, IEEE"
+      ],
+      "name": "Fabio Graziosi"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文用同一批意大利语表演语音比较表演标签、听众投票多数与完整投票分布三种依据，发现复原表演条件更容易但问题不同，而分布监督不改变硬判决胜负却让概率更贴近听众分歧。",
+  "originalTitle": "Label Authority in Speech Emotion Recognition: Intended and Perceived Ground Truth in Emozionalmente",
+  "pdfUrl": "https://arxiv.org/pdf/2610.26446v1.pdf",
+  "readerTitle": "标签说了算：表演的情绪与听到的情绪为何是两道题",
+  "schemaVersion": 2
+}

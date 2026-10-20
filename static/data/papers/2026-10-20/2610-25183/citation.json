@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.25183v1",
+  "arxivId": "2610.25183",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.25183v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Prachi Singh"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Nguyen Hai Phong"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Petr Pálka"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jiangyu Han"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Marc Delcroix"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shota Horiguchi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Naohiro Tawara"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Lukáš Burget"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.25183v1",
+  "originalTitle": "Learning Speaker-Activity-Conditioned WavLM Speaker Embeddings with Real Conversational Data",
+  "pdfUrl": "https://arxiv.org/pdf/2610.25183v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

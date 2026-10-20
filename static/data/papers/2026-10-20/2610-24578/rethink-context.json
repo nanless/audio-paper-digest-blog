@@ -1,0 +1,61 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.24578v1",
+  "abstract": "Maternal and perinatal deaths are concentrated in low- and middle-income countries, where routine fetal monitoring is largely inaccessible. With the prevalence of smartphone as personal assistive gadget, we ask whether a phone's built-in microphone, with no extra hardware or emitted signal, can serve as a software-only maternal-fetal cardiac screening aid when moved from the chest to the lower abdomen? We report a longitudinal, self-recorded case study of a single subject (Z) over the last five weeks of a singleton pregnancy, later delivered at term without complications: 28 short, uncontrolled recordings (rest, morning, post-exercise). Lacking maternal/fetal ground truth, we exploit the prior that maternal and fetal heart rates occupy largely disjoint frequency bands, blindly decomposing a Shannon-energy envelope into two candidate-rate bands, and additionally probe a slower breathing-rate band as a rest/exercise discriminator. A fast, regular, fetal-plausible rhythm was recovered from most recordings and remained essentially unchanged across maternal activity states, consistent with normal fetal cardiac autonomy; a slower, noisier maternal-plausible rhythm was recovered less reliably. Beat-to-beat variability proved largely noise-dominated at our short window lengths, and the breathing-rate probe did not significantly separate rest from exercise; both are reported as negative findings. We position the work within AI for global health: a low-cost screening aid for remote and underserved communities, pending reference-validated follow-up, not a replacement for clinical monitoring.",
+  "abstractSha256": "3b0c9e75a7e7d4a9e8dfcc5c8b999864a9261b4ef1d0bff8ab1f6a5823f7637d",
+  "arxivId": "2610.24578",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.24578v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "音频分离",
+    "rankBucket": "前50%",
+    "score": 5.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-separation",
+          "label": "音频分离"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "application",
+          "id": "application.medical",
+          "label": "医疗音频"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.single-channel",
+          "label": "单通道"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "音频分离",
+      "primaryTaskId": "task.audio-separation",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Electrical engineering department, Information Technology University (ITU), Lahore, Pakistan."
+      ],
+      "name": "Muhammad Mahboob Ur Rahman"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "本文用一名孕妇最后五周自采的 28 段手机腹部录音，靠心率范围先验把包络分成快慢两个节律带，恢复出多数录音中稳定但未经金标准验证的胎儿 plausible 节律，同时报告母体节律、变异性和呼吸探测的失败边界。",
+  "originalTitle": "Passive Smartphone-Microphone Phonocardiography for Joint Maternal-Fetal Cardiac Well-Being Monitoring: A Longitudinal Self-Recorded Case Study in Late Pregnancy",
+  "pdfUrl": "https://arxiv.org/pdf/2610.24578v1.pdf",
+  "readerTitle": "只用手机麦克风贴在腹部，能同时听到母体和胎儿的心跳吗",
+  "schemaVersion": 2
+}

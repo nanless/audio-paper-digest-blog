@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.25942v1",
+  "arxivId": "2610.25942",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.25942v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Heyang Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Lixin Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jiayi Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ziyang Cheng"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yuhao Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ronghua Wu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Qunshan Gu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yanfeng Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yu Wang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.25942v1",
+  "originalTitle": "Speech LLMs That Breathe: Modeling Non-Verbal Vocalizations in Dialogue",
+  "pdfUrl": "https://arxiv.org/pdf/2610.25942v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.25640v1",
+  "arxivId": "2610.25640",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.25640v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jinbae Seo"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hyeongjun Kwon"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jiyoung Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hyunsung Jang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Namkoo Ha"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jungin Park"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kwanghoon Sohn"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.25640v1",
+  "originalTitle": "Think, Compress, Answer: Reinforcement Learning for Multimodal Grounding via Reasoning Compression",
+  "pdfUrl": "https://arxiv.org/pdf/2610.25640v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

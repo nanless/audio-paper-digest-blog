@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.24572v1",
+  "abstract": "Automatic Speech recognition (ASR) struggles with Pathological speech due to persistent speaker-specific mismatch. In clinical and accessibility scenarios, only limited target-speaker data is typically available, making full model retraining impractical. We present a component-level analysis of LoRA adaptation in Whisper, investigating how adapter placement interacts with the model size, training efficiency and utterance-duration in single-speaker settings. Our experimental comparative study shows that while scaling reduces errors, it does not eliminate mismatch. Furthermore, the full attention LoRa provides the most reliable accuracy, and the best time--accuracy trade-off. Improvements vary across utterance length, with medium-length recordings benefiting the most, while short and long utterances remain challenging. These findings highlight the importance of adaptation placement and duration-dependent evaluation, under challenging, data-scarce personalization scenarios.",
+  "abstractSha256": "a5aa250eb93d6d2f06a7ab3f7e997c6de8a797d2cc096735dbe26c83d4749ee3",
+  "arxivId": "2610.24572",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.24572v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "LoRA",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 5.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.lora",
+          "label": "LoRA"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.low-resource",
+          "label": "低资源"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "LoRA",
+      "primaryMethodId": "method.lora",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Giuseppe Giaimis"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Sergei Katkov"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Muhammad Azfar Yaqub"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Antonio Liotta"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "围绕一位只有约 22 分钟数据的意大利病理嗓音说话人，论文比较四种 Whisper 容量与三种 LoRA 放置，发现两侧注意力同时适配最稳定且时间精度权衡最好，但增益随录音时长而变化。",
+  "originalTitle": "ASR Personalization in Pathological Voice: Accuracy, Efficiency, and Duration Effects",
+  "pdfUrl": "https://arxiv.org/pdf/2610.24572v1.pdf",
+  "readerTitle": "病理嗓音的单人语音识别适配：放在哪里才有效",
+  "schemaVersion": 2
+}

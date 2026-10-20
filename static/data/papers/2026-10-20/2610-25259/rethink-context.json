@@ -1,0 +1,102 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.25259v1",
+  "abstract": "Automatic video dubbing (AVD) requires temporally aligned speech, transcripts, and video, yet existing corpora vary in audio quality, transcription reliability, and speaking-face visibility. We introduce VoxDub, a bilingual lip-synchronized audio-visual dataset containing 766K clips and approximately 1.58K hours of in-the-wild Chinese and English recordings, covering varied speakers, scenes, speaking styles, and linguistic content. Its curation pipeline combines speech-centered segmentation with dual-ASR transcription checking, speech quality filtering, face visibility checks, and lip-speech synchronization verification. Text-to-speech (TTS) experiments show that training on VoxDub yields lower word error rates and higher speaker similarity than training on the compared audio-visual corpora, LRS3 and CN-CVS. AVD experiments show broadly comparable speech quality and subjective synchronization. These results support the utility of VoxDub for TTS and AVD training. More details are available on the project website (https://voxdub-dataset.github.io/VoxDub/).",
+  "abstractSha256": "cb43f0c6e15060ca799a3f97e3a193fbc62c41d6c469490bdcaa5f6bbbde3672",
+  "arxivId": "2610.25259",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.25259v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "数据集构建",
+    "primaryTask": "语音配音",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.dubbing",
+          "label": "语音配音"
+        },
+        {
+          "facet": "method",
+          "id": "method.dataset-curation",
+          "label": "数据集构建"
+        },
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "数据集构建",
+      "primaryMethodId": "method.dataset-curation",
+      "primaryTask": "语音配音",
+      "primaryTaskId": "task.dubbing",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "School of Informatics, Xiamen University, China"
+      ],
+      "name": "Kaidi Wang"
+    },
+    {
+      "affiliations": [
+        "School of Electronic Science and Engineering, Xiamen University, China"
+      ],
+      "name": "Wenhao Guan"
+    },
+    {
+      "affiliations": [
+        "School of Informatics, Xiamen University, China"
+      ],
+      "name": "Peijie Chen"
+    },
+    {
+      "affiliations": [
+        "School of Informatics, Xiamen University, China"
+      ],
+      "name": "Weijie Wu"
+    },
+    {
+      "affiliations": [
+        "School of Informatics, Xiamen University, China"
+      ],
+      "name": "Xuetao Lin"
+    },
+    {
+      "affiliations": [
+        "School of Electronic Science and Engineering, Xiamen University, China"
+      ],
+      "name": "Lin Li"
+    },
+    {
+      "affiliations": [
+        "School of Informatics, Xiamen University, China"
+      ],
+      "name": "Qingyang Hong"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "VoxDub 针对自动视频配音缺嘴型对齐训练数据的问题，用语音为中心的切分加双识别转写核对与音质人脸同步过滤构建 76 万段中英数据，TTS 实验证明相对 LRS3 与 CN-CVS 可懂度与说话人相似度更好，而配音微调仅得到大致相当的主观同步。",
+  "originalTitle": "VoxDub: A Bilingual Lip-Synchronized Audio-Visual Dataset for Automatic Video Dubbing",
+  "pdfUrl": "https://arxiv.org/pdf/2610.25259v1.pdf",
+  "readerTitle": "为配音保留嘴型与声音：VoxDub 双语视听数据集解读",
+  "schemaVersion": 2
+}

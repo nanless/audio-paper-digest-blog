@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.24870v1",
+  "arxivId": "2610.24870",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.24870v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yuan-Chao Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yin-Long Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Liu He"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Sizhe Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ji-Xuan Deng"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yin Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhen-Hua Ling"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jiahong Yuan"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.24870v1",
+  "originalTitle": "Dual Task Vector Merging: Leveraging Emotion and ASR Knowledge for Low-Resource Alzheimer's Disease Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2610.24870v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

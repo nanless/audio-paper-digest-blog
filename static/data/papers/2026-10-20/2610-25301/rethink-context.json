@@ -1,0 +1,69 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.25301v1",
+  "abstract": "Audio-visual deepfake detectors are often trained under a single dataset or manipulation regime, but multi-source training collections may contain heterogeneous attacks and uneven source distributions. Training separate detectors for each source is inefficient, while a single shared detector may be biased toward dominant source-specific patterns. We study known-source imbalanced multi-source audio-visual deepfake detection using FakeAVCeleb and LAV-DF, where source identity is supplied during training and inference. To address this setting, we build on the Multi-Scale Cross-Modal Transformer Encoder (MSCT) and propose Pre-MSCT Shared-Private Feature Fusion. Our method routes \\texttt{[CLS]}-augmented audio and visual tokens into a shared stream and source-specific private streams before the first MSCT block, while retaining its internal multi-scale self-attention (MSSA), differential cross-modal attention (DCA), and feed-forward operations. The shared stream models cross-source reusable evidence, while the private streams retain source-dependent residual variations. A domain-aware gated residual fusion module injects selected private evidence into the shared representation for the main fused prediction. Experiments under two controlled source-composition protocols show improved macro and worst-source AUC compared with the MRDF and MSCT baselines. These results support shared-private cross-modal discrepancy learning in the evaluated two-source setting with known source identity.",
+  "abstractSha256": "641537525c95fcd0e533403a1e9cb72e04fca5bf1a4538a387c17dd0bab2609b",
+  "arxivId": "2610.25301",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.25301v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "混合专家模型",
+    "primaryTask": "视频伪造检测与溯源",
+    "rankBucket": "前50%",
+    "score": 6.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.video-forgery-detection-attribution",
+          "label": "视频伪造检测与溯源"
+        },
+        {
+          "facet": "method",
+          "id": "method.moe",
+          "label": "混合专家模型"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "混合专家模型",
+      "primaryMethodId": "method.moe",
+      "primaryTask": "视频伪造检测与溯源",
+      "primaryTaskId": "task.video-forgery-detection-attribution",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Qiwu Wen"
+    },
+    {
+      "affiliations": [
+        "Luqia Technologies",
+        "405 Ogilvy Ave., Suite 101",
+        "Montréal, Québec H3N 1M3, Canada"
+      ],
+      "name": "Jahangir Alam"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文研究 FakeAVCeleb 与 LAV-DF 两来源已知来源且数量不均衡时的音视频伪造检测，用 MSCT 之前分出共享流和来源私有流再做门控残差融合，主证据是两种配比下宏平均 AUC 和最差来源 AUC 的提升，代价是推理依赖来源标识且私有专家随来源数增加。",
+  "originalTitle": "Shared-Private Cross-Modal Discrepancy Learning for Imbalanced Multi-Source Audio-Visual Deepfake Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2610.25301v1.pdf",
+  "readerTitle": "已知来源不均衡下的音视频伪造检测：共享与私有分流如何分工",
+  "schemaVersion": 2
+}

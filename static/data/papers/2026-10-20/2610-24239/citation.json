@@ -1,0 +1,63 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.24239v1",
+  "arxivId": "2610.24239",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.24239v1",
+  "authors": [
+    {
+      "affiliations": [
+        "The University of Texas at Austin"
+      ],
+      "name": "David Harwath"
+    },
+    {
+      "affiliations": [
+        "NVIDIA"
+      ],
+      "name": "Desh Raj"
+    },
+    {
+      "affiliations": [
+        "Johns Hopkins University"
+      ],
+      "name": "Xavier Velez"
+    },
+    {
+      "affiliations": [
+        "Johns Hopkins University",
+        "The University of Melbourne"
+      ],
+      "name": "Sandra Arcos-Holzinger"
+    },
+    {
+      "affiliations": [
+        "The University of Texas at Austin"
+      ],
+      "name": "Willie Jeng"
+    },
+    {
+      "affiliations": [
+        "Toyota Technological Institute at Chicago"
+      ],
+      "name": "Karen Livescu"
+    },
+    {
+      "affiliations": [
+        "Johns Hopkins University"
+      ],
+      "name": "Leibny Paola Garcia-Perera"
+    },
+    {
+      "affiliations": [
+        "Johns Hopkins University"
+      ],
+      "name": "Sanjeev Khudanpur"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.24239v1",
+  "originalTitle": "Encoder-Free Multimodal LLMs Learn Implicit Encoders",
+  "pdfUrl": "https://arxiv.org/pdf/2610.24239v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

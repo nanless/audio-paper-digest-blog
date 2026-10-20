@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.26614v1",
+  "abstract": "Extracting insights from large audio data sets using human transcription is expensive and time-consuming. Off-the-shelf Automatic Speech Recognition (ASR) systems offer an easy-to-use scalable alternative, but systematic transcription errors, especially in domain-specific settings, can bias downstream analyses and lead to unreliable conclusions. We investigate whether imperfect ASR transcripts can still be used to obtain statistically valid keyword frequency estimates by combining model outputs with a small set of human-labeled examples, following Prediction Powered Inference and Design-based Supervised Learning frameworks. We evaluate this approach on police radio communications from Baltimore and Chicago, a domain in which keyword distributions could provide valuable insights into police activity, but off-the-shelf ASR systems exhibit systematic errors on operationally important terminology. Using bootstrap-based confidence interval coverage as our evaluation metric, we find that our approach substantially increases the number of domain-specific keywords that can be analyzed with statistically valid confidence intervals, from 43.0% using ASR alone and 27.2% using only a small set of human-labeled transcriptions to 56.2% in the Baltimore dataset, with similar improvements observed in Chicago data. Our results demonstrate that post-hoc error correction can improve statistical validity of downstream analyses even for poor-quality transcriptions, offering an avenue for better leveraging off-the-shelf ASR models for large-scale speech analysis.",
+  "abstractSha256": "e38e9ab11a60119188ed28e6acb787c371187c765abedbd288434bcedcced2a6",
+  "arxivId": "2610.26614",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.26614v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "统计分析",
+    "primaryTask": "关键词检测",
+    "rankBucket": "前50%",
+    "score": 5.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.keyword-detection",
+          "label": "关键词检测"
+        },
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "统计分析",
+      "primaryMethodId": "method.statistical-analysis",
+      "primaryTask": "关键词检测",
+      "primaryTaskId": "task.keyword-detection",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Robert Cole Molloy"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Rhiannon N. Miller"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Stephen Morgan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Anjalie Field"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文针对警用电台录音里现成语音识别系统性漏掉关键术语的问题，用少量人工转写去修正大量机器转写得到的关键词平均频次，在巴尔的摩警务关键词上把区间有效的比例从只用人工的 27.2% 和只用机器的 43.0% 提高到 56.2%，但仍有近半数关键词无法给出有效区间。",
+  "originalTitle": "Conducting Reliable Keyword Estimation with Unreliable ASR in Police Audio Data",
+  "pdfUrl": "https://arxiv.org/pdf/2610.26614v1.pdf",
+  "readerTitle": "转写不准时，关键词频率还能算准吗",
+  "schemaVersion": 2
+}

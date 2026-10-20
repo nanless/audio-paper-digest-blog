@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.23651v1",
+  "abstract": "This research investigates the role of artificial intelligence (AI) in modern compositional practices, with a particular focus on two case studies: Convergence (2020/21) by Alexander Schubert, for String Ensemble and AI System, and In Human Memories (2024) by Francesco Vitucci, for four cellos and one electroacoustic player, whose installation was created by the Electronic Music School of the \"N. Piccinni\" Conservatory of Bari. The initial historical survey traces the evolving use of technology in composition, revealing how the search for new expressive possibilities has driven the development of technological tools through experimentation. The appearance of AI marks a fundamental shift: no longer just a tool, AI now poses questions and challenges to the composer. Engaging with AI becomes an exploration of an unknown entity, whose full capabilities are still largely undiscovered. This new interaction leads composers to confront AI not merely as a passive resource but as a participant in the creative process, outlining an ethical path to reclaim technology as a creative tool. In Human Memories reflects this dynamic, demonstrating how AI can serve as both inspiration and a driving force in shaping contemporary music.",
+  "abstractSha256": "3cce15f807614651e253b033f487ae8608f958436e91267d6fd4bd5292f57eed",
+  "arxivId": "2610.23651",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.23651v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "案例研究与实践报告",
+    "primaryTask": "音乐生成",
+    "rankBucket": "后50%",
+    "score": 4.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-generation",
+          "label": "音乐生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.case-study",
+          "label": "案例研究与实践报告"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "method",
+          "id": "method.literature-review",
+          "label": "文献综述方法"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "案例研究与实践报告",
+      "primaryMethodId": "method.case-study",
+      "primaryTask": "音乐生成",
+      "primaryTaskId": "task.music-generation",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Francesco Vitucci"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Giuseppe Silvi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Francesco Abbrescia"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Anthony Di Furia"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Francesco Scagliola"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文以弦乐与电子音乐史为背景，对比两部作品处理人工智能的不同立场，并以四把大提琴加现场电子演奏者的新作为例说明如何把语言模型生成文本、变声与三维扩声组织成可复述的创作流程，其结论只在现场音乐厅聆听与作曲家掌握技术的条件下成立。",
+  "originalTitle": "In Human Memories. Technology, Creativity and Self-Determination: An Ethical Proposal",
+  "pdfUrl": "https://arxiv.org/pdf/2610.23651v1.pdf",
+  "readerTitle": "当人工智能走进弦乐重奏：从作曲工具到创作对话者",
+  "schemaVersion": 2
+}

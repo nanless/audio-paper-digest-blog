@@ -1,0 +1,61 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.24762v1",
+  "abstract": "Isochronous ultra-wideband (UWB) audio transport must deliver a complete service data unit (SDU) before its presentation deadline; fragment reception rate and aggregate throughput do not directly characterize this objective. We formulate admission and online service over a periodic calendar of finite exchange opportunities, explicitly accounting for fragmented SDUs, bounded attempts, calendar alignment, and timing uncertainty. For equal-duration, freely assignable opportunities, an interval-demand condition characterizes finite-job reservation feasibility, and an earliest-deadline-first construction realizes a feasible reservation. A separate necessary capacity bound identifies loads that cannot sustain complete-SDU delivery even with no transmission errors. For online overload control, we study a deadline-aware policy that discards an SDU when its outstanding fragments exceed the remaining eligible opportunities. Across 3,456 replicated scheduling runs and 432 supplemental sensitivity runs, pruning raises eight-stream burst-loss timely completion from 45.441\\% to 59.399\\%, a paired difference of $13.958\\pm2.080$ percentage points (pointwise 95\\% interval). At four streams, round robin instead attains slightly higher completion, while heavy overload causes pronounced per-stream imbalance. A finite design enumeration and an evaluated multi-stream fragmentation envelope quantify the interaction among scheduling, payload overhead, and capacity. These findings distinguish provable admission conditions from online deadline salvage and expose the aggregate-throughput versus per-stream-service tradeoff in UWB audio scheduling.",
+  "abstractSha256": "9500ee9a806a0135f7a113db64dc54dd5c0b9057ba40a3debdc7544e195cfd49",
+  "arxivId": "2610.24762",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.24762v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "形式化分析",
+    "primaryTask": "音频交互",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-interaction",
+          "label": "音频交互"
+        },
+        {
+          "facet": "method",
+          "id": "method.formal-analysis",
+          "label": "形式化分析"
+        },
+        {
+          "facet": "method",
+          "id": "method.rule-based",
+          "label": "规则与词典方法"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "形式化分析",
+      "primaryMethodId": "method.formal-analysis",
+      "primaryTask": "音频交互",
+      "primaryTaskId": "task.audio-interaction",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Fengyun~Zhang"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文把多路 UWB 音频的按时完整交付建模为有限交换机会上的预约与在线调度问题，给出区间需求的可行性判定和乐观剪枝规则，并在突发丢失下八流时把准时完整率从 45.441% 提升到 59.399%，代价是最差流几乎被饿死。",
+  "originalTitle": "Finite-Calendar Admission and Deadline-Aware Pruning for UWB Audio",
+  "pdfUrl": "https://arxiv.org/pdf/2610.24762v1.pdf",
+  "readerTitle": "有限机会日历上的 UWB 音频准时交付：准入判定与截止期剪枝",
+  "schemaVersion": 2
+}

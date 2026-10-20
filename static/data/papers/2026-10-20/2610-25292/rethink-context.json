@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.25292v1",
+  "abstract": "Preference optimization promises to improve text-to-speech (TTS) systems by learning which speech outputs are better. External expert speech seems a natural source of preferred responses, especially when student generations contain errors. Yet demonstration quality does not establish whether the student can benefit from that supervision, or whether better target fitting will produce better speech. We examine this gap across two TTS students using real and synthetic expert speech, comparing preference objectives and direct versus bridge supervision while tracking fixed-sequence likelihoods and generation metrics. With expert supervision held fixed, objectives differ markedly in their sensitivity to preference-score scaling and the resulting generation quality. Likelihood diagnostics characterize these responses, but cannot establish their benefit: expert likelihood can increase while intelligibility worsens, or decrease while it improves. Bridge supervision highlights a distinction between mitigating degradation and improving the student: it can recover performance lost under direct training without consistently surpassing the pretrained base. Route benefits vary across objectives, students, and expert sources; neither route consistently dominates. Together, these findings distinguish demonstration quality, target fitting, and generated-speech quality as complementary criteria for assessing expert supervision.",
+  "abstractSha256": "a2b8cac39e6e9ebf54d293ca1399bfa78dc9ad6ae418629ed2b3b2c8b0a12529",
+  "arxivId": "2610.25292",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.25292v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "偏好优化",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.preference-optimization",
+          "label": "偏好优化"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-quality",
+          "label": "语音质量评估"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "偏好优化",
+      "primaryMethodId": "method.preference-optimization",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Statistics & Data Science, National University of Singapore, Singapore"
+      ],
+      "name": "Minh Duc Vu"
+    },
+    {
+      "affiliations": [
+        "School of Computing, National University of Singapore, Singapore"
+      ],
+      "name": "Junchuan Zhao"
+    },
+    {
+      "affiliations": [
+        "School of Computing, National University of Singapore, Singapore"
+      ],
+      "name": "Ye Wang"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "本文用两个学生模型和两种专家语音比较四种偏好目标与直接或分阶段桥接两种监督路线，发现目标对分数尺度敏感度不同，而固定专家序列的似然升降与生成可懂度变化并不一致，桥接只能缓解部分退化而不能稳定超越初始模型。",
+  "originalTitle": "Does Expert Supervision Improve Text-to-Speech? An Empirical Study of Preference Optimization",
+  "pdfUrl": "https://arxiv.org/pdf/2610.25292v1.pdf",
+  "readerTitle": "专家示范能教会语音合成更好地说话吗",
+  "schemaVersion": 2
+}

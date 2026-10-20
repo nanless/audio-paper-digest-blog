@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.24424v1",
+  "abstract": "Self-supervised speech models commonly consist of a set of convolutional neural network (CNN) layers used as a local feature extractor, followed by transformer layers. The CNN layers are computationally demanding, and are also similar across models and resemble the much simpler mel spectral features. We hypothesize that the CNN layers can be replaced by a simple, universal model. To test this hypothesis, we learn a two-layer feature extractor via distillation from one or more teacher models (HuBERT, data2vec, and WavLM). Experiments on SUPERB(-SG) benchmark tasks show that our model largely retains the performance of the teacher models and can also be used in an unseen model (wav2vec 2.0). Our feature extractor requires only 3% of the MACs of the CNNs, resulting in a $>$20% overall inference runtime reduction.",
+  "abstractSha256": "13d50d72367ab93e95923a5ed4ebeb4730fd58fad888520df4aaecc407e17b45",
+  "arxivId": "2610.24424",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.24424v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "知识蒸馏",
+    "primaryTask": "音频特征提取",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-feature-extraction",
+          "label": "音频特征提取"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.pretraining",
+          "label": "预训练"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.speech",
+          "label": "语音大模型"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "知识蒸馏",
+      "primaryMethodId": "method.distillation",
+      "primaryTask": "音频特征提取",
+      "primaryTaskId": "task.audio-feature-extraction",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jessica Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Marcelo Beramendi Caballero"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ju-Chieh Chou"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Karen Livescu"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文针对自监督语音模型卷积前端占用约三成计算的问题，用从 HuBERT、data2vec 和 WavLM 蒸馏的两层感知机替换卷积加投影，在 SUPERB 系列任务上基本保持性能，把前端乘加操作降到约百分之三，整体推理时间减少两成以上。",
+  "originalTitle": "Toward a Universal Local Speech Feature Extractor Through Distillation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.24424v1.pdf",
+  "readerTitle": "把语音模型卷积前端换成两层小网络",
+  "schemaVersion": 2
+}

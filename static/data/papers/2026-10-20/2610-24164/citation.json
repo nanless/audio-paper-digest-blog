@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.24164v1",
+  "arxivId": "2610.24164",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.24164v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yashish M. Siriwardena"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Dinesh K. Gnanasekaran"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Tanmay Laud"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shinji Watanabe"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Subhabrata Mukherjee"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shanil Puri"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.24164v1",
+  "originalTitle": "Pronouncing Hard Words: Phoneme Adaptation of a Pretrained Conversational Text to Speech Model",
+  "pdfUrl": "https://arxiv.org/pdf/2610.24164v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

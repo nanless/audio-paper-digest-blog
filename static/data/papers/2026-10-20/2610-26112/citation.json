@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.26112v1",
+  "arxivId": "2610.26112",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.26112v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kemal Altwlkany"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Elmedin Selmanovic"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Sead Delalić"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Emanuel Lacic"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.26112v1",
+  "originalTitle": "Applicability and Generalization of Audio Fingerprinting Methods to Speech",
+  "pdfUrl": "https://arxiv.org/pdf/2610.26112v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

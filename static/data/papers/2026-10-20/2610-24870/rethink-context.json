@@ -1,0 +1,108 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.24870v1",
+  "abstract": "Alzheimer's Disease (AD) detection from speech benefits from both paralinguistic and linguistic cues, yet model training is frequently constrained by limited data. Fine-tuning a large pretrained speech encoder can easily overfit, while a frozen probe leaves the encoder's task-relevant knowledge underutilized. Therefore, we propose Dual Task Vector Merging, a parameter-efficient method that adapts a frozen wav2vec 2.0 backbone using task knowledge learned outside the AD task. Specifically, we inject two task vectors, derived as weight deltas from emotion- and ASR-fine-tuned wav2vec 2.0 models, into each transformer layer. During AD training, only layer-wise merging coefficients and a linear classification head are optimized, updating less than 0.1% of the parameters required for full fine-tuning. Speaker-independent experiments on ADReSS and ADReSSo show that dual merging improves over frozen probes, LoRA, and full fine-tuning, in the main binary settings, and gives the best results when combined with LoRA. Evaluation on PROCESS further shows that our advantages transfer to three-class HC/MCI/dementia classification when paired with LoRA. Experiments under reduced training data (20%, 40%, and 80%) confirm reliable gains in low-resource settings.",
+  "abstractSha256": "ecdb1ccc3c32291e0494eb41ed3e113ccde6c8bc5e094a3aed2592166c390bfa",
+  "arxivId": "2610.24870",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.24870v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "模型融合",
+    "primaryTask": "病理语音评估",
+    "rankBucket": "前50%",
+    "score": 5.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.pathological-speech",
+          "label": "病理语音评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.model-combination",
+          "label": "模型融合"
+        },
+        {
+          "facet": "task",
+          "id": "task.emotion-recognition",
+          "label": "语音情感识别"
+        },
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.low-resource",
+          "label": "低资源"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "模型融合",
+      "primaryMethodId": "method.model-combination",
+      "primaryTask": "病理语音评估",
+      "primaryTaskId": "task.pathological-speech",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yuan-Chao Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yin-Long Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Liu He"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Sizhe Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ji-Xuan Deng"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yin Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhen-Hua Ling"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jiahong Yuan"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "该文把冻结的 wav2vec 2.0 编码器用情绪与 ASR 两个任务向量按层加权调整，只训练每层两个系数和一个线性头，在 ADReSS 与 ADReSSo 上提升了二分类效果，并在 PROCESS 三分类上与 LoRA 结合取得最好宏观 F1，代价是三分类本身仍困难且波动大。",
+  "originalTitle": "Dual Task Vector Merging: Leveraging Emotion and ASR Knowledge for Low-Resource Alzheimer's Disease Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2610.24870v1.pdf",
+  "readerTitle": "用情绪和语音识别知识帮助小样本阿尔茨海默病语音检测",
+  "schemaVersion": 2
+}

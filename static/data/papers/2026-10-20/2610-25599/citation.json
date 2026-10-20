@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.25599v1",
+  "arxivId": "2610.25599",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.25599v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Ankur Banerjee"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Vishnu Guntakala"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Danity Pike"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Advay Roongta"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Kevin Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Ruizhe Li"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.25599v1",
+  "originalTitle": "Text Dominance in Paralinguistic Conflict: Tracing Suppression Through Audio LLM Circuits",
+  "pdfUrl": "https://arxiv.org/pdf/2610.25599v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

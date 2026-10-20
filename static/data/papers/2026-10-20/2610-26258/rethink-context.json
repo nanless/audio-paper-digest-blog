@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.26258v1",
+  "abstract": "Large Audio Language Models (LALMs) reason over speech, environmental sounds, music, and other acoustic information. However, their audio encoders produce dense token sequences that make long-form audio costly to process. Existing audio pruning methods reduce this cost using heuristics such as attention, representation similarity, or temporal sampling, but do not explicitly learn which tokens are most useful for a given question. We propose AudioScorer, a lightweight model that scores audio tokens according to the user question. It is trained by distilling the ranking of audio tokens under the frozen LALM's answer-gradient saliency, together with downstream answer supervision. Compared with other pruning methods, AudioScorer achieves the best or tied-best result at 10% token retention on 7 of 10 semantic and acoustic tasks, including speech recognition, emotion recognition, and audio-scene classification.",
+  "abstractSha256": "76e16b04c3b76c4f12107c7e9576672edd1097b6d6c23befd1edaac45c6b50b9",
+  "arxivId": "2610.26258",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.26258v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "知识蒸馏",
+    "primaryTask": "音频问答",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-question-answering",
+          "label": "音频问答"
+        },
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        },
+        {
+          "facet": "method",
+          "id": "method.pruning",
+          "label": "模型剪枝"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "知识蒸馏",
+      "primaryMethodId": "method.distillation",
+      "primaryTask": "音频问答",
+      "primaryTaskId": "task.audio-question-answering",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Institute of Signal Processing",
+        "and System Theory (ISS)",
+        "University of Stuttgart",
+        "Stuttgart, Germany"
+      ],
+      "name": "Marwan Farag"
+    },
+    {
+      "affiliations": [
+        "Institute of Signal Processing",
+        "and System Theory (ISS)",
+        "University of Stuttgart",
+        "Stuttgart, Germany"
+      ],
+      "name": "Bin Yang"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "长音频会产生过密的音频令牌并推高解码代价，AudioScorer 用问题感知的打分器学习每个令牌的保留优先级并做 Top-K 剪枝，在 10% 保留率下保住了语音内容任务，额外打分开销约占预填充计算的 0.4 到 0.9%。",
+  "originalTitle": "AudioScorer: Learning Question-Aware Token Relevance for Large Audio Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2610.26258v1.pdf",
+  "readerTitle": "随问题给音频令牌打分再剪枝的 AudioScorer",
+  "schemaVersion": 2
+}

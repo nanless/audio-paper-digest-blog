@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.25352v1",
+  "abstract": "Audio-visual large language models (AV-LLMs) can fail at full-video speech-vision decisions even when useful visual evidence is locally recoverable. We introduce Temporal Evidence Decomposition (TED), a training-free diagnostic framework that separates local visual verification from speech-relative aggregation. Automatic speech recognition supplies a transcript and utterance interval. TED queries audio-free windows with the transcript for Temporal Alignment and Forecasting, or answer candidates for Cross-Modal Temporal Binding, then aggregates evidence relative to that interval. Across four frozen AV-LLMs on SVHalluc, Temporal Forecasting accuracy rises from 29.3-33.7% under full-video questioning to 79.3-82.2% with TED. Query replacement reduces recovery; the observed anchor remains beneficial when temporal-region availability is held fixed. Physical-isolation and timing-shortcut controls test alternative explanations. The findings distinguish locally recoverable evidence from successful full-video decisions, motivating explicit separation of narration content, utterance timing, and time-indexed visual evidence.",
+  "abstractSha256": "09f55cefacbd8d9f0705d6d6ca217545049785e29bc379ba44f71c5cf1c816ab",
+  "arxivId": "2610.25352",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.25352v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "表示探测",
+    "primaryTask": "音视频问答",
+    "rankBucket": "后50%",
+    "score": 5.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-question-answering",
+          "label": "音视频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.representation-probing",
+          "label": "表示探测"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.hallucination-faithfulness",
+          "label": "幻觉与忠实度"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "表示探测",
+      "primaryMethodId": "method.representation-probing",
+      "primaryTask": "音视频问答",
+      "primaryTaskId": "task.av-question-answering",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jaehong Myung"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Seunghun Oh"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Unsang Park"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文针对整段视频的语音-视觉时间判断失败问题，用不训练的局部验证加语音时刻聚合做诊断，在 SVHalluc 上显示同一冻结模型局部证据可用而整体问答不可靠，对照显示查询与时刻锚点的作用，但干预同时改变了输入、调用次数与读出方式。",
+  "originalTitle": "Local Evidence, Global Failure: Diagnosing Speech-Vision Temporal Composition in Audio-Visual Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2610.25352v1.pdf",
+  "readerTitle": "局部看得见，整体答不对：语音-视觉时间组合的诊断",
+  "schemaVersion": 2
+}

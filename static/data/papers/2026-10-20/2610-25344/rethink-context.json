@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.25344v1",
+  "abstract": "Code-based agents can operate creative software, but mixing requests often describe an intended sound without specifying the edits needed to achieve it. We present TOMORI, a code-based mixing-agent harness for native digital audio workstation (DAW) control. Custom plugins provide REAPER project inspection, optional audio measurement, and execution of model-generated Lua code. All observations return as text; delivery includes an editable project and rendered audio. TOMORI-BENCH pairs 110 human-reviewed reference edits with three instruction forms and evaluates native DAW execution end to end through operation structure, parameter precision, and rendered-audio outcomes. Across 990 cases from three primary models, explicit instructions yield high reference agreement, while abstract requests reduce project agreement and audio improvement. Paired ablations show that the full workflow improves explicit execution over a single submission. Prompted audio measurement succeeds in all 28 selected abstract cases but yields no clear overall improvement on the reference-based metrics and increases tool calls. These results expose the gap between executable DAW control and precise realization of perceptual mixing goals.",
+  "abstractSha256": "584d43f59b1d90702c9628ced27ee0daf6d40b5bfb77a89044e680998dbb30f0",
+  "arxivId": "2610.25344",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.25344v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "工具增强与约束解码",
+    "primaryTask": "音乐混音",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-mixing",
+          "label": "音乐混音"
+        },
+        {
+          "facet": "method",
+          "id": "method.tool-augmentation",
+          "label": "工具增强与约束解码"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "工具增强与约束解码",
+      "primaryMethodId": "method.tool-augmentation",
+      "primaryTask": "音乐混音",
+      "primaryTaskId": "task.music-mixing",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yining Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Tianjiao Li"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文解决自然语言混音请求缺少具体操作参数的问题，用可执行 Lua 代码连接语言模型与 REAPER 工程，并以 110 组人工审核参考编辑证明越具体的指令执行越准、越抽象的听感描述偏差越大，而多轮检查修订与强制音频测量带来不同代价。",
+  "originalTitle": "TOMORI: A Tool-Orchestrated Mixing Operator for REAPER Interaction",
+  "pdfUrl": "https://arxiv.org/pdf/2610.25344v1.pdf",
+  "readerTitle": "Tomori：在 REAPER 里写代码做混音的智能体如何被评测",
+  "schemaVersion": 2
+}

@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.25292v1",
+  "arxivId": "2610.25292",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.25292v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Statistics & Data Science, National University of Singapore, Singapore"
+      ],
+      "name": "Minh Duc Vu"
+    },
+    {
+      "affiliations": [
+        "School of Computing, National University of Singapore, Singapore"
+      ],
+      "name": "Junchuan Zhao"
+    },
+    {
+      "affiliations": [
+        "School of Computing, National University of Singapore, Singapore"
+      ],
+      "name": "Ye Wang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.25292v1",
+  "originalTitle": "Does Expert Supervision Improve Text-to-Speech? An Empirical Study of Preference Optimization",
+  "pdfUrl": "https://arxiv.org/pdf/2610.25292v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

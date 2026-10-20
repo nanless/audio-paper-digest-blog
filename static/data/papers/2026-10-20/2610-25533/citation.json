@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.25533v1",
+  "arxivId": "2610.25533",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.25533v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Duc Kieu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kien Do"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Minh Khoa Le"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Tung Kieu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Dang Nguyen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Thin Nguyen"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.25533v1",
+  "originalTitle": "Modaliff: A Unified Token Diffusion Model for Any-to-Any Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.25533v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

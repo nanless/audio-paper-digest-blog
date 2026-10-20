@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.24809v1",
+  "abstract": "Speech recognition in real time in far-field conversational settings still incurs significant errors. Identifying potential error spans during streaming ASR permits a recourse mechanism where the speaker can be asked to repeat the affected content under cleaner acoustic conditions. We propose \\sysname, a new framework for online error localization, that identifies spans likely to benefit from this intervention. Our supervision uses clean audio to estimate how the recognizer's output might change under improved acoustic conditions. We probabilistically align noisy and clean decodes using a pair-HMM to obtain soft supervision. These soft targets train a counterfactual gain scorer by combining a suite of acoustic and language features to produce token-level scores, that are further grouped into spans for targeted recourse. An LLM uses the ASR transcript of the repetition to revise only the selected span. At a precision of $70\\%$, \\sysname achieves the highest recall by identifying up to 52\\% more erroneous tokens compared to the strongest baseline. Targeted repetition yields relative WER reductions of up to 24\\% under a budget that accounts for both interruption frequency and the lengths of re-uttered spans.",
+  "abstractSha256": "19946c88491f4a0cfbae3faa5bba46aaa4f6bd7064221d206f47fa142f6eec61",
+  "arxivId": "2610.24809",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.24809v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "不确定性估计与校准",
+    "primaryTask": "语音识别错误估计",
+    "rankBucket": "前50%",
+    "score": 7.4,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr-error-estimation",
+          "label": "语音识别错误估计"
+        },
+        {
+          "facet": "method",
+          "id": "method.uncertainty-estimation",
+          "label": "不确定性估计与校准"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-dialogue",
+          "label": "语音对话系统"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "不确定性估计与校准",
+      "primaryMethodId": "method.uncertainty-estimation",
+      "primaryTask": "语音识别错误估计",
+      "primaryTaskId": "task.asr-error-estimation",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Sankalp Parashar"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Preethi Jyothi"
+    },
+    {
+      "affiliations": [
+        "IIT Bombay"
+      ],
+      "name": "Sunita Sarawagi"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对远场对话中流式识别的局部错误，Pardon 用干净音频的反事实解码监督估计重说可修复的增益，再把高分词组成 span 请说话人重说并用大模型只改该段，在控制打断负担下降低词错误率。",
+  "originalTitle": "Ask, Don't Guess: Targeted Clarification for Speech Recognition Errors",
+  "pdfUrl": "https://arxiv.org/pdf/2610.24809v1.pdf",
+  "readerTitle": "听不清就问：面向流式语音识别错误的定点澄清",
+  "schemaVersion": 2
+}

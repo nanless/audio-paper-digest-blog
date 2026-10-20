@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.24468v1",
+  "abstract": "Real-time voice cloning has enabled large-scale streaming deepfake and vishing attacks, while existing Network Detection and Response (NDR) solutions rely on GPU-based post-processing that requires buffered audio and generalizes poorly to unseen speech synthesis models. This paper presents SENTRY, a hardware-oriented, streaming trust engine for inline deepfake detection at the network edge. SENTRY employs an integer lifting-wavelet front end together with a bank of multiplier-free transforms, including wavelet-packet envelopes, Walsh-Hadamard sequency profiles, waveform micro-statistics, and long-term spectral features, designed so that acoustic analysis needs only integer add, shift, compare and bitwise operations. A supervised gradient-boosted tree classifier is combined with an unsupervised Mahalanobis out-of-distribution detector trained solely on authentic speech, and their outputs are fused by a lightweight logistic layer to produce graduated LOG, CHALLENGE, or DROP actions. Under a closed-set protocol, SENTRY reaches 98.75% accuracy at a 1.25% equal-error rate (EER) on WaveFake, with perfect separation of HiFi-GAN and WaveGlow; its supervised track alone achieves an AUC of 0.9994 (fused: 0.9993). On ASVspoof 2019 LA (attacks A01-A06) over an 8 kHz mu-law telephony channel, it reaches 94.75% accuracy at a 5.05% EER, with a supervised-track AUC of 0.9948 (fused: 0.9884) and per-attack EERs below 7%. In our prototype, the feature front end runs as bit-exact integer code on one Arm Cortex-A53 core, and the classifier and fusion stage are synthesized for a Xilinx Zynq UltraScale+ MPSoC using no DSP slices, returning a decision 220 ns after a feature vector is ready. These results indicate that deepfake screening can be placed inline without GPUs or floating-point hardware; generalization to unseen generators is left to future work.",
+  "abstractSha256": "6be9e102399f93cb720916fc50f1b77c050b40a8a37799171f81dba0d8b90e6f",
+  "arxivId": "2610.24468",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.24468v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "硬件系统设计与验证",
+    "primaryTask": "音频深度伪造检测",
+    "rankBucket": "前50%",
+    "score": 5.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-deepfake",
+          "label": "音频深度伪造检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.hardware-system-design",
+          "label": "硬件系统设计与验证"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.real-time",
+          "label": "实时处理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "硬件系统设计与验证",
+      "primaryMethodId": "method.hardware-system-design",
+      "primaryTask": "音频深度伪造检测",
+      "primaryTaskId": "task.audio-deepfake",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Chirantan Banerjee"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Soumita Chatterjee"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Bhargab B. Bhattacharya"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hafizur Rahaman"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "SENTRY 针对通话中的实时筛查问题，用整数提升小波与无乘法特征组加双轨决策做在线判断，在闭集条件下 WaveFake 与窄带电话信道 ASVspoof 上取得高准确率，但代价是仅验证了已知合成器且前端综合与跨库泛化尚未完成。",
+  "originalTitle": "SENTRY: A Streaming Edge Network Trust Engine for Real-Time Audio Deepfake Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2610.24468v1.pdf",
+  "readerTitle": "SENTRY：用全整数运算在网关处实时筛查语音深度伪造",
+  "schemaVersion": 2
+}

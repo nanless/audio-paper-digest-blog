@@ -1,0 +1,103 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.25183v1",
+  "abstract": "End-to-end neural diarization with vector clustering (EEND-VC) is a strong framework for long-form conversational diarization, where speaker embeddings are used to link local speaker decisions across windows. Conventional EEND-VC systems extract these embeddings by cutting out regions assigned to each local speaker, preferably using only non-overlapped speech. This works well when enough clean target-speaker speech is available, but it discards useful speaker evidence in overlapped regions and becomes unreliable when a local speaker appears mostly in overlap. We propose a speaker-activity-conditioned embedding extractor that adapts a pretrained WavLM-MHFA speaker verification model to extract target-speaker embeddings directly from full conversational windows. Inspired by the recently proposed diarization-conditioned Whisper (DiCoW) model for target-speaker ASR, frame-level diarization-dependent transformations inject local speaker-activity information into intermediate WavLM representations while preserving the pretrained initialization. Experiments on multiple conversational diarization benchmarks show that fine-tuning with limited real meeting data reduces speaker-confusion errors and improves EEND-VC diarization performance. The results further indicate that real conversational data provides an effective alternative to large-scale simulated-mixture training for diarization-aware speaker embedding extraction.",
+  "abstractSha256": "7835a37a37ec3e8553adf6a0b2bfd3ff158d2d3e78e12e3f6242b43d08ea9152",
+  "arxivId": "2610.25183",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.25183v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "Adapter",
+    "primaryTask": "说话人分离标注",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.diarization",
+          "label": "说话人分离标注"
+        },
+        {
+          "facet": "method",
+          "id": "method.adapter",
+          "label": "Adapter"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "application",
+          "id": "application.meeting",
+          "label": "会议转录"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "Adapter",
+      "primaryMethodId": "method.adapter",
+      "primaryTask": "说话人分离标注",
+      "primaryTaskId": "task.diarization",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Prachi Singh"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Nguyen Hai Phong"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Petr Pálka"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jiangyu Han"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Marc Delcroix"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shota Horiguchi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Naohiro Tawara"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Lukáš Burget"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对长对话中重叠导致局部声纹不可靠的问题，论文在预训练 WavLM-MHFA 中插入说话人活动条件变换以直接从完整窗口提取目标声纹，并在有限真实会议数据上微调使估计分割下宏平均说话人混淆误差相对降低。",
+  "originalTitle": "Learning Speaker-Activity-Conditioned WavLM Speaker Embeddings with Real Conversational Data",
+  "pdfUrl": "https://arxiv.org/pdf/2610.25183v1.pdf",
+  "readerTitle": "在整段对话窗里为目标说话人提取声纹：SAC-WavLM 的做法与证据",
+  "schemaVersion": 2
+}
