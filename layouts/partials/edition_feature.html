@@ -1,9 +1,9 @@
 {{- with . -}}
-<div class="edition-feature" aria-labelledby="edition-feature-title">
-  <div class="edition-feature__heading"><span class="rw-eyebrow">本期选读 / EDITOR'S PICK</span><h3 id="edition-feature-title"><a href="{{ .paperUrl }}">{{ .title }}</a></h3><p>{{ .description }}</p></div>
+<div class="edition-feature" aria-labelledby="edition-feature-title" data-edition-date="{{ .date }}" data-paper-path="{{ .paperPath }}"{{ if .automatic }} data-automatic="true"{{ end }}>
+  <div class="edition-feature__heading"><span class="rw-eyebrow">本期选读 / {{ if .automatic }}PAPER SPOTLIGHT{{ else }}EDITOR'S PICK{{ end }}</span><h3 id="edition-feature-title"><a href="{{ .paperUrl }}" title="{{ .title }}">{{ .title }}</a></h3><p>{{ if .automatic }}本站评分 {{ printf "%.1f" .score }}/10 · {{ if eq .selectionKind "method-diagram" }}方法与架构选图{{ else }}论文原图选读{{ end }}{{ else }}{{ .description }}{{ end }}</p></div>
   <figure class="edition-feature__figure">
-    <a class="edition-feature__image-link" href="{{ .paperUrl }}" aria-label="阅读完整解读：{{ .title }}"><img src="{{ .imageUrl }}" alt="{{ .alt }}" width="{{ .width }}" height="{{ .height }}" loading="eager" decoding="async"></a>
-    <figcaption>{{ .caption }} · <a href="{{ .sourceUrl }}">论文来源</a></figcaption>
+    <a class="edition-feature__image-link{{ if eq .imageKind "official" }} edition-feature__image-link--official{{ end }}" href="{{ .paperUrl }}" aria-label="阅读完整解读：{{ .title }}"><img src="{{ .imageUrl }}" alt="{{ .alt }}"{{ with .width }} width="{{ . }}"{{ end }}{{ with .height }} height="{{ . }}"{{ end }} loading="eager" fetchpriority="high" referrerpolicy="no-referrer" decoding="async"></a>
+    <figcaption>{{ if .automatic }}原论文 {{ .figure }}{{ else }}{{ .caption }}{{ end }} · <a href="{{ .sourceUrl }}">论文来源</a></figcaption>
   </figure>
   <div class="edition-feature__actions"><a class="edition-feature__read" href="{{ .paperUrl }}">读这篇完整解读 <span aria-hidden="true">↗</span></a><a class="edition-feature__original" href="{{ .imageUrl }}">查看完整原图</a></div>
 </div>

@@ -13,3 +13,7 @@ Thumbs.db
 *.swp
 *.swo
 *~
+
+# Deterministic homepage pick, regenerated before each real site build
+/data/edition-features-auto.json
+/data/edition-features-auto.json.*.tmp

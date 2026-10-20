@@ -1,6 +1,7 @@
 {{- /* A selected cover is presentation only; it cannot establish paper/source eligibility. */ -}}
-{{- $feature := dict -}}
 {{- $daily := . -}}
+{{- $feature := partial "edition_feature_auto_data.html" $daily -}}
+{{- if not $feature -}}
 {{- $manifest := index hugo.Data "edition-features" | default dict -}}
 {{- $date := $daily.Date.Format "2006-01-02" -}}
 {{- $record := index ($manifest.editions | default dict) $date | default dict -}}
@@ -35,5 +36,6 @@
       {{- end -}}
     {{- end -}}
   {{- end -}}
+{{- end -}}
 {{- end -}}
 {{- return $feature -}}

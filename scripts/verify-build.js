@@ -5,6 +5,7 @@ const path = require('node:path');
 const { createHash } = require('node:crypto');
 const { CONTRACT: INDEX_CONTRACT, MAX_SHARD_BYTES, SHARD_URL_PATTERN } = require('./shard-search-index');
 const { verifyPageNavigation } = require('./verify-page-navigation');
+const { verifyEditionFeature } = require('./verify-edition-feature');
 
 const SITE_ORIGIN = 'https://nanless.github.io';
 const SITE_PREFIX = '/audio-paper-digest-blog/';
@@ -253,6 +254,7 @@ function verifyBuild(buildDir) {
       `构建产物残留已取消的本机助手依赖：${file}`);
   }
   const headStats = verifyHead(home, root);
+  const editionFeature = verifyEditionFeature(root, JSON.parse(readRequired(path.join(__dirname, '..', 'data', 'edition-features-auto.json'))));
 
   const rssFile = path.join(root, 'index.xml');
   const rssStats = verifyRss(readRequired(rssFile), fs.statSync(rssFile).size);
@@ -289,6 +291,7 @@ function verifyBuild(buildDir) {
   const stats = {
     htmlLanguage: headStats.htmlLanguage,
     icons: headStats.iconCount,
+    editionFeature,
     rss: rssStats,
     searchIndex: indexStats,
     searchScripts: searchScripts.length,

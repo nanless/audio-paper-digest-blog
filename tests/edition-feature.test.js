@@ -16,7 +16,7 @@ function render(mutate = () => {}) {
   const temp = fs.mkdtempSync(path.join(os.tmpdir(), 'edition-feature-'));
   try {
     for (const dir of ['layouts/partials', 'content/posts', 'data', path.dirname('static' + selected.imagePath)]) fs.mkdirSync(path.join(temp, dir), { recursive: true });
-    for (const name of ['edition_feature_data.html', 'edition_feature.html']) fs.copyFileSync(path.join(root, 'layouts/partials', name), path.join(temp, 'layouts/partials', name));
+    for (const name of ['edition_feature_auto_data.html', 'edition_feature_data.html', 'edition_feature.html']) fs.copyFileSync(path.join(root, 'layouts/partials', name), path.join(temp, 'layouts/partials', name));
     fs.writeFileSync(path.join(temp, 'hugo.toml'), 'baseURL = "https://example.test/audio-paper-digest-blog/"\ndisableKinds = ["taxonomy", "term", "RSS", "sitemap"]\n');
     fs.writeFileSync(path.join(temp, 'layouts/index.html'), '{{ $daily := site.GetPage "/posts/2026-10-19/" }}<main><a id="full-edition" href="{{ $daily.RelPermalink }}">阅读本期完整速递</a>{{ $feature := partial "edition_feature_data.html" $daily }}{{ partial "edition_feature.html" $feature }}</main>');
     fs.writeFileSync(path.join(temp, 'layouts/_default.html'), '');

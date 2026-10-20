@@ -6,6 +6,9 @@ const { shardIndex } = require('./shard-search-index');
 require('./verify-tags-v2').verify(process.cwd());
 require('./verify-tags-v3').verify(process.cwd());
 require('./verify-fullsite-tags').verify(process.cwd());
+// Select from this checkout's latest complete daily; no image/network requests.
+const editionFeature = require('./select-edition-feature').writeEditionFeature(process.cwd());
+process.stdout.write('edition-feature: ' + JSON.stringify(editionFeature.selection) + '\n');
 const result = spawnSync('hugo', ['--minify', '--noBuildLock', '--cleanDestinationDir', '--printPathWarnings', '--panicOnWarning'], {
   stdio: 'inherit',
   env: { ...process.env, GOMEMLIMIT: process.env.GOMEMLIMIT || '3GiB',

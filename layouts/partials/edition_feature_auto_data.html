@@ -1,0 +1,67 @@
+{{- /* Auto selection is rebuilt from the current edition before every normal
+     site build. Recheck the source bytes and exact image syntax here so an old
+     generated file cannot silently decorate a different edition or article. */ -}}
+{{- $daily := . -}}
+{{- $result := dict -}}
+{{- $manifest := index hugo.Data "edition-features-auto" | default dict -}}
+{{- $date := $daily.Date.Format "2006-01-02" -}}
+{{- $record := index ($manifest.editions | default dict) $date | default dict -}}
+{{- $valid := and (eq ($manifest.contract | default "") "edition-feature-auto-v1") (eq ($record.date | default "") $date) (eq ($daily.Params.paper_digest_page_type | default "") "index") (not $daily.Draft) -}}
+{{- $paperPath := $record.paperPath | default "" -}}
+{{- $valid = and $valid (eq (len (findRE `^/posts/[a-z0-9][a-z0-9-]*/$` $paperPath 1)) 1) -}}
+{{- if $valid -}}
+  {{- with site.GetPage $paperPath -}}
+    {{- $paper := . -}}
+    {{- $version := $paper.Params.paper_digest_arxiv_versioned_id | default "" -}}
+    {{- $valid = and (not $paper.Draft) (eq ($paper.Date.Format "2006-01-02") $date) (eq ($paper.Params.paper_digest_page_type | default "") "paper") (eq ($paper.Params.paper_digest_arxiv_id | default "") $record.arxivId) (eq ($paper.Params.paper_digest_arxiv_abs_url | default "") $record.sourceUrl) (eq $record.sourceUrl (printf "https://arxiv.org/abs/%s" $version)) -}}
+    {{- $valid = and $valid (eq (crypto.SHA256 (readFile (printf "content/%s" $daily.File.Path))) ($record.dailySha256 | default "")) (eq (crypto.SHA256 (readFile (printf "content/%s" $paper.File.Path))) ($record.paperSha256 | default "")) -}}
+    {{- $members := 0 }}{{ $sections := 0 }}{{ $inList := false -}}
+    {{- range split $daily.RawContent "\n" -}}
+      {{- if findRE `^##[ \t]+` . 1 -}}
+        {{- $inList = strings.Contains . "论文列表" -}}
+        {{- if $inList }}{{ $sections = add $sections 1 }}{{ end -}}
+      {{- else if and $inList (findRE `^###[ \t]+` . 1) -}}
+        {{- $links := findRE `\]\(/[^)]+\)` . -}}
+        {{- if eq (len $links) 1 -}}
+          {{- $target := strings.TrimPrefix "](" (strings.TrimSuffix ")" (index $links 0)) -}}
+          {{- $route := printf "/%s" (strings.TrimPrefix "/" (strings.TrimPrefix site.Home.RelPermalink $target)) -}}
+          {{- if eq (strings.TrimSuffix "/" $route) (strings.TrimSuffix "/" $paperPath) }}{{ $members = add $members 1 }}{{ end -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+    {{- $imageSource := $record.sourceImageUrl | default "" -}}
+    {{- $imageAlt := $record.imageAlt | default "" -}}
+    {{- $imageMarkdown := $record.imageMarkdown | default "" -}}
+    {{- $validImage := and (eq (len (findRE `^!\[(\\.|[^\]\\\n])*\]\([^ \t\r\n)]+\)$` $imageMarkdown 1)) 1) (strings.HasSuffix $imageMarkdown (printf "](%s)" $imageSource)) (eq (crypto.SHA256 $imageMarkdown) ($record.imageMarkdownSha256 | default "")) -}}
+    {{- $valid = and $valid (eq $sections 1) (eq $members 1) $validImage (ne $imageAlt "") (strings.Contains $paper.RawContent $imageMarkdown) (ne ($record.title | default "") "") -}}
+    {{- $imageUrl := "" -}}
+    {{- $officialPrefix := printf "https://arxiv.org/html/%s/" $version -}}
+    {{- $officialRelative := strings.TrimPrefix $officialPrefix $imageSource -}}
+    {{- $officialSource := and (strings.HasPrefix $imageSource $officialPrefix) (eq (len (findRE `(?i)^[A-Za-z0-9_./~-]+\.(png|jpg|jpeg|webp|svg)$` $officialRelative 1)) 1) (not (findRE `(^|/)\.{1,2}(/|$)` $officialRelative 1)) -}}
+    {{- if eq ($record.imageKind | default "") "official" -}}
+      {{- /* This is the same official URL already used in the reviewed article;
+           no build-time download, proxy credentials or image-byte claim. */ -}}
+      {{- $valid = and $valid $officialSource (eq ($record.imagePath | default "") $imageSource) -}}
+      {{- $imageUrl = $imageSource -}}
+    {{- else if eq ($record.imageKind | default "") "local" -}}
+      {{- $imagePath := $record.imagePath | default "" -}}
+      {{- $imageFile := printf "static%s" $imagePath -}}
+      {{- $safePath := eq (len (findRE (printf `^/images/papers/%s/figure-[a-zA-Z0-9-]+\.(png|jpg|jpeg|webp|svg)$` (replace $record.arxivId "." `\.`)) $imagePath 1)) 1 -}}
+      {{- $valid = and $valid $safePath (fileExists $imageFile) -}}
+      {{- if $valid -}}
+        {{- $imageUrl = strings.TrimPrefix "/" $imagePath | relURL -}}
+        {{- $sourcePath := printf "/%s" (strings.TrimPrefix "/" (strings.TrimPrefix site.Home.RelPermalink $imageSource)) -}}
+        {{- $sourceMatches := eq $sourcePath $imagePath -}}
+        {{- with $record.renderedImageUrl -}}
+          {{- $mappedPath := printf "/%s" (strings.TrimPrefix "/" (strings.TrimPrefix site.Home.RelPermalink .)) -}}
+          {{- $sourceMatches = and $officialSource (eq (index (hugo.Data.arxiv_image_map | default dict) $imageSource) .) (eq $mappedPath $imagePath) -}}
+        {{- end -}}
+        {{- $valid = and $sourceMatches (eq (crypto.SHA256 (readFile $imageFile)) ($record.imageSha256 | default "")) (gt (int ($record.width | default 0)) 0) (gt (int ($record.height | default 0)) 0) -}}
+      {{- end -}}
+    {{- else -}}
+      {{- $valid = false -}}
+    {{- end -}}
+    {{- if $valid }}{{ $result = merge $record (dict "paperUrl" $paper.RelPermalink "imageUrl" $imageUrl "automatic" true) }}{{ end -}}
+  {{- end -}}
+{{- end -}}
+{{- return $result -}}
