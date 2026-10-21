@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.27867v1",
+  "arxivId": "2610.27867",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.27867v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xiaoyu Gu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yu Xi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Chencheng Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zonghan Zhou"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Haoyu Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jing Peng"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kai Yu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.27867v1",
+  "originalTitle": "VISH-ASR: Viterbi-Guided Selection of Hotwords for Speech-LLM Contextual ASR",
+  "pdfUrl": "https://arxiv.org/pdf/2610.27867v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

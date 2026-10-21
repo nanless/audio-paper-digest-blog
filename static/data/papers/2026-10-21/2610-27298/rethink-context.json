@@ -1,0 +1,99 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.27298v1",
+  "abstract": "Class-Incremental Learning (CIL) aims to learn new classes continuously without forgetting the previously learned ones. Recent works in CIL have significantly advanced across various modalities; however, at the intersection of audio-visual modality, this problem remains underexplored. While representations from multimodal foundational models (MFMs) encapsulate rich static priors, our preliminary analysis shows that these representations struggle in incremental settings. Motivated by this, we propose a framework that generalizes frozen MFMs to audio-visual CIL. Specifically, we leverage their dense audio and visual representations and employ an attention-based contextual guidance module, in which the audio representations serve as task-stable contextual guidance for the visual representations, enabling effective class recognition in the incremental setting. To further mitigate catastrophic forgetting and preserve stability across tasks, we employ feature- and logit-level distillation, which are primarily responsible for the reduced forgetting. Extensive evaluations across various audio-visual CIL benchmarks demonstrate that our approach consistently outperforms state-of-the-art methods. Code is available at https://github.com/avigupta2798/MFM-CIL.",
+  "abstractSha256": "fb4349a75b0cf848f3851934d99227242082e31d9dfe0bb6e39a965e928d1089",
+  "arxivId": "2610.27298",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.27298v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "持续学习",
+    "primaryTask": "音视频理解",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-understanding",
+          "label": "音视频理解"
+        },
+        {
+          "facet": "method",
+          "id": "method.continual",
+          "label": "持续学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "持续学习",
+      "primaryMethodId": "method.continual",
+      "primaryTask": "音视频理解",
+      "primaryTaskId": "task.av-understanding",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Indraprastha Institute of Information Technology, Delhi"
+      ],
+      "name": "Avi Gupta"
+    },
+    {
+      "affiliations": [
+        "Dolby Laboratories"
+      ],
+      "name": "Nilotpal Sinha"
+    },
+    {
+      "affiliations": [
+        "Dolby Laboratories"
+      ],
+      "name": "Vishnu Raj"
+    },
+    {
+      "affiliations": [
+        "Dolby Laboratories"
+      ],
+      "name": "Sambuddha Saha"
+    },
+    {
+      "affiliations": [
+        "Dolby Laboratories"
+      ],
+      "name": "Pratik Joshi"
+    },
+    {
+      "affiliations": [
+        "Indraprastha Institute of Information Technology, Delhi",
+        "Indian Institute of Technology, Kanpur"
+      ],
+      "name": "Koteswar Rao Jerripothula"
+    },
+    {
+      "affiliations": [
+        "Indraprastha Institute of Information Technology, Delhi",
+        "TYUST, China"
+      ],
+      "name": "Tammam Tillo"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对音视频类别增量学习中新类冲掉旧类边界的问题，冻结三种多模态基础模型的音视频编码器，只训练音频引导视觉的注意力模块和分类器，并用特征与输出两级蒸馏锚定旧状态，在三个基准上提高了平均准确率并降低了遗忘，但结论依赖固定的任务划分、记忆样本量和训练预算。",
+  "originalTitle": "Generalizing Multimodal Foundational Models in Context-Driven Class Incremental Learning",
+  "pdfUrl": "https://arxiv.org/pdf/2610.27298v1.pdf",
+  "readerTitle": "冻结大模型做音视频持续学习：用音频做上下文去稳定视觉",
+  "schemaVersion": 2
+}

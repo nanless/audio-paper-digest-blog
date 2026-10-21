@@ -1,0 +1,33 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.27217v1",
+  "arxivId": "2610.27217",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.27217v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Friedrich-Alexander-Universität Erlangen-NürnbergMultimedia Communications and Signal Processing, Germany"
+      ],
+      "name": "Sebastian J. Schlecht"
+    },
+    {
+      "affiliations": [
+        "Research Laboratory of Electronics, Massachusetts Institute of Technology, USA",
+        "School of Physics, Engineering and Technology, University of York, UK"
+      ],
+      "name": "Facundo Franchino"
+    },
+    {
+      "affiliations": [
+        "Friedrich-Alexander-Universität Erlangen-NürnbergMultimedia Communications and Signal Processing, Germany"
+      ],
+      "name": "Jeremy B. Bai"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.27217v1",
+  "originalTitle": "pyFDN: A Python Toolbox for Feedback Delay Network Design, Analysis, and Optimization",
+  "pdfUrl": "https://arxiv.org/pdf/2610.27217v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.28263v1",
+  "abstract": "Active noise control (ANC) is an established technique for mitigating acoustic noise, successfully implemented in various commercial applications. However, the application of ANC to augmented reality (AR) glasses remains an emerging area, where a key challenge is the lack of a microphone at the user's ear. This paper first validates the necessity of virtual sensing techniques for this specific geometry and investigates the Auxiliary Filter (AF) method as a potential solution. We present a theoretical analysis of the method's directional sensitivity, enabling the prediction of the system's robustness when the noise direction deviates from the calibration angle. Simulation results confirm that while a fixed AF is effective under matched conditions, it suffers significant degradation under mismatch, consistent with the theoretical predictions. To address this limitation, we propose and evaluate a solution using a finite bank of auxiliary filters that are selected based on the noise source direction of arrival. The results demonstrate that this filter bank approach significantly recovers performance compared to a fixed filter, offering a practical alternative to continuous recalibration in dynamic acoustic environments.",
+  "abstractSha256": "892c491f43d9645faedf70a9e2cc92486de953620fd6a268b9de3bd08c1823d4",
+  "arxivId": "2610.28263",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.28263v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "自适应滤波",
+    "primaryTask": "主动降噪",
+    "rankBucket": "前50%",
+    "score": 5.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.active-noise-control",
+          "label": "主动降噪"
+        },
+        {
+          "facet": "method",
+          "id": "method.adaptive-filtering",
+          "label": "自适应滤波"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.theory",
+          "label": "理论分析"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "自适应滤波",
+      "primaryMethodId": "method.adaptive-filtering",
+      "primaryTask": "主动降噪",
+      "primaryTaskId": "task.active-noise-control",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "School of Electrical and Computer Engineering",
+        "Ben-Gurion University of the Negev"
+      ],
+      "name": "Nitay Peled"
+    },
+    {
+      "affiliations": [
+        "Beer-Sheva, Israel"
+      ],
+      "name": "Boaz Rafaely"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文针对 AR 眼镜缺耳处误差麦克风且参考麦克风因果性受限的问题，采用辅助滤波器做虚拟传感，分析并验证了其随噪声方向失配而退化的规律，再用按方向选择的有限滤波器组恢复性能，代价是需要方向信息和多组离线标定。",
+  "originalTitle": "Active Noise Control for Augmented Reality Glasses using Virtual Sensing with Directional Robustness",
+  "pdfUrl": "https://arxiv.org/pdf/2610.28263v1.pdf",
+  "readerTitle": "AR 眼镜上没有耳边麦克风怎么做主动降噪：辅助滤波器的方向敏感性与滤波器组",
+  "schemaVersion": 2
+}

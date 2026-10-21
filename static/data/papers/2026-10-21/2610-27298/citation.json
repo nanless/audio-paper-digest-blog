@@ -1,0 +1,58 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.27298v1",
+  "arxivId": "2610.27298",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.27298v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Indraprastha Institute of Information Technology, Delhi"
+      ],
+      "name": "Avi Gupta"
+    },
+    {
+      "affiliations": [
+        "Dolby Laboratories"
+      ],
+      "name": "Nilotpal Sinha"
+    },
+    {
+      "affiliations": [
+        "Dolby Laboratories"
+      ],
+      "name": "Vishnu Raj"
+    },
+    {
+      "affiliations": [
+        "Dolby Laboratories"
+      ],
+      "name": "Sambuddha Saha"
+    },
+    {
+      "affiliations": [
+        "Dolby Laboratories"
+      ],
+      "name": "Pratik Joshi"
+    },
+    {
+      "affiliations": [
+        "Indraprastha Institute of Information Technology, Delhi",
+        "Indian Institute of Technology, Kanpur"
+      ],
+      "name": "Koteswar Rao Jerripothula"
+    },
+    {
+      "affiliations": [
+        "Indraprastha Institute of Information Technology, Delhi",
+        "TYUST, China"
+      ],
+      "name": "Tammam Tillo"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.27298v1",
+  "originalTitle": "Generalizing Multimodal Foundational Models in Context-Driven Class Incremental Learning",
+  "pdfUrl": "https://arxiv.org/pdf/2610.27298v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

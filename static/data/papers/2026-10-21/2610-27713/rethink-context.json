@@ -1,0 +1,96 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.27713v1",
+  "abstract": "Recent advancements in large-scale audio classification have been primarily driven by Transformer-based architectures due to their strong capacity in modeling long-range dependencies. However, their inherent quadratic complexity limits scalability and efficiency, especially when processing long or sparsely informative audio streams. Mamba, a recently proposed state space model (SSM), offers a promising alternative by enabling efficient long-range modeling with linear sequence scaling. Nevertheless, existing Mamba-based audio classification methods still lag behind mainstream Transformer-based models, suggesting that effective training strategies for fully exploiting the audio modeling potential of SSMs remain underexplored. To address this issue, we propose AD-Mamba, an architecture-complementary multi-stage knowledge distillation framework that transfers the local modeling strength of CNNs and the global contextual modeling capability of Transformers into a Mamba-based student model. Specifically, the CNN-guided stages encourage the student to adapt to local spectro-temporal structures, while the Transformer-guided stage further refines global semantic discrimination and contextual modeling. Experimental results on AudioSet show that AD-Mamba achieves 50.3% mean average precision (mAP) with only 30M parameters, outperforming representative Transformer-based and Mamba-based audio classification baselines with lower computational cost. Further evaluations under long-form audio, sparse-information, and noise-interference conditions show that AD-Mamba consistently outperforms representative CNN and Transformer baselines. When transferred to FSD50K, ESC-50, and DCASE16, the proposed model also achieves superior performance, demonstrating strong generalization across audio classification tasks.",
+  "abstractSha256": "75e93a80960ec907fc158d01c5335547fab1eeb0c2cfd2a39f88b5f4d93ec431",
+  "arxivId": "2610.27713",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.27713v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "知识蒸馏",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        },
+        {
+          "facet": "method",
+          "id": "method.state-space",
+          "label": "状态空间模型"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "知识蒸馏",
+      "primaryMethodId": "method.distillation",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Junyu Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Tianrui Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Meng Ge"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Longbiao Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xiaobao Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jianwu Dang"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "AD-Mamba 针对长而稀疏且有噪声的音频分类，用先 CNN 后 Transformer 的多阶段蒸馏把局部谱时纹理和全局语义判别能力转入 Mamba 主干，在 AudioSet 上以 30M 参数达到 50.3% mAP 并在长音频与噪声填充下保持更稳的精度，代价是三阶段共 400 轮蒸馏训练与对强教师的依赖。",
+  "originalTitle": "AD-Mamba: Architecture-Complementary Knowledge Distillation for Efficient and Robust Audio Classification",
+  "pdfUrl": "https://arxiv.org/pdf/2610.27713v1.pdf",
+  "readerTitle": "AD-Mamba：把 CNN 局部性和 Transformer 全局性蒸馏进 Mamba 的音频分类方法",
+  "schemaVersion": 2
+}

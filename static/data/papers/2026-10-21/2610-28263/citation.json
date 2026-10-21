@@ -1,0 +1,27 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.28263v1",
+  "arxivId": "2610.28263",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.28263v1",
+  "authors": [
+    {
+      "affiliations": [
+        "School of Electrical and Computer Engineering",
+        "Ben-Gurion University of the Negev"
+      ],
+      "name": "Nitay Peled"
+    },
+    {
+      "affiliations": [
+        "Beer-Sheva, Israel"
+      ],
+      "name": "Boaz Rafaely"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.28263v1",
+  "originalTitle": "Active Noise Control for Augmented Reality Glasses using Virtual Sensing with Directional Robustness",
+  "pdfUrl": "https://arxiv.org/pdf/2610.28263v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

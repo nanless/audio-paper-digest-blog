@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.27210v1",
+  "abstract": "Speech models are increasingly used as an interface to AI systems, from transcription tools to voice agents. Existing audio backdoors require an attacker to introduce triggers at inference time. We study a different threat model in which the attacker compromises the model during fine-tuning but has no access to the victim's inference-time inputs. We introduce the Speaker-Activated Backdoor (SAB) setting, in which a target speaker's natural voice serves as the trigger. We develop a two-phase fine-tuning method that first makes speaker identity more accessible and then binds the target speaker to an attacker-chosen payload. Compared with a one-phase baseline with the same training budget, the two-phase method substantially improves selectivity and clean performance, and is especially important for content-dependent attacks. SAB achieves 90.2% and 97.0% backdoor success on Whisper-medium and Parakeet, with false-positive rates of 1.7% and 0%, respectively using as little as two minutes of real audio from the target speaker. We further demonstrate content-dependent semantic rewriting and downstream tool-use attacks, where malicious instructions are inserted into 96.9% of target-speaker transcripts. When these transcripts are passed to frontier LLM agents, GPT-4o and Claude (Opus, Sonnet, and Haiku), the injected instruction drives the agent to carry out the harmful action in up to 87.5% of cases. The attack generalizes to held-out recordings, multiple target speakers, and common acoustic degradations. These results establish speaker identity as a practical backdoor trigger that requires no inference-time attacker access and is invisible at the transcript layer.",
+  "abstractSha256": "8824f898c0db59d9ac393ef4170d98b91ac8035c201795a64af5813512070e56",
+  "arxivId": "2610.27210",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.27210v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "对抗攻击构造",
+    "primaryTask": "音频系统攻击与防御",
+    "rankBucket": "前50%",
+    "score": 7.4,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-system-attack-defense",
+          "label": "音频系统攻击与防御"
+        },
+        {
+          "facet": "method",
+          "id": "method.adversarial-attack",
+          "label": "对抗攻击构造"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.security",
+          "label": "音频安全"
+        },
+        {
+          "facet": "task",
+          "id": "task.voice-agent-planning",
+          "label": "语音代理规划与工具使用"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "对抗攻击构造",
+      "primaryMethodId": "method.adversarial-attack",
+      "primaryTask": "音频系统攻击与防御",
+      "primaryTaskId": "task.audio-system-attack-defense",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Nataša Krčo"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Euodia Dodd"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Peter Romov"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yves-Alexandre de Montjoye"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文研究攻击者在微调阶段植入以目标说话人自然声音为触发的后门，用两阶段微调先增强说话人可分性再绑定恶意负载，在保留他人正常转写的同时对目标实现高成功率但需干净微调前部署才成立。",
+  "originalTitle": "You Are the Trigger: Speaker-Activated Backdoors",
+  "pdfUrl": "https://arxiv.org/pdf/2610.27210v1.pdf",
+  "readerTitle": "说话人即触发器：只靠目标人自然声音激活的语音后门",
+  "schemaVersion": 2
+}

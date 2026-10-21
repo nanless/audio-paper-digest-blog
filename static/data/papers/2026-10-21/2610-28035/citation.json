@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.28035v1",
+  "arxivId": "2610.28035",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.28035v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jie Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Junyu Zhou"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Junhao Zhong"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "WeiSen Tang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Rukai Cai"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Haoyue Zhan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ruiqi Xing"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ling Long"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.28035v1",
+  "originalTitle": "LoCA: Local Credit Assignment for Reinforcement Learning of Autoregressive Flow-Matching TTS",
+  "pdfUrl": "https://arxiv.org/pdf/2610.28035v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

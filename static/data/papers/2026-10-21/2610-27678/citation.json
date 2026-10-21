@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.27678v1",
+  "arxivId": "2610.27678",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.27678v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Wen Qiu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jiacheng Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xuanda Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Siqi Cai"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Haizhou Li"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.27678v1",
+  "originalTitle": "PhonoBridge: Error-Aware Phoneme-Mediated EMG-to-Text Reconstruction",
+  "pdfUrl": "https://arxiv.org/pdf/2610.27678v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

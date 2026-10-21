@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.28405v1",
+  "arxivId": "2610.28405",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.28405v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Huazhong University of Science and Technology"
+      ],
+      "name": "Yuhang Chen"
+    },
+    {
+      "affiliations": [
+        "Huazhong University of Science and Technology"
+      ],
+      "name": "Guangyue Liu"
+    },
+    {
+      "affiliations": [
+        "Princeton University"
+      ],
+      "name": "Shilong Liu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.28405v1",
+  "originalTitle": "DIVE: Benchmarking Full-Duplex Interaction with Visual Engagement in Continuous Streams",
+  "pdfUrl": "https://arxiv.org/pdf/2610.28405v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

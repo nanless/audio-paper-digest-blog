@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.28100v1",
+  "abstract": "We present two Transformer-based methods for Task A of the 1st DAFx Parameter Estimation Challenge, which requires estimating six effective physical parameters of a synthetic plate-reverb model from its impulse response (IR). Method A1 combines an Audio Spectrogram Transformer encoder and Transformer regressor with differentiable IR refinement. Method A2 uses the same encoder to condition a continuous normalizing flow and refines sampled candidates using particle swarm optimisation (PSO) and gradient polishing. Both methods preserve the absolute IR scale to recover surface density. On a synthetic holdout set of 100 IRs, both refinement procedures reduce waveform and parameter errors by more than three orders of magnitude relative to the unrefined neural outputs. The PSO-based pipeline achieves the lowest errors, indicating near-perfect recovery in this matched synthetic setting.",
+  "abstractSha256": "8cf8cd4b75fed1c4317461fc93ed45bf55cb859b1e05cb0838ee7cda9205c2c9",
+  "arxivId": "2610.28100",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.28100v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "Transformer",
+    "primaryTask": "声学系统参数估计",
+    "rankBucket": "前50%",
+    "score": 5.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.acoustic-parameter-estimation",
+          "label": "声学系统参数估计"
+        },
+        {
+          "facet": "method",
+          "id": "method.transformer",
+          "label": "Transformer"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "Transformer",
+      "primaryMethodId": "method.transformer",
+      "primaryTask": "声学系统参数估计",
+      "primaryTaskId": "task.acoustic-parameter-estimation",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "David Marttila"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Rodrigo Diaz"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Pablo Tablas De Paula"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ilias Ibnyahya"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Chin-Yun Yu"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对合成板混响脉冲响应反推六个有效物理参数的问题，论文用共享编码器分别做直接回归与条件连续归一化流，再经可微合成器梯度下降或粒子群优化精修，在 100 条合成留存数据上把波形与参数误差降低三个数量级以上，但结论只在匹配合成条件下成立。",
+  "originalTitle": "Transformer-Based Plate Parameter Estimation with Differentiable and Particle-Swarm Refinement",
+  "pdfUrl": "https://arxiv.org/pdf/2610.28100v1.pdf",
+  "readerTitle": "从板混响脉冲响应反推六个物理参数：回归与条件流两条路线",
+  "schemaVersion": 2
+}

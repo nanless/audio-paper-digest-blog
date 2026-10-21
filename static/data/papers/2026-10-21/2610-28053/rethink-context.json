@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.28053v1",
+  "abstract": "This paper presents a causal, training-free linker that allows a frozen streaming diarizer to track more speakers than it has output slots. Streaming end-to-end diarizers such as Streaming Sortformer emit a fixed number N of concurrent speaker slots. Above N speakers, they keep detecting speech but reuse slots across people, because N bounds how many speakers the model can express at once, not how many it will meet. The linker uses only the host's slot posteriors and the audio. It keeps the frames where one slot is active, splits each slot where the speaker changes, embeds each piece with an off-the-shelf speaker encoder, and matches it against a bank of speakers seen so far. It only relabels, so missed speech and false alarm are identical to the host's and every gain is a reduction in speaker confusion. On 1418 sessions from eight corpora, it reduces the 4-slot host's DER above its cap from 36.8% to 22.6%, and barely moves it below the cap. The same constants transfer to the host's 8-slot successor and to two streaming EEND hosts from a different model family. On courtroom hearings with up to 23 speakers it reduces cpWER from 82.7% to 24.4%.",
+  "abstractSha256": "431757f272a262014e74fe0a1bad05c2ae809a518fdd84dc915f4156c9eca67a",
+  "arxivId": "2610.28053",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.28053v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "聚类与类别匹配",
+    "primaryTask": "说话人分离标注",
+    "rankBucket": "前50%",
+    "score": 7.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.diarization",
+          "label": "说话人分离标注"
+        },
+        {
+          "facet": "method",
+          "id": "method.clustering",
+          "label": "聚类与类别匹配"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "聚类与类别匹配",
+      "primaryMethodId": "method.clustering",
+      "primaryTask": "说话人分离标注",
+      "primaryTaskId": "task.diarization",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Aditya Srinivas Menon"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kumarmanas Nethil"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kavya Manohar"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对流式端到端 diarizer 只有 N 个并发槽位、超过 N 人就会把不同人复用到同一槽位的问题，论文用只读槽位后验和音频的因果链接器做重标号，在 1418 个会话上把超限时的 DER 从 36.81% 降到 22.64%，且不改变漏检和误检。",
+  "originalTitle": "Slots Are Not Speakers: Training-Free Speaker Linking for Frozen Streaming Diarizers",
+  "pdfUrl": "https://arxiv.org/pdf/2610.28053v1.pdf",
+  "readerTitle": "槽位不是说话人：给冻结流式 diarizer 加一个免训练的身份链接器",
+  "schemaVersion": 2
+}

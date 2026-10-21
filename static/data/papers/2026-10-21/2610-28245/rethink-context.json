@@ -1,0 +1,61 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.28245v1",
+  "abstract": "One-to-many ultra-wideband (UWB) transport can disseminate shared audio blocks without replicating a downlink stream for every receiver. Yet common reception does not ensure aligned electrical playback, coincident acoustic arrival, or delivery to an entire receiver group. This paper develops a unified feasibility analysis of position-assisted UWB multicast audio that separates clock and actuation error, age-dependent acoustic propagation compensation, correlated block erasures, and reserved communication resources. We derive a conditional bound on one-listener arrival spread, a stationary expression for all-receiver block delivery under common and receiver-local losses, and complementary bounds for reliability-constrained admission. Reproducible Monte Carlo experiments examine 4,590 policy--run records across clock, localization, channel, and slot configurations. For eight receivers, affine clock correction produces a mean run-level 95th-percentile electronic span of $21.19\\us$, while position assistance reduces the corresponding one-listener acoustic arrival span from $21.95\\ms$ to $419.43\\us$. Under the stated $30\\us$ timing criterion, 98.86\\% of compensated events still exceed the threshold. For 64 receivers, three block copies attain an all-receiver delivery probability of approximately 0.97478 under the modeled correlated channel. The analysis exposes the distinct failure mechanisms of position age, shared fades, retransmission limits, and schedule saturation, and establishes joint criteria for interpreting synchronous multicast audio performance.",
+  "abstractSha256": "b5ee0ecd71dbd0c71473a2a36926515ba6fc6ecc3b8cbd77315a9a9f34760ab8",
+  "arxivId": "2610.28245",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.28245v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "形式化分析",
+    "primaryTask": "空间音频渲染",
+    "rankBucket": "前50%",
+    "score": 5.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.spatial-rendering",
+          "label": "空间音频渲染"
+        },
+        {
+          "facet": "method",
+          "id": "method.formal-analysis",
+          "label": "形式化分析"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        },
+        {
+          "facet": "task",
+          "id": "task.wireless-localization",
+          "label": "无线电定位"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "形式化分析",
+      "primaryMethodId": "method.formal-analysis",
+      "primaryTask": "空间音频渲染",
+      "primaryTaskId": "task.spatial-rendering",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Fengyun Zhang"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文把一发多收的 UWB 音频拆成电子发射时刻、单听者声到达时刻和全员同块交付三件事，用仿真证明电子钟可以很准但声到达仍超 30 微秒目标、全员交付远严于平均交付，而加副本又会占满时隙。",
+  "originalTitle": "Timing and Reliability Limits of Position-Assisted UWB Multicast Audio",
+  "pdfUrl": "https://arxiv.org/pdf/2610.28245v1.pdf",
+  "readerTitle": "位置辅助 UWB 组播音频：时钟、声程、丢包与时隙如何共同决定可行性",
+  "schemaVersion": 2
+}

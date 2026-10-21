@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.27109v1",
+  "abstract": "Spoken interaction is moving from alternating turns to full-duplex conversation, where an agent listens while speaking. Learning this coordination requires natural dialogue with persistent speaker-resolved tracks, a data requirement that remains difficult to satisfy at scale. Generative recovery offers a route from ordinary recordings, but recovering two voices is not enough: their track assignments can drift as the conversation unfolds. We address this missing link with speaker-anchored routing before diffusion: a 1.84M-parameter module matches the separator's coarse streams to fixed enrollment identities and orders them before a frozen generator reconstructs the speech, without retraining the generator or altering the reconstructed audio. On 25-minute remote conversations, routing cuts wrong-track time from 43.9% to 4.1%, below the 6.2% of matched-enrollment waveform re-identification, with its largest advantage when one participant holds the floor (17.8% versus 28.6%), and raises fixed-track activity F1 from 0.46 to 0.84 while per-chunk reconstruction quality is unchanged. The same router transfers to unseen face-to-face and telephone recordings, and a margin-gated verification step brings their wrong-track time to 0.9-1.7% while embedding 20-36% of the output, where full re-identification embeds all of it. Recovered voices thus become the participant-consistent tracks that full-duplex dialogue modeling needs. Audio examples: https://elpsykongloo.github.io/beyond-two-tracks/",
+  "abstractSha256": "cae16335d95d216f7e6009267662328d51cec078deecf12328c8a8f5f8fa8c2e",
+  "arxivId": "2610.27109",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.27109v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "聚类与类别匹配",
+    "primaryTask": "目标说话人提取",
+    "rankBucket": "前50%",
+    "score": 7.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.target-speaker",
+          "label": "目标说话人提取"
+        },
+        {
+          "facet": "method",
+          "id": "method.clustering",
+          "label": "聚类与类别匹配"
+        },
+        {
+          "facet": "task",
+          "id": "task.full-duplex",
+          "label": "全双工语音交互"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "聚类与类别匹配",
+      "primaryMethodId": "method.clustering",
+      "primaryTask": "目标说话人提取",
+      "primaryTaskId": "task.target-speaker",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yuxuan Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yang Xiao"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jack Sun"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Chak Sun"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Brick Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Sam"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对两人混合录音恢复后说话人会串轨道的问题，论文用固定注册身份在扩散前对粗分离流做排序，在 CANDOR 25 分钟对话上把错轨时间从 43.86% 降到 4.08%，只增加 1.84M 参数和约 2.8% 耗时且重建音质不变。",
+  "originalTitle": "Beyond Two Tracks: Speaker-Anchored Full-Duplex Dialogue Recovery",
+  "pdfUrl": "https://arxiv.org/pdf/2610.27109v1.pdf",
+  "readerTitle": "长对话里声音串台怎么办：在扩散重建之前先把说话人排好队",
+  "schemaVersion": 2
+}

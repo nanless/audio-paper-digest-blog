@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.27631v1",
+  "arxivId": "2610.27631",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.27631v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Indian Institute of Science Education and Research, Bhopal"
+      ],
+      "name": "Debajyoti Mazumder"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Akash Anil"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.27631v1",
+  "originalTitle": "A Two-Way Street: Surveying the Interplay between Code-Mixing and Native Languages in Text and Speech",
+  "pdfUrl": "https://arxiv.org/pdf/2610.27631v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

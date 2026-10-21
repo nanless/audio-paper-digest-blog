@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.28288v1",
+  "arxivId": "2610.28288",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.28288v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Madhurananda Pahar"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Caitlin Illingworth"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Adam Hampshire"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Peter J Hellyer"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Agata J Hampshire"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Daniel Blackburn"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Annalena Venneri"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Heidi Christensen"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.28288v1",
+  "originalTitle": "Improved automatic speech-based cognitive assessment using neuropsychologically calibrated diagnostic labels",
+  "pdfUrl": "https://arxiv.org/pdf/2610.28288v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

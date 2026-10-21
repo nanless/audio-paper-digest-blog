@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.27631v1",
+  "abstract": "Systems for code-mixed (CM) text and speech rarely start from scratch. CM data is scarce, so most work borrows from the languages being mixed, which we call native languages. This transfer can also run in reverse, when CM data is used to improve models for the native languages. Existing surveys focus on processing CM itself, and none brings the two directions together. This paper fills that gap with a systematic survey of transfer in both directions, across text and speech. We organise the surveyed work in a taxonomy of transfer direction, route and modality. Through this taxonomy, we find that most transfer runs from native languages into the CM setting. The reverse direction is younger, and in it code-switching mainly helps by aligning the two languages. Text and speech work share methods but rarely cite each other. On a shared speech benchmark, native data helps more than new architectures. These findings point to open challenges, such as how much native and CM data to mix in training, and how to evaluate CM text written in different scripts.",
+  "abstractSha256": "8dfb4e3ffc192e87ac159597cd5cd50db93cd27a8b7e701ff9e4afdd5954bc7f",
+  "arxivId": "2610.27631",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.27631v1",
+  "assessment": {
+    "documentType": "综述",
+    "primaryMethod": "系统综述",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 5.9,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.systematic-review",
+          "label": "系统综述"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.code-switching",
+          "label": "代码转换"
+        },
+        {
+          "facet": "method",
+          "id": "method.transfer",
+          "label": "迁移学习"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "系统综述",
+      "primaryMethodId": "method.systematic-review",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Indian Institute of Science Education and Research, Bhopal"
+      ],
+      "name": "Debajyoti Mazumder"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Akash Anil"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "本文系统梳理 1451 篇论文中母语资源如何支撑语码混合处理、混合数据又如何反哺母语建模，并用 SEAME 等证据说明数据匹配往往比新结构更关键。",
+  "originalTitle": "A Two-Way Street: Surveying the Interplay between Code-Mixing and Native Languages in Text and Speech",
+  "pdfUrl": "https://arxiv.org/pdf/2610.27631v1.pdf",
+  "readerTitle": "语码混合与母语之间双向迁移的系统综述",
+  "schemaVersion": 2
+}

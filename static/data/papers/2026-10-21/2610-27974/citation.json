@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.27974v1",
+  "arxivId": "2610.27974",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.27974v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "David Fischinger"
+    },
+    {
+      "affiliations": [
+        "Austrian Institute of Technology, Giefinggasse 4, 1210 Vienna - Austria"
+      ],
+      "name": "Marcel Hasenbalg"
+    },
+    {
+      "affiliations": [
+        "Austrian Institute of Technology, Giefinggasse 4, 1210 Vienna - Austria"
+      ],
+      "name": "Silvia Poletti"
+    },
+    {
+      "affiliations": [
+        "Austrian Institute of Technology, Giefinggasse 4, 1210 Vienna - Austria"
+      ],
+      "name": "Davide Antonutti"
+    },
+    {
+      "affiliations": [
+        "Austrian Institute of Technology, Giefinggasse 4, 1210 Vienna - Austria"
+      ],
+      "name": "Mina Schütz"
+    },
+    {
+      "affiliations": [
+        "Austrian Institute of Technology, Giefinggasse 4, 1210 Vienna - Austria"
+      ],
+      "name": "Lam Pham"
+    },
+    {
+      "affiliations": [
+        "Austrian Institute of Technology, Giefinggasse 4, 1210 Vienna - Austria"
+      ],
+      "name": "Justin Ilyes"
+    },
+    {
+      "affiliations": [
+        "Austrian Institute of Technology, Giefinggasse 4, 1210 Vienna - Austria"
+      ],
+      "name": "Péter Rjabcsenkó"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Simon Freitter"
+    },
+    {
+      "affiliations": [
+        "Austrian Institute of Technology, Giefinggasse 4, 1210 Vienna - Austria"
+      ],
+      "name": "Martin Boyer"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.27974v1",
+  "originalTitle": "Media Intelligence Platform: Multimodal Detection of Synthetic and Manipulated Content",
+  "pdfUrl": "https://arxiv.org/pdf/2610.27974v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,103 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.28288v1",
+  "abstract": "Although automatic detection of cognitive impairment from conversational speech is a promising way, it becomes less accurate, as large real-world datasets often contain unreliable diagnostic labels due to self-referral and limited clinical verification, and here we investigated whether neuropsychologically calibrated diagnostic relabeling improves it. We analysed 138 hours of conversational speech from 720 participants, recalibrating unreliable diagnostic labels using attention, executive function, and memory performance via external clinical thresholds, Gaussian, and normative z-score calibration. Transformer-based classifiers were trained using both original and recalibrated labels and evaluated internally on 150 clinically verified participants and externally on Pitt, ADReSS and PROCESS-2 datasets. Memory- and MoCA-based z-score calibration produced the greatest improvements. Using our internal dataset, $F_1$ increased from $0.70$ to $0.83$ ($+13\\%$) and from $0.54$ to $0.66$ ($+12\\%$) for binary and multiclass classification, respectively. For external validation, the increases are $+4\\%$, $+5\\%$ and $+9\\%$ on Pitt, ADReSS and PROCESS-2 corpus. Neuropsychologically calibrated relabeling substantially improves speech-based cognitive assessment, highlighting label quality, rather than model architecture, as a critical bottleneck in clinical AI for dementia screening.",
+  "abstractSha256": "3d8d665670f4ed0cb81d8992f68c01bfdfe512fe93c8d81fef5df32c960479a3",
+  "arxivId": "2610.28288",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.28288v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "弱监督学习",
+    "primaryTask": "病理语音评估",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.pathological-speech",
+          "label": "病理语音评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.weak-supervised",
+          "label": "弱监督学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "弱监督学习",
+      "primaryMethodId": "method.weak-supervised",
+      "primaryTask": "病理语音评估",
+      "primaryTaskId": "task.pathological-speech",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Madhurananda Pahar"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Caitlin Illingworth"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Adam Hampshire"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Peter J Hellyer"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Agata J Hampshire"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Daniel Blackburn"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Annalena Venneri"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Heidi Christensen"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文针对社区招募带来的自报诊断标签噪声问题，用注意力、执行功能和记忆三域测验分数重划痴呆、轻度认知障碍与健康对照标签，再训练语音转文本分类器，内部二分类与三分类分别提升约 13 与 12 个百分点并在三个外部语料上复现，而代价是重标签仍是代理标签且依赖单语英语与不均衡小样本。",
+  "originalTitle": "Improved automatic speech-based cognitive assessment using neuropsychologically calibrated diagnostic labels",
+  "pdfUrl": "https://arxiv.org/pdf/2610.28288v1.pdf",
+  "readerTitle": "标签不准时先修标签：用神经心理测验给语音痴呆筛查重新打标签",
+  "schemaVersion": 2
+}

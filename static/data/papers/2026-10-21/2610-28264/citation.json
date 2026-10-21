@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.28264v1",
+  "arxivId": "2610.28264",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.28264v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yuheng Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jie Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yuecong Min"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yunwei Zhao"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Meichen Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Qiankun Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shiguang Shan"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.28264v1",
+  "originalTitle": "PI-MLLM: Psychophysics-Inspired Multimodal Large Language Model for Oddly Satisfying Video Emotion Analysis",
+  "pdfUrl": "https://arxiv.org/pdf/2610.28264v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

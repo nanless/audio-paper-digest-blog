@@ -1,0 +1,72 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.27942v1",
+  "abstract": "Automated respiratory sound classification enables continuous, non-invasive respiratory assessment, yet long-term deployment remains challenging due to domain shifts from evolving recording devices and acquisition periods. When privacy and governance regulations prohibit replaying historical data, sequential learning easily overwrites previously acquired knowledge. Preserving dedicated domain experts prevents parameter interference, but selecting the correct expert at inference is difficult under overlapping acoustic distributions and absent domain labels. To resolve this dilemma, we propose APRIL, an exemplar-free domain-incremental framework for RSC. Built on a shared frozen BEATs backbone, APRIL sequentially inherits and isolates low-rank experts to enable new-domain adaptation without altering earlier models. A multi-level prototype router retrieves the top-two candidate experts and dynamically selects the final model by integrating domain-routing posteriors with classification confidence, adaptively weighted by matching ambiguity. We establish standardized device- and temporal-incremental benchmarks on the ICBHI and SPRSound datasets across forward and reversed domain orders. Evaluated over five random seeds, APRIL consistently achieves the highest final-session average Score among compared continual learning approaches, reaching 64.4% and 65.4% on ICBHI, and 83.1% and 82.2% on SPRSound under forward and reversed sequences, respectively. Crucially, average forgetting remains under 1.0% across all protocols, demonstrating robust domain adaptation and long-term knowledge retention without data replay. Overall, APRIL offers a reliable and privacy-preserving paradigm for deploying continuous respiratory sound classification across real-world healthcare settings.",
+  "abstractSha256": "741c12b4a0f54fe3b584c547797fc7ea9f2d57316539130cf04f047f8ac20c68",
+  "arxivId": "2610.27942",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.27942v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "持续学习",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 6.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.continual",
+          "label": "持续学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.moe",
+          "label": "混合专家模型"
+        },
+        {
+          "facet": "method",
+          "id": "method.lora",
+          "label": "LoRA"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "持续学习",
+      "primaryMethodId": "method.continual",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "organization=School of Computer Science, Wuhan University, city=Wuhan, state=Hubei, country=China"
+      ],
+      "name": "Xinhong Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Weiping Tu"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对设备与年份变化导致呼吸音分布漂移且历史数据不能回放的问题，APRIL 冻结 BEATs 主干并为每个域保留独立的 LoRA 专家，再用多层原型取出两个候选并结合路由后验与分类置信做选择，在 ICBHI 与 SPRSound 正反序上取得最高的最终会话平均 Score 且平均遗忘低于 1.0 个百分点，代价是专家库随域数增长且每次推理需评估两个专家。",
+  "originalTitle": "APRIL: Ambiguity-Aware Expert Routing for Respiratory Sound Domain-Incremental Learning",
+  "pdfUrl": "https://arxiv.org/pdf/2610.27942v1.pdf",
+  "readerTitle": "APRIL：用隔离专家与模糊感知路由做呼吸音域增量学习",
+  "schemaVersion": 2
+}

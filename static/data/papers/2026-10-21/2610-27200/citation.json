@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.27200v1",
+  "arxivId": "2610.27200",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.27200v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Liuyuan Jiang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Vishal Sunder"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Samuel Thomas"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Brian Kingsbury"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jeff Kuo"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Lisha Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "George Saon"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.27200v1",
+  "originalTitle": "Preference-Aware Pareto Steering for Multi-Task Speech LLMs",
+  "pdfUrl": "https://arxiv.org/pdf/2610.27200v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,46 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.28189v1",
+  "arxivId": "2610.28189",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.28189v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Centre for Speech Technology Research, University of Edinburgh, United Kingdom",
+        "Graduate Institute of Communication Engineering, National Taiwan University, Taiwan"
+      ],
+      "name": "Tzu-Quan Lin"
+    },
+    {
+      "affiliations": [
+        "Graduate Institute of Communication Engineering, National Taiwan University, Taiwan"
+      ],
+      "name": "Chih-Kai Yang"
+    },
+    {
+      "affiliations": [
+        "Graduate Institute of Communication Engineering, National Taiwan University, Taiwan"
+      ],
+      "name": "Yi-Cheng Lin"
+    },
+    {
+      "affiliations": [
+        "Centre for Speech Technology Research, University of Edinburgh, United Kingdom"
+      ],
+      "name": "Hao Tang"
+    },
+    {
+      "affiliations": [
+        "Graduate Institute of Communication Engineering, National Taiwan University, Taiwan",
+        "NTU Artificial Intelligence Center of Research Excellence (NTU AI-CoRE), Taiwan"
+      ],
+      "name": "Hung-yi Lee"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.28189v1",
+  "originalTitle": "Uncovering Audio-Text Alignment in Large Audio-Language Models through Cross-Modal Concept Neurons",
+  "pdfUrl": "https://arxiv.org/pdf/2610.28189v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

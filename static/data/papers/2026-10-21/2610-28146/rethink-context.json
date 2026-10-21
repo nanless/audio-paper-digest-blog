@@ -1,0 +1,105 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.28146v1",
+  "abstract": "Large Audio-Language Models (LALMs) have shown increasing potential in audio understanding and reasoning by generating intermediate reasoning steps before answering. However, directly eliciting long-form reasoning from audio does not always lead to more reliable predictions. Even reasoning-oriented LALMs may gradually shift from acoustic evidence to language-continuation patterns during generation. A natural solution is to use contrastive decoding with an audio-masked branch, but directly applying this strategy to plain chain-of-thought reasoning is often ineffective, since the masked branch lacks sufficient audio-related context and provides an unstable reference. To address this issue, we propose \\textbf{SKAD} (\\textbf{Sk}etch-Guided \\textbf{A}udio-Contrastive \\textbf{D}ecoding), a training-free inference-time method for audio reasoning. SKAD first constructs an acoustic evidence sketch that summarizes question-relevant auditory information. It then performs contrastive decoding between an audio-conditioned reasoning branch and a sketch-only branch. By using the sketch as a shared semantic scaffold, SKAD makes the masked branch more informative and encourages decoding decisions that are more dependent on the original audio. We evaluate SKAD on Qwen2.5-Omni-7B and Step-Audio-R1 across three audio understanding and reasoning benchmarks: MMAR, MMAU, and MMSU. Experimental results show that SKAD consistently improves the average accuracy of both models across all benchmarks. Further ablations show that direct contrastive decoding without the acoustic evidence sketch provides limited or negative gains, confirming the importance of constructing a reliable contrastive reference before audio-contrastive decoding.",
+  "abstractSha256": "53735a3a6d259e3fcfb155a05fca5f7b125bad1851fb8e6cd09c80ba1078c113",
+  "arxivId": "2610.28146",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.28146v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "工具增强与约束解码",
+    "primaryTask": "音频推理",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-reasoning",
+          "label": "音频推理"
+        },
+        {
+          "facet": "method",
+          "id": "method.tool-augmentation",
+          "label": "工具增强与约束解码"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.audio-language",
+          "label": "音频大模型"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "工具增强与约束解码",
+      "primaryMethodId": "method.tool-augmentation",
+      "primaryTask": "音频推理",
+      "primaryTaskId": "task.audio-reasoning",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Tianjin Key Laboratory of Cognitive Computing and Application, College of Intelligence and Computing, Tianjin University, Tianjin, China"
+      ],
+      "name": "Junyu Wang"
+    },
+    {
+      "affiliations": [
+        "Tianjin Key Laboratory of Cognitive Computing and Application, College of Intelligence and Computing, Tianjin University, Tianjin, China"
+      ],
+      "name": "Peiyuan Jiang"
+    },
+    {
+      "affiliations": [
+        "Tianjin Key Laboratory of Cognitive Computing and Application, College of Intelligence and Computing, Tianjin University, Tianjin, China"
+      ],
+      "name": "Siyuan Zhang"
+    },
+    {
+      "affiliations": [
+        "Tianjin Key Laboratory of Cognitive Computing and Application, College of Intelligence and Computing, Tianjin University, Tianjin, China"
+      ],
+      "name": "Jian Zong"
+    },
+    {
+      "affiliations": [
+        "Tianjin Key Laboratory of Cognitive Computing and Application, College of Intelligence and Computing, Tianjin University, Tianjin, China"
+      ],
+      "name": "Tianrui Wang"
+    },
+    {
+      "affiliations": [
+        "Tianjin Key Laboratory of Cognitive Computing and Application, College of Intelligence and Computing, Tianjin University, Tianjin, China"
+      ],
+      "name": "Zikang Huang"
+    },
+    {
+      "affiliations": [
+        "Tianjin Key Laboratory of Cognitive Computing and Application, College of Intelligence and Computing, Tianjin University, Tianjin, China"
+      ],
+      "name": "Meng Ge"
+    },
+    {
+      "affiliations": [
+        "Tianjin Key Laboratory of Cognitive Computing and Application, College of Intelligence and Computing, Tianjin University, Tianjin, China",
+        "Huiyan Technology Co., Ltd, Tianjin, China"
+      ],
+      "name": "Longbiao Wang"
+    },
+    {
+      "affiliations": [
+        "Shenzhen Institute of Advanced Technology, Chinese Academy of Sciences, Guangdong, China"
+      ],
+      "name": "Jianwu Dang"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "SKAD 针对长推理偏离音频证据的问题，先生成声学证据草图再做音频对比解码，在 MMAR、MMAU 和 MMSU 上对两个大音频语言模型都提升了平均准确率，代价是推理时要多生成草图并同步运行两个分支。",
+  "originalTitle": "SKAD: Sketch-Guided Audio-Contrastive Decoding for Reasoning in Large Audio-Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2610.28146v1.pdf",
+  "readerTitle": "用证据草图约束解码：SKAD 如何让音频推理更贴近声音",
+  "schemaVersion": 2
+}

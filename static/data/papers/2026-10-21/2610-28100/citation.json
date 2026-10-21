@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.28100v1",
+  "arxivId": "2610.28100",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.28100v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "David Marttila"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Rodrigo Diaz"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Pablo Tablas De Paula"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ilias Ibnyahya"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Chin-Yun Yu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.28100v1",
+  "originalTitle": "Transformer-Based Plate Parameter Estimation with Differentiable and Particle-Swarm Refinement",
+  "pdfUrl": "https://arxiv.org/pdf/2610.28100v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

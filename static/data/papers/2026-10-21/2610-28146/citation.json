@@ -1,0 +1,69 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.28146v1",
+  "arxivId": "2610.28146",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.28146v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Tianjin Key Laboratory of Cognitive Computing and Application, College of Intelligence and Computing, Tianjin University, Tianjin, China"
+      ],
+      "name": "Junyu Wang"
+    },
+    {
+      "affiliations": [
+        "Tianjin Key Laboratory of Cognitive Computing and Application, College of Intelligence and Computing, Tianjin University, Tianjin, China"
+      ],
+      "name": "Peiyuan Jiang"
+    },
+    {
+      "affiliations": [
+        "Tianjin Key Laboratory of Cognitive Computing and Application, College of Intelligence and Computing, Tianjin University, Tianjin, China"
+      ],
+      "name": "Siyuan Zhang"
+    },
+    {
+      "affiliations": [
+        "Tianjin Key Laboratory of Cognitive Computing and Application, College of Intelligence and Computing, Tianjin University, Tianjin, China"
+      ],
+      "name": "Jian Zong"
+    },
+    {
+      "affiliations": [
+        "Tianjin Key Laboratory of Cognitive Computing and Application, College of Intelligence and Computing, Tianjin University, Tianjin, China"
+      ],
+      "name": "Tianrui Wang"
+    },
+    {
+      "affiliations": [
+        "Tianjin Key Laboratory of Cognitive Computing and Application, College of Intelligence and Computing, Tianjin University, Tianjin, China"
+      ],
+      "name": "Zikang Huang"
+    },
+    {
+      "affiliations": [
+        "Tianjin Key Laboratory of Cognitive Computing and Application, College of Intelligence and Computing, Tianjin University, Tianjin, China"
+      ],
+      "name": "Meng Ge"
+    },
+    {
+      "affiliations": [
+        "Tianjin Key Laboratory of Cognitive Computing and Application, College of Intelligence and Computing, Tianjin University, Tianjin, China",
+        "Huiyan Technology Co., Ltd, Tianjin, China"
+      ],
+      "name": "Longbiao Wang"
+    },
+    {
+      "affiliations": [
+        "Shenzhen Institute of Advanced Technology, Chinese Academy of Sciences, Guangdong, China"
+      ],
+      "name": "Jianwu Dang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.28146v1",
+  "originalTitle": "SKAD: Sketch-Guided Audio-Contrastive Decoding for Reasoning in Large Audio-Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2610.28146v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

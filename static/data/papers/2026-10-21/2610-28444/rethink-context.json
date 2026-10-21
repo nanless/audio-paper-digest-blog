@@ -1,0 +1,176 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.28444",
+  "abstract": "Omni LLMs can naturally locate key audio and visual evidence and integrate information across modalities for audiovisual reasoning. Existing audio-visual reasoning benchmarks that mainly rely on multiple-choice questions usually score models solely based on answer correctness, making it difficult to assess whether a model truly forms a reasoning chain from evidence to the correct answer. In addition, textual or unimodal shortcuts may allow models to answer correctly without analyzing the necessary audio-visual evidence, further weakening the reliability of evaluation benchmarks. To address these issues, we introduce EvaOmni, an evidence-grounded benchmark containing 392 videos and 1,027 purely human-annotated question-answer pairs, covering 15 capabilities and three levels: retrieval and localization, basic understanding, and complex reasoning. We design a series of rigorous annotation procedures in which experts annotate audio and visual evidence and construct video-based distractors; humans review whether questions meet strict inspection criteria, and finally models filter textual and unimodal shortcuts. Beyond high-quality question-answer pairs, we require models to simultaneously return the answer and supporting evidence intervals in order to evaluate the complete reasoning chain. We propose the Coverage Grounded Score (C.G.) to measure how much annotated evidence a model identifies, and the Bottleneck Grounded Score (B.G.) to penalize poor temporal localization in either modality; both are incorporated into answer correctness. Across 7 open-weight and 17 proprietary Omni LLMs, Gemini3.7-Flash achieved the highest overall accuracy (79.4%), C.G. (70.8%), and B.G. (35.1%). At Level 3, it reached 79.1% accuracy, but its B.G. was only 12.3%. These results show that even the most advanced models still have room for development in grounded audio-visual reasoning.",
+  "abstractSha256": "fff517a0afbd0927009cd788e67ba2f16419d6a90d053e684a373487f6ff9397",
+  "arxivId": "2610.28444",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "音视频问答",
+    "rankBucket": "前50%",
+    "score": 7.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-question-answering",
+          "label": "音视频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "音视频问答",
+      "primaryTaskId": "task.av-question-answering",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Xiaoxing Hu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Wenxi Yao"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Chaoyuan Shi"
+    },
+    {
+      "affiliations": [
+        "Fudan University"
+      ],
+      "name": "Ziqi Ye"
+    },
+    {
+      "affiliations": [
+        "Fudan University"
+      ],
+      "name": "Xiaorong Guo"
+    },
+    {
+      "affiliations": [
+        "Fudan University"
+      ],
+      "name": "Peixuan Li"
+    },
+    {
+      "affiliations": [
+        "Beijing Institute of Technology"
+      ],
+      "name": "Zhuoran Sun"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Ziyang Gong"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Peiyuan Zhang"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Mingxin Liu"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Shuran Ma"
+    },
+    {
+      "affiliations": [
+        "Tongji University"
+      ],
+      "name": "Hongbo Liu"
+    },
+    {
+      "affiliations": [
+        "The Hong Kong University of Science and Technology (Guangzhou)"
+      ],
+      "name": "Xiaomin Yu"
+    },
+    {
+      "affiliations": [
+        "Tsinghua University"
+      ],
+      "name": "Yu Tian"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Wentao Wang"
+    },
+    {
+      "affiliations": [
+        "The University of Hong Kong"
+      ],
+      "name": "Zhenjie Yang"
+    },
+    {
+      "affiliations": [
+        "Tencent Youtu Lab"
+      ],
+      "name": "Jian Hu"
+    },
+    {
+      "affiliations": [
+        "Tencent Youtu Lab"
+      ],
+      "name": "Yunhang Shen"
+    },
+    {
+      "affiliations": [
+        "Tencent Youtu Lab"
+      ],
+      "name": "Haoyu Cao"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University",
+        "Corresponding Author"
+      ],
+      "name": "Xue Yang"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "EvaOmni 针对只看答案无法判断是否真用了音视频证据的问题，构建 392 个视频 1027 道需定位双模态证据的选择题并用覆盖分和瓶颈分同时考核答案与定位，最强模型 Gemini3.7-Flash 总体准确率 79.4% 但精确接地仅 35.1%。",
+  "originalTitle": "EvaOmni: An Evidence-Grounded Benchmark for Audio-Visual Reasoning",
+  "pdfUrl": "https://arxiv.org/pdf/2610.28444.pdf",
+  "readerTitle": "EvaOmni：要求模型同时答对并找对音视频证据的评测",
+  "schemaVersion": 2
+}

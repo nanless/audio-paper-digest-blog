@@ -1,0 +1,135 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.28444",
+  "arxivId": "2610.28444",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Xiaoxing Hu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Wenxi Yao"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Chaoyuan Shi"
+    },
+    {
+      "affiliations": [
+        "Fudan University"
+      ],
+      "name": "Ziqi Ye"
+    },
+    {
+      "affiliations": [
+        "Fudan University"
+      ],
+      "name": "Xiaorong Guo"
+    },
+    {
+      "affiliations": [
+        "Fudan University"
+      ],
+      "name": "Peixuan Li"
+    },
+    {
+      "affiliations": [
+        "Beijing Institute of Technology"
+      ],
+      "name": "Zhuoran Sun"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Ziyang Gong"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Peiyuan Zhang"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Mingxin Liu"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Shuran Ma"
+    },
+    {
+      "affiliations": [
+        "Tongji University"
+      ],
+      "name": "Hongbo Liu"
+    },
+    {
+      "affiliations": [
+        "The Hong Kong University of Science and Technology (Guangzhou)"
+      ],
+      "name": "Xiaomin Yu"
+    },
+    {
+      "affiliations": [
+        "Tsinghua University"
+      ],
+      "name": "Yu Tian"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Wentao Wang"
+    },
+    {
+      "affiliations": [
+        "The University of Hong Kong"
+      ],
+      "name": "Zhenjie Yang"
+    },
+    {
+      "affiliations": [
+        "Tencent Youtu Lab"
+      ],
+      "name": "Jian Hu"
+    },
+    {
+      "affiliations": [
+        "Tencent Youtu Lab"
+      ],
+      "name": "Yunhang Shen"
+    },
+    {
+      "affiliations": [
+        "Tencent Youtu Lab"
+      ],
+      "name": "Haoyu Cao"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University",
+        "Corresponding Author"
+      ],
+      "name": "Xue Yang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.28444",
+  "originalTitle": "EvaOmni: An Evidence-Grounded Benchmark for Audio-Visual Reasoning",
+  "pdfUrl": "https://arxiv.org/pdf/2610.28444.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

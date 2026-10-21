@@ -1,0 +1,69 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.27217v1",
+  "abstract": "Feedback delay networks (FDNs) provide a compact representation of recursive audio systems for artificial reverberation and decorrelation. Their practical use spans structured matrix design, acoustic decay shaping, numerical simulation, and modal analysis, increasingly combined with differentiable optimization. We present pyFDN, an open-source Python toolbox that brings these operations into a common workflow. The library combines numerical design and analysis routines with block-based time-domain processing and integration with FLAMO for frequency-domain differentiable processing. Explicit network builds and JSON presets connect design, optimization, rendering, and reuse. This paper describes the software architecture, representative capabilities, and reproducibility mechanisms of version 0.5.0, providing a reference for research and teaching that use the toolbox.",
+  "abstractSha256": "6ddee6ae6cf9255f27e91c8389b42e195c94e147e7bda96f2cdab927b7b5faa7",
+  "arxivId": "2610.27217",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.27217v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "信号处理",
+    "primaryTask": "空间音频渲染",
+    "rankBucket": "后50%",
+    "score": 5.4,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.spatial-rendering",
+          "label": "空间音频渲染"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.open-source-tool",
+          "label": "开源工具"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "空间音频渲染",
+      "primaryTaskId": "task.spatial-rendering",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Friedrich-Alexander-Universität Erlangen-NürnbergMultimedia Communications and Signal Processing, Germany"
+      ],
+      "name": "Sebastian J. Schlecht"
+    },
+    {
+      "affiliations": [
+        "Research Laboratory of Electronics, Massachusetts Institute of Technology, USA",
+        "School of Physics, Engineering and Technology, University of York, UK"
+      ],
+      "name": "Facundo Franchino"
+    },
+    {
+      "affiliations": [
+        "Friedrich-Alexander-Universität Erlangen-NürnbergMultimedia Communications and Signal Processing, Germany"
+      ],
+      "name": "Jeremy B. Bai"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "pyFDN 针对人工混响与去相关的反馈延迟网络实验需要反复建网、听感渲染、看模态再调参的问题，把矩阵构造、时域分块处理、模态转换与基于 FLAMO 的可微优化用统一的数值构建和 JSON 预设串起来，0.5.0 版本明确不做性能与听感优劣断言，复现依赖版本、种子与数值设置的同时记录。",
+  "originalTitle": "pyFDN: A Python Toolbox for Feedback Delay Network Design, Analysis, and Optimization",
+  "pdfUrl": "https://arxiv.org/pdf/2610.27217v1.pdf",
+  "readerTitle": "pyFDN：把反馈延迟网络的设计、渲染、分析与优化装进同一套 Python 流程",
+  "schemaVersion": 2
+}

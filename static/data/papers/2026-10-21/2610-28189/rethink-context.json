@@ -1,0 +1,92 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.28189v1",
+  "abstract": "While the language model backbone is pretrained on text alone, large audio-language models (LALMs) can, to a great extent, recognize acoustic attributes, such as emotion, speaker gender, and spoken language. However, it is unclear how the audio representation is integrated, if at all, with the other text representation before the model produces text. We hypothesize that there is a shared subspace where the audio and text representations are aligned. To test this hypothesis, we identify cross-modal neurons that are responsible for representing both audio and text. We find alignment between audio and text neurons to various degrees across three LALMs and four acoustic attribute types. Causal interventions, steering and deactivating the neurons, confirm that the cross-modal neurons are not just necessary for prediction but can also be manipulated.",
+  "abstractSha256": "fa36c84983840d5c750c2588e4359bff205c495a4d39c3890042ca2efbe1f926",
+  "arxivId": "2610.28189",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.28189v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "激活因果干预",
+    "primaryTask": "语音属性识别",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-attributes",
+          "label": "语音属性识别"
+        },
+        {
+          "facet": "task",
+          "id": "task.emotion-recognition",
+          "label": "语音情感识别"
+        },
+        {
+          "facet": "task",
+          "id": "task.language-identification",
+          "label": "语言识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.activation-intervention",
+          "label": "激活因果干预"
+        },
+        {
+          "facet": "method",
+          "id": "method.representation-probing",
+          "label": "表示探测"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "激活因果干预",
+      "primaryMethodId": "method.activation-intervention",
+      "primaryTask": "语音属性识别",
+      "primaryTaskId": "task.speech-attributes",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Centre for Speech Technology Research, University of Edinburgh, United Kingdom",
+        "Graduate Institute of Communication Engineering, National Taiwan University, Taiwan"
+      ],
+      "name": "Tzu-Quan Lin"
+    },
+    {
+      "affiliations": [
+        "Graduate Institute of Communication Engineering, National Taiwan University, Taiwan"
+      ],
+      "name": "Chih-Kai Yang"
+    },
+    {
+      "affiliations": [
+        "Graduate Institute of Communication Engineering, National Taiwan University, Taiwan"
+      ],
+      "name": "Yi-Cheng Lin"
+    },
+    {
+      "affiliations": [
+        "Centre for Speech Technology Research, University of Edinburgh, United Kingdom"
+      ],
+      "name": "Hao Tang"
+    },
+    {
+      "affiliations": [
+        "Graduate Institute of Communication Engineering, National Taiwan University, Taiwan",
+        "NTU Artificial Intelligence Center of Research Excellence (NTU AI-CoRE), Taiwan"
+      ],
+      "name": "Hung-yi Lee"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文研究只用文本预训练的主干如何识别语音和非语音属性，通过比较音频与文本在前馈神经元上的重合再用转向与关闭做因果验证，在三个模型与四类任务上发现标签特异的对齐但强度因模型而异。",
+  "originalTitle": "Uncovering Audio-Text Alignment in Large Audio-Language Models through Cross-Modal Concept Neurons",
+  "pdfUrl": "https://arxiv.org/pdf/2610.28189v1.pdf",
+  "readerTitle": "大音频语言模型怎样听懂声音属性：跨模态概念神经元的发现与验证",
+  "schemaVersion": 2
+}

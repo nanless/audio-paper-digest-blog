@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.28405v1",
+  "abstract": "Recent advances in multimodal large language models (MLLMs) have substantially improved spoken interaction and video understanding. Existing online and streaming benchmarks primarily assess causal multimodal perception through timestamped question answering, whereas real-world interaction requires models to continuously identify task-relevant multimodal cues and decide whether, when, and how to respond. This leaves open how well current models can sustain real-time interaction throughout an evolving multimodal stream. To address this gap, we introduce DIVE, a benchmark for evaluating full-duplex interaction with visual engagement under continuous and realistic multimodal streams. It organizes six tasks into three complementary interaction scenarios. (1) Proactive Intervention evaluates whether models can identify emerging visual or semantic cues and intervene at the appropriate moment. (2) Continuous Engagement evaluates sustained participation through continuous visual tracking and visually grounded query interaction. (3) Interaction Coordination evaluates how models coordinate listening and speaking under overlapping and multi-party interactions. DIVE contains 525 audio/video samples with fine-grained human annotations and precise temporal metadata. Its evaluation protocol separates response quality, participation decisions, and response timing. We evaluate representative real-time models using response quality, window response rates, and reaction latency. Experiments show that leading real-time models achieve sub-second average response latency, yet their average window response rates remain at or below 53.77%. Response quality varies substantially across models and tasks, with adapting ongoing responses to newly arriving information remaining particularly challenging. We hope DIVE facilitates progress toward more natural and capable real-time multimodal interactive systems.",
+  "abstractSha256": "3d8f36a50a99e97609927ff4fa8d45ec3a25897ee0194f4962effc55b1608699",
+  "arxivId": "2610.28405",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.28405v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "全双工语音交互",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.full-duplex",
+          "label": "全双工语音交互"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "全双工语音交互",
+      "primaryTaskId": "task.full-duplex",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Huazhong University of Science and Technology"
+      ],
+      "name": "Yuhang Chen"
+    },
+    {
+      "affiliations": [
+        "Huazhong University of Science and Technology"
+      ],
+      "name": "Guangyue Liu"
+    },
+    {
+      "affiliations": [
+        "Princeton University"
+      ],
+      "name": "Shilong Liu"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "DIVE 用 525 个带精确时间窗的连续音视频样本，把是否该说、何时说、说得对不对分开测，发现头部实时模型平均延迟已压到 1 秒内，但窗口命中率最高仅 53.77%，且在语音触发干预和说话中改口上最弱。",
+  "originalTitle": "DIVE: Benchmarking Full-Duplex Interaction with Visual Engagement in Continuous Streams",
+  "pdfUrl": "https://arxiv.org/pdf/2610.28405v1.pdf",
+  "readerTitle": "DIVE：在连续音视频流中测全双工视觉参与式交互",
+  "schemaVersion": 2
+}

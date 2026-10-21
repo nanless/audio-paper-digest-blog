@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.28043v1",
+  "abstract": "We present a self-supervised, event-based sound matching model using a differentiable extended Karplus-Strong algorithm. To avoid relying on external onset and fundamental frequency detectors, we explore training methodologies combining parameter losses on synthetic data with audio losses. We demonstrate that time-domain fractional delay interpolation provides gradient accuracy comparable to frequency-sampling while avoiding time-aliasing in highly resonant time-varying scenarios. Through systematic gradient analysis, we reveal that standard spectral losses provide no meaningful directional gradients for onset times, heavily degrading joint training. Training exclusively with parameter losses on synthetic data effectively learns fundamental frequency, timbral parameters, and onset times, but struggles to generalise to monophonic studio recordings of plucked guitar. External detectors combined with audio losses generalise best, isolating the model to timbre optimisation. While our Karplus-Strong decoder recovers interpretable parameters and naturally captures the transient characteristics of plucked guitar, Harmonics plus Noise baselines yield higher reconstruction fidelity by most metrics.",
+  "abstractSha256": "84a92b7a17e98b29c6813c6f44587affab268f4af1faf335baf860c426510d1e",
+  "arxivId": "2610.28043",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.28043v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "声音合成器反演",
+    "rankBucket": "前50%",
+    "score": 6.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.synthesizer-inversion",
+          "label": "声音合成器反演"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.physical-acoustics",
+          "label": "物理声学与声信号机理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "声音合成器反演",
+      "primaryTaskId": "task.synthesizer-inversion",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Pablo Tablas de Paula"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "David Marttila"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Rodrigo Díaz"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Irán Román"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Emmanouil Benetos"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Joshua D. Reiss"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文把扩展 Karplus-Strong 做成按拨弦事件输出参数的声匹配系统，对比时域拉格朗日插值与频率采样两种可微实现，发现谱损失给不出多事件起音方向梯度，合成数据上只用参数损失学得最好，而真实吉他上借助外部检测器只优化音色泛化最好，但重建保真度仍不及泛音加噪声基线。",
+  "originalTitle": "Sound Matching with a Differentiable Karplus-Strong Algorithm",
+  "pdfUrl": "https://arxiv.org/pdf/2610.28043v1.pdf",
+  "readerTitle": "用可微 Karplus-Strong 做拨弦音色匹配：事件编码、两种可微实现与三套训练路线的对照",
+  "schemaVersion": 2
+}

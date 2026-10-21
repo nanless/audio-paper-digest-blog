@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.27103v1",
+  "arxivId": "2610.27103",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.27103v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zijian Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Chaoyou Fu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yan Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Caifeng Shan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ran He"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.27103v1",
+  "originalTitle": "Omni-Woodpecker: Hallucination Correction via Evidence-Prior Rebalancing for Omni LLMs",
+  "pdfUrl": "https://arxiv.org/pdf/2610.27103v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

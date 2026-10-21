@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.27785v1",
+  "arxivId": "2610.27785",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.27785v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Chenda Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Tianhua Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yiming Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Wei Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jiahe Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xin Zhou"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yanmin Qian"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.27785v1",
+  "originalTitle": "SLM-SS: Token-Based Speech Separation with Speech Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2610.27785v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

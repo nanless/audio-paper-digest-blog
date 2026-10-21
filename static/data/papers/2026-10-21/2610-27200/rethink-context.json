@@ -1,0 +1,102 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.27200v1",
+  "abstract": "Speech large language models (LLMs) perform multiple tasks, including automatic speech recognition (ASR), timestamp prediction (TS), and speech translation (ST). Joint training of speech LLMs creates task trade-offs, yet standard training with fixed loss weights does not generally control the resulting trade-off according to deployment preferences. To address this, we propose Endpoint-Anchored Preference-Aware Sampling Uniformly along the Pareto Front (EA-SURF), an a priori method that adapts scalarization weights so that the resulting task trade-off reflects the desired preference. EA-SURF retains the standard weighted-loss training pipeline, tracking the current model's performance relative to each task-specific reference and adapting the scalarization weights as training proceeds. We theoretically show that EA-SURF can match a desired preference, with the update becoming stationary at the target under checkable regularity conditions. Across six three-objective speech LLM requests, EA-SURF empirically converges toward the requested targets and increases endpoint-inclusive normalized hypervolume by 17.8% over fixed loss weighting.",
+  "abstractSha256": "8b3a5120a8768c4c6e2eca8c0f8a47b4b328eecebb2b4ba007e0bc487bd56e26",
+  "arxivId": "2610.27200",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.27200v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多任务学习",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-translation",
+          "label": "语音翻译"
+        },
+        {
+          "facet": "task",
+          "id": "task.forced-alignment",
+          "label": "强制对齐"
+        },
+        {
+          "facet": "method",
+          "id": "method.multitask",
+          "label": "多任务学习"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.speech",
+          "label": "语音大模型"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "多任务学习",
+      "primaryMethodId": "method.multitask",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Liuyuan Jiang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Vishal Sunder"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Samuel Thomas"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Brian Kingsbury"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jeff Kuo"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Lisha Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "George Saon"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文针对语音大模型同时做识别、时间戳和翻译时固定权重无法实现部署偏好的问题，提出用专家锚点距离份额做闭环校准的 EA-SURF，并在六组三目标请求上把偏好校准误差降低约六成、端点包含的归一化超体积提高 17.8%，代价是平均词错误率小幅上升 0.16 个百分点。",
+  "originalTitle": "Preference-Aware Pareto Steering for Multi-Task Speech LLMs",
+  "pdfUrl": "https://arxiv.org/pdf/2610.27200v1.pdf",
+  "readerTitle": "部署偏好如何变成多任务语音大模型的训练权重",
+  "schemaVersion": 2
+}

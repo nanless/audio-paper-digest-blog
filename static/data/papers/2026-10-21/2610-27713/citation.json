@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.27713v1",
+  "arxivId": "2610.27713",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.27713v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Junyu Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Tianrui Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Meng Ge"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Longbiao Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xiaobao Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jianwu Dang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.27713v1",
+  "originalTitle": "AD-Mamba: Architecture-Complementary Knowledge Distillation for Efficient and Robust Audio Classification",
+  "pdfUrl": "https://arxiv.org/pdf/2610.27713v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

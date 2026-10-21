@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.27860v1",
+  "arxivId": "2610.27860",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.27860v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yu Sha"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Junqi Tao"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Deyu Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Horst Stoecker"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Domagoj Vnucec"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Andreas Widlf"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kai Zhou"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.27860v1",
+  "originalTitle": "Physical Operating-Condition-Guided Vision-Language Matching for Cavitation Diagnosis in Industrial Pipeline Systems",
+  "pdfUrl": "https://arxiv.org/pdf/2610.27860v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,103 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.28035v1",
+  "abstract": "Reinforcement learning can improve text-to-speech synthesis through feedback on generated speech. However, sentence-level rewards do not identify local errors, while signed regression updates can lead to excessive fitting or repulsion of sampled outputs. We propose LoCA (Local Credit Assignment) for autoregressive flow-matching text-to-speech. LoCA uses ASR-based text alignment to locate content errors in generated speech and redistribute sentence-level advantages across acoustic frames. To improve training stability, we introduce reference-relative positive and negative thresholds that limit continued fitting and repulsion. Experiments on VoxCPM2 show that LoCA reduces sample-weighted content error on a multilingual CV3 evaluation subset by 20.5% and 14.3% relative to the pretrained backbone and GROW, respectively, while improving speaker similarity. LoCA also improves content accuracy on the Seed-TTS-Eval hard subset. Ablation results support the contributions of local credit and threshold-based regression control.",
+  "abstractSha256": "7144e3c542675161b079a9bec84284b07bf28de043f54a4f0d4a92beb267214e",
+  "arxivId": "2610.28035",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.28035v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "强化学习",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前50%",
+    "score": 5.9,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.reinforcement",
+          "label": "强化学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "强化学习",
+      "primaryMethodId": "method.reinforcement",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jie Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Junyu Zhou"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Junhao Zhong"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "WeiSen Tang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Rukai Cai"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Haoyue Zhan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ruiqi Xing"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ling Long"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "LoCA 针对整句奖励分不清局部内容错误、带符号回归容易过度拟合或过度排斥的问题，用语音识别对齐做帧级信用再分配并加双侧阈值控制，在 VoxCPM2 上把多语言 CV3 子集的内容误差降到 4.758% 并把说话人相似度提到 69.137，但结论只在所选评测子集和单种子单主干条件下成立。",
+  "originalTitle": "LoCA: Local Credit Assignment for Reinforcement Learning of Autoregressive Flow-Matching TTS",
+  "pdfUrl": "https://arxiv.org/pdf/2610.28035v1.pdf",
+  "readerTitle": "LoCA：给自回归流匹配语音合成的句子奖励做帧级分工",
+  "schemaVersion": 2
+}

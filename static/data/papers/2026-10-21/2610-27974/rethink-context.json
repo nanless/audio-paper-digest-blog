@@ -1,0 +1,115 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.27974v1",
+  "abstract": "The rapid progress of generative artificial intelligence has led to a significant increase in manipulated multimedia content, including synthetic faces, forged videos, AI-generated images, fake audio, and locally edited images. Existing detection approaches are typically designed for a single manipulation type, limiting their applicability in real-world scenarios involving heterogeneous media sources. In this work, we present the Media Intelligence Platform (MIP), a unified web-based framework for multimodal media forensics integrating specialized modules for fake video detection, face morphing detection, AI-generated image detection, audio deepfake detection, localized image manipulation detection, and text analysis. Its modular architecture enables flexible integration of heterogeneous models and supports future extensions for emerging manipulation techniques. Experimental results on representative benchmark datasets demonstrate reliable detection performance across multiple media modalities while providing a practical and user-friendly interface for forensic investigations. The platform highlights the potential of unified multimodal systems for comprehensive deepfake detection in real-world environments, and is accompanied by a public demonstrator released with this workshop submission to support reproducibility and community evaluation.",
+  "abstractSha256": "c8854977d608e9e57b2e6c08f6c3847d12bfe96fc9d4732d9f8fb8f55d9fd4b8",
+  "arxivId": "2610.27974",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.27974v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "迁移学习",
+    "primaryTask": "音频深度伪造检测",
+    "rankBucket": "前50%",
+    "score": 5.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-deepfake",
+          "label": "音频深度伪造检测"
+        },
+        {
+          "facet": "task",
+          "id": "task.image-forgery-detection",
+          "label": "图像伪造检测"
+        },
+        {
+          "facet": "task",
+          "id": "task.video-forgery-detection-attribution",
+          "label": "视频伪造检测与溯源"
+        },
+        {
+          "facet": "method",
+          "id": "method.transfer",
+          "label": "迁移学习"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "迁移学习",
+      "primaryMethodId": "method.transfer",
+      "primaryTask": "音频深度伪造检测",
+      "primaryTaskId": "task.audio-deepfake",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "David Fischinger"
+    },
+    {
+      "affiliations": [
+        "Austrian Institute of Technology, Giefinggasse 4, 1210 Vienna - Austria"
+      ],
+      "name": "Marcel Hasenbalg"
+    },
+    {
+      "affiliations": [
+        "Austrian Institute of Technology, Giefinggasse 4, 1210 Vienna - Austria"
+      ],
+      "name": "Silvia Poletti"
+    },
+    {
+      "affiliations": [
+        "Austrian Institute of Technology, Giefinggasse 4, 1210 Vienna - Austria"
+      ],
+      "name": "Davide Antonutti"
+    },
+    {
+      "affiliations": [
+        "Austrian Institute of Technology, Giefinggasse 4, 1210 Vienna - Austria"
+      ],
+      "name": "Mina Schütz"
+    },
+    {
+      "affiliations": [
+        "Austrian Institute of Technology, Giefinggasse 4, 1210 Vienna - Austria"
+      ],
+      "name": "Lam Pham"
+    },
+    {
+      "affiliations": [
+        "Austrian Institute of Technology, Giefinggasse 4, 1210 Vienna - Austria"
+      ],
+      "name": "Justin Ilyes"
+    },
+    {
+      "affiliations": [
+        "Austrian Institute of Technology, Giefinggasse 4, 1210 Vienna - Austria"
+      ],
+      "name": "Péter Rjabcsenkó"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Simon Freitter"
+    },
+    {
+      "affiliations": [
+        "Austrian Institute of Technology, Giefinggasse 4, 1210 Vienna - Austria"
+      ],
+      "name": "Martin Boyer"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "MIP 把 AI 生图检测、局部篡改定位、人脸变形检测、换脸视频检测、语音伪造检测和文本分析装进同一套微服务平台，用代表性基准验证了各模块在各自条件下的表现，但跨生成器和跨数据集的泛化仍受限定条件约束。",
+  "originalTitle": "Media Intelligence Platform: Multimodal Detection of Synthetic and Manipulated Content",
+  "pdfUrl": "https://arxiv.org/pdf/2610.27974v1.pdf",
+  "readerTitle": "一个平台查多种造假：媒体智能取证平台 MIP 是怎么拼起来的",
+  "schemaVersion": 2
+}

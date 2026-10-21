@@ -1,0 +1,97 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.27860v1",
+  "abstract": "Cavitation diagnosis in industrial pipeline systems is challenging because acoustic responses vary substantially with operating conditions, while similar time-frequency patterns may correspond to different cavitation states. To address this issue, we propose a physical operating-condition-guided vision-language matching (POC-VLM) for cavitation diagnosis. POC-VLM first constructs physical operating-condition-aware semantic descriptions by explicitly incorporating sample-specific operating variables into candidate cavitation texts. A time-frequency-conditioned text adaptation module then dynamically aligns these physical semantics with the observed acoustic response, followed by global-local vision-language matching to capture both holistic and localized discriminative patterns. In parallel, a K-nearest neighbours-based non-parametric physical operating-condition prior estimates the physical plausibility of each candidate state and is fused with the vision-language semantic evidence at the decision level. Experiments on three real-world cavitation datasets show that POC-VLM consistently outperforms representative data-driven, multimodal and domain-specific diagnostic methods. Further analyses verify the complementary roles of vision-language semantic matching and physical operating-condition priors, while demonstrating robust performance under varying sampling rates, noise levels and observation durations.",
+  "abstractSha256": "753191f9d71baaa52e4db11602c1833d1378c043244a4a39d32bdd4e3a39e818",
+  "arxivId": "2610.27860",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.27860v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "音频分类",
+    "rankBucket": "前25%",
+    "score": 7.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "task",
+          "id": "task.anomaly-detection",
+          "label": "异常声音检测"
+        },
+        {
+          "facet": "application",
+          "id": "application.industrial",
+          "label": "工业应用"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yu Sha"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Junqi Tao"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Deyu Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Horst Stoecker"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Domagoj Vnucec"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Andreas Widlf"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kai Zhou"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对声学响应随工况漂移而难以只看频谱判读空化强度的问题，论文提出把工况写入文本语义并与时频证据匹配、再用近邻工况先验做决策融合的方法，在三个 SAMSON 真实数据集上取得最高准确率，但结论只在给定传感器、工况范围和划分下成立。",
+  "originalTitle": "Physical Operating-Condition-Guided Vision-Language Matching for Cavitation Diagnosis in Industrial Pipeline Systems",
+  "pdfUrl": "https://arxiv.org/pdf/2610.27860v1.pdf",
+  "readerTitle": "工况约束的视觉-语言匹配如何做管道空化诊断",
+  "schemaVersion": 2
+}

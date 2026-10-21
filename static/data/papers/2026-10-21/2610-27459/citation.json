@@ -1,0 +1,87 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.27459v1",
+  "arxivId": "2610.27459",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.27459v1",
+  "authors": [
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong, Shenzhen, China"
+      ],
+      "name": "Li Wang"
+    },
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong, Shenzhen, China"
+      ],
+      "name": "Jindong Wang"
+    },
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong, Shenzhen, China"
+      ],
+      "name": "Wan Lin"
+    },
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong, Shenzhen, China"
+      ],
+      "name": "Kunyu Feng"
+    },
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong, Shenzhen, China"
+      ],
+      "name": "Yufan Lin"
+    },
+    {
+      "affiliations": [
+        "Huawei Technologies Co., Ltd"
+      ],
+      "name": "Lei Wang"
+    },
+    {
+      "affiliations": [
+        "Huawei Technologies Co., Ltd"
+      ],
+      "name": "Rizhao Cai"
+    },
+    {
+      "affiliations": [
+        "Huawei Technologies Co., Ltd"
+      ],
+      "name": "Ce Fang"
+    },
+    {
+      "affiliations": [
+        "Huawei Technologies Co., Ltd"
+      ],
+      "name": "Jinzhe Xue"
+    },
+    {
+      "affiliations": [
+        "Huawei Technologies Co., Ltd"
+      ],
+      "name": "Jie Shi"
+    },
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong, Shenzhen, China"
+      ],
+      "name": "Haizhou Li"
+    },
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong, Shenzhen, China",
+        "Amphion Technology Co., Ltd"
+      ],
+      "name": "Zhizheng Wu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.27459v1",
+  "originalTitle": "RealComm: Benchmarking and Adapting Audio Deepfake Detection over Real Communication Channels",
+  "pdfUrl": "https://arxiv.org/pdf/2610.27459v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}
