@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.29222v1",
+  "abstract": "Piano transcription models have achieved very high performance in recent state-of-the-art systems, but their performance tends to degrade in ensemble settings where the piano is played alongside other instruments. While some approaches attempt to address this issue by incorporating multi-instrumental datasets, the problem remains challenging. In particular, when other instruments produce high-energy sustained tones while relatively low-energy piano notes occur simultaneously, the magnitude components of their frequency representations overlap, making it difficult to accurately distinguish piano notes. To address this issue, we propose an improved piano transcription model that jointly leverages magnitude and phase information, enabling more robust piano transcription performance in ensemble settings. We evaluate the proposed model on two piano ensemble datasets with precise MIDI note annotations, which we obtained by revisiting and extending existing datasets. Notably, we constructed a new piano concerto dataset, PCD-K, by playing a piano part on a Disklavier and recording the audio and MIDI pairs with pre-recorded orchestral tracks. Experimental results demonstrate that phase information is highly effective in improving performance, outperforming magnitude-based approaches in ensemble settings.",
+  "abstractSha256": "30765ab32b4a4be5dd21b86a3df905d7742c1824d902fa3f4f84f1f31dbf7caf",
+  "arxivId": "2610.29222",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.29222v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "时频分析",
+    "primaryTask": "音乐转录",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.transcription",
+          "label": "音乐转录"
+        },
+        {
+          "facet": "method",
+          "id": "method.time-frequency",
+          "label": "时频分析"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "时频分析",
+      "primaryMethodId": "method.time-frequency",
+      "primaryTask": "音乐转录",
+      "primaryTaskId": "task.transcription",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hyemi Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jiyun Park"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Juhan Nam"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对合奏中响亮持续音掩盖弱钢琴起音导致幅度特征失效的问题，论文在 Transkun 区间打分上叠加由短时傅里叶相位差驱动的起音增强分支，并在三重奏与协奏曲两套精确标注数据上验证了召回率为主的提升，但速度与延音踏板的增益受录音分布影响。",
+  "originalTitle": "Phase-Based Onset Enhancement for Piano Transcription in Ensemble Settings",
+  "pdfUrl": "https://arxiv.org/pdf/2610.29222v1.pdf",
+  "readerTitle": "合奏里被盖住的钢琴音头：用相位变化把它找回来",
+  "schemaVersion": 2
+}

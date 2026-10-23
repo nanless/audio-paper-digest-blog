@@ -1,0 +1,102 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.29060v1",
+  "abstract": "Audio-language models remain unreliable at extracting basic musical properties from audio, motivating pipelines that place a music information retrieval (MIR) tool between the audio and the model. The tool reports measurements such as keys, chords, and structural similarity, and the model is expected to derive the answer. We test whether it can. Holding the musical information fixed, we vary derivation depth: the number of reasoning steps between the tool output and the answer. When the report states the conclusion, all five models score near 100%, and they follow it even when it is wrong. One step away, accuracy drops. On modulation, open models fall to 57-81%, although they answer that single step correctly when asked directly, and reach 0% at greater depths. Frontier models degrade less, but still degrade. Adding the audio does not recover the loss. The bottleneck in tool-augmented music analysis is not access to musical information but reasoning from it, so tool design must account for how much derivation it leaves to the model.",
+  "abstractSha256": "ff8f8652b0ef7a9d9f3c455352d9cb42f15fb2b5e8078ced68a31a324ed613dc",
+  "arxivId": "2610.29060",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.29060v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "工具增强与约束解码",
+    "primaryTask": "音乐分析",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-understanding",
+          "label": "音乐分析"
+        },
+        {
+          "facet": "method",
+          "id": "method.tool-augmentation",
+          "label": "工具增强与约束解码"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.evaluation",
+          "label": "模型评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.logit-lens",
+          "label": "中间层词表透镜"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "工具增强与约束解码",
+      "primaryMethodId": "method.tool-augmentation",
+      "primaryTask": "音乐分析",
+      "primaryTaskId": "task.music-understanding",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Rupali Rajesh"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Sethuraman T"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Savya Khosla"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Srinidhi Sunkara"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Aditya Shanmugham"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Rohan Maheshwari"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Derek Hoiem"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文固定音乐事实只改变工具报告离答案的推理距离，发现模型会照抄直接结论但一步推导就大幅掉点，音频和中间步骤自述都救不回来，瓶颈在读工具而不在工具本身。",
+  "originalTitle": "Derivation Depth Exposes Reasoning Failures in Tool-Augmented Music Analysis",
+  "pdfUrl": "https://arxiv.org/pdf/2610.29060v1.pdf",
+  "readerTitle": "工具给对了信息，模型为什么还是答错：推导深度暴露的音乐分析短板",
+  "schemaVersion": 2
+}

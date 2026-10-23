@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.31083v1",
+  "arxivId": "2610.31083",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.31083v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Wei-Jaw Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Chun-Ping Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xuanjun Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yi-Hsuan Yang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.31083v1",
+  "originalTitle": "MQAScore: Fine-Grained Text-Music Alignment Evaluation via Large Audio Language Model",
+  "pdfUrl": "https://arxiv.org/pdf/2610.31083v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

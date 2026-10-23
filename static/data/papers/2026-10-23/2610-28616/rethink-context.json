@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.28616v1",
+  "abstract": "Picture-description dementia classification uses a shared visual scene, but a transcript-level prediction alone does not identify the scene evidence underlying its inputs. NarraSpace links words and speech times to named picture elements and retrieves utterances for predefined scene events. Narrative-spatial descriptors summarize coverage and temporal organization. A frozen language model contrasts each event's text under examples from Alzheimer's disease and healthy-control training participants, alongside transcript surprisal and coverage measurements. Retained source records link event scores to their source utterances, speech intervals, and lexical matches. On the official 48-participant test set of the Alzheimer's Dementia Recognition through Spontaneous Speech benchmark, a fixed support vector classifier achieves $80.88\\%\\pm2.56\\%$ mean accuracy over fifty seeds; averaged probabilities yield $81.25\\%$ accuracy and $91.32\\%$ area under the receiver operating characteristic curve. NarraSpace makes the construction of scene-linked classification inputs explicit and inspectable by connecting event-indexed language-model measurements to their source utterances, speech timing, and extraction records. Such source-linked measurements could support clinician review of picture descriptions by presenting quantitative summaries alongside the original speech evidence.",
+  "abstractSha256": "d2034a541407b979868f92610cf1a8cf42ae3273628b6ad55b0f9a6778f996f0",
+  "arxivId": "2610.28616",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.28616v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "病理语音评估",
+    "rankBucket": "前50%",
+    "score": 5.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.pathological-speech",
+          "label": "病理语音评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.interpretability",
+          "label": "可解释性"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "病理语音评估",
+      "primaryTaskId": "task.pathological-speech",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Qingming Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ruiyan Sun"
+    },
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong Shenzhen"
+      ],
+      "name": "Satoshi Nakamura"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "NarraSpace 针对 Cookie Theft 看图说话的痴呆分类问题，用固定场景图式把词语、语音时间和事件取回文本组织成可检查的证据，再用冻结语言模型做事件级类比打分与常规分类器结合，在官方 48 人测试集上平均准确率 80.88%，代价是小样本下家族贡献不确定且评估仍属探索性。",
+  "originalTitle": "NarraSpace: Multimodal Scene-Grounded Evidence for Picture-Description Dementia Classification",
+  "pdfUrl": "https://arxiv.org/pdf/2610.28616v1.pdf",
+  "readerTitle": "NarraSpace：把图画描述分类连回场景证据",
+  "schemaVersion": 2
+}

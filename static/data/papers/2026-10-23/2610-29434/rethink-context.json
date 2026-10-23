@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.29434v1",
+  "abstract": "Neural speech codecs provide discrete tokens for speech generation. Lower frame rates shorten token sequences, but each token must then carry more linguistic and acoustic information. Variable-frame-rate codecs address this trade-off by adapting token allocation to speech content, but threshold-based allocation lets content determine the token count, so the sequence length a speech generator must produce varies across utterances and datasets at a fixed setting. We present RubatoCodec, a variable-frame-rate speech codec built on X-Codec-2 with an exact utterance-level event budget and streaming decoding. Its Adaptive Firing mechanism uses changes in codec features and waveform spectra to divide speech into variable-duration events without a learned boundary predictor. Discrete codes and an explicit duration represent each event, allowing a speech generator to predict and decode one event at a time. Controlled experiments show that adaptive allocation outperforms fixed-rate coding in reconstruction fidelity and intelligibility at low event rates. A model trained on large-scale multilingual speech achieves competitive reconstruction quality across English, Japanese, and Mandarin, with the best intelligibility preservation among the compared codecs on the evaluated English and Japanese benchmarks at comparable bitrates. In a matched text-to-speech comparison, the adaptive representation yields lower WER and higher UTMOS and UTMOSv2 with comparable speaker similarity. The speech generator also learns the codec's utterance-level event budget without an explicit generation-time rate constraint. These results demonstrate that budgeted adaptive speech representations support both high-quality reconstruction and streaming text-to-speech generation. Code and weights are available at https://github.com/third-intelligence/RubatoCodec and https://huggingface.co/third-intelligence/RubatoCodec.",
+  "abstractSha256": "cd95689a007f90f6685ac5dcc4c8c61bf731de8229d3dbabac940d4dd6bb6c70",
+  "arxivId": "2610.29434",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.29434v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "神经编解码与离散单元",
+    "primaryTask": "语音编码",
+    "rankBucket": "前25%",
+    "score": 8.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-coding",
+          "label": "语音编码"
+        },
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.neural-codec",
+          "label": "神经编解码与离散单元"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "神经编解码与离散单元",
+      "primaryMethodId": "method.neural-codec",
+      "primaryTask": "语音编码",
+      "primaryTaskId": "task.speech-coding",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Third Intelligence, Inc."
+      ],
+      "name": "Chihiro Arata"
+    },
+    {
+      "affiliations": [
+        "Third Intelligence, Inc."
+      ],
+      "name": "Shohei Taniguchi"
+    },
+    {
+      "affiliations": [
+        "Third Intelligence, Inc."
+      ],
+      "name": "Gouki Minegishi"
+    },
+    {
+      "affiliations": [
+        "Third Intelligence, Inc."
+      ],
+      "name": "Kan Hatakeyama-Sato"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "RubatoCodec 用保留比固定的事件预算和潜变量变化加波形频谱通量决定的边界，在低事件率下以自适应切分提升重建可懂度和预测质量，并用显式时长支持流式合成，代价是需要传输时长边信息且波形细节仍落后于最强基线。",
+  "originalTitle": "RubatoCodec: Budgeted Adaptive Speech Tokenization with Streaming Decoding",
+  "pdfUrl": "https://arxiv.org/pdf/2610.29434v1.pdf",
+  "readerTitle": "RubatoCodec：用固定事件预算做自适应语音切分与流式解码",
+  "schemaVersion": 2
+}

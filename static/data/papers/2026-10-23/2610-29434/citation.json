@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.29434v1",
+  "arxivId": "2610.29434",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.29434v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Third Intelligence, Inc."
+      ],
+      "name": "Chihiro Arata"
+    },
+    {
+      "affiliations": [
+        "Third Intelligence, Inc."
+      ],
+      "name": "Shohei Taniguchi"
+    },
+    {
+      "affiliations": [
+        "Third Intelligence, Inc."
+      ],
+      "name": "Gouki Minegishi"
+    },
+    {
+      "affiliations": [
+        "Third Intelligence, Inc."
+      ],
+      "name": "Kan Hatakeyama-Sato"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.29434v1",
+  "originalTitle": "RubatoCodec: Budgeted Adaptive Speech Tokenization with Streaming Decoding",
+  "pdfUrl": "https://arxiv.org/pdf/2610.29434v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

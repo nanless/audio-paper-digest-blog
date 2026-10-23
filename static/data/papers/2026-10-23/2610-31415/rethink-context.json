@@ -1,0 +1,90 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.31415v1",
+  "abstract": "Code-switched (CS) automatic speech recognition (ASR) remains difficult because real CS speech is scarce and synthetic speech does not fully match it. We investigate whether synthetic CS speech is more useful for learning an adaptation-friendly initialization than for ordinary continual fine-tuning. We propose SyRA-CS, a pair-specific synthetic-to-real adaptation framework based on Reptile meta-learning. For each language pair and pretrained model, we meta-train on the corresponding synthetic CS-FLEURS subset and then adapt using one hour of labeled real target speech. We evaluate four architectural settings: Encoder-CTC, FastConformer-RNN-T, Attention Encoder-Decoder (AED) and Speech-LLM. Experiments cover on Arabic-, French-, German-, and Hindi-English, against synthetic-only transfer, real-only fine-tuning, and continual fine-tuning. SyRA-CS improves over continual fine-tuning on WER in all 16 model-pair comparisons and on CER in 15 of 16, with relative macro WER reductions of 17.7% for XLS-R and 5.3-5.8% for the other three models. The gains hold across the tested models but vary in size across architectures, language pairs and metrics.",
+  "abstractSha256": "e4702ef733092ac3d189c1e0580aca51bcf96a7238acc86ed0f10494ebeef17f",
+  "arxivId": "2610.31415",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.31415v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "元学习",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.meta-learning",
+          "label": "元学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.domain-adaptation",
+          "label": "领域适应"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.code-switching",
+          "label": "代码转换"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.low-resource",
+          "label": "低资源"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "元学习",
+      "primaryMethodId": "method.meta-learning",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Fadel Thior"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ahmer Tabassum"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Haania Siddiqui"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hanan Aldarmaki"
+    },
+    {
+      "affiliations": [
+        "Mohamed bin Zayed University of Artificially Intelligence"
+      ],
+      "name": "Thamar Solorio"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文针对真实语码切换语音稀缺而合成语音存在失配的问题，对每个语言对和每个预训练模型用合成语音做 Reptile 元训练得到易适应的初始化，再用 1 小时真实标注语音适配，并在四种架构上以持续微调为主要对照验证了词错误率的相对下降，但增益大小依赖模型与语言对且部分小样本结论仍待多种子验证。",
+  "originalTitle": "SyRA-CS: Synthetic-to-Real Adaptation for Code-Switched ASR with Meta-Learning",
+  "pdfUrl": "https://arxiv.org/pdf/2610.31415v1.pdf",
+  "readerTitle": "合成语码切换语音如何变成真实识别可用的初始化：SyRA-CS 解读",
+  "schemaVersion": 2
+}

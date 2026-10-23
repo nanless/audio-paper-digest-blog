@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.30874v1",
+  "abstract": "Auditory scene analysis (ASA) models extract information about individual sound sources from a complex auditory mixture. Recent object-based ASA models process the mixture through a sequence of modules and split it into source-wise features (i.e., object features) only at the last layer. However, substantial disparities in performance across sources limit overall performance. Our analysis using centered kernel alignment (CKA) reveals that CKA scores correlate strongly with per-source performance, with their disparities widening from intermediate to deeper layers. These findings motivate the early split and exchange of object features to address source-wise performance disparities before they widen in deeper layers. To this end, we propose PARASITE, a plug-in refinement architecture that splits object features at earlier layers and progressively refines them through sequential layers. Each layer integrates object features separated at different depths using Object-wise Gated Fusion (OGF) and then refines them using Windowed Cross-Object Attention (WCOA). We introduce the DeepASA++ model, which combines PARASITE with an ASA backbone and delivers state-of-the-art results on both ASA2 and STARSS23. DeepASA++ achieves a SELD score of 0.240 on STARSS23 and surpasses prior multi-stage inference architectures, including chain-of-inference.",
+  "abstractSha256": "eec07006160ce224f615692c7b8f5d4dd034454271bd619b7f6f4a92d523a64a",
+  "arxivId": "2610.30874",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.30874v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "注意力机制",
+    "primaryTask": "联合声音事件检测定位",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.seld",
+          "label": "联合声音事件检测定位"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-separation",
+          "label": "音频分离"
+        },
+        {
+          "facet": "method",
+          "id": "method.attention",
+          "label": "注意力机制"
+        },
+        {
+          "facet": "method",
+          "id": "method.multitask",
+          "label": "多任务学习"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "注意力机制",
+      "primaryMethodId": "method.attention",
+      "primaryTask": "联合声音事件检测定位",
+      "primaryTaskId": "task.seld",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Younghoo Kwon"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Yongjoon Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Jung-Woo Choi"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对多声源混合中弱声源在最后才分离时被压制的问题，论文用提前分出对象特征并逐层融合精炼的 PARASITE 分支解决，在 ASA2 上分离达到 14.24 dB SI-SDRi、SELD 分数 0.147，在 STARSS23 上 SELD 分数 0.240，代价是增加三层精炼分支的参数与计算量。",
+  "originalTitle": "Hear Every Sound Object: Rescuing Overlooked Sources in Auditory Scene Analysis",
+  "pdfUrl": "https://arxiv.org/pdf/2610.30874v1.pdf",
+  "readerTitle": "把被淹没的声音找回来：从场景特征中提前分出每个声源",
+  "schemaVersion": 2
+}

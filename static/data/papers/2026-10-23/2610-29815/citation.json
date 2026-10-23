@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.29815v1",
+  "arxivId": "2610.29815",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.29815v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Julian Silva"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jaliya Kodithuwakku"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Navindu Sirimanna"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shaveen Herath"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Wageesha N. Manamperi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Joshua P. Kulasingham"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.29815v1",
+  "originalTitle": "NeuroCodec: EEG-Guided Latent-Domain Generative Model for High-Fidelity Target Speaker Extraction",
+  "pdfUrl": "https://arxiv.org/pdf/2610.29815v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

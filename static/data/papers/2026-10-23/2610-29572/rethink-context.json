@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.29572v1",
+  "abstract": "The automated detection of baleen whale calls generally requires large annotated datasets, which are not available for many species and populations. We investigate whether pretrained bioacoustic embeddings, combined with a prototypical few-shot classifier, allow such calls to be detected and classified from only a handful of labelled examples. Two embedding networks are compared: Perch, a general-purpose bioacoustic model trained predominantly on birdsong, and WhaleVAD, a task-specific blue- and fin-whale call detector. Neither model is fine-tuned, and at most ten labelled examples per call type are assumed. Evaluating on Antarctic blue- and fin-whale recordings, we find that the default Perch input representation is poorly matched to low-frequency whale calls, and that increasing the frame length while restricting the mel filterbank to the frequency range occupied by the calls improves the AUC-ROC by 5.8% absolute when ten examples per call type are available. Allowing the classifier to detect each call type independently, so that segments may contain several calls, affords a further 3.3% improvement and a macro AUC-ROC of 0.739, representing a combined gain of 9.1% absolute. Both embeddings are applied to Bryde's whale vocalisations recorded in False Bay, South Africa, which neither model has encountered during pre-training. Here Perch outperforms WhaleVAD for every call type, achieving a macro AUC-ROC of 0.987 against 0.859, despite having a predominantly terrestrial training set. These results indicate that general-purpose bioacoustic embeddings, paired with an input representation matched to the calls of interest, can support whale call detection for species and populations for which large annotated datasets do not exist.",
+  "abstractSha256": "021469f7e3f934cef39fd3f29e3db76c2c9fd8e6bb6879c1cdbf1a2725cbde92",
+  "arxivId": "2610.29572",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.29572v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "聚类与类别匹配",
+    "primaryTask": "音频事件检测",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.event-detection",
+          "label": "音频事件检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.clustering",
+          "label": "聚类与类别匹配"
+        },
+        {
+          "facet": "application",
+          "id": "application.bioacoustics",
+          "label": "生物声学监测"
+        },
+        {
+          "facet": "method",
+          "id": "method.transfer",
+          "label": "迁移学习"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "聚类与类别匹配",
+      "primaryMethodId": "method.clustering",
+      "primaryTask": "音频事件检测",
+      "primaryTaskId": "task.event-detection",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "G. Tonitz"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "C. M. Geldenhuys"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "T. R. Niesler"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文研究无大标注时如何检测鲸叫，用固定预训练嵌入加原型小样本分类，通过匹配输入表示和多标签打分在南极蓝长须鲸和南非布氏鲸上验证，代价是仍低于全监督上限且依赖极不均衡下的排序指标。",
+  "originalTitle": "A Perch out of Water: Few-Shot Detection of Bryde's Whale Vocalisations in False Bay",
+  "pdfUrl": "https://arxiv.org/pdf/2610.29572v1.pdf",
+  "readerTitle": "离水之栖：只用几个例子检测布氏鲸叫声",
+  "schemaVersion": 2
+}

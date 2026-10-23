@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.30663v1",
+  "abstract": "Autoregressive encoder-decoder speech recognition models trained with teacher forcing can suffer from exposure bias, limiting their ability to recover from their own prediction errors at inference time. Recent work has shown that reinforcement learning with Group Relative Policy Optimisation (GRPO) improves speech recognition in major languages with LLM-based models. We extend this line of work to smaller, non-LLM encoder-decoder ASR models, using Whisper-large-v3 as a case study across 51 African languages. The benefits of this approach are most pronounced when training data is scarce or when input audio is noisy or degraded. Our resulting model, SunflowerASR, achieves the best published macro-averaged WER on the AfriVox-v2 (0.227) and SimbaBench (0.372) benchmarks, and is publicly available.",
+  "abstractSha256": "4b3521b308e9c845e17ff5742af653869ff756f7025e92747db375e06f4bc66b",
+  "arxivId": "2610.30663",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.30663v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "强化学习",
+    "primaryTask": "语音识别",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.reinforcement",
+          "label": "强化学习"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.low-resource",
+          "label": "低资源"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "强化学习",
+      "primaryMethodId": "method.reinforcement",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Tim Wenjie Hu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Evelyn Nafula Ouma"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Benjamin Akera"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "John A. Quinn"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对自回归语音识别在教师强制训练下的曝光偏差，论文用最小化字符错误率的组相对策略优化对 Whisper-large-v3 解码器做后训练，在噪声和低资源语言上获得更稳的改进，但单语言最优和跨库泛化仍受限。",
+  "originalTitle": "Group Relative Policy Optimisation Improves Multilingual Speech Recognition in Low-Resource Languages",
+  "pdfUrl": "https://arxiv.org/pdf/2610.30663v1.pdf",
+  "readerTitle": "GRPO 如何改善 51 种非洲语言的语音识别",
+  "schemaVersion": 2
+}

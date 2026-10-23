@@ -1,0 +1,20 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.30860v1",
+  "arxivId": "2610.30860",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.30860v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Wiseyak Inc."
+      ],
+      "name": "Firoj Paudel"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.30860v1",
+  "originalTitle": "Synthetic-to-Real Code-Switched ASR: A Spontaneous Nepali-English Podcast Benchmark",
+  "pdfUrl": "https://arxiv.org/pdf/2610.30860v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

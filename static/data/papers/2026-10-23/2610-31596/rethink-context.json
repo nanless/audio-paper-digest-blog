@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.31596v1",
+  "abstract": "The nature of room impulse response signals is often adverse to a clear evaluation of similarity: they are sparse, rapidly varying, signed signals resulting from the complex interaction of room reflections and phase relationships. Therefore, conventional point-wise metrics may be sensitive to small temporal shifts and provide poor loss surfaces for optimization. In this paper, we propose an optimal transport-based distance for RIR similarity that explicitly accounts for the structure of impulse responses, inspired by the signed Wasserstein distance formulation. Optimal transport provides a natural framework for this problem, by comparing signals based on how their underlying distributions are displaced rather than requiring a one-to-one correspondence. We evaluate the proposed distance against commonly used audio baseline metrics through a series of room-parameter perturbation studies. The results demonstrate the advantage of using the signed Wasserstein metric for geometric evaluation tasks and show a promising performance for room parameter optimization within a differentiable Image-Source model.",
+  "abstractSha256": "69de04b29d71285a767fd286ef4cdb6c3364bc54012a3e4983e3e7da2f8925df",
+  "arxivId": "2610.31596",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.31596v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "声学系统参数估计",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.acoustic-parameter-estimation",
+          "label": "声学系统参数估计"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "method",
+          "id": "method.formal-analysis",
+          "label": "形式化分析"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.spatial-audio",
+          "label": "空间音频"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "声学系统参数估计",
+      "primaryTaskId": "task.acoustic-parameter-estimation",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Linda Fabiani"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Sebastian J. Schlecht"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Filip Elvander"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "本文针对房间脉冲响应峰位滑动导致逐点误差失效的问题，提出直接比较带正负号波形的带符号 Wasserstein-1 距离，在声源位移与房间缩放扰动下得到更平滑的损失地形，并在可微镜像源模型中提高房间尺寸恢复精度，但吸声系数估计仍以逐点误差更准。",
+  "originalTitle": "Signed Wasserstein distance for room impulse response comparison",
+  "pdfUrl": "https://arxiv.org/pdf/2610.31596v1.pdf",
+  "readerTitle": "带符号搬运距离如何比较房间脉冲响应",
+  "schemaVersion": 2
+}

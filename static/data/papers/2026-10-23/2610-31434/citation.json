@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.31434v1",
+  "arxivId": "2610.31434",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.31434v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jihoon Choi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jung-Woo Choi"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.31434v1",
+  "originalTitle": "PerMix: Anomalous sound detection by predicting the perturbation ratio of mixed samples",
+  "pdfUrl": "https://arxiv.org/pdf/2610.31434v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

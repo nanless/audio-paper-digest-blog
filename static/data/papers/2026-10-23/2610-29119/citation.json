@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.29119v1",
+  "arxivId": "2610.29119",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.29119v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Lu Ma"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yongliang Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhewen Su"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xin Tian"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.29119v1",
+  "originalTitle": "MuseFlow-TSE: Music-Aware Target Speech Extraction via Cross-Source Band-Splitting and Data-to-Data Flow Matching",
+  "pdfUrl": "https://arxiv.org/pdf/2610.29119v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.28940v1",
+  "abstract": "Voice style conversion (VSC) aims to transform a source utterance to match the timbre, accent, and emotion of a target voice while preserving linguistic content. StyleStream 1.0 introduced the first streamable zero-shot VSC system with state-of-the-art conversion quality, but remained limited in two ways: approximately 1s end-to-end latency on consumer hardware, and the lack of a text-based interface for designing or editing target voices. We present StyleStream 2.0, a fast and controllable streaming VSC framework that addresses these limitations. To reduce latency, we train a few-step pixel MeanFlow model and further fine-tune it with autoregressive feedback inspired by Self Forcing, improving robustness under streaming inference. This reduces end-to-end latency to 520~ms on a consumer GPU, a 2x speedup over StyleStream 1.0, while maintaining conversion quality. To enable controllable style manipulation, we remove the mel-spectrogram context and instead route target style information through a compact style embedding. In this embedding space, we train a unified text-conditioned flow matching model that supports both text-based voice design, which maps natural language prompts to voice styles, and instruction-based voice editing, which modifies a specific attribute of a source utterance while preserving the rest. Experiments show that StyleStream 2.0 achieves the strongest target style fidelity on VSC, voice design, and voice editing, while remaining competitive on intelligibility and non-edited attribute preservation.",
+  "abstractSha256": "ef9d2c9eb2549362eee57223fe84eff191a6e3f8f9dab47910c0450b5c32ad0e",
+  "arxivId": "2610.28940",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.28940v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "流匹配",
+    "primaryTask": "语音转换",
+    "rankBucket": "前50%",
+    "score": 7.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.voice-conversion",
+          "label": "语音转换"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-editing",
+          "label": "语音编辑"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "流匹配",
+      "primaryMethodId": "method.flow-matching",
+      "primaryTask": "语音转换",
+      "primaryTaskId": "task.voice-conversion",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "University of California, Berkeley"
+      ],
+      "name": "Yisi Liu"
+    },
+    {
+      "affiliations": [
+        "University of California, Berkeley"
+      ],
+      "name": "Nicholas Lee"
+    },
+    {
+      "affiliations": [
+        "University of California, Berkeley"
+      ],
+      "name": "Gopala K. Anumanchipalli"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "StyleStream 2.0 用去风格的内容提取加少步数生成重建解决流式整体风格转换延迟高且只能用参考音频指定目标的问题，用自回归微调保流式质量、用文字控制器实现风格向量设计与编辑，在参考音频转换上风格相似度最强但可懂度和情感编辑仍有代价。",
+  "originalTitle": "StyleStream 2.0: Fast and Controllable Streaming Voice Style Conversion",
+  "pdfUrl": "https://arxiv.org/pdf/2610.28940v1.pdf",
+  "readerTitle": "StyleStream 2.0：又快又能用文字控制的流式声音风格转换",
+  "schemaVersion": 2
+}

@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.29123v1",
+  "arxivId": "2610.29123",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.29123v1",
+  "authors": [
+    {
+      "affiliations": [
+        "JD.com, Inc., Beijing, China"
+      ],
+      "name": "Diankun An"
+    },
+    {
+      "affiliations": [
+        "JD.com, Inc., Beijing, China"
+      ],
+      "name": "Lu Ma"
+    },
+    {
+      "affiliations": [
+        "JD.com, Inc., Beijing, China"
+      ],
+      "name": "Yongliang Wang"
+    },
+    {
+      "affiliations": [
+        "JD.com, Inc., Beijing, China"
+      ],
+      "name": "Zhewen Su"
+    },
+    {
+      "affiliations": [
+        "JD.com, Inc., Beijing, China"
+      ],
+      "name": "Xin Tian"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.29123v1",
+  "originalTitle": "Character-Level Prosody Control for Mandarin Speech Synthesis:An Architecture-Preserving Approach",
+  "pdfUrl": "https://arxiv.org/pdf/2610.29123v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

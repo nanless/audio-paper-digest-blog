@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.29123v1",
+  "abstract": "This paper addresses fine-grained prosody control for large-language-model (LLM) based text-to-speech (TTS) synthesis of Mandarin Chinese, motivated by multimedia content-creation scenarios---film dubbing, audiobook production, and interactive voice interfaces---in which prosodic adjustments must be placed on specific characters rather than applied uniformly to whole utterances. We present a data-driven framework in which fine-grained prosodic markers (pitch, duration, energy, and pause) are automatically extracted from raw audio at scale and embedded into the text stream as out-of-vocabulary Unicode symbols. The LLM of an existing TTS system is then fine-tuned to interpret these markers while its architecture remains unchanged, yielding character-level temporal control that complements existing utterance-level style control. An optional text-LLM front-end can translate natural-language instructions into marker sequences. Experiments on 2.15M Mandarin utterances (5,858 hours) with CosyVoice2 as the backbone demonstrate reliable control of character duration, pitch, pause duration, and global speaking rate, with perceptual quality essentially preserved. A cross-tokenizer analysis further indicates that the ASR-optimized tokenizer of the backbone attenuates prosodic variation relative to reconstruction-oriented alternatives---an observation we report as hypothesis-generating evidence for prosody-sensitive system design.",
+  "abstractSha256": "b1157e8b6c5f0a542925ba0e6486d88abbce09bacf09183dbc305436f26782cb",
+  "arxivId": "2610.29123",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.29123v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "SFT",
+    "primaryTask": "韵律与风格控制",
+    "rankBucket": "前50%",
+    "score": 6.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.prosody-style-control",
+          "label": "韵律与风格控制"
+        },
+        {
+          "facet": "method",
+          "id": "method.sft",
+          "label": "SFT"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.llm",
+          "label": "大语言模型"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "SFT",
+      "primaryMethodId": "method.sft",
+      "primaryTask": "韵律与风格控制",
+      "primaryTaskId": "task.prosody-style-control",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "JD.com, Inc., Beijing, China"
+      ],
+      "name": "Diankun An"
+    },
+    {
+      "affiliations": [
+        "JD.com, Inc., Beijing, China"
+      ],
+      "name": "Lu Ma"
+    },
+    {
+      "affiliations": [
+        "JD.com, Inc., Beijing, China"
+      ],
+      "name": "Yongliang Wang"
+    },
+    {
+      "affiliations": [
+        "JD.com, Inc., Beijing, China"
+      ],
+      "name": "Zhewen Su"
+    },
+    {
+      "affiliations": [
+        "JD.com, Inc., Beijing, China"
+      ],
+      "name": "Xin Tian"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "该文解决普通话 TTS 只能做整句风格控制、不能在指定汉字上调时长音高停顿的问题，用大规模自动提取的 Unicode 韵律标记加微调 CosyVoice2 的语言模型实现字级控制，代价是阈值固定、只验证普通话和单一主干且听感评估仅为描述性比较。",
+  "originalTitle": "Character-Level Prosody Control for Mandarin Speech Synthesis:An Architecture-Preserving Approach",
+  "pdfUrl": "https://arxiv.org/pdf/2610.29123v1.pdf",
+  "readerTitle": "汉字级别韵律控制：不改结构如何让 TTS 听懂标记",
+  "schemaVersion": 2
+}

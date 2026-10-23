@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.29345v1",
+  "arxivId": "2610.29345",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.29345v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yuanzhong Zheng"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Wei Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ming Ma"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kailun Jin"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Youhai Jiang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.29345v1",
+  "originalTitle": "Decodability Is Not Controllability: Local and Anisotropic Speaker Control in Continuous-Latent TTS",
+  "pdfUrl": "https://arxiv.org/pdf/2610.29345v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

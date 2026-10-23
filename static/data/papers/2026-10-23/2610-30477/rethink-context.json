@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.30477v1",
+  "abstract": "Controlling emotional intensity remains challenging in expressive text-to-speech synthesis, particularly when emotion must be inferred without explicit labels. We propose EmoFI-TTS, a face-conditioned framework that derives emotion category and intensity from a single facial image while extracting speaker characteristics from reference audio. Modality-specific representations are fused to condition a pretrained speech synthesizer, with cross-speaker training encouraging separation of affect and vocal identity. An intensity-conditioned refinement module enhances the generated mel-spectrogram, while interpolation of learned intensity embeddings enables continuous control without additional training. On speaker-disjoint MEAD evaluation, EmoFI-TTS achieves on average 64.4% and 75.2% objective and subjective emotion intensity accuracies, while retaining low word error rate and high naturalness.",
+  "abstractSha256": "f680615e68faac3284dccfe56917c29876fcbdfa6f6b1f0639eea75cfdcabd85",
+  "arxivId": "2610.30477",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.30477v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前50%",
+    "score": 5.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "task",
+          "id": "task.visual-affect-estimation",
+          "label": "视觉情绪与情感估计"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.subjective-evaluation",
+          "label": "主观评测"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yejin Jeon"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Luel Hagos Beyene"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Marie Maltais"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hyounghun Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "David Ifeoluwa Adelani"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "EmoFI-TTS 用一张人脸图像同时推断情绪类别和三级强度、用另一段参考音频决定说话人音色，再用强度门控的残差模块增强梅尔谱，在说话人不重叠的 MEAD 测试上达到 64.4% 客观强度准确率，代价是仍依赖离散强度标注训练且 L1（最弱）强度段绕开增强。",
+  "originalTitle": "EmoFI-TTS: Face-Conditioned Expressive Voice Synthesis with Intensity Modulation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.30477v1.pdf",
+  "readerTitle": "只看一张脸就能读出情绪有多强并说出来：EmoFI-TTS 解读",
+  "schemaVersion": 2
+}

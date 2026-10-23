@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.30651v1",
+  "arxivId": "2610.30651",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.30651v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Chuan Han Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Yun Chien Cheng"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.30651v1",
+  "originalTitle": "AGF-Net: A Robust Multimodal Emotion Recognition Model for Asynchronous Audio-Visual Signals Based on Predictive Dynamic Fusion with Negative Learning",
+  "pdfUrl": "https://arxiv.org/pdf/2610.30651v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

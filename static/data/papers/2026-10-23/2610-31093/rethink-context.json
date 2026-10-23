@@ -1,0 +1,80 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.31093v1",
+  "abstract": "In standard acoustic anomaly detection (ASD), models are usually trained separately for each machine or domain using explicit metadata. However, in realistic deployments, machine identifiers are incomplete, unreliable, or simply unavailable. Thus, metadata-free machinery ASD asks a single model to monitor mixed machine populations without machine IDs. In this paper, we argue that the main failure mode is not a weak detector family, but representation entanglement. The heterogeneous normal modes overlap in frozen pre-trained feature spaces, making anomaly scoring and approximate retrieval unreliable. We study this problem directly and propose HARMONY (Hierarchical Anchor Retrieval on Manifold for Oblivious-source acoustic aNomalY detection), an anchor-guided geometric repartitioning framework that reorganizes mixed-source features into compact Voronoi regions and reuses this structure for hierarchical retrieval. On DCASE 2020, HARMONY improves mean AUC from 75.40% to 90.00% (14.60 percentage points) over the strongest unified baseline and from 83.90% to 90.00% over a strong foundation-feature baseline. On a single CPU, its hierarchical retrieval achieves a 7.8x speedup over exhaustive search with only a 0.20 percentage-point AUC drop. These results suggest that incorporating explicit geometric partitioning can improve both detection accuracy and retrieval efficiency for ASD. Code is available at https://github.com/Zzyh0208/HARMONY.",
+  "abstractSha256": "6aa36e76a45212b4811cf1a1c4fc96eb057ff9cea1ea902aceedccd47725460d",
+  "arxivId": "2610.31093",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.31093v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "聚类与类别匹配",
+    "primaryTask": "异常声音检测",
+    "rankBucket": "前25%",
+    "score": 8.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.anomaly-detection",
+          "label": "异常声音检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.clustering",
+          "label": "聚类与类别匹配"
+        },
+        {
+          "facet": "method",
+          "id": "method.retrieval-augmented",
+          "label": "检索增强"
+        },
+        {
+          "facet": "application",
+          "id": "application.industrial",
+          "label": "工业应用"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "聚类与类别匹配",
+      "primaryMethodId": "method.clustering",
+      "primaryTask": "异常声音检测",
+      "primaryTaskId": "task.anomaly-detection",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "School of Software and Microelectronics, Peking University, Beijing, China"
+      ],
+      "name": "Yuhang Zhang"
+    },
+    {
+      "affiliations": [
+        "Independent Researcher"
+      ],
+      "name": "Yang Li"
+    },
+    {
+      "affiliations": [
+        "Collaborative Innovation Center for Western Ecological SafetyLanzhou University, Lanzhou, China"
+      ],
+      "name": "Qiang Wu"
+    },
+    {
+      "affiliations": [
+        "ELLIS Institute of Finland",
+        "University of Turku"
+      ],
+      "name": "Mingyuan Li"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对无机器标识的混合机器声音异常检测，HARMONY 用锚点引导的几何重分区把缠结特征整理成紧凑 Voronoi 区域再做分层检索，在 DCASE 2020 上达到 90.00% 平均 AUC，分层检索在同一 CPU 上实现 7.8 倍加速且只损失 0.20 个百分点。",
+  "originalTitle": "HARMONY: Hierarchical Anchor Retrieval on Manifold for Oblivious-source Machinery Acoustic Anomaly Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2610.31093v1.pdf",
+  "readerTitle": "HARMONY：无机器标识时如何把混杂声音特征重新分区再做异常检测",
+  "schemaVersion": 2
+}

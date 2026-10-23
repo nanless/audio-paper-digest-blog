@@ -1,0 +1,114 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.31346v1",
+  "abstract": "Underwater acoustic passive detection is essential to maritime surveillance and intelligent ocean sensing. Existing detection systems typically collapse multichannel array observations into a binary decision or a scalar confidence score, offering limited insight into the physical evidence that supports or contradicts a target declaration. This limitation is acute at low signal-to-noise ratio (SNR), where isolated spectral peaks and transient beamforming responses are inherently ambiguous and physically verifiable targets are characterized by an ensemble of coupled reinforcing cues. Building on the unified from-signals-to-evidence framework introduced in the companion Part I, this paper instantiates the framework for passive target detection. A physics-aware multichannel acoustic encoder encodes the array observations into complementary acoustic evidence tokens through a direction-guided architecture that combines minimum variance distortionless response (MVDR) processing with time-frequency and fine-frequency representations. These tokens are combined with environmental priors and fed into a pretrained large language model (LLM) that evaluates target-present and noise-only hypotheses and generates a structured detection report detailing target presence, bearing, spectral-line locations, received SNR, range, and per-field confidence scores. A physics-parameterized data engine extended to realistic oceanic channels provides traceable supervision at both discrete-label and structured-description levels. Experiments under white-noise and mixed ocean-background conditions demonstrate reliable detection, accurate bearing estimation, and physically interpretable structured reports, validating the feasibility of evidence-grounded underwater acoustic detection.",
+  "abstractSha256": "a2431d24f130a8d834181ae6f17241e051534c9d49abbc49aa9c77f0b7aea5f1",
+  "arxivId": "2610.31346",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.31346v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "联合声音事件检测定位",
+    "rankBucket": "后50%",
+    "score": 5.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.seld",
+          "label": "联合声音事件检测定位"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multichannel",
+          "label": "多通道"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.llm",
+          "label": "大语言模型"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.interpretability",
+          "label": "可解释性"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "联合声音事件检测定位",
+      "primaryTaskId": "task.seld",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhiyuan Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yuge Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jie Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xiruo Su"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhengqiao Zhao"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xiling Yao"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Lingji Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jingdong Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yixin Yang"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "该文把被动检测改写为多证据假设推理，用方向引导的三分支编码器加语言模型输出结构化报告，在仿真白噪声与混合海洋背景下实现可靠检测与方位估计，但距离估计未超越中值基线且结论限于仿真网格环境。",
+  "originalTitle": "From Signals to Evidence: Interpretable Underwater Acoustic Target Sensing with Large Language Models - Part II: Passive Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2610.31346v1.pdf",
+  "readerTitle": "从多通道波形到结构化证据：被动检测如何同时给出有无、方位与谱线",
+  "schemaVersion": 2
+}

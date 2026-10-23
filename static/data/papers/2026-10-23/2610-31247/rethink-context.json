@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.31247v1",
+  "abstract": "When clinical speech corpora are pooled for evaluation, corpus membership can itself become predictive if class prevalences differ across sources. We derive the AUC of an oracle predictor that uses only corpus identity and empirical prevalence, a diagnostic computable directly from corpus composition. Across five depression corpora in three languages (590 speakers), the corpus-only AUC is 0.697, and corpus identity is predicted from six acoustic and self-supervised representations with 97.5-99.8% accuracy. Permuting depression labels within each corpus removes label structure while preserving prevalences; the residual pooled-minus-LOCO discrepancy then increases across three nested configurations in the same order as the diagnostic. Pooled 5-fold cross-validation also outscores corpus-held-out evaluation across all six representations. Prevalence equalisation substantially reduces the discrepancy for eGeMAPS and WavLM-Base, whereas a sample-size-matched control does not. Corpus-specific base rates therefore create a measurable shortcut opportunity in pooled clinical-speech evaluation, motivating corpus-aware diagnostics alongside pooled performance.",
+  "abstractSha256": "9505463423dabf011552b4af2157ad6d4f111bc26fc0ea8697eee4c4378ae08a",
+  "arxivId": "2610.31247",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.31247v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "评测协议",
+    "primaryTask": "会话抑郁风险筛查",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.conversational-depression-screening",
+          "label": "会话抑郁风险筛查"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        },
+        {
+          "facet": "application",
+          "id": "application.mental-health",
+          "label": "精神健康筛查"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "评测协议",
+      "primaryMethodId": "method.evaluation-protocol",
+      "primaryTask": "会话抑郁风险筛查",
+      "primaryTaskId": "task.conversational-depression-screening",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Cezary Polak"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Milosz Dudek"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Daria Hemmerling"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文针对多语料混合评估抑郁语音时因各库患病率不同而产生的排序捷径，推导只用语料身份和患病率的语料 AUC 诊断式，并在五库 590 人上验证该通道可被语音表征利用且均衡患病率后差异明显缩小。",
+  "originalTitle": "A corpus-only AUC diagnostic for pooled speech-based depression detection",
+  "pdfUrl": "https://arxiv.org/pdf/2610.31247v1.pdf",
+  "readerTitle": "只用语料身份就能排抑郁风险吗：混合评估中的患病率捷径诊断",
+  "schemaVersion": 2
+}

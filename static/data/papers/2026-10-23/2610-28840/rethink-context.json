@@ -1,0 +1,96 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.28840v1",
+  "abstract": "Early-grade reading screening is critical for identifying children at risk of reading difficulty. Existing AI-based screeners are often limited in the scope of their analyses and evaluation metrics, or are proprietary systems that lack transparent model specifications and evaluation. We present KIRA, a dual-pathway screening system that pairs word-level fluency scoring with detailed phoneme-level error detection. We adapt pretrained word and phoneme recognizers to children's speech, reducing word error rate from 13.88% to 8.84% and phoneme error rate from 41.66% to 23.00%. Powered by these child-adapted models, we implement Word Reading (WRE) and Oral Reading Fluency (ORF), two foundational tasks in K-2 screening. The system integrates these recognizers with a web-based teacher-facing interface presenting fluency scores alongside phoneme feedback for potential targeted intervention. KIRA brings modern child-speech recognition into a full-stack, deployable, classroom-ready reading screener.",
+  "abstractSha256": "d4462e94c5d8193674e68ce719b2f659740523531333b031d222157e389eb0f8",
+  "arxivId": "2610.28840",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.28840v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "SFT",
+    "primaryTask": "发音评估",
+    "rankBucket": "前50%",
+    "score": 5.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.pronunciation-assessment",
+          "label": "发音评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.sft",
+          "label": "SFT"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "application",
+          "id": "application.education",
+          "label": "教育"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.software",
+          "label": "软件工具"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "SFT",
+      "primaryMethodId": "method.sft",
+      "primaryTask": "发音评估",
+      "primaryTaskId": "task.pronunciation-assessment",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Maggie Dong"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Rohit Mekkoth"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Zixuan Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Cheol Jun Cho"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Jiachen Lian"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Gopala Anumanchipalli"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "KIRA 针对儿童语音难识别、单词分数缺少诊断信息的问题，用同一录音上的单词识别与音素识别两条通路分别做流利度计分和子词错误定位，在儿童语音子集上把词错误率从 13.88% 降到 8.84%、音素错误率从 41.66% 降到 23.00%，并以网页报告呈现，但音素层尚未与专家标注对齐，也未验证课堂诊断效用。",
+  "originalTitle": "KIRA: A Full-Stack Reading Screening System with Dual-Pathway Analysis for Children",
+  "pdfUrl": "https://arxiv.org/pdf/2610.28840v1.pdf",
+  "readerTitle": "KIRA：把单词流利度与音素错误分析装进同一个儿童阅读筛查系统",
+  "schemaVersion": 2
+}

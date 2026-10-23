@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.30818v1",
+  "arxivId": "2610.30818",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.30818v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Nan Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xiaoxiong Wu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Huawei Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ziping Zhao"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.30818v1",
+  "originalTitle": "HC-AINet: An Auditory-Inspired Network with Harmonic Compensation for Low-Complexity Speech Enhancement",
+  "pdfUrl": "https://arxiv.org/pdf/2610.30818v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

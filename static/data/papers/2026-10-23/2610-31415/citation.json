@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.31415v1",
+  "arxivId": "2610.31415",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.31415v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Fadel Thior"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ahmer Tabassum"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Haania Siddiqui"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hanan Aldarmaki"
+    },
+    {
+      "affiliations": [
+        "Mohamed bin Zayed University of Artificially Intelligence"
+      ],
+      "name": "Thamar Solorio"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.31415v1",
+  "originalTitle": "SyRA-CS: Synthetic-to-Real Adaptation for Code-Switched ASR with Meta-Learning",
+  "pdfUrl": "https://arxiv.org/pdf/2610.31415v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

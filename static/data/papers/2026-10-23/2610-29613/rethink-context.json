@@ -1,0 +1,75 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.29613v1",
+  "abstract": "Hearing aid compression is typically designed for speech, yet music demands different trade-offs due to its narrower dynamic range (DR) and impulsive transients. This paper investigates whether music fitting benefits from being signal-aware, both in mapping compression demand across signal-audiogram conditions and in tuning its parameters to these combinations rather than inheriting them from speech-derived prescriptions. Compression demand is characterized across eight audiometric profiles, three residual DR severities, and three produced music signals under linear gain. Signal dynamics emerge as a first-order factor: production-compressed music fits the residual DR of the mild-to-moderate profiles evaluated, while dynamically rich recordings challenge even moderate hearing loss. Per-signal optimization of single- and multi-band wide dynamic range compression is then applied to two profiles with the highest compression demand. This optimization improves the Hearing Aid Audio Quality Index over gain-optimized NAL-NL2 baselines while also improving audibility, indicating substantial headroom for music-specific fitting.",
+  "abstractSha256": "7d92e33f1881c29aa47aef5d164ce3fc5be71909a162603a90cf20bd9de3ec55",
+  "arxivId": "2610.29613",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.29613v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "进化优化",
+    "primaryTask": "音频质量评估",
+    "rankBucket": "后50%",
+    "score": 5.4,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-quality",
+          "label": "音频质量评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.evolutionary-optimization",
+          "label": "进化优化"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "application",
+          "id": "application.hearing-aids",
+          "label": "助听器"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "进化优化",
+      "primaryMethodId": "method.evolutionary-optimization",
+      "primaryTask": "音频质量评估",
+      "primaryTaskId": "task.audio-quality",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Technische Universität Darmstadt, Darmstadt, Germany",
+        "WSA, Erlangen, Germany"
+      ],
+      "name": "Robin Holland"
+    },
+    {
+      "affiliations": [
+        "Technische Universität Darmstadt, Darmstadt, Germany"
+      ],
+      "name": "Christoph Hoog Antink"
+    },
+    {
+      "affiliations": [
+        "Technische Universität Darmstadt, Darmstadt, Germany",
+        "WSA, Erlangen, Germany"
+      ],
+      "name": "Henning Puder"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "本文先用线性增益下信号能否装进残余听觉范围来刻画各听力与音乐条件对压缩的需求，再对最需要的两类听力用听觉质量与可听度加权的客观目标按信号优化单通道与多通道压缩器的静态曲线，并在 55 与 90 dB SPL 平均下与增益优化的临床处方基线比较，多通道优化在保持不超不适阈的同时提高了质量与可听度，但增益与通道数的作用与听力形状有关且结论只在客观指标内成立。",
+  "originalTitle": "Optimized Compressor Parameterization for Produced Music in Hearing Aids",
+  "pdfUrl": "https://arxiv.org/pdf/2610.29613v1.pdf",
+  "readerTitle": "为制作好的音乐重调助听器压缩：先看是否需要压，再按信号优化",
+  "schemaVersion": 2
+}

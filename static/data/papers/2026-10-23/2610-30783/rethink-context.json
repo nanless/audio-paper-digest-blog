@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.30783v1",
+  "abstract": "Mixing requires not only applying processing but also assessing the resulting mix. Audio-language models can provide conversa- tional mixing advice, but existing evaluations do not separately test whether they can judge specific mixing issues. Since professional supervision for such judgments is scarce, we construct a curriculum of 11 vocal-mix issues at multiple severity levels and use it to train MixJudge, a language-queryable audio critic. MixJudge shows its ability to retrieve mixing issues, distinguish opposite issues, and order the severity of an issue. Moreover, its judgments transfer to menu selection: given a set of processing candidates, MixJudge often favors versions acoustically closer to a held-out professional version, demonstrating how explicit mixing judgment can support comparison and downstream mixing decisions.",
+  "abstractSha256": "677f2cd73fe08168a65448f6261e087dd0b5bfb396831b49c9a43988d6ea4c18",
+  "arxivId": "2610.30783",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.30783v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "对比学习",
+    "primaryTask": "音乐混音",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-mixing",
+          "label": "音乐混音"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-retrieval",
+          "label": "音频检索"
+        },
+        {
+          "facet": "method",
+          "id": "method.contrastive",
+          "label": "对比学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.curriculum",
+          "label": "课程学习"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "对比学习",
+      "primaryMethodId": "method.contrastive",
+      "primaryTask": "音乐混音",
+      "primaryTaskId": "task.music-mixing",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kuan-Hsun Ho"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yuan-Chiao Cheng"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yen-Tung Yeh"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yi-Hsuan Yang"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文用 11 种人声混音问题在多严重程度上的合成课程训练 MixJudge，使其能按语言指定的问题评价混音状态，并在 88 组真实人声菜单选择中更常挑出声学上更接近专业版的候选，代价是只覆盖单声道人声与伴奏关系且依赖合成课程。",
+  "originalTitle": "MixJudge: Learning a Language-Queryable Critic for Vocal Mixing",
+  "pdfUrl": "https://arxiv.org/pdf/2610.30783v1.pdf",
+  "readerTitle": "MixJudge：能用语言追问的人声混音评价者",
+  "schemaVersion": 2
+}

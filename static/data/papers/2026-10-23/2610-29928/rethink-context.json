@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.29928v1",
+  "abstract": "End-to-end piano audio-to-score (A2S) transcription is the task of reconstructing a notated score from an audio recording in a single system. Existing A2S approaches usually rely on pre-segmented excerpts, and few handle whole pieces without external segmentation. This raises the question of whether a musical-time coordinate can guide score transcription while also helping the system segment whole pieces. Previous work on jazz saxophone A2S uses an external beat tracker to obtain such a coordinate for score prediction. We introduce downbeat phase, a musical-time coordinate learned jointly with score transcription that represents each audio frame's relative position within a notated bar. With this coordinate, our system can not only condition its score decoder on downbeat phase but also self-segment at bar boundaries and stitch the segments into a whole piece. Evaluation suggests that the coordinate improves metrical structure and supports whole-piece transcription with comparable notation quality.",
+  "abstractSha256": "74507ae694d80de9246cb4e2eab063ac801597b426522f8d73d0c4a21d1f8a8d",
+  "arxivId": "2610.29928",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.29928v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "端到端学习",
+    "primaryTask": "音乐转录",
+    "rankBucket": "前50%",
+    "score": 7.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.transcription",
+          "label": "音乐转录"
+        },
+        {
+          "facet": "method",
+          "id": "method.end-to-end-learning",
+          "label": "端到端学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.transformer",
+          "label": "Transformer"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "端到端学习",
+      "primaryMethodId": "method.end-to-end-learning",
+      "primaryTask": "音乐转录",
+      "primaryTaskId": "task.transcription",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Min-Hsing Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Tsung-Ren Huang"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "本文要解决整首钢琴录音直接转写成乐谱时的拍号节拍定位与自动分段问题，方法是联合学习表示小节内相对位置的下拍相位并用其傅里叶编码条件化解码器，最强证据是整首转录在节拍结构指标上显著提升，代价是相位与乐谱模型只在合成演奏上训练、在真实 expressive 演奏上仍有泛化缺口。",
+  "originalTitle": "A Learned Musical-Time Coordinate for Piano Audio-to-Score Transcription",
+  "pdfUrl": "https://arxiv.org/pdf/2610.29928v1.pdf",
+  "readerTitle": "用学到的“小节内时间坐标” 做钢琴录音到乐谱的转录",
+  "schemaVersion": 2
+}

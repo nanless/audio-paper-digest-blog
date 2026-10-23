@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.29351v2",
+  "arxivId": "2610.29351",
+  "arxivVersion": 2,
+  "arxivVersionedId": "2610.29351v2",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yuanzhong Zheng"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Wei Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ming Ma"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kailun Jin"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Youhai Jiang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.29351v2",
+  "originalTitle": "Closed-Loop Dual-Reference Guidance for Accent Control in Cross-Lingual Voice Cloning",
+  "pdfUrl": "https://arxiv.org/pdf/2610.29351v2.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

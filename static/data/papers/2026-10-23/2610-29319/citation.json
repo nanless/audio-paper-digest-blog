@@ -1,0 +1,80 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.29319v1",
+  "arxivId": "2610.29319",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.29319v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ian Porada"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Suraj Tripathi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Chaitanya Animesh"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Leda Sari"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Chaitanya Narisetty"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Austin R. Matthews"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Bohan Yu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ramesh L. Thulasiram"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Gregory Sell"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kean Chin"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Dmitriy Genzel"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.29319v1",
+  "originalTitle": "OSynth: A Longitudinal, Context-Sensitive Evaluation of Meeting Understanding",
+  "pdfUrl": "https://arxiv.org/pdf/2610.29319v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.29836v1",
+  "abstract": "Evaluating audio-text semantic alignment is important in various audio-language tasks. Existing methods mainly quantify audio-text semantic alignment using a single score and cannot explicitly describe how audio and text differ. In this paper, we propose audio-text difference captioning, a task that generates textual descriptions of differences between audio and text. We also construct a new dataset AT-DIFFER containing audio-text pairs with systematically simulated differences and corresponding difference captions. Using AT-DIFFER, we fine-tune an existing multimodal large language model to describe differences between audio and text. The experimental results show that the original model has limited ability to describe such differences, whereas fine-tuning on AT-DIFFER substantially improves this ability.",
+  "abstractSha256": "6f8fce854434c9af9b9f6fedcfcaf068a9d3d05909fd11ab7c39ae375234e08a",
+  "arxivId": "2610.29836",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.29836v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "多任务学习",
+    "primaryTask": "音频字幕生成",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-captioning",
+          "label": "音频字幕生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.multitask",
+          "label": "多任务学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.lora",
+          "label": "LoRA"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "多任务学习",
+      "primaryMethodId": "method.multitask",
+      "primaryTask": "音频字幕生成",
+      "primaryTaskId": "task.audio-captioning",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Akihiro Fujii"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yuki Okamoto"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yuki Saito"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hiroshi Saruwatari"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文提出用一句话指出音频与文本在事件和时间关系上的具体出入，并用系统合成的 AT-DIFFER 数据微调 Qwen3-Omni，先判断有无差异再分类最后写句子，联合学习在合成分布上明显改善描述质量，但结论只在至多两个事件和模板文本范围内成立。",
+  "originalTitle": "AT-Differ: Dataset for Audio-Text Difference Captioning",
+  "pdfUrl": "https://arxiv.org/pdf/2610.29836v1.pdf",
+  "readerTitle": "说清音频和文字哪里对不上：差异描述任务与 AT-DIFFER 数据集",
+  "schemaVersion": 2
+}

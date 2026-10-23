@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.30385v1",
+  "arxivId": "2610.30385",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.30385v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Vasiliy Kudryavtsev"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kirill Borodin"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Nikita Vasiliev"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Mikhail Gorodnichev"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Grach Mkrtchian"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.30385v1",
+  "originalTitle": "Text-Only LLM Correctors Break Correct Transcripts: A Repair-Damage Analysis of Audio Grounding in ASR Error Correction",
+  "pdfUrl": "https://arxiv.org/pdf/2610.30385v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.31202v1",
+  "arxivId": "2610.31202",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.31202v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Chi-En Dai"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Chih-Pin Tan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yi-Hsuan Yang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.31202v1",
+  "originalTitle": "Predicting Music Valence and Arousal via Textual and Multimodal In-Context Learning in Large Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2610.31202v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

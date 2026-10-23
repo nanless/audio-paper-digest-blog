@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.30874v1",
+  "arxivId": "2610.30874",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.30874v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Younghoo Kwon"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Yongjoon Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Jung-Woo Choi"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.30874v1",
+  "originalTitle": "Hear Every Sound Object: Rescuing Overlooked Sources in Auditory Scene Analysis",
+  "pdfUrl": "https://arxiv.org/pdf/2610.30874v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

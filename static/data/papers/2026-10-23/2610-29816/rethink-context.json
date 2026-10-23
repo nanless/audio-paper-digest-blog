@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.29816v1",
+  "abstract": "Incorporating AI systems into safety systems requires monitoring to avoid silent faults and ensure safe and reliable operation. Single monitors often do not provide actionable information for human supervisors, who act as the system's adaptive controller. We present COMET, a coordinated multi-layer runtime monitoring framework for human-supervised AI-enabled safety systems in which each monitor is anchored in a different fault mode. Monitor outputs are combined in a coordination layer and mapped by a communication layer to a traffic-light display. In this work, COMET consists of three monitoring layers: signal integrity, physics consistency, and the AI system's competence envelope. The framework is evaluated on an open dataset of compressed-air leaks, where an AI system detects leaks from acoustic emissions, with held-out conditions simulating covariate shift, semantic shift, and sensor faults, events expected during runtime but unknown in their exact appearance. All monitors are frozen after development and tested zero-shot, and the framework is compared against no-monitoring and single-monitor setups. The bare AI system fails silently and confidently under all three shift types, whereas COMET reduces the trusted-wrong-answer rate to zero on covariate-shifted no-leak data and on three of four sensor faults, at a nominal false-alarm rate of $\\approx 1\\%$. Single monitors come close in detection but cannot attribute the fault mode. COMET converts their anonymous detection flags into diagnoses. Residual silent misses under semantic shift define the boundary of passive monitoring. Runtime monitoring frameworks for AI-enabled safety systems must therefore combine quantitative fault detection and isolation with qualitative, human-oriented feedback.",
+  "abstractSha256": "7aae2ab5a8c7a179607f0e54d635d6d20c9f133fbf870ad94144b975e2d7e8d6",
+  "arxivId": "2610.29816",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.29816v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "规则与词典方法",
+    "primaryTask": "异常声音检测",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.anomaly-detection",
+          "label": "异常声音检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.rule-based",
+          "label": "规则与词典方法"
+        },
+        {
+          "facet": "method",
+          "id": "method.uncertainty-estimation",
+          "label": "不确定性估计与校准"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.environmental",
+          "label": "环境声"
+        },
+        {
+          "facet": "application",
+          "id": "application.industrial",
+          "label": "工业应用"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "规则与词典方法",
+      "primaryMethodId": "method.rule-based",
+      "primaryTask": "异常声音检测",
+      "primaryTaskId": "task.anomaly-detection",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "organization=Department of Mechanical and Industrial Engineering, Norwegian University of Science and Technology, city=Trondheim, country=Norway"
+      ],
+      "name": "Niclas Flehmig"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Mary Ann Lundteigen"
+    },
+    {
+      "affiliations": [
+        "organization=Department of Cybernetics Engineering, Norwegian University of Science and Technology, city=Trondheim, country=Norway"
+      ],
+      "name": "Shen Yin"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对声学泄漏检测中背景变了、泄漏类型变了和传感器坏了都会让 AI 静默犯错的问题，COMET 用信号有效性、物理一致性和能力包络三层各自诊断再统一成红绿灯给人看，把高噪声无泄漏和三类传感器故障的可信错答降到零，代价是名义误报约 1%，但对新型管泄漏仍留下约 27.6% 的静默漏检。",
+  "originalTitle": "COMET: A coordinated multi-layer runtime monitoring framework for human-supervised AI-enabled safety systems",
+  "pdfUrl": "https://arxiv.org/pdf/2610.29816v1.pdf",
+  "readerTitle": "COMET：让人能接管的 AI 泄漏监测框架",
+  "schemaVersion": 2
+}

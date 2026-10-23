@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.30872v1",
+  "arxivId": "2610.30872",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.30872v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jian Zong"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Chenghan Lin"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Meng Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhao Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Junyu Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Siyuan Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Peiyuan Jiang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Longbiao Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jianwu Dang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.30872v1",
+  "originalTitle": "Lip-Focused Audio-Visual Consistency Detects Speech Content Manipulation beyond Coarse Synchronization",
+  "pdfUrl": "https://arxiv.org/pdf/2610.30872v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

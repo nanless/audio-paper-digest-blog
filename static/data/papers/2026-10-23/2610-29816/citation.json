@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.29816v1",
+  "arxivId": "2610.29816",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.29816v1",
+  "authors": [
+    {
+      "affiliations": [
+        "organization=Department of Mechanical and Industrial Engineering, Norwegian University of Science and Technology, city=Trondheim, country=Norway"
+      ],
+      "name": "Niclas Flehmig"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Mary Ann Lundteigen"
+    },
+    {
+      "affiliations": [
+        "organization=Department of Cybernetics Engineering, Norwegian University of Science and Technology, city=Trondheim, country=Norway"
+      ],
+      "name": "Shen Yin"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.29816v1",
+  "originalTitle": "COMET: A coordinated multi-layer runtime monitoring framework for human-supervised AI-enabled safety systems",
+  "pdfUrl": "https://arxiv.org/pdf/2610.29816v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

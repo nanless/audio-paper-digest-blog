@@ -1,0 +1,138 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.29031v1",
+  "abstract": "Kunqu is one of the oldest extant forms of Chinese opera, yet its digitization remains scarce and difficult to annotate, with two challenges standing out: first, close analysis of Kunqu performance demands syllable-level lyrics alignment; second, analyzing Kunqu pronunciation requires its phonological attributes (e.g., rhyme) to be linked with each syllable. To address these challenges, we present KunSet, the first Kunqu performance corpus comprising 482,164 fine-grained annotations of syllable-level lyrics and phonological attributes in total media duration of 155.2 h with 106.3 h annotated. To ensure annotation quality, KunSet was preannotated by an iterative ML-assisted pipeline and corrected by over 200 trained annotators via a purpose-built online annotation system under a two-round review process. To assess KunSet as a music information retrieval (MIR) benchmark, we evaluate two tasks: lyrics alignment, by finetuning a forced-alignment model with an acoustic anchor decoder; and same-rhyme retrieval, using frozen Chinese HuBERT features. Models built with KunSet outperform their baselines. We release KunSet and model checkpoints to support MIR research on traditional-music corpora.",
+  "abstractSha256": "9fbb814ae41d84ffcf97533b5df3635711afe3be22363f464050a6a704d05d05",
+  "arxivId": "2610.29031",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.29031v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "数据集构建",
+    "primaryTask": "强制对齐",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.forced-alignment",
+          "label": "强制对齐"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-retrieval",
+          "label": "音频检索"
+        },
+        {
+          "facet": "method",
+          "id": "method.dataset-curation",
+          "label": "数据集构建"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "数据集构建",
+      "primaryMethodId": "method.dataset-curation",
+      "primaryTask": "强制对齐",
+      "primaryTaskId": "task.forced-alignment",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Lejun Min"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Siqi Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Delong Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Tong Zheng"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yunqi Lu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhishan Zhou"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ke Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yuting Zhong"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Junrong Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shengran Jin"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Beixuan Pei"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jun Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yang Li"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文针对昆曲演唱与念白缺少音节级时间边界和音韵属性关联的问题，建成 281 段录音共 482164 个音节标注的 KunSet 语料库，并用 251 段微调的对齐模型把总体边界误差降到 194.83 ms、用传统韵部监督把同韵检索 P@10 做到 17.16%，代价是昆曲唱段对齐误差仍明显高于念白且检索绝对精度仍然偏低。",
+  "originalTitle": "KunSet: A Corpus and Benchmark for Lyrics Alignment and Rhyme Retrieval in Kunqu Opera",
+  "pdfUrl": "https://arxiv.org/pdf/2610.29031v1.pdf",
+  "readerTitle": "昆曲字腔对齐与押韵检索：KunSet 语料库如何建成与验证",
+  "schemaVersion": 2
+}

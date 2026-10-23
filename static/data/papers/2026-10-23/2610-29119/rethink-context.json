@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.29119v1",
+  "abstract": "Target speech extraction (TSE) isolates a speaker's voice given an enrollment utterance, but existing work is validated almost exclusively without music. Discriminative methods are content-faithful yet masking-bounded; generative methods improve naturalness but may hallucinate, drift in identity, and require many steps. We present MuseFlow-TSE, a discriminative deletion, generative insertion framework for music-bearing scenes. Stage-1 is a music-aware cross-source band-split extractor that estimates target, interfering speakers, music, and noise under conservation and music-leakage constraints. Stage-2 is a data-to-data flow refiner initialized by the discriminative estimate, negatively conditioned on interference stems, and run for 1--4 difficulty-adaptive Euler steps with an end-to-end fidelity objective.",
+  "abstractSha256": "55ea8c2d89a1f3816304d7721b3d7fb5c29debcf5239e286eaa5b7c3bb84ef95",
+  "arxivId": "2610.29119",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.29119v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "流匹配",
+    "primaryTask": "目标说话人提取",
+    "rankBucket": "前50%",
+    "score": 5.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.target-speaker",
+          "label": "目标说话人提取"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "流匹配",
+      "primaryMethodId": "method.flow-matching",
+      "primaryTask": "目标说话人提取",
+      "primaryTaskId": "task.target-speaker",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Lu Ma"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yongliang Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhewen Su"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xin Tian"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对含有音乐的单通道目标语音提取，MuseFlow-TSE 先用显式估计音乐的跨源带划分提取器做掩蔽分离，再用从粗估计出发的数据到数据流匹配做 1 到 4 步精炼，在 16 kHz 合成复杂场景里保住词错误率和说话人相似度的同时改善听感，但结论只在该合成分布内成立。",
+  "originalTitle": "MuseFlow-TSE: Music-Aware Target Speech Extraction via Cross-Source Band-Splitting and Data-to-Data Flow Matching",
+  "pdfUrl": "https://arxiv.org/pdf/2610.29119v1.pdf",
+  "readerTitle": "混着音乐时怎样取出想要的人声：MuseFlow-TSE 的两段做法",
+  "schemaVersion": 2
+}

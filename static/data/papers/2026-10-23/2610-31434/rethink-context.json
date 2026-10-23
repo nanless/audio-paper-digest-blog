@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.31434v1",
+  "abstract": "In anomalous sound detection based on self-supervised learning, the performance of the detection model largely depends on the selection of the pretext task through which the characteristics of normal data are learned. A common pretext task is to mix samples from different classes and classify the mixed sample as its target class with an angular margin loss. However, this supervision becomes mismatched when the target sample is the minority component of the mixture and the margin remains fixed irrespective of the mixing ratio. To address these issues, we propose a pretext task that directly predicts the perturbation ratio of mixed samples by reformulating the logit so that the angular margin is scaled by the perturbation ratio. In addition, we adopt a supervised contrastive loss modified for mixed samples, in which positive pairs are formed according to the dominant class. Experiments show that our approach achieves state-of-the-art results on the DCASE 2020 Task 2 benchmark. Our code is available at https://github.com/kaistss/PerMix.",
+  "abstractSha256": "2eb805a8a099c2a93c916c14f898bc3aee128f2ea7b6ccaf3d6a253c74a08e94",
+  "arxivId": "2610.31434",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.31434v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "自监督学习",
+    "primaryTask": "异常声音检测",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.anomaly-detection",
+          "label": "异常声音检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.self-supervised",
+          "label": "自监督学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.contrastive",
+          "label": "对比学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.augmentation",
+          "label": "数据增强"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "自监督学习",
+      "primaryMethodId": "method.self-supervised",
+      "primaryTask": "异常声音检测",
+      "primaryTaskId": "task.anomaly-detection",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jihoon Choi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jung-Woo Choi"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对混合样本监督错位和固定角度间隔问题，PerMix 用随主导类比例缩放的间隔预测扰动比例并配合主导类对比学习，在 DCASE 2020 上取得最好平均结果，代价是每轮训练时间增加约 3.3%。",
+  "originalTitle": "PerMix: Anomalous sound detection by predicting the perturbation ratio of mixed samples",
+  "pdfUrl": "https://arxiv.org/pdf/2610.31434v1.pdf",
+  "readerTitle": "PerMix：用混合样本的扰动比例预测做异常声音检测",
+  "schemaVersion": 2
+}

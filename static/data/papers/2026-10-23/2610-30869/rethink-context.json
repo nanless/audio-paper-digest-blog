@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.30869v1",
+  "abstract": "Self-supervised learning (SSL) representations are widely used in speech restoration (SR), and the prevailing trend is SSL feature cleansing: fine-tuning the SSL to recover clean features from degraded speech, then conditioning the restoration model on them. However, the representational capability of SSL when encoding degraded speech has been underexplored, and we ask whether cleansing always benefits SR training. Across SSL encoders and perceptual quality proxies, we discover perceptual correlation collapse---under severe degradation, cleansing degraded SSL features toward clean ones misaligns with the SR objective. We hypothesize the restoration backbone can supply the SSL with clues to resolve this collapse, since its intermediate layers already produce partially restored features. We therefore propose Early Restoration Injection (ERI), which routes intermediate features from the restoration backbone into the SSL through a lightweight conditioning network. ERI excels over the unconditioned baseline and, on the VoiceFixer benchmark, achieves competitive performance among multiple baselines.",
+  "abstractSha256": "065ac44d3b8b1abf829203ca3f181b81787e832b1d17e6ac2bcb23e4c87b8669",
+  "arxivId": "2610.30869",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.30869v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "自监督学习",
+    "primaryTask": "语音增强",
+    "rankBucket": "前50%",
+    "score": 6.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-enhancement",
+          "label": "语音增强"
+        },
+        {
+          "facet": "method",
+          "id": "method.self-supervised",
+          "label": "自监督学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.gan",
+          "label": "生成对抗网络"
+        },
+        {
+          "facet": "method",
+          "id": "method.lora",
+          "label": "LoRA"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "自监督学习",
+      "primaryMethodId": "method.self-supervised",
+      "primaryTask": "语音增强",
+      "primaryTaskId": "task.speech-enhancement",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yongjoon Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Younghoo Kwon"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jung-Woo Choi"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文发现重度退化下缩小自监督特征距离不再对应听感提升，并提出把恢复主干中间特征送入自监督模型的早期恢复注入，在 VoiceFixer 上保真与可懂度占优而感知质量保持竞争，代价是总参数增大但实时率仅小幅上升。",
+  "originalTitle": "When Do Self-Supervised Representations Help Speech Restoration?",
+  "pdfUrl": "https://arxiv.org/pdf/2610.30869v1.pdf",
+  "readerTitle": "重度损伤下自监督特征清洗为何失效，以及中间恢复特征如何帮忙",
+  "schemaVersion": 2
+}

@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.31252v1",
+  "arxivId": "2610.31252",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.31252v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yuelan Cheng"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yonggang Zhu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yongqiang Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Peiwei Chang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yingyi Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Wenwu Wang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.31252v1",
+  "originalTitle": "Query-Conditioned Liquid Temporal Grounding for Long-Form Audio",
+  "pdfUrl": "https://arxiv.org/pdf/2610.31252v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

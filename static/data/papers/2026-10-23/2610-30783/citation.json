@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.30783v1",
+  "arxivId": "2610.30783",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.30783v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kuan-Hsun Ho"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yuan-Chiao Cheng"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yen-Tung Yeh"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yi-Hsuan Yang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.30783v1",
+  "originalTitle": "MixJudge: Learning a Language-Queryable Critic for Vocal Mixing",
+  "pdfUrl": "https://arxiv.org/pdf/2610.30783v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

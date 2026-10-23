@@ -1,0 +1,114 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.30872v1",
+  "abstract": "Speech-content manipulation changes what a visible person appears to say by replacing the speech track and, in stronger attacks, regenerating mouth motion to match the forged utterance. Such attacks are difficult to expose with texture artifacts or coarse lip-sync scores because modern retalking models explicitly optimize audio-visual synchrony. We test the narrower hypothesis that speech replacement still perturbs the local relationship between acoustic dynamics and mouth motion after speaker identity or coarse synchrony is controlled. To isolate this signal, we introduce SyncSpeech, an LRS3-derived benchmark containing real videos, audio-splicing cheapfakes and Wav2Lip retalking attacks under same-speaker and different-speaker replacement. We then introduce C-MIND, a lip-focused detector that aligns audio and mouth-motion representations at frame level and models their agreement and disagreement without transcripts, automatic speech recognition features or an unmanipulated reference. On SyncSpeech, pretrained SyncLip-C achieves 95.813% scenario-averaged accuracy and 0.9943 AUC, outperforming sentence-level fusion, full-face inputs and a reproduced SyncNet baseline under the reported protocol. When trained on the corresponding FakeAVCeleb training split, C-MIND correctly classifies 278 of 280 samples in the selected unseen-speaker test subset, whereas accuracy falls to 82.775% on unseen Video-Retalking attacks. These results identify lip-focused speech-articulation consistency as a useful but generator-sensitive forensic signal within the evaluated settings.",
+  "abstractSha256": "ba1811d64c7b5077ce5d2a1a21d4c20898468f0c759e4f6e435865b2617ee455",
+  "arxivId": "2610.30872",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.30872v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "视频伪造检测与溯源",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.video-forgery-detection-attribution",
+          "label": "视频伪造检测与溯源"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "视频伪造检测与溯源",
+      "primaryTaskId": "task.video-forgery-detection-attribution",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jian Zong"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Chenghan Lin"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Meng Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhao Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Junyu Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Siyuan Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Peiyuan Jiang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Longbiao Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jianwu Dang"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文把换说话内容看成音频与嘴部运动的局部配合问题，用 SyncSpeech 控制说话人是否相同来建库，用 C-MIND 做帧级对齐比较，在库内达到 95.813% 场景平均准确率和 0.9943 AUC，但换到未见过的 Video-Retalking 生成器时掉到 82.775%。",
+  "originalTitle": "Lip-Focused Audio-Visual Consistency Detects Speech Content Manipulation beyond Coarse Synchronization",
+  "pdfUrl": "https://arxiv.org/pdf/2610.30872v1.pdf",
+  "readerTitle": "只看嘴和声音对得上吗：检测换了说话内容的音视频伪造",
+  "schemaVersion": 2
+}

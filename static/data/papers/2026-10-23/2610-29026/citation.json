@@ -1,0 +1,20 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.29026v1",
+  "arxivId": "2610.29026",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.29026v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Keon Ju Maverick Lee"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.29026v1",
+  "originalTitle": "Resonance and Depth: Composing Timbral Identity and Spatial Form in an Artist-in-the-Loop Co-Creative Multi-Agent Percussive Performance",
+  "pdfUrl": "https://arxiv.org/pdf/2610.29026v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

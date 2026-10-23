@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.30651v1",
+  "abstract": "This study develops an audio-visual emotion recognition system that integrates automatic utterance segmentation with multimodal fusion. Unlike conventional methods that rely on manually annotated utterance boundaries, the proposed system automatically generates candidate segments from continuous dialogue and extracts the corresponding audio and visual features for emotion classification. To address the challenges introduced by automatic segmentation, the proposed AGF-Net integrates Audio-Guided Fusion (AGF), Multimodal Negative Learning (MNL), and Predictive Dynamic Fusion (PDF) to improve cross-modal fusion, modality balance, and robustness to varying modality quality. Experimental results show that AGF-Net achieves 64.92% Accuracy and 65.47% F1-score under clean conditions, 62.13% Accuracy and 63.08% F1-score under moderate noise, and 58.19% Accuracy and 59.41% F1-score under higher noise. Overall, the proposed framework reduces reliance on manually annotated utterance boundaries and maintains competitive performance under automatically segmented and noisy audio-visual inputs.",
+  "abstractSha256": "5e5a29680f0f91a9c77a1993ce7ad8bd382f02be4175bfc82de6cbd968eaab70",
+  "arxivId": "2610.30651",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.30651v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "多模态情感极性分析",
+    "rankBucket": "后50%",
+    "score": 4.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.multimodal-sentiment",
+          "label": "多模态情感极性分析"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "多模态情感极性分析",
+      "primaryTaskId": "task.multimodal-sentiment",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Chuan Han Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Yun Chien Cheng"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对连续音频视觉流没有人工话语边界且切分不准、模态质量不稳的问题，AGF-Net 用自动切分加音频引导融合、预测式动态融合与多模态负学习的组合，在 IEMOCAP 四类情绪上干净条件达到 64.92% 准确率与 65.47% F1，中度噪声下保持 62.13% 与 63.08%，代价是仍需预热调度与可靠性估计且严重噪声下准确率会被反超。",
+  "originalTitle": "AGF-Net: A Robust Multimodal Emotion Recognition Model for Asynchronous Audio-Visual Signals Based on Predictive Dynamic Fusion with Negative Learning",
+  "pdfUrl": "https://arxiv.org/pdf/2610.30651v1.pdf",
+  "readerTitle": "自动切分连续对话再做音频视觉情绪识别：AGF-Net 是如何保持鲁棒的",
+  "schemaVersion": 2
+}

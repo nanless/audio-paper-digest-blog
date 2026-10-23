@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.29836v1",
+  "arxivId": "2610.29836",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.29836v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Akihiro Fujii"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yuki Okamoto"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yuki Saito"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hiroshi Saruwatari"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.29836v1",
+  "originalTitle": "AT-Differ: Dataset for Audio-Text Difference Captioning",
+  "pdfUrl": "https://arxiv.org/pdf/2610.29836v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

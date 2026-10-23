@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.30818v1",
+  "abstract": "Speech enhancement on resource-constrained devices requires noise suppression with limited computation and minimal loss of spectral detail. Auditory-inspired subband processing reduces computation, but its smooth gains have limited ability to distinguish harmonic peaks from neighboring noise. We propose a harmonic-compensated auditory-inspired network (HC-AINet) for low-complexity speech enhancement. A triangular equivalent rectangular bandwidth (ERB) filterbank supplies compact features to a lightweight network comprising inverted-residual units, temporal Conformer layers, and parallel frequency-gated convolutions. The network predicts global and harmonic gains together with fusion weights. A harmonic-location map derived from the noisy spectrum confines the harmonic contribution to selected bins on the original frequency grid, while the global branch controls the broader spectral envelope. The compensated magnitude, noisy phase, and a magnitude-derived minimum-phase cue jointly condition a compact phase estimator for waveform reconstruction. On VoiceBank-DEMAND, the 64-band model achieves a PESQ of 3.20 and a STOI of 0.95 with approximately 0.27 million parameters.",
+  "abstractSha256": "30b032e435d82c16c07a4247bf0ec0957c1573348a008a862b97871b1bd7456d",
+  "arxivId": "2610.30818",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.30818v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "语音增强",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-enhancement",
+          "label": "语音增强"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "语音增强",
+      "primaryTaskId": "task.speech-enhancement",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Nan Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xiaoxiong Wu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Huawei Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ziping Zhao"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对资源受限语音增强要在小算力下保留频谱细节的问题，HC-AINet 用三角形 ERB 子带压缩增益预测、用带噪谐波位置图在原始频点上补充谐波分支并做幅度条件相位重建，在 VoiceBank-DEMAND 上 64 带达到 PESQ 3.20 而参数约 0.27M，代价是频带加倍时运算量明显上升。",
+  "originalTitle": "HC-AINet: An Auditory-Inspired Network with Harmonic Compensation for Low-Complexity Speech Enhancement",
+  "pdfUrl": "https://arxiv.org/pdf/2610.30818v1.pdf",
+  "readerTitle": "HC-AINet：用紧凑听觉子带做增益预测，再在原频点上做谐波补偿",
+  "schemaVersion": 2
+}

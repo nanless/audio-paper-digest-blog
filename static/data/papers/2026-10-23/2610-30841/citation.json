@@ -1,0 +1,57 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.30841v1",
+  "arxivId": "2610.30841",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.30841v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Hunyuan, Tencent",
+        "Peking University"
+      ],
+      "name": "Zhaolu Kang"
+    },
+    {
+      "affiliations": [
+        "Peking University"
+      ],
+      "name": "Yidi Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yile Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Siqi Zeng"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yingjie He"
+    },
+    {
+      "affiliations": [
+        "Hunyuan, Tencent"
+      ],
+      "name": "Richeng Xuan"
+    },
+    {
+      "affiliations": [
+        "Hunyuan, Tencent"
+      ],
+      "name": "Zhichao hu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.30841v1",
+  "originalTitle": "TRIAD: Benchmarking Omni-Modal Ambiguity in Multimodal Large Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2610.30841v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

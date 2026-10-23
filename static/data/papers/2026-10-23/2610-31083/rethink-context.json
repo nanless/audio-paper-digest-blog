@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.31083v1",
+  "abstract": "Text-to-music alignment is commonly evaluated by the global similarity between text and audio embeddings, which collapses all described attributes into a single score and obscures which ones are missing. We instead introduce MQAScore, which verifies each atomic musical concept along five clip-level dimensions (genre, instrument, mood/theme, vocal, and usage) by the probability that a large audio language model (LALM) answers affirmatively to a binary question. To assess evaluator reliability, we construct verification labels from presence/absence annotations and LLM-guided concept substitutions, and propose the Sensitivity-Invariance Ratio, which measures how selectively an evaluator responds to meaning-changing substitutions. Experiments show that concept-level scoring improves both question-answering and similarity-based evaluators, and MQAScore can be a more reliable and interpretable fine-grained complement to global similarity for evaluating text-to-music alignment.",
+  "abstractSha256": "5b6427bee2fe42c00c401ffb8a1eaf50785a35354cce70de2dd5c319b1164b31",
+  "arxivId": "2610.31083",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.31083v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "评测协议",
+    "primaryTask": "音乐文本检索",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-text-retrieval",
+          "label": "音乐文本检索"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-question-answering",
+          "label": "音频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.evaluation",
+          "label": "模型评估"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "评测协议",
+      "primaryMethodId": "method.evaluation-protocol",
+      "primaryTask": "音乐文本检索",
+      "primaryTaskId": "task.music-text-retrieval",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Wei-Jaw Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Chun-Ping Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xuanjun Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yi-Hsuan Yang"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对全局相似度把多属性压成一分而看不清缺了什么的问题，论文把标题拆成五个维度的原子概念并用大音频语言模型回答是否支持来打分，在替换检验和专家成对比较上显示更可靠且可解释，但使用维度仍最难且依赖大模型抽取与替换质量。",
+  "originalTitle": "MQAScore: Fine-Grained Text-Music Alignment Evaluation via Large Audio Language Model",
+  "pdfUrl": "https://arxiv.org/pdf/2610.31083v1.pdf",
+  "readerTitle": "把一句音乐描述拆开验：MQAScore 如何逐个概念检查文本音乐对齐",
+  "schemaVersion": 2
+}

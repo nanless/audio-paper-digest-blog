@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.31470v1",
+  "arxivId": "2610.31470",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.31470v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kirill Borodin"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Vasilii Kudryavtsev"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Nikita Vasiliev"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Grach Mkrtchian"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.31470v1",
+  "originalTitle": "Measuring the Verifier's Floor: How Much Apparent Rare-Word Text-to-Speech Error Is ASR Error?",
+  "pdfUrl": "https://arxiv.org/pdf/2610.31470v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

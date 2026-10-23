@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.28840v1",
+  "arxivId": "2610.28840",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.28840v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Maggie Dong"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Rohit Mekkoth"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Zixuan Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Cheol Jun Cho"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Jiachen Lian"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Gopala Anumanchipalli"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.28840v1",
+  "originalTitle": "KIRA: A Full-Stack Reading Screening System with Dual-Pathway Analysis for Children",
+  "pdfUrl": "https://arxiv.org/pdf/2610.28840v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

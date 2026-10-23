@@ -1,0 +1,66 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.29026v1",
+  "abstract": "This research-creation artistic report presents Resonance and Depth, a 9-minute immersive electroacoustic/acousmatic performance that treats timbre and space as primary compositional materials. Built from live electronic percussion and a personal corpus recorded, curated, and composed by the author, the work investigates how timbral identity and musical form can emerge through real-time recombination, spatialisation, and performer-system interaction rather than conventional harmonic development. The performance is realised as an artist-in-the-loop co-creative multi-agent system integrating MACAT, MACataRT, a MIDI-based musical agent, a spatialisation layer, and a conductor agent. These components recombine and transform the performer's material through concatenative synthesis, audio mosaicing, symbolic mediation, physically inspired synthesis, and object-based spatialisation. The work approaches spatialisation as an active compositional process in which position, trajectory, depth, diffusion, width, and apparent size participate in musical phrasing and form. Through this practice-based framework, Resonance and Depth examines how performer identity can be retained, transformed, and redistributed across human, algorithmic, timbral, and spatial processes within an immersive co-creative performance ecology.",
+  "abstractSha256": "2c583187e845abc4c84bd494058dc18fe6ba4416645996717ed2049e37a9d6ae",
+  "arxivId": "2610.29026",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.29026v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "案例研究与实践报告",
+    "primaryTask": "音乐生成",
+    "rankBucket": "后50%",
+    "score": 4.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-generation",
+          "label": "音乐生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.case-study",
+          "label": "案例研究与实践报告"
+        },
+        {
+          "facet": "task",
+          "id": "task.spatial-rendering",
+          "label": "空间音频渲染"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.spatial-audio",
+          "label": "空间音频信号"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "案例研究与实践报告",
+      "primaryMethodId": "method.case-study",
+      "primaryTask": "音乐生成",
+      "primaryTaskId": "task.music-generation",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Keon Ju Maverick Lee"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "本文解读《Resonance and Depth》如何用个人打击乐语料、多智能体重组与对象化空间把音色和空间写成 9 分钟沉浸式演出的形式，证据是作者在 SAT 穹顶的现场演出记录与系统分工描述，代价是缺乏可量化的音色与空间效果评估。",
+  "originalTitle": "Resonance and Depth: Composing Timbral Identity and Spatial Form in an Artist-in-the-Loop Co-Creative Multi-Agent Percussive Performance",
+  "pdfUrl": "https://arxiv.org/pdf/2610.29026v1.pdf",
+  "readerTitle": "音色与空间如何成为打击乐人机共创演出的结构",
+  "schemaVersion": 2
+}
