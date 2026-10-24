@@ -1,0 +1,80 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.30682v1",
+  "abstract": "While there is increasing evidence that words are stored in the mental lexicon with some phonetic detail, there are open questions about exactly which phonetic details are stored and whether they are functionally relevant for spoken word recognition. Word-level phonetic cues, such as word duration, provide an appropriate test case. Across languages, including Mandarin Chinese, high frequency words are shorter than low frequency words. Using a homophone ordering task, we investigate whether differences in word duration impact word recognition. Mandarin Chinese was examined since it has abundant disyllabic homophones. Our results indicate that participants were able to use word duration to recognize the order of homophone pairs, selected to vary in lexical frequency. Both with high noise levels and when no other cues were available, participants mapped the shorter duration auditory stimulus to the higher frequency word. The results provide evidence that word duration can directly cue the identity of words, suggesting that it may be a phonetic detail incorporated into the lexical representation. We discuss this direct cueing account alongside alternative accounts of how word duration may modulate word recognition.",
+  "abstractSha256": "6592b47033bfacd329fea461476459a0bbc27fdaf6ba5dcee935a94b63e7373b",
+  "arxivId": "2610.30682",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.30682v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "心理声学实验",
+    "primaryTask": "口语理解",
+    "rankBucket": "后50%",
+    "score": 5.4,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.spoken-understanding",
+          "label": "口语理解"
+        },
+        {
+          "facet": "method",
+          "id": "method.psychoacoustic-experiment",
+          "label": "心理声学实验"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.speech-perception",
+          "label": "言语感知"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "心理声学实验",
+      "primaryMethodId": "method.psychoacoustic-experiment",
+      "primaryTask": "口语理解",
+      "primaryTaskId": "task.spoken-understanding",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Linguistics, Yale University, New Haven, USA"
+      ],
+      "name": "Xiaomeng Zhu"
+    },
+    {
+      "affiliations": [
+        "Department of Linguistics, Yale University, New Haven, USA"
+      ],
+      "name": "Megan Niu"
+    },
+    {
+      "affiliations": [
+        "Department of Linguistics, Yale University, New Haven, USA"
+      ],
+      "name": "Jason Shaw"
+    },
+    {
+      "affiliations": [
+        "Corresponding author. Also at: Department of Linguistics, University of Florida, Gainesville, Florida, 32611-5454, United States of America",
+        "Department of English Language and Linguistics, Institute of English and American Studies, Faculty of Arts and Humanities, Heinrich Heine University Düsseldorf, Düsseldorf, 40225, Germany"
+      ],
+      "name": "Kevin Tang"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "该研究用同音词对的顺序判断任务检验词时长是否直接提示词身份，发现在噪声掩蔽和只剩噪声时长时被试仍把更短的一段对应更高频词，但效应小且只在单说话人、16 对词、固定时长比下成立。",
+  "originalTitle": "Direct cueing of word identity through word duration: evidence from Mandarin homophones",
+  "pdfUrl": "https://arxiv.org/pdf/2610.30682v1.pdf",
+  "readerTitle": "词长短本身能提示是哪个词吗：普通话同音词的时长线索解读",
+  "schemaVersion": 2
+}

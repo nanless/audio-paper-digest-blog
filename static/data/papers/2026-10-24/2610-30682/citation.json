@@ -1,0 +1,39 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.30682v1",
+  "arxivId": "2610.30682",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.30682v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Linguistics, Yale University, New Haven, USA"
+      ],
+      "name": "Xiaomeng Zhu"
+    },
+    {
+      "affiliations": [
+        "Department of Linguistics, Yale University, New Haven, USA"
+      ],
+      "name": "Megan Niu"
+    },
+    {
+      "affiliations": [
+        "Department of Linguistics, Yale University, New Haven, USA"
+      ],
+      "name": "Jason Shaw"
+    },
+    {
+      "affiliations": [
+        "Corresponding author. Also at: Department of Linguistics, University of Florida, Gainesville, Florida, 32611-5454, United States of America",
+        "Department of English Language and Linguistics, Institute of English and American Studies, Faculty of Arts and Humanities, Heinrich Heine University Düsseldorf, Düsseldorf, 40225, Germany"
+      ],
+      "name": "Kevin Tang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.30682v1",
+  "originalTitle": "Direct cueing of word identity through word duration: evidence from Mandarin homophones",
+  "pdfUrl": "https://arxiv.org/pdf/2610.30682v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}
