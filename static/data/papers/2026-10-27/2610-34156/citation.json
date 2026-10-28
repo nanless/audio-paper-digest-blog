@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.34156v1",
+  "arxivId": "2610.34156",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.34156v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xueping Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xiaoxiao Miao"
+    },
+    {
+      "affiliations": [
+        "School of Artificial Intelligence, The Chinese University of Hong Kong, Shenzhen, China"
+      ],
+      "name": "Tiantian Feng"
+    },
+    {
+      "affiliations": [
+        "School of Artificial Intelligence, The Chinese University of Hong Kong, Shenzhen, China"
+      ],
+      "name": "Ming Li"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.34156v1",
+  "originalTitle": "ASR-Protected Fusion and Reference-Anchored Policy Optimization for Joint ASR and Word-Level Speech Anti-Spoofing",
+  "pdfUrl": "https://arxiv.org/pdf/2610.34156v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

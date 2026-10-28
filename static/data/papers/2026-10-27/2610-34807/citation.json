@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.34807v1",
+  "arxivId": "2610.34807",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.34807v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hanchen Pei"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shujie Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yayue Deng"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Fangyun Wei"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yanqing Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jianwei Yu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Gongping Huang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.34807v1",
+  "originalTitle": "ImageTTS: Repurposing Pretrained Image Diffusion Transformers for Speech Synthesis",
+  "pdfUrl": "https://arxiv.org/pdf/2610.34807v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

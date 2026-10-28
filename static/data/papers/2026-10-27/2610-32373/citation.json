@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.32373v1",
+  "arxivId": "2610.32373",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.32373v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Tongji University"
+      ],
+      "name": "Yi Liu"
+    },
+    {
+      "affiliations": [
+        "The University of Tokyo"
+      ],
+      "name": "Xiangyue Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jianfang Li"
+    },
+    {
+      "affiliations": [
+        "Tongji University"
+      ],
+      "name": "Jia Ma"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yisheng He"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jianqiang Ren"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.32373v1",
+  "originalTitle": "Past as State, Present as Attention: Persistent-State Blockwise Flow Matching for Long-Horizon Co-Speech Motion Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.32373v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

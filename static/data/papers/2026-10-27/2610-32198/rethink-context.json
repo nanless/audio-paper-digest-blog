@@ -1,0 +1,144 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.32198v2",
+  "abstract": "Speech conveys linguistic content, speaker characteristics, temporal interactions, paralinguistic cues, and acoustic environments. While recent speech captioning models describe these dimensions in natural language, inconsistent attribute coverage and ambiguous omissions hinder systematic analysis across recordings. We introduce SURE-Tagger, a framework that constructs semi-structured speech representations with explicit attribute values, supplementary descriptions, and abstention under insufficient evidence. By integrating specialist observations through language-model reasoning, SURE-Tagger enables speech conditions to be consistently identified and jointly queried across datasets. We further introduce Tag-Bench, combining real recordings with controlled, agentically synthesized speech scenes and verified attribute annotations. On Tag-Bench, SURE-Tagger achieves the highest scores on 25 of 29 evaluated dimensions for real speech and 24 of 29 for synthetic speech, outperforming caption-based baselines across structural and descriptive attributes. Beyond annotation, we use these representations to construct cross-dataset evaluation subsets and reveal condition-specific ASR errors. Using a separate candidate pool, SURE-Tagger-guided selection reduces the overall ASR error rate of Qwen3-ASR-1.7B by 14.3% relative to the unadapted model under a one-hour fine-tuning budget, while caption-guided and random selection increase error in the same setting. These results demonstrate how structured speech representations can connect rich annotation, compositional evaluation, and targeted model improvement.",
+  "abstractSha256": "d0e92bdb7a64f0714f7f7bb11eea94a2fdfc9086439efbc800c17821a625d523",
+  "arxivId": "2610.32198",
+  "arxivVersion": 2,
+  "arxivVersionedId": "2610.32198v2",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "数据标注",
+    "primaryTask": "语音属性识别",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-attributes",
+          "label": "语音属性识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.data-annotation",
+          "label": "数据标注"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.evaluation",
+          "label": "模型评估"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "数据标注",
+      "primaryMethodId": "method.data-annotation",
+      "primaryTask": "语音属性识别",
+      "primaryTaskId": "task.speech-attributes",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jing Peng"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Huifei Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Weihan Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shuo Gao"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Bicheng Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Junhao Du"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hanqi Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Chaolei Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Wen Wen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Tao Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xu Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yu Xi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shuai Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kai Yu"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对自由描述覆盖不一致、缺省无法区分缺席与证据不足的问题，SURE-Tagger 用专科模型提供证据再由语言模型整合成显式属性加补充描述的半结构表示，在 Tag-Bench 上标注得分最高，并用条件聚类指导一小时微调使 Qwen3-ASR-1.7B 整体误差相对下降 14.3%，代价是需要多模型流水线和候选池打标与评测开销。",
+  "originalTitle": "SURE-Tagger: Structured Speech Representations for Compositional Evaluation and Targeted Data Selection",
+  "pdfUrl": "https://arxiv.org/pdf/2610.32198v2.pdf",
+  "readerTitle": "把语音条件写清楚：SURE-Tagger 的结构化标注与组合评测",
+  "schemaVersion": 2
+}

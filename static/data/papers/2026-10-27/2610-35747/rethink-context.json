@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.35747v1",
+  "abstract": "Clinical audio models increasingly align recordings with participant metadata or metadata-derived text. This supervision is useful but ambiguous: the paired target can contain symptoms, demographics, missingness, and cohort structure, not just disease information. We study this ambiguity by making the audio-metadata pairing itself the intervention. Our Pairing-Controlled Transfer Audit trains matched contrastive trajectories under correct pairing, global shuffling, disease-label-preserving shuffling, and label-and-recorded-sex-preserving shuffling. Each endpoint is then frozen and tested with three readouts: profile correspondence, attribute decodability, and matched disease prediction. On UKCOVID, correct improves retrieval and sex decodability over label-only shuffling, showing that the pairing intervention worked. The sex-probe contrast is largely absorbed by the sex-preserving control, while smaller retrieval differences remain. Disease-transfer contrasts, however, remain uncertain. After UKCOVID discovery fixed the pipeline, CODA TB, Cambridge COVID-19 Sounds, and Coswara were rerun as a locked external panel with the same arms, backbones, matching, readout, calibration, primary contrast, and primary metric. The external panel preserves the descriptive separation without proving a universal null. Successful profile correspondence and improved disease transfer are therefore different empirical claims.",
+  "abstractSha256": "61aaff6c5c8cec9b906ba434a2b337e5ade80fff0029f976d50835b0fa60851d",
+  "arxivId": "2610.35747",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.35747v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "对比学习",
+    "primaryTask": "病理语音评估",
+    "rankBucket": "前50%",
+    "score": 5.7,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.pathological-speech",
+          "label": "病理语音评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.contrastive",
+          "label": "对比学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.representation-probing",
+          "label": "表示探测"
+        },
+        {
+          "facet": "application",
+          "id": "application.medical",
+          "label": "医疗音频"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "对比学习",
+      "primaryMethodId": "method.contrastive",
+      "primaryTask": "病理语音评估",
+      "primaryTaskId": "task.pathological-speech",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Liu He"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xi Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jiahong Yuan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yuanchao Li"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文把音频配对的元数据来源本身当作干预，用四种配对轨迹证明正确配对能提高档案找回和属性可解码性，但匹配后的疾病预测增益仍不确定，且代价是需要严格的协变量匹配与锁定流程。",
+  "originalTitle": "Correspondence Is Not Transfer: A Pairing-Controlled Audit of Clinical Audio-Metadata Alignment",
+  "pdfUrl": "https://arxiv.org/pdf/2610.35747v1.pdf",
+  "readerTitle": "配对成功不等于疾病迁移：临床音频元数据对齐的配对控制审计",
+  "schemaVersion": 2
+}

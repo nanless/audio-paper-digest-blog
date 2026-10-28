@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.34401v1",
+  "arxivId": "2610.34401",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.34401v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Qingyu Luo"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Peng Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Wenwu Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Philip J. B. Jackson"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.34401v1",
+  "originalTitle": "AV-QTSS: Class-Query Target Sound Spatialization in Multi-Source 360$^\\circ$ Videos",
+  "pdfUrl": "https://arxiv.org/pdf/2610.34401v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

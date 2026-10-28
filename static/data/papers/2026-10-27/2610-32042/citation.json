@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.32042v1",
+  "arxivId": "2610.32042",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.32042v1",
+  "authors": [
+    {
+      "affiliations": [
+        "KAIST"
+      ],
+      "name": "Jeongsoo Choi"
+    },
+    {
+      "affiliations": [
+        "Chung-Ang University"
+      ],
+      "name": "Ji-Hoon Kim"
+    },
+    {
+      "affiliations": [
+        "KAIST"
+      ],
+      "name": "Junseok Ahn"
+    },
+    {
+      "affiliations": [
+        "KAIST"
+      ],
+      "name": "Joon Son Chung"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.32042v1",
+  "originalTitle": "X-Dubbing: Speech-to-Speech Translation under Temporal and Visual Constraints",
+  "pdfUrl": "https://arxiv.org/pdf/2610.32042v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

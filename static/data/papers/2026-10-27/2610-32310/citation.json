@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.32310v1",
+  "arxivId": "2610.32310",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.32310v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Chair of Thermodynamics of Mobile Energy Conversion Systems, RWTH Aachen University, Aachen, Germany"
+      ],
+      "name": "Philipp Diel"
+    },
+    {
+      "affiliations": [
+        "IAS-8, Forschungszentrum Jülich, Jülich, Germany"
+      ],
+      "name": "Zhuo Cao"
+    },
+    {
+      "affiliations": [
+        "Chair of Vibroacoustics of Vehicles and Machines, Technical University of Munich, Garching, Germany"
+      ],
+      "name": "Arne Hildenbrand"
+    },
+    {
+      "affiliations": [
+        "Chair of Thermodynamics of Mobile Energy Conversion Systems, RWTH Aachen University, Aachen, Germany"
+      ],
+      "name": "Marco Günther"
+    },
+    {
+      "affiliations": [
+        "Chair of Thermodynamics of Mobile Energy Conversion Systems, RWTH Aachen University, Aachen, Germany"
+      ],
+      "name": "Stefan Pischinger"
+    },
+    {
+      "affiliations": [
+        "IAS-8, Forschungszentrum Jülich, Jülich, Germany"
+      ],
+      "name": "Hanno Scharr"
+    },
+    {
+      "affiliations": [
+        "Chair of Vibroacoustics of Vehicles and Machines, Technical University of Munich, Garching, Germany"
+      ],
+      "name": "Steffen Marburg"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.32310v1",
+  "originalTitle": "Supervised Source Separation of Electric Vehicle Interior Noise Using a Hybrid Transformer Architecture",
+  "pdfUrl": "https://arxiv.org/pdf/2610.32310v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

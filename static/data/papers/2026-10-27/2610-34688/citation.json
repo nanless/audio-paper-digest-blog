@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.34688v1",
+  "arxivId": "2610.34688",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.34688v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ye Lu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shen Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Runze Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhitao Ou"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Haonan Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yihan Yan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Fanghui Sun"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhaoyang Zhang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.34688v1",
+  "originalTitle": "From Speech Tokens to Stolen Voices: Attacker-Chosen-Text Speaker Impersonation via Representation Inversion",
+  "pdfUrl": "https://arxiv.org/pdf/2610.34688v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

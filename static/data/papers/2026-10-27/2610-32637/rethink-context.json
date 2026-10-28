@@ -1,0 +1,92 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.32637v1",
+  "abstract": "Fine-tuning the non-blank predictor of a factorized transducer on target-domain text improves recognition on that domain but degrades performance on the source domain. A single interpolation weight between base and adapted predictors cannot resolve this: the adapted predictor helps at some prefixes and hurts at others, often within one utterance. We propose conservative residual routing: the adapted predictor becomes a residual correction to the base, and a 16k-parameter gate decides at each prefix how much of it to admit. Closing the gate reproduces the base exactly. On a 40-hour conversational corpus, routing retains essentially all of the text-only gain on two held-out domains (19.89 to 16.74, 20.91 to 16.21 WER) while leaving source-domain WER unchanged (12.90 to 12.93); the adapted predictor alone costs 1.08 WER. Routing needs no per-domain tuning on target-domain audio. Analysis reveals the gate does not behave as a simple domain-level switch: it modulates intervention through the disagreement between the two predictors, suppressing it in-domain and amplifying it out-of-domain.",
+  "abstractSha256": "f73ca3bad598cd55973dce7bbf4ed4777673098013011e99fd03470e6cc8a0bc",
+  "arxivId": "2610.32637",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.32637v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "混合专家模型",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.moe",
+          "label": "混合专家模型"
+        },
+        {
+          "facet": "method",
+          "id": "method.domain-adaptation",
+          "label": "领域适应"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "混合专家模型",
+      "primaryMethodId": "method.moe",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shashi Kumar"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Esaú Villatoro-Tello"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Thibault Bañeras-Roux"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Sergio Burdisso"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Petr Motlicek"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kadri Hacioglu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Andreas Stolcke"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对因子化 Transducer 用文本微调非空预测器会提升新领域但损害源领域的问题，论文提出把适配后预测器当作残差修正并用每前缀门控决定采纳多少，在保留新领域增益的同时源领域词错误率基本不变。",
+  "originalTitle": "Residual Expert Routing for Text-Only Domain Adaptation of Factorized Transducer ASR",
+  "pdfUrl": "https://arxiv.org/pdf/2610.32637v1.pdf",
+  "readerTitle": "只用目标领域文本，能否既学新词又不忘老领域",
+  "schemaVersion": 2
+}

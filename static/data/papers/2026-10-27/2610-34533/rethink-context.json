@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.34533v1",
+  "abstract": "Pretrained audio spectrogram transformers are widely used as backbones of machine listening systems for sound event classification. However, they are typically trained using spectrograms with a fixed Short-Time Fourier Transform (STFT) configuration, implicitly binding the model to the time-frequency resolution seen during pretraining. In practice, adapting these systems to new domains or computational constraints often requires different STFT frontend parameters. In this work, we conduct a controlled study of the sensitivity of the foundational Audio Spectrogram Transformer to variations in STFT window and hop size, showing that audio classification performance degrades substantially as frontend parameters deviate from pretraining settings. As a mitigation strategy, we introduce a lightweight conditioning mechanism using FiLM that enables a pretrained model to adapt to variable input configurations using limited additional training data. Our method generalizes well to unseen STFT configurations, improving model robustness without sacrificing performance in the original setting.",
+  "abstractSha256": "e8bed4310d045899c5f66d4bd3c677935912210dbdf10c56f4e409bb6de66cd1",
+  "arxivId": "2610.34533",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.34533v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "Adapter",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 5.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.adapter",
+          "label": "Adapter"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.environmental",
+          "label": "环境声"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "Adapter",
+      "primaryMethodId": "method.adapter",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Julia Wilkins"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Wei-Ching Lin"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Abinaya Kumar"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Shabnam Ghaffarzadegan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Juan Pablo Bellow"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文量化了预训练 AST 在窗口和跳长偏离预训练设置时分类性能大幅下降的问题，并用冻结主干加轻量 FiLM 条件调制在少数据下恢复未见配置上的性能且基本保持原配置性能。",
+  "originalTitle": "STFT Frontend Mismatch in Pretrained Audio Spectrogram Transformers: Analysis and Adaptation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.34533v1.pdf",
+  "readerTitle": "预训练音频谱图 Transformer 遇到不同 STFT 前端怎么办",
+  "schemaVersion": 2
+}

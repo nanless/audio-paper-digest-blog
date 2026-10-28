@@ -1,0 +1,204 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.31796v1",
+  "abstract": "Recent advances in speech generation are shifting toward context-aware, multi-turn, and multi-speaker synthesis. While these capabilities are in high demand for applications such as audiobook and audio drama production, evaluation has not kept pace with these advances. Beyond traditional zero-shot Text-to-Speech (TTS), modern systems in this domain primarily fall into three categories: instruction-controllable generation models, multi-turn dialogue models, and the audio branches of audio-visual generation models. However, existing benchmarks evaluate these paradigms in isolation, failing to provide a unified assessment of context modeling, instruction following, and multi-speaker generation. Meanwhile, recent progress in audio understanding models has made it feasible to evaluate such complex scenarios using LLM-as-a-Judge approaches. To bridge this gap, we introduce DRAMA-Eval, a comprehensive benchmark for evaluating such systems. DRAMA-Eval utilizes structured script contexts and offers a holistic evaluation framework covering objective, local, and global aspects of generation quality, enabling the assessment of acoustic fidelity, sentence-level execution, and long-range coherence. We benchmark leading open-source and commercial models on a human?verified dataset. The results reveal critical weaknesses in long-range speaker consistency and implicit instruction following that require deep contextual understanding. To facilitate reproducible research, we release a 12-hour bilingual (Chinese-English) test set of manually corrected real-world scripts, accompanied by ground-truth audio, evaluation code, and benchmark results.",
+  "abstractSha256": "dc215815831018af6152e98eb312753bbd66359a6ac871460aa7041da9194d8c",
+  "arxivId": "2610.31796",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.31796v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "语音合成",
+    "rankBucket": "前50%",
+    "score": 6.7,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-synthesis",
+          "label": "语音合成"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "语音合成",
+      "primaryTaskId": "task.speech-synthesis",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jingbin Hu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zihang Yang"
+    },
+    {
+      "affiliations": [
+        "Shenzhen Pimei Technology Co., Ltd."
+      ],
+      "name": "Xiaoge Peng"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Haoyu Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ziyu Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Qirui Zhan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Huakang Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhao Guo"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Wenjie Tian"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kangxiang Xia"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Wenkang Hou"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ruonan You"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zihan Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Chenyi Liao"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hongyu Lyu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zihao Bai"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jinrui Liang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shengming Lin"
+    },
+    {
+      "affiliations": [
+        "Shenzhen Pimei Technology Co., Ltd."
+      ],
+      "name": "Yunxiang Chen"
+    },
+    {
+      "affiliations": [
+        "Shenzhen Pimei Technology Co., Ltd."
+      ],
+      "name": "Houdun Liu"
+    },
+    {
+      "affiliations": [
+        "Shenzhen Pimei Technology Co., Ltd."
+      ],
+      "name": "Su Feng"
+    },
+    {
+      "affiliations": [
+        "Yutu Zhineng"
+      ],
+      "name": "Bengu Wu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Liumeng Xue"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Lei Xie"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "DRAMA-Eval 用结构化剧本同时考指令执行、说话人一致和整场连贯，发现单句做得好不等于整场戏成立，而全局场景信息能明显提升沉浸感。",
+  "originalTitle": "DRAMA-Eval: A Benchmark for Context-Aware, Multi-Turn, Multi-Speaker Speech Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.31796v1.pdf",
+  "readerTitle": "DRAMA-Eval：面向上下文、多轮、多说话人的语音生成评测",
+  "schemaVersion": 2
+}

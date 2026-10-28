@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.34582v1",
+  "abstract": "We describe HobbyLM, a family of small sparse Mixture-of-Experts (MoE) models trained from scratch with a few hundred to a few thousand dollars of rented GPU time. The core is a decoder-only transformer with fine-grained experts, sigmoid routing with auxiliary-loss-free load balancing, grouped-query attention with per-head QK-normalization, and aMuon/AdamW optimizer split. Each of these choices was selected with a single-variable ablation suite at 130M parameters. On this architecture we train a 500M-parameter model (169M active) on 40B FineWeb tokens and post-train it into a chat model, a masked-diffusion language model, a function-calling and computer-use agent, and a single \"omni\" checkpoint that reads text, images, video, sound and speech through frozen encoders and small projectors. We run these models on a laptop CPU with a from-scratch Rust inference engine. Two of the authors then adopted the architecture without architectural changes to build HobbyLM-1B (1.04B total, 305M active parameters), trained on a 100B-token curated mixture with a high-quality anneal. HobbyLM-1B reaches a 47.5 average on seven zero-shot benchmarks, and its builders also release an instruction-tuned model and an on-device macOS computer-use adapter. Finally, we describe HobbyLM-Image, a 333M-parameter flow-matching diffusion transformer that generates 1024x1024 images in a 32x-compressed latent space, together with a dependency-light CPU implementation of the full text-to-image pipeline. We report what worked, what did not, and where the small-scale ceilings lie. We also state for each component which author designed or built it.",
+  "abstractSha256": "154e796d9363e084f0285620d5dac59069b38b1616fabffbff786376defeeb81",
+  "arxivId": "2610.34582",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.34582v1",
+  "assessment": {
+    "documentType": "模型报告",
+    "primaryMethod": "混合专家模型",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 5.7,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-question-answering",
+          "label": "音频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.moe",
+          "label": "混合专家模型"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "混合专家模型",
+      "primaryMethodId": "method.moe",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Harish Santhanalakshmi Ganesan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hariharan M. S."
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Prabhurajhan R"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "HobbyLM 用细粒度稀疏混合专家加稳定路由与归一化，在 40B 与 100B 词元预算下做出 500M 与 1B 基座，并延伸出对话、扩散语言模型、多模态智能体与 1024px 文生图，但多项能力仍受小词元量与单次训练的限制。",
+  "originalTitle": "HobbyLM: A Sparse Mixture-of-Experts Model Family on a Hobby Budget",
+  "pdfUrl": "https://arxiv.org/pdf/2610.34582v1.pdf",
+  "readerTitle": "小预算稀疏混合专家：HobbyLM 如何搭架构、训模型再做多模态与生图",
+  "schemaVersion": 2
+}

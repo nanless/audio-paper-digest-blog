@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.34609v1",
+  "arxivId": "2610.34609",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.34609v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jihoon Jeong"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Mirco Ravanelli"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhepei Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Cem Subakan"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.34609v1",
+  "originalTitle": "Audio-R1: Audio Reasoning through Reinforcement Learning on Self-Supervised Tasks",
+  "pdfUrl": "https://arxiv.org/pdf/2610.34609v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

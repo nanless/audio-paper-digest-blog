@@ -1,0 +1,80 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.33413v1",
+  "arxivId": "2610.33413",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.33413v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Tsinghua University"
+      ],
+      "name": "Yuesheng Huang"
+    },
+    {
+      "affiliations": [
+        "Tsinghua University"
+      ],
+      "name": "Hoi Fan Au"
+    },
+    {
+      "affiliations": [
+        "Tsinghua University"
+      ],
+      "name": "Jiaqi Hou"
+    },
+    {
+      "affiliations": [
+        "Tsinghua University"
+      ],
+      "name": "Ruicheng Zhang"
+    },
+    {
+      "affiliations": [
+        "Tsinghua University"
+      ],
+      "name": "Jiarui He"
+    },
+    {
+      "affiliations": [
+        "Tsinghua University"
+      ],
+      "name": "Haocheng Yang"
+    },
+    {
+      "affiliations": [
+        "Tsinghua University"
+      ],
+      "name": "Bin Hu"
+    },
+    {
+      "affiliations": [
+        "Peking University"
+      ],
+      "name": "Kewei Zhang"
+    },
+    {
+      "affiliations": [
+        "Tsinghua University"
+      ],
+      "name": "Weijian Deng"
+    },
+    {
+      "affiliations": [
+        "Tsinghua University"
+      ],
+      "name": "Jun Zhou"
+    },
+    {
+      "affiliations": [
+        "Tsinghua University"
+      ],
+      "name": "Xiu Li"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.33413v1",
+  "originalTitle": "AV-FABLE: Audio-Visual Manipulation Forensics in Long-Form Videos",
+  "pdfUrl": "https://arxiv.org/pdf/2610.33413v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,97 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.34807v1",
+  "abstract": "Pretrained image-generation models have been successfully repurposed for various downstream visual tasks. Whether their learned representations and generative priors can transfer beyond vision to other modalities remains largely unresolved, particularly for speech synthesis, which requires linguistic fidelity and preservation of speaker identity from a short reference. We present ImageTTS, which repurposes FLUX.2 for speech synthesis by encoding pseudo-RGB log-mel spectrograms with its frozen image VAE and adapting only its pretrained Diffusion Transformer (DiT) using conditional latent flow matching. This formulation disentangles two forms of vision-to-speech transfer: representation transfer through the image VAE and generative-prior transfer through DiT initialization. The frozen image VAE largely preserves intelligibility and speaker identity with 0.99 STOI and 0.95 speaker similarity, while image-pretrained DiT initialization accelerates convergence and improves linguistic accuracy, reducing WER from 4.2\\% to 2.7\\% at 100k matched updates relative to random initialization. The same framework supports both zero-shot and instruction-guided TTS and, when scaled to 100K hours of speech data, achieves 1.12\\% WER on Seed-TTS test-en and a Style-ACC of 0.66 on CapSpeech, outperforming speech-native baselines trained on comparable data across both tasks. These results suggest that pretrained image models can transfer beyond architectural reuse, supplying useful latent representations and generative priors for intelligible and controllable speech synthesis.",
+  "abstractSha256": "10e45a6c8e637ff08c071eed1cd85b0e9d657d4d6b11354ae0e2734bb7a1b608",
+  "arxivId": "2610.34807",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.34807v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "迁移学习",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.transfer",
+          "label": "迁移学习"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.zero-shot",
+          "label": "零样本"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "迁移学习",
+      "primaryMethodId": "method.transfer",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hanchen Pei"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shujie Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yayue Deng"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Fangyun Wei"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yanqing Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jianwei Yu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Gongping Huang"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "ImageTTS 把对数梅尔谱图变成伪 RGB 图后冻住图像 VAE、只微调 FLUX.2 的 DiT 做条件流匹配，在受控对比中验证了表征与先验迁移，再用约 100K 小时数据在零样本和指令控制合成上达到可比基线的语言准确率，但说话人相似度仍受冻住 VAE 限制。",
+  "originalTitle": "ImageTTS: Repurposing Pretrained Image Diffusion Transformers for Speech Synthesis",
+  "pdfUrl": "https://arxiv.org/pdf/2610.34807v1.pdf",
+  "readerTitle": "把图像扩散模型拿来读文字、学说话：ImageTTS 解读",
+  "schemaVersion": 2
+}

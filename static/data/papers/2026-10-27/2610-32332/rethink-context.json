@@ -1,0 +1,121 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.32332v1",
+  "abstract": "Humans efficiently process multimodal streams spanning hours to years, building persistent, fine-grained spatiotemporal memories that support reasoning about and predicting long-horizon events. In contrast, existing benchmarks focus on short- and medium-context tasks, and most foundation models struggle to preserve fine-grained information over long horizons. To evaluate and improve long-horizon spatiotemporal reasoning, we introduce the LongVideo dataset and the 4DMemoryBench. LongVideo comprises about 900 hours of video and over 5,000 manually reviewed questions covering visual, textual, and spatiotemporal reasoning across diverse context lengths. We further develop the 4DMemory Harness, which integrates four complementary skills, 22+ specialized tool models, and a model-specific retrieval-augmented generation system. Evaluating 13 leading models, we find that standalone foundation models struggle with long-horizon tasks, while the 4DMemory Harness improves all of them by over 50\\%. Compared to previous benchmark, the same models exhibit a performance drop of more than 10\\% on 4DMemoryBench. We hope 4DMemory will facilitate the development of spatiotemporal agents capable of addressing complex, long-horizon tasks.",
+  "abstractSha256": "2066e092a0c8aa009835d05db7da249ba6e32742f953a9213efb3f611afc5649",
+  "arxivId": "2610.32332",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.32332v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "音视频问答",
+    "rankBucket": "前50%",
+    "score": 5.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-question-answering",
+          "label": "音视频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "method",
+          "id": "method.retrieval-augmented",
+          "label": "检索增强"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "音视频问答",
+      "primaryTaskId": "task.av-question-answering",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Nanyang Technological University"
+      ],
+      "name": "Yanhao Jia"
+    },
+    {
+      "affiliations": [
+        "Token Foundry, Alibaba"
+      ],
+      "name": "Yi Zhu"
+    },
+    {
+      "affiliations": [
+        "Token Foundry, Alibaba"
+      ],
+      "name": "Yiran Zhong"
+    },
+    {
+      "affiliations": [
+        "Token Foundry, Alibaba"
+      ],
+      "name": "Weigao Sun"
+    },
+    {
+      "affiliations": [
+        "Token Foundry, Alibaba"
+      ],
+      "name": "Feida Zhu"
+    },
+    {
+      "affiliations": [
+        "Token Foundry, Alibaba"
+      ],
+      "name": "Pengkun Jiao"
+    },
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong"
+      ],
+      "name": "Sihan Yang"
+    },
+    {
+      "affiliations": [
+        "Institute of Neuroscience, Chinese Academy of Sciences",
+        "University of Chinese Academy of Sciences"
+      ],
+      "name": "Ming Ma"
+    },
+    {
+      "affiliations": [
+        "Token Foundry, Alibaba"
+      ],
+      "name": "Steven Hoi"
+    },
+    {
+      "affiliations": [
+        "Nanyang Technological University"
+      ],
+      "name": "Erik Cambria"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文要解决跨数十到上百小时视频的细粒度时空推理问题，用与问题无关的持久记忆加按需检索和三类技能的 4DMemory Harness 把任务时长与模型原生窗口解耦，在 5214 题上最高联合成功率 77.79% 但分布式计数等仍是短板。",
+  "originalTitle": "4DMemory: Benchmarking Long-Horizon Spatiotemporal Memory with Harness-Augmented Agents",
+  "pdfUrl": "https://arxiv.org/pdf/2610.32332v1.pdf",
+  "readerTitle": "4DMemory：把上百小时视频变成可复用的长期时空记忆再推理",
+  "schemaVersion": 2
+}

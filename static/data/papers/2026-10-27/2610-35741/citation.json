@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.35741v1",
+  "arxivId": "2610.35741",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.35741v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Gioele Greco"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Filippo Marri"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Mirco Pezzoli"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Fabio Antonacci"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.35741v1",
+  "originalTitle": "Graph Neural Network for Wide-Area 6DoF Ambisonic Rendering",
+  "pdfUrl": "https://arxiv.org/pdf/2610.35741v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

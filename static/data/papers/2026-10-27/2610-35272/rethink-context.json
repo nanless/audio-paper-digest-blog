@@ -1,0 +1,61 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.35272v1",
+  "abstract": "A transcriber listening through one microphone also hears everyone near it. We train causal voice isolators: masking transformers of 140M, 243M and 374M parameters, 20 ms of latency, enrolling the caller from the call itself. Short evaluation windows hide two failures that real calls expose: forgetting the caller when another voice talks alone for a while, and damaging a caller who is alone. Long calls with turns, memory beyond the attention window, real headset crosstalk and drifting caller levels address both, but each trades one against the other. WavLM-Large's own weights, made causal and trained with the model, move the trade: M with them (555M parameters) lowers the error on our development sets from 11.44% to 10.55%; a student trained from scratch to imitate WavLM does not, and w2v-BERT 2.0 and Whisper's encoder, pre-trained on far more audio, help less or not at all. A lone caller loses most at the start of a recording: no training call opened with someone already talking. Training on windows cut from longer calls lowers the error on clean development calls from 3.92% to 2.96%; this is our release. Live, the release makes 16.13% word errors on 60 s AMI windows, against 23.66% for VoxLock, the strongest open isolator, and 10.19% on its own AMI windows, against 11.71%; it is level on Krisp's benchmark (5.74% against 5.63%), and a caller who is alone still loses more words than with VoxLock (5.58% against 2.92% on clean test calls). Distilled into 22.1M parameters without WavLM, it runs live on one CPU thread inside a LiveKit agent, at 33% of a core per call in 20 ms frames, with 10.66% error on our development sets (the release 10.49%). We open-source the release and this CPU model, with a LiveKit plugin, at https://huggingface.co/collections/Scicom-intl/voice-isolator.",
+  "abstractSha256": "368db7d1e0a8bc62348a5acda82f4ff6f2f67dbedb053d25d0df35604638d1df",
+  "arxivId": "2610.35272",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.35272v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "迁移学习",
+    "primaryTask": "目标说话人提取",
+    "rankBucket": "前25%",
+    "score": 7.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.target-speaker",
+          "label": "目标说话人提取"
+        },
+        {
+          "facet": "method",
+          "id": "method.transfer",
+          "label": "迁移学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.causal",
+          "label": "严格因果"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "迁移学习",
+      "primaryMethodId": "method.transfer",
+      "primaryTask": "目标说话人提取",
+      "primaryTaskId": "task.target-speaker",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Husein Zolkepli"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文为呼叫转写做因果语音隔离，用从通话自身注册的主讲人线索做掩蔽，在长通话和单人通话的权衡中用因果化的 WavLM 改善两端，并蒸馏出单 CPU 线程可跑的小模型。",
+  "originalTitle": "The Voice on the Line",
+  "pdfUrl": "https://arxiv.org/pdf/2610.35272v1.pdf",
+  "readerTitle": "电话线上的声音：只留下打电话的人",
+  "schemaVersion": 2
+}

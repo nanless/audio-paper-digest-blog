@@ -1,0 +1,104 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.35581v1",
+  "abstract": "A full-duplex spoken dialogue model must yield when the user cuts in and hold when the user merely backchannels. Sequence-level RL with a timing reward (GRPO) is the usual recipe; we test its whole-rollout form on four open models and find two failures. A binary window reward gives zero advantage on exactly the windows that most need learning (a zero-gradient trap), and the one score per rollout is spread over listening-state decisions the reward is not written in terms of (credit leakage), so the model talks into silence or stops answering. Both come from sampling a reward that is a known function of a few binary control decisions. We propose \\emph{window likelihood} (\\WL): sample a continuation per window, but integrate in closed form over the stop decisions it visits and maximise the log-probability of acting correctly---a noisy-OR for yielding, a survival product for holding. On HumDial-FDBench, \\WL\\ gives the best yield/hold F1 on all six structurally different open models we post-train, exceeds Kyutai's released GRPO checkpoints (trained on different data), and adds no re-opening of the floor on any model.",
+  "abstractSha256": "e36f435c219724b76ae0ade56f6372c1d1d6164a532d22d4e5944d68354a9be9",
+  "arxivId": "2610.35581",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.35581v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "强化学习",
+    "primaryTask": "轮次切换",
+    "rankBucket": "前50%",
+    "score": 7.4,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.turn-taking",
+          "label": "轮次切换"
+        },
+        {
+          "facet": "method",
+          "id": "method.reinforcement",
+          "label": "强化学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.post-training",
+          "label": "后训练"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "强化学习",
+      "primaryMethodId": "method.reinforcement",
+      "primaryTask": "轮次切换",
+      "primaryTaskId": "task.turn-taking",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Nanyang Technological University, Singapore",
+        "Tencent"
+      ],
+      "name": "Guoqiang Hu"
+    },
+    {
+      "affiliations": [
+        "Tencent"
+      ],
+      "name": "Lichao Zhang"
+    },
+    {
+      "affiliations": [
+        "Nanyang Technological University, Singapore"
+      ],
+      "name": "Yizhou Peng"
+    },
+    {
+      "affiliations": [
+        "Tencent"
+      ],
+      "name": "Yuhao Luo"
+    },
+    {
+      "affiliations": [
+        "Tencent"
+      ],
+      "name": "Haifeng Hu"
+    },
+    {
+      "affiliations": [
+        "Tencent"
+      ],
+      "name": "Sallen Sun"
+    },
+    {
+      "affiliations": [
+        "Tencent"
+      ],
+      "name": "Will Yang"
+    },
+    {
+      "affiliations": [
+        "Nanyang Technological University, Singapore"
+      ],
+      "name": "Eng Siong Chng"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对全双工语音模型在用户打断与附和时的让路或保持决策，论文用事件窗口内停止概率的闭式似然替代整段采样的 GRPO 奖励，在六个开源模型上取得最优让路保持 F1 且不增加静音下重开话轮的副作用。",
+  "originalTitle": "Integrate the Reward, Don't Sample It: Window Likelihood for Interruptions and Backchannels in Full-Duplex Speech Models",
+  "pdfUrl": "https://arxiv.org/pdf/2610.35581v1.pdf",
+  "readerTitle": "打断要让，附和要留：窗口似然如何替代采样式时机奖励",
+  "schemaVersion": 2
+}

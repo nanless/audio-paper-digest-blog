@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.33952v1",
+  "abstract": "Speech Emotion Recognition (SER) is important in human-machine interactions, enabling machines to detect and classify human emotions from solely human speech. Speech emotion recognition (SER) benchmarks routinely report accuracies above 90 percent, yet these models fail when deployed or tested on diverse speakers. The papers overlook a fundamental issue: models may be learning speaker identity and tone rather than generalized emotional cues. We introduce a two-condition audit protocol that measures, for any published SER model, how much of its reported performance survives when speakers are held out. Each model is evaluated twice under identical architecture, features, and training recipe: a control condition that reproduces the common random-split practice, and a strict speaker-independent condition with disjoint speakers. We apply the protocol to seven model configurations from five published papers, spanning convolutional, recurrent, transformer, vision-transformer, and self-supervised wav2vec2 architectures, on RAVDESS, EMO-DB, and SAVEE, with a fourth corpus (EARS) as an external check. Across 21 model-dataset pairs, published headline numbers reproduce close to the control but drop by 6.9 to 63.1 percentage points under strict speaker independence. Our results quantify speaker memorization as a dominant, previously unmeasured component of published SER performance, and we recommend two-condition reporting as a community standard.",
+  "abstractSha256": "4e6de5baf6dd6e10bbb0a40f9c9b4585c5752789bb0d6e8b6d0e77c400bc797a",
+  "arxivId": "2610.33952",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.33952v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "评测协议",
+    "primaryTask": "语音情感识别",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.emotion-recognition",
+          "label": "语音情感识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "评测协议",
+      "primaryMethodId": "method.evaluation-protocol",
+      "primaryTask": "语音情感识别",
+      "primaryTaskId": "task.emotion-recognition",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Prince Baah-Mensah"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Dennis Owusu Asamoah"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文用同一模型同一训练流程对比随机划分与说话人无关划分，21 组配对显示准确率下降 6.9 到 63.1 个百分点，说明已发表高准确率中说话人记忆占主导，而冻结自监督表示保留相对更多。",
+  "originalTitle": "Beyond Accuracy: What Are Speech Emotion Recognition Models Learning?",
+  "pdfUrl": "https://arxiv.org/pdf/2610.33952v1.pdf",
+  "readerTitle": "语音情感识别的高准确率里有多少是记住了说话人",
+  "schemaVersion": 2
+}

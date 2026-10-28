@@ -1,0 +1,102 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.34413v1",
+  "abstract": "Large audio language models (LALMs) have achieved strong performance on standard speech and audio understanding tasks, yet their ability to systematically generalize to novel task compositions remains underexplored. Taking a meta-learning view, we extend Text-to-LoRA (T2L) to LALMs, generating instruction-conditioned LoRA adapters with a Transformer hypernetwork rather than learning a single fixed adapter shared across instructions. To exploit fine-grained task information, we introduce in-context adapter generation (ICAG), a token-level hypernetwork architecture; we call the resulting method T2L-ICAG. We evaluate this approach on two representative LALMs using SIFT-50M for supervised fine-tuning and construct a controlled compositional evaluation suite covering five task classes. Across two LALM backbones, T2L-ICAG consistently improves over static LoRA and also the global embedding-based T2L baseline. Coverage and capacity analyses further show that these gains are larger on structurally out-of-domain tasks and cannot be explained by parameter count alone. These results suggest that generating task-specific adapters from instructions is a promising direction for improving compositional generalization of LALMs.",
+  "abstractSha256": "bca18efa2d52a387cf936ace42fda326c9dd9b3136729dcc3a7e482f8a1925a9",
+  "arxivId": "2610.34413",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.34413v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "LoRA",
+    "primaryTask": "音频推理",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-reasoning",
+          "label": "音频推理"
+        },
+        {
+          "facet": "method",
+          "id": "method.lora",
+          "label": "LoRA"
+        },
+        {
+          "facet": "method",
+          "id": "method.meta-learning",
+          "label": "元学习"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.audio-language",
+          "label": "音频大模型"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "LoRA",
+      "primaryMethodId": "method.lora",
+      "primaryTask": "音频推理",
+      "primaryTaskId": "task.audio-reasoning",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yiwei Guo"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Siqi Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Bohan Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jing Peng"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hankun Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhihan Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kai Yu"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文研究大音频语言模型把熟悉的声音能力重组成没见过任务形式的问题，用指令逐词元生成 LoRA 适配器的超网络 T2L-ICAG 来应对，在两种骨干上组合任务平均相对性能最高，但复杂组合仍有明显差距且依赖受控评测条件。",
+  "originalTitle": "In-Context Adapter Generation for Compositional Generalization in Large Audio Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2610.34413v1.pdf",
+  "readerTitle": "按指令现做适配器：大音频语言模型的组合泛化",
+  "schemaVersion": 2
+}

@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.34653v1",
+  "arxivId": "2610.34653",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.34653v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yizhou Peng"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Chen Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Donghang Wu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hexin Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Eng Siong Chng"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.34653v1",
+  "originalTitle": "Heard Enough to Act: Early Tool Calling in Spoken Dialogue Systems",
+  "pdfUrl": "https://arxiv.org/pdf/2610.34653v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

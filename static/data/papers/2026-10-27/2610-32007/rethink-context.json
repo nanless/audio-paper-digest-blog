@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.32007v1",
+  "abstract": "Sparse autoencoders (SAEs) can expose features of a generative model without predefined labels, but in language models the evidence used to interpret these features has proven an unreliable guide to which of them steer the output. Whether interpretations of SAE features predict control in music generators has not, to our knowledge, been tested. We develop an end-to-end protocol for discovering and evaluating SAE features in text-to-MIDI generation and apply it to text2midi and MIDI-LLM. The protocol characterizes features through correlations with musical metrics, shared instrument programs, and automated descriptions, each with its own control: note-density adjustment, matched inactive excerpts, and permutation calibration. It then tests candidates by intervention, measured directly in the generated MIDI against unmodified generation and a matched random direction, ranks them in screens, and confirms selected features on new prompts. Evidence that survives these controls points to features that steer the output. Descriptions exceed permutation controls for instrumentation, and a feature whose description names a synth-lead program introduces that program in a prespecified confirmation and in a replication on disjoint prompts and reappears in independently trained dictionaries. Features selected by density-adjusted correlations show a small positive shift of their target metric as a family, whereas features selected by raw correlations show none. An atlas provides MIDI, piano-roll, and audio examples for every feature of the targeted screen.",
+  "abstractSha256": "da09f4c9509b74bb26632e3dae7ddadca26ba5bb4a093524594698b63d541de7",
+  "arxivId": "2610.32007",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.32007v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "稀疏自编码器",
+    "primaryTask": "符号音乐生成",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.symbolic-music",
+          "label": "符号音乐生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.sparse-autoencoder",
+          "label": "稀疏自编码器"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.interpretability",
+          "label": "可解释性"
+        },
+        {
+          "facet": "method",
+          "id": "method.activation-intervention",
+          "label": "激活因果干预"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "稀疏自编码器",
+      "primaryMethodId": "method.sparse-autoencoder",
+      "primaryTask": "符号音乐生成",
+      "primaryTaskId": "task.symbolic-music",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Institute of Computer Science",
+        "Warsaw University of Technology"
+      ],
+      "name": "Jakub Poćwiardowski"
+    },
+    {
+      "affiliations": [
+        "Warsaw, Poland"
+      ],
+      "name": "Mateusz Modrzejewski"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文在 text2midi 与 MIDI-LLM 上建立观察加干预的验证流程，发现只有经过音符密度校正和置换校准的观察证据能筛出可操控特征，其中合成主音特征经预设确认与重复验证能稳定引入目标乐器，而代价是大量原始相关与自动描述在对照下失效且单特征干预效应普遍较小。",
+  "originalTitle": "MI-MIDI 2: From Observation to Control with Sparse Autoencoders in Text-to-MIDI Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.32007v1.pdf",
+  "readerTitle": "MI-MIDI 2：文本生成 MIDI 中稀疏自编码器特征能否从观察走向控制",
+  "schemaVersion": 2
+}

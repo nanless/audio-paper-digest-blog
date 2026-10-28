@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.32214v1",
+  "abstract": "We propose DIAL-S2ST, a post-training method for learning inference-time latency control in simultaneous speech-to-speech translation models. Our approach reuses pretrained translation capabilities through self-distillation from lookahead predictions, while limiting the influence of large text distillation losses to account for the imitation gap. This provides supervision for earlier emission without paired target data or reward computation. To make the learned timing adjustable at inference, we jointly train a single LoRA adapter across scales with matched lookahead guidance. Experiments on French-to-English translation with Hibiki demonstrate that only 10 hours of source speech enable this adaptation, providing flexible latency control with a favorable quality-latency trade-off.",
+  "abstractSha256": "4b097c3fe7d0a7973c90c646e684077d245d9074f47ca287e7b064d56af84824",
+  "arxivId": "2610.32214",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.32214v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "知识蒸馏",
+    "primaryTask": "语音翻译",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-translation",
+          "label": "语音翻译"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        },
+        {
+          "facet": "method",
+          "id": "method.lora",
+          "label": "LoRA"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "知识蒸馏",
+      "primaryMethodId": "method.distillation",
+      "primaryTask": "语音翻译",
+      "primaryTaskId": "task.speech-translation",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jeongsoo Choi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Junseok Ahn"
+    },
+    {
+      "affiliations": [
+        "KAIST"
+      ],
+      "name": "Joon Son Chung"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对多流同时语音到语音翻译在推理时难调延迟的问题，DIAL-S2ST 用带前视的冻结教师蒸馏无前视学生并用单 LoRA 按尺度控制早说，在法英 Hibiki 上以约 10 小时源语音实现可调的延迟与质量权衡。",
+  "originalTitle": "DIAL-S2ST: Learning Latency Control for Simultaneous Speech-to-Speech Translation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.32214v1.pdf",
+  "readerTitle": "只用源语音学会早说：DIAL-S2ST 的前视自蒸馏与延迟控制",
+  "schemaVersion": 2
+}

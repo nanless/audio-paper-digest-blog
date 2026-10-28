@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.34247v1",
+  "abstract": "Symbolic music representations encode musical content at varying levels of completeness, from performance-oriented formats such as MIDI to fully notated scores such as MusicXML. Yet the impact of this representational richness on deep learning models remains poorly understood. While tokenisation has been extensively studied for MIDI, score-based formats have received considerably less attention, and MusicXML in particular remains largely unexplored despite being the de-facto standard for score interchange. In this paper, we introduce the first general-purpose tokenisation framework for MusicXML, and conduct a systematic empirical study to determine whether notational richness confers a measurable advantage for deep learning on symbolic music. We train 26 autoregressive and masked language models, comparing MusicXML tokenisation against MIDI and ABC-based representations, probing the effect of different tokenisation strategies within MusicXML, and testing whether music-grammar-aware tokenisation outperforms treating scores as plain text. We evaluate music understanding tasks using linear probing across composer classification, difficulty estimation, and accompaniment suggestion, and generative tasks using objective statistical metrics and a human pairwise preference study. Our results show that MusicXML-tokenised models outperform MIDI and text-based counterparts on understanding and generative tasks.",
+  "abstractSha256": "ed95e21194b0a0b74b5df3428c41d1016166a92c56503e0579c7ba428acc5cdd",
+  "arxivId": "2610.34247",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.34247v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "自回归模型",
+    "primaryTask": "符号音乐生成",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.symbolic-music",
+          "label": "符号音乐生成"
+        },
+        {
+          "facet": "task",
+          "id": "task.music-understanding",
+          "label": "音乐分析"
+        },
+        {
+          "facet": "method",
+          "id": "method.autoregressive",
+          "label": "自回归模型"
+        },
+        {
+          "facet": "method",
+          "id": "method.subjective-evaluation",
+          "label": "主观评测"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "自回归模型",
+      "primaryMethodId": "method.autoregressive",
+      "primaryTask": "符号音乐生成",
+      "primaryTaskId": "task.symbolic-music",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Andrea Poltronieri"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Matteo Spanio"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Simone Chieppa"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xavier Serra"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Martín Rocamora"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文用 26 个自回归与掩码模型对照 MusicXML、MIDI 与 ABC 三种表示，显示 MusicXML 在理解任务全面领先、在生成任务的分布相似度与人工偏好上占优，而分块顺序与 BPE 词汇量带来互补的代价。",
+  "originalTitle": "Does Notation Matter? MusicXML Tokenisation for Symbolic Music Generation and Understanding",
+  "pdfUrl": "https://arxiv.org/pdf/2610.34247v1.pdf",
+  "readerTitle": "乐谱的丰富记号对建模有帮助吗：MusicXML 分词与理解生成对照",
+  "schemaVersion": 2
+}

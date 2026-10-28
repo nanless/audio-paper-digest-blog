@@ -1,0 +1,33 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.32325v1",
+  "arxivId": "2610.32325",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.32325v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jing Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Cunjian Chen"
+    },
+    {
+      "affiliations": [
+        "Department of Data Science and Artificial Intelligence, Faculty of Information Technology,",
+        "Monash University, Australia"
+      ],
+      "name": "Qiuhong Ke"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.32325v1",
+  "originalTitle": "ChoreoStudio: Planning What, When, and Who in Music-Driven Group Choreography",
+  "pdfUrl": "https://arxiv.org/pdf/2610.32325v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

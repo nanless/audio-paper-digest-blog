@@ -1,0 +1,152 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.34183v1",
+  "arxivId": "2610.34183",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.34183v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Google Research",
+        "Vanderbilt University",
+        "Work done during an internship at Google"
+      ],
+      "name": "Yamin Li"
+    },
+    {
+      "affiliations": [
+        "Google Research"
+      ],
+      "name": "Ruidong Zhang"
+    },
+    {
+      "affiliations": [
+        "Google Research"
+      ],
+      "name": "Anran Wang"
+    },
+    {
+      "affiliations": [
+        "Google DeepMind"
+      ],
+      "name": "Eduardo Fonseca"
+    },
+    {
+      "affiliations": [
+        "Google DeepMind"
+      ],
+      "name": "Dan Ellis"
+    },
+    {
+      "affiliations": [
+        "Google Research"
+      ],
+      "name": "Zechen Li"
+    },
+    {
+      "affiliations": [
+        "Google Research"
+      ],
+      "name": "Simon A. Lee"
+    },
+    {
+      "affiliations": [
+        "Google Research"
+      ],
+      "name": "Tao Pang"
+    },
+    {
+      "affiliations": [
+        "Google Research"
+      ],
+      "name": "Jake Garrison"
+    },
+    {
+      "affiliations": [
+        "Google Research"
+      ],
+      "name": "Maxwell A. Xu"
+    },
+    {
+      "affiliations": [
+        "Google DeepMind"
+      ],
+      "name": "Yicheng Wang"
+    },
+    {
+      "affiliations": [
+        "Google Research"
+      ],
+      "name": "Jitian Zhang"
+    },
+    {
+      "affiliations": [
+        "Google Research"
+      ],
+      "name": "Weizhi Zhang"
+    },
+    {
+      "affiliations": [
+        "Google Research"
+      ],
+      "name": "Haichao Zhang"
+    },
+    {
+      "affiliations": [
+        "Vanderbilt University"
+      ],
+      "name": "Catie Chang"
+    },
+    {
+      "affiliations": [
+        "Google Research",
+        "University of Washington"
+      ],
+      "name": "Xin Liu"
+    },
+    {
+      "affiliations": [
+        "Google Research"
+      ],
+      "name": "Anupam Pathak"
+    },
+    {
+      "affiliations": [
+        "Google Research",
+        "University of Washington"
+      ],
+      "name": "Daniel McDuff"
+    },
+    {
+      "affiliations": [
+        "Google Research",
+        "University of Washington"
+      ],
+      "name": "Shwetak Patel"
+    },
+    {
+      "affiliations": [
+        "Google Research",
+        "University of Washington"
+      ],
+      "name": "Jake Sunshine"
+    },
+    {
+      "affiliations": [
+        "Google Research"
+      ],
+      "name": "Yuzhe Yang"
+    },
+    {
+      "affiliations": [
+        "Google Research"
+      ],
+      "name": "Xiaoran Fan"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.34183v1",
+  "originalTitle": "AudioFM: Towards General Purpose Audio Representation Learning",
+  "pdfUrl": "https://arxiv.org/pdf/2610.34183v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.35641v1",
+  "abstract": "Passive acoustic monitoring in tropical waters such as those in Southeast Asia is hampered by the persistent, high-level impulsive noise of snapping shrimp. This is a particularly daunting challenge for detecting broadband transient vocalizations of dolphins - clicks, buzzes and burst-pulses. These vocalizations, unlike frequency-modulated whistles, share the broadband, impulsive character of the shrimp snaps and cannot be easily separated from them by frequency-localized or energy-based means. We develop TRIDENT, a lightweight waveform-based detector for these vocalizations, and apply it to 54.2 recorder-months of data from ten island sites around Singapore. We show that the training-data pipeline and the architecture are both important: controlled signal-to-noise-ratio based mixing to generate training data, appropriate normalization and hard negative mining, together steer the detector toward learning transient temporal structure rather than energy shortcuts. A single joint detector handles all three signal types better than specialized models for each, and outperforms established baselines. Applied to long-term recordings, it reveals tightly clustered, predominantly daytime activity, motivating days-with-detections as a robust indicator of cetacean presence.",
+  "abstractSha256": "596fb490b11944759ee6db3e67688c006a2d804e100941192a550e96e7180450",
+  "arxivId": "2610.35641",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.35641v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "CNN",
+    "primaryTask": "音频事件检测",
+    "rankBucket": "前50%",
+    "score": 5.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.event-detection",
+          "label": "音频事件检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.cnn",
+          "label": "CNN"
+        },
+        {
+          "facet": "application",
+          "id": "application.bioacoustics",
+          "label": "生物声学监测"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.single-channel",
+          "label": "单通道"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "CNN",
+      "primaryMethodId": "method.cnn",
+      "primaryTask": "音频事件检测",
+      "primaryTaskId": "task.event-detection",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hari Vishnu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jin Xinhui"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Mandar Chitre"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Simen Hexeberg"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Koay Teong Beng"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文要从枪虾主导的浅海噪声中检出海豚 click、buzz 和 burst-pulse 三类宽带瞬态叫声，采用直接处理波形的轻量一维卷积网络 TRIDENT 配合可控信噪比混合与归一化训练，在混合测试集上虚警率 1% 时检出率达 0.844，代价是依赖合成训练与人工挑选的难负样本且结论限于新加坡周边数据条件。",
+  "originalTitle": "Dolphin broadband transient vocalization detection in impulsive ambient noise",
+  "pdfUrl": "https://arxiv.org/pdf/2610.35641v1.pdf",
+  "readerTitle": "在枪虾噪声中检测海豚宽带瞬态叫声：TRIDENT 如何保留波形结构",
+  "schemaVersion": 2
+}

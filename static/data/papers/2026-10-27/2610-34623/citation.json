@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.34623v1",
+  "arxivId": "2610.34623",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.34623v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Albert Zeyer"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Davyd Naveriani"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Dorian Koch"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ralf Schlüter"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hermann Ney"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.34623v1",
+  "originalTitle": "One Mean Log-Mel Vector per Phoneme: Simple and Fast Text Injection for Speech Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2610.34623v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

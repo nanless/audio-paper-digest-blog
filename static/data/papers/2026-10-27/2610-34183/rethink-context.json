@@ -1,0 +1,198 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.34183v1",
+  "abstract": "Learning audio representations that effectively bridge holistic global soundscapes with fine-grained acoustic moments is a long-standing goal in self-supervised learning. Recording-level contrastive objectives encourage agreement between pooled audio representations, but do not explicitly supervise local time-frequency representations. We introduce AudioFM, a self-supervised framework that combines recording-level contrast with patch-wise masked latent discrimination. Using visible acoustic context, a student predicts representations of masked patches and identifies their corresponding full-view teacher targets among candidates from other recordings. We further incorporate weaker supervision from eligible temporal neighbors to encourage local temporal consistency. Extensive evaluations show that AudioFM achieves state-of-the-art performance across diverse audio domains in linear probing, fine-tuning, and zero-shot transfer, demonstrating superior event detection, robust scene-level understanding, and strong domain generalizability.",
+  "abstractSha256": "683dac9fa5ec12dd7debf17f1ad48bc1f95bb53fe5cca2ab64ab391481831f79",
+  "arxivId": "2610.34183",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.34183v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "对比学习",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 7.4,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "task",
+          "id": "task.event-detection",
+          "label": "音频事件检测"
+        },
+        {
+          "facet": "task",
+          "id": "task.emotion-recognition",
+          "label": "语音情感识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.contrastive",
+          "label": "对比学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.self-supervised",
+          "label": "自监督学习"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "对比学习",
+      "primaryMethodId": "method.contrastive",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Google Research",
+        "Vanderbilt University",
+        "Work done during an internship at Google"
+      ],
+      "name": "Yamin Li"
+    },
+    {
+      "affiliations": [
+        "Google Research"
+      ],
+      "name": "Ruidong Zhang"
+    },
+    {
+      "affiliations": [
+        "Google Research"
+      ],
+      "name": "Anran Wang"
+    },
+    {
+      "affiliations": [
+        "Google DeepMind"
+      ],
+      "name": "Eduardo Fonseca"
+    },
+    {
+      "affiliations": [
+        "Google DeepMind"
+      ],
+      "name": "Dan Ellis"
+    },
+    {
+      "affiliations": [
+        "Google Research"
+      ],
+      "name": "Zechen Li"
+    },
+    {
+      "affiliations": [
+        "Google Research"
+      ],
+      "name": "Simon A. Lee"
+    },
+    {
+      "affiliations": [
+        "Google Research"
+      ],
+      "name": "Tao Pang"
+    },
+    {
+      "affiliations": [
+        "Google Research"
+      ],
+      "name": "Jake Garrison"
+    },
+    {
+      "affiliations": [
+        "Google Research"
+      ],
+      "name": "Maxwell A. Xu"
+    },
+    {
+      "affiliations": [
+        "Google DeepMind"
+      ],
+      "name": "Yicheng Wang"
+    },
+    {
+      "affiliations": [
+        "Google Research"
+      ],
+      "name": "Jitian Zhang"
+    },
+    {
+      "affiliations": [
+        "Google Research"
+      ],
+      "name": "Weizhi Zhang"
+    },
+    {
+      "affiliations": [
+        "Google Research"
+      ],
+      "name": "Haichao Zhang"
+    },
+    {
+      "affiliations": [
+        "Vanderbilt University"
+      ],
+      "name": "Catie Chang"
+    },
+    {
+      "affiliations": [
+        "Google Research",
+        "University of Washington"
+      ],
+      "name": "Xin Liu"
+    },
+    {
+      "affiliations": [
+        "Google Research"
+      ],
+      "name": "Anupam Pathak"
+    },
+    {
+      "affiliations": [
+        "Google Research",
+        "University of Washington"
+      ],
+      "name": "Daniel McDuff"
+    },
+    {
+      "affiliations": [
+        "Google Research",
+        "University of Washington"
+      ],
+      "name": "Shwetak Patel"
+    },
+    {
+      "affiliations": [
+        "Google Research",
+        "University of Washington"
+      ],
+      "name": "Jake Sunshine"
+    },
+    {
+      "affiliations": [
+        "Google Research"
+      ],
+      "name": "Yuzhe Yang"
+    },
+    {
+      "affiliations": [
+        "Google Research"
+      ],
+      "name": "Xiaoran Fan"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "AudioFM 要同时保留录音整体场景和时频细节，用互补遮挡视图的录音级对照加遮挡块潜表示判别来训练编码器，在 AudioSet 微调、冻结探测和跨数据集迁移上占优，但结论只在 16 kHz 单通道和所用划分下成立，且局部监督带来预测器与大批量训练代价。",
+  "originalTitle": "AudioFM: Towards General Purpose Audio Representation Learning",
+  "pdfUrl": "https://arxiv.org/pdf/2610.34183v1.pdf",
+  "readerTitle": "AudioFM：用整体对照加局部遮挡判别学习通用音频表示",
+  "schemaVersion": 2
+}

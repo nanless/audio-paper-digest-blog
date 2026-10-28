@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.32637v1",
+  "arxivId": "2610.32637",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.32637v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shashi Kumar"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Esaú Villatoro-Tello"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Thibault Bañeras-Roux"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Sergio Burdisso"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Petr Motlicek"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kadri Hacioglu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Andreas Stolcke"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.32637v1",
+  "originalTitle": "Residual Expert Routing for Text-Only Domain Adaptation of Factorized Transducer ASR",
+  "pdfUrl": "https://arxiv.org/pdf/2610.32637v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

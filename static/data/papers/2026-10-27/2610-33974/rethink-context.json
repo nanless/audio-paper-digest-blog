@@ -1,0 +1,72 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.33974v1",
+  "abstract": "Sperm-whale codas are usually described by the number and timing of their clicks. Earlier acoustic studies showed that individual clicks and longer coda sequences contain additional organization. We ask how that organization compares with music, whose smaller sounds also form larger units and ordered sequences. We compare codas with performed violin music, drum grooves, and sung melodies. Their sequences resemble music in some measures of predictability, yet codas show a different relationship between the smaller sounds within a unit and the order of units across a sequence. This combination was not observed in the musical references tested. Coda timing also varies coherently and carries information about individual callers. The recordings show another striking property: broad, reproducible variation along acoustic dimensions associated with human ratings of emotion, with a range comparable to human audio in most eligible tests. These findings motivate an acoustic blueprint that describes natural codas beyond their click timing. Its importance is apparent in synthetic audio: WhAM produces recognizable coda-like recordings, yet the tested clips remain distinguishable from natural codas in five of six acoustic comparisons after strict matching. The blueprint provides a fuller way to study natural codas and to evaluate how faithfully synthetic recordings represent them.",
+  "abstractSha256": "c9f8513b7b1471302bcddafc81c9e3de564914f7547ebfda71352da8816e729a",
+  "arxivId": "2610.33974",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.33974v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "聚类与类别匹配",
+    "primaryTask": "音频理解",
+    "rankBucket": "后50%",
+    "score": 5.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-understanding",
+          "label": "音频理解"
+        },
+        {
+          "facet": "method",
+          "id": "method.clustering",
+          "label": "聚类与类别匹配"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.bioacoustics",
+          "label": "生物声学"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-affect-estimation",
+          "label": "声音感知情感估计"
+        },
+        {
+          "facet": "task",
+          "id": "task.speaker-identification",
+          "label": "说话人识别"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "聚类与类别匹配",
+      "primaryMethodId": "method.clustering",
+      "primaryTask": "音频理解",
+      "primaryTaskId": "task.audio-understanding",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Independent Researcher, San Bruno, California 94066, United States"
+      ],
+      "name": "Mudit Sinha"
+    },
+    {
+      "affiliations": [
+        "Independent Researcher, San Bruno, California 94066, United States"
+      ],
+      "name": "Sanika Chavan"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文用同一套声学分组比较鲸 coda 与三组音乐，发现序列可预测相近但重复更高、单元内组成有效而原位排序无额外增益、再往前一个单元仍提供预测信息，并据此提出包含波形、组成、序列、 timing 与情感相关变异的声学蓝图，合成检验显示 WhAM 可听辨但声学分布仍可区分。",
+  "originalTitle": "Music of the Deep: An acoustic blueprint of sperm whale codas",
+  "pdfUrl": "https://arxiv.org/pdf/2610.33974v1.pdf",
+  "readerTitle": "抹香鲸 coda 不只是节奏：与音乐对比后得到的声学蓝图",
+  "schemaVersion": 2
+}

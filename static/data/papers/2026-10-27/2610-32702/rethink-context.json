@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.32702v1",
+  "abstract": "Full-duplex speech models can listen and speak at the same time, enabling natural, low-latency interaction. In counseling, however, these models often focus on the latest utterance and lose track of the seeker's underlying problem. We call this failure Stressor Blindness. We propose CounselPlex, a stressor-aware full-duplex framework that uses two operations. CounselPlex updates a short stressor state during seeker silence and injects this state into <PAD> positions while listening. We also introduce RoPE Position Shift Augmentation (RPSA), which broadens positional coverage during training and improves performance at longer turn depths in our evaluation. LLM-judge evaluations show improved counseling quality and stressor grounding over strong baselines.",
+  "abstractSha256": "cb12d83c0818e3520e1b4c61382b9723f9d2221109ebfe0e6b4d18ba93b97608",
+  "arxivId": "2610.32702",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.32702v1",
+  "assessment": {
+    "documentType": "模型报告",
+    "primaryMethod": "SFT",
+    "primaryTask": "全双工语音交互",
+    "rankBucket": "前50%",
+    "score": 6.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.full-duplex",
+          "label": "全双工语音交互"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-dialogue",
+          "label": "语音对话系统"
+        },
+        {
+          "facet": "method",
+          "id": "method.sft",
+          "label": "SFT"
+        },
+        {
+          "facet": "method",
+          "id": "method.augmentation",
+          "label": "数据增强"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "SFT",
+      "primaryMethodId": "method.sft",
+      "primaryTask": "全双工语音交互",
+      "primaryTaskId": "task.full-duplex",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yeonju Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Bella Godiva"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yong Man Ro"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对全双工语音咨询中只回应最近一句话而丢失早期根本困扰的问题，CounselPlex 在说话人沉默时生成 1-7 词的压力源状态并在倾听时注入文本流，结合位置偏移增强训练，在 ESConv 与 ESCoT 合成语音上的咨询质量评分超过同域微调基线，但延迟增加且未检测到简短附和声。",
+  "originalTitle": "CounselPlex: A Stressor-Aware Full-Duplex Counseling Model",
+  "pdfUrl": "https://arxiv.org/pdf/2610.32702v1.pdf",
+  "readerTitle": "CounselPlex：记住求助者根本困扰的全双工语音咨询模型",
+  "schemaVersion": 2
+}

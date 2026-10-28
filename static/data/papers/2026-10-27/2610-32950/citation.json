@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.32950v1",
+  "arxivId": "2610.32950",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.32950v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ali Alavi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Donald S. Williamson"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.32950v1",
+  "originalTitle": "CoupleFlow: Null-Calibrated Auditory Attention Decoding With Time-Locked Brain-Speech Coupling and Flow-Matching Likelihood Ratios",
+  "pdfUrl": "https://arxiv.org/pdf/2610.32950v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

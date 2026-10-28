@@ -1,0 +1,102 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.34415v1",
+  "abstract": "Spatial audio authoring coordinates source decisions with soundfield synthesis. For editing, plans specify what to change and retain, while reference audio supplies further acoustic detail. We present AMBIT, a unified framework for native First-Order Ambisonics (FOA) generation and editing with three connected contributions. First, a shared Transfusion backbone couples autoregressive planning with rectified-flow rendering through executable ScenePlans that specify source content, activity, and 3D trajectories. For editing, the plan describes the full target scene, including retained sources; contrastive features ground the requested change, while full reference latents supply residual acoustic detail for preservation. Second, an FOA-aware continuous VAE combines shared-decoder omnidirectional recovery, asymmetric grouped KL, and spatial covariance matching to preserve content and inter-channel structure. Third, joint Transfusion on-policy self-distillation (OPSD) refines planning on student-generated prefixes and rendering at sampling states reached under student plans, with target-conditioned teachers supervising both modes of the shared student. Evaluations across speech, music, and sound show improved generation content and spatial quality, acoustic fidelity during instruction-guided editing, and unedited-source preservation over the compared baselines. Project page: https://wjm-george.github.io/AMBIT/",
+  "abstractSha256": "f443915cf424c0e9390e31105c366dce4bab12a3210eb971da39f728ae38e8e7",
+  "arxivId": "2610.34415",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.34415v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "知识蒸馏",
+    "primaryTask": "空间音频渲染",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.spatial-rendering",
+          "label": "空间音频渲染"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.spatial-audio",
+          "label": "空间音频信号"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "method",
+          "id": "method.vae",
+          "label": "变分自编码器"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "知识蒸馏",
+      "primaryMethodId": "method.distillation",
+      "primaryTask": "空间音频渲染",
+      "primaryTaskId": "task.spatial-rendering",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kam Man Wu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yu Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Pengjun Fang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Mingfei Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Weijia Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zeyue Tian"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Qifeng Chen"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "Ambit 用可执行的场景计划连接自回归规划与整流流渲染，并配合全向恢复与通道间监督的连续变分自编码器和联合在轨自蒸馏，在语音音乐环境声的生成与编辑评测中提升内容与空间指标，但结论只在约 15 秒内、四声道一阶 Ambisonics 与原文数据划分下成立。",
+  "originalTitle": "Spatial Audio Generation and Editing with Executable Plans and Self-Distilling Transfusion",
+  "pdfUrl": "https://arxiv.org/pdf/2610.34415v1.pdf",
+  "readerTitle": "用可执行计划做空间音频生成与编辑：Ambit 如何连起规划与渲染",
+  "schemaVersion": 2
+}

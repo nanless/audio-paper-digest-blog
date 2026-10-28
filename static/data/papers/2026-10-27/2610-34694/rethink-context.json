@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.34694v1",
+  "abstract": "Aligned audio, performance MIDI, and musical scores provide valuable supervision for music analysis and performance modeling, yet datasets that jointly align all three modalities remain scarce and limited in scale and genre diversity. We introduce Gangqinpu, a multi-genre piano dataset containing 18,786 score-performance pairs and 1,007.1 hours of source audio, with automatic note-level alignments and derived beat/downbeat annotations. It spans diverse genres, including pop, classical, jazz, folk/traditional, rock, and blues. Our automated pipeline transcribes piano audio, aligns the resulting MIDI with musical scores, assigns genre labels, and filters out non-expressive performances with a score-informed binary classifier. We further construct joint splits with ASAP using conservative score-similarity grouping to reduce data leakage. We evaluate Gangqinpu on performance MIDI-to-score transcription, expressive performance rendering, and beat tracking. Downstream experiments demonstrate the value of Gangqinpu as complementary training data, with cross-dataset gains in beat tracking and primarily in-domain benefits for transcription and expressive performance rendering. The code and dataset are publicly available at https://github.com/wei-zeng98/gangqinpu.",
+  "abstractSha256": "2dfebbe0826e805891d16e49cb12593ce20959875ba0894289dfc83744774cc7",
+  "arxivId": "2610.34694",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.34694v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "数据集构建",
+    "primaryTask": "乐谱对齐",
+    "rankBucket": "前25%",
+    "score": 8.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.score-alignment",
+          "label": "乐谱对齐"
+        },
+        {
+          "facet": "method",
+          "id": "method.dataset-curation",
+          "label": "数据集构建"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "task",
+          "id": "task.beat-tracking",
+          "label": "节拍跟踪"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "数据集构建",
+      "primaryMethodId": "method.dataset-curation",
+      "primaryTask": "乐谱对齐",
+      "primaryTaskId": "task.score-alignment",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Wei Zeng"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Anvay Mathur"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ye Wang"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "Gangqinpu 用自动转谱、对齐、表情过滤和流派标注把多风格钢琴音频、演奏 MIDI 与乐谱配成 18786 对，用节拍跟踪跨数据集提升与转谱和渲染主要在域内获益证明其补充价值，但跨域泛化仍不均匀且标注全为自动生成。",
+  "originalTitle": "Gangqinpu: A Multi-Genre, Multi-Task Piano Dataset with Aligned Audio, MIDI, and Musical Scores",
+  "pdfUrl": "https://arxiv.org/pdf/2610.34694v1.pdf",
+  "readerTitle": "把网上钢琴录音和乐谱配成对：Gangqinpu 数据集如何建成和验证",
+  "schemaVersion": 2
+}

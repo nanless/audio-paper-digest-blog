@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.32325v1",
+  "abstract": "Music-driven group dance generation must decide not only how each dancer moves, but also what formation the group should form, when it should change, and who should execute each transition. Existing methods can generate orderly and rhythmically synchronized group motion, but remain limited in formation evolution and inter-dancer interaction. In human choreography, formation transitions often align with changes in high-level musical structure, such as the progression from an introduction to a chorus or from a chorus to a climax. We present ChoreoStudio, which makes choreography planning explicit. A music disentangler first decomposes the audio into frame-level rhythmic features and segment-level structural features. Given the segment-level features and sparse labels, a frozen omni-modal model acts as a scriptwriter, producing a global semantic description that guides the Director's choreography planning. Based on this context, the Director produces three coupled interaction decisions: a centroid-relative point set specifies what formation to produce, a transition gate determines when it should change, and a mobility allocation indicates who should execute the transition. The transition gate and mobility allocation are further conditioned on the planned geometric change, coupling formation targets with their temporal and dancer-specific execution. At a finer temporal scale, frame-aligned music features condition the diffusion generator to control detailed body motion and preserve beat-level alignment. The segment-level interaction plan is injected in parallel through frame-aligned instruction tokens and cross-dancer attention biases, coordinating how the generator realizes each transition. Experiments on AIOZ-GDance demonstrate that ChoreoStudio follows the planned interactions while achieving state-of-the-art performance in motion quality, group organization, and formation dynamics.",
+  "abstractSha256": "3cb3e2f8f7d0eeb128080e309fd16e177c208987e0315c480e64384aec4d5b8b",
+  "arxivId": "2610.32325",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.32325v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "扩散模型",
+    "primaryTask": "音乐驱动演奏动作生成",
+    "rankBucket": "前50%",
+    "score": 6.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-driven-motion",
+          "label": "音乐驱动演奏动作生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.diffusion",
+          "label": "扩散模型"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "method",
+          "id": "method.user-study",
+          "label": "用户研究"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "扩散模型",
+      "primaryMethodId": "method.diffusion",
+      "primaryTask": "音乐驱动演奏动作生成",
+      "primaryTaskId": "task.music-driven-motion",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jing Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Cunjian Chen"
+    },
+    {
+      "affiliations": [
+        "Department of Data Science and Artificial Intelligence, Faculty of Information Technology,",
+        "Monash University, Australia"
+      ],
+      "name": "Qiuhong Ke"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "ChoreoStudio 针对群舞队形演变不足的问题，用编排计划先决定队形、切换时机与舞者分工再生成动作，在 AIOZ-GDance 上提升群组真实感与队形动态，但结论只在 150 帧统一评测与所用指标下成立，且长序列与多人时优势会变化。",
+  "originalTitle": "ChoreoStudio: Planning What, When, and Who in Music-Driven Group Choreography",
+  "pdfUrl": "https://arxiv.org/pdf/2610.32325v1.pdf",
+  "readerTitle": "ChoreoStudio：把群舞编排拆成想什么、何时变、谁来动",
+  "schemaVersion": 2
+}

@@ -1,0 +1,63 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.35581v1",
+  "arxivId": "2610.35581",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.35581v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Nanyang Technological University, Singapore",
+        "Tencent"
+      ],
+      "name": "Guoqiang Hu"
+    },
+    {
+      "affiliations": [
+        "Tencent"
+      ],
+      "name": "Lichao Zhang"
+    },
+    {
+      "affiliations": [
+        "Nanyang Technological University, Singapore"
+      ],
+      "name": "Yizhou Peng"
+    },
+    {
+      "affiliations": [
+        "Tencent"
+      ],
+      "name": "Yuhao Luo"
+    },
+    {
+      "affiliations": [
+        "Tencent"
+      ],
+      "name": "Haifeng Hu"
+    },
+    {
+      "affiliations": [
+        "Tencent"
+      ],
+      "name": "Sallen Sun"
+    },
+    {
+      "affiliations": [
+        "Tencent"
+      ],
+      "name": "Will Yang"
+    },
+    {
+      "affiliations": [
+        "Nanyang Technological University, Singapore"
+      ],
+      "name": "Eng Siong Chng"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.35581v1",
+  "originalTitle": "Integrate the Reward, Don't Sample It: Window Likelihood for Interruptions and Backchannels in Full-Duplex Speech Models",
+  "pdfUrl": "https://arxiv.org/pdf/2610.35581v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

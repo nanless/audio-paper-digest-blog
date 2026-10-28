@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.35125v1",
+  "abstract": "Multimodal video retrieval combines visual, acoustic, and speech information, yet how their fusion order should depend on the data and the retrieval query remains unclear. We introduce Unified Progressive Representation Learning for Order Analysis, or UniPRO, to investigate this question through configurable fusion schedules with matched model components and training settings. Starting from text-to-video retrieval, we find that the tested one-by-one schedules outperform stacked fusion, while changing the order within one-by-one fusion also changes performance. To guide order selection, we examine two complementary considerations: learning difficulty under unequal modality availability and preservation of information relevant to the query. Complete-modality controls show that missing inputs alone cannot explain order sensitivity. At R@1, text and audio retrieval favor schedules that introduce the modality matching the query last. Controlled speech missingness during training and testing reverses the preferred order in both R@1 and SumR, with different crossover points. These findings motivate balancing the two considerations when selecting a fusion path. We then use them to predict a visual-last schedule for image queries, which achieves 97.9 R@1, the highest among the evaluated orders on MSR-VTT-9k. Main experiments on four text-to-video benchmarks establish the effectiveness of UniPRO, with component ablations assessing its supporting design. Together, the results identify fusion order as a task-dependent choice that should account jointly for modality availability and the retrieval query.",
+  "abstractSha256": "14413f3000be4c008d2610898eb203f182a00def8c922b10ceba3a1b50926891",
+  "arxivId": "2610.35125",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.35125v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "文本查询视频检索",
+    "rankBucket": "前50%",
+    "score": 5.7,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.text-video-retrieval",
+          "label": "文本查询视频检索"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-retrieval",
+          "label": "音频检索"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.contrastive",
+          "label": "对比学习"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "文本查询视频检索",
+      "primaryTaskId": "task.text-video-retrieval",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Haoxiang Zhao"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Bin Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yaofei Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xiao Lan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yunfeng Diao"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xu Wang"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文用统一框架 UniPRO 固定编码器和训练条件后比较融合顺序，发现逐个融合优于堆叠融合且顺序本身影响召回，并用缺失难度与查询相关信息保留来解释和预测顺序选择，但结论只在所测数据集与协议下成立。",
+  "originalTitle": "When Fusion Order Matters: Insights on Progressive Multimodal Representation Learning for Cross-modal Retrieval",
+  "pdfUrl": "https://arxiv.org/pdf/2610.35125v1.pdf",
+  "readerTitle": "融合顺序为什么会影响跨模态视频检索",
+  "schemaVersion": 2
+}

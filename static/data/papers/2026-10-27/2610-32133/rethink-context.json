@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.32133v1",
+  "abstract": "Target speaker extraction (TSE) aims to extract a desired speaker from a mixture using auxiliary clues such as enrollment speech. An interferer-related representation can provide a useful negative clue for TSE, but such information is not directly available from the target enrollment. To derive this representation from the observed mixture, we analyze the relationship between the speaker representations of a speech mixture and its constituent speakers. Our analysis shows that the mixture centroid lies near the midpoint of its constituent speaker centroids, whereas this relationship does not hold for single-utterance embeddings. Based on this observation, we propose NECTAR, NEgative Clue for TARget speaker extraction, which automatically derives an interferer-related negative clue from the mixture using the centroid-space relationship. We further introduce a Centroid-Space Mapper (CSM) to estimate the required centroid representations from a mixture and a target enrollment. NECTAR achieves the highest SI-SDRi on Libri2Mix among the compared systems trained on LibriSpeech train-clean-100, reaching 16.18 dB.",
+  "abstractSha256": "d2a54616cb843f7989cb2bbe3cd3dee11e856265217482a88bfe0d46f6fbc36b",
+  "arxivId": "2610.32133",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.32133v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "目标说话人提取",
+    "rankBucket": "前25%",
+    "score": 7.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.target-speaker",
+          "label": "目标说话人提取"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.single-channel",
+          "label": "单通道"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "目标说话人提取",
+      "primaryTaskId": "task.target-speaker",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hyungjun Yoo"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yongjoon Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jung-Woo Choi"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对只有目标注册语音时缺少干扰方信息的问题，NECTAR 利用混合质心近似等于说话人质心中点的几何关系并用质心空间映射器从单段输入估计质心，再把目标嵌入与估计的干扰质心拼接送入提取器，在 Libri2Mix 上达到 16.18 dB 的 SI-SDRi 提升，代价是增加一个约 1 小时训练的小型映射器。",
+  "originalTitle": "NECTAR: Automatic Negative Clue Estimation via Centroid-Space Mapping for Target Speaker Extraction",
+  "pdfUrl": "https://arxiv.org/pdf/2610.32133v1.pdf",
+  "readerTitle": "NECTAR：从混合语音中自动估计干扰说话人负线索",
+  "schemaVersion": 2
+}

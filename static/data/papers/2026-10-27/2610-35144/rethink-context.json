@@ -1,0 +1,61 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.35144v1",
+  "abstract": "Hardware-aware training often optimizes FPGA resources, latency, or bit operations, but folding changes what compression saves: shared arithmetic decouples precision, weight storage, and scheduled work. We derive training objectives from the measured costs of a folded streaming speech-enhancement accelerator. Mixed-precision weights reduce on-chip storage; structured channel sparsity removes entire operations from the engine schedule. We deploy a bit-exact implementation on the Kria KV260. The best sparse model eliminates 47.3% of convolution MACs, cutting frame time by 45% (1.86 to 1.03 ms) and dynamic energy by 60% (83 to 33 $μ$J/frame) against a storage-priced model measured in the same session, with higher speech quality. Relative to the most efficient dense build measured separately, frame time falls by 42% and energy by 48%. Reducing weight width from 8 to 6 bits lowers dynamic power by 27% but changes frame time by less than 5%. Plain channel group-lasso removes more work than cycle-cost-weighted lasso. Thus, folded-accelerator training should price storage and removable work separately, rather than rely on a single bit-operation metric.",
+  "abstractSha256": "9d5b7bd3d50f5cee9a54c7f0b4953b37edd80a0627c8eb2bf1b40dab07fc2b56",
+  "arxivId": "2610.35144",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.35144v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "模型剪枝",
+    "primaryTask": "语音增强",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-enhancement",
+          "label": "语音增强"
+        },
+        {
+          "facet": "method",
+          "id": "method.pruning",
+          "label": "模型剪枝"
+        },
+        {
+          "facet": "method",
+          "id": "method.quantization",
+          "label": "模型量化"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.hardware",
+          "label": "硬件原型"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "模型剪枝",
+      "primaryMethodId": "method.pruning",
+      "primaryTask": "语音增强",
+      "primaryTaskId": "task.speech-enhancement",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Clément Laroche"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文针对折叠复用引擎中精度与工作量脱钩的问题，用按存储定价的混合精度和按调度周期定价的通道稀疏分别压缩权重带与计算调度，在 Kria KV260 上证明稀疏跳过能同时降低帧耗时与动态能量而精度宽度主要影响存储与功耗。",
+  "originalTitle": "Realizing Low-Precision Storage and Sparse Execution in a Folded FPGA Speech Enhancer",
+  "pdfUrl": "https://arxiv.org/pdf/2610.35144v1.pdf",
+  "readerTitle": "折叠执行下存储与计算如何分别定价：FPGA 语音增强加速器解读",
+  "schemaVersion": 2
+}

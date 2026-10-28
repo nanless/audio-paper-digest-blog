@@ -1,0 +1,97 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.33434v1",
+  "abstract": "Automatic DJ systems mostly target electronic dance music, whose regular structure makes rule-based mixing relatively easier. Vocal-rich popular music is harder: which track to play next, where to cue it, and which transition to use are tied together, so fixed rules handle them poorly. We present DJustify, a pop AI-DJ that puts an LLM in a reason--propose--verify--repair loop and lets it choose the next track, cue points, and mixing technique together. The LLM samples several transition plans; an external acoustic checker then scores the rendered audio and triggers repair when a check fails. Sampling keeps several candidate transitions per track pair instead of one fixed mix. In blind listening tests our transitions beat Mosaikbox, a reimplemented crossfade, and a cue baseline that reuses the crossfade's cues; that last comparison shows most of the margin comes from cue placement. The same planner also picks and orders a set along an emotion arc: this improves story coherence over a no-story ablation, and within a set story and transition ratings show no measurable gap from a human DJ. The checker mainly adds reliability, not higher average quality: it repairs rare but audible errors such as cut vocals, while the planner stays non-deterministic.",
+  "abstractSha256": "9ae1c50c7b11f9bb5e573f87e5f232e4065659a9e4c50f0d79fae020989e3c8c",
+  "arxivId": "2610.33434",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.33434v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "工具增强与约束解码",
+    "primaryTask": "音乐混音",
+    "rankBucket": "前50%",
+    "score": 6.4,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-mixing",
+          "label": "音乐混音"
+        },
+        {
+          "facet": "method",
+          "id": "method.tool-augmentation",
+          "label": "工具增强与约束解码"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.llm",
+          "label": "大语言模型"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "工具增强与约束解码",
+      "primaryMethodId": "method.tool-augmentation",
+      "primaryTask": "音乐混音",
+      "primaryTaskId": "task.music-mixing",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Wei-Han Hsu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Li-Jie Lin"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Po-Hsuan Lai"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Po-Hsiang Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jeng-Yue Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Li Su"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yi-Hsuan Yang"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "流行歌人声密、结构变化大，选歌、选进出点和选混合手法互相牵制，DJustify 让同一个大语言模型一次给出联合方案并把渲染出的音频交给确定性声学检查做修复，固定歌对盲听优于已有自动系统而三分钟故事整场与人类 DJ 无可测差距，但检查器只修补偶发切断人声而未提高平均分。",
+  "originalTitle": "DJustify: Reason-and-Verify DJ Planning for Pop Transitions and Story-Driven Sets",
+  "pdfUrl": "https://arxiv.org/pdf/2610.33434v1.pdf",
+  "readerTitle": "DJustify：给人声流行歌做衔接与故事整场的 AI DJ",
+  "schemaVersion": 2
+}

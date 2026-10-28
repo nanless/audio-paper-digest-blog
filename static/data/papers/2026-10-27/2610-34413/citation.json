@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.34413v1",
+  "arxivId": "2610.34413",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.34413v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yiwei Guo"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Siqi Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Bohan Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jing Peng"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hankun Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhihan Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kai Yu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.34413v1",
+  "originalTitle": "In-Context Adapter Generation for Compositional Generalization in Large Audio Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2610.34413v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

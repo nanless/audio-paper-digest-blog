@@ -1,0 +1,102 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.34991v1",
+  "abstract": "End-to-end full-duplex spoken dialogue models enable natural, real-time spoken interactions with interruptions, backchannels, and overlapping speech. Prior evaluations have assessed diverse interaction capabilities and identified some degradation patterns across conversational turns. However, how model behavior evolves over extended sessions remains insufficiently understood. In this work, we address this gap by systematically characterizing long-session degradation and developing efficient methods to mitigate it. We introduce a closed-loop evaluation framework for long-session stability and apply it to several publicly available full-duplex speech models, revealing degradation over time in responsiveness, spoken content quality, and voice consistency. To mitigate this degradation, we propose a self-distillation-based training framework for lightweight LoRA adaptation that improves long-session stability with a small amount of additional training. We further introduce a two-resolution context (TRC) architecture that preserves recent interactions in full detail while compressing older interaction history into key-value representations. We evaluate our methods on three models with distinct architectures, assessing long-session stability, information retention, and computational efficiency. Across all three models, we show that LoRA adaptation mitigates performance degradation over ten-minute sessions, while adding TRC extends these gains beyond the training session length and reduces KV-cache growth by more than 90%.",
+  "abstractSha256": "decd292d145930dc85ff8746144fde3fd8b3dd79a0b089efc276e437bff28dad",
+  "arxivId": "2610.34991",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.34991v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "知识蒸馏",
+    "primaryTask": "全双工语音交互",
+    "rankBucket": "前50%",
+    "score": 7.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.full-duplex",
+          "label": "全双工语音交互"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-dialogue",
+          "label": "语音对话系统"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        },
+        {
+          "facet": "method",
+          "id": "method.lora",
+          "label": "LoRA"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.long-audio",
+          "label": "长音频处理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "知识蒸馏",
+      "primaryMethodId": "method.distillation",
+      "primaryTask": "全双工语音交互",
+      "primaryTaskId": "task.full-duplex",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Junho Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "CheHyun Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Donghun Kang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Youngho Cho"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Dongwook Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Heeseung Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Sungroh Yoon"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文用闭环仿真量化了全双工语音模型在 10 分钟会话中的响应、内容和音色退化，再用特权上下文自蒸馏把短会话能力迁移到长会话，并用双分辨率上下文把远期历史压缩成要点记忆，在训练时长内和超长 20 分钟会话中都验证了稳定性提升与显存增长下降的代价。",
+  "originalTitle": "Diagnosing and Mitigating Long-Session Degradation in Full-Duplex Speech Models",
+  "pdfUrl": "https://arxiv.org/pdf/2610.34991v1.pdf",
+  "readerTitle": "长会话下全双工语音模型为什么会变差，又如何稳住",
+  "schemaVersion": 2
+}

@@ -1,0 +1,72 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.35008v1",
+  "abstract": "Chain-of-thought TTS systems rely on language-model planners to translate persona and context into vocal delivery, but it is unclear where this intent is lost when the requested affect conflicts with lexical sentiment. We introduce a bilingual Japanese--English persona--line conflict benchmark in which each item pairs one line with congruent and conflicting personas and pre-declares the expected acoustic direction. We probe this direction in the planner-generated delivery phrase, the planner-written emotion vector, the QwenEmotion-generated vector, and the rendered waveform. Planner outputs are usually direction-correct, while downstream agreement can be substantially lower. Bypassing QwenEmotion provides only modest gains over the full planner-controlled Base. Supervising QwenEmotion raises the direction rate to 75% in Japanese and 84% in English. A learned text-to-latent interface reaches the highest English rate of 89% and the highest Japanese arousal rate of 88%. These results show that learned repair of the plan-to-synthesis interface can recover counter-textual delivery, although its effect differs across languages and acoustic axes.",
+  "abstractSha256": "809f7a72ab5b9d693bc14f3f3bee8b64c8d1822ac2684b517929a7eb762df347",
+  "arxivId": "2610.35008",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.35008v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "表示探测",
+    "primaryTask": "韵律与风格控制",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.prosody-style-control",
+          "label": "韵律与风格控制"
+        },
+        {
+          "facet": "method",
+          "id": "method.representation-probing",
+          "label": "表示探测"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "表示探测",
+      "primaryMethodId": "method.representation-probing",
+      "primaryTask": "韵律与风格控制",
+      "primaryTaskId": "task.prosody-style-control",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Joonyong Park"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jerry Li"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "该文用预先声明唤醒度与效价方向的日英冲突基准，定位规划到合成链路的断点，并证明固定合成器时监督与学习式情感控制接口能部分恢复反字面表达，但效果随语言和声学轴而异。",
+  "originalTitle": "When the Persona Contradicts the Line: Diagnosing Plan-to-Synthesis Failures in Chain-of-Thought TTS",
+  "pdfUrl": "https://arxiv.org/pdf/2610.35008v1.pdf",
+  "readerTitle": "当人设与台词冲突时：链式思考语音合成在哪里丢失意图",
+  "schemaVersion": 2
+}

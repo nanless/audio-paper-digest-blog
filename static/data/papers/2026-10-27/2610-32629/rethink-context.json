@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.32629v1",
+  "abstract": "Singing emotion recognition relies predominantly on deep learning models that achieve strong performance but offer limited insight into the vocal characteristics driving emotion, of- ten overlooking the singing voice as a distinct signal. We propose an interpretable singing emotion recognition framework using a compact set of singing-specific descriptors across prosody, spec- tral features, phonetics, and vocal technique. To decode model decisions and link predictions to measurable acoustic phenomena, we employ SHAP and apply GRAD-CAM to qualitatively assess the learned representations of vocal techniques. Evaluations show that singing-specific features reduce cross-singer variability, while vocal technique descriptors provide interpretable insights into singing expression. Furthermore, out-of-domain evaluation on VocalSet reveals interesting associations between emotional expression and ground-truth technical execution. The analysis highlights vibrato and pharyngeal techniques as salient cues of emotional delivery, with SHAP indicating that vibrato is context-dependent on articulation rate. These findings emphasize the value of domain-specific features for interpretable singing emotion analysis.",
+  "abstractSha256": "23e76b42f8e0f367aed209c72391cc0ea12b8b9cde8a28ee3b2c87d105ce1686",
+  "arxivId": "2610.32629",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.32629v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "统计分析",
+    "primaryTask": "语音情感识别",
+    "rankBucket": "前50%",
+    "score": 5.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.emotion-recognition",
+          "label": "语音情感识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "method",
+          "id": "method.cnn",
+          "label": "CNN"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "统计分析",
+      "primaryMethodId": "method.statistical-analysis",
+      "primaryTask": "语音情感识别",
+      "primaryTaskId": "task.emotion-recognition",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Fotini Kiriakopoulou"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Vassilis Lyberatos"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Spyridon Kantarelis"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Athanasios Voulodimos"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Giorgos Stamou"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "该文用韵律、音色、发音和演唱技巧四类可测量特征做歌唱情绪分类，在 RAVDESS 上歌唱优化集达到 UAR79.6% 并降低跨歌手波动，代价是技巧特征依赖 CNN 估计且结论只在有限歌手、表演式情绪和少类别条件下成立。",
+  "originalTitle": "Interpretable Singing Emotion Recognition Using Acoustic and Vocal Technique Features",
+  "pdfUrl": "https://arxiv.org/pdf/2610.32629v1.pdf",
+  "readerTitle": "用可测量的歌唱特征做可解释的歌唱情绪识别",
+  "schemaVersion": 2
+}

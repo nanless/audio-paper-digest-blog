@@ -1,0 +1,90 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.32749v1",
+  "abstract": "Streaming audio-visual target speaker extraction (AVTSE) is essential for latency-sensitive applications. However, current causal systems face two coupled gaps. First, standard benchmarks fix the number of speakers at two and ignore the near-/far-field interference, reverberation, and sudden noise of real scenes. Second, high-performance causal architectures are too heavy for edge deployment. Lightweight alternatives try to reclaim capacity by repeatedly invoking a small separator, which offsets the savings. To address the first gap, we release RealSSA, a realistic AVTSE benchmark consisting of RealSSA-Sim and RealSSA-Real. RealSSA-Sim provides controllable simulated scenes with 1--5 dynamic near-field interfering speakers; scenes with far-field interference additionally include 10--15 far-field interfering speakers. RealSSA-Real provides a held-out real-recorded evaluation set. To address the second gap, we propose Falcon, a causal AVTSE method. Its Separator performs multi-scale time-frequency separation in a single encoder--decoder pass. We train Falcon with an encoder-space speaker contrastive loss. This loss suppresses near-field leakage at zero inference cost and transfers across backbones. Falcon achieves state-of-the-art extraction quality on RealSSA-Sim, LRS2-2Mix, LRS3-2Mix, and VoxCeleb2-2Mix. Compared with the causal AV-TFGridNet baseline, it cuts parameters by 91.9%, computation by 20.2 times, and GPU inference latency by 11.1 times. Code and demo are available at https://cslikai.cn/Falcon/.",
+  "abstractSha256": "bd76cb7de13e12525c9a9bd9a50fe21437fedb79fc42bde304369f84021faf6e",
+  "arxivId": "2610.32749",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.32749v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "对比学习",
+    "primaryTask": "目标说话人提取",
+    "rankBucket": "前25%",
+    "score": 8.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.target-speaker",
+          "label": "目标说话人提取"
+        },
+        {
+          "facet": "method",
+          "id": "method.contrastive",
+          "label": "对比学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "对比学习",
+      "primaryMethodId": "method.contrastive",
+      "primaryTask": "目标说话人提取",
+      "primaryTaskId": "task.target-speaker",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Wendi Sang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kai Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yifan Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jianqiang Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xiaolin Hu"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文针对固定双人、无混响突变噪声的评测与重型因果模型难以部署的问题，构建同时变化人数、远近场、混响和噪声并配真实录音的 RealSSA 基准，并提出单次编解码完成多尺度时频建模的 Falcon，其编码器空间对比损失在推理零代价下抑制近场泄漏，在多集上达到最优分离质量并大幅降低参数与延迟。",
+  "originalTitle": "Efficient Streaming Audio-Visual Target Speaker Extraction for Real-World Acoustic Scenes",
+  "pdfUrl": "https://arxiv.org/pdf/2610.32749v1.pdf",
+  "readerTitle": "在真实声场景中实时提取目标说话人：RealSSA 基准与单遍分离方法 Falcon",
+  "schemaVersion": 2
+}

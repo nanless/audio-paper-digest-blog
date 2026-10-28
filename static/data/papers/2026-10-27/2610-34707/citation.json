@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.34707v1",
+  "arxivId": "2610.34707",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.34707v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jincheng Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Li Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Weixin Zhu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yannan Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Tao Yu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Juan Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ming Li"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.34707v1",
+  "originalTitle": "S2SND-v2: Unified Online and Offline Speaker Diarization with Speaker-Adapted w2v-BERT 2.0",
+  "pdfUrl": "https://arxiv.org/pdf/2610.34707v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

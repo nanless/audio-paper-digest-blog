@@ -1,0 +1,126 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.33413v1",
+  "abstract": "Localized AI manipulations in long-form videos often affect brief events within otherwise authentic content, making video-level classification insufficient for forensic analysis. Existing audio-visual deepfake benchmarks largely focus on short talking-head clips, while long-form temporal forensics remains predominantly visual. We introduce AV-FABLE, a dual-timeline benchmark for sparse manipulations in open-scene long-form audio-visual videos. AV-FABLE contains 16,650 pristine--manipulated twin pairs (998 hours) created with 27 editing configurations, with separate audio and visual timelines that enable modality-specific temporal localization and expose errors hidden by joint-timeline evaluation. On AV-FABLE, zero-shot prompting of audio-visual large language models (AV-LLMs) yields near-chance detection and poor temporal localization. In contrast, supervised readouts of their frozen perception features recover strong forensic signals, suggesting manipulation evidence is encoded in these representations but not effectively exposed through language outputs. Motivated by this observation, we propose NFSR(Native Forensics via Separated Readouts), which reads frozen AV-LLM features with separate audio and visual temporal decoders. NFSR achieves the best audio-visual localization performance in-domain and across all three out-of-distribution settings, including transfer to held-out videos from an external long-video forensic benchmark. AV-FABLE, code, and model weights will be publicly released.",
+  "abstractSha256": "83701063be7c6f2c4a87ce8e5fa0b54cd924db4601cc2f7a987900706adcfa96",
+  "arxivId": "2610.33413",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.33413v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "表示探测",
+    "primaryTask": "伪造片段定位",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.forgery-localization",
+          "label": "伪造片段定位"
+        },
+        {
+          "facet": "method",
+          "id": "method.representation-probing",
+          "label": "表示探测"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "task",
+          "id": "task.av-question-answering",
+          "label": "音视频问答"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "表示探测",
+      "primaryMethodId": "method.representation-probing",
+      "primaryTask": "伪造片段定位",
+      "primaryTaskId": "task.forgery-localization",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Tsinghua University"
+      ],
+      "name": "Yuesheng Huang"
+    },
+    {
+      "affiliations": [
+        "Tsinghua University"
+      ],
+      "name": "Hoi Fan Au"
+    },
+    {
+      "affiliations": [
+        "Tsinghua University"
+      ],
+      "name": "Jiaqi Hou"
+    },
+    {
+      "affiliations": [
+        "Tsinghua University"
+      ],
+      "name": "Ruicheng Zhang"
+    },
+    {
+      "affiliations": [
+        "Tsinghua University"
+      ],
+      "name": "Jiarui He"
+    },
+    {
+      "affiliations": [
+        "Tsinghua University"
+      ],
+      "name": "Haocheng Yang"
+    },
+    {
+      "affiliations": [
+        "Tsinghua University"
+      ],
+      "name": "Bin Hu"
+    },
+    {
+      "affiliations": [
+        "Peking University"
+      ],
+      "name": "Kewei Zhang"
+    },
+    {
+      "affiliations": [
+        "Tsinghua University"
+      ],
+      "name": "Weijian Deng"
+    },
+    {
+      "affiliations": [
+        "Tsinghua University"
+      ],
+      "name": "Jun Zhou"
+    },
+    {
+      "affiliations": [
+        "Tsinghua University"
+      ],
+      "name": "Xiu Li"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对长视频中稀疏、跨模态的局部篡改，AV-FABLE 用双时间线基准暴露单时间线评测的遮蔽问题，NFSR 通过冻结 AV-LLM 特征的分轨读出实现定位，并在域内与三种域外条件下取得最高的 AV-mAP，但视觉覆盖与解释仍是短板。",
+  "originalTitle": "AV-FABLE: Audio-Visual Manipulation Forensics in Long-Form Videos",
+  "pdfUrl": "https://arxiv.org/pdf/2610.33413v1.pdf",
+  "readerTitle": "长视频里几秒被改了：AV-FABLE 如何按声画两条时间线定位篡改",
+  "schemaVersion": 2
+}

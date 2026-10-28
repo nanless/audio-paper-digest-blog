@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.32950v1",
+  "abstract": "Auditory attention decoding (AAD) seeks to identify the attended talker from brief noninvasive brain recordings by comparing neural responses with competing speech streams. Recent electroencephalography (EEG) decoders report nearly perfect accuracy from one second of data, yet we show that this performance fails to generalize to unseen speech because models exploit trial leakage, eye gaze, and acoustic cues instead of speech evoked neural activity. We introduce CoupleFlow, which decodes attention through temporal coupling between neural and acoustic embeddings. Its predictions remain at chance when the brain signal contains no informative coupling, preventing shortcuts based on speech content or talker identity. A conditional flow matching head implements a likelihood ratio decision rule based on pointwise mutual information between brain and speech. This rule is Bayes optimal when the recording depends only on the attended talker and removes preferences for speech that is likely a priori. We evaluate CoupleFlow with content disjoint splits recovered from the audio and null tests that distinguish genuine temporal coupling from trial recognition. Across nine EEG and magnetoencephalography (MEG) datasets processed through a common pipeline, spanning four languages, high density EEG recordings, listeners with hearing impairment, and a room with multiple talkers, CoupleFlow outperforms linear and deep baselines while all null tests remain at chance. Finally, we derive an evidence accumulation law that predicts accuracy across window lengths from a single parameter per dataset and predicts that parameter from the strength of neural speech tracking. This law identifies recording signal to noise ratio as a limit on decoding speed and reliability and estimates the window length required to reach a target accuracy.",
+  "abstractSha256": "939b79e5f43e69c73e4dac5a25e7dd817929fc72f3c7e85da6fde3bf5aad5084",
+  "arxivId": "2610.32950",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.32950v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "流匹配",
+    "primaryTask": "言语神经解码",
+    "rankBucket": "前50%",
+    "score": 6.4,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.neural-speech-decoding",
+          "label": "言语神经解码"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "method",
+          "id": "method.contrastive",
+          "label": "对比学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "流匹配",
+      "primaryMethodId": "method.flow-matching",
+      "primaryTask": "言语神经解码",
+      "primaryTaskId": "task.neural-speech-decoding",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ali Alavi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Donald S. Williamson"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对听觉注意解码中试次泄露与注视等捷径导致虚高准确率的问题，CoupleFlow 只用脑电与语音随时间共变做判决，并在九个脑电与脑磁数据集的内容不相交划分上验证了真实的时间锁定增益与随窗长增长的准确率规律，代价是短窗绝对准确率仍不高且依赖记录信噪比。",
+  "originalTitle": "CoupleFlow: Null-Calibrated Auditory Attention Decoding With Time-Locked Brain-Speech Coupling and Flow-Matching Likelihood Ratios",
+  "pdfUrl": "https://arxiv.org/pdf/2610.32950v1.pdf",
+  "readerTitle": "只靠大脑跟随语音来判断注意：CoupleFlow 的耦合解码与证据累积律",
+  "schemaVersion": 2
+}

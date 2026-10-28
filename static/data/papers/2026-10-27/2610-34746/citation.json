@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.34746v1",
+  "arxivId": "2610.34746",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.34746v1",
+  "authors": [
+    {
+      "affiliations": [
+        "AI Lab, Qifu Technology, Beijing, China"
+      ],
+      "name": "Wenchao Du"
+    },
+    {
+      "affiliations": [
+        "AI Lab, Qifu Technology, Beijing, China"
+      ],
+      "name": "Fangxin Shang"
+    },
+    {
+      "affiliations": [
+        "AI Lab, Qifu Technology, Beijing, China"
+      ],
+      "name": "Long Wu"
+    },
+    {
+      "affiliations": [
+        "AI Lab, Qifu Technology, Beijing, China"
+      ],
+      "name": "Runze Cui"
+    },
+    {
+      "affiliations": [
+        "AI Lab, Qifu Technology, Beijing, China"
+      ],
+      "name": "Qing Yang"
+    },
+    {
+      "affiliations": [
+        "AI Lab, Qifu Technology, Beijing, China"
+      ],
+      "name": "Yehui Yang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.34746v1",
+  "originalTitle": "DecisionTraceBench: Tracking Decision-Critical Information in Multi-Party Spoken Conversations",
+  "pdfUrl": "https://arxiv.org/pdf/2610.34746v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

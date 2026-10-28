@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.34814v1",
+  "abstract": "Discrete-token-based universal speech enhancement (USE) enables strong sequence modeling but often suffers from a quality--fidelity trade-off, where perceptually plausible outputs may alter linguistic content or speaker characteristics. We present TIMUSE, a two-stage USE framework combining text-initialized masked semantic restoration with acoustic reconstruction. A pretrained diffusion language model (DLM) is adapted with LoRA to recover clean semantic tokens using masked generative modeling, while a conditional flow matching model reconstructs clean 24\\,kHz speech from the recovered semantic tokens and original degraded speech. Both system-level and controlled comparisons show that TIMUSE achieves a better balance between perceptual quality and fidelity than existing discrete USE models. Ablations further show that text DLM initialization brings a targeted gain under severe degradations.",
+  "abstractSha256": "0902d796bc2ab9105e357855e3e4a8b6f9957ec164ed9f8fe15df8f734dcfe9d",
+  "arxivId": "2610.34814",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.34814v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "扩散模型",
+    "primaryTask": "语音增强",
+    "rankBucket": "前25%",
+    "score": 8.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-enhancement",
+          "label": "语音增强"
+        },
+        {
+          "facet": "method",
+          "id": "method.diffusion",
+          "label": "扩散模型"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "method",
+          "id": "method.transfer",
+          "label": "迁移学习"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "扩散模型",
+      "primaryMethodId": "method.diffusion",
+      "primaryTask": "语音增强",
+      "primaryTaskId": "task.speech-enhancement",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yiwei Guo"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hao Qiu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Mohan Ye"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhijie Deng"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zehua Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kai Yu"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "TIMUSE 把通用增强拆成语义恢复与声学重建两步，用文本扩散语言模型补内容、用流匹配模型保音色，在重度缺失下内容保持更好，但结论只在原文的双基准与配对训练条件下成立。",
+  "originalTitle": "TIMUSE: Text-Initialized Masked Semantic Token Modeling for Universal Speech Enhancement",
+  "pdfUrl": "https://arxiv.org/pdf/2610.34814v1.pdf",
+  "readerTitle": "TIMUSE：先恢复语义令牌再重建声音的通用语音增强",
+  "schemaVersion": 2
+}

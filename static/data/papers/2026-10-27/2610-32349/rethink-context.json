@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.32349v1",
+  "abstract": "Full-duplex speech models listen and speak at the same time, which makes them promising for natural, open-ended conversation. But can they sustain a coherent conversation for tens of minutes? Because they generate a token every frame, even while listening, they exhaust their context windows within minutes. Yet existing benchmarks evaluate only single turns or a few conversational rounds, too short to expose the long-horizon problem. We introduce the Full-Duplex Long-Horizon Benchmark (FD-LHB), which tests five recent full-duplex models on long replayed conversations and in live conversation with an LLM partner. Every evaluated model eventually either degrades or exhausts its context. Models that keep the full history often degrade before their context runs out, while sliding-window models still fall into repetition, silence, and gibberish. For sliding-window models, we identify two contributing mechanisms. Gibberish and silence are linked to Initialization-Anchor Eviction, where the sliding window discards the first KV entry. Repetition is also reinforced by the model's own recent outputs. Guided by this diagnosis, we apply two simple fixes: Initialization-Anchor Pinning (IAP) keeps that first entry, and Duplex Repetition Penalty (DRP) discourages echoing while guarding against prolonged silence. Together, they support the diagnosis and, without retraining, substantially reduce conversational collapse in replays of up to an hour while running in real time.",
+  "abstractSha256": "912d949a8baf694cf71f26ee7e50d0ddf58bcb8512df95bad4509e851f596a98",
+  "arxivId": "2610.32349",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.32349v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "全双工语音交互",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.full-duplex",
+          "label": "全双工语音交互"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.real-time",
+          "label": "实时处理"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-synthesis",
+          "label": "语音合成"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "全双工语音交互",
+      "primaryTaskId": "task.full-duplex",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Integrated Vision and Language Lab, KAIST, South Korea"
+      ],
+      "name": "Yeonju Kim"
+    },
+    {
+      "affiliations": [
+        "Integrated Vision and Language Lab, KAIST, South Korea"
+      ],
+      "name": "Bella Godiva"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Se Jin Park"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yong Man Ro"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文针对全双工语音模型在数十分钟对话中出现重复、长时间沉默和胡言乱语的问题，用受控重放与实时交互两轨基准定位崩溃，并用保留首个缓存表项与抑制近期复读的无重训方法把滑动窗口模型的崩溃大幅降低，同时保持实时运行。",
+  "originalTitle": "Why Full-Duplex Speech Models Collapse in Long Conversations",
+  "pdfUrl": "https://arxiv.org/pdf/2610.32349v1.pdf",
+  "readerTitle": "长对话为什么会崩：全双工语音模型的长时间崩溃与无重训修复",
+  "schemaVersion": 2
+}

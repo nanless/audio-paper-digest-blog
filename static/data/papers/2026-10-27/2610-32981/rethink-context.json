@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.32981v1",
+  "abstract": "Higher-order Ambisonics (HOA) is an attractive format for immersive spatial audio, but its high channel count and directional properties present significant audio coding challenges. The widely deployed Opus audio codec supports HOA through Channel Mapping Families 2 and 3 (RFC 8486), which code and transmit every Ambisonics channel, so the bitrate grows quadratically with the spherical harmonic order. We introduce SEMAC, which instead represents an Ambisonics signal by a quantized full-order directional energy envelope together with fewer CELT-coded transport channels. CELT separates a per-band energy envelope from the signal shape and restores it after quantization, and SEMAC generalizes this principle to directional signals. Since the reduced transport spans only a lower-dimensional subspace, the decoder re-imposes the envelope observed at the encoder input, restoring the directional energy distribution at full order. A MUSHRA test on fifth-order material compares SEMAC against Opus CMF~3 in matched configurations at 512 and 768 kbit/s. SEMAC with 16 of 36 transport channels is rated above full-order CMF~3 at both rates, and at equal transport channel count above order truncation. The proposed SEMAC strategy of coding fewer transport channels with the directional envelope is found perceptually preferable to coding all HOA channels at low precision.",
+  "abstractSha256": "6a211c20d0be07bd1a8cac92731463e80f11809967262e80bf5841cdddd887b7",
+  "arxivId": "2610.32981",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.32981v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "音频编码",
+    "rankBucket": "前50%",
+    "score": 6.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-coding",
+          "label": "音频编码"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "method",
+          "id": "method.subjective-evaluation",
+          "label": "主观评测"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.spatial-audio",
+          "label": "空间音频信号"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "音频编码",
+      "primaryTaskId": "task.audio-coding",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Christoph Hold"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jan Buethe"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jean-Marc Valin"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jan Skoglund"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Toni Hirvonen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Nils Peters"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "SEMAC 针对五阶 Ambisonics 通道数多、逐通道编码码率随阶数平方增长的问题，用 16、9 或 4 个波束域传输通道加全阶方向能量包络边信息做编码与重建，在 512 和 768 kbit/s 下经 11 名听众的 MUSHRA 验证，16 通道版本评分高于 36 通道全阶 Opus CMF 3，代价是包络在五阶时可占 100 kbit/s 以上且不能恢复丢失的相位与精细方向结构。",
+  "originalTitle": "SEMAC: Spherical Energy Matching Ambisonics Codec for Efficient Higher-Order Ambisonics Compression",
+  "pdfUrl": "https://arxiv.org/pdf/2610.32981v1.pdf",
+  "readerTitle": "用更少波形通道加全阶方向能量包络压缩高阶 Ambisonics",
+  "schemaVersion": 2
+}

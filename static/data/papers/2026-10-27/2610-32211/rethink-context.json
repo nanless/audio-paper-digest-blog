@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.32211v1",
+  "abstract": "Controlling melody in audio generation normally requires training a conditional generative model on audio paired with pitch curves or MIDI notes. We instead guide an existing unconditional diffusion model, originally trained without melody inputs, to follow a target melody without retraining or modifying it. During inference, a differentiable pitch detector steers the sampled audio toward the desired pitches, while the diffusion model keeps it close to the distribution of realistic audio learned during training. Our main contribution is a sampling method that balances these two directions, providing melody control while preserving audio quality. To improve stability, we initialize sampling with a simple synthesized version of the target melody rather than pure noise. Experiments on piano, guitar, and singing voice show melody accuracy comparable to conditional models trained specifically for melody control. Our method therefore adds melody control to existing audio diffusion models without requiring paired melody data or task-specific retraining.",
+  "abstractSha256": "dcb321072c1436e68ff359b81f1babfc0c8e04d0aae6952035219cd1bafd9863",
+  "arxivId": "2610.32211",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.32211v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "扩散模型",
+    "primaryTask": "音乐生成",
+    "rankBucket": "前50%",
+    "score": 6.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-generation",
+          "label": "音乐生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.diffusion",
+          "label": "扩散模型"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "扩散模型",
+      "primaryMethodId": "method.diffusion",
+      "primaryTask": "音乐生成",
+      "primaryTaskId": "task.music-generation",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Cristobal Andrade"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Sebastian J. Schlecht"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ben Maman"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Meinard Müller"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "该文把旋律控制写成以可微基频估计为观测算子的逆问题，用扩散后验采样加三角波暖启动引导无条件模型，在钢琴、吉他和人声上达到接近专用条件模型的旋律准确率，但音色、咬字等不受控细节仍由先验决定。",
+  "originalTitle": "Melody Guidance for Audio Diffusion Models Without Retraining",
+  "pdfUrl": "https://arxiv.org/pdf/2610.32211v1.pdf",
+  "readerTitle": "不重新训练，如何让无条件音频扩散模型唱出指定旋律",
+  "schemaVersion": 2
+}

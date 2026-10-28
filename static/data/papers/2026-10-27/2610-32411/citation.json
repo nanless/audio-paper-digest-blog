@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.32411v1",
+  "arxivId": "2610.32411",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.32411v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Institute of Information Engineering, Chinese Academy of Sciences"
+      ],
+      "name": "Jia Wang"
+    },
+    {
+      "affiliations": [
+        "Institute of Information Engineering, Chinese Academy of Sciences"
+      ],
+      "name": "Yuqing Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jiangnan Li"
+    },
+    {
+      "affiliations": [
+        "Institute of Information Engineering, Chinese Academy of Sciences"
+      ],
+      "name": "Zheng Lin"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Mo Yu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.32411v1",
+  "originalTitle": "A Broader Look into MLLM's Retrieval Heads",
+  "pdfUrl": "https://arxiv.org/pdf/2610.32411v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

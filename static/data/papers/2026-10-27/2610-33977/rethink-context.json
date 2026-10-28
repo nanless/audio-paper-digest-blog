@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.33977v1",
+  "abstract": "Speech Emotion Recognition (SER) is a fundamental task in affective computing that enables applications such as mental health assessment, human-computer interaction, and automated customer support systems. Accurate emotion classification from speech remains challenging due to variations in speaker style, acoustic conditions, and the high computational cost of modern deep learning approaches. Many existing systems depend on large transformer-based architectures that require substantial computational resources, making them less suitable for real-time or resource-constrained environments. This research proposes EmoNet, a lightweight deep learning framework for speech emotion classification across seven emotion categories. The model is built on a four-block depthwise separable CNN encoder with squeeze-and-excitation attention and residual connections, combined with a Bidirectional LSTM for temporal feature learning and a multi-head attention pooling mechanism for improved representation. A comprehensive 134-channel acoustic feature set alongside data augmentation techniques including audio-level perturbations and SpecAugment is employed to improve robustness under diverse acoustic conditions. Evaluated on a combined dataset of TESS, RAVDESS, and SAVEE, EmoNet achieves a test accuracy of 96.75% with only 4.11 million parameters. The proposed model outperforms its reproduced baseline and remains competitive with significantly larger state-of-the-art architectures.",
+  "abstractSha256": "1e4363251d54c06ac519bce95796c8b0a4905eb89cbb40eafb14f70a1e1b3e27",
+  "arxivId": "2610.33977",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.33977v1",
+  "assessment": {
+    "documentType": "模型报告",
+    "primaryMethod": "CNN",
+    "primaryTask": "语音情感识别",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.emotion-recognition",
+          "label": "语音情感识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.cnn",
+          "label": "CNN"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "CNN",
+      "primaryMethodId": "method.cnn",
+      "primaryTask": "语音情感识别",
+      "primaryTaskId": "task.emotion-recognition",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Muhammad Moiz Khalid"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Abdur Rehman Tariq"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Muhammad Okasha Yamin"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对大 Transformer 做语音情感太重的问题，EmoNet 用四块深度可分离卷积加双向 LSTM 与多头注意力池化，在 TESS 加 RAVDESS 加 SAVEE 合并集上达到 96.75% 测试准确率，仅用 4.11M 参数，但结论只在表演式录音与固定划分下成立。",
+  "originalTitle": "EmoNet: A Lightweight Attention-Based CNN for Speech Emotion Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2610.33977v1.pdf",
+  "readerTitle": "EmoNet：用轻量卷积加时序注意力做七类语音情感识别",
+  "schemaVersion": 2
+}

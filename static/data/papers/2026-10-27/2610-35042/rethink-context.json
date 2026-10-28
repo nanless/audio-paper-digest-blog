@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.35042v1",
+  "abstract": "Simultaneous speech translation (SimulST) aims to translate ongoing speech with low latency while preserving translation quality. Recent studies have adopted large language models (LLMs) for SimulST and formulated it as a multi-turn dialogue task for efficient generation, achieving state-of-the-art performance. However, existing dialogue-style SimulST approaches typically rely on specialized training schemes to acquire simultaneous translation behavior, either using synthesized read/write trajectories, which may provide suboptimal training signals, or jointly optimizing translation quality and latency, whose competing objectives may cause optimization instability. In this paper, we introduce SimPOTrans, a reinforcement learning (RL) framework that enables offline speech translation models to self-adapt to dialogue-style SimulST. Through a simple two-stage RL post-training pipeline, SimPOTrans rewards an offline model for exhibiting translation behaviors beneficial to simultaneous scenarios when given partial speech inputs, thereby enabling offline-to-simultaneous self-adaptation without synthesized read/write trajectories or explicit latency optimization. At inference time, SimPOTrans requires no external decision policy and enables flexible quality--latency control by simply adjusting the chunk size of speech input. Experiments on the ACL 60/60 and MCIF benchmarks across three language directions (En$\\rightarrow$De, En$\\rightarrow$Zh, and En$\\rightarrow$Ja) demonstrate that SimPOTrans outperforms several strong baselines, achieving a superior quality--latency trade-off.",
+  "abstractSha256": "5a4b694026acb905967548d4df3a22c9e07b39029140a2f9d301225fc68f3c04",
+  "arxivId": "2610.35042",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.35042v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "强化学习",
+    "primaryTask": "语音翻译",
+    "rankBucket": "前50%",
+    "score": 6.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-translation",
+          "label": "语音翻译"
+        },
+        {
+          "facet": "method",
+          "id": "method.reinforcement",
+          "label": "强化学习"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.llm",
+          "label": "大语言模型"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "强化学习",
+      "primaryMethodId": "method.reinforcement",
+      "primaryTask": "语音翻译",
+      "primaryTaskId": "task.speech-translation",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Haotian Tan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hiroki Ouchi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Sakriani Sakti"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "SimPOTrans 针对离线语音翻译模型难以直接处理不完整语音的问题，用两阶段强化学习先增强整句翻译能力再在部分语音多轮轨迹上自我适应，在 ACL 60/60 和 MCIF 三个英译外方向上取得更好的质量延迟权衡，但其 BLEU 低于基线且依赖固定时长切块。",
+  "originalTitle": "SimPOTrans: Self-Adaptation for Offline-to-Simultaneous Speech Translation via Reinforcement Learning",
+  "pdfUrl": "https://arxiv.org/pdf/2610.35042v1.pdf",
+  "readerTitle": "离线模型如何自己学会同声传译：SimPOTrans 的两阶段强化学习自适应",
+  "schemaVersion": 2
+}

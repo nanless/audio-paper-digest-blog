@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.33194v1",
+  "abstract": "Many real-world signals are corrupted by localized, structured perturbations whose distribution is unknown: an intermittent background noise in a music recording, a watermark stamped on a photograph, a cast shadow. We study the task of recovering a clean signal $x$ from an observation $y$ containing such a localized out-of-distribution (OOD) corruption. We propose Support-guided OOD Removal with Diffusion, SORD, an iterative algorithm to recover $x$ using only two ingredients: a binary map of the corruption support and a single diffusion model pretrained on clean signals. SORD does not require any paired data or any statistical model of the corruption. We evaluate SORD on natural images and human faces with spatially localized corruptions including handwritten digits, other images, watermarks, and shadows, as well as audio recordings of different musical instruments with temporally localized corruptions including other instruments and human speech. SORD is competitive with, and often outperforms, posterior-sampling inpainting given the same diffusion prior and the same mask, source-separation baselines that require a separate diffusion model for each source, and, on several benchmarks, supervised networks trained on paired clean and corrupted signals. The code is released here: \\href{https://github.com/voilalab/SORD}{https://github.com/voilalab/SORD}.",
+  "abstractSha256": "65d7048ae856b6ef7b8d8abecbcb18386c66f18bb2a077dc45149e97d410ca81",
+  "arxivId": "2610.33194",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.33194v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "扩散模型",
+    "primaryTask": "音频修复",
+    "rankBucket": "前25%",
+    "score": 7.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-restoration",
+          "label": "音频修复"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-separation",
+          "label": "音频分离"
+        },
+        {
+          "facet": "method",
+          "id": "method.diffusion",
+          "label": "扩散模型"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "扩散模型",
+      "primaryMethodId": "method.diffusion",
+      "primaryTask": "音频修复",
+      "primaryTaskId": "task.audio-restoration",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Alireza Kheirandish"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Sara Fridovich-Keil"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "SORD 只用干净信号的扩散先验加已知污染位置，通过修复初始化与信号污染交替精炼恢复被局部结构污染的图像与音频，在未知污染类型上更稳，但依赖掩膜准确且计算代价来自多样本多轮扩散采样。",
+  "originalTitle": "Support-guided OOD Removal with Diffusion",
+  "pdfUrl": "https://arxiv.org/pdf/2610.33194v1.pdf",
+  "readerTitle": "只知道脏在哪里，能否把干净信号找回来：SORD 的支持引导去污染",
+  "schemaVersion": 2
+}

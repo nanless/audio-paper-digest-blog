@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.35741v1",
+  "abstract": "Wide-area 6DoF rendering from sparse Ambisonic recordings is commonly addressed by interpolating parametric spatial descriptors rather than the waveforms themselves. This preserves the fidelity of a nearby measured signal and avoids phase artifacts caused by mixing distant arrays. However, existing DirAC-based approaches rely on geometric interpolation weights that do not depend on the acoustic scene observed by the microphones. We propose a lightweight Graph Neural Network (GNN) that refines only this interpolation stage. The known Ambisonic arrays and the query position are represented as a graph whose nodes contain local DirAC features and whose edges encode relative distance and directional relations. The network predicts positive query-conditioned weights over the measured arrays, while the target energy, diffuseness, and direction of arrival are reconstructed by an analytical DirAC layer. Experiments on unseen rooms, unseen speech signals, and unseen array configurations show that the proposed weighting improves energy reconstruction and radiation-pattern similarity with respect to baseline interpolation.",
+  "abstractSha256": "5d3fc580b4a8f246a37992142a462bdc7e78bfa233bb67968d02c7921b883122",
+  "arxivId": "2610.35741",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.35741v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "图神经网络",
+    "primaryTask": "空间音频渲染",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.spatial-rendering",
+          "label": "空间音频渲染"
+        },
+        {
+          "facet": "method",
+          "id": "method.gnn",
+          "label": "图神经网络"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.spatial-audio",
+          "label": "空间音频信号"
+        },
+        {
+          "facet": "task",
+          "id": "task.sound-field",
+          "label": "声场重建"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "图神经网络",
+      "primaryMethodId": "method.gnn",
+      "primaryTask": "空间音频渲染",
+      "primaryTaskId": "task.spatial-rendering",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Gioele Greco"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Filippo Marri"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Mirco Pezzoli"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Fabio Antonacci"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "该文只改宽域 DirAC 渲染中的插值权重，用轻量图网络从实测声场特征预测场景相关的组合权重，实验显示在未见房间和布局下能量和指向性图相似度提升，但扩散度基本持平，且模型很小。",
+  "originalTitle": "Graph Neural Network for Wide-Area 6DoF Ambisonic Rendering",
+  "pdfUrl": "https://arxiv.org/pdf/2610.35741v1.pdf",
+  "readerTitle": "稀疏 Ambisonic 录音如何实现大范围六自由度漫游",
+  "schemaVersion": 2
+}

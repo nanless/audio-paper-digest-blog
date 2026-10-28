@@ -1,0 +1,92 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.33765v1",
+  "abstract": "Streaming automatic speech recognition transcribes at low latency but produces an unattributed word stream, while real-time applications such as customer-service analytics need each word tied to a speaker role. Role attribution is usually a separate stage, either an offline or streaming speaker-diarization model aligned to the words or a text-based large language model applied to the transcript, and role labels for training are scarce. We present RoleHear, a semi-supervised pipeline that makes a single cache-aware streaming transducer emit roles inline through lightweight in-vocabulary role tokens: a fast turn-boundary marker followed by a per-role token a few words later. An offline transducer teacher, fine-tuned into a role-attributed recognizer, relabels unlabeled audio, and a multimodal large language model supplies silver role labels where gold annotations are unavailable. The streaming student is fine-tuned on the mixture in a single pass. Across customer-service calls with gold roles and earnings calls with silver roles, RoleHear attributes roles accurately while preserving transcription quality and narrowing the gap to the offline teacher.",
+  "abstractSha256": "3e596a403488ea45100e95555049a76ee572ca67ef52902a3d64828f5c9818d8",
+  "arxivId": "2610.33765",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.33765v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "半监督学习",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.semi-supervised",
+          "label": "半监督学习"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "半监督学习",
+      "primaryMethodId": "method.semi-supervised",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zefang Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Chenyang Zhu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Sangwoo Cho"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xujun Peng"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Rongqing Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shi-Xiong Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Sambit Sahu"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "RoleHear 用解耦的转折标记加延迟的角色取值标记让流式换能器内联输出角色，并用离线教师的一遍伪标签加多模态大模型的银标签补足监督，在客服与财报电话上缩小了流式与离线的角色归属差距。",
+  "originalTitle": "RoleHear: Pseudo-Labeling for Semi-Supervised Role-Attributed Streaming Speech Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2610.33765v1.pdf",
+  "readerTitle": "RoleHear：让流式识别器边转写边标出说话人角色",
+  "schemaVersion": 2
+}

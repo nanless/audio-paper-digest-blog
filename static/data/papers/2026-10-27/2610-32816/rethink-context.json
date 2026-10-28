@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.32816v1",
+  "abstract": "Surgical scene understanding is a prerequisite for context-aware and intelligent systems in the operating room. Current methods rely mostly on visual data, while acoustic sensing has shown potential to provide complementary information on surgical activity. First approaches for the localisation of surgical activity relied on microphone arrays and acoustic beamforming. This work investigates whether the active instrument can be localized from a single microphone and a camera by learning the correspondence between the appearance and the sound of surgical instruments, without annotating its position. We adapt weakly supervised audio-visual localisation, which learns from the co-occurrence of image and sound, to the surgical setting. We record simulated surgical actions, sawing, drilling, and chiseling, and train the model on these recordings without any spatial annotation to produce a heatmap over the sounding tool. We extend the training objective by two terms: a silence term, which suppresses the output for silence and background noise, and a composite term, which trains the model to select the sounding one of two visible instruments. The model localizes the active instrument on an independent corpus recorded with a different camera and microphone, in which instrument positions were obtained by optical tracking. It separates tool activity from silence and background noise and can attribute sound correctly when two tools are present. Audio-visual correspondence learned from in-domain recordings connects the sound of a surgical action to the instrument that produces it, using a single microphone and a camera. This proof of concept introduces a novel paradigm that enables the detection and localisation of surgical activity without manual annotations.",
+  "abstractSha256": "bf1943d8fb788452b5d59e7ee9044c2883606912a553b5e8bc1c78bf0376663b",
+  "arxivId": "2610.32816",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.32816v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "弱监督学习",
+    "primaryTask": "声源定位",
+    "rankBucket": "前50%",
+    "score": 5.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.localization",
+          "label": "声源定位"
+        },
+        {
+          "facet": "method",
+          "id": "method.weak-supervised",
+          "label": "弱监督学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "application",
+          "id": "application.medical",
+          "label": "医疗音频"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "弱监督学习",
+      "primaryMethodId": "method.weak-supervised",
+      "primaryTask": "声源定位",
+      "primaryTaskId": "task.localization",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Research in Orthopedic Computer Science (ROCS), Balgrist University Hospital, University of Zurich, Zurich, Switzerland",
+        "Eberhard Karls Universität Tübingen, Germany"
+      ],
+      "name": "Dominic Behling"
+    },
+    {
+      "affiliations": [
+        "Research in Orthopedic Computer Science (ROCS), Balgrist University Hospital, University of Zurich, Zurich, Switzerland"
+      ],
+      "name": "Jonas Hein"
+    },
+    {
+      "affiliations": [
+        "Research in Orthopedic Computer Science (ROCS), Balgrist University Hospital, University of Zurich, Zurich, Switzerland"
+      ],
+      "name": "Matthias Seibold"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "本文用图像与声音共现的弱监督对应学习定位电锯电钻骨凿，在独立采集的 21 序列 853 帧上达到总体 IoU 0.36 与中位距离 12 px，代价是仅覆盖三种模拟骨操作且每步依赖 3 s 音频与 16×16 粗热图。",
+  "originalTitle": "Sounding Surgical Instrument Localisation through Audio-Visual Correspondence",
+  "pdfUrl": "https://arxiv.org/pdf/2610.32816v1.pdf",
+  "readerTitle": "只用单麦克风加相机定位发声手术器械",
+  "schemaVersion": 2
+}

@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.35329v1",
+  "abstract": "Audio active learning (AL) trains a classifier at low annotation cost by labeling only an informative fraction of an unlabeled collection over successive rounds. Each round picks one of the checkpoints saved during training. Mainstream AL protocols do so with an assumed validation set, but in practice its labels also count toward the annotation cost, shrinking the advantage of an already small annotation budget. We propose geometric consistency, a label-free validation rule for checkpoint selection. Both classifiers, nearest-class-mean and k-nearest-neighbor, are built from the labeled set in a frozen pretrained embedding space. They then predict the unlabeled data to model its geometry. The rule scores each checkpoint by its agreement with these pseudo-labels and its cross-entropy on the labeled set. It works with any query strategy, has one hyperparameter, insensitive in practice, and adds only one batched forward pass over the unlabeled data per round. At matched label budgets across datasets, encoders, and query strategies, it attains the best mean rank in area under the labeling curve (AULC) among methods without extra labels and is on par with an out-of-budget validation set. To our knowledge, this is the first systematic study of label-free validation for checkpoint selection in audio AL.",
+  "abstractSha256": "ff485f313e2175008b34ef2999fdf8c06febeb91afb9babf967137471f5186a8",
+  "arxivId": "2610.35329",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.35329v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "聚类与类别匹配",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 6.4,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.clustering",
+          "label": "聚类与类别匹配"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.environmental",
+          "label": "环境声"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "聚类与类别匹配",
+      "primaryMethodId": "method.clustering",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shiqi Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Tuomas Virtanen"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文解决每轮训练中没有验证标签时如何选检查点，提出用冻结嵌入空间中独立于待选头的原型与近邻伪标签加已标注集交叉熵打分，在统一标注预算下取得可部署方法中平均最优的标注曲线下面积，代价是每轮对池做一次批量前向。",
+  "originalTitle": "Geometric Consistency Based Label-Free Validation for Checkpoint Selection in Audio Active Learning",
+  "pdfUrl": "https://arxiv.org/pdf/2610.35329v1.pdf",
+  "readerTitle": "不花标注费选检查点：用未标注池的几何结构做音频主动学习验证",
+  "schemaVersion": 2
+}

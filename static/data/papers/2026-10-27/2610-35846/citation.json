@@ -1,0 +1,35 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.35846v1",
+  "arxivId": "2610.35846",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.35846v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Institute for Analytics and Data Science, University of Essex",
+        "School of Computer Science and Electronic Engineering, University of Essex"
+      ],
+      "name": "Yuchen Zhang"
+    },
+    {
+      "affiliations": [
+        "Institute for Analytics and Data Science, University of Essex",
+        "School of Computer Science and Electronic Engineering, University of Essex"
+      ],
+      "name": "Haralambos Mouratidis"
+    },
+    {
+      "affiliations": [
+        "Institute for Analytics and Data Science, University of Essex",
+        "School of Computer Science and Electronic Engineering, University of Essex"
+      ],
+      "name": "Ravi Shekhar"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.35846v1",
+  "originalTitle": "Preserve to Expand: Source-Aware Adaptation and Model Merging for Multilingual LLM-Based ASR",
+  "pdfUrl": "https://arxiv.org/pdf/2610.35846v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

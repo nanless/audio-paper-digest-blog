@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.33952v1",
+  "arxivId": "2610.33952",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.33952v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Prince Baah-Mensah"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Dennis Owusu Asamoah"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.33952v1",
+  "originalTitle": "Beyond Accuracy: What Are Speech Emotion Recognition Models Learning?",
+  "pdfUrl": "https://arxiv.org/pdf/2610.33952v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.31768v1",
+  "arxivId": "2610.31768",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.31768v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shuqi Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yuzhou Cao"
+    },
+    {
+      "affiliations": [
+        "College of Computing and Data Science, Nanyang Technological University"
+      ],
+      "name": "Luke Ong"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.31768v1",
+  "originalTitle": "Efficient Omni-modal Large Language Model Inference via Per-Query Modality Selection",
+  "pdfUrl": "https://arxiv.org/pdf/2610.31768v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,76 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.35846v1",
+  "abstract": "Expanding multilingual ASR systems to new languages is challenging when adaptation must preserve previously supported languages without replaying source-language training data. We study this problem in connector-based Speech LLMs, where a trainable connector maps speech representations into a frozen large language model. We evaluate target-update construction and merging strategies for adapting the connector while preserving source-language performance. In single-target expansion, target-only fine-tuning and standard TIES merging learn new languages but cause severe source-language forgetting, while SSU-Wanda+TIES gives the best source-preserving trade-off. In multi-target expansion, update merging provides stable source retention, whereas recursive expansion can improve target adaptation under favorable orders but is highly order-sensitive. These results show that multilingual ASR expansion requires balancing target acquisition, source retention, and interactions among target-language updates.",
+  "abstractSha256": "a37cbbf0faf083be9be123c3f3b5d7b6d78b5b9e66f071efd250d9ae7a7a69e4",
+  "arxivId": "2610.35846",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.35846v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "模型融合",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 5.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.model-combination",
+          "label": "模型融合"
+        },
+        {
+          "facet": "method",
+          "id": "method.continual",
+          "label": "持续学习"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "模型融合",
+      "primaryMethodId": "method.model-combination",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Institute for Analytics and Data Science, University of Essex",
+        "School of Computer Science and Electronic Engineering, University of Essex"
+      ],
+      "name": "Yuchen Zhang"
+    },
+    {
+      "affiliations": [
+        "Institute for Analytics and Data Science, University of Essex",
+        "School of Computer Science and Electronic Engineering, University of Essex"
+      ],
+      "name": "Haralambos Mouratidis"
+    },
+    {
+      "affiliations": [
+        "Institute for Analytics and Data Science, University of Essex",
+        "School of Computer Science and Electronic Engineering, University of Essex"
+      ],
+      "name": "Ravi Shekhar"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文研究在不回放源语言数据时只调连接器来加新语言，用源语言校准冻结加更新合并平衡新语言习得与旧语言保持，多目标时联合合并更稳而按序递归更看顺序。",
+  "originalTitle": "Preserve to Expand: Source-Aware Adaptation and Model Merging for Multilingual LLM-Based ASR",
+  "pdfUrl": "https://arxiv.org/pdf/2610.35846v1.pdf",
+  "readerTitle": "先保住旧语言再学新语言：面向多语言语音大模型的连接器扩展与合并",
+  "schemaVersion": 2
+}

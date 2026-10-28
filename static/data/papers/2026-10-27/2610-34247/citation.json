@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.34247v1",
+  "arxivId": "2610.34247",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.34247v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Andrea Poltronieri"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Matteo Spanio"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Simone Chieppa"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xavier Serra"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Martín Rocamora"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.34247v1",
+  "originalTitle": "Does Notation Matter? MusicXML Tokenisation for Symbolic Music Generation and Understanding",
+  "pdfUrl": "https://arxiv.org/pdf/2610.34247v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

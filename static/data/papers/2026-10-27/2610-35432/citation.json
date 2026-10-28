@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.35432v1",
+  "arxivId": "2610.35432",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.35432v1",
+  "authors": [
+    {
+      "affiliations": [
+        "ALTAE, Université Paris Cité, F-75013 Paris, France"
+      ],
+      "name": "Artem Saloev"
+    },
+    {
+      "affiliations": [
+        "ALTAE, Université Paris Cité, F-75013 Paris, France"
+      ],
+      "name": "Nicolas Ballier"
+    },
+    {
+      "affiliations": [
+        "SCIAM, 10 rue de Penthièvre, F-75008 Paris, France"
+      ],
+      "name": "Erin Pacquetet"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.35432v1",
+  "originalTitle": "Probing the phon* representations of the Mimi codebooks",
+  "pdfUrl": "https://arxiv.org/pdf/2610.35432v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

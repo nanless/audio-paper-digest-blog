@@ -1,0 +1,103 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.34688v1",
+  "abstract": "Speech interaction systems have gradually evolved from traditional cascaded systems that use text as intermediate information to end-to-end speech language models that directly process speech representations. In some applications, the speech frontend runs on the user's device and sends speech representations to a remote server for inference, while the original audio remains local. However, these representations may still contain speaker identity information. If an attacker obtains them, it may use this information to imitate the user's voice, threatening their voice privacy. To investigate this risk, we propose \\stia, a Speech Token Inversion Attack that generates speech with attacker-specified text in a victim's voice using a single short leaked representation, without access to the original audio or its transcript. Specifically, \\stia converts discrete, continuous, or mixed speech representations into conditioning sequences and trains a conditional flow-matching speech generation model using pairs of different utterances from the same speaker in public speech datasets. The model combines speaker characteristics contained in the leaked representation with the specified text to generate speech in the victim's voice. Experiments show that, with a Moshi representation leak corresponding to 3 seconds of speech, \\stia achieves an average CAM++ speaker cosine similarity of 0.78 and a target-text word error rate of 3.80\\%. These results show that speech frontend representations reveal reusable speaker identity information and highlight the need to consider privacy risks when designing speech frontend representation methods.",
+  "abstractSha256": "2756778a8320a30d7be2ad26ab47bd6d9d3cab0aa29117bf7690a7dae07905a5",
+  "arxivId": "2610.34688",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.34688v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "流匹配",
+    "primaryTask": "语音克隆",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.voice-cloning",
+          "label": "语音克隆"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "task",
+          "id": "task.privacy-attack-defense",
+          "label": "音频隐私攻击与防御"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-synthesis",
+          "label": "语音合成"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "流匹配",
+      "primaryMethodId": "method.flow-matching",
+      "primaryTask": "语音克隆",
+      "primaryTaskId": "task.voice-cloning",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ye Lu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shen Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Runze Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhitao Ou"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Haonan Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yihan Yan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Fanghui Sun"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhaoyang Zhang"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文研究仅截获 3 秒前端表征、无原始音频和 transcript 时能否生成攻击者指定文本的受害者声音，提出 STIA 跨话语条件流匹配生成方法，在 Moshi 上达到 CAM++ 0.78 与 WER 3.80%，代价是需大量辅助数据与 110 小时双卡训练。",
+  "originalTitle": "From Speech Tokens to Stolen Voices: Attacker-Chosen-Text Speaker Impersonation via Representation Inversion",
+  "pdfUrl": "https://arxiv.org/pdf/2610.34688v1.pdf",
+  "readerTitle": "只拿到一小段语音表征，能拼出任意文本的冒充语音吗",
+  "schemaVersion": 2
+}

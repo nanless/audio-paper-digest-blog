@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.34746v1",
+  "abstract": "In high-stakes domains such as finance, critical information evolves through multi-party interaction. Recovering these changes and their sources is fundamental to reliable speech understanding. Existing speech benchmarks focus on transcription, local understanding, and turn-level state prediction, leaving joint decision evolution across speakers insufficiently evaluated. We introduce DecisionTraceBench, a speech state-tracking benchmark for Decision-Critical Information State Tracking (DCIST). It jointly evaluates decision event sequences, speaker attribution, scope, and temporal evidence, using trajectory-level F1 to measure complete event-chain recovery. Our dataset comprises Chinese financial dialogues involving two to four speakers, with 100.39 hours of synthetic audio and 8.61 hours of human-performed recordings. On a fixed cohort of human-performed recordings, five cascaded systems and two direct-audio models achieve DCIST scores of 5.73% to 21.35%. Ablations with speaker-labeled reference scripts and no temporal localization requirements yield a maximum score of only 38.72%. Audio perturbation experiments further show that overall transcription error rates do not adequately reflect complete trajectory recovery. These findings reveal limitations in jointly understanding information provenance and state evolution, providing a benchmark for evaluating decision-process understanding and decision traceability in high-stakes speech applications.",
+  "abstractSha256": "e4a07c8f9116fbe5b457e39a6a31cb48ddb0a844d545be5690a9069a3617b48c",
+  "arxivId": "2610.34746",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.34746v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "口语理解",
+    "rankBucket": "前50%",
+    "score": 6.9,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.spoken-understanding",
+          "label": "口语理解"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "口语理解",
+      "primaryTaskId": "task.spoken-understanding",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "AI Lab, Qifu Technology, Beijing, China"
+      ],
+      "name": "Wenchao Du"
+    },
+    {
+      "affiliations": [
+        "AI Lab, Qifu Technology, Beijing, China"
+      ],
+      "name": "Fangxin Shang"
+    },
+    {
+      "affiliations": [
+        "AI Lab, Qifu Technology, Beijing, China"
+      ],
+      "name": "Long Wu"
+    },
+    {
+      "affiliations": [
+        "AI Lab, Qifu Technology, Beijing, China"
+      ],
+      "name": "Runze Cui"
+    },
+    {
+      "affiliations": [
+        "AI Lab, Qifu Technology, Beijing, China"
+      ],
+      "name": "Qing Yang"
+    },
+    {
+      "affiliations": [
+        "AI Lab, Qifu Technology, Beijing, China"
+      ],
+      "name": "Yehui Yang"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文提出中文金融多说话人语音基准 DecisionTraceBench，要求从原始音频恢复决策关键事件链并用 DCIST 打分，最强系统在真人录音上仅得 21.35%，证明只看转写错误率或末态数值会掩盖过程恢复失败。",
+  "originalTitle": "DecisionTraceBench: Tracking Decision-Critical Information in Multi-Party Spoken Conversations",
+  "pdfUrl": "https://arxiv.org/pdf/2610.34746v1.pdf",
+  "readerTitle": "只记住最后数字还不够：多说话人决策过程如何被完整追回",
+  "schemaVersion": 2
+}

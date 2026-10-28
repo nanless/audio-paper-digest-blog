@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.32202v1",
+  "arxivId": "2610.32202",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.32202v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhi-Wei Tan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "V. G. Reju"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ritesh C. Tewari"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ruotong Ding"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Patrick A. Naylor"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Andy W. H. Khong"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.32202v1",
+  "originalTitle": "ICASSP 2026 Radar Acoustic Speech Enhancement (RASE) Challenge",
+  "pdfUrl": "https://arxiv.org/pdf/2610.32202v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,33 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.32816v1",
+  "arxivId": "2610.32816",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.32816v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Research in Orthopedic Computer Science (ROCS), Balgrist University Hospital, University of Zurich, Zurich, Switzerland",
+        "Eberhard Karls Universität Tübingen, Germany"
+      ],
+      "name": "Dominic Behling"
+    },
+    {
+      "affiliations": [
+        "Research in Orthopedic Computer Science (ROCS), Balgrist University Hospital, University of Zurich, Zurich, Switzerland"
+      ],
+      "name": "Jonas Hein"
+    },
+    {
+      "affiliations": [
+        "Research in Orthopedic Computer Science (ROCS), Balgrist University Hospital, University of Zurich, Zurich, Switzerland"
+      ],
+      "name": "Matthias Seibold"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.32816v1",
+  "originalTitle": "Sounding Surgical Instrument Localisation through Audio-Visual Correspondence",
+  "pdfUrl": "https://arxiv.org/pdf/2610.32816v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

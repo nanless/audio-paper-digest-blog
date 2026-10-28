@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.34931v1",
+  "abstract": "Environmental noise identification is essential for noise control, yet conventional single-stage classifiers suffer from class confusion under imbalanced multiclass conditions. This paper proposes a lightweight hierarchical model integrating a Frequency-Time Adaptive Network (FTANet) with a two-stage classification mechanism. FTANet employs parallel asymmetric one-dimensional convolutions to capture temporal dynamics and frequency-band distributions, while adaptive fusion attention (AFA) enhances discriminative acoustic features. In the first stage, FTANet classifies sounds into five coarse-grained categories covering 25 fine-grained classes. In the second stage, samples are routed to the corresponding category-specific classifiers for fine-grained recognition. On a self-constructed dataset, FTANet achieves 95.45% coarse-grained accuracy with only 0.2004M parameters. On UrbanSound8K, it achieves 79.24% mean accuracy and 80.37% mean F1-score in ten-fold evaluation, outperforming compared convolutional models. Field tests on the Tianjin Online Acoustic Environment Monitoring Platform yield 87.94% coarse-grained accuracy and 97.21% conditional fine-grained accuracy for natural sounds correctly routed to C2. The complete hierarchical model achieves 87.18% overall accuracy and 87.40% weighted-average F1-score, demonstrating its feasibility for urban environmental noise monitoring.",
+  "abstractSha256": "f59ce848e55cc4583ceceeb5dcc13f7a731b27ac0499f81c30d87f275a7f1c2e",
+  "arxivId": "2610.34931",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.34931v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "CNN",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 6.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.cnn",
+          "label": "CNN"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.environmental",
+          "label": "环境声"
+        },
+        {
+          "facet": "method",
+          "id": "method.attention",
+          "label": "注意力机制"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "CNN",
+      "primaryMethodId": "method.cnn",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Zhouwen Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Haijun Lin"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Bowen Lv"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Yupeng Chen"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文用先分 5 个粗类别再在类内细分 25 类的方法降低混淆，以 0.2004M 参数的 FTANet 在自建集粗分类达 95.45%、25 类任务从 71.32% 提升到 81.49%，代价是两阶段推理时间从 0.2170 s 增加到 1.2390 s。",
+  "originalTitle": "A Hierarchical Method for Environmental Sounds Recognition in Complex Acoustic Scenes",
+  "pdfUrl": "https://arxiv.org/pdf/2610.34931v1.pdf",
+  "readerTitle": "复杂声场景下环境声音的两阶段分层识别：轻量时频自适应网络",
+  "schemaVersion": 2
+}

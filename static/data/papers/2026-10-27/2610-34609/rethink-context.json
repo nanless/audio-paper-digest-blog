@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.34609v1",
+  "abstract": "Reasoning is increasingly important for large audio-language models (LALMs), yet remains relatively underexplored compared with text-only and vision-language models. We introduce Audio-R1, a reinforcement learning (RL) post-training framework that revisits audio self-supervised learning as a source of verifiable rewards for improving audio understanding and reasoning task performance. Audio-R1 uses answers automatically determined during the construction of self-supervised tasks to verify model responses and compute rewards. Experiments across multiple LALMs and diverse audio benchmarks show consistent performance gains, while ablations demonstrate the benefits of each self-supervised task and additional gains from joint training. While both supervised fine-tuning and Audio-R1 improve self-supervised task accuracy, Audio-R1 further improves performance on downstream tasks distinct from the training tasks. These results highlight the potential of RL post-training with self-supervised audio tasks to improve downstream performance and reasoning-trace quality.",
+  "abstractSha256": "991fb246313b7f0fdfa73bfa44b665ddce74cf2c128f3aaac69cf0db26bafd37",
+  "arxivId": "2610.34609",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.34609v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "强化学习",
+    "primaryTask": "音频推理",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-reasoning",
+          "label": "音频推理"
+        },
+        {
+          "facet": "method",
+          "id": "method.reinforcement",
+          "label": "强化学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.self-supervised",
+          "label": "自监督学习"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.audio-language",
+          "label": "音频大模型"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.post-training",
+          "label": "后训练"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "强化学习",
+      "primaryMethodId": "method.reinforcement",
+      "primaryTask": "音频推理",
+      "primaryTaskId": "task.audio-reasoning",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jihoon Jeong"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Mirco Ravanelli"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhepei Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Cem Subakan"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对大音频语言模型推理不足且难用人工标注扩展的问题，Audio-R1 把三种自监督音频任务的构造答案转为可验证奖励做 GRPO 后训练，在四个基座和三个基准上取得一致增益，多任务联合优于单任务，而代价是奖励只看最终答案且增益依赖基座已有能力。",
+  "originalTitle": "Audio-R1: Audio Reasoning through Reinforcement Learning on Self-Supervised Tasks",
+  "pdfUrl": "https://arxiv.org/pdf/2610.34609v1.pdf",
+  "readerTitle": "Audio-R1：用自监督音频任务构造可验证奖励的强化学习后训练",
+  "schemaVersion": 2
+}

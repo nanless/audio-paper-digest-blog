@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.34156v1",
+  "abstract": "Existing anti-spoofing systems report either an utterance-level score or a time-based spoof interval: the former cannot show which words are spoofed, while the latter does not directly match the transcript and must be post-aligned with words, so alignment errors can lead to wrong word-level labels. Standard ASR model outputs only text; spoof information in the audio is lost after recognition and is not passed with the transcript. Yet changing only a few words can change the meaning of a sentence, leaving downstream systems to use incorrect text without knowing which words are spoofed. We therefore treat partial anti-spoofing as tagged ASR: the model transcribes speech and marks spoofed words at the same time, directly linking spoof labels to output words. We adopt the audio LLM and use ASR-Protected Subspace Gated Fusion (APSGF) to fuse spoof cues with ASR features. Spoof cues are added only outside an ASR-protected subspace, so they do not disturb recognition features. After cross-entropy training, we fine-tune the model with Reference-Anchored Policy Optimization (RAPO). Since the SFT policy is already concentrated, multiple samples from the same input tend to receive similar rewards, resulting in weak group-wise advantages. RAPO instead generates a single sample with low sampling randomness and anchors its advantage to the reward of a reference model. This allows the model to reinforce responses that outperform the reference while suppressing those that underperform it. Experiments on five datasets demonstrate the effectiveness of our approach in jointly detecting spoofed words and preserving ASR accuracy. The code is publicly available.",
+  "abstractSha256": "081b74f56f9b7a56535e45cad9520a7a24d7de8f33cfd6f85c605b2fe3fc8303",
+  "arxivId": "2610.34156",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.34156v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "强化学习",
+    "primaryTask": "语音伪造检测",
+    "rankBucket": "前50%",
+    "score": 7.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-spoofing",
+          "label": "语音伪造检测"
+        },
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.reinforcement",
+          "label": "强化学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.model-combination",
+          "label": "模型融合"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.audio-language",
+          "label": "音频大模型"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "强化学习",
+      "primaryMethodId": "method.reinforcement",
+      "primaryTask": "语音伪造检测",
+      "primaryTaskId": "task.speech-spoofing",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xueping Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xiaoxiao Miao"
+    },
+    {
+      "affiliations": [
+        "School of Artificial Intelligence, The Chinese University of Hong Kong, Shenzhen, China"
+      ],
+      "name": "Tiantian Feng"
+    },
+    {
+      "affiliations": [
+        "School of Artificial Intelligence, The Chinese University of Hong Kong, Shenzhen, China"
+      ],
+      "name": "Ming Li"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文把部分伪造检测做成带伪造标记的语音识别，用受保护子空间融合补充伪造线索并用参照锚定的策略优化同时改进转写和词级定位，在五个数据集的平均词错误率和词级 F1 上优于所比较的基线，但域外词级定位仍有明显下降且多任务设置并非处处有益。",
+  "originalTitle": "ASR-Protected Fusion and Reference-Anchored Policy Optimization for Joint ASR and Word-Level Speech Anti-Spoofing",
+  "pdfUrl": "https://arxiv.org/pdf/2610.34156v1.pdf",
+  "readerTitle": "带标签的语音识别：一次转写并标出被伪造的词",
+  "schemaVersion": 2
+}

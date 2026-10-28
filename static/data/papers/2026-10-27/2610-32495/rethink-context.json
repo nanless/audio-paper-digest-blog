@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.32495v1",
+  "abstract": "People differ in how they perceive music, what associations they make with it, what they like about it, and how they respond to it. Computational models intended to simulate people in environments that include music should account for these differences. Although LLMs have been shown to reproduce aspects of human behavior, whether audio-language models (ALMs) can reproduce a specific person's responses to textual and musical stimuli remains underexplored. We introduce MusicTwins, a framework that combines persona summaries, personal memory, and post-training to generate person-specific responses. We construct persona representations from human writings, capturing background, views, personality, writing style, and a musical profile, and post-train Audio Flamingo Next through supervised fine-tuning and reinforcement learning. Evaluation on ten held-out personas shows notable improvements for Audio Flamingo Next in persona fidelity, including personality, writing style, and responses to music, supporting MusicTwins as a foundation for training audio-language models to listen like their persona.",
+  "abstractSha256": "95daba8a3e395097bec1edf2665999bd2b38d93c6d2df7c5b52e3bc098a27d73",
+  "arxivId": "2610.32495",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.32495v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "检索增强",
+    "primaryTask": "音频问答",
+    "rankBucket": "前50%",
+    "score": 5.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-question-answering",
+          "label": "音频问答"
+        },
+        {
+          "facet": "task",
+          "id": "task.music-understanding",
+          "label": "音乐分析"
+        },
+        {
+          "facet": "method",
+          "id": "method.retrieval-augmented",
+          "label": "检索增强"
+        },
+        {
+          "facet": "method",
+          "id": "method.reinforcement",
+          "label": "强化学习"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "检索增强",
+      "primaryMethodId": "method.retrieval-augmented",
+      "primaryTask": "音频问答",
+      "primaryTaskId": "task.audio-question-answering",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Milan Liessens Dujardin"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kevin Miao"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文要解决音频语言模型能否按特定人的背景、观点、性格、文风和音乐反应来回答文本与音乐刺激的问题，采用人物摘要加个人记忆加共享模型三路分工与四类训练目标，在十个留出人物上用人物保真度与通用音乐理解联合评估，最强证据是音乐反应组合分提升而通用理解未明显遗忘，代价是古典音乐为主且人物被当作静态。",
+  "originalTitle": "MusicTwins: Training Audio-Language Models to Listen like Their Persona",
+  "pdfUrl": "https://arxiv.org/pdf/2610.32495v1.pdf",
+  "readerTitle": "MusicTwins：让音频语言模型按特定人的方式听音乐并回话",
+  "schemaVersion": 2
+}

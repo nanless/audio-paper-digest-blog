@@ -1,0 +1,158 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.31796v1",
+  "arxivId": "2610.31796",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.31796v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jingbin Hu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zihang Yang"
+    },
+    {
+      "affiliations": [
+        "Shenzhen Pimei Technology Co., Ltd."
+      ],
+      "name": "Xiaoge Peng"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Haoyu Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ziyu Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Qirui Zhan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Huakang Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhao Guo"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Wenjie Tian"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kangxiang Xia"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Wenkang Hou"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ruonan You"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zihan Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Chenyi Liao"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hongyu Lyu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zihao Bai"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jinrui Liang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shengming Lin"
+    },
+    {
+      "affiliations": [
+        "Shenzhen Pimei Technology Co., Ltd."
+      ],
+      "name": "Yunxiang Chen"
+    },
+    {
+      "affiliations": [
+        "Shenzhen Pimei Technology Co., Ltd."
+      ],
+      "name": "Houdun Liu"
+    },
+    {
+      "affiliations": [
+        "Shenzhen Pimei Technology Co., Ltd."
+      ],
+      "name": "Su Feng"
+    },
+    {
+      "affiliations": [
+        "Yutu Zhineng"
+      ],
+      "name": "Bengu Wu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Liumeng Xue"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Lei Xie"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.31796v1",
+  "originalTitle": "DRAMA-Eval: A Benchmark for Context-Aware, Multi-Turn, Multi-Speaker Speech Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.31796v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

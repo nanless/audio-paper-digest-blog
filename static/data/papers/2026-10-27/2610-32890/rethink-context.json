@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.32890v1",
+  "abstract": "While multimodal contrastive models like CLIP and CLAP successfully learn shared representations, their embeddings typically exhibit a persistent \\emph{modality gap}. We propose addressing this separation through a purely geometric approach: changing the embedding domain from the unit sphere, $S^{d-1}$, to the probability simplex, $Δ^{d-1}$. Although both manifolds share the same intrinsic dimension, the simplex acts as a structural prior; its nonnegative, unit-mass constraints serve as a cross-modal calibration that forces both modalities to ground themselves in the same coordinate system. By attaching lightweight softmax adapters and using Total Variation similarity, we reduce the centroid $\\ell_2$ gap by 97--99\\% across five multimodal retrieval benchmarks. This confirms that simplicial geometry induces genuine semantic alignment, matching or exceeding the retrieval performance of standard unconstrained models.",
+  "abstractSha256": "6874a0095635f991dab8a0abedc2d2d3b41ab236e1822e4b189b1606c50fc020",
+  "arxivId": "2610.32890",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.32890v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "统一多模态检索",
+    "rankBucket": "前50%",
+    "score": 6.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.unified-multimodal-retrieval",
+          "label": "统一多模态检索"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-retrieval",
+          "label": "音频检索"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.contrastive",
+          "label": "对比学习"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "统一多模态检索",
+      "primaryTaskId": "task.unified-multimodal-retrieval",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shubham Gupta"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Siva Reddy"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Perouz Taslakian"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Valentina Zantedeschi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Cem Subakan"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "本文把冻结 backbone 后的输出域从单位球面换到概率单纯形，用轻量适配器加 softmax 与 Total Variation 相似度做对比学习，在五个音频文本与图文检索基准上把质心 l2 间隔缩小 97-99% 且保持 NDCG@10。",
+  "originalTitle": "Closing the Modality Gap via Simplex-Constrained Representations",
+  "pdfUrl": "https://arxiv.org/pdf/2610.32890v1.pdf",
+  "readerTitle": "把嵌入门从球面换到单纯形来缩小模态间隔",
+  "schemaVersion": 2
+}

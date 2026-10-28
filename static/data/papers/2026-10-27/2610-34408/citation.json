@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.34408v1",
+  "arxivId": "2610.34408",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.34408v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yuheng Lu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Qiulin Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xi Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yang Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shengpei Jiang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Liyin Liang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yifeng Qian"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Longbiao Wang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.34408v1",
+  "originalTitle": "LeanTTS: Efficient Full-Stack Bilingual TTS for Zero-Shot Cloning and Voice Customization",
+  "pdfUrl": "https://arxiv.org/pdf/2610.34408v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

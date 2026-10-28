@@ -1,0 +1,39 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.32382v1",
+  "arxivId": "2610.32382",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.32382v1",
+  "authors": [
+    {
+      "affiliations": [
+        "ALTA Institute, Department of Engineering, University of Cambridge",
+        "Department of Computational Linguistics, University of Zurich"
+      ],
+      "name": "Ahmet Yavuz Uluslu"
+    },
+    {
+      "affiliations": [
+        "ALTA Institute, Department of Engineering, University of Cambridge"
+      ],
+      "name": "Mengjie Qian"
+    },
+    {
+      "affiliations": [
+        "ALTA Institute, Department of Engineering, University of Cambridge"
+      ],
+      "name": "Kate Knill"
+    },
+    {
+      "affiliations": [
+        "ALTA Institute, Department of Engineering, University of Cambridge"
+      ],
+      "name": "Mark Gales"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.32382v1",
+  "originalTitle": "Acoustic and Lexical Signals for Native Language Identification of Language Learners",
+  "pdfUrl": "https://arxiv.org/pdf/2610.32382v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

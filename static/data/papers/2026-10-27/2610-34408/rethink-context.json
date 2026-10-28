@@ -1,0 +1,108 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.34408v1",
+  "abstract": "While recent advances in text-to-speech (TTS) synthesis have substantially improved speech quality and modeling flexibility, the development of lightweight and computationally efficient systems remains comparatively underexplored. We present LeanTTS, a bilingual complete synthesis stack that supports two complementary regimes: reference-prompt zero-shot cloning for unseen speakers and token-conditioned customization for recurring voices. LeanTTS combines a compact Mandarin polyphone front end, a structurally compressed flow-matching acoustic model, and a lightweight Vocos decoder with four-step MeanFlow generation. The resulting system contains 18.9M learned parameters, 86.12% fewer than the 136.2M-parameter ZipVoice-Vocos pipeline. On Seed-TTS-Eval, its zero-shot mode obtains 2.02 CER/62.3 SIM on Mandarin and 2.32 WER/48.3 SIM on English, exposing the quality-size trade-off under aggressive compression. With token-conditioned customized voices, the same system reaches 1.57 CER/77.2 SIM on Mandarin and 1.93 WER/76.6 SIM on English, with UTMOS scores of 3.03 and 4.33, respectively. It further achieves mean/P90 CPU RTFs of 0.049/0.061, establishing a sub-20M operating point for bilingual personalization and real-time CPU deployment. Audio demos are available at https://github.com/notlu/leantts.",
+  "abstractSha256": "70a2c91d779f36bb74069c003fecb82f53d5152f04ed444a10b045f195fa7523",
+  "arxivId": "2610.34408",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.34408v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "模型压缩",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前50%",
+    "score": 6.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.compression",
+          "label": "模型压缩"
+        },
+        {
+          "facet": "task",
+          "id": "task.voice-cloning",
+          "label": "语音克隆"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "模型压缩",
+      "primaryMethodId": "method.compression",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yuheng Lu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Qiulin Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xi Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yang Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shengpei Jiang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Liyin Liang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yifeng Qian"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Longbiao Wang"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "LeanTTS 把中文发音前端、流匹配声学模型和 Vocos 声码器一起压缩到 18.9M 参数，用参考音频做零样本克隆、用说话人标签做固定音色定制，在 Seed-TTS-Eval 上验证了质量、相似度和 CPU 实时率之间的取舍。",
+  "originalTitle": "LeanTTS: Efficient Full-Stack Bilingual TTS for Zero-Shot Cloning and Voice Customization",
+  "pdfUrl": "https://arxiv.org/pdf/2610.34408v1.pdf",
+  "readerTitle": "LeanTTS：不到 20M 参数如何同时做零样本克隆和固定音色定制",
+  "schemaVersion": 2
+}

@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.33434v1",
+  "arxivId": "2610.33434",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.33434v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Wei-Han Hsu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Li-Jie Lin"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Po-Hsuan Lai"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Po-Hsiang Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jeng-Yue Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Li Su"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yi-Hsuan Yang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.33434v1",
+  "originalTitle": "DJustify: Reason-and-Verify DJ Planning for Pop Transitions and Story-Driven Sets",
+  "pdfUrl": "https://arxiv.org/pdf/2610.33434v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

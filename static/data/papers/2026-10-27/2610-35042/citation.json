@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.35042v1",
+  "arxivId": "2610.35042",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.35042v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Haotian Tan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hiroki Ouchi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Sakriani Sakti"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.35042v1",
+  "originalTitle": "SimPOTrans: Self-Adaptation for Offline-to-Simultaneous Speech Translation via Reinforcement Learning",
+  "pdfUrl": "https://arxiv.org/pdf/2610.35042v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

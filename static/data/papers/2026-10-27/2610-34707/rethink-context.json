@@ -1,0 +1,97 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.34707v1",
+  "abstract": "This paper presents S2SND-v2, a unified online and offline speaker diarization framework built on S2SND that improves acoustic feature extraction and the use of the resulting representations. For acoustic feature extraction, we introduce a speaker-adapted w2v-BERT 2.0 front end and compare full and pruned construction routes. To better use these features, overlap-aware activity-query masking improves speaker embedding extraction under overlap, while late-speaker training aligns unknown-speaker training with online inference conditions. Combining these improvements, the pruned system achieves competitive average diarization error rates of 14.52% online and 12.03% offline across eight test sets.",
+  "abstractSha256": "11fc280824e32d3f8ab42fe36ff8b8b3d51aeae22d5e39cc4ff92329e82944df",
+  "arxivId": "2610.34707",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.34707v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "自监督学习",
+    "primaryTask": "说话人分离标注",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.diarization",
+          "label": "说话人分离标注"
+        },
+        {
+          "facet": "method",
+          "id": "method.self-supervised",
+          "label": "自监督学习"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.online-inference",
+          "label": "在线推理"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.offline-inference",
+          "label": "离线推理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "自监督学习",
+      "primaryMethodId": "method.self-supervised",
+      "primaryTask": "说话人分离标注",
+      "primaryTaskId": "task.diarization",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jincheng Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Li Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Weixin Zhu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yannan Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Tao Yu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Juan Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ming Li"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "S2SND-v2 用说话人适配的 w2v-BERT 2.0 做前端并改进查询构造与训练，在八个测试集上剪枝系统在线平均错误率 14.52%、离线 12.03%，代价是前端仍需大规模预训练与多阶段日志训练。",
+  "originalTitle": "S2SND-v2: Unified Online and Offline Speaker Diarization with Speaker-Adapted w2v-BERT 2.0",
+  "pdfUrl": "https://arxiv.org/pdf/2610.34707v1.pdf",
+  "readerTitle": "S2SND-v2：统一在线与离线的说话人日志系统",
+  "schemaVersion": 2
+}

@@ -1,0 +1,75 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.32332v1",
+  "arxivId": "2610.32332",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.32332v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Nanyang Technological University"
+      ],
+      "name": "Yanhao Jia"
+    },
+    {
+      "affiliations": [
+        "Token Foundry, Alibaba"
+      ],
+      "name": "Yi Zhu"
+    },
+    {
+      "affiliations": [
+        "Token Foundry, Alibaba"
+      ],
+      "name": "Yiran Zhong"
+    },
+    {
+      "affiliations": [
+        "Token Foundry, Alibaba"
+      ],
+      "name": "Weigao Sun"
+    },
+    {
+      "affiliations": [
+        "Token Foundry, Alibaba"
+      ],
+      "name": "Feida Zhu"
+    },
+    {
+      "affiliations": [
+        "Token Foundry, Alibaba"
+      ],
+      "name": "Pengkun Jiao"
+    },
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong"
+      ],
+      "name": "Sihan Yang"
+    },
+    {
+      "affiliations": [
+        "Institute of Neuroscience, Chinese Academy of Sciences",
+        "University of Chinese Academy of Sciences"
+      ],
+      "name": "Ming Ma"
+    },
+    {
+      "affiliations": [
+        "Token Foundry, Alibaba"
+      ],
+      "name": "Steven Hoi"
+    },
+    {
+      "affiliations": [
+        "Nanyang Technological University"
+      ],
+      "name": "Erik Cambria"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.32332v1",
+  "originalTitle": "4DMemory: Benchmarking Long-Horizon Spatiotemporal Memory with Harness-Augmented Agents",
+  "pdfUrl": "https://arxiv.org/pdf/2610.32332v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

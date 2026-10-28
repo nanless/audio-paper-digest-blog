@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.33127v1",
+  "arxivId": "2610.33127",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.33127v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Pu Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hugo Van hamme"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.33127v1",
+  "originalTitle": "Beyond Visible Speakers: Context-Aware Active Speaker Detection with Speaker Registration",
+  "pdfUrl": "https://arxiv.org/pdf/2610.33127v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

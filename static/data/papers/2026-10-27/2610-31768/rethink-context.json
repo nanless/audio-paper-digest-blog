@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.31768v1",
+  "abstract": "Omni-modal large language models (Omni-LLMs) can jointly process a broad range of modalities, such as text, audio, and video, enabling stronger multimodal understanding and reasoning capabilities, but often at substantial inference cost. We observe that the benefit of additional modalities varies across queries, indicating that a fixed modality configuration can be inefficient. Motivated by this, we study query-wise modality selection, which keeps the underlying Omni-LLM fixed while adaptively selecting which modalities to provide for each query. We formulate the problem as an accuracy-cost optimization problem and develop a cost-sensitive learning approach for modality selection. We evaluate our approach on WorldSense using Qwen2.5-Omni and Qwen3-Omni under three inference-cost measures: input tokens, latency, and monetary cost. Across both models, query-wise modality selection consistently improves the accuracy-cost trade-off and can even outperform the standard setting in which all available modalities are provided to the Omni-LLM. For Qwen2.5-Omni, our cost-sensitive approach matches or exceeds this full-modality accuracy while requiring only approximately 41% of the input tokens, 39% of the latency, and 61% of the monetary cost.",
+  "abstractSha256": "24c317bf4ddcee5b2d0dbb0ee4a0f6a6fcfdfce98b0ab4c4fdf8f967a271bb47",
+  "arxivId": "2610.31768",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.31768v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "动态计算与早退",
+    "primaryTask": "音视频问答",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-question-answering",
+          "label": "音视频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.dynamic-computation",
+          "label": "动态计算与早退"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "动态计算与早退",
+      "primaryMethodId": "method.dynamic-computation",
+      "primaryTask": "音视频问答",
+      "primaryTaskId": "task.av-question-answering",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shuqi Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yuzhou Cao"
+    },
+    {
+      "affiliations": [
+        "College of Computing and Data Science, Nanyang Technological University"
+      ],
+      "name": "Luke Ong"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "本文研究固定全模态大模型推理时按查询只在必要时加入视频，在 WorldSense 上用代价敏感学习在保持全模态精度的同时大幅降低输入 token、时延和费用，但结论只在二选一文本加音频与文本加音频加视频、文本嵌入路由的条件下成立。",
+  "originalTitle": "Efficient Omni-modal Large Language Model Inference via Per-Query Modality Selection",
+  "pdfUrl": "https://arxiv.org/pdf/2610.31768v1.pdf",
+  "readerTitle": "每个问题都要看视频吗：按查询选择模态的推理省钱法",
+  "schemaVersion": 2
+}

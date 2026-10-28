@@ -1,0 +1,96 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.32373v1",
+  "abstract": "Co-speech motion generation remains challenging over long horizons due to the need for temporal coherence and consistent style. Existing methods typically generate long motions segment by segment, either conditioning on a short seed of recent frames, which gradually drifts, or retaining ever-longer explicit histories, which are costly to maintain and hard to learn from limited data. We trace these limitations to a key asymmetry between past and present: past motion carries slowly varying style that should be compactly summarized, whereas the current segment exhibits fast-changing local dynamics that require fine-grained modeling. This asymmetry motivates a simple Past-As-State, Present-as-Attention principle for long-horizon co-speech motion generation. Following this principle, we propose PASPA, which summarizes past history with an inter-block persistent state and models the current segment with intra-block bidirectional self-attention. We instantiate PASPA within a blockwise flow matching framework, with multi-block supervision for effective training over variable histories, prefill-decode state caching for efficient rollout, and hybrid classifier-free guidance for enhanced history and speech conditioning. Extensive public-benchmark experiments show that PASPA achieves state-of-the-art FGD performance and preserves motion style across long-sequence generation.",
+  "abstractSha256": "d401606f66bbb72f5f41dde1cfc067554531fda34a3a7ae57b0c93ee9a052336",
+  "arxivId": "2610.32373",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.32373v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "流匹配",
+    "primaryTask": "语音驱动手势生成",
+    "rankBucket": "前50%",
+    "score": 6.9,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-driven-gesture",
+          "label": "语音驱动手势生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.state-space",
+          "label": "状态空间模型"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.long-audio",
+          "label": "长音频处理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "流匹配",
+      "primaryMethodId": "method.flow-matching",
+      "primaryTask": "语音驱动手势生成",
+      "primaryTaskId": "task.speech-driven-gesture",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Tongji University"
+      ],
+      "name": "Yi Liu"
+    },
+    {
+      "affiliations": [
+        "The University of Tokyo"
+      ],
+      "name": "Xiangyue Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jianfang Li"
+    },
+    {
+      "affiliations": [
+        "Tongji University"
+      ],
+      "name": "Jia Ma"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yisheng He"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jianqiang Ren"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对随语音生成长时间全身动作时会风格漂移和历史代价增大的问题，PASPA 把远历史压缩为跨块持续状态、把当前块用双向注意力精细建模，并在块式流匹配下用多块监督与混合引导训练推理，在 BEAT2 与 SHOW 上取得最优的生成质量指标，但长尾大位移与超长记忆仍有限制。",
+  "originalTitle": "Past as State, Present as Attention: Persistent-State Blockwise Flow Matching for Long-Horizon Co-Speech Motion Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.32373v1.pdf",
+  "readerTitle": "把过去记成状态、把现在做成注意力：面向长时语音手势的块式流匹配",
+  "schemaVersion": 2
+}

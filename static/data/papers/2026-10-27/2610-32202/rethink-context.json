@@ -1,0 +1,96 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.32202v1",
+  "abstract": "This paper presents the ICASSP 2026 Radar Acoustic Speech Enhancement (RASE) Grand Challenge, the first community challenge dedicated to benchmarking speech enhancement from millimeter-wave (mmWave) radar vibrometry. The challenge targets realistic through-glass sensing scenarios where microphones are ineffective or impractical. We introduce a curated dataset of paired radar and clean speech recordings, standardized preprocessing, a baseline system, and a secure Codabench-based evaluation framework with unified objective metrics. The RASE Challenge establishes the first public benchmark for radar-based speech enhancement and aims to foster reproducible research in this emerging field.",
+  "abstractSha256": "e7a19619859658f6c5f73d6bbe9e2cd78e4d6f2acb272658386b0654cb1e4616",
+  "arxivId": "2610.32202",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.32202v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "语音增强",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-enhancement",
+          "label": "语音增强"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.vibration",
+          "label": "振动信号"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "语音增强",
+      "primaryTaskId": "task.speech-enhancement",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhi-Wei Tan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "V. G. Reju"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ritesh C. Tewari"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ruotong Ding"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Patrick A. Naylor"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Andy W. H. Khong"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "RASE 针对雷达隔玻璃测振动恢复语音的任务，提供配对雷达与干净语音数据、统一基线与保密评测，用直接振膜和二次表面两种条件加四个客观指标综合排名，首名综合分最高但可懂度绝对值仍低，说明方向可行但远未解决。",
+  "originalTitle": "ICASSP 2026 Radar Acoustic Speech Enhancement (RASE) Challenge",
+  "pdfUrl": "https://arxiv.org/pdf/2610.32202v1.pdf",
+  "readerTitle": "隔着玻璃听清说话：毫米波雷达语音增强挑战赛 RASE 在做什么",
+  "schemaVersion": 2
+}

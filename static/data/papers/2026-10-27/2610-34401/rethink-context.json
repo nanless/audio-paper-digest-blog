@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.34401v1",
+  "abstract": "Spatial audio is central to immersive 360$^\\circ$ media, yet existing audio-visual spatialization renders the scene as a whole, leaving no control over an individual source. We introduce Audio-Visual Query-conditioned Target Sound Spatialization (AV-QTSS): given a monaural multi-source mixture, a 360$^\\circ$ video and a class query from the 13-class DCASE sound-event ontology, it generates the first-order Ambisonics (FOA) signal of the queried source alone. The omnidirectional mixture contains no explicit spatial cues, so direction has to be inferred from the video, where several objects may sound at once. We propose a query-conditioned dense binding localizer that predicts a spherical probability map over the whole scene, coupled to the renderer so both are optimized jointly. Experiments with one to four concurrent sources show improved localization and spatial accuracy relative to established methods and ablated variants, and the localizer transfers to real 360$^\\circ$ recordings after adaptation.",
+  "abstractSha256": "88143e41f68425f5f218e5a85688c8f451f99efc8df9a3d93674c8a93eb9713c",
+  "arxivId": "2610.34401",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.34401v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "空间音频渲染",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.spatial-rendering",
+          "label": "空间音频渲染"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "task",
+          "id": "task.localization",
+          "label": "声源定位"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.spatial-audio",
+          "label": "空间音频信号"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "空间音频渲染",
+      "primaryTaskId": "task.spatial-rendering",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Qingyu Luo"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Peng Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Wenwu Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Philip J. B. Jackson"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "AV-QTSS 用类别查询先分离目标单声道、再用稠密绑定定位图给出方向并渲染三路方向通道，在 1 到 4 声源合成集上把角度误差降到 23.3 度并在真实录音适配后提升定位，代价是只处理封闭集内且处于活动状态的查询。",
+  "originalTitle": "AV-QTSS: Class-Query Target Sound Spatialization in Multi-Source 360$^\\circ$ Videos",
+  "pdfUrl": "https://arxiv.org/pdf/2610.34401v1.pdf",
+  "readerTitle": "只渲染你点名的那个声音：AV-QTSS 如何从单声道混合与全景视频生成目标 FOA",
+  "schemaVersion": 2
+}

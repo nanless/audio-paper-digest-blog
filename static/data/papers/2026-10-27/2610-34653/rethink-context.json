@@ -1,0 +1,90 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.34653v1",
+  "abstract": "Latency-sensitive spoken agents must know not only which tool to call, but also when they have heard enough to act. Waiting for the turn to complete delays execution even when the request is already actionable. However, neither existing spoken agents nor spoken dialogue corpora define the earliest point at which a request becomes actionable. We introduce a synthetic spoken-dialogue pipeline that provides earliest-actionable-point supervision, marking when the observed speech grounds a tool and its required arguments. Through controlled task generation, speech synthesis and alignment, and gated annotation, we construct 26,694 dialogues totaling 786 hours across 48 domains, with disjoint training and test argument values. We additionally create an audio rendering of $τ^2$-bench for external evaluation. We train an omni-modal language model on this corpus, enabling causal, chunk-level decisions and partial-transcript generation for downstream call completion. The model achieves tool-state macro-F1 scores of 0.48 and 0.47 on held-out dialogues and the external benchmark, respectively. For correct calls, the estimated mean lead over a turn-end cascade, using the same formatter, is 1.8-2.0 seconds in-domain and 1.1 seconds on $τ^2$-bench. These results demonstrate a data-driven path toward spoken agents that act while listening. We will open-source the pipeline and the training scripts.",
+  "abstractSha256": "e098e53f8902162dae306a2db71963dd22e5e0eca99c9a9cd3b2de09aac243a5",
+  "arxivId": "2610.34653",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.34653v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "工具增强与约束解码",
+    "primaryTask": "语音代理规划与工具使用",
+    "rankBucket": "前50%",
+    "score": 6.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.voice-agent-planning",
+          "label": "语音代理规划与工具使用"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-dialogue",
+          "label": "语音对话系统"
+        },
+        {
+          "facet": "method",
+          "id": "method.tool-augmentation",
+          "label": "工具增强与约束解码"
+        },
+        {
+          "facet": "method",
+          "id": "method.lora",
+          "label": "LoRA"
+        },
+        {
+          "facet": "method",
+          "id": "method.dataset-curation",
+          "label": "数据集构建"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "工具增强与约束解码",
+      "primaryMethodId": "method.tool-augmentation",
+      "primaryTask": "语音代理规划与工具使用",
+      "primaryTaskId": "task.voice-agent-planning",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yizhou Peng"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Chen Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Donghang Wu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hexin Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Eng Siong Chng"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "该文把提前调用工具定义为逐块判断工具与全部参数何时在已听语音中被锚定，用合成对齐流水线给出最早可行动时刻监督，并在同域与音频版外部基准上以正确调用平均提前约 1.8 秒到 2.0 秒和 1.1 秒为证据，代价是触发精确率仍不足六成。",
+  "originalTitle": "Heard Enough to Act: Early Tool Calling in Spoken Dialogue Systems",
+  "pdfUrl": "https://arxiv.org/pdf/2610.34653v1.pdf",
+  "readerTitle": "没听完就动手：语音对话系统何时可以提前调用工具",
+  "schemaVersion": 2
+}

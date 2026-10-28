@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.34991v1",
+  "arxivId": "2610.34991",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.34991v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Junho Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "CheHyun Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Donghun Kang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Youngho Cho"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Dongwook Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Heeseung Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Sungroh Yoon"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.34991v1",
+  "originalTitle": "Diagnosing and Mitigating Long-Session Degradation in Full-Duplex Speech Models",
+  "pdfUrl": "https://arxiv.org/pdf/2610.34991v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

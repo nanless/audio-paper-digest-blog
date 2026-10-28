@@ -1,0 +1,80 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.32382v1",
+  "abstract": "Spoken native language (L1) identification for second language learners has traditionally relied on acoustic attributes of speech. Comparatively little attention has been paid to analysing speech transcripts for L1 traces. In this paper, we present a study of L1 identification using both speech and corresponding transcripts from a spoken learner English corpus. We compare a WavLM-based audio L1 classifier with a zero-shot GPT-4o classifier operating on transcripts and analyse their predictions across proficiency levels using a CEFR-balanced evaluation set. Our experiments show that the audio classifier outperforms the transcript-based approach overall when full transcripts are available, although their relative strengths vary with learner proficiency. Audio performs better at A1, whereas text performs better from A2 to C1 with full transcripts. Transcript-based accuracy generally increases with proficiency, while acoustic performance remains comparatively stable. Restricting transcript length substantially reduces text-based accuracy, whereas audio is less sensitive to input length and performs relatively well with limited input. These findings provide insights into L1 identification from acoustic and textual representations of learner speech and how performance varies with proficiency and the amount of available language material.",
+  "abstractSha256": "d8095b4f49c8c2b96ff45a2c60cd304c473d66e8a133f20bab4918bb1e2f3d7c",
+  "arxivId": "2610.32382",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.32382v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "模型集成",
+    "primaryTask": "语言识别",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.language-identification",
+          "label": "语言识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.model-ensemble",
+          "label": "模型集成"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "模型集成",
+      "primaryMethodId": "method.model-ensemble",
+      "primaryTask": "语言识别",
+      "primaryTaskId": "task.language-identification",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "ALTA Institute, Department of Engineering, University of Cambridge",
+        "Department of Computational Linguistics, University of Zurich"
+      ],
+      "name": "Ahmet Yavuz Uluslu"
+    },
+    {
+      "affiliations": [
+        "ALTA Institute, Department of Engineering, University of Cambridge"
+      ],
+      "name": "Mengjie Qian"
+    },
+    {
+      "affiliations": [
+        "ALTA Institute, Department of Engineering, University of Cambridge"
+      ],
+      "name": "Kate Knill"
+    },
+    {
+      "affiliations": [
+        "ALTA Institute, Department of Engineering, University of Cambridge"
+      ],
+      "name": "Mark Gales"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文比较同一批学习者英语回答上的声音分类器与文本零样本分类，完整文本下音频总体更准但优势随水平和输入量变化，而两者融合明显更好，但结论只在六种母语、A1 到 C1 的平衡评测条件下成立。",
+  "originalTitle": "Acoustic and Lexical Signals for Native Language Identification of Language Learners",
+  "pdfUrl": "https://arxiv.org/pdf/2610.32382v1.pdf",
+  "readerTitle": "从学习者英语中判断母语：声音线索与文本线索如何分工",
+  "schemaVersion": 2
+}

@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.34814v1",
+  "arxivId": "2610.34814",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.34814v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yiwei Guo"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hao Qiu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Mohan Ye"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhijie Deng"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zehua Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kai Yu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.34814v1",
+  "originalTitle": "TIMUSE: Text-Initialized Masked Semantic Token Modeling for Universal Speech Enhancement",
+  "pdfUrl": "https://arxiv.org/pdf/2610.34814v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

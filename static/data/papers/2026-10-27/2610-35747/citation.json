@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.35747v1",
+  "arxivId": "2610.35747",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.35747v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Liu He"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xi Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jiahong Yuan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yuanchao Li"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.35747v1",
+  "originalTitle": "Correspondence Is Not Transfer: A Pairing-Controlled Audit of Clinical Audio-Metadata Alignment",
+  "pdfUrl": "https://arxiv.org/pdf/2610.35747v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.33127v1",
+  "abstract": "Active speaker detection (ASD) relies on audiovisual correspondence between speech and visible faces, yet this correspondence becomes unreliable in crowded scenes, or when visual evidence is unavailable. We introduce ROAM-ASD-C and ROAM-ASD-CR to extend ROAM-ASD with contextual and identity-aware reasoning. ROAM-ASD-C jointly reasons across simultaneously visible candidates, allowing other faces to provide complementary evidence when the target observation is ambiguous or incomplete. ROAM-ASD-CR incorporates registered-speaker representations derived from enrollment speech, allowing detection of whether a speaker is active even when that speaker is not visually observed. ROAM-ASD-C achieves state-of-the-art performance across five ASD benchmarks: 96.8% mAP on AVA, 98.9% on WASD, 88.8% on UniTalk, 98.7% on Talkies, and 99.5% on ASW. It also improves ROAM-ASD by up to 13.3 mAP under 75% target-track visual removal.",
+  "abstractSha256": "771d74387020f241fc6d384c96353ce29f34de5b85d86c53df8f0b291ae2228d",
+  "arxivId": "2610.33127",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.33127v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "可见活跃说话人检测",
+    "rankBucket": "前50%",
+    "score": 7.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.active-speaker-detection",
+          "label": "可见活跃说话人检测"
+        },
+        {
+          "facet": "task",
+          "id": "task.face-voice-association",
+          "label": "人脸与声音身份关联"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.transformer",
+          "label": "Transformer"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "可见活跃说话人检测",
+      "primaryTaskId": "task.active-speaker-detection",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Pu Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hugo Van hamme"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文针对多人遮挡和看不见目标人脸时声画对应失效的问题，用同时可见人脸之间的上下文推理和注册语音身份推理来补证据，在五个基准上提升了检测精度，并在视觉缺失下保留注册说话人检测能力，但增益集中在拥挤困难条件且注册分支依赖事先录入语音。",
+  "originalTitle": "Beyond Visible Speakers: Context-Aware Active Speaker Detection with Speaker Registration",
+  "pdfUrl": "https://arxiv.org/pdf/2610.33127v1.pdf",
+  "readerTitle": "看不见说话人时还能判断谁在说话吗：多人上下文与注册身份的说话人检测",
+  "schemaVersion": 2
+}

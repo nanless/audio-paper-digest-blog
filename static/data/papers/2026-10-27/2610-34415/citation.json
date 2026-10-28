@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.34415v1",
+  "arxivId": "2610.34415",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.34415v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kam Man Wu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yu Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Pengjun Fang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Mingfei Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Weijia Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zeyue Tian"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Qifeng Chen"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.34415v1",
+  "originalTitle": "Spatial Audio Generation and Editing with Executable Plans and Self-Distilling Transfusion",
+  "pdfUrl": "https://arxiv.org/pdf/2610.34415v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

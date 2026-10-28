@@ -1,0 +1,96 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.35816v1",
+  "abstract": "Editing multi-camera concerts requires coordinated decisions about musical relevance, visual quality and cut timing. We present a modular framework that combines instrument activity from multitrack audio, visible instruments and image sharpness with beat-based timing and probabilistic camera selection. An interpretable scoring model links these components to the choice of views over complete shot intervals. Component tests and an exploratory expert study on a four-camera concert yield mixed assessments across the editing variants. The findings motivate extending local audiovisual relevance with contextual and sequence-level criteria. The architecture provides a basis for testing these extensions and studying how component behaviour affects the quality of complete edits.",
+  "abstractSha256": "ae95cc6fbcec10eee4334b8b5805e79e9a98b4c43d54ca02837c42ec8225951d",
+  "arxivId": "2610.35816",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.35816v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "规则与词典方法",
+    "primaryTask": "视频摘要与片段选择",
+    "rankBucket": "后50%",
+    "score": 5.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.video-summarization",
+          "label": "视频摘要与片段选择"
+        },
+        {
+          "facet": "method",
+          "id": "method.rule-based",
+          "label": "规则与词典方法"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "method",
+          "id": "method.human-evaluation",
+          "label": "人类参与评测"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "规则与词典方法",
+      "primaryMethodId": "method.rule-based",
+      "primaryTask": "视频摘要与片段选择",
+      "primaryTaskId": "task.video-summarization",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Lennart Schiweck"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Adrian Kempf"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Michelle Retig"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Moritz Feucht"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Tim Mangliers"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Benjamin Himpel"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "该研究用分轨音频能量、可视乐器框与清晰度组成可解释打分并按节拍切分选景，在一场四机位爵士音乐会的三位专家试评中预测打分版整体评价未超过随机选景，说明局部视听相关性不足以决定成片质量。",
+  "originalTitle": "Multimodal Concert Video Editing: System Design and Exploratory Evaluation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.35816v1.pdf",
+  "readerTitle": "多机位音乐会视频如何按乐器活动与节拍自动选景",
+  "schemaVersion": 2
+}

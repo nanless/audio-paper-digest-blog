@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.32061v1",
+  "abstract": "Large audio-language models (LALMs) can assess cognitive impairment (CI) from speech, yet their answers reveal neither which internal components control the decision nor how much CI information is accessible in their representations. We investigate both questions through CI-contrast neurons (CICNs), selected by class-contrastive activation frequency in decoder MLPs. Across eight open LALMs and two corpora (Pitt and PROCESS-2), we causally test CICNs against size- and layer-matched random masks and activity-matched controls. In three of the five models that meet our eligibility criteria, ablation of small CICN sets causes large, class-directed prediction shifts; speech-identified masks also control transcript-only decisions, and three of four primary Pitt masks retain specificity on PROCESS-2. Position-restricted interventions locate the influence before the final answer position, most strongly after the speech or transcript evidence under letter-labeled options, largely as a decision-direction shift. Beyond causal localization, supervised linear readouts of frozen CICN activations achieve 0.92--0.97 AUC within Pitt, versus 0.67--0.84 for the models' direct answers. Matched random and all-neuron readouts reach comparable performance; top-ranked CICNs show only an exploratory advantage at very small unit budgets. These results distinguish concentrated causal control over output decisions from broadly distributed diagnostic information for CI detection in LALMs.",
+  "abstractSha256": "3ccf16dbc5232ad7ed31986ce08344633527fac24ac1664b3a8fbfd5e7f9c319",
+  "arxivId": "2610.32061",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.32061v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "激活因果干预",
+    "primaryTask": "病理语音评估",
+    "rankBucket": "前50%",
+    "score": 6.4,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.pathological-speech",
+          "label": "病理语音评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.activation-intervention",
+          "label": "激活因果干预"
+        },
+        {
+          "facet": "method",
+          "id": "method.representation-probing",
+          "label": "表示探测"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.interpretability",
+          "label": "可解释性"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "激活因果干预",
+      "primaryMethodId": "method.activation-intervention",
+      "primaryTask": "病理语音评估",
+      "primaryTaskId": "task.pathological-speech",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Center for Language and Speech Processing (CLSP), Johns Hopkins University, USA"
+      ],
+      "name": "Xiutian Zhao"
+    },
+    {
+      "affiliations": [
+        "Center for Language and Speech Processing (CLSP), Johns Hopkins University, USA"
+      ],
+      "name": "Luqi Sun"
+    },
+    {
+      "affiliations": [
+        "Group on Language, Audio & Music (GLAM), Imperial College London, UK"
+      ],
+      "name": "Björn Schuller"
+    },
+    {
+      "affiliations": [
+        "Center for Language and Speech Processing (CLSP), Johns Hopkins University, USA"
+      ],
+      "name": "Berrak Sisman"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文用类别对比神经元选择加匹配随机对照的消融，证明三个模型中 0.5% 解码器神经元能大幅平移认知障碍二选一决策的偏置并可跨语音文本与语料迁移，而监督线性读出显示诊断信息广泛分布在更大神经元集合中。",
+  "originalTitle": "Concentrated Causal Influence, Distributed Diagnostic Information: Cognitive Impairment Decisions in Large Audio-Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2610.32061v1.pdf",
+  "readerTitle": "集中控制与分散信息：大音频语言模型里认知障碍决策的神经元机制",
+  "schemaVersion": 2
+}

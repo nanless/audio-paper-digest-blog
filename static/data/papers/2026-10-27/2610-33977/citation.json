@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.33977v1",
+  "arxivId": "2610.33977",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.33977v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Muhammad Moiz Khalid"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Abdur Rehman Tariq"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Muhammad Okasha Yamin"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.33977v1",
+  "originalTitle": "EmoNet: A Lightweight Attention-Based CNN for Speech Emotion Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2610.33977v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

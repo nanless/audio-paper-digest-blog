@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.35641v1",
+  "arxivId": "2610.35641",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.35641v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hari Vishnu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jin Xinhui"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Mandar Chitre"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Simen Hexeberg"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Koay Teong Beng"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.35641v1",
+  "originalTitle": "Dolphin broadband transient vocalization detection in impulsive ambient noise",
+  "pdfUrl": "https://arxiv.org/pdf/2610.35641v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

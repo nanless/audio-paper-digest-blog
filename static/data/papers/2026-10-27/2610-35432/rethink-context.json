@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.35432v1",
+  "abstract": "Neural audio codecs are increasingly used to encode speech for integration with large language models. This paper investigates the phonetic representations in the first codebook (CB0) of the Mimi codec. ABX style evaluation is poorly suited to Mimi fixed 80 ms tokenization window, which often spans multiple phonemes; we instead use forced alignment, entropy analysis, and Phone-Normalized Mutual Information (PNMI). Using TIMIT speech (58/55 speakers, SA1/SA2), individual tokens are strongly associated with specific phonemes (PNMI = 0.84, above random), yet phonemes are realized by multiple competing tokens rather than a one-to-one mapping.",
+  "abstractSha256": "f656b67bfb50e469eb8bef0322005db9f5b92311e339f064ab92afe76ea63fd1",
+  "arxivId": "2610.35432",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.35432v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "表示探测",
+    "primaryTask": "语音属性识别",
+    "rankBucket": "后50%",
+    "score": 4.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-attributes",
+          "label": "语音属性识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.representation-probing",
+          "label": "表示探测"
+        },
+        {
+          "facet": "method",
+          "id": "method.neural-codec",
+          "label": "神经编解码与离散单元"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.phonetics",
+          "label": "语音学与音系"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "表示探测",
+      "primaryMethodId": "method.representation-probing",
+      "primaryTask": "语音属性识别",
+      "primaryTaskId": "task.speech-attributes",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "ALTAE, Université Paris Cité, F-75013 Paris, France"
+      ],
+      "name": "Artem Saloev"
+    },
+    {
+      "affiliations": [
+        "ALTAE, Université Paris Cité, F-75013 Paris, France"
+      ],
+      "name": "Nicolas Ballier"
+    },
+    {
+      "affiliations": [
+        "SCIAM, 10 rue de Penthièvre, F-75008 Paris, France"
+      ],
+      "name": "Erin Pacquetet"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文追问 Mimi 第一码本是否为稳定音位表，用强制对齐加熵和互信息在 TIMIT 的 SA1 与 SA2 上做分布探测，发现单个码字高度偏向某音位但同一音位分散在多个随语境变化的码字族中，且语音信息分布在全部八个码本中，改动第一码本全局替换才明显抬高词错误率。",
+  "originalTitle": "Probing the phon* representations of the Mimi codebooks",
+  "pdfUrl": "https://arxiv.org/pdf/2610.35432v1.pdf",
+  "readerTitle": "Mimi 第一码本存的是音位还是变体：固定 80 毫秒切分下的分布探测",
+  "schemaVersion": 2
+}

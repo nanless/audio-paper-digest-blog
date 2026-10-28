@@ -1,0 +1,92 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.32481v1",
+  "abstract": "Multimodal large language models (MLLMs) have substantially advanced Multimodal Emotion Recognition (MER) by enabling fine-grained emotion understanding through reasoning over multimodal evidence. However, they still exhibit systematic confusion between semantically adjacent emotions with highly overlapping multimodal cues. Existing approaches typically address these errors through global parameter adaptation, making confusion correction costly and inflexible. We instead observe that emotion confusion is highly localized and therefore better addressed through reusable pair-specific expertise. Building on this insight, we propose Confusion-Aware Skill Evolution (CASE), the first agent-skill framework for MER. CASE maintains a sparse, self-evolving library of pair-specific EmotionSkills that externalize affective expertise from model parameters, enabling the learned expertise to be continuously refined and readily transferred across diverse frozen MLLM backbones. During inference, CASE dynamically retrieves the appropriate EmotionSkill to reinforce boundary-aware reasoning while keeping the MLLM backbone frozen. Extensive experiments on CA-MER, DFEW, and EMER demonstrate the effectiveness and transferability of CASE across both general-purpose and emotion-specialized MLLMs. Notably, CASE improves the average accuracy of Qwen3-VL-8B on the CA-MER benchmark from 46.80% to 59.13%, while achieving consistent gains across MLLMs.",
+  "abstractSha256": "1c0b351d993a85241f4581c9e04f8c7b152cc28865ec59dbf5019d8d8df31845",
+  "arxivId": "2610.32481",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.32481v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "检索增强",
+    "primaryTask": "多模态情感极性分析",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.multimodal-sentiment",
+          "label": "多模态情感极性分析"
+        },
+        {
+          "facet": "method",
+          "id": "method.retrieval-augmented",
+          "label": "检索增强"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "检索增强",
+      "primaryMethodId": "method.retrieval-augmented",
+      "primaryTask": "多模态情感极性分析",
+      "primaryTaskId": "task.multimodal-sentiment",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Siyu Wu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zeyu Liang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Linghao Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Qiyun Zheng"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yi Yao"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ling Lo"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hongxia Xie"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对相邻情绪易混淆且错误集中在少数情绪对的问题，CASE 在冻结多模态大模型参数的前提下，用可进化的成对文本技能做第二轮二选一复判，在 DFEW 上进化出的技能可直接用于 CA-MER 和 EMER，最强证据是 Qwen3-VL-8B 在 CA-MER 上从 46.80% 提升到 59.13%，代价是需要两轮推理和外部编辑与验证流程。",
+  "originalTitle": "CASE: Confusion-Aware Skill Evolution for Frozen Multimodal Emotion Models",
+  "pdfUrl": "https://arxiv.org/pdf/2610.32481v1.pdf",
+  "readerTitle": "CASE：用成对技能为冻结多模态大模型补上情绪边界",
+  "schemaVersion": 2
+}

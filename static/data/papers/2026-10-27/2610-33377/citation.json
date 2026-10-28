@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.33377v1",
+  "arxivId": "2610.33377",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.33377v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Northeastern University, Boston, MA 02115, USA"
+      ],
+      "name": "Wen Xie"
+    },
+    {
+      "affiliations": [
+        "Northeastern University, Boston, MA 02115, USA"
+      ],
+      "name": "Om Rastogi"
+    },
+    {
+      "affiliations": [
+        "Northeastern University, Boston, MA 02115, USA"
+      ],
+      "name": "Sai Siddhartha Vivek Dhir Rangoju"
+    },
+    {
+      "affiliations": [
+        "Southern Methodist University, Dallas, TX 75205, USA"
+      ],
+      "name": "Gijs Overgoor"
+    },
+    {
+      "affiliations": [
+        "Northeastern University, Boston, MA 02115, USA"
+      ],
+      "name": "Yakov Bart"
+    },
+    {
+      "affiliations": [
+        "Northeastern University, Boston, MA 02115, USA"
+      ],
+      "name": "Sarah Ostadabbas"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.33377v1",
+  "originalTitle": "AdShot: Benchmarking Multimodal Large Language Models for Video Advertisement Clipping",
+  "pdfUrl": "https://arxiv.org/pdf/2610.33377v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

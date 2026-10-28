@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.34931v1",
+  "arxivId": "2610.34931",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.34931v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Zhouwen Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Haijun Lin"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Bowen Lv"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Yupeng Chen"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.34931v1",
+  "originalTitle": "A Hierarchical Method for Environmental Sounds Recognition in Complex Acoustic Scenes",
+  "pdfUrl": "https://arxiv.org/pdf/2610.34931v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

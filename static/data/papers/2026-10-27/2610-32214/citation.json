@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.32214v1",
+  "arxivId": "2610.32214",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.32214v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jeongsoo Choi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Junseok Ahn"
+    },
+    {
+      "affiliations": [
+        "KAIST"
+      ],
+      "name": "Joon Son Chung"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.32214v1",
+  "originalTitle": "DIAL-S2ST: Learning Latency Control for Simultaneous Speech-to-Speech Translation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.32214v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

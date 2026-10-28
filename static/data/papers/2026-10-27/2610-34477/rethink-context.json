@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.34477v1",
+  "abstract": "Kernel distances such as the Kernel Inception Distance (KID) and the Kernel Audio Distance (KAD) compare generated and reference samples in an embedding space, and model comparisons rest on their values. Each ships with one fixed kernel, and a reported value does not say which changes that kernel detects at the sample size used. We run each default as a permutation two-sample test on real embeddings of symbolic music, audio and images, comparing a sample with an independent sample changed by a mean shift, an isotropic contraction, or a rotation that keeps the mean and the covariance trace and is matched to the shift in transport distance. At 780 samples per side, both defaults rarely detect the rotations in five evaluation spaces, while they detect the shifts in every run. The median-bandwidth Gaussian kernel of KAD detects the contraction and regains power against rotations on image embeddings with an order of magnitude more samples. The cubic kernel of KID contains second- and third-moment information but misses the contraction in most runs, and our experiments do not establish a high-power rotation regime for it over the tested sample sizes. Narrower Gaussian bandwidths restore sensitivity in music and audio, an $\\ell_1$ Laplace kernel does so for images, and aggregated tests combine both at nominal level. We recommend that a reported kernel distance state its sample budget and the changes its configuration detects at that budget.",
+  "abstractSha256": "469dbdb77d2e3b6bdd36c6e495829c0fdc81166c9e26c6cc842faf5c1a39c81e",
+  "arxivId": "2610.34477",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.34477v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "统计分析",
+    "primaryTask": "音频质量评估",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-quality",
+          "label": "音频质量评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.evaluation",
+          "label": "模型评估"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "统计分析",
+      "primaryMethodId": "method.statistical-analysis",
+      "primaryTask": "音频质量评估",
+      "primaryTaskId": "task.audio-quality",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Tomasz Radzikowski"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Mateusz Modrzejewski"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文把 KID 默认三次核与 KAD 默认中位数高斯核当作置换双样本检验，在 780 每侧样本下用输运距离匹配的平移、收缩与旋转探测它们能检出什么，并用样本量与带宽扫描说明恢复灵敏度的代价。",
+  "originalTitle": "Finite-Sample Sensitivity of Kernel Metrics for Generative Evaluation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.34477v1.pdf",
+  "readerTitle": "生成评价里核距离在有限样本下能看见什么：KID 与 KAD 的灵敏度审计",
+  "schemaVersion": 2
+}

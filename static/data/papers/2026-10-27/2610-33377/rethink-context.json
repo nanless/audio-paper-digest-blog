@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.33377v1",
+  "abstract": "Advertisers routinely create multiple duration variants of ads to meet marketing budgets and viewer preferences, a labor-intensive and costly process. While multimodal large language models (MLLMs) excel at general video understanding, their ability to perform specialized editorial tasks remains unexplored. We introduce AdShot, a benchmark for evaluating MLLMs on shot selection for ad clipping. It contains 823 professionally edited ad pairs (30-sec sources and 15-sec edits) across 194 brands and 17 industries, annotated with shot-level boundaries and content features (action, emotion, information, imagery). We evaluate 13 state-of-the-art video-only MLLMs and 2 audio-visual MLLMs (7B-72B parameters) on shot selection accuracy (Precision, Recall, F1), duration constraints (15s), and content preservation, including an audio ablation. We find: (1) model architecture matters more than scale, with smaller models often matching or exceeding larger ones; performance is strongest for target ads with 6-10 shots; (2) models exhibit a mean absolute duration error of 5.39s, with most tending to overshoot the 15s target, though they can still substantially reduce human editing effort; (3) all models exhibit systematic content biases, favoring information-rich and emotion-focused shots while under-selecting action and imagery. We publicly release our benchmark to facilitate research at the intersection of multimodal AI and computational advertising.",
+  "abstractSha256": "730a8f0afc3f8e13b0c81af46d0f7391d8ddd074d49ba8ebbd420fbca244d927",
+  "arxivId": "2610.33377",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.33377v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "视频摘要与片段选择",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.video-summarization",
+          "label": "视频摘要与片段选择"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "视频摘要与片段选择",
+      "primaryTaskId": "task.video-summarization",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Northeastern University, Boston, MA 02115, USA"
+      ],
+      "name": "Wen Xie"
+    },
+    {
+      "affiliations": [
+        "Northeastern University, Boston, MA 02115, USA"
+      ],
+      "name": "Om Rastogi"
+    },
+    {
+      "affiliations": [
+        "Northeastern University, Boston, MA 02115, USA"
+      ],
+      "name": "Sai Siddhartha Vivek Dhir Rangoju"
+    },
+    {
+      "affiliations": [
+        "Southern Methodist University, Dallas, TX 75205, USA"
+      ],
+      "name": "Gijs Overgoor"
+    },
+    {
+      "affiliations": [
+        "Northeastern University, Boston, MA 02115, USA"
+      ],
+      "name": "Yakov Bart"
+    },
+    {
+      "affiliations": [
+        "Northeastern University, Boston, MA 02115, USA"
+      ],
+      "name": "Sarah Ostadabbas"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "AdShot 用 823 对 30 秒到 15 秒的真实广告考多模态大模型选镜头，最强 F1 仅 0.676 且时长误差常超 5 秒，架构与音频比参数规模更关键并伴随重信息轻行动的内容偏好。",
+  "originalTitle": "AdShot: Benchmarking Multimodal Large Language Models for Video Advertisement Clipping",
+  "pdfUrl": "https://arxiv.org/pdf/2610.33377v1.pdf",
+  "readerTitle": "广告剪辑考什么：AdShot 如何测多模态大模型的选镜头能力",
+  "schemaVersion": 2
+}

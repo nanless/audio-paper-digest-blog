@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.32981v1",
+  "arxivId": "2610.32981",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.32981v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Christoph Hold"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jan Buethe"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jean-Marc Valin"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jan Skoglund"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Toni Hirvonen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Nils Peters"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.32981v1",
+  "originalTitle": "SEMAC: Spherical Energy Matching Ambisonics Codec for Efficient Higher-Order Ambisonics Compression",
+  "pdfUrl": "https://arxiv.org/pdf/2610.32981v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,66 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.33113v1",
+  "abstract": "Live pitch displays, score followers and accompaniment systems must know which pitches are sounding within tens of milliseconds, but instrument-agnostic multi-pitch estimation (MPE) has mainly been designed and evaluated offline. We present JIT-MPE, a causal MPE model of 86k parameters for mixed ensembles. It gives an immediate estimate of each 20 ms frame and re-estimates the same frame as 20, 40, 80 and 160 ms of further audio arrive, so that a live display can show pitches at once and then refine them. We score each output only at a deadline by which it can be computed from the audio that has arrived, on five development sets and four held-out sets evaluated only after all design choices were frozen. At a 50 ms deadline, which reads the update made with 40 ms of lookahead, JIT-MPE is significantly more accurate than five of six published offline MPE systems in 38 of 45 comparisons (15 of 20 on the held-out sets) and less accurate in only two, although these systems read the whole recording and all but one have 6 to 170 times as many parameters; the sixth, supervised on URMP, is higher on four of the nine sets. The deadline costs little: on the held-out sets, JIT-MPE at 50 ms is within $-1.27$ to $+0.60$ points of recording-level macro F1 of its own final output with 160 ms of lookahead and within $-2.08$ to $+0.79$ points of a bidirectional model of similar size. Waiting pays off where the immediate estimate is weakest: the update at 50 ms adds 1.7-3.6 points over it on the development data and three of the four held-out sets, and raises the recall of reference frames in the first 20 ms after a note onset from 9.8% to 38.4% on the held-out AAM set. The slowest measured frame takes at most 4.15 ms on one CPU thread. Code and trained weights are available at https://github.com/Frieve-A/jit-mpe.",
+  "abstractSha256": "c042f62e3e74a3c59a2b375bea9e42c0684f4cfc6bdf108922d80e9793d814f8",
+  "arxivId": "2610.33113",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.33113v1",
+  "assessment": {
+    "documentType": "模型报告",
+    "primaryMethod": "评测协议",
+    "primaryTask": "音高与旋律提取",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.pitch-melody",
+          "label": "音高与旋律提取"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.real-time",
+          "label": "实时处理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "评测协议",
+      "primaryMethodId": "method.evaluation-protocol",
+      "primaryTask": "音高与旋律提取",
+      "primaryTaskId": "task.pitch-melody",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Frieve"
+      ],
+      "name": "Yoshiyuki Kobayashi"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "JIT-MPE 用一个因果模型对每帧先即时估计再用延迟头修正，在 50 毫秒截止下接近自身最终输出，并在多个集上以 8.6 万参数达到可比精度，其提升主要来自音头后几十毫秒的修正。",
+  "originalTitle": "JIT-MPE: Just-in-Time Multi-Pitch Estimation under Output Deadlines",
+  "pdfUrl": "https://arxiv.org/pdf/2610.33113v1.pdf",
+  "readerTitle": "按截止时间回答的多音高估计：JIT-MPE 如何即时给出再逐步修正",
+  "schemaVersion": 2
+}

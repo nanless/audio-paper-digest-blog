@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.35497v1",
+  "abstract": "Reinforcement learning (RL) has shown promise for training multimodal agents to reason and use tools. However, it remains unclear when fine-grained credit assignment improves learning and when it fails to improve task performance. Video editing provides a useful testbed for this question, combining multimodal perception, long-horizon planning, and tool use with delayed outcome feedback. We construct four movie-trailer editing task types---Content Selection, Narrative Sequencing, Rough Cut, and Fine Cut---that reflect real-world editing workflows and span different levels of task complexity and interaction horizon. Decaying process rewards provides the largest benefit on Fine Cut, with a 45.4% relative gain over outcome-only GRPO on tasks averaging more than 60 turns under outcome-only GRPO. On the three shorter-horizon task types averaging 30--40 turns under the same baseline, outcome-only GRPO remains competitive, with decaying process rewards yielding at most a 10.4% relative gain. Process rewards from an LLM judge initially improve tool use and encourage visual inspection. As training progresses, however, GRPO+PRM with a fixed process-reward weight increasingly exhibits excessive reasoning and redundant tool calls: process rewards continue to rise while task completion rates and outcome scores decline. Decaying the process-reward weight to zero mitigates this reward-hacking behavior while preserving the early gains. Despite dense token-level supervision, on-policy self-distillation (OPSD) yields little improvement or substantial degradation and is highly sensitive to the choice of privileged information. Our analysis reveals differences in teacher--student disagreement and gradient magnitudes, and suggests possible dilution of informative signals over long trajectories.",
+  "abstractSha256": "675d56ec544c748d276ae20cc75c40113de2149e384cea12b1a97857849b382c",
+  "arxivId": "2610.35497",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.35497v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "强化学习",
+    "primaryTask": "视频摘要与片段选择",
+    "rankBucket": "前50%",
+    "score": 5.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.video-summarization",
+          "label": "视频摘要与片段选择"
+        },
+        {
+          "facet": "method",
+          "id": "method.reinforcement",
+          "label": "强化学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.tool-augmentation",
+          "label": "工具增强与约束解码"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "强化学习",
+      "primaryMethodId": "method.reinforcement",
+      "primaryTask": "视频摘要与片段选择",
+      "primaryTaskId": "task.video-summarization",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Lei Zhao"
+    },
+    {
+      "affiliations": [
+        "University of Pennsylvania Philo Labs"
+      ],
+      "name": "Zongheng Cao"
+    },
+    {
+      "affiliations": [
+        "University of Pennsylvania Philo Labs"
+      ],
+      "name": "Xinyu Hu"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文用四种预告片剪辑任务比较轨迹级、轮次级和词元级信用分配，发现衰减的过程奖励只在超长程 Fine Cut 上带来 45.4% 相对提升，而固定权重会导致奖励黑客与任务未完成，词元级自蒸馏则基本无效或崩溃。",
+  "originalTitle": "When Fine-Grained Credit Assignment Helps and Hurts: Multimodal Agentic Reinforcement Learning through Video Editing",
+  "pdfUrl": "https://arxiv.org/pdf/2610.35497v1.pdf",
+  "readerTitle": "细粒度信用分配何时有效、何时有害：电影预告片剪辑中的多模态智能体强化学习",
+  "schemaVersion": 2
+}

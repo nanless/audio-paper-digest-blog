@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.34220v1",
+  "abstract": "Speech-based Alzheimer's Disease (AD) detection holds significant promise due to its scalable and non-invasive nature. However, current Speech Large Language Models (SpeechLLMs), similar to conventional AD detection systems, still treat AD detection primarily as a simple categorical classification task. This paradigm provides limited interpretability of predictions, while leaving the inherent expressiveness and reasoning capabilities of SpeechLLMs largely underutilized. In this work, we take the first step toward reframing AD detection as a deep reasoning task via Reinforcement Learning (RL). We propose ADReasoner, an RL-enhanced SpeechLLM designed to generate accurate diagnostic predictions with interpretable rationales grounded in fine-grained acoustic-linguistic cues. To achieve this, we first systematically construct ADCoT-7K, an AD speech reasoning dataset combining real data and our quality-filtered synthetic data, where each instance features Chain-of-Thought (CoT) annotations and detailed captions. Second, observing the weak perception of AD-related acoustic-linguistic cues in current SpeechLLMs, we leverage Supervised Fine-Tuning (SFT) to develop a cue-perception-enhanced foundation model, ADReasoner-Base, thereby improving AD speech understanding. Third, alongside two standard rule-based rewards, we introduce a reasoning reward and a reasoning-label consistency reward into Group Relative Policy Optimization (GRPO) for RL. Furthermore, a shrinkage mechanism is employed to suppress misleading reasoning signals, while a gating mechanism progressively introduces both rewards to stabilize policy training. Experiments on three AD datasets (Pitt, PROCESS-1, PROCESS-2) demonstrate that ADReasoner outperforms previous state-of-the-art models in both detection performance and explanation quality, advancing AD detection toward interpretable reasoning from speech.",
+  "abstractSha256": "09a480ea7f7e905251d025ef82142943ccf218af088171e1dd00a81858a07815",
+  "arxivId": "2610.34220",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.34220v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "强化学习",
+    "primaryTask": "病理语音评估",
+    "rankBucket": "前50%",
+    "score": 6.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.pathological-speech",
+          "label": "病理语音评估"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-reasoning",
+          "label": "音频推理"
+        },
+        {
+          "facet": "method",
+          "id": "method.reinforcement",
+          "label": "强化学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.sft",
+          "label": "SFT"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "强化学习",
+      "primaryMethodId": "method.reinforcement",
+      "primaryTask": "病理语音评估",
+      "primaryTaskId": "task.pathological-speech",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yin-Long Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yuanchao Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jiahong Yuan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhen-Hua Ling"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文把语音阿尔茨海默检测从二分类改写为先讲声学-语言线索推理再给标签的生成任务，用合成数据加 ADCoT-7K 与两阶段感知训练打底，再用四奖励 GRPO 优化推理质量，在 Pitt 上达到 80.72% F1 和 81.10% 准确率，代价是需要大规模合成与多阶段训练。",
+  "originalTitle": "ADReasoner: Acoustic-Linguistic Cue-Aware Reinforcement Learning for Explainable Alzheimer's Disease Detection from Speech",
+  "pdfUrl": "https://arxiv.org/pdf/2610.34220v1.pdf",
+  "readerTitle": "从输出标签到讲出依据：ADReasoner 如何做可解释的阿尔茨海默语音检测",
+  "schemaVersion": 2
+}

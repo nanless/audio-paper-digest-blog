@@ -1,0 +1,97 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.32310v1",
+  "abstract": "The interior sound of an electric vehicle is a superposition of several distinct noise contributions - wind noise, tire noise, powertrain (electric drive unit and inverter) noise, and auxiliary-drive noise - whose relative balance governs both the overall loudness and the perceived sound quality in the vehicle interior. Decomposing a recorded vehicle interior signal into these source contributions is a prerequisite for targeted acoustic engineering, but requires effortful measurement campaigns as well as expertise in the field of transfer path analysis. This work formulates the decomposition as a supervised, binaural source-separation problem with four target source contributions and adapts a hybrid time-spectrogram transformer architecture, originally developed for music demixing, to the domain of sound source separation for technical systems. To disambiguate source contributions, conditioning is introduced in the form of operating-state information, including electric drive speed, electric drive load, vehicle speed, and auxiliary-drive speed. Since isolated real-world reference stems are costly to obtain, the model is trained on a physics-based parametric data generator that synthesizes labeled component sounds from randomized virtual-vehicle hardware configurations and driving scenarios, so that the ground-truth contribution of each source is known by construction. Validation on both synthetic and measured vehicle interior sounds probes the achieved separation performance and underscores the feasibility of applying the proposed method for acoustic contribution analysis in technical systems.",
+  "abstractSha256": "cf1b70d7d6b95b376a1d7d2cd32ffb274638d0ef423f8732b2bec5387cec5beb",
+  "arxivId": "2610.32310",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.32310v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "Transformer",
+    "primaryTask": "音频分离",
+    "rankBucket": "前50%",
+    "score": 5.7,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-separation",
+          "label": "音频分离"
+        },
+        {
+          "facet": "method",
+          "id": "method.transformer",
+          "label": "Transformer"
+        },
+        {
+          "facet": "method",
+          "id": "method.time-frequency",
+          "label": "时频分析"
+        },
+        {
+          "facet": "application",
+          "id": "application.cockpit",
+          "label": "智能座舱"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "Transformer",
+      "primaryMethodId": "method.transformer",
+      "primaryTask": "音频分离",
+      "primaryTaskId": "task.audio-separation",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Chair of Thermodynamics of Mobile Energy Conversion Systems, RWTH Aachen University, Aachen, Germany"
+      ],
+      "name": "Philipp Diel"
+    },
+    {
+      "affiliations": [
+        "IAS-8, Forschungszentrum Jülich, Jülich, Germany"
+      ],
+      "name": "Zhuo Cao"
+    },
+    {
+      "affiliations": [
+        "Chair of Vibroacoustics of Vehicles and Machines, Technical University of Munich, Garching, Germany"
+      ],
+      "name": "Arne Hildenbrand"
+    },
+    {
+      "affiliations": [
+        "Chair of Thermodynamics of Mobile Energy Conversion Systems, RWTH Aachen University, Aachen, Germany"
+      ],
+      "name": "Marco Günther"
+    },
+    {
+      "affiliations": [
+        "Chair of Thermodynamics of Mobile Energy Conversion Systems, RWTH Aachen University, Aachen, Germany"
+      ],
+      "name": "Stefan Pischinger"
+    },
+    {
+      "affiliations": [
+        "IAS-8, Forschungszentrum Jülich, Jülich, Germany"
+      ],
+      "name": "Hanno Scharr"
+    },
+    {
+      "affiliations": [
+        "Chair of Vibroacoustics of Vehicles and Machines, Technical University of Munich, Garching, Germany"
+      ],
+      "name": "Steffen Marburg"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文把电动车内风噪、胎噪、动力总成与辅驱噪声的分解做成有监督双耳分离，用混合时域频谱 Transformer 在物理合成数据上训练，单车合成上宽带分量可分但弱 tonal 分量受限，实测迁移只部分成立且工况条件注入未带来增益。",
+  "originalTitle": "Supervised Source Separation of Electric Vehicle Interior Noise Using a Hybrid Transformer Architecture",
+  "pdfUrl": "https://arxiv.org/pdf/2610.32310v1.pdf",
+  "readerTitle": "电动车内噪声四分量分离：混合 Transformer 与合成训练怎么做",
+  "schemaVersion": 2
+}

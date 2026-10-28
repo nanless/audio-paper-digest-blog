@@ -1,0 +1,103 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.32187v1",
+  "abstract": "Unified streaming speech language models aim to support speech recognition and synthesis within a single model, enabling real-time human-computer interaction. However, jointly supporting these two directions of speech-text conversion while preserving task-specific performance remains challenging. We propose Uni-Stream, a unified streaming speech language model built on compact pretrained speech models. Uni-Stream processes interleaved text and speech in a streaming format and achieves performance comparable to task-specific models through two-stage training. We also develop a data annotation pipeline for streaming training and will publicly release the generated transcriptions and word-level timestamps. We further examine Uni-Stream's representations across tasks and modalities and find that speech and text residence in distinct latent feature space even when trained in a unified model architecture, while representations within each modality become more task-dependent in later layers.",
+  "abstractSha256": "2588d802be7e131a109166a2f8676112358f7eee6156089fc6627f48c8843b8a",
+  "arxivId": "2610.32187",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.32187v1",
+  "assessment": {
+    "documentType": "模型报告",
+    "primaryMethod": "多任务学习",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.multitask",
+          "label": "多任务学习"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "多任务学习",
+      "primaryMethodId": "method.multitask",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "University of Southern California, USA"
+      ],
+      "name": "Xuan Shi"
+    },
+    {
+      "affiliations": [
+        "National Institute of Informatics, Japan"
+      ],
+      "name": "Chang Zeng"
+    },
+    {
+      "affiliations": [
+        "University of Southern California, USA"
+      ],
+      "name": "Tiantian Feng"
+    },
+    {
+      "affiliations": [
+        "Massachusetts Institute of Technology, USA"
+      ],
+      "name": "Ye Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jun Liu"
+    },
+    {
+      "affiliations": [
+        "University of Southern California, USA"
+      ],
+      "name": "Shih-Heng Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Lie Lu"
+    },
+    {
+      "affiliations": [
+        "University of Southern California, USA"
+      ],
+      "name": "Shrikanth Narayanan"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "Uni-Stream 用时间对齐的流式交错序列把识别与合成放在同一个解码器模型里，先分别适配再联合训练，在约 4 万小时英文数据上接近专用流式模型的识别与合成水平，但表示探测显示语音与文本仍处在不同子空间。",
+  "originalTitle": "Uni-Stream: A Unified Streaming Speech Language Model for Speech Synthesis and Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2610.32187v1.pdf",
+  "readerTitle": "一个模型同时做流式识别与合成：Uni-Stream 如何交错语音文本并分两阶段训练",
+  "schemaVersion": 2
+}

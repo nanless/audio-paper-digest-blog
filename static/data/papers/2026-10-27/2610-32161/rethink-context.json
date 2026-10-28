@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.32161v1",
+  "abstract": "Generative target speaker extraction (TSE) models achieve high-quality extraction, but suffer from considerably slow training convergence. Representation Alignment (REPA) accelerates diffusion transformer training by aligning hidden states with a pre-trained Self-Supervised Learning (SSL) teacher. However, existing alignment in the speech and audio domain operates at a single granularity. For TSE, frame-level alignment leaves the global, time-invariant characteristics of the target speech implicit, whereas utterance-level alignment leaves the time-varying content implicit, even though extracting the target requires both. We propose Multi-Granularity Representation Alignment (MG-REPA), aligning the hidden states with an SSL model at the frame level and a speaker verification model at the utterance level. We further apply temporal normalization to the frame-level target, removing its utterance-level statistics so that each branch concentrates on its granularity. On Libri2Mix, MG-REPA reaches the OVRL and PESQ of a MeanFlow-TSE baseline with $3.0\\times$ and $2.1\\times$ fewer epochs, respectively. Trained for 750 epochs, it is competitive with the published 2,000-epoch baseline on intrusive metrics while improving non-intrusive metrics. An ablation demonstrates that MG-REPA outperforms alignment at a single granularity.",
+  "abstractSha256": "6104534fd764394ff0d03d2f34ac9836e2f5ff82ee3e633a4966369097d83ea7",
+  "arxivId": "2610.32161",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.32161v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "知识蒸馏",
+    "primaryTask": "目标说话人提取",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.target-speaker",
+          "label": "目标说话人提取"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "知识蒸馏",
+      "primaryMethodId": "method.distillation",
+      "primaryTask": "目标说话人提取",
+      "primaryTaskId": "task.target-speaker",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Dohwan Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jung-Woo Choi"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对生成式目标说话人提取训练收敛慢的问题，MG-REPA 在中间层同时做帧级内容对齐与 utterance 级说话人对齐并做时间归一化解耦，在 Libri2Mix 上以 750 轮达到 2000 轮基线的质量并把 OVRL 与 PESQ 的收敛轮数分别缩短到约三分之一与二分之一。",
+  "originalTitle": "MG-REPA: Multi-Granularity Representation Alignment for Generative Target Speaker Extraction",
+  "pdfUrl": "https://arxiv.org/pdf/2610.32161v1.pdf",
+  "readerTitle": "同时对齐内容与音色：MG-REPA 如何加速生成式目标说话人提取",
+  "schemaVersion": 2
+}

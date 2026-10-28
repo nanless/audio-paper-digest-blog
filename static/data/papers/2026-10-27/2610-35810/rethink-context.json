@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.35810v1",
+  "abstract": "We present a robust Speech and Audio Quality Metric (SAQM) that merges features of traditional quality metrics with a CNN trained on a large amount of data using contrastive learning methods. To overcome the problem of limited amounts of human-labeled training data, we propose two pretraining strategies relying on pseudo-labels. One uses an established objective metric PEAQ-2f (based on ITU-R BS.1387) as surrogate loss, the other is based on contrasting a wide range of coding modes by a rule-of-thumb ordering based on expected perceived quality. As a key novelty, our approach lets us generate saliency maps by propagating gradients to identify which feature has the greatest impact on the final metric outcome and enables our system to provide insights regarding the type and extent of distortions present in the tested audio signal. The resulting (SAQM) operates at low computational complexity, performs comparably to (SOTA) metrics on speech while still performing well on general audio content.",
+  "abstractSha256": "0cf047670f7b2d5e385325b98809310dc21130d0da40ddf151aff75920110f97",
+  "arxivId": "2610.35810",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.35810v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "对比学习",
+    "primaryTask": "音频质量评估",
+    "rankBucket": "前50%",
+    "score": 6.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-quality",
+          "label": "音频质量评估"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-quality",
+          "label": "语音质量评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.contrastive",
+          "label": "对比学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.cnn",
+          "label": "CNN"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.interpretability",
+          "label": "可解释性"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "对比学习",
+      "primaryMethodId": "method.contrastive",
+      "primaryTask": "音频质量评估",
+      "primaryTaskId": "task.audio-quality",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Konstantin Schmidt"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Pablo M. Delgado"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Andreas Brendel"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对人工标注少而编码失真多的问题，该工作用 PEAQ 感知前置特征接 ConvNeXt 做对比学习与微调，并用梯度回传解释失真类型和位置，代价是对非波形保持信号的评价能力受限。",
+  "originalTitle": "A Robust, Explainable, and Efficient Deep Metric for Speech and General Audio Quality",
+  "pdfUrl": "https://arxiv.org/pdf/2610.35810v1.pdf",
+  "readerTitle": "把听觉感知特征和对比学习拼起来的语音与通用音频质量指标",
+  "schemaVersion": 2
+}

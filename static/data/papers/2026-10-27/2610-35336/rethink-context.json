@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.35336v1",
+  "abstract": "We address a fundamental question: How far should kernel fusion extend and which boundaries are worth preserving? Unlike the general convention of using one monolith megakernel at lower batch sizes or supporting only a selective model component as megakernel and rest of the model as conventional graph, we show that the best configuration is a composition of multiple megakernels with no overlapping conventional graph component, or a fully conventional graph. We present a framework that selects megakernel regions in a streaming inference model from conventional-graph profiles and standalone kernel benchmarks, without running any candidate design end to end. It simulates each candidate's tile and event graphs to predict time to first output and selects the measured best design in all 13 combinations of model and batch size we tested. Across NH-TTS, Qwen3-TTS and Llama-1B, the best composition ranges from two to four megakernels to fully conventional execution and none is a single megakernel. We introduce four model categories (megakernel-stable/ receding/ advancing/ averse) that capture how a model's best megakernel composition changes with batch size. Using NH-TTS model on H100 NVL GPU, we demonstrate that preserving three specialized megakernels can improve both latency and throughput despite introducing additional kernel boundaries. At batch size 32, this design delivers 21.4% lower mean batch-p95 time to first audio (TTFA) and 28% higher throughput than the evaluated monolith megakernel. Against conventional TensorRT graph execution, it reduces engine-level mean batch TTFA p95 by 4.05x and increases throughput by 19.7%.",
+  "abstractSha256": "29c2c08b4105c5028c64768bcb96b559e67c1f94d92c5e46d7d25c93be061940",
+  "arxivId": "2610.35336",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.35336v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "编译与语义保持变换",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.compiler-design",
+          "label": "编译与语义保持变换"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "编译与语义保持变换",
+      "primaryMethodId": "method.compiler-design",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Aditya Chatterjee"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Anand Joseph X M"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Sanjay Singh Chauhan"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文解决流式推理中把模型切成几个持续运行大内核的问题，用常规执行画像加独立算子实测来排序候选切分，在三个模型十三个模型批量组合上选出实测最快设计，代价是只做排序代理而不精确预测绝对时延。",
+  "originalTitle": "One Megakernel is Not Enough: Predicting Where to Cut for Streaming Inference",
+  "pdfUrl": "https://arxiv.org/pdf/2610.35336v1.pdf",
+  "readerTitle": "一个大内核不够：在哪里切分流式推理模型",
+  "schemaVersion": 2
+}

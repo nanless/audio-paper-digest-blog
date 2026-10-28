@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.32061v1",
+  "arxivId": "2610.32061",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.32061v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Center for Language and Speech Processing (CLSP), Johns Hopkins University, USA"
+      ],
+      "name": "Xiutian Zhao"
+    },
+    {
+      "affiliations": [
+        "Center for Language and Speech Processing (CLSP), Johns Hopkins University, USA"
+      ],
+      "name": "Luqi Sun"
+    },
+    {
+      "affiliations": [
+        "Group on Language, Audio & Music (GLAM), Imperial College London, UK"
+      ],
+      "name": "Björn Schuller"
+    },
+    {
+      "affiliations": [
+        "Center for Language and Speech Processing (CLSP), Johns Hopkins University, USA"
+      ],
+      "name": "Berrak Sisman"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.32061v1",
+  "originalTitle": "Concentrated Causal Influence, Distributed Diagnostic Information: Cognitive Impairment Decisions in Large Audio-Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2610.32061v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

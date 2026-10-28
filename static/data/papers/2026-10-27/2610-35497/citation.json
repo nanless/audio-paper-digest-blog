@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.35497v1",
+  "arxivId": "2610.35497",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.35497v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Lei Zhao"
+    },
+    {
+      "affiliations": [
+        "University of Pennsylvania Philo Labs"
+      ],
+      "name": "Zongheng Cao"
+    },
+    {
+      "affiliations": [
+        "University of Pennsylvania Philo Labs"
+      ],
+      "name": "Xinyu Hu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.35497v1",
+  "originalTitle": "When Fine-Grained Credit Assignment Helps and Hurts: Multimodal Agentic Reinforcement Learning through Video Editing",
+  "pdfUrl": "https://arxiv.org/pdf/2610.35497v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

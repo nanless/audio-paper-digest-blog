@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.34623v1",
+  "abstract": "Text injection trains speech recognition models on unpaired text alongside paired audio. We feed the speech encoder synthetic input derived from text so the whole model learns from it. Previously, we synthesized this input with a frozen text-to-speech (TTS) model. Here, a simple lookup table replaces the TTS model: a mean log-mel vector (or one-hot encoding) per phoneme, repeated for a random duration drawn from alignment statistics, with silence between words. Training is 1.8 times faster than with the neural TTS, achieving comparable word error rates. With an external language model, our system reaches 1.36 / 2.90 / 1.52 / 3.24 % WER on LibriSpeech {dev,test}-{clean,other}, to our knowledge state-of-the-art using only LibriSpeech paired data, text, and lexicon. We analyze components of synthetic input (durations, acoustic features), compare different HMM aligners, evaluate scaling on the 25 000 h Loquacious dataset, and show that full-encoder injection yields strong relative improvements compared to partial-encoder and decoder methods. The code of the whole pipeline behind every number in this paper is public: github.com/rwth-i6/returnn-experiments/tree/master/2026-text-injection",
+  "abstractSha256": "35babf5dd448098d5480114d0c291ff5f0098fd3b6d7a0e1d3f58987b40a9b43",
+  "arxivId": "2610.34623",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.34623v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "数据增强",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.augmentation",
+          "label": "数据增强"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.end-to-end",
+          "label": "端到端"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "数据增强",
+      "primaryMethodId": "method.augmentation",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Albert Zeyer"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Davyd Naveriani"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Dorian Koch"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ralf Schlüter"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hermann Ney"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "用按音素查平均声学向量并按对齐时长展开的伪语音代替冻结语音合成模型做文本注入，在保持词错误率的同时把训练加速到 1.8 倍，但增益大小随文本音频比和配对音频量变化。",
+  "originalTitle": "One Mean Log-Mel Vector per Phoneme: Simple and Fast Text Injection for Speech Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2610.34623v1.pdf",
+  "readerTitle": "每个音素一个平均向量：不用神经合成器的文本注入",
+  "schemaVersion": 2
+}
