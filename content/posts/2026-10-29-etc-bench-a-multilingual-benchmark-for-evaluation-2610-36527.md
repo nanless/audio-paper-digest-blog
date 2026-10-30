@@ -31,7 +31,7 @@ paper_digest_authors: [{"affiliations":["机构信息未能在本次解析中与
 paper_digest_abstract_sha256: "78f944b646fa3f026eea451b0b865645e578db32c97a1ca12f2c85dfb713ab02"
 paper_digest_sidecars: {"citation.bib":{"sha256":"696743bce3b90016c08439aced76f194e5c76cd07e615f3e5d1c3ca5eaf076b6","url":"/audio-paper-digest-blog/data/papers/2026-10-29/2610-36527/citation.bib"},"citation.json":{"sha256":"a3ada5eb283b0b92b2fcc34396acdc9948fec6cce8ec2e8d7a5e77cb6975b11a","url":"/audio-paper-digest-blog/data/papers/2026-10-29/2610-36527/citation.json"},"citation.ris":{"sha256":"7a4acd437702f0b0f61e16f921edf2fa6d79845b2a7cc6275f7d00fb01e6c0f8","url":"/audio-paper-digest-blog/data/papers/2026-10-29/2610-36527/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"c818c5c2bc376b7ce3e424be030a05313d2f76dcf3a76baf6128c8dacb0ef76f","url":"/audio-paper-digest-blog/data/papers/2026-10-29/2610-36527/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
-paper_digest_api_reader_article_sha256: "de675d8f926145de57b4070540cc05460ea747f03c881249e899148c66bb8111"
+paper_digest_api_reader_article_sha256: "91f93ddd877d98315f090a0ee3c2fcc00540a93d60e1bb979d141ef52db08f49"
 paper_digest_api_reader_plan_sha256: "8a3c05c055517049eaa1d2e889571bab9a9bf3097727e06462c5a8d822805ca1"
 paper_digest_api_reader_source_binding_contract: "api-reader-source-bindings-v4"
 paper_digest_api_reader_source_bindings_sha256: "984f944cdc298c02ee1f7f98465e88369228826eb3f70ece5cdc2b33e0cdccc4"
@@ -100,7 +100,7 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 语音处理里最常见的两条路线是文本规范化与逆文本规范化。前者把书面表达映射为口语形式，常用于语音合成的前端；后者把口语式文本映射为常规书面文本。NeMo 用加权有限状态文法处理数字、日期、度量等类别，PolyNorm 用大语言模型流水线把多语言文本规范化扩展到书面到口语的分类体系。
 
-这两条路线都可以作为规范化的子程序，取决于选择哪种目标表示。只要对两个转写独立施加相同的映射，就能消除表层区别。但它们的文法类别只覆盖数字、日期等可枚举的符号学（semiotic）类别，论文所关心的很多语言特有正字差异、上下文相关缩写和同音替换都不在其文法内。近期的 SURE 和 Open-Bench 强调可复现的标准化评分流程，论文的评测端规范化正是沿着这个思路，把评价阶段的变体统一单独定义成任务。
+这两条路线都可以作为规范化的子程序，取决于选择哪种目标表示。只要对两个转写独立施加相同的映射，就能消除表层区别。但它们的文法类别只覆盖数字、日期等可枚举的半 otic 类别，论文所关心的很多语言特有正字差异、上下文相关缩写和同音替换都不在其文法内。近期的 SURE 和 Open-Bench 强调可复现的标准化评分流程，论文的评测端规范化正是沿着这个思路，把评价阶段的变体统一单独定义成任务。
 
 **评测端转写规范化 × 文本规范化 × 逆文本规范化：** 评测端转写规范化指在评价阶段把同一语音的多种合法写法映射到同一规范形；文本规范化指把书面式改写为口语式，逆文本规范化指把口语式改写为书面式；三者都会消除表层差异，但前两者是为合成或识别的固定环节服务的，评测端转写规范化是方向无关的评价手段，哪种改写方向能统一变体就采用哪种。
 

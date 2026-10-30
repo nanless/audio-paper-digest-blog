@@ -31,7 +31,7 @@ paper_digest_authors: [{"affiliations":["机构信息未能在本次解析中与
 paper_digest_abstract_sha256: "d5777d444bd17e1ff036fc058f24598a0dbc42194066a9a80af6e76113eda8a8"
 paper_digest_sidecars: {"citation.bib":{"sha256":"f64d41e8edef8e14ac2affc1e0a0286c4abdd7c92578ebc194efc688e6212a23","url":"/audio-paper-digest-blog/data/papers/2026-10-29/2610-37024/citation.bib"},"citation.json":{"sha256":"7aa8f6183a1bb0c3ef3fd30e56333807c8cfb58bc632eccc2123b9278769bcf8","url":"/audio-paper-digest-blog/data/papers/2026-10-29/2610-37024/citation.json"},"citation.ris":{"sha256":"93000c4ba0ac196394fc34b22c1aca54cb23239ab5d858008ab94f0655858976","url":"/audio-paper-digest-blog/data/papers/2026-10-29/2610-37024/citation.ris"},"rethink-context.json":{"contract":"paper-research-context-v2","sha256":"1159ca47960e7d1b6b3938bc978d3ed18972cf58662fd15bc2909d97c3304be6","url":"/audio-paper-digest-blog/data/papers/2026-10-29/2610-37024/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
-paper_digest_api_reader_article_sha256: "2aa71dce8554961e3f54603c6485357355065905339ebf0902993f32f3c40e08"
+paper_digest_api_reader_article_sha256: "937c9af23acdea8befecb23222137310bde974d2529a3ef85227b1ca9d5b1e26"
 paper_digest_api_reader_plan_sha256: "69fbef8e9893cf96e537f08f918a5ecd7b976e4d95584b98842a88bee966abbc"
 paper_digest_api_reader_source_binding_contract: "api-reader-source-bindings-v4"
 paper_digest_api_reader_source_bindings_sha256: "143dc8f94a7b57948799b06ef1fac328fee3db507bafbe2ff7821e3391d8d3ac"
@@ -205,7 +205,7 @@ t 时刻的输入是当前帧带噪隐变量与上 1 帧量化隐变量的拼接
 
 ### 只留粗粒度量化层级换来什么与失去什么
 
-下表是层级截断消融，比较问题是截断多少层能在去混响与保音色之间取得平衡，所有模型同数据同轮数训练。表中 OVL 为 3 类上的 DNSMOS 总体分，SIM 为两类合成集上的说话人相似度，ΔOVL 与 ΔSIM 为相对 k 等于 16 的变化，†标记用于表 1 的设置。
+下表是层级截断消融的参照行，只列出完整残差量化（k=16）的整体指标；其余 k 值（12、8、6、4）的 OVL/SIM 与相对 k=16 的变化量在后文逐项说明，所有模型同数据同轮数训练。表中 OVL 为 3 类上的 DNSMOS 总体分，SIM 为两类合成集上的说话人相似度，ΔOVL 与 ΔSIM 为相对 k 等于 16 的变化，†标记用于表 1 的设置。
 
 | Levels | With Reverb OVL ↑ | Without Reverb OVL ↑ | Real Recordings OVL ↑ | With Reverb SIM ↑ | Without Reverb SIM ↑ | ΔOVL | ΔSIM |
 | --- | --- | --- | --- | --- | --- | --- | --- |

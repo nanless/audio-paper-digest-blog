@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.36786v1",
+  "abstract": "Realistic guitar synthesis requires both audio fidelity and interpretable control over how notes are performed. The input timed MIDI events decide what is played but not how, leaving the continuous within-note decisions of guitar performance--such as pitch inflection and per-string articulation--unspecified. A model that directly maps MIDI to audio must therefore realize the performance implicitly, and users are left with limited control over the synthesized performance. We therefore propose a two-stage guitar synthesis pipeline that predicts editable, per-string $f_0$ and amplitude trajectories from timed note events and note-level dynamics, and renders them into audio using latent flow matching. Experimental results show that the proposed system outperforms a matched single-stage counterpart and DDSP-Guitar in control fidelity and perceived quality, while keeping the controls editable. Sound examples can be found online.",
+  "abstractSha256": "bd3bab57cadc34d10f33bf93f762c368f155cebf5aeedbb6fb140bf196b2382a",
+  "arxivId": "2610.36786",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.36786v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "流匹配",
+    "primaryTask": "音乐生成",
+    "rankBucket": "前50%",
+    "score": 6.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-generation",
+          "label": "音乐生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "流匹配",
+      "primaryMethodId": "method.flow-matching",
+      "primaryTask": "音乐生成",
+      "primaryTaskId": "task.music-generation",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hsueh-Wei Fu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yen-Tung Yeh"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yi-Hsuan Yang"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "该文用两阶段把定时音符先变成每弦基频与包络曲线再合成音频，在 GuitarSet 上控制保真与主观分领先单阶段与 DDSP-Guitar，但频谱距离指标 MSSL 仍落后于直接优化混音的 DDSP-Guitar。",
+  "originalTitle": "Expressive Guitar Synthesis via Controllable Latent Flow Matching",
+  "pdfUrl": "https://arxiv.org/pdf/2610.36786v1.pdf",
+  "readerTitle": "把吉他 MIDI 先变成可改的演奏曲线，再用潜在流匹配合成声音",
+  "schemaVersion": 2
+}
