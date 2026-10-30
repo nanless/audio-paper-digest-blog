@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.36643v1",
+  "arxivId": "2610.36643",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.36643v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hansol Park"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Minkyung Song"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zinu Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yujun Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hoseong Ahn"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hyunjin Choi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kyuhong Shim"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.36643v1",
+  "originalTitle": "Tap2Listen: Instant Target Switching for Streaming Audio-Visual Speaker Extraction",
+  "pdfUrl": "https://arxiv.org/pdf/2610.36643v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

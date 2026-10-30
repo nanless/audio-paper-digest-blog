@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.37024v1",
+  "abstract": "Recent generative speech enhancement (SE) models achieve high perceptual quality, but their non-causal processing and expensive computation make them difficult to use for streaming, on-device inference. We propose StreamSE, a 20M-parameter streaming SE model that operates in the latent space of a frozen pretrained neural audio codec. At each frame, StreamSE directly regresses a clean continuous latent from the noisy continuous latent while conditioning on its own predictions from previous frames. Enhancement therefore requires a single forward pass per frame and no iterative sampling or look-ahead. We further truncate the codec's residual vector quantizer (RVQ) to its coarse levels, halving the number of tokens per frame while improving robustness to reverberation. StreamSE is the only streaming generative model in our comparison, yet it matches or exceeds the perceptual quality of the offline generative baselines. Furthermore, the complete StreamSE pipeline runs in real time on a single smartphone CPU core. Our results show that continuous latent regression provides a practical route to generative SE under fully causal, on-device streaming constraints.",
+  "abstractSha256": "d5777d444bd17e1ff036fc058f24598a0dbc42194066a9a80af6e76113eda8a8",
+  "arxivId": "2610.37024",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.37024v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "神经编解码与离散单元",
+    "primaryTask": "语音增强",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-enhancement",
+          "label": "语音增强"
+        },
+        {
+          "facet": "method",
+          "id": "method.neural-codec",
+          "label": "神经编解码与离散单元"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.on-device",
+          "label": "端侧运行"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "神经编解码与离散单元",
+      "primaryMethodId": "method.neural-codec",
+      "primaryTask": "语音增强",
+      "primaryTaskId": "task.speech-enhancement",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hyunjin Choi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zinu Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Junwon Moon"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jeongyun Chae"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Seungbeom Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kyuhong Shim"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "StreamSE 针对因果流式与手机端算力约束，用冻结因果神经音频编解码器的连续隐变量回归代替离散 token 分类与迭代采样，在 DNS Challenge 2020 上以零前视达到可比离线生成模型的 DNSMOS，并以单核 p95 每帧 61.04 毫秒满足 80 毫秒预算，代价是截断精细量化层级会损失部分说话人相似度。",
+  "originalTitle": "StreamSE: Neural Audio Codec-based Streaming Speech Enhancement for On-device Inference",
+  "pdfUrl": "https://arxiv.org/pdf/2610.37024v1.pdf",
+  "readerTitle": "在冻结语音编解码器隐空间里逐帧回归：StreamSE 的流式增强路线",
+  "schemaVersion": 2
+}

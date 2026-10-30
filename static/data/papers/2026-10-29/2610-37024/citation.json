@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.37024v1",
+  "arxivId": "2610.37024",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.37024v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hyunjin Choi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zinu Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Junwon Moon"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jeongyun Chae"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Seungbeom Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kyuhong Shim"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.37024v1",
+  "originalTitle": "StreamSE: Neural Audio Codec-based Streaming Speech Enhancement for On-device Inference",
+  "pdfUrl": "https://arxiv.org/pdf/2610.37024v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,86 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.36713v1",
+  "abstract": "Personalized spoken agents must identify speakers before accessing user-specific memory, yet memory benchmarks typically assume correctly attributed histories. We argue that voiceprints are observations of identity, not identities themselves, and formulate online speaker-memory construction to maintain persistent user entities as acoustic evidence evolves. We introduce EvoSpeakerMem, a training-free layer for causal speaker routing, selective acoustic-state updates, and identity-partitioned memory writes and retrieval through a replaceable text-memory backend. We also construct LoCoMo-ID, a spoken-memory benchmark with hidden speaker identities, speaker-sensitive queries, simulated recording-condition shifts, and four-speaker identity-confusion tests. On longitudinal SMIIP-TV, genuine-probe rejection under a frozen near-enrollment threshold rises from 29.8% to 55.6% over approximately one year. On LoCoMo-ID speaker-sensitive queries, gated updating improves identity-gated QA over fixed representations by 3.86 and 11.62 percentage points under clean and shifted conditions, respectively, with no wrong-user authorizations. The advantage persists in the four-speaker test. Yet reducing fragmentation and improving QA can coexist with incorrect cross-user links, revealing a fragmentation--contamination trade-off that QA alone cannot capture.",
+  "abstractSha256": "6a608e33e63e06222555b4713e8deb5234cbb42fb2ba50e6bde7651b1b952d5c",
+  "arxivId": "2610.36713",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.36713v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "聚类与类别匹配",
+    "primaryTask": "语音对话系统",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-dialogue",
+          "label": "语音对话系统"
+        },
+        {
+          "facet": "method",
+          "id": "method.clustering",
+          "label": "聚类与类别匹配"
+        },
+        {
+          "facet": "task",
+          "id": "task.speaker-identification",
+          "label": "说话人识别"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "聚类与类别匹配",
+      "primaryMethodId": "method.clustering",
+      "primaryTask": "语音对话系统",
+      "primaryTaskId": "task.speech-dialogue",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "School of Artificial Intelligence, The Chinese University of Hong Kong, Shenzhen",
+        "Meituan"
+      ],
+      "name": "Yucong Zhang"
+    },
+    {
+      "affiliations": [
+        "Meituan"
+      ],
+      "name": "Cancan Li"
+    },
+    {
+      "affiliations": [
+        "Meituan"
+      ],
+      "name": "Bo Xiao"
+    },
+    {
+      "affiliations": [
+        "Meituan"
+      ],
+      "name": "Ke Zeng"
+    },
+    {
+      "affiliations": [
+        "School of Artificial Intelligence, The Chinese University of Hong Kong, Shenzhen"
+      ],
+      "name": "Ming Li"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文把声纹当作对身份的含噪观察，提出免训练的 EvoSpeakerMem 逐轮路由与门控更新用户实体，并在合成的 LoCoMo-ID 上验证其在干净与录音条件变化下提升身份受限问答，但也暴露碎片化与跨用户污染的权衡。",
+  "originalTitle": "From Voiceprints to User Entities: Online Speaker-Memory Construction for Multi-User Spoken Agents",
+  "pdfUrl": "https://arxiv.org/pdf/2610.36713v1.pdf",
+  "readerTitle": "声纹只是观察：多人语音智能体如何在线维护用户实体与记忆",
+  "schemaVersion": 2
+}

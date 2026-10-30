@@ -1,0 +1,45 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.36713v1",
+  "arxivId": "2610.36713",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.36713v1",
+  "authors": [
+    {
+      "affiliations": [
+        "School of Artificial Intelligence, The Chinese University of Hong Kong, Shenzhen",
+        "Meituan"
+      ],
+      "name": "Yucong Zhang"
+    },
+    {
+      "affiliations": [
+        "Meituan"
+      ],
+      "name": "Cancan Li"
+    },
+    {
+      "affiliations": [
+        "Meituan"
+      ],
+      "name": "Bo Xiao"
+    },
+    {
+      "affiliations": [
+        "Meituan"
+      ],
+      "name": "Ke Zeng"
+    },
+    {
+      "affiliations": [
+        "School of Artificial Intelligence, The Chinese University of Hong Kong, Shenzhen"
+      ],
+      "name": "Ming Li"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.36713v1",
+  "originalTitle": "From Voiceprints to User Entities: Online Speaker-Memory Construction for Multi-User Spoken Agents",
+  "pdfUrl": "https://arxiv.org/pdf/2610.36713v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}
