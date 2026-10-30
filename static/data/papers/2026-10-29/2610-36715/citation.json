@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.36715v1",
+  "arxivId": "2610.36715",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.36715v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Matthieu Cervera"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Francesco Paissan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Micael Antunes"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Mirco Ravanelli"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ricard Marxer"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Cem Subakan"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.36715v1",
+  "originalTitle": "SMEBENCH: Benchmarking Neural Music Editing with Synthetized MIDI Edits",
+  "pdfUrl": "https://arxiv.org/pdf/2610.36715v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

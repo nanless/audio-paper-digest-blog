@@ -1,0 +1,88 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.36834v1",
+  "abstract": "Audio-Visual Target Speaker Extraction (AVTSE) uses face-related visual cues to extract a target speaker from a speech mixture. In many AVTSE systems, visual features are obtained from convolutional image encoders, and their computation may become a non-negligible part of the overall system when lightweight separation backbones are used. This work proposes a dual-branch visual front-end that reorganizes visual information according to its spatial characteristics. A compact lip region of interest is used to model local articulation cues through convolutional processing, while facial landmark coordinates are used to represent global geometric motion with a lightweight temporal convolutional network. The two representations are integrated into IIANet and SpatialNet with limited fusion overhead. Experiments on LRS3-2mix under a unified reduced training protocol show that the proposed method achieves a performance-computation trade-off close to the lightweight image-based baseline. Compared with the ResNet18-based visual encoder, it reduces the module-level visual encoding computation by more than 90% across both evaluated separation backbones, with a moderate performance gap. This comparison excludes face detection and landmark estimation and therefore applies to systems where landmark coordinates are already available from preprocessing. Demos are available at https://anonymous.4open.science/r/Lightweight-Visual-Frontend-E46E.",
+  "abstractSha256": "97644cb3cd9e3d9313b2ccb5cb22e5799c6a1e3372fd087c665894238c8997b7",
+  "arxivId": "2610.36834",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.36834v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "目标说话人提取",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.target-speaker",
+          "label": "目标说话人提取"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.cnn",
+          "label": "CNN"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "目标说话人提取",
+      "primaryTaskId": "task.target-speaker",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "School of Computer Science, Wuhan University, Wuhan, China",
+        "School of Artificial Intelligence, Chinese University of Hong Kong, Shenzhen, China"
+      ],
+      "name": "Zhan Jin"
+    },
+    {
+      "affiliations": [
+        "School of Artificial Intelligence, Wuhan University, Wuhan, China",
+        "School of Cyber Science and Engineering, Wuhan University, Wuhan, China"
+      ],
+      "name": "Peijun Yang"
+    },
+    {
+      "affiliations": [
+        "School of Artificial Intelligence, Wuhan University, Wuhan, China",
+        "School of Cyber Science and Engineering, Wuhan University, Wuhan, China"
+      ],
+      "name": "Juan Liu"
+    },
+    {
+      "affiliations": [
+        "School of Artificial Intelligence, Chinese University of Hong Kong, Shenzhen, China",
+        "School of Artificial Intelligence, Wuhan University, Wuhan, China"
+      ],
+      "name": "Ming Li"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "本文把视觉建模按空间特性拆成小嘴唇图像分支和人脸关键点几何分支，在 LRS3-2mix 统一精简训练下接近轻量图像基线的分离质量，同时把模块级视觉编码计算降到 0.3 至 0.5 GMACs 量级。",
+  "originalTitle": "A Lightweight Dual-Branch Visual Front-End for Efficient Audio-Visual Target Speaker Extraction",
+  "pdfUrl": "https://arxiv.org/pdf/2610.36834v1.pdf",
+  "readerTitle": "把视觉计算省下来：双分支轻量视觉前端如何做目标说话人提取",
+  "schemaVersion": 2
+}

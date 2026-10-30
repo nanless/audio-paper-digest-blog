@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.36959v1",
+  "arxivId": "2610.36959",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.36959v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Qwen Business Unit of AlibabaEqual contribution.Work done during an internship at Alibaba.Corresponding author."
+      ],
+      "name": "Kaixuan Du"
+    },
+    {
+      "affiliations": [
+        "Qwen Business Unit of AlibabaEqual contribution.Work done during an internship at Alibaba.Corresponding author."
+      ],
+      "name": "Xin Wan"
+    },
+    {
+      "affiliations": [
+        "Qwen Business Unit of AlibabaEqual contribution.Work done during an internship at Alibaba.Corresponding author."
+      ],
+      "name": "Dai Guan"
+    },
+    {
+      "affiliations": [
+        "Qwen Business Unit of AlibabaEqual contribution.Work done during an internship at Alibaba.Corresponding author."
+      ],
+      "name": "Ming Chen"
+    },
+    {
+      "affiliations": [
+        "Qwen Business Unit of AlibabaEqual contribution.Work done during an internship at Alibaba.Corresponding author."
+      ],
+      "name": "Xiaoxi Jiang"
+    },
+    {
+      "affiliations": [
+        "Qwen Business Unit of AlibabaEqual contribution.Work done during an internship at Alibaba.Corresponding author."
+      ],
+      "name": "Guanjun Jiang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.36959v1",
+  "originalTitle": "Live-OPSD: On-Policy Self-Distillation for Proactive Streaming Large Video Models",
+  "pdfUrl": "https://arxiv.org/pdf/2610.36959v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

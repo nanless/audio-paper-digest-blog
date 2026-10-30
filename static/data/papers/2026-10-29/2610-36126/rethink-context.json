@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.36126v1",
+  "abstract": "Accurate prediction of human Mean Opinion Scores (MOS) is crucial for evaluating synthetic speech quality in text-to-speech (TTS) and voice conversion (VC). Most MOS predictors output only point estimates and ignore uncertainty, limiting reliability in model selection and deployment. We propose ConformalMOS, a framework that augments MOS prediction with conformal prediction to produce statistically valid prediction intervals with guaranteed coverage under exchangeability, alongside point estimates. During training, MOS labels are modeled in an ordinal-aware manner by converting one-hot targets into Gaussian-smoothed distributions, preserving score ordering. This improves uncertainty calibration, particularly when softmax confidence is overconfident on out-of-distribution speech. On BVCC datasets, ConformalMOS achieves competitive accuracy (MSE = 0.08) while delivering empirically validated coverage, enhancing reliability for real-world TTS and VC deployment.",
+  "abstractSha256": "8c8a827f164c86491de585d962ee4daba716a01123d9cc7437fb31bfa4c030cb",
+  "arxivId": "2610.36126",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.36126v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "不确定性估计与校准",
+    "primaryTask": "语音质量评估",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-quality",
+          "label": "语音质量评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.uncertainty-estimation",
+          "label": "不确定性估计与校准"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "不确定性估计与校准",
+      "primaryMethodId": "method.uncertainty-estimation",
+      "primaryTask": "语音质量评估",
+      "primaryTaskId": "task.speech-quality",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kehinde Elelu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Joshua E. Siegel"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Mohammadali Saffary"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Tashfain Ahmed"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Simeon Babatunde"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ebuka Okpala"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "ConformalMOS 针对合成语音平均意见分只给点估计不可靠的问题，用冻结声学编码加顺序感知分布头做点预测，再用切分共形校准输出有覆盖保证的区间，在 BVCC 上系统级 MSE 做到 0.08 但结论只在同域划分和强骨干下成立。",
+  "originalTitle": "ConformalMOS: Uncertainty-Aware MOS Prediction with Conformal Intervals and Ordinal Modeling",
+  "pdfUrl": "https://arxiv.org/pdf/2610.36126v1.pdf",
+  "readerTitle": "ConformalMOS：给语音质量打分加上有保证的区间和顺序建模",
+  "schemaVersion": 2
+}

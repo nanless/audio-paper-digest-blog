@@ -1,0 +1,72 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.36865v1",
+  "abstract": "Audio systems aim to maximise the listener's perceived quality, traditionally evaluated through mean opinion scoring (MOS), a subjective process that is slow, costly, and collected only after playback. Machine learning now predicts MOS directly from the audio, but in generalising across participants it tends to discard the subject variance that defines individual perception. Neurophysiological measures may offer a complementary signal taken directly from the listener, objective, implicit, and continuous, though prior work has relied on laboratory-grade EEG and fNIRS. We ask how practical consumer-grade devices compare, and whether they might recover population-level audio-quality trends and, when calibrated per listener, track that listener's effort. Recording 32-channel laboratory EEG alongside wearable EEG, fNIRS, and eye tracking from thirty listeners, our results suggest commercial wearable and optical sensing can decode audio quality at statistically significant levels and recover listening effort per listener. These findings may point towards platforms tuned not only to perceived quality but to the effort a clip demands, read from the listener's own response as they listen.",
+  "abstractSha256": "37d01010d5e20bef6bc5491bf778e0bde7ab0e31b332ef73992f46b1f2694de1",
+  "arxivId": "2610.36865",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.36865v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "神经生理实验",
+    "primaryTask": "音频质量评估",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-quality",
+          "label": "音频质量评估"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.listening-effort",
+          "label": "听觉努力与认知负荷"
+        },
+        {
+          "facet": "method",
+          "id": "method.neurophysiological-experiment",
+          "label": "神经生理实验"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.biosignal",
+          "label": "生理信号"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "神经生理实验",
+      "primaryMethodId": "method.neurophysiological-experiment",
+      "primaryTask": "音频质量评估",
+      "primaryTaskId": "task.audio-quality",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Niall McGuire"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Dimitra Emmanouilidou"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "该文用同一批听音人的实验室脑电与消费级可穿戴脑电、功能性近红外、眼动数据，检验二分类质量与五级质量回归以及听者自评费力程度的可解码性，最强证据是可穿戴通道在未见听者上恢复群体质量标签，代价是相关系数 modest 且费力程度尚不能跨听者泛化。",
+  "originalTitle": "Physiology-Informed Audio Quality and Listening Effort Estimation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.36865v1.pdf",
+  "readerTitle": "用消费级生理信号同时读出音频质量与收听费力程度",
+  "schemaVersion": 2
+}

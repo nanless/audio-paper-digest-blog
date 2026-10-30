@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.36578v1",
+  "arxivId": "2610.36578",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.36578v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jiajun Fan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Roger Ren"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jingyuan Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Rahul Pandey"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Prashanth Gurunath Shivakumar"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ankur Gandhe"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yile Gu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ge Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ivan Bulyko"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.36578v1",
+  "originalTitle": "AudioRSI: Recursively Self-Improving Audio Reasoners",
+  "pdfUrl": "https://arxiv.org/pdf/2610.36578v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

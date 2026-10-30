@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.36768v1",
+  "abstract": "Voice anonymization aims to protect a speaker's identity while preserving the linguistic content of speech, enabling voice data to be shared and processed with reduced privacy risk. This work focuses on reversible voice anonymization, where the original voice can be recovered by an authorized user rather than being permanently discarded. However, existing approaches can achieve apparent speaker anonymization by degrading the speech itself, while their effectiveness may also depend on the speaker-verification representation used during training. This creates a need for methods that protect speaker identity without sacrificing speech intelligibility and that remain effective against unseen speaker verifiers. We introduce content preserving training constraints to improve the privacy-utility trade-off by preventing anonymization from being achieved primarily through speech degradation. We further introduce a verifier-generalization strategy that incorporates a stronger speaker-verification representation during training, improving anonymization robustness beyond the verifier used in the original training setup. The resulting approach maintains intelligible speech, strengthens anonymization, and preserves reliable voice restoration, with evaluation on unseen speakers and held-out speaker verification models. On 38 unseen speakers, the approach raises the attacker's equal error rate from a measured floor of 2.8% to 26.3%, and to 27.9% against a held-out verifier, with 11.8% word error rate and 94.9% speaker similarity on key-based restoration. These improvements advance reversible voice anonymization toward practical privacy-preserving speech applications, where anonymized speech can be safely processed or shared while the original voice remains recoverable under authorized conditions.",
+  "abstractSha256": "538a0d4edfa024841533266cd9ba8e9c8ac3757f0dc1b0ae77af9ee89c499089",
+  "arxivId": "2610.36768",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.36768v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "知识蒸馏",
+    "primaryTask": "说话人匿名化",
+    "rankBucket": "前50%",
+    "score": 6.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.anonymization",
+          "label": "说话人匿名化"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.privacy",
+          "label": "隐私保护"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "知识蒸馏",
+      "primaryMethodId": "method.distillation",
+      "primaryTask": "说话人匿名化",
+      "primaryTaskId": "task.anonymization",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Nirjon Mobarak Talukder"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Rafid Ahmed"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Mohammad Ishrak Abedin"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Abu Raihan Mostofa Kamal"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对条件可逆网络匿名化中三元组损失靠破坏频谱也能满足的捷径，论文用直接约束匿名频谱的锚损失与范围损失加蒸馏得到的梅尔域验证器做训练，在 38 个未见说话人上把攻击者等错误率从 2.83% 提高到 26.31%，代价是词错误率升到 11.75%，而正确密钥恢复仍达到声码器往返上限 94.9%。",
+  "originalTitle": "The Content Leash: Mitigating Degenerate Solutions in Invertible Speaker Anonymization",
+  "pdfUrl": "https://arxiv.org/pdf/2610.36768v1.pdf",
+  "readerTitle": "内容缰绳：给可逆说话人匿名化套上内容约束",
+  "schemaVersion": 2
+}

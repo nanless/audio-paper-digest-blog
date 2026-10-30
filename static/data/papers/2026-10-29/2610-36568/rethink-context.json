@@ -1,0 +1,96 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.36568v1",
+  "abstract": "Real-world audio applications require precise, queryable representations grounded in physical time. Yet modern Large Audio-Language Models (LALMs) increasingly favor conversational generation, producing free-form descriptions that conflate acoustic perception with higher-level reasoning and lack precise temporal grounding. We introduce TAC2, a foundation model that casts timestamped audio captioning as composable functions to construct granular, speaker-attributed acoustic timelines directly from in-the-wild audio. To avoid prohibitively expensive manual annotation, we programmatically fuse complementary predictions from specialized weak teachers through time-registered IoU matching. We model the resulting multi-granularity schema of timestamped events, speaker turns, and fine-grained speech attributes using an Instruction-Input-Output (IIO) completion format, in which each task is a function of the audio, an instruction, and an optional input. A single call decodes the full description autonomously, while composing calls lets earlier outputs or external priors, such as a reference transcript, condition later ones. We further extend TAC2 with expressive speech attributes to obtain TAC2-S, using parameter-efficient specialists to elicit latent paralinguistic capabilities from the pre-trained backbone and distill them into a unified model. We validate the resulting representation in two complementary settings. Paired with frozen text-only LLMs, it yields strong spoken audio understanding across diverse reasoning backends, demonstrating the utility of decoupling fine-grained acoustic perception from downstream reasoning. Used as paired supervision for text-to-audio generation, it supports semantically and temporally grounded reconstruction, together with explicit zero-shot control over event timing, speaker attributes, and word-level emphasis.",
+  "abstractSha256": "79a86e3d294c27decb171ec309cf626e7ee7b0f87c38921f60adf7ed55f56618",
+  "arxivId": "2610.36568",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.36568v1",
+  "assessment": {
+    "documentType": "模型报告",
+    "primaryMethod": "指令微调",
+    "primaryTask": "音频字幕生成",
+    "rankBucket": "前50%",
+    "score": 7.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-captioning",
+          "label": "音频字幕生成"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-generation",
+          "label": "音频生成"
+        },
+        {
+          "facet": "task",
+          "id": "task.emotion-recognition",
+          "label": "语音情感识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.instruction-tuning",
+          "label": "指令微调"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "指令微调",
+      "primaryMethodId": "method.instruction-tuning",
+      "primaryTask": "音频字幕生成",
+      "primaryTaskId": "task.audio-captioning",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Swapnil Bhosale"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Prem Seetharaman"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ke Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Haonan Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Justin Salamon"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zeyu Jin"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "TAC2 先用弱教师在时间轴上拼出带说话人的结构化描述，再用小样本专家引出韵律属性并蒸馏为统一模型，让冻结文本模型接力推理、让扩散模型按时间重建，在口语感知与可控合成上得到可验证的提升。",
+  "originalTitle": "TAC2: Timestamped Audio Captioning as composable functions",
+  "pdfUrl": "https://arxiv.org/pdf/2610.36568v1.pdf",
+  "readerTitle": "把带时间戳的声音描述拆成可组合的函数",
+  "schemaVersion": 2
+}

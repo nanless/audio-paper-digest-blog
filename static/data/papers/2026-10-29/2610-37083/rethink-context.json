@@ -1,0 +1,108 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.37083v1",
+  "abstract": "Tracheal auscultation is recommended by clinical practice guidelines, and required by some U.S. state regulations, for monitoring ventilation during procedural sedation and monitored anesthesia care. However, continuous auscultation with a conventional stethoscope is impractical, susceptible to ambient noise, and difficult to interpret. We developed the Artificial Intelligence Respiratory MOnitoring Device (Airmod), an FDA-cleared software as a medical device (510(k) K242798) that continuously monitors tracheal sounds and estimates breath-to-breath respiratory rate in real time. In this paper, we describe its software architecture and key processing modules. Ambient noise is suppressed by active noise control, using a normalized least-mean-square adaptive filter with a dual-microphone electronic stethoscope. A multiclass convolutional bidirectional gated recurrent unit (CNN-BiGRU) model detects inhalations and exhalations in 15-s inference windows. It was trained on HF_Tracheal_V2, a new database of 373 continuous tracheal sound recordings (8,521 min; 107,644 labeled inhalations) from 369 subjects under sedation. To handle continuous acoustic streaming, Airmod runs inference on overlapping 15-s windows. It refines the detected inhalations by removing incomplete events, low-energy false positives, and double counts, concatenates them into a history list, and estimates respiratory rate from the mean period of the last three breaths. On the test set, at the default 2-s prediction interval with refinement enabled, inhalation detection achieved a sensitivity of 0.828, a positive predictive value of 0.832, and an F1-score of 0.830. Airmod also broadcasts the noise-cancelled tracheal sound and displays a real-time spectrogram to help clinicians recognize respiratory abnormalities.",
+  "abstractSha256": "51bf1c447aaddebd6696e4db22b470ae8eba6eec68a1106620b8cc21fc489877",
+  "arxivId": "2610.37083",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.37083v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "RNN",
+    "primaryTask": "音频事件检测",
+    "rankBucket": "前50%",
+    "score": 5.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "application",
+          "id": "application.medical",
+          "label": "医疗音频"
+        },
+        {
+          "facet": "task",
+          "id": "task.event-detection",
+          "label": "音频事件检测"
+        },
+        {
+          "facet": "task",
+          "id": "task.active-noise-control",
+          "label": "主动降噪"
+        },
+        {
+          "facet": "method",
+          "id": "method.cnn",
+          "label": "CNN"
+        },
+        {
+          "facet": "method",
+          "id": "method.rnn",
+          "label": "RNN"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "RNN",
+      "primaryMethodId": "method.rnn",
+      "primaryTask": "音频事件检测",
+      "primaryTaskId": "task.event-detection",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Shang-Ran Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Fu-Shun Hsu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Ji-Chang Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Chuan Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Shou-Zen Fan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Chang-Fu Su"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Eng-Che Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Yuan-Ren Cheng"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对镇静手术中呼吸监测易受环境噪声干扰且人工听诊难连续的问题，Airmod 用双麦克风自适应降噪加 15 秒窗 CNN-BiGRU 吸气呼气检测与后处理拼接来逐次更新呼吸率，在 HF_Tracheal_V2 测试集上吸气检测 F1 约 0.83-0.85，但呼吸率对标二氧化碳描记的结果另文发表且降噪与算力仍有限制。",
+  "originalTitle": "Design and Architecture of Airmod: An Active Noise Cancellation and Deep Learning System for Real-Time Respiratory Rate Estimation from Tracheal Sounds",
+  "pdfUrl": "https://arxiv.org/pdf/2610.37083v1.pdf",
+  "readerTitle": "气管音如何变成实时呼吸率：Airmod 的降噪与深度学习链路",
+  "schemaVersion": 2
+}

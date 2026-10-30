@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.36959v1",
+  "abstract": "Streaming multimodal assistants must make response decisions while events are still unfolding. They need to recognize when the available evidence warrants a response, produce an appropriate continuation, and remain silent otherwise. Supervised fine-tuning learns from recorded assistant turns, but does not directly train on the response prefixes produced by the evolving policy itself. We introduce Live-OPSD, an on-policy self-distillation method that uses privileged hints available only during training to supervise the policy on its own outputs. The policy first generates a continuation from the streaming context alone. The same model then re-evaluates that continuation with a hint describing the relevant evidence, and the resulting distributions guide the unhinted policy. On Qwen3-Omni-30B-A3B, Live-OPSD attains an average score of 59.64 on LiveProBench, 5.26 points above the strongest continued-SFT baseline, and stays competitive on OVO-Bench (65.84). These results indicate that guiding the policy on its own outputs with privileged hints improves both when and how a streaming assistant responds.",
+  "abstractSha256": "be838da28bbcbc3b9801758f12bc5990fd81f5ffe04f9d504d19b12fc3f72bb7",
+  "arxivId": "2610.36959",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.36959v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "知识蒸馏",
+    "primaryTask": "音视频理解",
+    "rankBucket": "前50%",
+    "score": 5.9,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-understanding",
+          "label": "音视频理解"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "知识蒸馏",
+      "primaryMethodId": "method.distillation",
+      "primaryTask": "音视频理解",
+      "primaryTaskId": "task.av-understanding",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Qwen Business Unit of AlibabaEqual contribution.Work done during an internship at Alibaba.Corresponding author."
+      ],
+      "name": "Kaixuan Du"
+    },
+    {
+      "affiliations": [
+        "Qwen Business Unit of AlibabaEqual contribution.Work done during an internship at Alibaba.Corresponding author."
+      ],
+      "name": "Xin Wan"
+    },
+    {
+      "affiliations": [
+        "Qwen Business Unit of AlibabaEqual contribution.Work done during an internship at Alibaba.Corresponding author."
+      ],
+      "name": "Dai Guan"
+    },
+    {
+      "affiliations": [
+        "Qwen Business Unit of AlibabaEqual contribution.Work done during an internship at Alibaba.Corresponding author."
+      ],
+      "name": "Ming Chen"
+    },
+    {
+      "affiliations": [
+        "Qwen Business Unit of AlibabaEqual contribution.Work done during an internship at Alibaba.Corresponding author."
+      ],
+      "name": "Xiaoxi Jiang"
+    },
+    {
+      "affiliations": [
+        "Qwen Business Unit of AlibabaEqual contribution.Work done during an internship at Alibaba.Corresponding author."
+      ],
+      "name": "Guanjun Jiang"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "Live-OPSD 让流式策略先自己生成回应，再用训练时特权提示给出分布目标并做决策感知筛选，在 LiveProBench 30B 上达到 59.64 分，但结论只在同协议同数据受控对比下成立。",
+  "originalTitle": "Live-OPSD: On-Policy Self-Distillation for Proactive Streaming Large Video Models",
+  "pdfUrl": "https://arxiv.org/pdf/2610.36959v1.pdf",
+  "readerTitle": "流式视频助手何时该说话：Live-OPSD 的特权自蒸馏解读",
+  "schemaVersion": 2
+}

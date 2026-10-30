@@ -1,0 +1,102 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.37270v1",
+  "abstract": "The hybrid work trend in the post-COVID period has transformed how people communicate while at work. However, there is a lack of quantitative understanding of how home and office environments shape communicative behavior and affective well-being. To study this, as a part of a larger study of the role of work environment on stress, we designed an egocentric wearable audio sensing system that captured interpersonal communication across both working locations. The system extracts real-time acoustic features on a wearable audio sensor and performs offline foreground speaker diarization to derive speaking load and activeness features. To improve diarization performance under low-dimensional feature constraints, we apply a teacher-student knowledge distillation framework that transfers knowledge from large-scale speech foundation models into a compact ResNet-based model, achieving consistent improvements in diarization performance over the baseline across three public egocentric speech datasets. In a four-month longitudinal deployment with 16 participants, our system revealed location-dependent differences in work communication patterns. Moreover, the mixed linear model analyses showed that office-based speaking load was significantly associated with higher self-reported stress and lower self-reported productivity, while speaking activeness during home-based work amplified both productivity and affective load in this cohort.",
+  "abstractSha256": "883fe6d4810fe1202fe6cfeccd45fd2d76d944ecdd6e76b82df8da60e4ff9311",
+  "arxivId": "2610.37270",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.37270v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "知识蒸馏",
+    "primaryTask": "说话人分离标注",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.diarization",
+          "label": "说话人分离标注"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.on-device",
+          "label": "端侧运行"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "知识蒸馏",
+      "primaryMethodId": "method.distillation",
+      "primaryTask": "说话人分离标注",
+      "primaryTaskId": "task.diarization",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Tiantian Feng"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Aditya Kommineni"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Emily Zhou"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Burcin Becerik-Gerber"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Gale Lucas"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shawn C. Roll"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shrikanth Narayanan"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文用只存低维声学特征的可穿戴徽章加离线前景说话人切分得到说话负荷与活跃度，在 16 人四个月的追踪中发现办公室说话更多，而办公室说话多与更高压力和更低自评效率相关，代价是低维特征的切分误差与小样本相关性结论的外推限制。",
+  "originalTitle": "Understanding Everyday Communication Patterns, Stress, and Productivity in Hybrid Work through Egocentric Wearable Audio Sensing",
+  "pdfUrl": "https://arxiv.org/pdf/2610.37270v1.pdf",
+  "readerTitle": "戴在身上的麦克风如何量出混合办公的说话、压力与效率",
+  "schemaVersion": 2
+}

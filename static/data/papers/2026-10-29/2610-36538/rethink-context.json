@@ -1,0 +1,114 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.36538v1",
+  "abstract": "Multilingual automatic speech recognition (ASR) has achieved rapid progress with large-scale pretrained models and multilingual speech corpora. Previous studies have proved the pivotal role of data sampling in multilingual ASR performance. However, existing sampling strategies largely rely on time-consuming manual, heuristic-based designs. To address this, we propose a linguistic-aware agentic data sampling framework that introduces a data sampling LLM agent into the multilingual ASR training loop. The agent is driven by a linguistically grounded rubric that analyzes ASR errors from phonological, morphological, and syntactic perspectives, and uses the resulting feedback together with training statistics, budget constraints, and algorithm profiles to select domain-level, sample-level, and token-level sampling strategies. This design turns evaluation results into adaptive data-selection decisions rather than treating WER/CER as final endpoints only. We conduct experiments on twelve Common Voice languages using Whisper-medium as the ASR backbone. The results show that our method achieves performance better than full-data training while using less training data and lower computational resources, and substantially accelerates training convergence compared to conventional sampling strategies.",
+  "abstractSha256": "959188078f143765bd9bcc2f7590775797a142b5e9b116fbd0bef6dad1b989e3",
+  "arxivId": "2610.36538",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.36538v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "工具增强与约束解码",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.tool-augmentation",
+          "label": "工具增强与约束解码"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.llm",
+          "label": "大语言模型"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "工具增强与约束解码",
+      "primaryMethodId": "method.tool-augmentation",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Zhiheng Qian"
+    },
+    {
+      "affiliations": [
+        "AISpeech Co., Ltd."
+      ],
+      "name": "Junhao Du"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Jing Peng"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Hanqi Li"
+    },
+    {
+      "affiliations": [
+        "AISpeech Co., Ltd."
+      ],
+      "name": "Kunyang Peng"
+    },
+    {
+      "affiliations": [
+        "AISpeech Co., Ltd."
+      ],
+      "name": "Feng Xue"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Lu Chen"
+    },
+    {
+      "affiliations": [
+        "Nanjing University"
+      ],
+      "name": "Shuai Wang"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Kai Yu"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "该论文把多语言识别误差按语音、形态、句法拆开，让大语言模型智能体据此逐轮选择语言配比、语句和词元监督，在 12 种 Common Voice 语言上用相同 1200 小时训练预算取得更低平均错误率，但结论只在 Whisper-medium 加固定微调配置下成立。",
+  "originalTitle": "Agentic Data Sampling Framework for Multilingual ASR via Linguistic-Aware Error-Driven Optimization",
+  "pdfUrl": "https://arxiv.org/pdf/2610.36538v1.pdf",
+  "readerTitle": "把评测误差变成下一轮选数据的依据：多语言语音识别的智能采样",
+  "schemaVersion": 2
+}

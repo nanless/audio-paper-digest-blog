@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.36249v1",
+  "arxivId": "2610.36249",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.36249v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Wang Tang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Fethiye Irmak Dogan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Linbo Qing"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ce Zhu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hatice Gunes"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.36249v1",
+  "originalTitle": "Hierarchical Multimodal Interaction Reasoning for Dyadic Relationship Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2610.36249v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

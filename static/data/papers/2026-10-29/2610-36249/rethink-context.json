@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.36249v1",
+  "abstract": "Dyadic relationship recognition aims to identify the latent social relationship between two individuals from their multimodal interactions. Existing methods typically project heterogeneous cues into a shared representation and optimise a flat classification objective, overlooking that relationships may rely on different interaction patterns. For instance, distant relationships can often be inferred from direct behavioural correspondence, whereas close relationships are better reflected by coordinated affective, behavioural, and multimodal responses. To address this limitation, we propose HiRe-DRR, a Hierarchical Multimodal Interaction Reasoning framework that organises relationship evidence from three complementary perspectives: feature level, interaction type, and relationship hierarchy. HiRe-DRR decomposes facial, bodily, acoustic, and textual cues into low- and high-level representations and constructs homogeneous and heterogeneous cross-participant interactions. We further introduce the Mixture-of-Interaction Transformer (MoI-Former), which treats diverse interactions as specialised experts and employs relation-aware sparse routing to identify relationship-relevant evidence while preserving contextual interaction information. The proposed Hierarchical Conditional Loss (HC-Loss) exploits the hierarchical nature of social relationships through coarse-to-fine supervision, enabling structured relationship reasoning. Extensive experiments on three dyadic relationship benchmarks demonstrate that HiRe-DRR outperforms recent representative image-, video-, and multimodal methods. Our routing analysis further reveals that distant relationships tend to rely on low-level homogeneous interactions, whereas closer relationships focus on high-level heterogeneous interactions. Our code is publicly available at: https://github.com/tw-repository/HiRe-DRR.",
+  "abstractSha256": "be0b575445fd52d099bad2e3a8eae9e30c948a5b5f1bfcdc00bf43b67c43573a",
+  "arxivId": "2610.36249",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.36249v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "混合专家模型",
+    "primaryTask": "视频社会状态推理",
+    "rankBucket": "前50%",
+    "score": 6.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.video-social-reasoning",
+          "label": "视频社会状态推理"
+        },
+        {
+          "facet": "method",
+          "id": "method.moe",
+          "label": "混合专家模型"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "混合专家模型",
+      "primaryMethodId": "method.moe",
+      "primaryTask": "视频社会状态推理",
+      "primaryTaskId": "task.video-social-reasoning",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Wang Tang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Fethiye Irmak Dogan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Linbo Qing"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ce Zhu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hatice Gunes"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对双人关系识别中证据层次与互动类型被混在一起的问题，HiRe-DRR 把低层与高层线索分开构造同质与异质互动，再用稀疏路由选择与层级条件监督做分类，在 NoXi、UDIVA 和 SeamInt 三个切分下取得更高的 UAR 与 mAP，但结论只在短片段切分与给定关系划分下成立。",
+  "originalTitle": "Hierarchical Multimodal Interaction Reasoning for Dyadic Relationship Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2610.36249v1.pdf",
+  "readerTitle": "从双人互动证据出发的分层关系识别：HiRe-DRR 解读",
+  "schemaVersion": 2
+}

@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.36911v1",
+  "arxivId": "2610.36911",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.36911v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Andoni Sudupe"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Inma Hernaez"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ander Arriandiaga"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Christoforos Souganidis"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ibon Saratxaga"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Eva Navas"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.36911v1",
+  "originalTitle": "Developing a Speech Language Model for Basque",
+  "pdfUrl": "https://arxiv.org/pdf/2610.36911v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.36538v1",
+  "arxivId": "2610.36538",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.36538v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Zhiheng Qian"
+    },
+    {
+      "affiliations": [
+        "AISpeech Co., Ltd."
+      ],
+      "name": "Junhao Du"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Jing Peng"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Hanqi Li"
+    },
+    {
+      "affiliations": [
+        "AISpeech Co., Ltd."
+      ],
+      "name": "Kunyang Peng"
+    },
+    {
+      "affiliations": [
+        "AISpeech Co., Ltd."
+      ],
+      "name": "Feng Xue"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Lu Chen"
+    },
+    {
+      "affiliations": [
+        "Nanjing University"
+      ],
+      "name": "Shuai Wang"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Kai Yu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.36538v1",
+  "originalTitle": "Agentic Data Sampling Framework for Multilingual ASR via Linguistic-Aware Error-Driven Optimization",
+  "pdfUrl": "https://arxiv.org/pdf/2610.36538v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

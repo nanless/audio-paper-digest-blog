@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.37083v1",
+  "arxivId": "2610.37083",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.37083v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Shang-Ran Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Fu-Shun Hsu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Ji-Chang Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Chuan Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Shou-Zen Fan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Chang-Fu Su"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Eng-Che Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Yuan-Ren Cheng"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.37083v1",
+  "originalTitle": "Design and Architecture of Airmod: An Active Noise Cancellation and Deep Learning System for Real-Time Respiratory Rate Estimation from Tracheal Sounds",
+  "pdfUrl": "https://arxiv.org/pdf/2610.37083v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

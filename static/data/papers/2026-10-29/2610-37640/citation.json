@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.37640v1",
+  "arxivId": "2610.37640",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.37640v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Lin Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "You Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Nicholas Evans"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xin Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "David Harwath"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Abhinav Dhall"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Bowen Shi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Chengzhe Sun"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Siwei Lyu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Sanjeev Khudanpur"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.37640v1",
+  "originalTitle": "Partially Edited Audio: Generation, Defense, and Open Problems",
+  "pdfUrl": "https://arxiv.org/pdf/2610.37640v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

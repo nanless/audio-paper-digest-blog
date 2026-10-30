@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.36568v1",
+  "arxivId": "2610.36568",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.36568v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Swapnil Bhosale"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Prem Seetharaman"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ke Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Haonan Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Justin Salamon"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zeyu Jin"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.36568v1",
+  "originalTitle": "TAC2: Timestamped Audio Captioning as composable functions",
+  "pdfUrl": "https://arxiv.org/pdf/2610.36568v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.36892v1",
+  "abstract": "Speech enhancement (SE) systems are commonly evaluated with objective metrics, with and without references, and with categorical subjective listening tests, all measuring speech quality and intelligibility. So far, it is unclear from such evaluations whether the processed speech is perceptually different or is preferred by everyday listeners. We investigate discrimination and preference as complementary dimensions of SE evaluation through crowdsourced triangle and pairwise preference tests across four SE systems, with comparisons to clean references. Results show that both listeners' ability to distinguish and whether they exhibit systematic preference vary across systems and substantially across acoustic conditions. Pairwise evaluations of objective metrics showed variable correlation with both discriminability and preference, motivating further studies into these novel aspects in speech enhancement evaluation.",
+  "abstractSha256": "a0991e247ab82905816d415eb02111e9b25d66941b4f771cbb3178277d97dded",
+  "arxivId": "2610.36892",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.36892v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "众包评测",
+    "primaryTask": "语音增强",
+    "rankBucket": "前50%",
+    "score": 5.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-enhancement",
+          "label": "语音增强"
+        },
+        {
+          "facet": "method",
+          "id": "method.crowdsourced-evaluation",
+          "label": "众包评测"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.evaluation",
+          "label": "模型评估"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "众包评测",
+      "primaryMethodId": "method.crowdsourced-evaluation",
+      "primaryTask": "语音增强",
+      "primaryTaskId": "task.speech-enhancement",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Simon Dahl Jepsen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jesper Rindom Jensen"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "本文用三角区分测试和带无偏好选项的成对偏好测试评价四个语音增强系统在不同语音上的可区分性和日常收听偏好，并检验常用客观指标差值能否预测这两个维度，发现可区分性与系统性偏好并不等同且多数客观指标相关性不稳定。",
+  "originalTitle": "Perceptual Differences and Preferences in Speech Enhancement",
+  "pdfUrl": "https://arxiv.org/pdf/2610.36892v1.pdf",
+  "readerTitle": "语音增强之后听起来不一样吗？又更喜欢哪个？区分度与偏好的互补评价",
+  "schemaVersion": 2
+}
