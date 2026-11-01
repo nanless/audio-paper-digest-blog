@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.37833v1",
+  "arxivId": "2610.37833",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.37833v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Chen Feng"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Tianyi Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ramchalam Kinattinkara Ramakrishnan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yicheng Lin"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shaojie Zhuo"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhaocong Yuan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Chenzheng Su"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xiaopeng Zhang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.37833v1",
+  "originalTitle": "Depth through Recurrence: Towards Ultra-Efficient On-Device ASR",
+  "pdfUrl": "https://arxiv.org/pdf/2610.37833v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

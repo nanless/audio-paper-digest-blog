@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.39185v1",
+  "abstract": "Ambisonics provides a device-independent representation of three-dimensional sound fields; however, extracting these coefficients from practical microphone array recordings remains strongly dependent on array geometry, acoustic transfer functions, and spatial sampling resolution. This pipeline is typically divided into two distinct tasks: encoding, which entails reconstructing the physically resolvable spatial components, and upscaling, which requires generating higher-order coefficients. Model-based approaches often fail on irregular arrays due to ill-conditioned transfer matrices, whereas conventional neural encoders remain strictly tied to the specific acquisition setup seen during training. Furthermore, existing upscaling methods usually assume ideal low-order inputs, ignoring device-specific array artifacts. We present ADEUPS, a unified framework that couples an array-independent Ambisonic diffusion prior with an explicit physical acquisition model during inference, enabling zero-shot encoding and upscaling across diverse array configurations. We train our prior using an order-masking strategy and perform inference via score blending, which we demonstrate to be crucial for solving the underlying inverse problem. Through extensive numerical evaluations across various array geometries, we show that ADEUPS consistently outperforms task- and array-specific baselines. Finally, we conduct subjective listening tests to confirm the perceptual effectiveness of our approach.",
+  "abstractSha256": "611576fb6a1eb7d4710ca61f497892036750d55fe0e43160e8d2c1ab22310194",
+  "arxivId": "2610.39185",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.39185v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "扩散模型",
+    "primaryTask": "声场重建",
+    "rankBucket": "前25%",
+    "score": 8.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.sound-field",
+          "label": "声场重建"
+        },
+        {
+          "facet": "method",
+          "id": "method.diffusion",
+          "label": "扩散模型"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.microphone-array",
+          "label": "麦克风阵列"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.spatial-audio",
+          "label": "空间音频信号"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "扩散模型",
+      "primaryMethodId": "method.diffusion",
+      "primaryTask": "声场重建",
+      "primaryTaskId": "task.sound-field",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Amit Milstein"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Nir Shlezinger"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Boaz Rafaely"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文把理想高阶 Ambisonics 重建写成一个从传声器观测出发的逆问题，用只在理想信号上训练的扩散先验加物理前向算子在推理时做后验采样，并以阶数掩蔽和分数混合解决可观测分量校正与不可观测高阶生成之间的矛盾，代价是 90 步约 150 次网络求值的迭代推理开销。",
+  "originalTitle": "Array-Agnostic High-Order Ambisonics Encoding via Diffusion Posterior Sampling",
+  "pdfUrl": "https://arxiv.org/pdf/2610.39185v1.pdf",
+  "readerTitle": "不换阵列不重训：用扩散后验采样同时做高阶 Ambisonics 编码与上变频",
+  "schemaVersion": 2
+}

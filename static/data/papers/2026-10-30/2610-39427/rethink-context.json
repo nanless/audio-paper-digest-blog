@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.39427v1",
+  "abstract": "Word-level emphasis conveys meaning that text alone cannot express and is therefore essential for a practical text-to-speech (TTS) system. In this work, we study how to add emphasis control post hoc to a pretrained TTS model that has never been trained with emphasis annotations. We present EmpDPO, a simple, efficient, and effective two-stage recipe that adds emphasis control to a multilingual zero-shot diffusion TTS model through supervised fine-tuning followed by direct preference optimization (DPO). The training signals for both stages come from an off-the-shelf multilingual emphasis detector, so that no manual emphasis annotation or task-specific reward design is needed. We find that DPO can substantially strengthen emphasis control with only a few thousand preference pairs and training steps. Objective and subjective evaluations against strong public systems show that our model produces perceptible emphasis while preserving naturalness and overall quality.",
+  "abstractSha256": "8cf89de2209239cf66dcd3603ae54e6eb0cf18234f59b0401ffafaca9f7c8844",
+  "arxivId": "2610.39427",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.39427v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "偏好优化",
+    "primaryTask": "韵律与风格控制",
+    "rankBucket": "前50%",
+    "score": 6.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "task",
+          "id": "task.prosody-style-control",
+          "label": "韵律与风格控制"
+        },
+        {
+          "facet": "method",
+          "id": "method.preference-optimization",
+          "label": "偏好优化"
+        },
+        {
+          "facet": "method",
+          "id": "method.diffusion",
+          "label": "扩散模型"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "偏好优化",
+      "primaryMethodId": "method.preference-optimization",
+      "primaryTask": "韵律与风格控制",
+      "primaryTaskId": "task.prosody-style-control",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Haonan Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yunyun Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Megan Wei"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zeyu Jin"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "EmpDPO 用现成重读检测器先给真实语音打伪标签做监督微调，再用同一检测器从模型采样中挑出好坏偏好对做扩散模型偏好优化，只用 5171 对和 1 万步就在六种语言上让目标词的重读更明显，同时保持自然度和音质。",
+  "originalTitle": "EmpDPO: Enabling Emphasis Control in TTS via Direct Preference Optimization",
+  "pdfUrl": "https://arxiv.org/pdf/2610.39427v1.pdf",
+  "readerTitle": "不用人工标注也能让语音合成学会单词重读：EmpDPO 的两阶段做法",
+  "schemaVersion": 2
+}

@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.38109v1",
+  "arxivId": "2610.38109",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.38109v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Institute of Neuroinformatics, University of Zurich and ETH Zurich"
+      ],
+      "name": "Maris Basha"
+    },
+    {
+      "affiliations": [
+        "Institute of Neuroinformatics, University of Zurich and ETH Zurich"
+      ],
+      "name": "Yuhang Wang"
+    },
+    {
+      "affiliations": [
+        "Swiss Data Science Center and CVLab, EPFL"
+      ],
+      "name": "Xiaoran Chen"
+    },
+    {
+      "affiliations": [
+        "Institute of Neuroinformatics, University of Zurich and ETH Zurich"
+      ],
+      "name": "Longbiao Cheng"
+    },
+    {
+      "affiliations": [
+        "Institute of Neuroinformatics, University of Zurich and ETH Zurich"
+      ],
+      "name": "Luca Yapura"
+    },
+    {
+      "affiliations": [
+        "Institute of Neuroinformatics, University of Zurich and ETH Zurich"
+      ],
+      "name": "Anja T. Zai"
+    },
+    {
+      "affiliations": [
+        "Swiss Data Science Center and CVLab, EPFL"
+      ],
+      "name": "Mathieu Salzmann"
+    },
+    {
+      "affiliations": [
+        "Institute of Neuroinformatics, University of Zurich and ETH Zurich"
+      ],
+      "name": "Richard Hahnloser"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.38109v1",
+  "originalTitle": "Who Called? V33DA: A Physically Verified Multimodal Benchmark for Vocal Attribution in Zebra Finch Groups",
+  "pdfUrl": "https://arxiv.org/pdf/2610.38109v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

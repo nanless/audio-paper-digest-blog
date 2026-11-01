@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.38252v1",
+  "abstract": "Music audio generation spans instrumental clips, full songs with vocals, edits of existing recordings, and systems that play alongside a musician in real time. This monograph explains the methods behind these systems for readers familiar with neural-network training who are new to music generation. It introduces neural audio codecs and autoencoders, autoregressive and masked token models, diffusion and flow matching, sampling acceleration, and preference optimization in a shared notation. Worked examples connect training objectives and sampling procedures to published systems. The application sections relate the musical requirements of instrumental generation, songs, editing, and live performance to model design. Comparison tables record representations, methods, inputs, tasks, and release information documented in papers and official sources. Symbolic composition, speech, and sound effects are included where they connect to music audio. We explain how to interpret automatic metrics and learned judges, design and report listening tests, and assess evidence about data provenance, memorization, attribution, and output detection. Selected legal decisions and disputes illustrate the implications for training and release. The reviewed systems combine established generative paradigms with new representations, planning stages, and post-training procedures. Differences in data, scale, and evaluation limit what cross-system comparisons can establish about the sources of reported gains.",
+  "abstractSha256": "9dc39e6ed9e4e82a94c21ec7e42025b1ee48952143165c4c3a3c21786624f3c7",
+  "arxivId": "2610.38252",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.38252v1",
+  "assessment": {
+    "documentType": "综述",
+    "primaryMethod": "文献综述方法",
+    "primaryTask": "音乐生成",
+    "rankBucket": "前50%",
+    "score": 6.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-generation",
+          "label": "音乐生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.literature-review",
+          "label": "文献综述方法"
+        },
+        {
+          "facet": "task",
+          "id": "task.music-understanding",
+          "label": "音乐分析"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.evaluation",
+          "label": "模型评估"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "文献综述方法",
+      "primaryMethodId": "method.literature-review",
+      "primaryTask": "音乐生成",
+      "primaryTaskId": "task.music-generation",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Mateusz Modrzejewski"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Joanna Kurkowska"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Dorien Herremans"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "该综述把音乐音频生成归纳为表示、生成范式与条件三类设计选择，用同一符号讲解编解码、扩散与偏好优化，并以系统对照表说明长歌曲、编辑与实时演奏各自的代价与评价限度。",
+  "originalTitle": "A Tutorial on Generative Models for Music Audio",
+  "pdfUrl": "https://arxiv.org/pdf/2610.38252v1.pdf",
+  "readerTitle": "音乐音频生成的方法、控制与评价：从乐器片段到完整歌曲与实时演奏",
+  "schemaVersion": 2
+}

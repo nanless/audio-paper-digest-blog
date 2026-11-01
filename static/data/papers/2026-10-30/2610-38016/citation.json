@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.38016v1",
+  "arxivId": "2610.38016",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.38016v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Arizona State University"
+      ],
+      "name": "Olga Kellert"
+    },
+    {
+      "affiliations": [
+        "Arizona State University"
+      ],
+      "name": "Samhitha Harish"
+    },
+    {
+      "affiliations": [
+        "Freie Universität Berlin"
+      ],
+      "name": "Johnatan E Bonilla"
+    },
+    {
+      "affiliations": [
+        "Arizona State University"
+      ],
+      "name": "Nemika Tyagi"
+    },
+    {
+      "affiliations": [
+        "Arizona State University"
+      ],
+      "name": "Phanos Kareen"
+    },
+    {
+      "affiliations": [
+        "Arizona State University"
+      ],
+      "name": "Nelvin Licona-Guevara"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.38016v1",
+  "originalTitle": "Beyond Aggregate WER: In-domain Adaptation, Learner Speech, Code-Switching, and Speaker Attribution in Online Spanish Learning Classrooms",
+  "pdfUrl": "https://arxiv.org/pdf/2610.38016v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

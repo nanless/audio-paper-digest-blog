@@ -1,0 +1,80 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.37795v1",
+  "abstract": "The short-time Fourier transform (STFT) characterizes the local frequency content of time-varying signals by evaluating the discrete Fourier transform over a sliding analysis window. The STFT is governed by a fundamental resolution trade-off: a short window localizes rapid transients in time at the cost of frequency resolution, whereas a long window resolves closely spaced harmonics at the expense of temporal resolution. The Universal Short-Time Fourier Transform (U-STFT) resolves this trade-off sequentially by modeling the analysis window duration as a data-adaptive state variable that indexes the number of hops included in the current observation interval. At each frame, a bank of candidate window durations is scored using normalized order-three Rényi entropy to quantify joint time-frequency concentration. A window length trellis aggregates the resulting $\\mathcal{O}(3^M)$ candidate window schedules with linear complexity per frame, guaranteeing a cumulative mix-loss regret bound of $\\mathcal{O}((k+1)\\log M)$ relative to any hindsight window schedule with $k$ resolution changes over $M$ frames. By linearity of the Fourier transform, posterior expectation across the candidate bank yields a single spectrum equivalent to an STFT evaluated with a data-adaptive effective window, while an envelope-normalized synthesis stream guarantees exact overlap-add reconstruction. Evaluations on synthetic and marine bioacoustic signals demonstrate adaptive resolution tracking, enhanced spectral concentration, and exact time-domain invertibility.",
+  "abstractSha256": "be0f5f53045c9e2396376a674c78a11e7d8bdb4efa137a871d083ffa9049f93d",
+  "arxivId": "2610.37795",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.37795v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "时频分析",
+    "primaryTask": "音频特征提取",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-feature-extraction",
+          "label": "音频特征提取"
+        },
+        {
+          "facet": "method",
+          "id": "method.time-frequency",
+          "label": "时频分析"
+        },
+        {
+          "facet": "application",
+          "id": "application.bioacoustics",
+          "label": "生物声学监测"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "时频分析",
+      "primaryMethodId": "method.time-frequency",
+      "primaryTask": "音频特征提取",
+      "primaryTaskId": "task.audio-feature-extraction",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Manan Mittal"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kanad Sarkar"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ryan M. Corey"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "John R. Buck"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Andrew C. Singer"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "U-STFT 把窗长选择写成逐帧的三动作序列决策，用归一化三阶 Rényi 熵打分并在格子上做贝叶斯混合，在双曲 chirp 上以 0.526 nats/帧 的后悔低于 0.760 nats/帧 的界，在语音上以 93% 长窗保持 12.27 bits 全局集中度，代价是每帧要算 O(smax) 个候选谱并维护伴随合成流。",
+  "originalTitle": "Universal Short-Time Fourier Transform: Data-Adaptive Window-Length Selection for Time-Frequency Analysis",
+  "pdfUrl": "https://arxiv.org/pdf/2610.37795v1.pdf",
+  "readerTitle": "随信号切换窗长的短时傅里叶变换：U-STFT 如何逐帧选窗又保证可重构",
+  "schemaVersion": 2
+}

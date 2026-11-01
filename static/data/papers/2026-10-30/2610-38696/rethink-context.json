@@ -1,0 +1,80 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.38696v1",
+  "abstract": "Audio effect recommendation has mostly modelled style through reference audio and audio-domain losses. Because the parameter-to-audio map of parametric effects is many-to-one, such systems can match a reference without reflecting how a given engineer works. We instead model an engineer's style as a distribution over effect-chain parameters, which matches the data engineers can realistically share: console recalls store parameters without the audio they were applied to. Under a label-shift assumption, a personalised recommendation follows in closed form from a generic content model, a parameter population model and an engineer prior, with no paired engineer audio and no tuned weights. For vocal chains, the content signal is small but real, and concentrated in high-frequency EQ, dynamics and reverb. A forced-choice test with $14$ listeners found that the style-prior and content-only recommendations were distinguishable (89.3%), with results consistent with prior width affecting the balance between style and content, while parameter-space cosine does not predict perceived difference.",
+  "abstractSha256": "db8e4c5fd2ce1c42537300c3e4d1dae9c8084c746838c389a11a5ca059db61fd",
+  "arxivId": "2610.38696",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.38696v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "统计分析",
+    "primaryTask": "音乐混音",
+    "rankBucket": "前50%",
+    "score": 5.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-mixing",
+          "label": "音乐混音"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        },
+        {
+          "facet": "method",
+          "id": "method.subjective-evaluation",
+          "label": "主观评测"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "统计分析",
+      "primaryMethodId": "method.statistical-analysis",
+      "primaryTask": "音乐混音",
+      "primaryTaskId": "task.music-mixing",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Soumya Sai Vanka"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hayato Yamakawa"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kazunobu Kondo"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yu Takahashi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "György Fazekas"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "该文把混音师风格建模为效果链参数上的分布，用标签偏移假设把通用内容模型与工程师先验闭式合成，在人声链上验证了内容信号虽弱但真实存在且听感可区分，但结论只在合成先验与弱内容模型条件下成立。",
+  "originalTitle": "Personalising Parametric Audio Effect Recommendation for Vocals from Parameter-only Style Priors",
+  "pdfUrl": "https://arxiv.org/pdf/2610.38696v1.pdf",
+  "readerTitle": "只用参数先验做人声效果个性化：标签偏移下的内容与风格合成",
+  "schemaVersion": 2
+}

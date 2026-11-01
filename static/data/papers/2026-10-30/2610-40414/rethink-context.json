@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.40414v1",
+  "abstract": "Deep audio classifiers can achieve strong predictive performance, but their hidden representations remain difficult to interpret. Existing audio explainability methods often focus on input-level attribution, such as waveform segments, spectrogram regions, or acoustic features, and provide limited insight into what hidden neurons encode. Interpreting hidden neurons at the concept level can provide a more meaningful view of what an audio model learns internally. This paper investigates whether hidden neurons in audio classifiers can be associated with human-understandable symbolic acoustic concepts. A model-agnostic neurosymbolic framework is presented for analyzing the final hidden layer of audio classifiers, containing 32 neurons, through symbolic concept induction. The framework is evaluated on two audio classification settings: music genre classification using GTZAN dataset and musical instrument classification using IRMAS dataset. Results show that several hidden neurons can be associated with meaningful induced concepts, and most confirmed neuron-concept pairs are statistically supported using the Mann-Whitney U test. These findings suggest that symbolic concept induction is a promising direction for explaining latent audio representations beyond input-level attribution.",
+  "abstractSha256": "100ff6e3f9f49916fb2876dd2d6aa1274e405671aa2bfdf7db483a231fc88ab5",
+  "arxivId": "2610.40414",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.40414v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "概念激活向量分析",
+    "primaryTask": "音频分类",
+    "rankBucket": "后50%",
+    "score": 5.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.concept-activation-analysis",
+          "label": "概念激活向量分析"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "概念激活向量分析",
+      "primaryMethodId": "method.concept-activation-analysis",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Avishek Das"
+    },
+    {
+      "affiliations": [
+        "Kansas State University",
+        "Manhattan, Kansas"
+      ],
+      "name": "Pascal Hitzler"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "该文把 3 秒音频的 57 个数值声学特征先变成高低符号标签，再对多层感知机最后 32 个神经元按激活强弱分组并做概念归纳，在流派和乐器两类任务上分别确认 9 个和 10 个神经元概念，其中 7 个和 9 个通过曼惠特尼检验，但结论只在给定特征映射、阈值和验证集下成立。",
+  "originalTitle": "Bridging Neural Representations and Symbolic Semantics in Audio Classification",
+  "pdfUrl": "https://arxiv.org/pdf/2610.40414v1.pdf",
+  "readerTitle": "音频分类器隐层神经元在听什么：用符号声学概念解释 32 个神经元",
+  "schemaVersion": 2
+}

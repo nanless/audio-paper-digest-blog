@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.38276v1",
+  "arxivId": "2610.38276",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.38276v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Sripathi Sridhar"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yujin Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Giovana Morais"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Liang-Yuan Wu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Mehmet Atilay Kucukoglu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Prem Seetharaman"
+    },
+    {
+      "affiliations": [
+        "New Jersey Institute of Technology New York University Adobe Research Monash University"
+      ],
+      "name": "Lloyd May"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Mark Cartwright"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Magdalena Fuentes"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.38276v1",
+  "originalTitle": "MixCards: Evaluating Structured Descriptions of Multi-Source Sound Scenes",
+  "pdfUrl": "https://arxiv.org/pdf/2610.38276v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

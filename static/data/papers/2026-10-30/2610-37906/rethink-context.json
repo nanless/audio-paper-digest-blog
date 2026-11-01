@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.37906v1",
+  "abstract": "Spiking reservoir computing combines the training efficiency of fixed recurrent reservoirs with the energy efficiency of event-driven inference, where computation is triggered by sparse spikes rather than executed densely at every timestep. However, existing spiking reservoirs almost exclusively rely on Leaky Integrate-and-Fire (LIF) neurons, whose low-pass dynamics limit their ability to distinguish information encoded at different temporal frequencies. We introduce HRF-Res, a liquid state machine in which LIF neurons are replaced by a heterogeneous population of Harmonic Resonate-and-Fire (HRF) neurons. These neurons exhibit intrinsic oscillatory dynamics and selectively respond to input frequencies, enabling the reservoir to capture frequency-specific temporal patterns. The result is more discriminative representations and higher classification accuracy than LIF-based reservoirs, achieved without sacrificing the energy efficiency of spiking computation, with up to 19x lower energy consumption than an equivalent non-spiking oscillatory reservoir. Evaluated on ten benchmarks spanning time series, sequential images, audio spike trains, and neuromorphic vision, HRF-Res achieves state-of-the-art accuracy among spiking reservoir methods. These results demonstrate that introducing frequency-selective dynamics into spiking reservoirs improves representational quality and classification performance while preserving their inherent energy efficiency.",
+  "abstractSha256": "e056c3618632a8f19db0ec89a016fd84ab1287a91f7e731eae1b3345caef2b5e",
+  "arxivId": "2610.37906",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.37906v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "脉冲神经网络",
+    "primaryTask": "音频分类",
+    "rankBucket": "前25%",
+    "score": 8.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.spiking-neural-network",
+          "label": "脉冲神经网络"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "脉冲神经网络",
+      "primaryMethodId": "method.spiking-neural-network",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Delft University of Technology"
+      ],
+      "name": "Aurora Micheli"
+    },
+    {
+      "affiliations": [
+        "University of Pisa"
+      ],
+      "name": "Claudio Gallicchio"
+    },
+    {
+      "affiliations": [
+        "Delft University of Technology"
+      ],
+      "name": "Nergis Tomen"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文用异质共振神经元替换脉冲储备中的积分神经元，使储备对输入频率敏感，在十个时序与事件视觉任务上提升分类精度，并以稀疏脉冲计算保持低能耗。",
+  "originalTitle": "Beyond Low-Pass Dynamics: Frequency-Selective Spiking Reservoirs with Resonant Neurons",
+  "pdfUrl": "https://arxiv.org/pdf/2610.37906v1.pdf",
+  "readerTitle": "从低通到选频：共振脉冲储备如何记住频率",
+  "schemaVersion": 2
+}

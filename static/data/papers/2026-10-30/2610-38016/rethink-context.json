@@ -1,0 +1,96 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.38016v1",
+  "abstract": "Automatic speech recognition (ASR) increasingly supplies transcripts for educational NLP, but aggregate word error rate (WER) can conceal errors concentrated in learner speech, multilingual turns, and speaker attribution. We compare platform-integrated, open-weight, adapted, and commercial ASR configurations on held-out sessions of online L2 Spanish interaction between L1 English learners and their instructors and tutors. Because English is the learner's shared first language, the interactions contain Spanish-only, English-only, and code-switched turns. Evaluation combines overall WER and character error rate (CER), WER disaggregated by speaker role and language context, and diarization error rate (DER). We also adapt Whisper large-v3 and MOSS-Transcribe-Diarize with LoRA using human-corrected in-domain classroom data. MOSS adaptation produced consistent improvements across speaker roles and language contexts, whereas Whisper showed smaller gains. Domain match proved more important than data volume: Larger out-of-domain bilingual and learner corpora did not outperform the smaller classroom corpus, where learner speech and code-switching are embedded in instructor--learner interaction. The open-weight MOSS adapter was competitive with commercial Muse Voice Transcribe on WER and CER and achieved lower system-provided DER on the recordings eligible for each system. Learner, English-only, and code-switched speech remained more difficult than instructor and Spanish-only speech. The findings demonstrate the value of condition-aware evaluation and interactionally matched data for bilingual educational ASR.",
+  "abstractSha256": "d3bb07e12f39ad5d76569964535e80d3c9c59427b00b43067cfb7d4bfd8653a1",
+  "arxivId": "2610.38016",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.38016v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "LoRA",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.lora",
+          "label": "LoRA"
+        },
+        {
+          "facet": "task",
+          "id": "task.diarization",
+          "label": "说话人分离标注"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.code-switching",
+          "label": "代码转换"
+        },
+        {
+          "facet": "application",
+          "id": "application.education",
+          "label": "教育"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "LoRA",
+      "primaryMethodId": "method.lora",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Arizona State University"
+      ],
+      "name": "Olga Kellert"
+    },
+    {
+      "affiliations": [
+        "Arizona State University"
+      ],
+      "name": "Samhitha Harish"
+    },
+    {
+      "affiliations": [
+        "Freie Universität Berlin"
+      ],
+      "name": "Johnatan E Bonilla"
+    },
+    {
+      "affiliations": [
+        "Arizona State University"
+      ],
+      "name": "Nemika Tyagi"
+    },
+    {
+      "affiliations": [
+        "Arizona State University"
+      ],
+      "name": "Phanos Kareen"
+    },
+    {
+      "affiliations": [
+        "Arizona State University"
+      ],
+      "name": "Nelvin Licona-Guevara"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "该研究在 7 个未见过的在线西班牙语课堂会话上比较 6 种转写配置，发现用 38 个课堂会话做 LoRA 适配能把 MOSS 的词错误率相对降低约 38% 并接近商用 Muse，但学习者、英语独白和语码混合语音仍然明显更难，且转写最好不等于说话人归属最好。",
+  "originalTitle": "Beyond Aggregate WER: In-domain Adaptation, Learner Speech, Code-Switching, and Speaker Attribution in Online Spanish Learning Classrooms",
+  "pdfUrl": "https://arxiv.org/pdf/2610.38016v1.pdf",
+  "readerTitle": "课堂西班牙语识别为何不能只看总词错误率",
+  "schemaVersion": 2
+}

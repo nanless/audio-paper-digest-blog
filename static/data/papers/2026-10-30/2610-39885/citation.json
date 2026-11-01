@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.39885v1",
+  "arxivId": "2610.39885",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.39885v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xiao-Hang Jiang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yang Ai"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhen-Hua Ling"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ji Wu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.39885v1",
+  "originalTitle": "AKDQ: Adaptive Key-Delta Quantization for Low-Bitrate RVQ-based Neural Speech Codecs",
+  "pdfUrl": "https://arxiv.org/pdf/2610.39885v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

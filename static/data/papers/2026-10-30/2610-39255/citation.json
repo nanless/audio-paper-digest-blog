@@ -1,0 +1,46 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.39255v1",
+  "arxivId": "2610.39255",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.39255v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Information Technology",
+        "FPT University",
+        "Ho Chi Minh City, Vietnam"
+      ],
+      "name": "Phu-Anh-Tai Do"
+    },
+    {
+      "affiliations": [
+        "Department of Information Technology",
+        "FPT University",
+        "Ho Chi Minh City, Vietnam"
+      ],
+      "name": "Huu-Hoang Nguyen"
+    },
+    {
+      "affiliations": [
+        "Department of Information Technology",
+        "FPT University",
+        "Ho Chi Minh City, Vietnam"
+      ],
+      "name": "Duc-Hoang Nguyen"
+    },
+    {
+      "affiliations": [
+        "Faculty of Information Technology",
+        "Ho Chi Minh City Open University",
+        "Ho Chi Minh City, Vietnam"
+      ],
+      "name": "Thanh-Hai Le"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.39255v1",
+  "originalTitle": "A learning-based method of automatic music transcription",
+  "pdfUrl": "https://arxiv.org/pdf/2610.39255v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

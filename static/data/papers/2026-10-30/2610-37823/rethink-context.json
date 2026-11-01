@@ -1,0 +1,88 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.37823v1",
+  "abstract": "Event cameras, spiking cochleas and similar sensors emit asynchronous events, yet most learning systems first bin them into frames or packets, so the output depends on how the stream was sliced. Networks whose state is updated exactly at every event and evolves in closed form between events are invariant to this slicing. We ask what more makes the output (i) independent of the processing order of simultaneous events and (ii) continuous in the time stamps, even when two events cross in time, while (iii) staying sensitive to temporal order. For arbitrary nonlinear event models we prove that (i) and (ii) are each equivalent to pairwise commutation of the event updates, and that once updates commute, all order dependence comes from their non-commutation with the inter-event dynamics and vanishes linearly in the time lag. This identifies a class of time-mediated non-commutative (TM) models and yields a resolution-robustness bound for any model. We construct the minimal TM layer, a learnable, provably Lipschitz generalization of the Hassenstein-Reichardt correlator; prove that no single additive layer can uniformly represent ordered pair interactions, whereas a three-dimensional TM state can; show that each TM layer adds two levels of temporal nesting versus one for additive layers; and give a single-layer higher-order construction (TM-k) and a stacking rule preserving all three properties. We instantiate these results as the Clock-Free Event (CFE) layer, linear in the number of events, give a topology-free variant for temporal point processes with closed-form likelihoods, and specify a preregistered clock-robustness protocol with a physical-time threat model for spike-retiming attacks. In preliminary development-set experiments, the TM state beats an otherwise identical additive state by 3.5-9.1 points on DVS128 Gesture and by 24.5 and 30.6 points on SHD and Speech Commands.",
+  "abstractSha256": "c6d0f841eeaf1e669338f7833f89d368ee08ad9c0fd6ccb7509726dd98b43896",
+  "arxivId": "2610.37823",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.37823v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "状态空间模型",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 6.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "task",
+          "id": "task.visual-gesture-recognition",
+          "label": "视觉手势识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.state-space",
+          "label": "状态空间模型"
+        },
+        {
+          "facet": "method",
+          "id": "method.formal-analysis",
+          "label": "形式化分析"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "状态空间模型",
+      "primaryMethodId": "method.state-space",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Hefei Institutes of Physical Science, Chinese Academy of Sciences, Hefei 230031, China"
+      ],
+      "name": "Han Wang"
+    },
+    {
+      "affiliations": [
+        "Hefei Institutes of Physical Science, Chinese Academy of Sciences, Hefei 230031, China",
+        "Science Island Branch, Graduate School of University of Science and Technology of China, Hefei 230026, China"
+      ],
+      "name": "Jingyuan Bao"
+    },
+    {
+      "affiliations": [
+        "Hefei Institutes of Physical Science, Chinese Academy of Sciences, Hefei 230031, China",
+        "Science Island Branch, Graduate School of University of Science and Technology of China, Hefei 230026, China"
+      ],
+      "name": "Juntao Wu"
+    },
+    {
+      "affiliations": [
+        "Hefei Institutes of Physical Science, Chinese Academy of Sciences, Hefei 230031, China"
+      ],
+      "name": "Saiao Zhou"
+    },
+    {
+      "affiliations": [
+        "Hefei Institutes of Physical Science, Chinese Academy of Sciences, Hefei 230031, China",
+        "Corresponding author: Yuman Nie"
+      ],
+      "name": "Yuman Nie"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文把事件流写成每到事件做跳变、事件之间按闭式漂移的模型，证明同时无关与穿越连续都等价于跳变可交换，并用快慢两条迹加累加器的最小 TM 层实现有序对交互，在开发集上比同读出的加性状态明显更好，但正式测试与最优精度尚未报告。",
+  "originalTitle": "Learning Without Clocks: Partition-Invariant Neural Network",
+  "pdfUrl": "https://arxiv.org/pdf/2610.37823v1.pdf",
+  "readerTitle": "不用时钟的事件网络：切分不变、同时连续、顺序仍可见",
+  "schemaVersion": 2
+}

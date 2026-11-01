@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.38739v1",
+  "abstract": "We run Kroko, a 65.7M-parameter streaming Zipformer2 transducer for English, on the ESP32-P4, a microcontroller with two 400 MHz RISC-V cores, a 128-bit SIMD extension (PIE) and 32 MB of PSRAM, but no neural accelerator. Without any training, the encoder's 290 matrices are stored with 2 or 4 bits per weight in Hadamard-rotated groups: the width of each matrix comes from its measured sensitivity, and each matrix is first corrected toward the original model's output, then rounded with GPTQ and a search over the group norms. The released 71 MB of int8 weights become a 26.65 MB file. Activations are int16 between the matrix products and int8 into them. A C engine with hand-written PIE kernels processes each 1.28 s chunk of audio in 0.90 s on both cores, beam search included, and its PC build computes the same bits as the chip, so accuracy is measured on whole test sets. LibriSpeech WER is 4.34% on test-clean and 10.26% on test-other, against 3.94% and 9.17% for the released model; on FLEURS and Common Voice the gap grows to 2.3 and 1.1 points. A GPU simulator shows that the integer arithmetic costs nothing and that the whole gap comes from the weights, and an ablation on all of test-clean shows that GPTQ does most of the work. We also report the port's speed history, from 51.3 s to 0.62 s of encoder time per chunk, each design step measured again in one build, an attempt to reach 16 MB that stopped at 19.63 MB, and what did not work. We did not measure energy. The inference engine, the firmware and the 2/4-bit weights are available at https://github.com/BoumedineBillal/esp32-pie-asr.",
+  "abstractSha256": "b464a0bbe7d30ec49fff5bd006eda9a7af717be2afb1fd65cfc1e1f74f8492d6",
+  "arxivId": "2610.38739",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.38739v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "模型量化",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.quantization",
+          "label": "模型量化"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.on-device",
+          "label": "端侧运行"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "模型量化",
+      "primaryMethodId": "method.quantization",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Faculty of Computer Science, University of Science and Technology Houari Boumediene (USTHB)",
+        "Algiers, Algeria"
+      ],
+      "name": "Billal Boumedine"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文把流式 Zipformer2 transducer 编码器压缩到 2 与 4 比特并用整数流水线在 ESP32-P4 上实时运行，在 LibriSpeech test-clean 上以 4.34% 词错率比原模型高 0.40 个百分点，而整数运算本身几乎不带来损失，代价集中在权重上。",
+  "originalTitle": "Streaming Speech Recognition on a Microcontroller: a 65.7M-Parameter Transducer in 2 and 4 Bits on the ESP32-P4",
+  "pdfUrl": "https://arxiv.org/pdf/2610.38739v1.pdf",
+  "readerTitle": "在没有神经加速器的微控制器上跑 65.7M 参数流式语音识别",
+  "schemaVersion": 2
+}

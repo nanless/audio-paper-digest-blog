@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.38005v1",
+  "arxivId": "2610.38005",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.38005v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Dana Serditova"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Kevin Tang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Jochen Steffens"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.38005v1",
+  "originalTitle": "\"It Would Make a Geordie Feel at Home\": Regional Accent Perceptions and Speech Accommodation in Voice AI",
+  "pdfUrl": "https://arxiv.org/pdf/2610.38005v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

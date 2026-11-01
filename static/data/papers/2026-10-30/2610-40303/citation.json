@@ -1,0 +1,20 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.40303v1",
+  "arxivId": "2610.40303",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.40303v1",
+  "authors": [
+    {
+      "affiliations": [
+        "University Libraries, Carnegie Mellon University"
+      ],
+      "name": "Alfredo González-Espinoza"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.40303v1",
+  "originalTitle": "Symmetric Structure and Motivic Transformation in Melodies, Phrases, and Themes",
+  "pdfUrl": "https://arxiv.org/pdf/2610.40303v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

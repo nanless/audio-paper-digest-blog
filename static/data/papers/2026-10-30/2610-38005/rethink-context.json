@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.38005v1",
+  "abstract": "Automatic speech recognition (ASR) systems often perform less accurately for speakers of regional dialects, but less is known about how users respond to these limitations and how regional voices produced by voice assistants (VAs) are evaluated through a sociolinguistic lens. This study investigates these issues among speakers of Newcastle English (Geordies), examining both linguistic accommodation to voice technologies and perceptions of regional versus mainstream-accented VA voices. Participants interacted with a simulated VA that spoke either Newcastle English or Standard Southern British English (SSBE). They subsequently completed semi-structured interviews about their experiences with the experimental VA and voice technologies, language use, accent attitudes, and place orientation. The findings reveal a two-way process of sociolinguistic bias. The Geordie VA was associated with familiarity, warmth, personality, and local belonging, but also with concerns about professionalism and authority, whereas the SSBE voice was perceived as more neutral, clear, and credible. Participants also reported adapting their speech when voice technologies failed to recognise them, most commonly by shifting to a more mainstream accent, enunciating more clearly, and speaking more slowly. These strategies are similar to accommodation in human-human interaction and reflect users' perceptions of what technologies can recognise, also known as perceived intelligibility pressures. Overall, the findings demonstrate that voice technologies can reproduce existing accent biases both by encouraging users to suppress regional features and by activating established social stereotypes through synthetic voices. The study positions sociolinguistics as a bridge between understanding human-AI interaction and designing inclusive technologies around users' own linguistic priorities.",
+  "abstractSha256": "c64d9e28d23259a8b5e63feeba674a338dd891912e3d0a30d07f64ea6b76a14b",
+  "arxivId": "2610.38005",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.38005v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "用户研究",
+    "primaryTask": "语音交互",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-interaction",
+          "label": "语音交互"
+        },
+        {
+          "facet": "method",
+          "id": "method.user-study",
+          "label": "用户研究"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.sociophonetics",
+          "label": "社会语音学"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.accent-dialect",
+          "label": "口音与方言"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "用户研究",
+      "primaryMethodId": "method.user-study",
+      "primaryTask": "语音交互",
+      "primaryTaskId": "task.speech-interaction",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Dana Serditova"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Kevin Tang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Jochen Steffens"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文以 Newcastle English 使用者为对象，用模拟语音助手加半结构访谈研究他们如何评价地方口音与标准口音的合成语音，以及识别失败时如何调整发音、语速和用词，证据显示熟悉感与权威感的矛盾评价和向主流口音靠拢的应对同时存在，但结论只来自被试的自我报告而非声学实测。",
+  "originalTitle": "\"It Would Make a Geordie Feel at Home\": Regional Accent Perceptions and Speech Accommodation in Voice AI",
+  "pdfUrl": "https://arxiv.org/pdf/2610.38005v1.pdf",
+  "readerTitle": "当语音助手听不懂地方口音：Geordie 人的评价与调音",
+  "schemaVersion": 2
+}

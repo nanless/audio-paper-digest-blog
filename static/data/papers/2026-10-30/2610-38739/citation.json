@@ -1,0 +1,21 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.38739v1",
+  "arxivId": "2610.38739",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.38739v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Faculty of Computer Science, University of Science and Technology Houari Boumediene (USTHB)",
+        "Algiers, Algeria"
+      ],
+      "name": "Billal Boumedine"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.38739v1",
+  "originalTitle": "Streaming Speech Recognition on a Microcontroller: a 65.7M-Parameter Transducer in 2 and 4 Bits on the ESP32-P4",
+  "pdfUrl": "https://arxiv.org/pdf/2610.38739v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

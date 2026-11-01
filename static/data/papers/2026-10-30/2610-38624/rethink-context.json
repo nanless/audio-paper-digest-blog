@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.38624v1",
+  "abstract": "Video-queried sound separation (VQSS) aims to isolate a target sound from an audio mixture using its corresponding video as a query. However, scene-level video queries can become ambiguous when multiple sounding objects are visible, particularly when the target and interferer are semantically similar. We propose SelectSep, a target-selective VQSS framework that jointly uses text and a single click coordinate to specify the target source and instance without requiring segmentation at inference time. We adapt the visual encoder through target-feature distillation with text and click conditioning, and then fine-tune the separator using the adapted visual features. We also introduce an on-screen interference setting, where both the target and interferer are visible, to evaluate target selectivity. Experiments on standard benchmarks and the on-screen interference setting demonstrate consistent improvements in separation quality and target selectivity, particularly for mixtures containing semantically similar sources.",
+  "abstractSha256": "85b1b032281fcb9a9b53a138394cf14d8dbb37051de56dc0ead09eae971f06c2",
+  "arxivId": "2610.38624",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.38624v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "知识蒸馏",
+    "primaryTask": "音视频声源分离",
+    "rankBucket": "前50%",
+    "score": 6.4,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-source-separation",
+          "label": "音视频声源分离"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "知识蒸馏",
+      "primaryMethodId": "method.distillation",
+      "primaryTask": "音视频声源分离",
+      "primaryTaskId": "task.av-source-separation",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Suyeon Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Doyeop Kwak"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Joon Son Chung"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对同屏出现目标与干扰声时场景级视频查询含混的问题，SelectSep 用文本加单点坐标改造视频编码器再微调分离器，在标准集和同屏干扰集上用六项指标验证了目标选择性提升，尤其在语义相近混合上更明显，但跨类同屏上仍不及纯文本基线且依赖点击标注。",
+  "originalTitle": "SelectSep: Target-Selective Video Queries for Audio Source Separation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.38624v1.pdf",
+  "readerTitle": "用文字加一次点击从混合声中挑出目标：SelectSep 解读",
+  "schemaVersion": 2
+}

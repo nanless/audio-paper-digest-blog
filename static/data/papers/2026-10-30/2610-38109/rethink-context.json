@@ -1,0 +1,108 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.38109v1",
+  "abstract": "Deciding which member of an animal group produced a vocalization and where that vocalization was produced are central to studying social communication but are rarely evaluated with physically verified ground truth. Existing resources either localize sounds without identifying the caller, or recognize individuals from isolated vocalizations without reliance on the 3D candidate geometry. We close this gap with V33DA, a dataset-centered multimodal benchmark for spatial vocal attribution in social zebra finches: it comprises 33,625 verified events coupling 5-channel audio with three camera views, calibrated 3D pose for every visible candidate, and per-bird radio telemetry across 10 individuals and three experiments. Caller identity is verified from an on-body accelerometer-derived vibration signal; this channel is withheld from benchmark models and used only by an on-body reference ceiling. Given a detected vocalization and the visible candidate birds, the task is to select the caller. We evaluate it under three regimes: session-disjoint testing on familiar birds from held-out recording dates, held-out-experiment transfer to a new cohort, and leave-one-individual-out evaluation on a bird whose vocalizations are held out from training. Reference methods expose a consistent gap between in-domain accuracy and transfer to unseen individuals: methods that can exploit familiar vocal identity perform well on known callers but degrade sharply on unseen ones, whereas candidate-aware methods preserving explicit spatial reasoning transfer substantially better. The on-body reference stays near-perfect across regimes, confirming the internal consistency of the accelerometer-verified labels. We release V33DA with fixed protocols and code for the evaluated methods, and V33DA++, an unevaluated companion set of verified overlapping-call events and +/-2 s context windows.",
+  "abstractSha256": "79904984a12827481db1ecf746a596fedaec934677c9fcc86bd1c9f8b08d30c8",
+  "arxivId": "2610.38109",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.38109v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "说话人识别",
+    "rankBucket": "前25%",
+    "score": 7.7,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speaker-identification",
+          "label": "说话人识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "task",
+          "id": "task.localization",
+          "label": "声源定位"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "说话人识别",
+      "primaryTaskId": "task.speaker-identification",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Institute of Neuroinformatics, University of Zurich and ETH Zurich"
+      ],
+      "name": "Maris Basha"
+    },
+    {
+      "affiliations": [
+        "Institute of Neuroinformatics, University of Zurich and ETH Zurich"
+      ],
+      "name": "Yuhang Wang"
+    },
+    {
+      "affiliations": [
+        "Swiss Data Science Center and CVLab, EPFL"
+      ],
+      "name": "Xiaoran Chen"
+    },
+    {
+      "affiliations": [
+        "Institute of Neuroinformatics, University of Zurich and ETH Zurich"
+      ],
+      "name": "Longbiao Cheng"
+    },
+    {
+      "affiliations": [
+        "Institute of Neuroinformatics, University of Zurich and ETH Zurich"
+      ],
+      "name": "Luca Yapura"
+    },
+    {
+      "affiliations": [
+        "Institute of Neuroinformatics, University of Zurich and ETH Zurich"
+      ],
+      "name": "Anja T. Zai"
+    },
+    {
+      "affiliations": [
+        "Swiss Data Science Center and CVLab, EPFL"
+      ],
+      "name": "Mathieu Salzmann"
+    },
+    {
+      "affiliations": [
+        "Institute of Neuroinformatics, University of Zurich and ETH Zurich"
+      ],
+      "name": "Richard Hahnloser"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "V33DA 把已检测到的每声鸣叫归给当时可见的某只斑胸草雀，用随身振动信号定真值并扣留该通道，再以三套划分检验熟悉个体识别与可迁移空间归属，代价是单装置、单发声事件与有限无线电特征。",
+  "originalTitle": "Who Called? V33DA: A Physically Verified Multimodal Benchmark for Vocal Attribution in Zebra Finch Groups",
+  "pdfUrl": "https://arxiv.org/pdf/2610.38109v1.pdf",
+  "readerTitle": "谁在叫？V33DA 用可验证标签做群体鸣声归属",
+  "schemaVersion": 2
+}

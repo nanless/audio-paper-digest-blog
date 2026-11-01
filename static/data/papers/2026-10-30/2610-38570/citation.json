@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.38570v1",
+  "arxivId": "2610.38570",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.38570v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Wenqi Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xiangjue Dong"
+    },
+    {
+      "affiliations": [
+        "Microsoft"
+      ],
+      "name": "Sulaiman Vesal"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.38570v1",
+  "originalTitle": "Do Audio LLMs HEAR Pain? Tracing Acoustic Evidence from Speech to Language Reasoning",
+  "pdfUrl": "https://arxiv.org/pdf/2610.38570v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

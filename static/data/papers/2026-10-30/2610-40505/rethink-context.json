@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.40505v1",
+  "abstract": "Voice-cloning TTS models synthesize an unseen speaker's voice from brief speech prompts, but it remains unclear which acoustic properties they represent and use. We introduce a feature-based interpretability framework for autoregressive voice-cloning TTS models, analyzing features from sparse autoencoders (SAEs), PCA, and random directions via sparse probing, steering, and quantitative auto-interpretability. We focus on Qwen3-TTS and extend probing and steering to $5$ additional models to test generalization across architectures. These models encode concepts like pitch, energy, noise, and accent, but sparse prediction and steering are effective only for some concepts. Strong probing does not always translate to steering or vice-versa. SAEs are useful for sparse probing of human-labelled concepts and novel-concept discovery, while PCA is competitive for dense probing and steering. Auto-interpretability finds $684$ automatically validated SAE features in Qwen3-TTS covering speaker clusters, speaking style, and recording conditions beyond known concepts. Overall, we perform a comprehensive interpretability study of autoregressive voice-cloning TTS models.",
+  "abstractSha256": "24147467e4e143519d80c076b0154e1af0aa1675219a7abf0f40d023c27aabe8",
+  "arxivId": "2610.40505",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.40505v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "稀疏自编码器",
+    "primaryTask": "语音克隆",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.voice-cloning",
+          "label": "语音克隆"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-attributes",
+          "label": "语音属性识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.representation-probing",
+          "label": "表示探测"
+        },
+        {
+          "facet": "method",
+          "id": "method.sparse-autoencoder",
+          "label": "稀疏自编码器"
+        },
+        {
+          "facet": "method",
+          "id": "method.activation-intervention",
+          "label": "激活因果干预"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "稀疏自编码器",
+      "primaryMethodId": "method.sparse-autoencoder",
+      "primaryTask": "语音克隆",
+      "primaryTaskId": "task.voice-cloning",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "University of Texas at Austin"
+      ],
+      "name": "Anuj Diwan"
+    },
+    {
+      "affiliations": [
+        "University of Texas at Austin"
+      ],
+      "name": "David Harwath"
+    },
+    {
+      "affiliations": [
+        "New York University"
+      ],
+      "name": "Eunsol Choi"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文追问自回归零样本克隆 TTS 表示了什么声音属性、能否用少数特征预测和在生成时调控，用 SAE、PCA 与随机方向做稀疏探测与转向对比，并在 Qwen3-TTS 上做定量自动解释，最强证据是 SAE 在人工标注概念稀疏预测和 684 个自动验证新特征上的优势，代价是转向效果因概念和模型而异且伴随可懂度和自然度损失。",
+  "originalTitle": "Discovering Interpretable Acoustic Features in Autoregressive Voice-Cloning TTS Models",
+  "pdfUrl": "https://arxiv.org/pdf/2610.40505v1.pdf",
+  "readerTitle": "零样本克隆语音模型里藏着哪些可理解的声音特征",
+  "schemaVersion": 2
+}

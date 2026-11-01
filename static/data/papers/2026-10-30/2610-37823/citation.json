@@ -1,0 +1,47 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.37823v1",
+  "arxivId": "2610.37823",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.37823v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Hefei Institutes of Physical Science, Chinese Academy of Sciences, Hefei 230031, China"
+      ],
+      "name": "Han Wang"
+    },
+    {
+      "affiliations": [
+        "Hefei Institutes of Physical Science, Chinese Academy of Sciences, Hefei 230031, China",
+        "Science Island Branch, Graduate School of University of Science and Technology of China, Hefei 230026, China"
+      ],
+      "name": "Jingyuan Bao"
+    },
+    {
+      "affiliations": [
+        "Hefei Institutes of Physical Science, Chinese Academy of Sciences, Hefei 230031, China",
+        "Science Island Branch, Graduate School of University of Science and Technology of China, Hefei 230026, China"
+      ],
+      "name": "Juntao Wu"
+    },
+    {
+      "affiliations": [
+        "Hefei Institutes of Physical Science, Chinese Academy of Sciences, Hefei 230031, China"
+      ],
+      "name": "Saiao Zhou"
+    },
+    {
+      "affiliations": [
+        "Hefei Institutes of Physical Science, Chinese Academy of Sciences, Hefei 230031, China",
+        "Corresponding author: Yuman Nie"
+      ],
+      "name": "Yuman Nie"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.37823v1",
+  "originalTitle": "Learning Without Clocks: Partition-Invariant Neural Network",
+  "pdfUrl": "https://arxiv.org/pdf/2610.37823v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

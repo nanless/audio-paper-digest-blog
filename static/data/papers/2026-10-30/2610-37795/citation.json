@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.37795v1",
+  "arxivId": "2610.37795",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.37795v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Manan Mittal"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kanad Sarkar"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ryan M. Corey"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "John R. Buck"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Andrew C. Singer"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.37795v1",
+  "originalTitle": "Universal Short-Time Fourier Transform: Data-Adaptive Window-Length Selection for Time-Frequency Analysis",
+  "pdfUrl": "https://arxiv.org/pdf/2610.37795v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

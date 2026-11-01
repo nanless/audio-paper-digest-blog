@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.38774v1",
+  "abstract": "Most multimodal classifiers assume that all useful evidence is available upfront, whereas clinical inquiry is sequential. We present a synthetic evaluation framework separating objective multimodal inference from active inquiry. An objective model maps synthetic tongue, bilateral multipressure pulse, and acoustic observations to eight syndrome families. A provenance-bearing Knowledge Core and training-only answer model support Bayesian narrowing over 33 fine terms using 25 typed questions, while seven safety questions remain outside the diagnostic posterior. Weak shared symptom factors limit fine-term influence on objective phenotypes, and an objective-only probe tests leakage.   In a preregistered 600-case synthetic evaluation, objective family accuracy was 87.0%. Cost-sensitive expected information gain (cost-EIG) raised family accuracy to 95.5% and exact fine-term accuracy to 42.5%, versus 92.7% and 33.0% for an unoptimized fixed-order baseline. Selective family accuracy reached 96.9% at 95.3% coverage. However, cost-EIG asked more questions on average than fixed order (9.795 versus 9.352). Missing-audio routing retained 94.0% family accuracy, and a workflow invariant enforced abstention when all objective modalities were absent. Permuting fine-term answer likelihoods reduced family accuracy to 78.7%. Five of six frozen checks passed, but the question-efficiency hypothesis failed. Comparisons are descriptive because only aggregate, not paired case-level, outputs were retained. These results establish a reproducible synthetic workflow, not clinical diagnostic or treatment validity.",
+  "abstractSha256": "23d3b85bc327f5c37b25815d92344c6b48418b891a801f566dcc06ce7cab566e",
+  "arxivId": "2610.38774",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.38774v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 5.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.uncertainty-estimation",
+          "label": "不确定性估计与校准"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yucheng Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Everett X. Wang"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文用全合成的舌、脉、声数据先给出 8 类证候族分布，再用 25 道结构化问题做贝叶斯追问，一次性 600 例确认中成本敏感信息增益把族准确率做到 95.5% 而细项准确率仅 42.5%，且提问数并未少于 tested 固定顺序。",
+  "originalTitle": "Auditable Hierarchical Inference with Multimodal Evidence and Bayesian Active Inquiry",
+  "pdfUrl": "https://arxiv.org/pdf/2610.38774v1.pdf",
+  "readerTitle": "先看客观证据再提问：可审计的分层合成问诊流程",
+  "schemaVersion": 2
+}

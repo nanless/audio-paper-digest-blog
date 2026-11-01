@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.39403v1",
+  "arxivId": "2610.39403",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.39403v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Dhananjaya Jayasundara"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Sudarshan Rajagopalan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Vishal M. Patel"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.39403v1",
+  "originalTitle": "SymKL: A Unified Representation-Space Measure of Signal Degradation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.39403v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

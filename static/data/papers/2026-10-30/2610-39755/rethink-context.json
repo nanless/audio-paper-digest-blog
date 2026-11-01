@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.39755v1",
+  "abstract": "A spoken dialogue system must judge when the user has yielded the floor. This end-of-turn (EoT) detector is normally trained and tuned afresh for each language, which is costly to scale to new languages. We instead build one on a frozen multilingual encoder, training only a small fixed-size head. Using five CALLHOME languages, we investigate three questions. First, how well a head trained on one language transfers zero-shot to the others. Second, how much target-language adaptation is required to recover full task performance. Third, whether a single fixed decision threshold holds across languages without per-language tuning. We find that the head transfers well, even between tonal and pitch-accent languages, and that a few hours of audio recover nearly all the loss, matching in-language training. A frozen multilingual encoder with one lightweight head is a practical, language-agnostic baseline for EoT detection.",
+  "abstractSha256": "e6d86efa64997b2d831280baa0f67e02ee5bb96175c7f56f2181b19daa208baf",
+  "arxivId": "2610.39755",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.39755v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "迁移学习",
+    "primaryTask": "轮次切换",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.turn-taking",
+          "label": "轮次切换"
+        },
+        {
+          "facet": "method",
+          "id": "method.transfer",
+          "label": "迁移学习"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.cross-lingual",
+          "label": "跨语言"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "迁移学习",
+      "primaryMethodId": "method.transfer",
+      "primaryTask": "轮次切换",
+      "primaryTaskId": "task.turn-taking",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Rini Sharon"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kadri Hacioglu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Andreas Stolcke"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文用冻结的 Whisper 编码器加一个小的逻辑回归头做话轮结束检测，在 CALLHOME 五种语言上测零样本跨语言迁移、少量目标语言适配和阈值复用，发现跨语言差距很小且因果流式处理是主要代价。",
+  "originalTitle": "Towards Multilingual End-of-Turn Detection using Frozen Speech Encoders",
+  "pdfUrl": "https://arxiv.org/pdf/2610.39755v1.pdf",
+  "readerTitle": "冻结语音编码器做多语言轮次结束检测",
+  "schemaVersion": 2
+}

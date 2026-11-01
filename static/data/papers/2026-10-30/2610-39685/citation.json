@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.39685v1",
+  "arxivId": "2610.39685",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.39685v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Chair of Vibroacoustics of Vehicles and Machines, Department of Engineering Physics and Computation, TUM School of Engineering and Design, Technical University of Munich, Boltzmannstrasse 15, 85748 Garching, Germany"
+      ],
+      "name": "Arne Hildenbrand"
+    },
+    {
+      "affiliations": [
+        "Chair of Thermodynamics of Mobile Energy Conversion Systems, Faculty of Mechanical Engineering, RWTH Aachen University, Forckenbeckstrasse 4, 52074 Aachen, Germany"
+      ],
+      "name": "Philipp Diel"
+    },
+    {
+      "affiliations": [
+        "IAS-8, Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52425 Jülich, Germany"
+      ],
+      "name": "Zhuo Cao"
+    },
+    {
+      "affiliations": [
+        "IAS-8, Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52425 Jülich, Germany"
+      ],
+      "name": "Hanno Scharr"
+    },
+    {
+      "affiliations": [
+        "Chair of Thermodynamics of Mobile Energy Conversion Systems, Faculty of Mechanical Engineering, RWTH Aachen University, Forckenbeckstrasse 4, 52074 Aachen, Germany"
+      ],
+      "name": "Stefan Pischinger"
+    },
+    {
+      "affiliations": [
+        "Chair of Vibroacoustics of Vehicles and Machines, Department of Engineering Physics and Computation, TUM School of Engineering and Design, Technical University of Munich, Boltzmannstrasse 15, 85748 Garching, Germany"
+      ],
+      "name": "Steffen Marburg"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.39685v1",
+  "originalTitle": "Practical Assessment of Agentic Systems in Acoustics",
+  "pdfUrl": "https://arxiv.org/pdf/2610.39685v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

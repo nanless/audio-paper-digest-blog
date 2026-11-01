@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.39427v1",
+  "arxivId": "2610.39427",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.39427v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Haonan Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yunyun Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Megan Wei"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zeyu Jin"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.39427v1",
+  "originalTitle": "EmpDPO: Enabling Emphasis Control in TTS via Direct Preference Optimization",
+  "pdfUrl": "https://arxiv.org/pdf/2610.39427v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

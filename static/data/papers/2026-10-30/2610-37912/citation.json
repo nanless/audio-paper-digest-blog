@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.37912v1",
+  "arxivId": "2610.37912",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.37912v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jinzuomu Zhong"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Alice Ross"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Catherine Lai"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Korin Richmond"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.37912v1",
+  "originalTitle": "Beyond Utterance-Level Speaker Similarity: Perception-Aligned Segmental Evaluation of Accent in Speech Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.37912v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

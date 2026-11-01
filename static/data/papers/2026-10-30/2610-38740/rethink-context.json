@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.38740v1",
+  "abstract": "Software synthesizers expose dozens of coupled controls, many of them redundant or perceptually inert at typical operating points. This paper presents a two-stage, measure-and-validate framework that ranks parameters by their influence on the audio output and then checks that ranking against an independent, variance-based experiment. Every rendered clip is normalized to -23 LUFS and described by five spectral fingerprints, so that gain shifts cannot masquerade as timbral change. The Sweep Test scores each parameter by spectral deviation over a 101-step sweep; the Sobol Test scores it by summed per-cell variance over a 128-point Sobol excitation. Across five architecturally distinct synthesizers (TorchSynth, Pyo, Pedalboard, Csound, and FluidSynth) spanning 48 to 76 parameters, the two tests agree at Spearman ρ= 0.82-0.96 (p-values \\le 7.2 \\times 10^{-15}) on the four engines that render deterministically, and at ρ= 0.32 on the one with process-level render noise--a diagnostic of that engine rather than of the method. The strong correlations survive reducing the Sobol budget from 128 to 32 points, and the complete analysis costs a one-time offline budget of about 66,000 renders.",
+  "abstractSha256": "29e763e1de49329b7ecd15eefa7570ae9e302a107e891b04a74b20798e75048d",
+  "arxivId": "2610.38740",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.38740v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "统计分析",
+    "primaryTask": "声学系统参数估计",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.acoustic-parameter-estimation",
+          "label": "声学系统参数估计"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.music-information",
+          "label": "音乐信息检索"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "统计分析",
+      "primaryMethodId": "method.statistical-analysis",
+      "primaryTask": "声学系统参数估计",
+      "primaryTaskId": "task.acoustic-parameter-estimation",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ogulcan Kibar"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Baris Ozcan"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "把合成器当黑盒，用 101 步单参数扫描打分再用 128 次 Sobol 扰动的输出方差独立验证，在四个确定性引擎上排序高度一致而在有渲染噪声的引擎上失配，结论只在中点工作点和单音触发条件下成立且总代价约 66000 次离线渲染。",
+  "originalTitle": "Automated Parameter Sensitivity Ranking in Audio Synthesis",
+  "pdfUrl": "https://arxiv.org/pdf/2610.38740v1.pdf",
+  "readerTitle": "合成器几十个旋钮到底谁有用：扫一遍再用方差验一遍",
+  "schemaVersion": 2
+}

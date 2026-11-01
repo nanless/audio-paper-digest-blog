@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.40372v1",
+  "abstract": "Zero-shot text-to-speech (TTS) models clone a target voice from a short reference clip, commonly referred to as the prompt. In practice, the prompt has to be cut from a longer recording of the speaker, so which part to use must be chosen. To understand what makes a good prompt, we analyze hundreds of thousands of outputs synthesized by four TTS models from candidate prompts of YouTube recordings. The choice of prompt substantially changes intelligibility, naturalness and speaker similarity. Standard predicted-quality scores capture mainly the naturalness part but miss most of the intelligibility gain. We find that the models largely agree on which prompt yields the highest measured speaker similarity, but much less on which prompt yields intelligible speech. We propose a small network that learns from the outputs a TTS model produced to rank a recording's candidate prompts from their audio alone. Without synthesizing anything at selection time, it picks prompts that lower the word error rate on held-out recordings by a third (Qwen3-TTS) to two fifths (F5-TTS) relative to a randomly chosen prompt, more than predicted quality achieves and nearly as much as synthesizing a dozen test sentences from every candidate first.",
+  "abstractSha256": "ce913b6f8363e8e50927e51efb57b1a21ed13cdab3c4acfa9e805a1746b5c622",
+  "arxivId": "2610.40372",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.40372v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "偏好优化",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.preference-optimization",
+          "label": "偏好优化"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.zero-shot",
+          "label": "零样本"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "偏好优化",
+      "primaryMethodId": "method.preference-optimization",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Arnon Turetzky"
+    },
+    {
+      "affiliations": [
+        "The Hebrew University of Jerusalem"
+      ],
+      "name": "Yossi Adi"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文把同一录音中选哪段做提示当作选择问题，用四个零样本模型的几十万条合成输出衡量可懂度、自然度和说话人相似度，并训练只听候选音频的小网络按词错率排序选提示，在不合成时接近逐个试合成的效果。",
+  "originalTitle": "What Makes a Good Audio Prompt for Zero-Shot TTS? Learning Prompt Selection from Synthesis Outcomes",
+  "pdfUrl": "https://arxiv.org/pdf/2610.40372v1.pdf",
+  "readerTitle": "零样本语音合成选哪段提示音频？从合成结果中学习选择",
+  "schemaVersion": 2
+}

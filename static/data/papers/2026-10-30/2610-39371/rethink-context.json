@@ -1,0 +1,108 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.39371v1",
+  "abstract": "We propose a Raspberry Pi-based underwater vessel classification system for edge deployment under limited connectivity, bandwidth and power in offshore acoustic surveillance. Using ShipsEar, we compare six classifiers on a Raspberry Pi 5 through a complete audio-to-prediction pipeline. We assess classification performance, processing latency, CPU utilisation, memory consumption and monitored power. Supporting experiments examine acoustic feature selection, statistical pooling and Transformer patch configurations. The two-layer convolutional neural network (CNN) achieved a mean macro-F1 of \\textbf{(99.14 \\textpm{} 0.32)\\%} across five random seeds. The radial basis function support vector machine (RBF-SVM) achieved \\textbf{98.83\\%}, with a median end-to-end latency of 28.109~ms compared with 120.655~ms for the CNN. This favourable trade-off motivated RBF-SVM deployment on the Raspberry Pi Zero 2 W. It maintained the same classification performance with a median end-to-end latency of \\textbf{349.09~ms} and a sustained throughput of \\textbf{2.962 classifications/s}, or \\textbf{14.8} times the rate required for consecutive five-second audio segments.",
+  "abstractSha256": "717ce7e4f19e96fc43ebaf43ed3e3f35c52dfa1ff6246755a6eab33091efda61",
+  "arxivId": "2610.39371",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.39371v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "硬件系统设计与验证",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 6.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.hardware-system-design",
+          "label": "硬件系统设计与验证"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.on-device",
+          "label": "端侧运行"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.real-time",
+          "label": "实时处理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "硬件系统设计与验证",
+      "primaryMethodId": "method.hardware-system-design",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Abishek Soti"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Thura Pyae Sone"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Naqib Ibnul"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jim Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Sergio Chevtchenko"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Henry Zhong"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Gregory Cohen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ying Xu"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文用 ShipsEar 五秒音频比较六种分类器在树莓派 5 上的完整音频到预测流程，发现两层 CNN 准确最高而 RBF-SVM 只低 0.31 个百分点却快 4.29 倍，因而把 RBF-SVM 部署到 Zero 2 W 仍能跟上连续音频的速度。",
+  "originalTitle": "Lightweight Underwater Acoustic Vessel Classification for Embedded Deployment",
+  "pdfUrl": "https://arxiv.org/pdf/2610.39371v1.pdf",
+  "readerTitle": "在树莓派上直接听船：轻量水下船舶分类如何兼顾准确与延迟",
+  "schemaVersion": 2
+}

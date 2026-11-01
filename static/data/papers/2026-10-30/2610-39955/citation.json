@@ -1,0 +1,63 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.39955v1",
+  "arxivId": "2610.39955",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.39955v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Google Research"
+      ],
+      "name": "Subhashini Venugopalan"
+    },
+    {
+      "affiliations": [
+        "Google Research"
+      ],
+      "name": "Jenny Tan"
+    },
+    {
+      "affiliations": [
+        "Google Research"
+      ],
+      "name": "Taylor Roper"
+    },
+    {
+      "affiliations": [
+        "Google Research"
+      ],
+      "name": "Jimmy Tobin"
+    },
+    {
+      "affiliations": [
+        "Google Research"
+      ],
+      "name": "Anton Kast"
+    },
+    {
+      "affiliations": [
+        "Google Research"
+      ],
+      "name": "Alicia Martin"
+    },
+    {
+      "affiliations": [
+        "Google Research"
+      ],
+      "name": "Sam Sepah"
+    },
+    {
+      "affiliations": [
+        "Google Research",
+        "UC Berkeley"
+      ],
+      "name": "Amy Pavel"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.39955v1",
+  "originalTitle": "Mind The Gap (MTG-AD): Dataset and Fine-grained Evaluation for End-to-End Inline Audio Descriptions",
+  "pdfUrl": "https://arxiv.org/pdf/2610.39955v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

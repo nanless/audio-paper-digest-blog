@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.39885v1",
+  "abstract": "Low-bitrate speech coding is essential for bandwidth-constrained channels and on-device applications, but conventional residual vector quantization (RVQ)-based codecs employ a fixed number of codebooks per frame regardless of content. Adjacent speech frames often exhibit strong similarity, and quantizing them independently with the same scheme results in redundant encoding, thereby wasting bitrate. Therefore, we propose Adaptive Key-Delta Quantization (AKDQ), which replaces the fixed per-frame VQ allocation of RVQ with an adaptive frame-wise key-or-delta policy. AKDQ is a plug-in strategy that requires no modification to the codec's encoder-decoder backbone. Specifically, in AKDQ, each frame is classified as either a key-frame (K-frame) quantized with all VQs, or a delta-frame (D-frame) quantized with only a few VQs on a delta correction from the previous reconstruction, thereby reducing bitrate. The K/D decision is made by a budget-aware causal scheduler through a bit-bank mechanism, keeping the system streamable with no additional lookahead. Experiments on both causal and non-causal codec families demonstrate that AKDQ effectively reduces bitrate redundancy. For instance, on DAC, using AKDQ at 1.5 kbps achieves reconstruction quality comparable to using the baseline RVQ at 2.0 kbps, saving 25% of the bitrate.",
+  "abstractSha256": "f9347314f758d254d2f29c7af3fdd8f7ba87eb212b3f50c7239539d32dd2e35a",
+  "arxivId": "2610.39885",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.39885v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "神经编解码与离散单元",
+    "primaryTask": "语音编码",
+    "rankBucket": "前50%",
+    "score": 6.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-coding",
+          "label": "语音编码"
+        },
+        {
+          "facet": "method",
+          "id": "method.neural-codec",
+          "label": "神经编解码与离散单元"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "神经编解码与离散单元",
+      "primaryMethodId": "method.neural-codec",
+      "primaryTask": "语音编码",
+      "primaryTaskId": "task.speech-coding",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xiao-Hang Jiang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yang Ai"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhen-Hua Ling"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ji Wu"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对低码率下残差向量量化每帧固定用量化器造成的帧间冗余，该文提出在编码器与解码器之间按帧选择完整量化的关键帧或只量化帧间残差的增量帧，并用只看因果信息的比特银行调度器把实际码率推向目标值，在 LibriTTS 上 DAC 在 1.5 kbps 附近达到接近 2.0 kbps 固定量化的重建质量，代价是每帧 1 比特模式标志和最长增量游程约束下的有限码率调节范围。",
+  "originalTitle": "AKDQ: Adaptive Key-Delta Quantization for Low-Bitrate RVQ-based Neural Speech Codecs",
+  "pdfUrl": "https://arxiv.org/pdf/2610.39885v1.pdf",
+  "readerTitle": "相邻帧很像时何必每帧都完整编码：自适应关键增量量化如何省码率",
+  "schemaVersion": 2
+}

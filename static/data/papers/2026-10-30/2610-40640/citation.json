@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.40640v1",
+  "arxivId": "2610.40640",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.40640v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Derong Jin"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xiyi Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ming C. Lin"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ruohan Gao"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.40640v1",
+  "originalTitle": "SonoWorld4D: From One Video to a 4D Audio-Visual Scene via Diffusion Synchronization",
+  "pdfUrl": "https://arxiv.org/pdf/2610.40640v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

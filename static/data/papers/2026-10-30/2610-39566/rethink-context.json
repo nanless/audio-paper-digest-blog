@@ -1,0 +1,80 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.39566v1",
+  "abstract": "We introduce an uncertainty-aware DOA-tracking framework combining deep posterior estimation, conformal-prediction calibration, and temporal smoothing. The approach enhances stability against reverberation and burst-like directional noise, yielding more reliable trajectories and greater robustness than conventional DOA-tracking methods.",
+  "abstractSha256": "57dcc355626eb449547c55c162189ab3c5541621f18ac734505afb519fb2ea63",
+  "arxivId": "2610.39566",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.39566v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "不确定性估计与校准",
+    "primaryTask": "声源追踪",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.source-tracking",
+          "label": "声源追踪"
+        },
+        {
+          "facet": "method",
+          "id": "method.uncertainty-estimation",
+          "label": "不确定性估计与校准"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.microphone-array",
+          "label": "麦克风阵列"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "不确定性估计与校准",
+      "primaryMethodId": "method.uncertainty-estimation",
+      "primaryTask": "声源追踪",
+      "primaryTaskId": "task.source-tracking",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Maya Veisman Barness"
+    },
+    {
+      "affiliations": [
+        "Faculty of Engineering",
+        "Bar-Ilan University, Ramat-Gan, Israel"
+      ],
+      "name": "Sharon Gannot"
+    },
+    {
+      "affiliations": [
+        "School of Electrical Engineering",
+        "Tel Aviv University, Tel Aviv, Israel"
+      ],
+      "name": "Bracha Laufer Goldshtein"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "本文把到达方向估计做成 32 类分类，用 U-Net 输出逐帧后验，再用保形预测集合的大小与形状决定相信神经网络还是相信时间连续性，实验显示该平滑在 0 dB 突发方向噪声下能降低平均绝对误差，但在无噪声低混响时提升很小甚至略变差。",
+  "originalTitle": "Conformal Prediction-Aware DOA Tracking",
+  "pdfUrl": "https://arxiv.org/pdf/2610.39566v1.pdf",
+  "readerTitle": "用保形预测的不确定性来稳定声源方向跟踪",
+  "schemaVersion": 2
+}

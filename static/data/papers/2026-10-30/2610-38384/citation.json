@@ -1,0 +1,20 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.38384v1",
+  "arxivId": "2610.38384",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.38384v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Laneguage"
+      ],
+      "name": "William Lane"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.38384v1",
+  "originalTitle": "Pronunciation-Supervised Text-to-Speech for Irish (Gaeilge)",
+  "pdfUrl": "https://arxiv.org/pdf/2610.38384v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.38656v1",
+  "abstract": "SpecAugment is the dominant speech augmentation policy, but researchers have studied it primarily for automatic speech recognition (ASR), and it operates on spectrograms, limiting its applicability to other speech tasks and waveform models. We propose Wav2Aug, a drop-in waveform augmentation policy that randomly samples two augmentations from a calibrated pool of waveform transformations. We calibrate the augmentation hyperparameters once and reuse them across tasks and architectures, eliminating task-specific tuning. Experiments on ten speech benchmarks show that Wav2Aug achieves ASR performance comparable to SpecAugment while improving over it on average across non-ASR tasks, yielding an average relative error reduction of 12.8% over the strongest compatible SpecAugment baseline. We further show that multi-view training provides additional gains, with two augmented views offering the best tradeoff between performance and computational cost.",
+  "abstractSha256": "9cf88aa362b4c77a7d6b168e91fcbb0c8bc0ac99e767b3e83991d8e25e37c6a0",
+  "arxivId": "2610.38656",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.38656v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "数据增强",
+    "primaryTask": "语音识别",
+    "rankBucket": "前25%",
+    "score": 7.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "task",
+          "id": "task.language-identification",
+          "label": "语言识别"
+        },
+        {
+          "facet": "task",
+          "id": "task.emotion-recognition",
+          "label": "语音情感识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.augmentation",
+          "label": "数据增强"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "数据增强",
+      "primaryMethodId": "method.augmentation",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Concordia University"
+      ],
+      "name": "Gianfranco Dumoulin Bertucci"
+    },
+    {
+      "affiliations": [
+        "Concordia University"
+      ],
+      "name": "Mirco Ravanelli"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "Wav2Aug 针对 SpecAugment 只做语谱图且跨任务增益不稳的问题，提出在波形上每次随机串联两种变换的固定策略，在五项非 ASR 任务上相对最强可比 SpecAugment 平均降低 12.8% 误差，在 ASR 上基本持平，而双增强视图带来 19.6% 的平均增益但使批量和计算翻倍。",
+  "originalTitle": "Wav2Aug: A Drop-In Speech Augmentation Policy",
+  "pdfUrl": "https://arxiv.org/pdf/2610.38656v1.pdf",
+  "readerTitle": "直接加在波形上的语音增强：Wav2Aug 如何一次调好到处复用",
+  "schemaVersion": 2
+}

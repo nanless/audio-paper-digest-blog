@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.39685v1",
+  "abstract": "In engineering, applications of artificial intelligence have so far been largely limited to surrogate models and optimization tasks. Large language models changed this, as they can write software from a task given in words. Placed inside a harness, a system of components that lets it search for information and execute software, such a model becomes an agent that can take over recurring engineering tasks. This work measures how the model and the elements of the harness shape the performance and behavior of the agent in two common acoustic applications. In the first, the agent detects and locates faults in audio recordings from a vehicle interior with near-perfect accuracy. A benchmark on this task shows that a weak model sets a limit that no harness design can overcome, and that design choices take effect only once the model is capable enough to use them. In the second, a case study on the design of a metamaterial unit cell, the agent reliably finds designs that achieve a specified insertion loss over a given frequency range. The results aim to help the reader understand what each element of an agent contributes and how to design an agent for acoustic tasks.",
+  "abstractSha256": "b591f355421525b768bcf264ea87c66a25d49c9dd832033adb58c11d0009b1b6",
+  "arxivId": "2610.39685",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.39685v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "工具增强与约束解码",
+    "primaryTask": "异常声音检测",
+    "rankBucket": "前50%",
+    "score": 5.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.anomaly-detection",
+          "label": "异常声音检测"
+        },
+        {
+          "facet": "task",
+          "id": "task.acoustic-response-prediction",
+          "label": "声学响应预测"
+        },
+        {
+          "facet": "method",
+          "id": "method.tool-augmentation",
+          "label": "工具增强与约束解码"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "工具增强与约束解码",
+      "primaryMethodId": "method.tool-augmentation",
+      "primaryTask": "异常声音检测",
+      "primaryTaskId": "task.anomaly-detection",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Chair of Vibroacoustics of Vehicles and Machines, Department of Engineering Physics and Computation, TUM School of Engineering and Design, Technical University of Munich, Boltzmannstrasse 15, 85748 Garching, Germany"
+      ],
+      "name": "Arne Hildenbrand"
+    },
+    {
+      "affiliations": [
+        "Chair of Thermodynamics of Mobile Energy Conversion Systems, Faculty of Mechanical Engineering, RWTH Aachen University, Forckenbeckstrasse 4, 52074 Aachen, Germany"
+      ],
+      "name": "Philipp Diel"
+    },
+    {
+      "affiliations": [
+        "IAS-8, Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52425 Jülich, Germany"
+      ],
+      "name": "Zhuo Cao"
+    },
+    {
+      "affiliations": [
+        "IAS-8, Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52425 Jülich, Germany"
+      ],
+      "name": "Hanno Scharr"
+    },
+    {
+      "affiliations": [
+        "Chair of Thermodynamics of Mobile Energy Conversion Systems, Faculty of Mechanical Engineering, RWTH Aachen University, Forckenbeckstrasse 4, 52074 Aachen, Germany"
+      ],
+      "name": "Stefan Pischinger"
+    },
+    {
+      "affiliations": [
+        "Chair of Vibroacoustics of Vehicles and Machines, Department of Engineering Physics and Computation, TUM School of Engineering and Design, Technical University of Munich, Boltzmannstrasse 15, 85748 Garching, Germany"
+      ],
+      "name": "Steffen Marburg"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文把语言模型加支架看作待测智能体，用合成车内噪声故障检测基准分离支架各部件与模型的贡献，再用通风超材料设计案例检验技能划分如何决定成败，配齐阈值知识的智能体接近满分但弱模型与结构缺陷无法靠多思考弥补。",
+  "originalTitle": "Practical Assessment of Agentic Systems in Acoustics",
+  "pdfUrl": "https://arxiv.org/pdf/2610.39685v1.pdf",
+  "readerTitle": "声学智能体怎么做事：故障检测基准与超材料设计案例",
+  "schemaVersion": 2
+}

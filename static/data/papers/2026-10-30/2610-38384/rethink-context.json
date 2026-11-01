@@ -1,0 +1,66 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.38384v1",
+  "abstract": "Speech technology for Irish must be built from very little transcribed speech, yet the language's pronunciation is thoroughly documented in dictionaries and dialect descriptions. We ask whether that documentation can supervise the adaptation of a large pretrained text-to-speech model to a language it was never trained on. We adapt Qwen3-TTS to Irish using 12.8 hours of crowdsourced Common Voice speech, correcting two defects in the vendor fine-tuning script that training loss does not reveal (Appendix A), and reach character error rate (CER) 0.225 on held-out cross-corpus text, against 0.397 for an exhaustively tuned from-scratch system and 0.437 for zero-shot cloning. We then compile the Wiktionary pronunciation record into a lexicon and a phoneme critic, and use that critic as the verifier in one round of rejection fine-tuning: CER 0.159 cross-corpus and 0.067 in-domain, with the voice still anonymous across all 202 training speakers. The same critic explains why the voice cannot yet be steered to a minority dialect: 229 of 12,311 training clips lean Ulster against 8,451 Munster. Pronunciation documentation, converted into a verifier, is a practical lever for low-resource speech synthesis, and a way to measure what the available data cannot support.",
+  "abstractSha256": "6439c4903e10b6d2d3d0d6966d0b6b8c5cefb6fa3f0726be2a3ec837cedf8ce8",
+  "arxivId": "2610.38384",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.38384v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "SFT",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "task",
+          "id": "task.pronunciation-assessment",
+          "label": "发音评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.sft",
+          "label": "SFT"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.low-resource",
+          "label": "低资源"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.accent-dialect",
+          "label": "口音与方言"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "SFT",
+      "primaryMethodId": "method.sft",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Laneguage"
+      ],
+      "name": "William Lane"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "本文用 12.8 小时众包语音把不支持爱尔兰语的 Qwen3-TTS 适配成匿名单音色，再用词典编成的发音评价模型做一轮择优微调，把跨语料可懂度做到 CER 0.159，同时用同一评价模型量出语料中仅 229 段偏 Ulster 口音因而做不出少数口音。",
+  "originalTitle": "Pronunciation-Supervised Text-to-Speech for Irish (Gaeilge)",
+  "pdfUrl": "https://arxiv.org/pdf/2610.38384v1.pdf",
+  "readerTitle": "用词典发音管住合成语音：爱尔兰语低资源 TTS 怎么做",
+  "schemaVersion": 2
+}

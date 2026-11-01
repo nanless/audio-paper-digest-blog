@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.38960v1",
+  "arxivId": "2610.38960",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.38960v1",
+  "authors": [
+    {
+      "affiliations": [
+        "School of Informatics, University of Edinburgh, UK"
+      ],
+      "name": "Yi Wang"
+    },
+    {
+      "affiliations": [
+        "Department of Systems Engineering and Engineering ManagementChinese University of Hong Kong, Hong Kong SAR"
+      ],
+      "name": "Tianzi Wang"
+    },
+    {
+      "affiliations": [
+        "School of Informatics, University of Edinburgh, UK"
+      ],
+      "name": "Peter Bell"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.38960v1",
+  "originalTitle": "Efficient Agentic Audio-Visual Question Answering through Toolset Pruning and Modality Consolidation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.38960v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

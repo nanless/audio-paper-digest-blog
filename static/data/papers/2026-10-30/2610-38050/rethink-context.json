@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.38050v1",
+  "abstract": "Compensating for train-test mismatches in acoustic environments is important for deployable speech solutions. This paper proposes to reduce the amount of fine-tuning data needed in transfer learning to mitigate the train-test mismatch by using a compensation mechanism based on the feature maximum likelihood linear regression (fMLLR) algorithm. Our scheme incorporates an autoencoder to reduce the number of trainable parameters. Operating on the encoder latent space, our compensation strategy employs an affine linear transform that accounts for rotations and shifts in the feature space. We evaluate the proposed solution in a speech emotion recognition (SER) task within a realistic human-robot interaction scenario. The results show that the proposed architecture outperforms the original scheme without the compensation strategy. We observe a performance gain in the mean concordance correlation coefficient (CCC) of 16.8% using 12.9% of the training set, and 14.4% using 50% of the training set.",
+  "abstractSha256": "edf08db92bb5ec51281629e69b7fb5e235c0238c80072690edd18bd288f9f889",
+  "arxivId": "2610.38050",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.38050v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "领域适应",
+    "primaryTask": "语音情感识别",
+    "rankBucket": "前50%",
+    "score": 5.7,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.emotion-recognition",
+          "label": "语音情感识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.domain-adaptation",
+          "label": "领域适应"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.low-resource",
+          "label": "低资源"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "领域适应",
+      "primaryMethodId": "method.domain-adaptation",
+      "primaryTask": "语音情感识别",
+      "primaryTaskId": "task.emotion-recognition",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ricardo García"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Rodrigo Mahu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Carlos Busso"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Néstor Becerra Yoma"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "该文针对训练与人机交互测试之间的混响加性噪声失配，在 Wav2vec 2.0 卷积层与 Transformer 层之间加入 40 维自编码器潜空间与单状态高斯混合模型估计的仿射补偿，在 MSP-Podcast 模拟训练与 PR2 机器人实录测试下用少量数据取得平均一致性相关系数提升，但全量数据时优势消失且须重训后端才能生效。",
+  "originalTitle": "Improving the Dependency on Fine-Tuning Data in Transfer Learning for Speech Emotion Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2610.38050v1.pdf",
+  "readerTitle": "在人机交互噪声下用潜空间补偿减少语音情感识别的微调数据",
+  "schemaVersion": 2
+}

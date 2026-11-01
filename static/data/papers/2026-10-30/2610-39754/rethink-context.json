@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.39754v1",
+  "abstract": "We present a cascade streaming voice privacy system, consisting of ASR, NLP, and TTS modules. By leveraging recent improvements in all three aspects of speech and language processing, we show that such a system is capable of achieving a result comparable to state-of-the-art offline voice privacy systems, while providing controllable capabilities of content protection beyond voice. With an estimated utterance-onset end-to-end latency of 717 ms, the presented system preserves speech content with 11% WER on Librispeech, while detecting PII with a 69% SLU F1 score and achieving up to 47.66% EER against a semi-informed attacker.",
+  "abstractSha256": "678fdc54fd4035b44480264641b8b6f22eb3cd8ff3d2a537cab908b1ca0d3b99",
+  "arxivId": "2610.39754",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.39754v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "LoRA",
+    "primaryTask": "说话人匿名化",
+    "rankBucket": "前50%",
+    "score": 5.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.anonymization",
+          "label": "说话人匿名化"
+        },
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        },
+        {
+          "facet": "method",
+          "id": "method.lora",
+          "label": "LoRA"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "LoRA",
+      "primaryMethodId": "method.lora",
+      "primaryTask": "说话人匿名化",
+      "primaryTaskId": "task.anonymization",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Stanisław Kacprzak"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Thomas Thebaud"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Najim Dehak"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文用自动语音识别加自然语言处理加语音合成的级联把说话人声音和文本中的个人身份信息一起去掉，在保持可懂度和接近离线系统隐私水平的同时把 utterence 起始端到端延迟做到 717 ms 量级，代价是流式切分带来的字错率上升和对识别错误的敏感。",
+  "originalTitle": "Toward Complete Speaker Anonymization: a Streaming Cascaded System for Voice Privacy and PII Removal",
+  "pdfUrl": "https://arxiv.org/pdf/2610.39754v1.pdf",
+  "readerTitle": "既要换声音又要抹掉身份信息：流式级联语音匿名系统解读",
+  "schemaVersion": 2
+}

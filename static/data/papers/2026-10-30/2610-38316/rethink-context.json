@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.38316v1",
+  "abstract": "Modern discrete neural audio codecs facilitate speech synthesis by replacing continuous acoustic representations with low-frame-rate discrete token sequences. For Malay speech synthesis, character-level input reduces reliance on pronunciation lexicons. However, combining character-level inputs with low-frame-rate discrete codecs introduces a temporal alignment challenge. When predicted character durations are quantized into frame counts at 12.5 Hz, durations shorter than one codec frame may be assigned zero frames. Consequently, the corresponding character representations may be lost during length regulation, potentially leading to pronunciation omissions. This study proposes DRC-TTS, a dual-resolution codec-based architecture for lexicon-free Malay speech synthesis. The model expands character representations at a temporal resolution of 50 Hz and subsequently downsamples them through strided convolution to 12.5 Hz for discrete codec-token prediction. Objective evaluations show that the proposed model reduces the character error rate (CER) from 27.11% for the baseline to 21.86%, an absolute reduction of 5.25 percentage points. The proposed model also achieves a mean opinion score (MOS) of 4.30, compared with 4.12 for the baseline. These results suggest that the dual-resolution design may improve character-level alignment and perceived speech naturalness under the evaluated conditions.",
+  "abstractSha256": "39014d3411d93396496fbba6165c93a678cebd4474ab8f21862650f1c4c3ab7d",
+  "arxivId": "2610.38316",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.38316v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "神经编解码与离散单元",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前50%",
+    "score": 5.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.neural-codec",
+          "label": "神经编解码与离散单元"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.low-resource",
+          "label": "低资源"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "神经编解码与离散单元",
+      "primaryMethodId": "method.neural-codec",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Tianhui Su"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Tien-Ping Tan"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对字符输入与 12.5 赫兹离散声码器对齐时会丢掉短辅音的问题，论文用 50 赫兹先展开再下采样到 12.5 赫兹的办法做合成，在单说话人 Idayu 数据上把字符错误率从 27.11% 降到 21.86%，平均意见分从 4.12 提高到 4.30，但结论只在该数据和评测条件下成立。",
+  "originalTitle": "DRC-TTS: A Dual-Resolution Codec-Based Architecture for Lexicon-Free Malay Speech Synthesis",
+  "pdfUrl": "https://arxiv.org/pdf/2610.38316v1.pdf",
+  "readerTitle": "不用发音词典的马来语合成：双分辨率如何留住短字母",
+  "schemaVersion": 2
+}

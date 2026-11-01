@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.38619v1",
+  "abstract": "Bridging the semantic gap between perfect symbolic musical structure and severely degraded acoustic signals offers a powerful paradigm for high-fidelity audio restoration. We introduce MiDiff, a diffusion-based generative model for drum audio enhancement that conditions the reverse process on temporally aligned Musical Instrument Digital Interface (MIDI) piano rolls. We extend the Score-Based Generative Models for Speech Enhancement (SGMSE) framework in the complex Short-Time Fourier Transform (STFT) domain by integrating a pretrained MIDI encoder, multi-scale temporal alignment, and three complementary conditioning strategies: early injection, Feature-wise Linear Modulation (FiLM), and cross-attention. We further show that providing the same piano roll only through classifier guidance, driven by an Automatic Drum Transcription (ADT) model on the audio-only score, yields no measurable gain: the symbolic prior is effective when it conditions the score network. To relax the requirement for ground-truth MIDI at inference, we further propose a hybrid reverse schedule that transcribes the diffusion state online with the same noise-aware ADT network and hands over from the audio-only score to MiDiff at a tunable switch time, cutting test FAD by 47% relative to the audio-only baseline without any symbolic input (switch time selected on the test set). We train our model on the StemGMD dataset using a non-additive degradation pipeline that simulates room reverberation with echo, electret capsule frequency response, and soft-clipping saturation with noise. MiDiff substantially outperforms the SGMSE baseline in terms of Fréchet Audio Distance (FAD) on both the validation and held-out test sets. Ablation studies demonstrate that combining all three conditioning strategies yields superior performance and that authentic MIDI velocity dynamics are critical for effective symbolic conditioning.",
+  "abstractSha256": "850a54d0ff7f3bc5961e6fd2a8363a681a79989050515257480d521cb7f53a67",
+  "arxivId": "2610.38619",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.38619v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "扩散模型",
+    "primaryTask": "音频修复",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-restoration",
+          "label": "音频修复"
+        },
+        {
+          "facet": "task",
+          "id": "task.dereverberation",
+          "label": "去混响"
+        },
+        {
+          "facet": "method",
+          "id": "method.diffusion",
+          "label": "扩散模型"
+        },
+        {
+          "facet": "task",
+          "id": "task.transcription",
+          "label": "音乐转录"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "扩散模型",
+      "primaryMethodId": "method.diffusion",
+      "primaryTask": "音频修复",
+      "primaryTaskId": "task.audio-restoration",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Elad Aspis"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Sharon Gannot"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "MiDiff 要解决严重混响与话筒染色下鼓瞬态难恢复的问题，用对齐钢琴卷帘直接条件化复数 STFT 域的分数网络，在 StemGMD 上把测试 FAD 从 1.268 降到 0.233，而无真值 MIDI 时的混合转录采样只能降到 0.676 且切换点是在测试集上选出的。",
+  "originalTitle": "MiDiff: MIDI-Conditioned Diffusion Models for Drum Audio Enhancement",
+  "pdfUrl": "https://arxiv.org/pdf/2610.38619v1.pdf",
+  "readerTitle": "用对齐的 MIDI 帮助扩散模型修复鼓声：MiDiff 解读",
+  "schemaVersion": 2
+}

@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.39168v1",
+  "abstract": "Few-shot voice cloning makes it cheap to produce daily Japanese financial commentary with several synthetic speakers, but kanji words with more than one reading, such as the word for \"market\" (shijo vs. ichiba) or \"overall trend\" (taisei vs. oze), are still misread. A common quality gate transcribes each synthesized sentence with automatic speech recognition (ASR), converts both the input and the transcript to kana, and regenerates on mismatch. We show that this gate is unreliable in both directions: when the audio contains a misreading, the ASR language model frequently writes the expected kanji back, hiding the error, and when the audio is correct, ordinary recognition errors trigger needless regeneration. We propose a reading-level check that scores the expected reading and its confusable alternatives with a connectionist temporal classification (CTC) hiragana recognizer and flags a word when an alternative explains the audio better. On 540 utterances from three voice-cloned production voices covering 30 financial terms, with misreadings injected under controlled conditions, the transcript-based gate detected 78.9% of misreadings at a 44.4% false-alarm rate, whereas the proposed check detected 91.7% at 5.0% (AUC 0.990). On natural kanji input, it caught a front-end error that the transcript-based gate missed for one voice, and reduced regeneration requests from 38.9% to 6.1% of sentences.",
+  "abstractSha256": "0d58e45699da0235a78205b6551ecd3ec6266afb4f1e396aa1eaaa5ac270f0e3",
+  "arxivId": "2610.39168",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.39168v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "CTC",
+    "primaryTask": "发音评估",
+    "rankBucket": "前50%",
+    "score": 5.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.pronunciation-assessment",
+          "label": "发音评估"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-synthesis",
+          "label": "语音合成"
+        },
+        {
+          "facet": "method",
+          "id": "method.ctc",
+          "label": "CTC"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "CTC",
+      "primaryMethodId": "method.ctc",
+      "primaryTask": "发音评估",
+      "primaryTaskId": "task.pronunciation-assessment",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Cheng Zhang"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对金融解说合成中汉字多音词读错问题，论文用预期读音与易混读音的 CTC 似然差做读音级校验，在 540 句三声音对照实验上把误报从 44.4% 降到 5.0% 并保持 91.7% 检出率，代价是需要逐词维护预期读音与易混读音词表。",
+  "originalTitle": "Reading-Level Verification of Kanji Words in Japanese Financial Speech Synthesis",
+  "pdfUrl": "https://arxiv.org/pdf/2610.39168v1.pdf",
+  "readerTitle": "金融日语合成里汉字词读错了怎么验出来",
+  "schemaVersion": 2
+}

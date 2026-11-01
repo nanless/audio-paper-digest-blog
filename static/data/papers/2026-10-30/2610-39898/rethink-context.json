@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.39898v1",
+  "abstract": "This paper presents an accessible, distributed approach to higher order ambisonics using a network of low-cost microcontroller-based devices. Leveraging recent advances in embedded computing, networked audio, and precise time synchronization, the system offers an alternative to conventional centralized architectures that typically require expensive multichannel interfaces and high-performance digital signal processing hardware. The proposed architecture combines an audio plugin for soundfield design with a modular network of ambisonics processing units, which, exploiting the parallelisable nature of ambisonics decoding, are each responsible for a subset of loudspeaker outputs. Synchronization is achieved through the IEEE 1588 Precision Time Protocol, complemented by adaptive clock correction to maintain sub-microsecond alignment between devices. A third-order ambisonics implementation demonstrates the viability of the approach, with potential scalability to higher orders and larger arrays. Overall, this work contributes to the development of frugal, distributed solutions for immersive audio, expanding access to ambisonics-based systems for a wide range of applications.",
+  "abstractSha256": "50bb14b95544b53d1f8fa6fe89fc0293c235d171fb9bd9dd91e20fb517e37a3e",
+  "arxivId": "2610.39898",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.39898v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "硬件系统设计与验证",
+    "primaryTask": "空间音频渲染",
+    "rankBucket": "后50%",
+    "score": 5.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.spatial-rendering",
+          "label": "空间音频渲染"
+        },
+        {
+          "facet": "method",
+          "id": "method.hardware-system-design",
+          "label": "硬件系统设计与验证"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.spatial-audio",
+          "label": "空间音频信号"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.hardware",
+          "label": "硬件原型"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "硬件系统设计与验证",
+      "primaryMethodId": "method.hardware-system-design",
+      "primaryTask": "空间音频渲染",
+      "primaryTaskId": "task.spatial-rendering",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Thomas A Rushton"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Romain Michon"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Tanguy Risset"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Clemens Wegener"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Pierre Lecomte"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "本文用 DAW 插件做声场设计加 Teensy 单片机网络分担解码来解决集中式多通道声卡贵且难同步的问题，三阶 16 通道实例显示包长 523 字节且模块间约 200 ns 同步，但仍需手工配置且未做主观听音评估。",
+  "originalTitle": "Ambisonics: Introducing an Accessible, Distributed Approach",
+  "pdfUrl": "https://arxiv.org/pdf/2610.39898v1.pdf",
+  "readerTitle": "把高阶 Ambisonics 解码拆开：用插件加廉价单片机网络做空间音频重放",
+  "schemaVersion": 2
+}

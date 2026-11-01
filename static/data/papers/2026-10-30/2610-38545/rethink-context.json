@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.38545v1",
+  "abstract": "Music score files are more difficult to compare than their text-based equivalents, as their content is more complex and organised into hierarchical structures. This explains the lack of tools for processing music scores similar to the widely used old Unix diff command. We propose a new algorithm and tool for comparing digital music scores in various encodings, such as MusicXML or MEI, based on a graph-structured abstract representation called Tree Score Model (TSM). Given two scores, after conversion into TSM, our procedure calculates jointly: A list of differences, localised by time positions in the input scores; A time distance, cumulated duration of time-spans where scores differ; An edit distance, called surface distance, based on notational attributes not related to time. The two later measures are normalised and combined into a similarity distance between scores. Our procedure has been implemented in C++ and is available as a Python module. Our first experiments have shown a very good efficiency even on challenging data. As a proof of concept, we propose two demos based on different versions of some Mozart's piano sonata, and transcriptions of monophonic soli on the same jazz standards by different performers. https://tsm-diff-lbd-7a7e2a.gitlab.io/demo.html",
+  "abstractSha256": "54d2e5ff199efe1db1a1c12775b89efa1760c451773202d96dc5de2245de64f3",
+  "arxivId": "2610.38545",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.38545v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "规则与词典方法",
+    "primaryTask": "音乐分析",
+    "rankBucket": "前50%",
+    "score": 5.7,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-understanding",
+          "label": "音乐分析"
+        },
+        {
+          "facet": "method",
+          "id": "method.rule-based",
+          "label": "规则与词典方法"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.music-information",
+          "label": "音乐信息检索"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "规则与词典方法",
+      "primaryMethodId": "method.rule-based",
+      "primaryTask": "音乐分析",
+      "primaryTaskId": "task.music-understanding",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Xiaobo Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Florent Jacquemard"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对 MusicXML 与 MEI 这类层级化乐谱难以直接逐行比对的问题，论文用有向无环图表示节拍与节奏并做并行递归比对，在演示中以毫秒级核心比对时间给出差异列表与相似度，但完整耗时仍受解析与建图制约。",
+  "originalTitle": "TSM diff: A new Parallel-Tree-Traversal Algorithm for the Comparison of Music Score Files",
+  "pdfUrl": "https://arxiv.org/pdf/2610.38545v1.pdf",
+  "readerTitle": "乐谱文件怎么比：用节奏树图做并行比对的 TSM diff",
+  "schemaVersion": 2
+}

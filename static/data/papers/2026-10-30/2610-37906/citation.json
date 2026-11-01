@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.37906v1",
+  "arxivId": "2610.37906",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.37906v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Delft University of Technology"
+      ],
+      "name": "Aurora Micheli"
+    },
+    {
+      "affiliations": [
+        "University of Pisa"
+      ],
+      "name": "Claudio Gallicchio"
+    },
+    {
+      "affiliations": [
+        "Delft University of Technology"
+      ],
+      "name": "Nergis Tomen"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.37906v1",
+  "originalTitle": "Beyond Low-Pass Dynamics: Frequency-Selective Spiking Reservoirs with Resonant Neurons",
+  "pdfUrl": "https://arxiv.org/pdf/2610.37906v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

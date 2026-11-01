@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.37912v1",
+  "abstract": "Utterance-level similarity ratings do not reveal where perceived accent differences occur in generated speech. We introduce a segmental evaluation protocol combining speaker and accent similarity ratings with subword annotations of perceived accent differences provided by listeners from target accent regions. Using newly collected recordings, 47 retained listeners evaluate 200 content-matched reference--candidate pairs spanning four Scottish and Australian voices, two zero-shot TTS systems, and an articulation-based voice conversion system. Subword annotations locate salient pronunciation differences and sometimes yield different system rankings from similarity ratings. Speaker and accent ratings remain strongly associated ($ρ= 0.71$), highlighting the value of examining local perceptual evidence beyond these scores. Evaluation of seven objective distances reveals weak correspondence with subword selections, with correlations reaching at most $ρ= 0.22$. We release code, data, and an interactive demo to support the development of perceptually grounded segmental accent evaluation.",
+  "abstractSha256": "392496fcb8a2cf42096fd739060d825c9f825d4c787052314b204048bc33ca60",
+  "arxivId": "2610.37912",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.37912v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "评测协议",
+    "primaryTask": "语音克隆",
+    "rankBucket": "前50%",
+    "score": 6.9,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.voice-cloning",
+          "label": "语音克隆"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "method",
+          "id": "method.subjective-evaluation",
+          "label": "主观评测"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.accent-dialect",
+          "label": "口音与方言"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "评测协议",
+      "primaryMethodId": "method.evaluation-protocol",
+      "primaryTask": "语音克隆",
+      "primaryTaskId": "task.voice-cloning",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jinzuomu Zhong"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Alice Ross"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Catherine Lai"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Korin Richmond"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "本文针对整句说话人相似度无法定位口音差异的问题，提出整句打分加子词标注的分段评测流程，用 200 对内容匹配的苏格兰和澳大利亚语音实验证明局部标注能给出不同于整句打分的系统排序，而七种客观距离与听辨标注最多只有 0.22 的弱相关。",
+  "originalTitle": "Beyond Utterance-Level Speaker Similarity: Perception-Aligned Segmental Evaluation of Accent in Speech Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.37912v1.pdf",
+  "readerTitle": "整句相似度之外：口音克隆差在哪里",
+  "schemaVersion": 2
+}

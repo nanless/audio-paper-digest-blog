@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.38696v1",
+  "arxivId": "2610.38696",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.38696v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Soumya Sai Vanka"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hayato Yamakawa"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kazunobu Kondo"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yu Takahashi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "György Fazekas"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.38696v1",
+  "originalTitle": "Personalising Parametric Audio Effect Recommendation for Vocals from Parameter-only Style Priors",
+  "pdfUrl": "https://arxiv.org/pdf/2610.38696v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

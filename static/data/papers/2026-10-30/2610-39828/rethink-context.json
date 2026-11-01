@@ -1,0 +1,97 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.39828v1",
+  "abstract": "Semantic completeness alone cannot determine when an assistant should respond in a multi-speaker environment: a completed utterance may belong to an interfering speaker, while the designated user is still speaking, acknowledging, or requesting time. We therefore study semantic turn inference conditioned on speaker identity. We propose SpeakerTurn, a framework that jointly predicts the target transcript and turn state from a speech mixture and an independent target-speaker reference. Built on CocktailASR-1, it links semantic decisions to the corresponding target content through joint supervision, distinguishing complete, incomplete, backchannel, wait, and target-absent states, with a separate interruption task. We also examine whether structured chain-of-thought (CoT) supervision improves decisions by representing speaker presence and semantic cues. On a synthetic multi-speaker test set, SpeakerTurn achieves five-state macro F1 of 0.811 and target-transcription character error rate (CER) of 4.20%, correctly resolving all ten reference-swapped interruption pairs. Joint-format transcription and native-interface recognition nevertheless behave differently, and CoT improves validation transcription without improving turn macro F1. These results show why target attribution, semantic turn discrimination, and recognition retention require separate assessment when adapting speech language models for speaker-conditioned interaction.",
+  "abstractSha256": "f7c83bb2847fa7740f314bc906ce81633560be4c487107afb74e70e50e4b6e1c",
+  "arxivId": "2610.39828",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.39828v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "LoRA",
+    "primaryTask": "轮次切换",
+    "rankBucket": "前50%",
+    "score": 5.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.turn-taking",
+          "label": "轮次切换"
+        },
+        {
+          "facet": "task",
+          "id": "task.target-speaker",
+          "label": "目标说话人提取"
+        },
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.lora",
+          "label": "LoRA"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "LoRA",
+      "primaryMethodId": "method.lora",
+      "primaryTask": "轮次切换",
+      "primaryTaskId": "task.turn-taking",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "School of Computer and Information Engineering, Tianjin Normal University, Tianjin, China"
+      ],
+      "name": "Nan Li"
+    },
+    {
+      "affiliations": [
+        "School of Computer and Information Engineering, Tianjin Normal University, Tianjin, China"
+      ],
+      "name": "Hetao Shan"
+    },
+    {
+      "affiliations": [
+        "School of Artificial Intelligence, Tianjin University, Tianjin, China"
+      ],
+      "name": "Jintao Liang"
+    },
+    {
+      "affiliations": [
+        "School of Artificial Intelligence, Tianjin University, Tianjin, China"
+      ],
+      "name": "Jiahao Yan"
+    },
+    {
+      "affiliations": [
+        "School of Artificial Intelligence, Tianjin University, Tianjin, China"
+      ],
+      "name": "Longbiao Wang"
+    },
+    {
+      "affiliations": [
+        "Shanghai Shenqijiyuan Intelligent Terminal Co., Ltd."
+      ],
+      "name": "Tubin Huang"
+    },
+    {
+      "affiliations": [
+        "Shanghai Shenqijiyuan Intelligent Terminal Co., Ltd."
+      ],
+      "name": "Min Xu"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对多人混合语音中只对目标说话人做语义轮次判断的问题，SpeakerTurn 在冻结声学通路下用 LoRA 联合生成目标转写与轮次状态，在合成测试上五状态宏 F1 达 0.811、目标转写 CER 为 4.20%，而结构化思维链降低了转写错误却也降低了轮次判别分数。",
+  "originalTitle": "SpeakerTurn: Target-Speaker Semantic Turn Detection in Multi-Speaker Environments",
+  "pdfUrl": "https://arxiv.org/pdf/2610.39828v1.pdf",
+  "readerTitle": "多人说话时只听目标人：SpeakerTurn 如何同时转写与判断轮次",
+  "schemaVersion": 2
+}

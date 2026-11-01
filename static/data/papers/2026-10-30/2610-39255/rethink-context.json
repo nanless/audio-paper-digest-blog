@@ -1,0 +1,87 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.39255v1",
+  "abstract": "Automatic Music Transcription (AMT) seeks to convert acoustic music recordings into symbolic musical notation, a process that remains remarkably difficult for polyphonic piano due to concurrent polyphony, harmonic partial interference, expressive timing, and severe pitch activation sparsity. In this paper, we formulate polyphonic piano transcription as a frame-level multi-label classification problem across the standard 88 piano pitches (MIDI notes 21 to 108). Raw audio waveforms are processed using the Constant-Q Transform (CQT) to construct a geometrically spaced log-frequency time-frequency representation that aligns with the chromatic musical scale across seven octaves (252 frequency bins per frame). We systematically investigate recurrent sequence models, contrasting unidirectional Long Short-Term Memory (LSTM) with Bidirectional LSTM (BiLSTM) backbones, and propose two architectural adaptations tailored to recurrent temporal representations: a modified additive attention module and a modified multihead attention mechanism equipped with hyperbolic tangent activation and head-wise summation. Furthermore, to mitigate the severe class imbalance between inactive and active notes (approximately 41:1), we evaluate Weighted Binary Cross-Entropy (WBCE) alongside standard Binary Cross-Entropy (BCE). Rigorous empirical evaluations on the MAPS and MAESTRO datasets demonstrate steady, compounding gains from bidirectionality and attention mechanisms. Our proposed Multihead Attention-BiLSTM architecture attains an F1-score of 88.20%, an accuracy of 78.90%, a precision of 0.89, and a recall of 0.86, substantially outperforming the baseline unidirectional LSTM (F1-score of 71.20%) while maintaining a compact parameter budget of 4.43M. Qualitative piano-roll visualizations confirm that our model generates faithful transcriptions even in complex harmonic passages.",
+  "abstractSha256": "554a60508f44c89820f04d548f4a7f90621e63fb577834736b58943e3340b4b9",
+  "arxivId": "2610.39255",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.39255v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "注意力机制",
+    "primaryTask": "音乐转录",
+    "rankBucket": "前50%",
+    "score": 5.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.transcription",
+          "label": "音乐转录"
+        },
+        {
+          "facet": "method",
+          "id": "method.attention",
+          "label": "注意力机制"
+        },
+        {
+          "facet": "method",
+          "id": "method.rnn",
+          "label": "RNN"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "注意力机制",
+      "primaryMethodId": "method.attention",
+      "primaryTask": "音乐转录",
+      "primaryTaskId": "task.transcription",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Information Technology",
+        "FPT University",
+        "Ho Chi Minh City, Vietnam"
+      ],
+      "name": "Phu-Anh-Tai Do"
+    },
+    {
+      "affiliations": [
+        "Department of Information Technology",
+        "FPT University",
+        "Ho Chi Minh City, Vietnam"
+      ],
+      "name": "Huu-Hoang Nguyen"
+    },
+    {
+      "affiliations": [
+        "Department of Information Technology",
+        "FPT University",
+        "Ho Chi Minh City, Vietnam"
+      ],
+      "name": "Duc-Hoang Nguyen"
+    },
+    {
+      "affiliations": [
+        "Faculty of Information Technology",
+        "Ho Chi Minh City Open University",
+        "Ho Chi Minh City, Vietnam"
+      ],
+      "name": "Thanh-Hai Le"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文把复调钢琴转谱做成每帧 88 个音高的多标签分类，用 252 维对数频率 CQT 做输入，以双向 LSTM 加前端改进多头注意力建模时间与频谱依赖，在 MAPS 与 MAESTRO 联合训练下最好达到 F1-score 88.20% 与准确率 78.90%，代价是 4.43M 参数与约 11.6 ms 帧分辨率等启发式后处理的局限。",
+  "originalTitle": "A learning-based method of automatic music transcription",
+  "pdfUrl": "https://arxiv.org/pdf/2610.39255v1.pdf",
+  "readerTitle": "把钢琴录音逐帧变成 88 键开关：CQT 加双向循环与注意力的复调转谱",
+  "schemaVersion": 2
+}

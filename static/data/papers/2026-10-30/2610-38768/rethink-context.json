@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.38768v1",
+  "abstract": "Feedback delay networks (FDNs) are recursive filter structures used to synthesise artificial reverberation. Their feedback matrix governs both energy exchange between delay lines and the computation required at every sample, making its design central to balancing an FDN's acoustic performance and implementation efficiency. In this work, we develop an FDN-specific structured pruning method that connects these acoustic and computational concerns, allowing high-order dense orthogonal designs to be fitted to efficient implementations. The feedback matrix is replaced by stages of fixed permutations and small orthogonal blocks. We characterise connectivity growth with the network depth and derive exact conditional block updates for matrix fitting, followed by refinement against the reference FDN magnitude response. The resulting factors admit direct vectorised evaluation, with arithmetic cost and coefficient storage scaling linearly with network size for fixed block size and depth. On an Apple M2, the selected staged kernels achieve feedback-multiplication speedups over dense BLAS ranging from approximately threefold to over twentyfold across the tested network sizes, while substantially reducing coefficient storage. Objective metrics and listening tests indicate that the proposed staged approximations closely preserve the spectral and temporal character of their dense references. An analysis of processor utilisation and register reuse explains why execution time depends on more than the operation count. Finally, block size and depth provide practical control over response fidelity, storage, and real-time cost, allowing acoustic design to precede the choice of an efficient implementation.",
+  "abstractSha256": "b0ec90a95af72da1276608fd884ed1d47dd404616bc0aa83dd37cb97274a8eea",
+  "arxivId": "2610.38768",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.38768v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "模型剪枝",
+    "primaryTask": "音频生成",
+    "rankBucket": "前50%",
+    "score": 7.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-generation",
+          "label": "音频生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.pruning",
+          "label": "模型剪枝"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.real-time",
+          "label": "实时处理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "模型剪枝",
+      "primaryMethodId": "method.pruning",
+      "primaryTask": "音频生成",
+      "primaryTaskId": "task.audio-generation",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Facundo Franchino"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Karolina Prawda"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文先保留已调好的稠密混响特性，再把反馈矩阵拟合为固定置换加小正交块的分级乘积，并在 Apple M2 上以更少的存储和更短的反馈乘法时间逼近原频响与听感，但结论只在给定延迟增益衰减与测试条件下成立。",
+  "originalTitle": "Structured Pruning of Feedback Delay Networks",
+  "pdfUrl": "https://arxiv.org/pdf/2610.38768v1.pdf",
+  "readerTitle": "把稠密反馈矩阵装进便宜的分级结构：反馈延迟网络的结构化剪枝",
+  "schemaVersion": 2
+}

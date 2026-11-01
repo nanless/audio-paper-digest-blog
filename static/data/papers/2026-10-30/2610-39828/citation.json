@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.39828v1",
+  "arxivId": "2610.39828",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.39828v1",
+  "authors": [
+    {
+      "affiliations": [
+        "School of Computer and Information Engineering, Tianjin Normal University, Tianjin, China"
+      ],
+      "name": "Nan Li"
+    },
+    {
+      "affiliations": [
+        "School of Computer and Information Engineering, Tianjin Normal University, Tianjin, China"
+      ],
+      "name": "Hetao Shan"
+    },
+    {
+      "affiliations": [
+        "School of Artificial Intelligence, Tianjin University, Tianjin, China"
+      ],
+      "name": "Jintao Liang"
+    },
+    {
+      "affiliations": [
+        "School of Artificial Intelligence, Tianjin University, Tianjin, China"
+      ],
+      "name": "Jiahao Yan"
+    },
+    {
+      "affiliations": [
+        "School of Artificial Intelligence, Tianjin University, Tianjin, China"
+      ],
+      "name": "Longbiao Wang"
+    },
+    {
+      "affiliations": [
+        "Shanghai Shenqijiyuan Intelligent Terminal Co., Ltd."
+      ],
+      "name": "Tubin Huang"
+    },
+    {
+      "affiliations": [
+        "Shanghai Shenqijiyuan Intelligent Terminal Co., Ltd."
+      ],
+      "name": "Min Xu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.39828v1",
+  "originalTitle": "SpeakerTurn: Target-Speaker Semantic Turn Detection in Multi-Speaker Environments",
+  "pdfUrl": "https://arxiv.org/pdf/2610.39828v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

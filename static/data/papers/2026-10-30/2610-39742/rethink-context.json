@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.39742v1",
+  "abstract": "End-of-turn (EoT) detection has been studied mostly through features, models, and modalities, while the speech genre of the training data has drawn far less attention. We isolate this factor. Using one reproducible annotation pipeline, we build a matched pair of corpora, multi-turn human-human conversational and single-turn human-machine, and train the same streaming ConvLSTM EoT detector on each. Across four test sets the conversational model reaches up to +0.45 higher F1, driven by fewer false alarms on the mid-turn pauses and hesitations that are rare in single-turn corpora. This conversational-training effect is not specific to frame-level decoding. Under a matched complete-or-not test it also appears at the utterance level, across two encoders, but only on conversational test data. Testing only on single-turn speech, as most prior work does, therefore hides the benefit of conversational training data. Against open-source baselines, our 1.8M-parameter model attains the highest F1 on every test set.",
+  "abstractSha256": "a3b00f513fcd39b23603ef2cc157648b052a69934f87f4776e1da3b3907d61cf",
+  "arxivId": "2610.39742",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.39742v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "RNN",
+    "primaryTask": "轮次切换",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.turn-taking",
+          "label": "轮次切换"
+        },
+        {
+          "facet": "task",
+          "id": "task.vad",
+          "label": "语音活动检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.rnn",
+          "label": "RNN"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "RNN",
+      "primaryMethodId": "method.rnn",
+      "primaryTask": "轮次切换",
+      "primaryTaskId": "task.turn-taking",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Rini Sharon"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kadri Hacioglu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jeena Prakash"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Andreas Stolcke"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "论文把训练语音分为多人多轮会话与单轮人机指令两类，在同一标注与同一流式模型下证明会话训练能大幅减少中途停顿处的误触发，但该优势在话语级判断中只出现在会话测试上，且以更长的等待延迟为代价。",
+  "originalTitle": "The Importance of Speech Genre for End-of-Turn Detector Training",
+  "pdfUrl": "https://arxiv.org/pdf/2610.39742v1.pdf",
+  "readerTitle": "训练数据的说话场景为何改变轮次结束检测",
+  "schemaVersion": 2
+}
