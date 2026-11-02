@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.41543v1",
+  "arxivId": "2610.41543",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.41543v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Jean-Daniel Pascal Prieto"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Prerak Srivastava"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Cédric Foy"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Antoine Deleforge"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.41543v1",
+  "originalTitle": "ARPEGE: Dataset and Methods to Estimate Acoustic and Geometric Parameters of Rooms from Sound",
+  "pdfUrl": "https://arxiv.org/pdf/2610.41543v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

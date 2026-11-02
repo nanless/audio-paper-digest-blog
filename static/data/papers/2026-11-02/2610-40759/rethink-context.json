@@ -1,0 +1,103 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.40759v1",
+  "abstract": "Musicians and mixing engineers often can decipher the signal processing chain they hear on a reference recording, then adapt it to new material. We present TAPE (Transformations of Audio Parameter Embeddings), which estimates this processing from the processed reference audio alone. An encoder trained to identify processors in eight major effect families maps the reference to an embedding. A differentiable digital signal processing (DSP) chain decodes the embedding into editable parameters in one forward pass and applies them to a different unprocessed recording. Its modules are equalization, compression, waveshaping, a small residual network, and reverberation. TAPE achieves lower spectral error than DeepAFx-ST, the previous state of the art for single-step regression, and lower spectral error than per-example search over a chain approximating ST-ITO's, while running 275$\\times$ faster than that search. Because the decoder outputs DSP parameters, its chain can also run causally: a C++ implementation with the trained weights processed 128-sample buffers 1.8$\\times$ faster than real time, with no missed deadlines.",
+  "abstractSha256": "fdb3483ba51d60fa369cfb38ea88278a3abc66d7a71b17ea0a32b028ac508d46",
+  "arxivId": "2610.40759",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.40759v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "音乐后期制作",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-post-production",
+          "label": "音乐后期制作"
+        },
+        {
+          "facet": "task",
+          "id": "task.acoustic-parameter-estimation",
+          "label": "声学系统参数估计"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "音乐后期制作",
+      "primaryTaskId": "task.music-post-production",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Phillip Long"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yongyi Zang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Qihui Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Christodoulos Benetatos"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Junfei Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Randal Leistikow"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Julian McAuley"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Perry R. Cook"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "TAPE 用识别 68 个插件的编码器得到处理嵌入，再用一次前向的可微 DSP 链解码为可编辑参数，在 60 对跨内容迁移上谱误差低于已发布模型与逐例搜索，但实时与泛化仍受链结构与评测条件限制。",
+  "originalTitle": "TAPE: Learning General Audio Effect Representations",
+  "pdfUrl": "https://arxiv.org/pdf/2610.40759v1.pdf",
+  "readerTitle": "TAPE：只听处理后的声音，把效果处理搬到另一段录音上",
+  "schemaVersion": 2
+}

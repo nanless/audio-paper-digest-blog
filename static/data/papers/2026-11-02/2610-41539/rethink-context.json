@@ -1,0 +1,133 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.41539v1",
+  "abstract": "The continuous deployment of enterprise voice systems creates a critical operational bottleneck: evaluating the acoustic quality of synthetic speech across high-volume production updates. While human Mean Opinion Score (MOS) remains the quality gold standard, it introduces severe operational costs and turn-around delays that make continuous integration infeasible. In this work, we present a system design case study for a scalable, low-cost and offline evaluation pipeline capable of scoring large batches of synthetic speech at marginal cost. First, we use Qwen2-Audio-7B-Instruct in a zero-shot setting for granular MOS estimation, noticing perceptual blind spots and inherent biases. Then, we analyze SOMOS dataset and construct a diagnostic benchmark that operationalizes two prosodic dimensions associated with human naturalness ratings. Finally, we adapt Qwen2-Audio-7B-Instruct through a parameter-efficient finetuning (LoRA) on the task of MOS evaluation, observing improvements over base model and widely used neural baselines like UTMOS and establishing a practical blueprint for enterprise-grade speech quality assurance.",
+  "abstractSha256": "a10e187d9b745696c1cf029fbe3e5a5567ad9a18bc6f0cd160b486a4a5159588",
+  "arxivId": "2610.41539",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.41539v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "LoRA",
+    "primaryTask": "语音质量评估",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-quality",
+          "label": "语音质量评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.lora",
+          "label": "LoRA"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.audio-language",
+          "label": "音频大模型"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "LoRA",
+      "primaryMethodId": "method.lora",
+      "primaryTask": "语音质量评估",
+      "primaryTaskId": "task.speech-quality",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Dimitrios Kokkinis"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Panagiotis Kakoulidis"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Nikolaos Ellinas"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Chrysovalanti Lymperi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Alexandra Vioni"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Georgios Vardaxoglou"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Iakovi Alexiou"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Myrsini Christidou"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jeasung Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Gunu Jho"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Inchul Hwang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Pirros Tsiakoulis"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Aimilios Chalamandaris"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "本文以 Qwen2-Audio-7B-Instruct 为对象，先证明零样本提示无法可靠预测 MOS，再用 SOMOS 数据诊断其语速与表现力感知盲区，最后用 4 比特量化下单卡 LoRA 微调把 Pearson 相关从接近 0 提升到 0.6506 并超过 UTMOSv2，代价是结论只在英语合成语音的域内测试上成立。",
+  "originalTitle": "Scalable Audio-LLM System for Speech MOS Evaluation: A Diagnostic Case Study and Adaptation Roadmap",
+  "pdfUrl": "https://arxiv.org/pdf/2610.41539v1.pdf",
+  "readerTitle": "让音频大模型学会打分：语音 MOS 自动评估的诊断与适配",
+  "schemaVersion": 2
+}

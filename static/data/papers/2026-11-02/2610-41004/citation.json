@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.41004v1",
+  "arxivId": "2610.41004",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.41004v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Aryan Chowdhury"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yizheng Sun"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Thomas Carroll"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Riza Batista-Navarro"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.41004v1",
+  "originalTitle": "MOSAIC: Addressing Disproportionate Task-Modality Dependencies via Modality-Partitioned Gradient Routing",
+  "pdfUrl": "https://arxiv.org/pdf/2610.41004v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

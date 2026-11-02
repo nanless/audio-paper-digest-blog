@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.40970v1",
+  "abstract": "Generative audio systems can produce large libraries of personalized bedtime content, but ordinary media objectives (retention, completion, and novelty) are poorly aligned with the goal of supporting a transition toward sleep. Direct evidence for narrated bedtime audio in adults is mixed, and a recent active-controlled trial did not support such audio as a standalone treatment for sleep disturbance. We translate this uncertain evidence into conservative engineering requirements and present a multilingual pipeline for generating and narrating low-arousal sleep stories. The implemented prototype separates deterministic planning from large language model generation, represents content and delivery parameters explicitly, shapes each script through a four-phase attention taper, validates structural and lexical constraints, performs a bounded error-aware retry, and quarantines unresolved outputs. Provider-agnostic text-to-speech synthesis is followed by paragraph-aware joining, two-pass loudness normalization, and a publication gate that re-measures the saved, encoded file against fixed loudness, loudness-range, and true-peak limits. The product data model records stop position, replay, early abandonment, and completion while treating these events as ambiguous behavioral proxies rather than clinical outcomes. We contribute an evidence-to-requirement mapping, a traceable guardrail architecture with explicit acceptance thresholds, technical evaluation criteria, and a prospective protocol for testing sleep-onset effects. No clinical efficacy is claimed; the system is positioned as a relaxation and attentional-support tool whose benefit and possible reliance must be evaluated empirically.",
+  "abstractSha256": "a1897b18bdf06a4c06bcbf3255ad8765c82e8a01eebe20e67f9839958c8beb18",
+  "arxivId": "2610.40970",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.40970v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "规则与词典方法",
+    "primaryTask": "朗读友好文本生成",
+    "rankBucket": "后50%",
+    "score": 5.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts-friendly-text-generation",
+          "label": "朗读友好文本生成"
+        },
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.rule-based",
+          "label": "规则与词典方法"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "规则与词典方法",
+      "primaryMethodId": "method.rule-based",
+      "primaryTask": "朗读友好文本生成",
+      "primaryTaskId": "task.tts-friendly-text-generation",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Georgios Makridis"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Stefanos Kampouris"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对成人睡前叙述音频证据混杂且最强对照试验为阴性的问题，论文把确定性规划、四阶段注意力渐弱、结构词表声学三层门限与隔离机制组成多语言生成管线，五故事试点显示响度达标但法语日语印地语实际时长分别偏短约 13%、24%、38%，且不声称任何临床疗效。",
+  "originalTitle": "Nedimo: An Evidence-Grounded Multilingual Pipeline for AI-Generated Sleep Stories",
+  "pdfUrl": "https://arxiv.org/pdf/2610.40970v1.pdf",
+  "readerTitle": "睡前故事不是越听完越好：Nedimo 如何把不确定的睡眠证据变成可检查的生成管线",
+  "schemaVersion": 2
+}

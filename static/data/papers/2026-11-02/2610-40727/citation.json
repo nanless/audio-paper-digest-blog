@@ -1,0 +1,20 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.40727v1",
+  "arxivId": "2610.40727",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.40727v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Arbaz Siddiqui"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.40727v1",
+  "originalTitle": "VoxLock: Target-Speaker Extraction for Voice Agents Without an Enrollment Step",
+  "pdfUrl": "https://arxiv.org/pdf/2610.40727v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,72 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.41870v1",
+  "abstract": "This paper studies the capability of an object-centric audio representation to support multiple downstream tasks within a unified framework. The object-centric model is trained in a self-supervised setup using slot attention by reconstructing Audio Spectrogram Transformer (AST) patch embeddings from a set of latent slots. It is trained on synthetic audio mixtures, which provides controlled multi-source audio scenes. These slot representations are evaluated for the classification, detection, and separation of sound events by training task specific output layers. On the classification task, the model achieves an F1-score of 0.8, comparable to clip-level AST embeddings which achieve 0.7. For sound event detection, it reaches a macro F1-score of 0.7, outperforming clip-level AST embeddings at 0.4 and matching AST patch embeddings at 0.7, which encode finer time-frequency information. In source separation, it achieves an SI-SDR improvement (SI-SDRi) of 18.4 dB. Furthermore, in a zero-shot source separation setting, the model achieves an SI-SDRi of 14.5 dB. These results demonstrate that slot-based representations capture transferable and compositional structure in audio scenes, enabling generalization across tasks and datasets.",
+  "abstractSha256": "0b632d88b066eee7f78d95e2520d1cfc29d30f3c133aebac679f0b719bff334f",
+  "arxivId": "2610.41870",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.41870v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "自监督学习",
+    "primaryTask": "音频分离",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-separation",
+          "label": "音频分离"
+        },
+        {
+          "facet": "method",
+          "id": "method.self-supervised",
+          "label": "自监督学习"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "task",
+          "id": "task.event-detection",
+          "label": "音频事件检测"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.zero-shot",
+          "label": "零样本"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "自监督学习",
+      "primaryMethodId": "method.self-supervised",
+      "primaryTask": "音频分离",
+      "primaryTaskId": "task.audio-separation",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Parthasaarathy Sudarsanam"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Tuomas Virtanen"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "该文用槽注意力把 AST 片段嵌入拆成 4 个槽并以重构为目标自监督预训练，再冻结主干只训练轻量任务头，在三声源合成场景上同时支撑分类、检测与分离，并在未见类上做零样本分离，但结论依赖合成混合与固定任务头的评测条件。",
+  "originalTitle": "Self-Supervised Object-Centric Representation for Multi-Task Audio Analysis",
+  "pdfUrl": "https://arxiv.org/pdf/2610.41870v1.pdf",
+  "readerTitle": "把混合音频拆成几个槽：自监督的对象中心表示如何兼顾分类、检测与分离",
+  "schemaVersion": 2
+}

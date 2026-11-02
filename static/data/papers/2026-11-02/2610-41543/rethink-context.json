@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.41543v1",
+  "abstract": "Can one hear the walls of a room? To foster audio signal processing research around this question we release ARPEGE, a dataset containing hundreds of ambisonic spherical-array room impulse responses recorded in 6 empty rooms, annotated by the relative positions of sources, microphones and all acoustic reflectors. The dataset includes multiple room sizes, surface materials, orientations and distances, as well as recordings of human speakers and handclaps. Two state-of-the-art methods on image source localization and blind room parameter estimation are demonstrated on the data. Initial code for re-simulating the measured room impulse responses is provided, a longer term goal being to digitally twin the dataset.",
+  "abstractSha256": "38c61b4e62e0bb405bc3f054baa057abab9c64dced7d2dda53229e3c176c83eb",
+  "arxivId": "2610.41543",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.41543v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "数据集构建",
+    "primaryTask": "声学系统参数估计",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.acoustic-parameter-estimation",
+          "label": "声学系统参数估计"
+        },
+        {
+          "facet": "method",
+          "id": "method.dataset-curation",
+          "label": "数据集构建"
+        },
+        {
+          "facet": "task",
+          "id": "task.localization",
+          "label": "声源定位"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "数据集构建",
+      "primaryMethodId": "method.dataset-curation",
+      "primaryTask": "声学系统参数估计",
+      "primaryTaskId": "task.acoustic-parameter-estimation",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Jean-Daniel Pascal Prieto"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Prerak Srivastava"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Cédric Foy"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Antoine Deleforge"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "ARPEGE 用 6 个空房间的 248 个球形阵列房间脉冲响应和几何标注来支撑镜像声源定位与语音盲估计房间参数两类任务，实测显示近距离一阶镜像声源召回率达 97.3% 但高阶迅速下降，而语音估计的表面积与体积误差在多位置融合与指向性声源训练下可降至 35 平方米和 30 立方米，房间 1 的几何大误差则标定了方法的适用边界。",
+  "originalTitle": "ARPEGE: Dataset and Methods to Estimate Acoustic and Geometric Parameters of Rooms from Sound",
+  "pdfUrl": "https://arxiv.org/pdf/2610.41543v1.pdf",
+  "readerTitle": "听见墙壁：ARPEGE 房间声学几何数据集与两种估计方法解读",
+  "schemaVersion": 2
+}

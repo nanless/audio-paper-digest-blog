@@ -1,0 +1,61 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.42095v1",
+  "abstract": "In this paper, we present a framework of concepts, terminology and notation for geometric pattern matching, centred around the idea of a {\\em transformation class}. After formally defining the concept of a transformation class, we provide detailed definitions of a number of specific transformation classes that are particularly relevant to pattern matching and pattern discovery in music, which is the primary application domain within which the framework has been developed. We then provide formal definitions of the notions of {\\em match}, {\\em occurrence}, {\\em maximal match\\/} and {\\em maximal occurrence\\/} and prove some results relating to these concepts. We then define and explore in detail the idea of an {\\em occurrence set\\/} and the more general notion of a {\\em heterogeneous occurrence set}. Finally, we explore in detail the concept of {\\em transformational equivalence}, including a consideration of {\\em transformation groups}, along with the group-theoretic and transformational equivalence properties of selected transformation classes.",
+  "abstractSha256": "bb8ae9a297a338849c0c6afdca88a0cb4c7d6f93d7c1d51a1aa51269fb172737",
+  "arxivId": "2610.42095",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.42095v1",
+  "assessment": {
+    "documentType": "理论研究",
+    "primaryMethod": "形式化分析",
+    "primaryTask": "音乐分析",
+    "rankBucket": "前50%",
+    "score": 5.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-understanding",
+          "label": "音乐分析"
+        },
+        {
+          "facet": "method",
+          "id": "method.formal-analysis",
+          "label": "形式化分析"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.music-information",
+          "label": "音乐信息检索"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.theory",
+          "label": "理论分析"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "形式化分析",
+      "primaryMethodId": "method.formal-analysis",
+      "primaryTask": "音乐分析",
+      "primaryTaskId": "task.music-understanding",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "David Meredith"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "本文把音乐中的重复与变奏统一为二维点集在变换类下的匹配、出现与等价问题，用基对求变换、用出现集做紧凑编码，并证明只有去掉零缩放的子类才成群从而保证出现集内两两等价。",
+  "originalTitle": "A General Theoretical Framework for Transformed Geometric Pattern Matching in Music",
+  "pdfUrl": "https://arxiv.org/pdf/2610.42095v1.pdf",
+  "readerTitle": "把乐谱看成点集：变换几何模式匹配的统一框架",
+  "schemaVersion": 2
+}

@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.41512v1",
+  "arxivId": "2610.41512",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.41512v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Eliseo Fuentes-Martinez"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Antonio Hidalgo-Centeno"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jorge Calvo-Zaragoza"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Antonio Javier Gallego"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.41512v1",
+  "originalTitle": "Parameter-Efficient Fine-Tuning of Transformer Encoders for Audio-Image-Symbolic Music Retrieval",
+  "pdfUrl": "https://arxiv.org/pdf/2610.41512v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

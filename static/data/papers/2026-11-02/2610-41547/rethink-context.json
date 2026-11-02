@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.41547v1",
+  "abstract": "We present a method to estimate the relative position and orientation of two non-coplanar microphone arrays using a room impulse response (RIR) from a single source. The approach exploits early acoustic reflections, retrieved by each array in the form of a 3D image-source point cloud, using a recently-proposed image-source localization technique. The task is then reduced to aligning the two unlabeled point clouds, which is made difficult by their inherent symmetries and by spurious, missing and noisy estimates. To this aim we introduce ARCTIC, a point-cloud registration algorithm that performs a ranked search over congruent triangles anchored on the true source. Simulated and real experiments show that ARCTIC strongly outperforms two baselines, achieving mean angular and radial self-localization errors below 5 and 10 cm across 36 real RIRs measured in 6 different rooms.",
+  "abstractSha256": "d80e562c107cfce4eaffed417d9bf1ffaea5a88f8e3bb93a6b0f419b10658d9f",
+  "arxivId": "2610.41547",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.41547v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "声学系统参数估计",
+    "rankBucket": "前50%",
+    "score": 6.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.acoustic-parameter-estimation",
+          "label": "声学系统参数估计"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.microphone-array",
+          "label": "麦克风阵列"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.spatial-audio",
+          "label": "空间音频信号"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "声学系统参数估计",
+      "primaryTaskId": "task.acoustic-parameter-estimation",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Thomas Guffroy"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Jean-Daniel Pascal Prieto"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Cédric Foy"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Antoine Deleforge"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "本文用一个声源的一次房间脉冲响应得到两组镜像声源点云，再用以真实声源为锚点的 ARCTIC 配准求相对位姿，在 36 个真实房间脉冲响应上达到平均角度误差 5 度以内和距离误差 10 厘米以内，代价是依赖早期反射可见重叠和紧凑阵列假设。",
+  "originalTitle": "Self-Localization of Distributed Microphone Arrays Using One Source and Acoustic Reflections",
+  "pdfUrl": "https://arxiv.org/pdf/2610.41547v1.pdf",
+  "readerTitle": "只用一个声源和房间反射定位两组麦克风阵列",
+  "schemaVersion": 2
+}

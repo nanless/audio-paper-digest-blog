@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.41307v1",
+  "abstract": "Multimodal indirect prompt injection embeds malicious instructions in external media that also contains information needed for the user's task. Existing defenses can block the attack yet impair the model's use of that information, leaving a gap between attack defense and task preservation. We propose ERASE, an on-policy self-distillation method that constructs its reference by erasing the injected region in place. Modality-appropriate blank content replaces the injection while the surrounding media is preserved. A student reading attacked media learns from a frozen base model reading the erased view through full-distribution token-level feedback on its own rollouts. Across image, audio, and video on two model sizes, ERASE records near-zero observed attack success on the evaluated benchmark while retaining task utility close to the undefended clean-input level. On 3B audio, ERASE reaches 60.1% attacked-input accuracy compared with ARGUS's 33.1%, within 0.5 points of the undefended clean-input level. Experiments show that ERASE reduces injection dependence from 6.26 to 0.0095 on 3B audio while staying close to the base model on the erased input. Out-of-domain accuracy also stays near the base level. Our code will be made publicly available upon acceptance.",
+  "abstractSha256": "3be2764276221b1e09b1864c9ea385aa20f05edffeec2f2cd484c4434b94ae55",
+  "arxivId": "2610.41307",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.41307v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "知识蒸馏",
+    "primaryTask": "音频系统攻击与防御",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-system-attack-defense",
+          "label": "音频系统攻击与防御"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.security",
+          "label": "音频安全"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.multimodal",
+          "label": "多模态模型"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "知识蒸馏",
+      "primaryMethodId": "method.distillation",
+      "primaryTask": "音频系统攻击与防御",
+      "primaryTaskId": "task.audio-system-attack-defense",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "South China University of Technology"
+      ],
+      "name": "Shuo Hong"
+    },
+    {
+      "affiliations": [
+        "South China University of Technology"
+      ],
+      "name": "Jiaxin Ma"
+    },
+    {
+      "affiliations": [
+        "South China University of Technology"
+      ],
+      "name": "Xidi Cai"
+    },
+    {
+      "affiliations": [
+        "South China University of Technology"
+      ],
+      "name": "Qianli Ma"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对藏在图像音频视频中的间接注入，ERASE 用抹掉注入区域后的视图做教师进行在轨自蒸馏，在评测基准上把攻击成功压到接近零，同时把被攻击输入的任务准确率拉回到接近无防御干净输入的水平，但结论只在非自适应注入和区域可分离的条件下成立。",
+  "originalTitle": "Erase the Injected Region: Multimodal Prompt-Injection Defense with On-Policy Self-Distillation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.41307v1.pdf",
+  "readerTitle": "抹掉注入再学习：多模态间接提示注入的 ERASE 防御",
+  "schemaVersion": 2
+}

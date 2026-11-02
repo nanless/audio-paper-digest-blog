@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.42026v1",
+  "abstract": "We present GhostPrefix, the first synchronization-free universal adversarial prefix attack against automatic speech recognition (ASR) systems. Unlike prior audio attacks, which are typically crafted per utterance, require synchronization with the victim waveform, or target narrow objectives, GhostPrefix learns a short, reusable audio segment prepended to arbitrary live speech to exert real-time control over ASR outputs without knowledge of the future utterance or temporal alignment. A key challenge is maintaining stable adversarial effects across unknown, evolving speech contexts. GhostPrefix combines token-level losses with a novel representation-level objective for stable, input-agnostic effects. GhostPrefix supports three attack modes: (i) prompted prefix attacks for semantic steering, (ii) targeted prefix attacks for transcript hijacking, and (iii) untargeted prefix attacks for transcription degradation. To remain perceptually inconspicuous, we regularize prefixes toward benign environmental-sound distributions and improve robustness against over-the-air distortions. We evaluate GhostPrefix across 13 open-source ASR models from four families. In digital settings, it achieves average attack success rates of 97.6% for prompted steering and 93.4% for targeted hijacking, while driving word error rate to 1.18 under untargeted attacks. Over the air, it achieves success rates of 91.5% and 89.5% for prompted and targeted modes, respectively. These manipulations propagate into downstream AI-assisted pipelines, including voice assistants and AI note-taking tools, causing systematic semantic misinterpretations. GhostPrefix exposes synchronization-free universal prefixes as a practical, under-explored threat to real-world ASR and downstream applications. Artifacts and demos are available at https://ghostprefix.github.io/.",
+  "abstractSha256": "0f3f4388b707c233887b112a44488b21f68ad50455b0ac7cbc001890620f4967",
+  "arxivId": "2610.42026",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.42026v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "对抗攻击构造",
+    "primaryTask": "音频系统攻击与防御",
+    "rankBucket": "前25%",
+    "score": 8.4,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-system-attack-defense",
+          "label": "音频系统攻击与防御"
+        },
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.adversarial-attack",
+          "label": "对抗攻击构造"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "对抗攻击构造",
+      "primaryMethodId": "method.adversarial-attack",
+      "primaryTask": "音频系统攻击与防御",
+      "primaryTaskId": "task.audio-system-attack-defense",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shengding Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ashwin Innuganti"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Qiben Yan"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对流式语音识别不知道未来语音内容和时机的困难，论文用一段拼在输入边界、可复用的短音频统一实现语义引导、指定文本劫持和整体降质三类操控，在数字域平均成功率 97.6% 和 93.4%、无目标词错误率 1.18，空中播放后仍保持 91.5% 和 89.5%，代价是需要白盒梯度离线优化且隐蔽性只靠模板约束和主观听感代理指标。",
+  "originalTitle": "GhostPrefix: Synchronization-Free Universal Prefix Attacks for ASR Manipulation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.42026v1.pdf",
+  "readerTitle": "GhostPrefix：不需要对齐的通用语音前缀攻击",
+  "schemaVersion": 2
+}

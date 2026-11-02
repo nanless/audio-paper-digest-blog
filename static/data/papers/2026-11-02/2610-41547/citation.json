@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.41547v1",
+  "arxivId": "2610.41547",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.41547v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Thomas Guffroy"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Jean-Daniel Pascal Prieto"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Cédric Foy"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Antoine Deleforge"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.41547v1",
+  "originalTitle": "Self-Localization of Distributed Microphone Arrays Using One Source and Acoustic Reflections",
+  "pdfUrl": "https://arxiv.org/pdf/2610.41547v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

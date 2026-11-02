@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.41852v1",
+  "abstract": "Recent advancements in audio generation have been largely driven by Transformer-based diffusion models. However, these models suffer from quadratic complexity of self-attention, severely bottlenecking the long-form audio synthesis. To overcome this limitation, we propose MFlowAudio, a novel latent audio generation framework that synergizes the continuous-time dynamics of Flow Matching with a custom-designed TCMamba backbone. TCMamba uses an innovative dual-scan mechanism: a TimeMamba module to capture long-range causal dependencies with linear complexity, and a ChannelMamba module to model cross-channel correlations such as harmonic structures. Exploiting this structural foundation, we formulate the Stateful Flow Matching (SFM) paradigm. This framework inherently enables chunk-wise training and streaming generation, maintaining an $\\mathcal{O}(1)$ caching complexity without incurring extra computational overhead. To enable fine-grained controllable synthesis, we devise a novel guidance mechanism that neutralizes vector field collisions precipitated by on-the-fly semantic transitions of prompts. Comprehensive empirical evaluations confirm that MFlowAudio yields generative fidelity on par with state-of-the-art baselines while establishing significant computational efficiency, achieving above $14.5$% acceleration in generation and facilitating perceptually seamless streaming synthesis with a constant latency of $1.8$ seconds. Demo: https://huggingface.co/spaces/mflowaudio/MFlowAudio",
+  "abstractSha256": "a3fc600193d8b73821a2ce3dd7d84f6124805a3625b7cf50dbb83a549970c184",
+  "arxivId": "2610.41852",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.41852v1",
+  "assessment": {
+    "documentType": "模型报告",
+    "primaryMethod": "流匹配",
+    "primaryTask": "音频生成",
+    "rankBucket": "前50%",
+    "score": 7.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-generation",
+          "label": "音频生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "method",
+          "id": "method.state-space",
+          "label": "状态空间模型"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.real-time",
+          "label": "实时处理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "流匹配",
+      "primaryMethodId": "method.flow-matching",
+      "primaryTask": "音频生成",
+      "primaryTaskId": "task.audio-generation",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Computer Science, University College London",
+        "Department of Engineering, King’s College London"
+      ],
+      "name": "Hao Dai"
+    },
+    {
+      "affiliations": [
+        "Department of Computer Science, University College London"
+      ],
+      "name": "Panyu Chen"
+    },
+    {
+      "affiliations": [
+        "Department of Computer Science, University College London"
+      ],
+      "name": "Jagmohan Chauhan"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对长时高采样音频序列过长导致自注意力平方复杂度与整段一次性生成难以流式扩展的问题，MFlowAudio 用时间与通道双路 Mamba 建模潜在表示并用有状态流匹配实现分块训练生成，在 AudioCaps 等条件下保持与基线可比的生成质量并将首块延迟固定在 1.8 秒左右，但动态切换语义与边界自然度之间仍需权衡。",
+  "originalTitle": "MFlowAudio: Efficient Text-to-Audio Synthesis via Mamba-based Stateful Flow Matching",
+  "pdfUrl": "https://arxiv.org/pdf/2610.41852v1.pdf",
+  "readerTitle": "用线性递推做长音频：MFlowAudio 的双路扫描与有状态流匹配",
+  "schemaVersion": 2
+}

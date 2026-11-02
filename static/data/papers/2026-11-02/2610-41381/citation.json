@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.41381v1",
+  "arxivId": "2610.41381",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.41381v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Sivy Limited, Hangzhou, China"
+      ],
+      "name": "Zijian Zhou"
+    },
+    {
+      "affiliations": [
+        "Sivy Limited, Hangzhou, China"
+      ],
+      "name": "Rui Liu"
+    },
+    {
+      "affiliations": [
+        "Sivy Limited, Hangzhou, China"
+      ],
+      "name": "Rongxiang Nie"
+    },
+    {
+      "affiliations": [
+        "Sivy Limited, Hangzhou, China"
+      ],
+      "name": "Rui Ma"
+    },
+    {
+      "affiliations": [
+        "Sivy Limited, Hangzhou, China"
+      ],
+      "name": "Ziyao Zhang"
+    },
+    {
+      "affiliations": [
+        "The Cavendish Laboratory, Department of PhysicsUniversity of Cambridge, Cambridge, UK Corresponding authors."
+      ],
+      "name": "Xin Du"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.41381v1",
+  "originalTitle": "From prediction error to sparse events: Biologically inspired signed-dyadic coding for Mandarin keyword spotting",
+  "pdfUrl": "https://arxiv.org/pdf/2610.41381v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

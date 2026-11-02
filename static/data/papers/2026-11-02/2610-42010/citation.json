@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.42010v1",
+  "arxivId": "2610.42010",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.42010v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ahmet Tuğrul Bayrak"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Fatma Nur Korkmaz"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Nur Yağmur Tuncer"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Mustafa Sertaç Türkel"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.42010v1",
+  "originalTitle": "TurnTurk-GPT: Text-Based Turn-Taking Prediction for Turkish",
+  "pdfUrl": "https://arxiv.org/pdf/2610.42010v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

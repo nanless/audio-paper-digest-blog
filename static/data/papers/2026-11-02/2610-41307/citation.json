@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.41307v1",
+  "arxivId": "2610.41307",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.41307v1",
+  "authors": [
+    {
+      "affiliations": [
+        "South China University of Technology"
+      ],
+      "name": "Shuo Hong"
+    },
+    {
+      "affiliations": [
+        "South China University of Technology"
+      ],
+      "name": "Jiaxin Ma"
+    },
+    {
+      "affiliations": [
+        "South China University of Technology"
+      ],
+      "name": "Xidi Cai"
+    },
+    {
+      "affiliations": [
+        "South China University of Technology"
+      ],
+      "name": "Qianli Ma"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.41307v1",
+  "originalTitle": "Erase the Injected Region: Multimodal Prompt-Injection Defense with On-Policy Self-Distillation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.41307v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.40695v1",
+  "abstract": "We present our submission to the Beyond Transcription Challenge (BeTraC) on medical note generation from doctor-patient audio conversations. We propose a section-aware approach based on Qwen2.5-Omni-3B, in which a lightweight Q-Former learns SOAP section-specific queries to extract compact clinical representations from speech. In the lightweight track, our system ranks fourth and substantially outperforms the challenge baseline, achieving a Concept F1 of 0.5005 on the official test set. The organizers' analysis and our heuristic evaluation suggest improved robustness to hallucinations, and better stability under difficult audio conditions. These results show that explicitly modeling SOAP structure through section-specific queries is an effective way to improve the faithfulness and reliability of audio-based medical note generation.",
+  "abstractSha256": "e0963bd9f6bbc0841f904cea4ebfd328daeb5eebc93f5d272281db3f790479ce",
+  "arxivId": "2610.40695",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.40695v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "Adapter",
+    "primaryTask": "语音摘要",
+    "rankBucket": "前50%",
+    "score": 5.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-summarization",
+          "label": "语音摘要"
+        },
+        {
+          "facet": "method",
+          "id": "method.adapter",
+          "label": "Adapter"
+        },
+        {
+          "facet": "method",
+          "id": "method.lora",
+          "label": "LoRA"
+        },
+        {
+          "facet": "application",
+          "id": "application.medical",
+          "label": "医疗音频"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "Adapter",
+      "primaryMethodId": "method.adapter",
+      "primaryTask": "语音摘要",
+      "primaryTaskId": "task.speech-summarization",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Youness Dkhissi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Valentin Vielzeuf"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Antoine Caubrière"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Jean-Emile Dartois"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "针对医患对话音频生成 SOAP 病历时信息冗长易幻觉的问题，该工作用 96 个按小节分工的可学习查询先压缩语音再结合原始语音通路生成病历，在官方测试集上 Concept F1 达到 0.5005 并表现出更稳定的幻觉指标，但人类口语子集上仍有明显下滑且样本很少。",
+  "originalTitle": "JYVA at BeTraC: Audio-Based Medical Note Generation with SOAP Section-Specific Queries",
+  "pdfUrl": "https://arxiv.org/pdf/2610.40695v1.pdf",
+  "readerTitle": "从医患对话音频直接生成 SOAP 病历：按小节分工的查询压缩方法",
+  "schemaVersion": 2
+}

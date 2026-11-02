@@ -1,0 +1,61 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.40727v1",
+  "abstract": "A voice agent's speech recognizer transcribes everyone near the microphone, including people other than the caller. I fine-tuned a public causal target-speaker extraction model (REAL-TSE, 27M parameters) on one GPU to work from a voice sample cut from the call itself, and released it as VoxLock. I score it by what a recognizer writes on real recordings. On Krisp's 265-recording benchmark it reaches 4.95% WER against 23.21% unprocessed and lets 9 background words into the transcript over 85 minutes of background-only speech. Its WER is not significantly different from Krisp's best filters and is significantly lower than the other commercial and open systems I tested. On 400 AMI meeting windows built and frozen before scoring, it cuts WER from 42.95% to 10.63%. The 8-bit model runs a live call on 77% of one CPU thread with 24 ms of algorithmic latency. Model, code and per-file scores are open.",
+  "abstractSha256": "c8a8416e2bd082f989b19addae2f7347760b1cbb287b4383ff0f753fa9fc655d",
+  "arxivId": "2610.40727",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.40727v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "SFT",
+    "primaryTask": "目标说话人提取",
+    "rankBucket": "前50%",
+    "score": 6.7,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.target-speaker",
+          "label": "目标说话人提取"
+        },
+        {
+          "facet": "method",
+          "id": "method.sft",
+          "label": "SFT"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.open-source-tool",
+          "label": "开源工具"
+        }
+      ],
+      "contract": "paper-tag-flat-tags-v2",
+      "primaryMethod": "SFT",
+      "primaryMethodId": "method.sft",
+      "primaryTask": "目标说话人提取",
+      "primaryTaskId": "task.target-speaker",
+      "registrySha256": "cdef54423b5dfc00a1d017ef6639446d2ecd1d9c1acf71c8eb4f6219a46b7ba8",
+      "registryVersion": "paper-tag-catalog-v2",
+      "selectionContract": "paper-tag-selection-v2"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Arbaz Siddiqui"
+    }
+  ],
+  "contract": "paper-research-context-v2",
+  "oneSentenceThesis": "VoxLock 要解决背景人声被识别器转写的问题，做法是从本次通话截取 3 秒 caller 声音去提示因果分离模型，在 Krisp 真实录音上把词错误率从 23.21% 降到 4.95%，代价是干净电话场景会轻微变差且依赖 caller 最早最响的假设。",
+  "originalTitle": "VoxLock: Target-Speaker Extraction for Voice Agents Without an Enrollment Step",
+  "pdfUrl": "https://arxiv.org/pdf/2610.40727v1.pdf",
+  "readerTitle": "VoxLock：从通话开头截 3 秒声音，只留下打电话的人",
+  "schemaVersion": 2
+}

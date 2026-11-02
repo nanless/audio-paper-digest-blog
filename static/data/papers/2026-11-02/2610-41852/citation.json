@@ -1,0 +1,33 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.41852v1",
+  "arxivId": "2610.41852",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.41852v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Computer Science, University College London",
+        "Department of Engineering, King’s College London"
+      ],
+      "name": "Hao Dai"
+    },
+    {
+      "affiliations": [
+        "Department of Computer Science, University College London"
+      ],
+      "name": "Panyu Chen"
+    },
+    {
+      "affiliations": [
+        "Department of Computer Science, University College London"
+      ],
+      "name": "Jagmohan Chauhan"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.41852v1",
+  "originalTitle": "MFlowAudio: Efficient Text-to-Audio Synthesis via Mamba-based Stateful Flow Matching",
+  "pdfUrl": "https://arxiv.org/pdf/2610.41852v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}
