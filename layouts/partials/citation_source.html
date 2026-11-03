@@ -41,7 +41,9 @@
 {{- if and $verified $meta.classificationProvenance }}{{ with $meta.classificationProvenance.sourceTitle }}{{ $title = . | plainify }}{{ end }}{{ end -}}
 {{- $venue := "" -}}{{- if $verified }}{{ $venue = (.Params.paper_digest_venue | default .Params.paper_digest_conference_name | default "") | plainify }}{{ end -}}
 {{- $complete := and $verified $title $url (gt (len $authors) 0) $date -}}
-{{- $memoValue = (dict "contract" "paper-citation-source-v1" "paperKey" $key "paperId" $meta.paperId "identityStatus" $meta.identityStatus "verified" $verified "complete" (not (not $complete)) "sourceKind" $kind "title" $title "authors" $authors "date" $date "doi" $doi "venue" $venue "arxivId" $id "url" $url "sourceUrl" $url "pdfUrl" $pdf "pageUrl" .Permalink "pageType" $meta.pageType) -}}
+{{- $protocols := index hugo.Data "paperdigest-protocols" -}}
+{{- $header := index (index $protocols.families "paper-citation-source").headers "paper-citation-source" -}}
+{{- $memoValue = merge $header (dict "paperKey" $key "paperId" $meta.paperId "identityStatus" $meta.identityStatus "verified" $verified "complete" (not (not $complete)) "sourceKind" $kind "title" $title "authors" $authors "date" $date "doi" $doi "venue" $venue "arxivId" $id "url" $url "sourceUrl" $url "pdfUrl" $pdf "pageUrl" .Permalink "pageType" $meta.pageType) -}}
 {{- if and $verified $hasSourceEvidence -}}
   {{- range $field := slice "sourceVersionWarning" "provenanceDisclosure" -}}
     {{- with index $sealed $field }}{{ $memoValue = merge $memoValue (dict $field (. | plainify)) }}{{ end -}}

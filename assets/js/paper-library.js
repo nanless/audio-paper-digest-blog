@@ -76,7 +76,7 @@
     if (core && typeof core.readTagFields === 'function') return core.readTagFields(record);
     // 核心脚本缺席时仍可搜索普通条目；这里只读取字段，不判断标签资格。
     var fields = [
-      ['tagContract', 'taxonomyContract'], ['tagConcepts', 'taxonomyConcepts'],
+      ['tagContract', 'taxonomyContract'], ['tagSchemaFingerprint','taxonomySchemaFingerprint'], ['tagConcepts', 'taxonomyConcepts'],
       ['tagCatalogSha256', 'taxonomyRegistrySha256'], ['tagPublicationStatus', 'taxonomyPublicationStatus'],
       ['tagEvidenceContract', 'taxonomyEvidenceContract'], ['tagEvidenceType', 'taxonomyEvidenceType'],
       ['tagProofSha256', 'taxonomyProofSha256'], ['tagPageSha256', 'taxonomyPageSha256'],
@@ -89,7 +89,7 @@
     }
     var current = fields.some(function (pair) { return own(pair[0]); });
     var result = {};
-    fields.forEach(function (pair) { result[pair[0]] = record[pair[current ? 0 : 1]]; });
+    fields.forEach(function (pair) { var key=pair[current ? 0 : 1]; if(pair[0]!=='tagSchemaFingerprint'||own(key)) result[pair[0]] = record[key]; });
     return result;
   }
 
@@ -119,14 +119,14 @@
     var tagSearchTerms = versionGraph
       ? tagTerms(versionGraph.navigationConcepts(item), versionGraph.byId)
       : tagTerms(tagFields.tagConcepts, registryIndex(registry));
-    return {
+    var normalized = {
       title: title, originalTitle: originalTitle, permalink: permalink, summary: summary,
       type: type, pageType: type, date: date, year: date.slice(0, 4), score: score, task: task, method: method, arxivId: arxivId,
       paperId: plainText(item.paperId), identityStatus: plainText(item.identityStatus), sourceKind: plainText(item.sourceKind),
       identityEvidenceContract: plainText(item.identityEvidenceContract), identityEvidenceType: plainText(item.identityEvidenceType),
       identityProofSha256: plainText(item.identityProofSha256), identityPageSha256: plainText(item.identityPageSha256),
       tagPublicationStatus: tagFields.tagPublicationStatus === 'withheld' ? 'withheld' : '',
-      tagContract: plainText(tagFields.tagContract), tagConcepts: Array.isArray(tagFields.tagConcepts) ? tagFields.tagConcepts : [],
+      tagContract: tagFields.tagContract === undefined ? '' : tagFields.tagContract, tagConcepts: Array.isArray(tagFields.tagConcepts) ? tagFields.tagConcepts : [],
       tagCatalogSha256: plainText(tagFields.tagCatalogSha256), citation: item.citation && typeof item.citation === 'object' ? item.citation : {},
       tagEvidenceContract: plainText(tagFields.tagEvidenceContract), tagEvidenceType: plainText(tagFields.tagEvidenceType),
       tagProofSha256: plainText(tagFields.tagProofSha256), tagPageSha256: plainText(tagFields.tagPageSha256),
@@ -139,6 +139,8 @@
       searchText: searchText([title, originalTitle, item.title, summary, permalink, task, method, arxivId, plainText(item.paperId)]
         .concat(tags, categories, tagSearchTerms, item.primaryResearchRole && item.primaryResearchRole.label || '').join(' '))
     };
+    if (Object.prototype.hasOwnProperty.call(tagFields,'tagSchemaFingerprint')) normalized.tagSchemaFingerprint=tagFields.tagSchemaFingerprint;
+    return normalized;
   }
 
   function filterEntries(entries, state) {
@@ -315,13 +317,14 @@
   var nodeViews = Object.create(null);
   var facetViews = Object.create(null);
   var moreFacetView = null;
-  var indexUrl;
+  var indexUrl, legacyIndexUrl;
   try {
     indexUrl = new URL(root.dataset.indexUrl, window.location.href);
+    legacyIndexUrl = root.dataset.legacyIndexUrl ? new URL(root.dataset.legacyIndexUrl, window.location.href) : indexUrl;
   } catch (_error) {
     indexUrl = null;
   }
-  var siteBasePath = indexUrl ? indexUrl.pathname.replace(/index\.json$/, '') : '';
+  var siteBasePath = legacyIndexUrl ? legacyIndexUrl.pathname.replace(/index\.json$/, '') : '';
   var allEntries = [];
   var filteredEntries = [];
   var visibleCount = PAGE_SIZE;
@@ -846,7 +849,7 @@
       });
     }
     function readOld(filename) {
-      return fetch(new URL('data/' + filename, indexUrl), filename === 'taxonomy-catalog.json'
+      return fetch(new URL('data/' + filename, legacyIndexUrl), filename === 'taxonomy-catalog.json'
         ? { credentials: 'same-origin', redirect: 'error' } : { credentials: 'same-origin' })
         .then(function (response) { return response && response.ok ? response.json() : null; })
         .catch(function () { return null; });
@@ -857,13 +860,14 @@
 
   function loadIndex() {
     if (window.ResearchSearchIndex && typeof window.ResearchSearchIndex.load === 'function') {
-      return window.ResearchSearchIndex.load(indexUrl, { origin: window.location.origin, basePath: siteBasePath, onProgress: function (value) {
+      return window.ResearchSearchIndex.load(indexUrl, { origin: window.location.origin, basePath: siteBasePath,
+        legacyIndexURL: indexUrl.href !== legacyIndexUrl.href ? legacyIndexUrl.href : undefined, onProgress: function (value) {
         if (value.phase === 'shards') countNode.textContent = '正在校验论文索引 ' + value.completed + ' / ' + value.total + ' 个分片' + (value.fromCache ? '（已验证本机缓存）' : '');
       } });
     }
     // Array-only compatibility for older clients; manifests require the shared
     // loader and its byte/SHA gates, never an unchecked fallback.
-    return fetch(indexUrl, { credentials: 'same-origin', redirect: 'error' }).then(function (response) {
+    return fetch(legacyIndexUrl, { credentials: 'same-origin', redirect: 'error' }).then(function (response) {
       if (!response || !response.ok) throw new Error('Index HTTP failure');
       return response.json();
     }).then(function (items) {

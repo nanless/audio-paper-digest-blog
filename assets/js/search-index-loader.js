@@ -1,11 +1,13 @@
 (function (root, factory) {
   'use strict';
-  var api = factory(root);
+  var protocols = root.PaperDigestProtocols || (typeof require === 'function' ? require('./protocol-registry') : null);
+  var api = factory(root, protocols);
   if (typeof module === 'object' && module.exports) module.exports = api;
   else root.ResearchSearchIndex = api;
-}(typeof globalThis !== 'undefined' ? globalThis : this, function (root) {
+}(typeof globalThis !== 'undefined' ? globalThis : this, function (root, protocols) {
   'use strict';
-  var CONTRACT = 'paper-search-index-manifest-v1';
+  if (!protocols) throw new Error('论文索引缺少已登记的格式规则');
+  var CONTRACT = protocols.contract('paper-search-index-manifest');
   var MAX_SHARDS = 128;
   var MAX_SHARD_BYTES = 1024 * 1024;
   var MAX_TOTAL_BYTES = 64 * 1024 * 1024;
@@ -114,15 +116,27 @@
       || typeof basePath !== 'string' || !basePath.startsWith('/') || !basePath.endsWith('/')
       || basePath.includes('\\') || /(?:^|\/)\.{1,2}(?:\/|$)/.test(basePath)) throw failure('站点来源或目录无效');
     var index = safeUrl(indexURL, origin, basePath, origin + basePath);
+    var fallbackIndex = settings.legacyIndexURL
+      ? safeUrl(settings.legacyIndexURL, origin, basePath, origin + basePath) : null;
+    if (fallbackIndex && (index.pathname !== basePath + 'client/index.json'
+      || fallbackIndex.pathname !== basePath + 'index.json')) throw failure('兼容读取只允许从客户端索引返回本站原索引地址');
     var fetcher = settings.fetch || root.fetch;
     if (typeof fetcher !== 'function') throw failure('无法读取静态索引');
     async function request(url) {
       var response = await fetcher(url.href, { credentials: 'same-origin', redirect: 'error' });
-      if (!response || !response.ok) throw failure('HTTP 请求失败' + (response ? ' (' + response.status + ')' : ''));
+      if (!response || !response.ok) {
+        var error = failure('HTTP 请求失败' + (response ? ' (' + response.status + ')' : ''));
+        error.status = response ? response.status : null; throw error;
+      }
       if (response.url && safeUrl(response.url, origin, basePath).href !== url.href) throw failure('响应地址与请求不一致');
       return response;
     }
-    var initialResponse = await request(index);
+    var initialResponse;
+    try { initialResponse = await request(index); }
+    catch (error) {
+      if (!fallbackIndex || ![404, 410].includes(error.status)) throw error;
+      index = fallbackIndex; initialResponse = await request(index);
+    }
     var payload;
     if (!initialResponse.body && typeof initialResponse.arrayBuffer !== 'function'
       && typeof initialResponse.text !== 'function' && typeof initialResponse.json === 'function') {
@@ -131,8 +145,12 @@
       payload = await initialResponse.json();
       if (new TextEncoder().encode(JSON.stringify(payload)).byteLength > MAX_TOTAL_BYTES) throw failure('索引超过总字节上限');
     } else payload = parse(await responseBytes(initialResponse, MAX_TOTAL_BYTES));
-    if (Array.isArray(payload)) { var legacy = records(payload); progress({ phase: 'ready', completed: 1, total: 1, recordCount: legacy.length }); return legacy; }
-    if (!payload || typeof payload !== 'object' || payload.contract !== CONTRACT
+    if (Array.isArray(payload)) {
+      if (index.pathname === basePath + 'client/index.json') throw failure('客户端索引必须有完整格式声明');
+      var legacy = records(payload); progress({ phase: 'ready', completed: 1, total: 1, recordCount: legacy.length }); return legacy;
+    }
+    if (!protocols.hasValidHeader(payload, CONTRACT)
+      || index.pathname === basePath + 'client/index.json' && payload.contract !== CONTRACT
       || !integer(payload.recordCount, 1, Number.MAX_SAFE_INTEGER)
       || !integer(payload.totalBytes, 1, MAX_TOTAL_BYTES) || !Array.isArray(payload.shards)
       || !integer(payload.shards.length, 1, MAX_SHARDS)) throw failure('分片清单格式或限额无效');

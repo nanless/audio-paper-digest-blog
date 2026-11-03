@@ -60,6 +60,29 @@ const workbench = frontmatter + '\npaper_digest_workbench_contract: researcher-w
       [name, { url: sidecarRoot + name, sha256: 'a'.repeat(64) }])
   ));
 
+test('current pages declare four exact client originals while released apps keep legacy download URLs', () => {
+  const protocols=require('../assets/js/protocol-registry');
+  const header=protocols.recordHeader('researcher-workbench','researcher-workbench');
+  const canonicalRoot=sidecarRoot.replace('/data/papers/','/client/papers/');
+  const descriptors=Object.fromEntries(['citation.json','citation.bib','citation.ris','rethink-context.json'].map(name=>[name,{url:canonicalRoot+name,sha256:'a'.repeat(64),...(name==='rethink-context.json'?protocols.recordHeader('paper-research-context','paper-research-context'):{})}]));
+  const body=frontmatter+'\npaper_digest_workbench_contract: '+header.contract+'\npaper_digest_workbench_schema_fingerprint: '+header.schemaFingerprint+'\npaper_digest_sidecars: '+JSON.stringify(descriptors);
+  const html=renderFixture(body);
+  assert.match(html,/class=paper-tools__client-sidecars/);
+  const encoded=html.match(/class=paper-tools__citation-record>([\s\S]*?)<\/script>/);
+  assert.ok(encoded,'HTML keeps its actual citation record');
+  const compatibilityRecord=JSON.parse(encoded[1]);
+  assert.equal(compatibilityRecord.contract,protocols.historicalContract('paper-citation-source','public-source-identity'));
+  assert.equal('schemaFingerprint' in compatibilityRecord,false,'old apps keep source-version warnings from their exact original header');
+  for(const name of ['citation.json','citation.bib','citation.ris']) {
+    assert.ok(html.includes('href='+sidecarRoot+name),'visible legacy file '+name);
+    assert.ok(!html.includes('href='+canonicalRoot+name),'canonical declaration cannot confuse old anchor-only apps');
+  }
+  assert.ok(html.includes(canonicalRoot+'rethink-context.json'));
+  const invalid=renderFixture(body.replace(header.schemaFingerprint,'0'.repeat(64)));
+  assert.doesNotMatch(invalid,/class=paper-tools__client-sidecars/);
+  assert.ok(!invalid.includes('href='+sidecarRoot+'citation.json'));
+});
+
 test('paper tools keep useful original/PDF/citation controls and remove AI/Zotero detours', () => {
   const html = renderFixture(workbench);
   assert.match(html, /href=https:\/\/arxiv\.org\/abs\/2609\.01234v2/);

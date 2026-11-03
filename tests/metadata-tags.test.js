@@ -7,6 +7,7 @@ const fs = require('node:fs');
 const os = require('node:os');
 const path = require('node:path');
 const core = require('../assets/js/tag-core');
+const protocols = require('../assets/js/protocol-registry');
 
 // Render the real index and metadata/count partials against a tiny isolated
 // content set. No production content, generated files or source registry change.
@@ -19,7 +20,7 @@ test('Hugo metadata/counts and browser queries share tag and identity boundaries
   }
   // Copy real transitive proof dependencies; absent sidecars still fail closed.
   fs.cpSync(path.join(repository, 'layouts/partials'), path.join(temporary, 'layouts/partials'), { recursive: true });
-  for (const file of ['layouts/_default/index.json', 'layouts/partials/research_metadata.html', 'layouts/partials/research_source_identity_proof.html', 'layouts/partials/research_current_page_identity_proof.html',
+  for (const file of ['data/paperdigest-protocols.json', 'layouts/_default/index.json', 'layouts/partials/research_metadata.html', 'layouts/partials/research_source_identity_proof.html', 'layouts/partials/research_current_page_identity_proof.html',
     'layouts/partials/tag_concept_counts.html', 'layouts/partials/tag_valid_records.html',
     'layouts/partials/tag_catalog_index.html', 'layouts/partials/tag_page_snapshot.html', 'layouts/partials/tag_page_proof.html',
     'layouts/partials/citation_source.html', 'layouts/partials/research_historical_source_version.html']) {
@@ -117,7 +118,7 @@ test('Hugo preserves issued labels and ancestors while parent navigation counts 
   }
   // Copy real transitive proof dependencies; absent sidecars still fail closed.
   fs.cpSync(path.join(repository, 'layouts/partials'), path.join(temporary, 'layouts/partials'), { recursive: true });
-  for (const file of ['layouts/_default/index.json', 'layouts/partials/research_metadata.html', 'layouts/partials/research_source_identity_proof.html', 'layouts/partials/research_current_page_identity_proof.html',
+  for (const file of ['data/paperdigest-protocols.json', 'layouts/_default/index.json', 'layouts/partials/research_metadata.html', 'layouts/partials/research_source_identity_proof.html', 'layouts/partials/research_current_page_identity_proof.html',
     'layouts/partials/tag_concept_counts.html', 'layouts/partials/tag_valid_records.html',
     'layouts/partials/tag_catalog_index.html', 'layouts/partials/tag_page_snapshot.html', 'layouts/partials/tag_page_proof.html',
     'layouts/partials/citation_source.html']) {
@@ -177,13 +178,21 @@ test('Hugo preserves issued labels and ancestors while parent navigation counts 
   assert.deepEqual(JSON.parse(fs.readFileSync(path.join(temporary, 'public/index.json'))), records);
   assert.equal(fs.readFileSync(path.join(temporary, 'public/posts/new/index.html'), 'utf8'), newPageHTML);
   // The new protocol changes only its explicit contract in the full search output.
-  const currentProtocolPage = newFamilyPage.replace(core.legacyContract, core.contract);
+  const currentHeader = protocols.recordHeader('paper-tag-flat-tags', 'paper-tag-flat-tags');
+  const front = JSON.parse(newFamilyPage.split('---\n')[1]);
+  front.paper_digest_tags_contract = currentHeader.contract;
+  front.paper_digest_tags_schema_fingerprint = currentHeader.schemaFingerprint;
+  const currentProtocolPage = '---\n' + JSON.stringify(front) + '\n---\n# Read\n';
   fs.writeFileSync(newPagePath, currentProtocolPage);
   execFileSync('hugo', ['--source', temporary, '--noBuildLock', '--panicOnWarning'], { stdio: 'pipe' });
   const currentRecords = JSON.parse(fs.readFileSync(path.join(temporary, 'public/index.json')));
   assert.equal(currentRecords.find(record => record.title === 'new').tagContract, core.contract);
-  assert.deepEqual(currentRecords.map(record => record.title === 'new'
-    ? { ...record, tagContract: core.legacyContract } : record), records);
+  assert.equal(currentRecords.find(record => record.title === 'new').tagSchemaFingerprint, currentHeader.schemaFingerprint);
+  assert.deepEqual(currentRecords.map(record => {
+    if (record.title !== 'new') return record;
+    const { tagSchemaFingerprint, ...legacy } = record;
+    return { ...legacy, tagContract: core.legacyContract };
+  }), records);
   assert.equal(fs.readFileSync(path.join(temporary, 'public/posts/new/index.html'), 'utf8'), newPageHTML);
   assert.deepEqual(JSON.parse(fs.readFileSync(path.join(temporary, 'public/index.html'))), server);
   for (const extra of [

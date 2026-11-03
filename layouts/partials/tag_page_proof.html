@@ -12,6 +12,7 @@
 {{- $proof := .Store.Get $memoKey -}}
 {{- if not (.Store.Get (printf "%s:ready" $memoKey)) -}}
 {{- $proof = dict "contract" (index .Params (printf "%scontract" $prefix) | default "") "registrySha256" (index .Params (printf "%sregistry_sha256" $prefix) | default "") "concepts" (index .Params (printf "%sconcepts" $prefix) | default slice) "primaryTaskLabel" (.Params.paper_digest_primary_task | default "") "primaryMethodLabel" (.Params.paper_digest_primary_method | default "") -}}
+{{- if isset .Params (printf "%sschema_fingerprint" $prefix) }}{{ $proof = merge $proof (dict "schemaFingerprint" (index .Params (printf "%sschema_fingerprint" $prefix))) }}{{ end -}}
 {{- $legacyHistory := index hugo.Data "taxonomy-history" | default dict -}}
 {{- $tagHistory := index hugo.Data "tag-history" | default dict -}}
 {{- if isset hugo.Data "taxonomy-history" -}}

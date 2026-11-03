@@ -3,6 +3,8 @@ const assert = require('node:assert/strict');
 const test = require('node:test');
 const core = require('../assets/js/tag-core');
 const browser = require('../assets/js/tag-browser');
+const originalFlat = require('../assets/js/protocol-registry')
+  .historicalHeader('paper-tag-flat-tags', 'selected-preferred-labels', null).contract;
 
 const snapshot = { concepts: [
   { id: 'task.root', facet: 'task', zh: '任务根', en: 'Root', aliases: [], ancestorIds: [] },
@@ -141,13 +143,13 @@ test('Hugo exposes every published root and leaf, stable links and strictly vali
   });
   const data = path.join(fixtureRoot, 'data');
   fs.mkdirSync(data);
-  for (const name of ['taxonomy-registry.json', 'taxonomy-catalog.json']) {
+  for (const name of ['taxonomy-registry.json', 'taxonomy-catalog.json', 'paperdigest-protocols.json']) {
     fs.copyFileSync(path.join(source, 'data', name), path.join(data, name));
   }
   const content = path.join(fixtureRoot, 'content');
   fs.mkdirSync(path.join(content, 'posts'), { recursive: true });
   const concepts = [task, method].map(node => ({ id: node.id, facet: node.facet, label: node.zh }));
-  function writePaper(name, records, contract = core.contract) {
+  function writePaper(name, records, contract = originalFlat) {
     fs.writeFileSync(path.join(content, 'posts', name + '.md'), [
       '---', 'title: "UI fixture"', 'date: 2026-09-29', 'paper_digest_page_type: paper',
       'tags: ["' + task.zh + '"]', 'paper_digest_primary_task: "' + task.zh + '"',
@@ -173,7 +175,7 @@ test('Hugo exposes every published root and leaf, stable links and strictly vali
     const primaryMethod = direct.find(node => node.facet === 'method');
     fs.writeFileSync(path.join(content, 'posts', id + '.md'), [
       '---', 'title: "Historical navigation fixture"', 'date: 2026-09-29', 'paper_digest_page_type: paper',
-      'paper_digest_taxonomy_contract: ' + core.contract, 'paper_digest_taxonomy_registry_sha256: "' + issued.registrySha256 + '"',
+      'paper_digest_taxonomy_contract: ' + originalFlat, 'paper_digest_taxonomy_registry_sha256: "' + issued.registrySha256 + '"',
       'paper_digest_primary_task: "' + primaryTask.zh + '"', 'paper_digest_primary_method: "' + primaryMethod.zh + '"',
       'paper_digest_taxonomy_concepts: ' + JSON.stringify(direct.map(node => ({ id: node.id, facet: node.facet, label: node.zh }))),
       '---', 'Original historical reading.'
@@ -190,6 +192,8 @@ test('Hugo exposes every published root and leaf, stable links and strictly vali
   const directory = fs.readFileSync(path.join(destination, 'tags/index.html'), 'utf8');
   assert.match(directory, /\/js\/tag-core\.min\.[a-f0-9]+\.js/);
   assert.match(directory, /\/js\/tag-browser\.min\.[a-f0-9]+\.js/);
+  assert.match(directory, /\/js\/protocol-registry\.min\.[a-f0-9]+\.js/);
+  assert.ok(directory.indexOf('/js/protocol-registry.min.') < directory.indexOf('/js/tag-core.min.'));
   assert.ok(directory.indexOf('/js/tag-core.min.') < directory.indexOf('/js/tag-browser.min.'),
     'the directory owns its ordered scripts instead of depending on the cached theme footer');
   const ids = [...directory.matchAll(/data-concept-id="([^"]+)"/g)].map(match => match[1]);

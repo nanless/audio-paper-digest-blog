@@ -67,7 +67,7 @@
   {{ end }}
 </section>
 {{- if not $categories }}
-{{- range slice "tag-core" "tag-browser" }}
+{{- range slice "protocol-registry" "tag-core" "tag-browser" }}
 {{- $script := resources.Get (printf "js/%s.js" .) | minify | fingerprint }}
 <script defer src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous"></script>
 {{- end }}

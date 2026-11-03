@@ -1,4 +1,6 @@
 'use strict';
+const protocols=require('../assets/js/protocol-registry');
+const originalFlat=protocols.historicalContract('paper-tag-flat-tags','selected-preferred-labels');
 
 const test = require('node:test');
 const assert = require('node:assert/strict');
@@ -24,7 +26,7 @@ const graph = core.createRegistry(snapshot);
 function record(slug, ids = [], extras = {}) {
   return { title: slug, titleZh: slug, pageType: 'paper', permalink: origin + base + 'posts/' + slug + '/',
     date: '2026-09-30', summary: '可靠 evidence', score: 8,
-    taxonomyContract: core.contract,
+    taxonomyContract: originalFlat,
     taxonomyConcepts: ids.map((id) => ({ id, facet: graph.byId[id].facet, label: graph.byId[id].zh })), ...extras };
 }
 function normalize(items) { return items.map((item) => library.normalizeEntry(item, origin, base, snapshot)); }
@@ -133,7 +135,7 @@ function browser(items, suffix = '', withRegistry = true, indexLoader = null, ne
       requests.push(String(url));
       const filename = new URL(url).pathname.split('/').at(-1);
       if (filename.startsWith('tag-catalog-')) {
-        const value = newAssets ? newAssets[filename] : undefined;
+        const value = newAssets && new URL(url).pathname.includes('/client/data/') ? newAssets[filename] : undefined;
         if (value instanceof Error) return Promise.reject(value);
         if (value === undefined || typeof value === 'number') return Promise.resolve({ status: value || 404, ok: false });
         return Promise.resolve({ status: 200, ok: true, json: () => Promise.resolve(value) });
@@ -236,18 +238,23 @@ test('library delegates index loading to the shared loader and exposes integrity
 
 test('论文库载入新版两资源与当前标签字段，坏新版不借旧资源显示结果', async () => {
   const saved = { ...snapshot, registrySha256: 'a'.repeat(64) };
-  const display = { ...saved, contract: 'paper-tag-catalog-snapshot-v2' };
-  const versions = { contract: 'paper-tag-catalog-versions-v2', currentSha256: saved.registrySha256, snapshots: [saved] };
+  const {contract:oldDisplay,...body}=saved;
+  const display = protocols.record('paper-tag-catalog-snapshot',body);
+  const versions = protocols.record('paper-tag-catalog-versions',{currentSha256:saved.registrySha256,snapshots:[saved]});
   const item = record('new-tags', ['task.asr']);
   delete item.taxonomyContract;
   delete item.taxonomyConcepts;
-  Object.assign(item, { tagContract: core.contract, tagCatalogSha256: saved.registrySha256,
+  Object.assign(item, { tagContract: core.contract, tagSchemaFingerprint:protocols.record(core.contract).schemaFingerprint, tagCatalogSha256: saved.registrySha256,
     tagConcepts: [{ id: 'task.asr', facet: 'task', label: '语音识别' }] });
   const assets = { 'tag-catalog-snapshot.json': display, 'tag-catalog-versions.json': versions };
   const loaded = browser([item], '?concept=task.asr', true, null, assets);
   await loaded.ready();
   assert.match(loaded.nodes['library-count'].textContent, /找到 1 条/);
-  assert.ok(loaded.requests.includes(origin + base + 'data/tag-catalog-snapshot.json'));
+  assert.ok(loaded.requests.includes(origin + base + 'client/data/tag-catalog-snapshot.json'));
+  for(const change of [{tagSchemaFingerprint:undefined},{tagSchemaFingerprint:'f'.repeat(64)},{tagContract:' '+core.contract}]) {
+    const rejected=browser([{...item,...change}],'?concept=task.asr',true,null,assets);
+    await rejected.ready();assert.match(rejected.nodes['library-count'].textContent,/找到 0 条/);
+  }
   assert.ok(!loaded.requests.some(url => url.endsWith('/taxonomy-registry.json')));
   for (const value of [404, null, { ...versions, currentSha256: 'f'.repeat(64) }]) {
     const failed = browser([item], '', true, null, { ...assets, 'tag-catalog-versions.json': value });

@@ -73,7 +73,7 @@ test('actual build entry rejects new sidecar before Hugo and leaves prior output
 });
 test('Hugo independently replays the shared inner gate and keeps production Page.Store closed',t=>{
  const repo=path.resolve(__dirname,'..'),tmp=fs.mkdtempSync(path.join(os.tmpdir(),'fullsite-public-hugo-'));t.after(()=>fs.rmSync(tmp,{recursive:true,force:true}));fs.mkdirSync(path.join(tmp,'data'));fs.mkdirSync(path.join(tmp,'layouts'));
- fs.cpSync(path.join(repo,'layouts/partials'),path.join(tmp,'layouts/partials'),{recursive:true});for(const name of ['taxonomy-catalog','taxonomy-registry'])fs.copyFileSync(path.join(repo,'data',name+'.json'),path.join(tmp,'data',name+'.json'));
+ fs.cpSync(path.join(repo,'layouts/partials'),path.join(tmp,'layouts/partials'),{recursive:true});for(const name of ['taxonomy-catalog','taxonomy-registry','paperdigest-protocols'])fs.copyFileSync(path.join(repo,'data',name+'.json'),path.join(tmp,'data',name+'.json'));
  const rows=[];
  for(const[name,mutate,expected]of [
   ['synthetic complete source-bound audit',()=>{},true],
@@ -122,7 +122,7 @@ test('Hugo packed loader independently reconstructs original proofs and refuses 
 test('explicit test-only issuer fixture reaches Page.Store, typed HTML, citation and library export without rewriting guide bytes',t=>{
  const tmp=fs.mkdtempSync(path.join(os.tmpdir(),'fullsite-typed-display-'));t.after(()=>fs.rmSync(tmp,{recursive:true,force:true}));const repo=path.resolve(__dirname,'..'),f=cases.packed();
  fs.mkdirSync(path.join(tmp,'data'));fs.mkdirSync(path.join(tmp,'layouts/_default'),{recursive:true});fs.mkdirSync(path.join(tmp,'static/fullsite-taxonomy'),{recursive:true});fs.mkdirSync(path.join(tmp,'content/posts'),{recursive:true});
- fs.cpSync(path.join(repo,'layouts/partials'),path.join(tmp,'layouts/partials'),{recursive:true});for(const name of ['taxonomy-catalog','taxonomy-registry'])fs.copyFileSync(path.join(repo,'data',name+'.json'),path.join(tmp,'data',name+'.json'));
+ fs.cpSync(path.join(repo,'layouts/partials'),path.join(tmp,'layouts/partials'),{recursive:true});for(const name of ['taxonomy-catalog','taxonomy-registry','paperdigest-protocols'])fs.copyFileSync(path.join(repo,'data',name+'.json'),path.join(tmp,'data',name+'.json'));
  // This copy-only override is a visibly synthetic fixture authority. Actual
  // production profiles are still empty; no sample is installed in repo data.
  fs.writeFileSync(path.join(tmp,'layouts/partials/tag_fullsite_profiles.html'),'{{ return (slice hugo.Data.testIssuer) }}');fs.writeFileSync(path.join(tmp,'data/testIssuer.json'),JSON.stringify(f.profile));

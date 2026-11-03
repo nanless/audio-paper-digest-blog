@@ -5,6 +5,8 @@ const fs = require('node:fs');
 const path = require('node:path');
 const vm = require('node:vm');
 const core = require('../assets/js/tag-core');
+const protocols=require('../assets/js/protocol-registry');
+const originalFlat=protocols.historicalContract('paper-tag-flat-tags','selected-preferred-labels');
 
 const node = (id, zh, ancestors = [], aliases = []) => ({ id, facet: id.split('.')[0], zh,
   en: zh, ancestorIds: ancestors, aliases });
@@ -19,7 +21,7 @@ const graph = core.createRegistry(snapshot());
 function paper(slug, ids, overrides = {}) {
   return { pageType: 'paper', permalink: 'https://example.com/posts/' + slug + '/',
     identityStatus: 'verified', arxivId: '2609.' + slug.padStart(5, '0'),
-    taxonomyContract: core.contract,
+    taxonomyContract: originalFlat,
     taxonomyConcepts: ids.map(id => ({ id, facet: graph.byId[id].facet, label: graph.byId[id].zh })),
     ...overrides };
 }
@@ -62,6 +64,7 @@ test('bad graphs fail closed: duplicate ID, missing parent, cross-facet, broken 
 
 test('browser global exports work without a document or Node APIs', () => {
   const context = vm.createContext({});
+  vm.runInContext(fs.readFileSync(path.join(__dirname, '../assets/js/protocol-registry.js'), 'utf8'), context);
   vm.runInContext(fs.readFileSync(path.join(__dirname, '../assets/js/tag-core.js'), 'utf8'), context);
   assert.equal(typeof context.ResearchTags.createRegistry, 'function');
   assert.equal(context.ResearchTags.contract, core.contract);
@@ -76,12 +79,12 @@ test('新搜索标签字段与旧记录保持同一核验范围，原值不修�
   });
   const current = { pageType: legacy.pageType, permalink: legacy.permalink,
     identityStatus: legacy.identityStatus, arxivId: legacy.arxivId,
-    tagContract: core.contract, tagConcepts: legacy.taxonomyConcepts, tagCatalogSha256: '',
+    tagContract: core.contract, tagSchemaFingerprint:protocols.schemaFingerprint('paper-tag-flat-tags'), tagConcepts: legacy.taxonomyConcepts, tagCatalogSha256: '',
     tagEvidenceContract: null, tagEvidenceType: ' 原依据 ', tagProofSha256: 'proof', tagPageSha256: 'page',
     tagClassificationContract: '', tagPublicationStatus: undefined };
   const original = JSON.stringify(legacy);
   assert.deepEqual(core.readTagFields(legacy), {
-    tagContract: core.contract, tagConcepts: legacy.taxonomyConcepts, tagCatalogSha256: '',
+    tagContract: originalFlat, tagConcepts: legacy.taxonomyConcepts, tagCatalogSha256: '',
     tagPublicationStatus: undefined, tagEvidenceContract: null, tagEvidenceType: ' 原依据 ',
     tagProofSha256: 'proof', tagPageSha256: 'page', tagClassificationContract: ''
   });
@@ -92,7 +95,7 @@ test('新搜索标签字段与旧记录保持同一核验范围，原值不修�
   assert.equal(core.primaryRoleLabel(null), '主要研究角色');
   for (const record of [
     { tagContract: core.contract, taxonomyPageSha256: null },
-    { taxonomyContract: core.contract, tagEvidenceType: null },
+    { taxonomyContract: originalFlat, tagEvidenceType: null },
     { ...current, taxonomyConcepts: current.tagConcepts }
   ]) {
     assert.throws(() => graph.resolveRecord(record), /标签字段不能混用/);
@@ -138,7 +141,7 @@ test('multiple readings of one paper never fabricate cross-record AND conditions
 });
 
 test('legacy labels, unknown IDs and mismatched facets/labels cannot masquerade as current classification', () => {
-  assert.equal(core.contract, 'paper-tag-flat-tags-v2');
+  assert.equal(core.contract, 'paper-tag-flat-tags');
   assert.equal(core.legacyContract, 'paper-taxonomy-flat-tags-compat-v1');
   const current = paper('contract', ['task.asr', 'method.adapter']);
   const legacy = { ...current, taxonomyContract: core.legacyContract };

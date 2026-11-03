@@ -20,6 +20,7 @@ test('real Hugo renders edition-specific returns and body shortcuts without gues
       { id: 'ambiguous-2026', name: 'Ambiguous', year: 2026, summaryPath: '/posts/irregular-overview/', links: [{ path: '/posts/ambiguous-task/', label: '重复成员' }] },
       { id: 'other-2026', name: 'Other', year: 2026, summaryPath: '/posts/other-overview/', links: [{ path: '/posts/ambiguous-task/', label: '重复成员' }] }
     ];
+    fs.copyFileSync(path.join(root, 'data/paperdigest-protocols.json'), path.join(temp, 'data/paperdigest-protocols.json'));
     fs.writeFileSync(path.join(temp, 'data/conference-directory.json'), JSON.stringify({ entries }));
     function post(id, metadata, body = '## 论文列表\n\n正文只保留一份。') {
       fs.writeFileSync(path.join(temp, 'content/posts', id + '.md'), '---\n' + Object.entries({ title: id, date: '2026-10-19', ...metadata }).map(([key,value]) => key + ': ' + JSON.stringify(value)).join('\n') + '\n---\n\n' + body + '\n');

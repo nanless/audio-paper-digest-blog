@@ -21,7 +21,7 @@ test('build verification closes every shard, record, byte and SHA against the ma
   assert.throws(()=>verifySearchManifest({...manifest,shards:[...manifest.shards,...manifest.shards]},root),/重复/);
   assert.throws(()=>verifySearchManifest({...manifest,shards:[{...manifest.shards[0],url:'../outside.json'}]},root),/路径/);
   assert.throws(()=>verifySearchManifest({...manifest,shards:[{...manifest.shards[0],sha256:'0'.repeat(64)}]},root),/哈希/);
-  const shardFile=path.join(root,manifest.shards[0].url);
+  const shardFile=path.join(root,'client',manifest.shards[0].url);
   const original=fs.readFileSync(shardFile,'utf8');
   fs.writeFileSync(shardFile,original.replace('Evidence','EvidencE'));
   assert.throws(()=>verifySearchManifest(manifest,root),/SHA/);
@@ -29,7 +29,7 @@ test('build verification closes every shard, record, byte and SHA against the ma
     Buffer.from([0xf0,0x9f,0x92]),Buffer.from(original.slice(original.indexOf('Evidence')+'Evidence'.length))]);
   const digest=createHash('sha256').update(invalid).digest('hex');
   const url='search-index/part-0001-'+digest.slice(0,12)+'.json';
-  fs.writeFileSync(path.join(root,url),invalid);
+  fs.writeFileSync(path.join(root,'client',url),invalid);
   const invalidManifest={...manifest,totalBytes:invalid.length,
     shards:[{url,bytes:invalid.length,sha256:digest,recordCount:1}]};
   assert.throws(()=>verifySearchManifest(invalidManifest,root),/UTF-8/);

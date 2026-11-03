@@ -1,4 +1,6 @@
 'use strict';
+const protocols=require('../assets/js/protocol-registry');
+const originalFlat=protocols.historicalContract('paper-tag-flat-tags','selected-preferred-labels');
 const test = require('node:test');
 const assert = require('node:assert/strict');
 const tagApi = require('../assets/js/tag-core.js');
@@ -32,7 +34,7 @@ test('renamed direct labels remain searchable without importing obsolete parent 
   const old = { registrySha256: '1'.repeat(64), concepts: [node('原分类名')] };
   const current = { registrySha256: '2'.repeat(64), concepts: [node('现目录名')] };
   const graph = tagApi.createRegistry(current, { contract: 'paper-taxonomy-version-catalog-v1', currentSha256: current.registrySha256, snapshots: [old, current] });
-  const raw = { title: '论文', permalink: 'https://example.test/blog/posts/paper/', pageType: 'paper', taxonomyContract: tagApi.contract,
+  const raw = { title: '论文', permalink: 'https://example.test/blog/posts/paper/', pageType: 'paper', taxonomyContract: originalFlat,
     taxonomyRegistrySha256: old.registrySha256, taxonomyConcepts: [{ id: 'task.example', facet: 'task', label: '原分类名' }] };
   const entry = library.normalizeEntry(raw, 'https://example.test', '/blog/', current, graph);
   assert.ok(entry.searchText.includes('原分类名') && entry.searchText.includes('现目录名'));

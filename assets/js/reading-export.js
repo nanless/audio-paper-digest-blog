@@ -19,9 +19,9 @@
   }
   function readEntryTagFields(entry) {
     if (tagApi && typeof tagApi.readTagFields === 'function') return tagApi.readTagFields(entry);
-    var current = ['tagContract', 'tagConcepts', 'tagCatalogSha256', 'tagPublicationStatus',
+    var current = ['tagContract', 'tagSchemaFingerprint', 'tagConcepts', 'tagCatalogSha256', 'tagPublicationStatus',
       'tagEvidenceContract', 'tagEvidenceType', 'tagProofSha256', 'tagPageSha256', 'tagClassificationContract'];
-    var legacy = ['taxonomyContract', 'taxonomyConcepts', 'taxonomyRegistrySha256', 'taxonomyPublicationStatus',
+    var legacy = ['taxonomyContract', 'taxonomySchemaFingerprint', 'taxonomyConcepts', 'taxonomyRegistrySha256', 'taxonomyPublicationStatus',
       'taxonomyEvidenceContract', 'taxonomyEvidenceType', 'taxonomyProofSha256', 'taxonomyPageSha256', 'taxonomyClassificationContract'];
     var owns = function (key) { return Object.prototype.hasOwnProperty.call(entry, key); };
     if (current.some(owns) && legacy.some(owns)) throw new Error('标签字段不能混用新旧命名。');

@@ -15,6 +15,8 @@
 {{- $loader := resources.Get "js/search-index-loader.js" | minify | fingerprint }}
 {{- $cache := resources.Get "js/index-shard-cache.js" | minify | fingerprint }}
 {{- $tagScript := resources.Get "js/tag-core.js" | minify | fingerprint }}
+{{- $protocols := resources.Get "js/protocol-registry.js" | minify | fingerprint }}
+<script defer src="{{ $protocols.RelPermalink }}" integrity="{{ $protocols.Data.Integrity }}" crossorigin="anonymous"></script>
 <script defer src="{{ $tagScript.RelPermalink }}" integrity="{{ $tagScript.Data.Integrity }}" crossorigin="anonymous"></script>
 <script defer src="{{ $cache.RelPermalink }}" integrity="{{ $cache.Data.Integrity }}" crossorigin="anonymous"></script>
 {{- $worker := resources.Get "js/search-index-worker.js" | minify | fingerprint }}

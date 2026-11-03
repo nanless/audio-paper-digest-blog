@@ -1,5 +1,5 @@
 {{- define "main" }}
-<section class="research-library" id="paper-library" data-index-url="{{ "index.json" | relURL }}">
+<section class="research-library" id="paper-library" data-index-url="{{ "client/index.json" | relURL }}" data-legacy-index-url="{{ "index.json" | relURL }}">
   <header class="research-library__header">
     <div class="rw-eyebrow">Research Library</div>
     <h1>论文库</h1>
@@ -95,6 +95,8 @@
   <noscript><p class="research-library__empty">论文库筛选需要 JavaScript。你仍可使用<a href="{{ "archives/" | absURL }}">归档</a>或<a href="{{ "tags/" | absURL }}">主题页</a>浏览全部内容。</p></noscript>
 </section>
 {{- $tagScript := resources.Get "js/tag-core.js" | minify | fingerprint }}
+{{- $protocols := resources.Get "js/protocol-registry.js" | minify | fingerprint }}
+<script defer src="{{ $protocols.RelPermalink }}" integrity="{{ $protocols.Data.Integrity }}" crossorigin="anonymous"></script>
 <script defer src="{{ $tagScript.RelPermalink }}" integrity="{{ $tagScript.Data.Integrity }}" crossorigin="anonymous"></script>
 {{- $indexLoader := resources.Get "js/search-index-loader.js" | minify | fingerprint }}
 {{- $indexCache := resources.Get "js/index-shard-cache.js" | minify | fingerprint }}

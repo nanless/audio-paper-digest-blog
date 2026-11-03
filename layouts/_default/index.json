@@ -36,6 +36,11 @@
     }}
     {{- if eq ($metadata.tagPublicationStatus | default "") "withheld" }}{{ $entry = merge $entry (dict "tagPublicationStatus" "withheld" "tags" slice) }}{{ end }}
     {{- with $tagProof.registrySha256 }}{{ $entry = merge $entry (dict "tagCatalogSha256" .) }}{{ end }}
+    {{- with $tagProof.schemaFingerprint }}{{ $entry = merge $entry (dict "tagSchemaFingerprint" .) }}{{ end }}
+    {{- $workbenchHeader := dict "contract" (.Params.paper_digest_workbench_contract | default "") "schemaFingerprint" (.Params.paper_digest_workbench_schema_fingerprint | default "") }}
+    {{- if and (eq $workbenchHeader.contract "researcher-workbench") (partial "protocol_header_valid.html" (dict "name" "researcher-workbench" "record" $workbenchHeader)) }}
+      {{- with .Params.paper_digest_sidecars }}{{ $entry = merge $entry (dict "clientSidecars" .) }}{{ end }}
+    {{- end }}
     {{- with $tagProof.evidenceContract }}{{ $entry = merge $entry (dict "tagEvidenceContract" . "tagEvidenceType" ($tagProof.evidenceType | default "canonical-analysis") "tagProofSha256" $tagProof.proofSha256 "tagPageSha256" $tagProof.pageSha256) }}{{ end }}
     {{- if in (slice "historical-source-taxonomy-classification-v2" "historical-source-taxonomy-classification-v3" "exact1028-independent-review-qualified-classification-v1") $tagProof.classificationContract }}
       {{- $entry = merge $entry (dict "tagClassificationContract" $tagProof.classificationContract) }}

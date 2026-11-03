@@ -21,7 +21,7 @@ test('historical supplement is accepted only for exact page, body, source, origi
   }
   // Copy real transitive proof dependencies; no test-only gate substitutes.
   fs.cpSync(path.join(repository, 'layouts/partials'), path.join(temporary, 'layouts/partials'), { recursive: true });
-  const relativeFiles = ['layouts/_default/index.json', 'layouts/partials/research_metadata.html', 'layouts/partials/research_source_identity_proof.html', 'layouts/partials/research_current_page_identity_proof.html',
+  const relativeFiles = ['data/paperdigest-protocols.json', 'layouts/_default/index.json', 'layouts/partials/research_metadata.html', 'layouts/partials/research_source_identity_proof.html', 'layouts/partials/research_current_page_identity_proof.html',
     'layouts/partials/tag_page_proof.html', 'layouts/partials/tag_page_snapshot.html',
     'layouts/partials/tag_valid_records.html', 'layouts/partials/tag_catalog_index.html',
     'layouts/partials/tag_concept_counts.html', 'layouts/partials/citation_source.html',

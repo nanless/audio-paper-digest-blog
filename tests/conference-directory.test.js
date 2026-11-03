@@ -167,6 +167,7 @@ test('real Hugo renders all cards and safe deep links without JavaScript; pendin
       entry('middle-2026', { name: 'Middle A', event: { status: 'confirmed', startDate: '2026-05-10', sourceUrl: 'https://official.example/' } }),
       { ...workshop('satellite-2026', 'sample-2026'), event: { status: 'confirmed', startDate: '2026-05-20', endDate: '2026-05-20', sourceUrl: 'https://official.example/workshop' } }];
     delete entries[0].venueId; // Template fallback must match the catalog's normalized venue ID.
+    fs.copyFileSync(path.join(root, 'data/paperdigest-protocols.json'), path.join(temp, 'data/paperdigest-protocols.json'));
     fs.writeFileSync(path.join(temp, 'data/conference-directory.json'), JSON.stringify({ contract: api.contract, entries }));
     // Use the fixture as the filesystem root, not the full collection's fileExists namespace.
     for (const directory of ['layouts', 'assets', 'themes']) fs.cpSync(path.join(root, directory), path.join(temp, directory), { recursive: true });

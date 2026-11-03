@@ -16,7 +16,7 @@
   {{- $page := . }}
   {{- $metadata := partial "research_metadata.html" . }}
   {{- $proof := partial "tag_page_proof.html" . }}
-  {{- if and (eq $metadata.pageType "paper") (partial "tag_flat_contract.html" $proof.contract) }}
+  {{- if and (eq $metadata.pageType "paper") (partial "tag_flat_contract.html" $proof) }}
   {{- $ids := slice }}
   {{- $ancestorIds := slice }}
   {{- range (partial "tag_navigation_records.html" .) }}

@@ -1,10 +1,12 @@
 'use strict';
+const protocols=require('../assets/js/protocol-registry');
+const originalFlat=protocols.historicalContract('paper-tag-flat-tags','selected-preferred-labels');
 const test=require('node:test'),assert=require('node:assert/strict');
 const exporter=require('../assets/js/reading-export'),core=require('../assets/js/tag-core');
 const graph=core.createRegistry(require('../data/taxonomy-registry.json'),require('../data/taxonomy-catalog.json'));
 const records=Object.values(require('../data/taxonomy-history-v2.json').records);
 function entry(r){return {title:r.originalTitle||r.paperId,permalink:'/blog/'+r.pageKey.replace(/^content\//,'').replace(/\.md$/,'/'),paperId:r.paperId,
- taxonomyContract:core.contract,taxonomyClassificationContract:r.classificationContract,taxonomyEvidenceContract:'historical-source-taxonomy-supplement-v2',taxonomyEvidenceType:r.evidenceType,
+ taxonomyContract:originalFlat,taxonomyClassificationContract:r.classificationContract,taxonomyEvidenceContract:'historical-source-taxonomy-supplement-v2',taxonomyEvidenceType:r.evidenceType,
  taxonomyRegistrySha256:r.registrySha256,taxonomyConcepts:r.concepts,primaryResearchRole:r.primaryResearchRole,researchType:r.researchType,domainScope:r.domainScope,
  primaryTaskId:r.primaryTaskId,primaryScientificTopicId:r.primaryScientificTopicId,primaryMethodId:r.primaryMethodId,method:r.primaryMethodLabel,
  methodNotApplicable:r.methodNotApplicable,methodNotApplicableReason:r.methodNotApplicableReason};}
@@ -18,7 +20,7 @@ test('Markdown and CSV retain actual verified type, domain, role, issued direct 
 });
 test('export retains original issued paths while navigation uses the current parent, with explicit version wording',()=>{
  const old=Object.values(graph.versions).find(version=>Object.keys(version.byId).length===228),task=old.byId['task.speech-spoofing'],method=Object.values(old.byId).find(node=>node.facet==='method'&&!node.ancestorIds.length);
- const e={title:'Historical export fixture',permalink:'/posts/old-export/',paperId:'conference:fixture',taxonomyContract:core.contract,
+ const e={title:'Historical export fixture',permalink:'/posts/old-export/',paperId:'conference:fixture',taxonomyContract:originalFlat,
   taxonomyClassificationContract:core.v2Contract,taxonomyEvidenceContract:'historical-source-taxonomy-supplement-v2',taxonomyEvidenceType:'source-only-taxonomy-v2',
   taxonomyRegistrySha256:old.registrySha256,taxonomyConcepts:[task,method].map(node=>({id:node.id,facet:node.facet,label:node.zh})),
   researchType:'engineering',domainScope:'in-domain',primaryResearchRole:{kind:'task',conceptId:task.id,label:task.zh},primaryTaskId:task.id,primaryMethodId:method.id,method:method.zh,methodNotApplicable:false,methodNotApplicableReason:''};
@@ -45,14 +47,14 @@ test('新索引字段和tagGraph可导出原已核角色，显式空图不回退
  const original=JSON.stringify(legacy);
  const current={...legacy};
  for(const key of ['taxonomyContract','taxonomyConcepts','taxonomyRegistrySha256','taxonomyPublicationStatus','taxonomyEvidenceContract','taxonomyEvidenceType','taxonomyProofSha256','taxonomyPageSha256','taxonomyClassificationContract'])delete current[key];
- Object.assign(current,{tagContract:legacy.taxonomyContract,tagConcepts:legacy.taxonomyConcepts,tagCatalogSha256:legacy.taxonomyRegistrySha256,tagClassificationContract:legacy.taxonomyClassificationContract,tagEvidenceContract:legacy.taxonomyEvidenceContract,tagEvidenceType:legacy.taxonomyEvidenceType});
+ Object.assign(current,{tagContract:core.contract,tagSchemaFingerprint:protocols.record(core.contract).schemaFingerprint,tagConcepts:legacy.taxonomyConcepts,tagCatalogSha256:legacy.taxonomyRegistrySha256,tagClassificationContract:legacy.taxonomyClassificationContract,tagEvidenceContract:legacy.taxonomyEvidenceContract,tagEvidenceType:legacy.taxonomyEvidenceType});
  for(const format of ['md','csv']){
   const output=exporter.build([current],format,{origin:'https://example.test',tagGraph:graph}).text;
   assert.match(output,/研究类型与方向已核验/);assert.ok(output.includes(legacy.primaryResearchRole.label));
   assert.match(exporter.build([current],format,{tagGraph:null,taxonomyGraph:graph}).text,/暂无已核验的研究类型信息/);
  }
  for(const format of ['bib','ris'])assert.match(exporter.build([current],format,{tagGraph:graph}).text,/2606\.26360/);
- for(const format of ['md','csv','bib','ris'])for(const mixed of [{...current,taxonomyPageSha256:null},{...legacy,tagContract:legacy.taxonomyContract}]){
+ for(const format of ['md','csv','bib','ris'])for(const mixed of [{...current,taxonomyPageSha256:null},{...current,taxonomySchemaFingerprint:null},{...legacy,tagSchemaFingerprint:null},{...legacy,tagContract:legacy.taxonomyContract}]){
   assert.throws(()=>exporter.build([mixed],format),/标签字段不能混用/);
  }
  assert.equal(JSON.stringify(legacy),original);
@@ -61,8 +63,9 @@ test('新索引字段和tagGraph可导出原已核角色，显式空图不回退
 test('浏览器未加载分类核心时仍可导出引用，混用字段不能借降级绕过',()=>{
  const context={ResearchCitation:require('../assets/js/citation-source')};
  require('node:vm').runInNewContext(require('node:fs').readFileSync(require('node:path').join(__dirname,'../assets/js/reading-export.js'),'utf8'),context);
- const current={title:'Source title',permalink:'/posts/source/',tagContract:core.contract,citation:{contract:'paper-citation-source-v1',identityStatus:'verified',sourceKind:'arxiv',arxivId:'2606.26360',title:'Source title',url:'https://arxiv.org/abs/2606.26360',authors:[],date:''}};
+ const current={title:'Source title',permalink:'/posts/source/',tagContract:core.contract,tagSchemaFingerprint:protocols.record(core.contract).schemaFingerprint,citation:{contract:'paper-citation-source-v1',identityStatus:'verified',sourceKind:'arxiv',arxivId:'2606.26360',title:'Source title',url:'https://arxiv.org/abs/2606.26360',authors:[],date:''}};
  assert.match(context.ResearchReadingExport.build([current],'md').text,/暂无已核验的研究类型信息/);
  assert.match(context.ResearchReadingExport.build([current],'bib').text,/2606\.26360/);
  for(const format of ['md','csv','bib','ris'])assert.throws(()=>context.ResearchReadingExport.build([{...current,taxonomyEvidenceType:null}],format),/标签字段不能混用/);
+ for(const format of ['md','csv','bib','ris'])assert.throws(()=>context.ResearchReadingExport.build([{...current,taxonomySchemaFingerprint:null}],format),/标签字段不能混用/);
 });

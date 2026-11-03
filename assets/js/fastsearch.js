@@ -7,8 +7,9 @@ const pageUrl = new URL(window.location.href);
 pageUrl.search = '';
 pageUrl.hash = '';
 if (!pageUrl.pathname.endsWith('/')) pageUrl.pathname += '/';
-const indexUrl = new URL('../index.json', pageUrl);
-const siteBasePath = indexUrl.pathname.replace(/index\.json$/, '');
+const legacyIndexUrl = new URL('../index.json', pageUrl);
+const indexUrl = new URL('client/index.json', legacyIndexUrl);
+const siteBasePath = legacyIndexUrl.pathname.replace(/index\.json$/, '');
 const status = document.getElementById('search-status') || document.createElement('p');
 status.id = 'search-status';
 status.className = 'search-status';
@@ -162,7 +163,8 @@ function readTagFields(record) {
   if (core && typeof core.readTagFields === 'function') return core.readTagFields(record);
   // 核心脚本缺席时保留关键词搜索；这里只读取字段，不判断标签资格。
   const fields = [
-    ['tagContract', 'taxonomyContract'], ['tagConcepts', 'taxonomyConcepts'],
+    ['tagContract', 'taxonomyContract'], ['tagSchemaFingerprint', 'taxonomySchemaFingerprint'],
+    ['tagConcepts', 'taxonomyConcepts'],
     ['tagCatalogSha256', 'taxonomyRegistrySha256'], ['tagPublicationStatus', 'taxonomyPublicationStatus'],
     ['tagEvidenceContract', 'taxonomyEvidenceContract'], ['tagEvidenceType', 'taxonomyEvidenceType'],
     ['tagProofSha256', 'taxonomyProofSha256'], ['tagPageSha256', 'taxonomyPageSha256'],
@@ -173,17 +175,18 @@ function readTagFields(record) {
     throw new Error('标签字段不能混用新旧命名。');
   }
   const current = fields.some(pair => own(pair[0]));
-  return Object.fromEntries(fields.map(pair => [pair[0], record[pair[current ? 0 : 1]]]));
+  return Object.fromEntries(fields.filter(pair => pair[0] !== 'tagSchemaFingerprint' || own(pair[current ? 0 : 1]))
+    .map(pair => [pair[0], record[pair[current ? 0 : 1]]]));
 }
 
 function loadIndex() {
   function read() {
     if (window.ResearchSearchIndex) {
-      return window.ResearchSearchIndex.load(indexUrl.href, { origin: window.location.origin, basePath: siteBasePath,
+      return window.ResearchSearchIndex.load(indexUrl.href, { origin: window.location.origin, basePath: siteBasePath, legacyIndexURL: legacyIndexUrl.href,
         onProgress: progress => { if (progress.phase === 'shards') status.textContent = '正在校验搜索索引：' + progress.completed + ' / ' + progress.total + ' 份'; } });
     }
     // Older cached pages and small Hugo fixtures still use the array contract.
-    return fetch(indexUrl, { credentials: 'same-origin' }).then((response) => {
+    return fetch(legacyIndexUrl, { credentials: 'same-origin' }).then((response) => {
       if (!response.ok) throw new Error(`Search index HTTP ${response.status}`);
       return response.json();
     });
@@ -209,7 +212,7 @@ return loadIndex()
     }
     // 核心脚本缺席时保持旧资源的关键词降级，不授予分类资格。
     function readOld(filename) {
-      return fetch(new URL('data/' + filename, indexUrl), { credentials: 'same-origin' })
+      return fetch(new URL('data/' + filename, legacyIndexUrl), { credentials: 'same-origin' })
         .then(response => response && response.ok ? response.json() : null).catch(() => null);
     }
     return Promise.all([readOld('taxonomy-registry.json'), readOld('taxonomy-catalog.json')])
@@ -236,7 +239,7 @@ return loadIndex()
       const aliases = graph ? tagAliases(graph.navigationConcepts(item), byId)
         : tagAliases(tagFields.tagConcepts, byId);
       const entry = { ...item, ...tagFields };
-      ['taxonomyContract', 'taxonomyConcepts', 'taxonomyRegistrySha256', 'taxonomyPublicationStatus',
+      ['taxonomyContract', 'taxonomySchemaFingerprint', 'taxonomyConcepts', 'taxonomyRegistrySha256', 'taxonomyPublicationStatus',
         'taxonomyEvidenceContract', 'taxonomyEvidenceType', 'taxonomyProofSha256', 'taxonomyPageSha256',
         'taxonomyClassificationContract'].forEach(key => { delete entry[key]; });
       return aliases.length ? { ...entry, tagAliases: aliases } : entry;
@@ -252,7 +255,7 @@ return loadIndex()
     addText(results, 'li', 'post-entry', '搜索索引暂时无法载入，请稍后重试。');
     const fallback = document.createElement('li');
     const link = document.createElement('a');
-    link.href = new URL('archives/', indexUrl).href;
+    link.href = new URL('archives/', legacyIndexUrl).href;
     link.textContent = '前往归档浏览';
     fallback.appendChild(link);
     results.appendChild(fallback);

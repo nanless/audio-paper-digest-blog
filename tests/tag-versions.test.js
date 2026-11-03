@@ -1,9 +1,12 @@
 'use strict';
+const protocols=require('../assets/js/protocol-registry');
+const originalFlat=protocols.historicalContract('paper-tag-flat-tags','selected-preferred-labels');
 const test = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 const core = require('../assets/js/tag-core');
+const format=(family,{contract,...body})=>protocols.record(family,body);
 const current = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/taxonomy-registry.json')));
 const catalog = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/taxonomy-catalog.json')));
 // Bind the issued 228-concept fixture by identity; catalog order is not a version.
@@ -11,7 +14,7 @@ const old = catalog.snapshots.find(snapshot => snapshot.registrySha256 === '15c8
 const graph = core.createRegistry(current, catalog);
 function paper(name, snapshot, ids, extra = {}) {
   return { pageType: 'paper', permalink: '/posts/' + name + '/', identityStatus: 'unknown',
-    taxonomyContract: core.contract, taxonomyRegistrySha256: snapshot.registrySha256,
+    taxonomyContract: originalFlat, taxonomyRegistrySha256: snapshot.registrySha256,
     taxonomyConcepts: ids.map(id => {
       const node = snapshot.concepts.find(value => value.id === id);
       return { id, facet: node.facet, label: node.zh };
@@ -100,12 +103,12 @@ test('same current SHA cannot substitute a different catalog tree, and maintenan
 
 
 test('新显示格式使用当时保存的词表，新旧完整对象只有格式名称可以不同', () => {
-  const display = { ...current, contract: 'paper-tag-catalog-snapshot-v2' };
-  const versions = { ...catalog, contract: 'paper-tag-catalog-versions-v2' };
+  const display = format('paper-tag-catalog-snapshot',current);
+  const versions = format('paper-tag-catalog-versions',catalog);
   const original = JSON.stringify(catalog);
   const currentGraph = core.createRegistry(display, versions);
   assert.notStrictEqual(currentGraph.versions[current.registrySha256], currentGraph);
-  assert.deepEqual(currentGraph.resolveRecord({ pageType: 'paper', tagContract: core.contract,
+  assert.deepEqual(currentGraph.resolveRecord({ pageType: 'paper', tagContract: core.contract,tagSchemaFingerprint:protocols.record(core.contract).schemaFingerprint,
     tagCatalogSha256: old.registrySha256, tagConcepts: [{ id: 'task.music-understanding', facet: 'task', label: '音乐理解' }] }),
     graph.resolveRecord(paper('old-music', old, ['task.music-understanding'])));
   assert.equal(currentGraph.navigationConcepts(paper('old-music', old, ['task.music-understanding']))[0].zh, '音乐分析');
@@ -118,19 +121,20 @@ test('新显示格式使用当时保存的词表，新旧完整对象只有格�
   const unknown = structuredClone(versions);
   unknown.snapshots[0].contract = 'unsupported-snapshot';
   assert.throws(() => core.createRegistry(display, unknown), /快照格式不受支持/);
-  const savedNew = { ...current, contract: 'paper-tag-catalog-snapshot-v2' };
+  const savedNew = format('paper-tag-catalog-snapshot',current);
   const knownNew = { ...versions, snapshots: catalog.snapshots.map(value => value.registrySha256 === current.registrySha256 ? savedNew : value) };
   assert.deepEqual(core.createRegistry(display, knownNew).byId, currentGraph.byId);
 });
 
 test('显示资源只在两份新版都404时读取旧资源，坏新版不能回退', async () => {
-  const display = { ...current, contract: 'paper-tag-catalog-snapshot-v2' };
-  const versions = { ...catalog, contract: 'paper-tag-catalog-versions-v2' };
+  const display = format('paper-tag-catalog-snapshot',current);
+  const versions = format('paper-tag-catalog-versions',catalog);
   function fetchAssets(values, calls) {
     return async (url, options) => {
-      const filename = new URL(url).pathname.split('/').at(-1);
+      const pathname = new URL(url).pathname.replace(/^\/blog\//,'');
+      const filename = pathname.split('/').at(-1);
       calls.push({ url: String(url), options });
-      const value = values[filename];
+      const value = Object.hasOwn(values,pathname)?values[pathname]:values[filename];
       if (value instanceof Error) throw value;
       if (typeof value === 'number' || value === undefined) return { status: value || 404, ok: false };
       return { status: 200, ok: true, json: async () => value };
@@ -141,13 +145,29 @@ test('显示资源只在两份新版都404时读取旧资源，坏新版不能�
     'tag-catalog-snapshot.json': display, 'tag-catalog-versions.json': versions }, calls));
   assert.strictEqual(loaded.snapshot, display);
   assert.strictEqual(loaded.versions, versions);
-  assert.ok(calls.every(value => value.url.startsWith('https://example.test/blog/data/tag-catalog-') && value.options.redirect === 'error'));
+  assert.ok(calls.every(value => value.url.startsWith('https://example.test/blog/client/data/tag-catalog-') && value.options.redirect === 'error'));
   const oldCalls = [];
   const oldLoaded = await core.loadDisplayAssets('https://example.test/blog/index.json', fetchAssets({
     'taxonomy-registry.json': current, 'taxonomy-catalog.json': catalog }, oldCalls));
   assert.strictEqual(oldLoaded.snapshot, current);
   assert.strictEqual(oldLoaded.versions, catalog);
-  assert.equal(oldCalls.length, 4);
+  assert.equal(oldCalls.length, 6);
+  const oldPairCalls=[];
+  const oldDisplay={...current,contract:protocols.historicalContract('paper-tag-catalog-snapshot','public-concept-hierarchy')};
+  const oldVersions={...catalog,contract:protocols.historicalContract('paper-tag-catalog-versions','sha-keyed-snapshot-set')};
+  const oldPair=await core.loadDisplayAssets('https://example.test/blog/client/index.json',fetchAssets({
+    'data/tag-catalog-snapshot.json':oldDisplay,'data/tag-catalog-versions.json':oldVersions},oldPairCalls));
+  assert.strictEqual(oldPair.snapshot,oldDisplay);assert.strictEqual(oldPair.versions,oldVersions);
+  assert.equal(oldPairCalls.length,4);
+  const wrongPath=[];
+  await assert.rejects(core.loadDisplayAssets('https://example.test/blog/client/index.json',fetchAssets({
+    'client/data/tag-catalog-snapshot.json':oldDisplay,'client/data/tag-catalog-versions.json':oldVersions,
+    'data/tag-catalog-snapshot.json':oldDisplay,'data/tag-catalog-versions.json':oldVersions},wrongPath)),/格式或结构指纹/);
+  assert.equal(wrongPath.length,2);
+  const wrongOldPath=[];
+  await assert.rejects(core.loadDisplayAssets('https://example.test/blog/client/index.json',fetchAssets({
+    'data/tag-catalog-snapshot.json':display,'data/tag-catalog-versions.json':versions},wrongOldPath)),/格式或结构指纹/);
+  assert.equal(wrongOldPath.length,4);
   const absent = await core.loadDisplayAssets('https://example.test/blog/index.json', fetchAssets({ 'taxonomy-registry.json': new Error('old offline') }, []));
   assert.deepEqual(absent, { snapshot: null, versions: null });
   for (const value of [404, 500, null, { ...versions, contract: 'unknown' }, { ...versions, currentSha256: 'f'.repeat(64) }, new Error('new offline')]) {

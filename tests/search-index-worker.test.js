@@ -37,7 +37,7 @@ test('worker crash terminates resources and falls back to full byte validation',
     postMessage() { queueMicrotask(() => this.onerror()); }
     terminate() { terminated++; }
   }
-  const context = { Worker: CrashedWorker, URL, TextEncoder, TextDecoder, Uint8Array, setTimeout, clearTimeout, crypto: webcrypto };
+  const context = { PaperDigestProtocols: require('../assets/js/protocol-registry'), Worker: CrashedWorker, URL, TextEncoder, TextDecoder, Uint8Array, setTimeout, clearTimeout, crypto: webcrypto };
   vm.runInNewContext(loaderCode, context);
   const load = changed => context.ResearchSearchIndex.load(url, { origin, basePath: '/blog/', workerURL: origin + '/blog/js/worker.js',
     fetch: async requested => ({ ok: true, arrayBuffer: async () => {

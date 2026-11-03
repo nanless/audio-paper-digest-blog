@@ -306,16 +306,19 @@ test('经典搜索使用新版资源与当前字段，部分或坏新版不回�
     { id: 'method.peft', facet: 'method', zh: '参数高效微调', en: '', aliases: ['PEFT'], ancestorIds: [] },
     { id: 'method.lora', facet: 'method', zh: 'LoRA', en: '', aliases: [], ancestorIds: ['method.peft'] }
   ] };
-  const display = { ...saved, contract: 'paper-tag-catalog-snapshot-v2' };
-  const versions = { contract: 'paper-tag-catalog-versions-v2', currentSha256: saved.registrySha256, snapshots: [saved] };
-  const item = { ...record(), tagContract: 'paper-tag-flat-tags-v2', tagCatalogSha256: saved.registrySha256,
+  const protocols = require('../assets/js/protocol-registry');
+  const header = family => protocols.recordHeader(family, family);
+  const display = { ...saved, ...header('paper-tag-catalog-snapshot') };
+  const versions = { ...header('paper-tag-catalog-versions'), currentSha256: saved.registrySha256, snapshots: [saved] };
+  const flat = header('paper-tag-flat-tags');
+  const item = { ...record(), tagContract: flat.contract, tagSchemaFingerprint: flat.schemaFingerprint, tagCatalogSha256: saved.registrySha256,
     tagConcepts: [{ id: 'method.lora', facet: 'method', label: 'LoRA' }] };
   const assets = { 'tag-catalog-snapshot.json': display, 'tag-catalog-versions.json': versions };
   const loaded = browserFixture('search', [item], '?q=参数高效微调', false, saved, null, assets);
   await loaded.ready();
   assert.equal(loaded.nodes.searchResults.children.length, 1);
   assert.match(loaded.nodes.searchResults.textContent, /论文 0/);
-  assert.ok(loaded.requests.includes('https://nanless.github.io/audio-paper-digest-blog/data/tag-catalog-versions.json'));
+  assert.ok(loaded.requests.includes('https://nanless.github.io/audio-paper-digest-blog/client/data/tag-catalog-versions.json'));
   assert.ok(!loaded.requests.some(url => url.endsWith('/taxonomy-registry.json')));
   for (const value of [404, { ...versions, contract: 'unknown' }, 500]) {
     const failed = browserFixture('search', [item], '?q=Paper', false, saved, null, { ...assets, 'tag-catalog-versions.json': value });
@@ -324,4 +327,19 @@ test('经典搜索使用新版资源与当前字段，部分或坏新版不回�
     assert.match(failed.parent.textContent, /搜索暂时不可用/);
     assert.ok(!failed.requests.some(url => url.endsWith('/taxonomy-registry.json')));
   }
+});
+
+
+test('无分类脚本时搜索仍保留指纹，并拒绝只通过指纹混用字段名', async () => {
+  const header = require('../assets/js/protocol-registry').recordHeader('paper-tag-flat-tags', 'paper-tag-flat-tags');
+  const item = { ...record(), taxonomyContract: header.contract, taxonomySchemaFingerprint: header.schemaFingerprint, taxonomyConcepts: [] };
+  const loaded = browserFixture('search', [item], '?q=Paper');
+  await loaded.ready();
+  const [entry] = loaded.fuseLoads[0].data;
+  assert.equal(entry.tagSchemaFingerprint, header.schemaFingerprint);
+  assert.equal(Object.hasOwn(entry, 'taxonomySchemaFingerprint'), false);
+  const rejected = browserFixture('search', [{ ...item, tagContract: header.contract }], '?q=Paper');
+  await rejected.ready();
+  assert.equal(rejected.fuseLoads.length, 0);
+  assert.match(rejected.parent.textContent, /搜索暂时不可用/);
 });

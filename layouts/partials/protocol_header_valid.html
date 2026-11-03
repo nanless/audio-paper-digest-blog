@@ -1,0 +1,30 @@
+{{- /* Serialization recognition only; source and publication proof stay in their normal gates. */ -}}
+{{- $record := .record -}}
+{{- $families := (index hugo.Data "paperdigest-protocols" | default dict).families | default dict -}}
+{{- $family := index $families .name | default dict -}}
+{{- $valid := and (reflect.IsMap $record) (reflect.IsMap $family) -}}
+{{- $expected := dict -}}
+{{- $selector := "" -}}
+{{- if and $valid (isset $record "schemaFingerprint") -}}
+  {{- if eq (printf "%T" $record.schemaFingerprint) "string" }}{{ $selector = $record.schemaFingerprint }}{{ else }}{{ $valid = false }}{{ end -}}
+{{- end -}}
+{{- $matches := 0 -}}
+{{- if $valid -}}
+  {{- range ($family.formats | default slice) -}}
+    {{- if and (eq (.tag | partial "research_canonical_json.html") ($record.contract | partial "research_canonical_json.html")) (eq (.fp | default "") $selector) -}}
+      {{- $matches = add $matches 1 -}}{{- $expected = .header -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- $valid = and $valid (eq $matches 1) (gt (len $expected) 0) -}}
+{{- if $valid -}}
+  {{- $keys := dict "contract" true "schemaFingerprint" true "version" true "schemaVersion" true "policyVersion" true "__proto__" true -}}
+  {{- range $key, $_ := $expected }}{{ $keys = merge $keys (dict $key true) }}{{ end -}}
+  {{- range $key, $_ := $keys -}}
+    {{- if isset $expected $key -}}
+      {{- if not (isset $record $key) -}}{{- $valid = false -}}
+      {{- else if ne ((index $record $key) | partial "research_canonical_json.html") ((index $expected $key) | partial "research_canonical_json.html") -}}{{- $valid = false -}}{{- end -}}
+    {{- else if isset $record $key -}}{{- $valid = false -}}{{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return $valid -}}

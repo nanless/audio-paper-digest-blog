@@ -23,7 +23,7 @@ test('shards preserve complete records/order and declare actual bytes, SHA and c
     extra: { empty: '', boolean: false, number: 0, value: null, array: ['unchanged'] } }));
   const { directory, file } = fixture(t, records);
   const manifest = shardIndex(directory);
-  assert.deepEqual(JSON.parse(fs.readFileSync(file, 'utf8')), manifest);
+  assert.deepEqual(JSON.parse(fs.readFileSync(path.join(directory, 'client/index.json'), 'utf8')), manifest);
   assert.equal(manifest.contract, CONTRACT);
   assert.equal(manifest.recordCount, records.length);
   assert.ok(manifest.shards.length > 1);
@@ -77,15 +77,54 @@ test('failed final manifest rename preserves the original index and removes its 
   const { directory, file, original } = fixture(t, [{ title: 'kept intact' }]);
   const rename = fs.renameSync;
   fs.renameSync = (source, destination) => {
-    if (destination === file) throw new Error('simulated manifest commit failure');
+    if (destination === path.join(fs.realpathSync(directory), 'index.json')) throw new Error('simulated manifest commit failure');
     return rename(source, destination);
   };
   try { assert.throws(() => shardIndex(directory), /simulated manifest commit failure/); }
   finally { fs.renameSync = rename; }
   assert.deepEqual(fs.readFileSync(file), original);
-  assert.deepEqual(fs.readdirSync(directory).sort(), ['index.json', 'search-index']);
+  assert.deepEqual(fs.readdirSync(directory).sort(), ['client', 'index.json', 'search-index']);
   const manifest = shardIndex(directory);
   assert.equal(manifest.shards.length, 1, 'completed identical shards can be safely reused after failure');
+});
+
+test('新旧端点各自绑定真实分片字节，兼容投影不改当前记录', t => {
+  const protocols = require('../assets/js/protocol-registry');
+  const flat = 'paper-tag-flat-tags';
+  const flatHeader = protocols.recordHeader(flat, flat);
+  const snapshotBytes=fs.readFileSync(path.join(__dirname,'../data/tag-catalog-snapshot.json'));
+  const versionsBytes=fs.readFileSync(path.join(__dirname,'../data/tag-catalog-versions.json'));
+  const snapshot=JSON.parse(snapshotBytes);
+  const concept=snapshot.concepts.find(value=>value.id==='task.asr');
+  assert.ok(concept,'actual published catalog contains the chosen source concept');
+  const records = [{ title: '同一篇论文', permalink: '/blog/posts/source/', tagContract: flat,
+    tagSchemaFingerprint: flatHeader.schemaFingerprint, tagCatalogSha256:snapshot.registrySha256,
+    tagConcepts: [{ id:concept.id,facet:concept.facet,label:concept.zh }] }];
+  const { directory } = fixture(t, records);
+  fs.mkdirSync(path.join(directory,'data'));
+  fs.writeFileSync(path.join(directory,'data/tag-catalog-snapshot.json'),snapshotBytes);
+  fs.writeFileSync(path.join(directory,'data/tag-catalog-versions.json'),versionsBytes);
+  const original = JSON.stringify(records);
+  const current = shardIndex(directory);
+  const old = JSON.parse(fs.readFileSync(path.join(directory, 'index.json')));
+  assert.equal(protocols.hasValidHeader(current, CONTRACT), true);
+  assert.equal(current.contract, CONTRACT);
+  assert.equal(old.contract, protocols.historicalContract(CONTRACT, 'sha-bound-ordered-shards'));
+  assert.equal('schemaFingerprint' in old, false);
+  function collect(manifest, prefix) {
+    return manifest.shards.flatMap(shard => {
+      const bytes = fs.readFileSync(path.join(directory, prefix, shard.url));
+      assert.equal(bytes.length, shard.bytes);
+      assert.equal(crypto.createHash('sha256').update(bytes).digest('hex'), shard.sha256);
+      return JSON.parse(bytes);
+    });
+  }
+  assert.deepEqual(collect(current, 'client'), records);
+  const legacyRecords = collect(old, '');
+  assert.equal(legacyRecords[0].tagContract, protocols.historicalContract(flat, 'selected-preferred-labels'));
+  assert.equal('tagSchemaFingerprint' in legacyRecords[0], false);
+  assert.equal(legacyRecords[0].permalink, records[0].permalink);
+  assert.equal(JSON.stringify(records), original);
 });
 
 test('a shard write failure keeps the original input and never removes unrelated files', t => {

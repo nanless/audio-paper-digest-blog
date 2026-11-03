@@ -4,6 +4,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { createHash } = require('node:crypto');
 const { CONTRACT: INDEX_CONTRACT, MAX_SHARD_BYTES, SHARD_URL_PATTERN } = require('./shard-search-index');
+const indexProtocols = require('../assets/js/protocol-registry');
 const { verifyPageNavigation } = require('./verify-page-navigation');
 const { verifyEditionFeature } = require('./verify-edition-feature');
 
@@ -111,7 +112,9 @@ function verifySearchIndex(jsonText, byteLength) {
 }
 
 function verifySearchManifest(manifest, buildDir) {
-  invariant(manifest && manifest.contract === INDEX_CONTRACT, '索引分片合同非法');
+  invariant(indexProtocols.hasValidHeader(manifest, INDEX_CONTRACT), '索引分片格式声明或结构指纹非法');
+  const root = fs.realpathSync(buildDir);
+  const directory = manifest.contract === INDEX_CONTRACT ? path.join(root, 'client') : root;
   invariant(Number.isSafeInteger(manifest.recordCount) && manifest.recordCount > 0 && manifest.recordCount <= 100000,
     '索引分片总记录数非法');
   invariant(Number.isSafeInteger(manifest.totalBytes) && manifest.totalBytes > 0 && manifest.totalBytes <= 64 * 1024 * 1024,
@@ -131,8 +134,11 @@ function verifySearchManifest(manifest, buildDir) {
     invariant(Number.isSafeInteger(shard.recordCount) && shard.recordCount > 0, '索引分片记录数非法');
     invariant(typeof shard.sha256 === 'string' && /^[a-f0-9]{64}$/.test(shard.sha256)
       && shard.url.endsWith(`-${shard.sha256.slice(0, 12)}.json`), '索引分片哈希非法');
-    const file = path.join(buildDir, shard.url);
+    const file = path.join(directory, shard.url);
     invariant(fs.existsSync(file), `缺少构建产物：${file}`);
+    const stat = fs.lstatSync(file);
+    invariant(stat.isFile() && !stat.isSymbolicLink() && stat.size === shard.bytes && fs.realpathSync(file) === file,
+      `索引分片字节数漂移或路径不是普通文件：${shard.url}`);
     const buffer = fs.readFileSync(file);
     invariant(buffer.length === shard.bytes, `索引分片字节数漂移：${shard.url}`);
     invariant(createHash('sha256').update(buffer).digest('hex') === shard.sha256, `索引分片 SHA 漂移：${shard.url}`);
@@ -149,7 +155,8 @@ function verifySearchManifest(manifest, buildDir) {
     itemCount += stats.itemCount;
   }
   invariant(itemCount === manifest.recordCount && bytes === manifest.totalBytes, '索引分片总量不闭合');
-  return { itemCount, bytes, shards: manifest.shards.length, maxShardBytes: MAX_SHARD_BYTES };
+  return { itemCount, bytes, shards: manifest.shards.length, maxShardBytes: MAX_SHARD_BYTES,
+    recordOrderSha256: createHash('sha256').update(JSON.stringify([...records])).digest('hex') };
 }
 
 function walkFiles(root) {
@@ -268,6 +275,12 @@ function verifyBuild(buildDir) {
   const indexStats = Array.isArray(indexData)
     ? verifySearchIndex(indexText, fs.statSync(indexFile).size)
     : verifySearchManifest(indexData, root);
+  const clientIndex = JSON.parse(readRequired(path.join(root, 'client', 'index.json')));
+  invariant(clientIndex.contract === INDEX_CONTRACT && indexData.contract !== INDEX_CONTRACT,
+    '新客户端索引与已发行客户端兼容入口必须分别使用对应格式');
+  const clientIndexStats = verifySearchManifest(clientIndex, root);
+  invariant(clientIndexStats.itemCount === indexStats.itemCount && clientIndexStats.recordOrderSha256 === indexStats.recordOrderSha256,
+    '新旧索引的页面集合或顺序不一致');
   const searchScripts = walkFiles(path.join(root, 'assets', 'js')).filter((file) => /search.*\.js$/i.test(path.basename(file)));
   invariant(searchScripts.length > 0, '缺少构建后的搜索脚本');
   for (const file of searchScripts) {
@@ -294,6 +307,7 @@ function verifyBuild(buildDir) {
     editionFeature,
     rss: rssStats,
     searchIndex: indexStats,
+    clientSearchIndex: clientIndexStats,
     searchScripts: searchScripts.length,
     libraryScripts: libraryScripts.length,
     paperTools,

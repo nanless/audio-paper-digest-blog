@@ -1,4 +1,13 @@
 {{- $source := partial "citation_source.html" . -}}
+{{- /* The HTML record is a public compatibility view for released apps.
+     The canonical index retains citation_source's stable, fingerprinted header. */ -}}
+{{- $registered := index (index hugo.Data "paperdigest-protocols").families "paper-citation-source" -}}
+{{- $legacyHeaders := slice -}}
+{{- range $registered.formats }}{{ if and .historical (not .fp) (eq .variant "public-source-identity") }}{{ $legacyHeaders = $legacyHeaders | append .header }}{{ end }}{{ end -}}
+{{- if ne (len $legacyHeaders) 1 }}{{ errorf "Citation HTML compatibility needs one exact original registered header" }}{{ end -}}
+{{- $canonicalSource := $source -}}{{- $source = index $legacyHeaders 0 -}}
+{{- range $key,$value := $canonicalSource }}{{ if not (in (slice "contract" "schemaFingerprint") $key) }}{{ $source = merge $source (dict $key $value) }}{{ end }}{{ end -}}
+
 {{- $baseID := replaceRE `v[1-9][0-9]*$` "" $source.arxivId -}}
 {{- $resolvedID := $source.arxivId -}}
 {{- $hasID := and (eq $source.identityStatus "verified") $resolvedID -}}
@@ -9,9 +18,25 @@
 {{- $siteRoot := (urls.Parse site.BaseURL).Path -}}{{- if not (hasSuffix $siteRoot "/") }}{{ $siteRoot = printf "%s/" $siteRoot }}{{ end -}}
 {{- $sidecarID := replace (replace $baseID "." "-") "/" "-" -}}
 {{- $sidecarRoot := printf "%sdata/papers/%s/%s/" $siteRoot (.Date.Format "2006-01-02") $sidecarID -}}
+{{- $workbenchHeader := dict "contract" (.Params.paper_digest_workbench_contract | default "") -}}
+{{- with .Params.paper_digest_workbench_schema_fingerprint }}{{ $workbenchHeader = merge $workbenchHeader (dict "schemaFingerprint" .) }}{{ end -}}
+{{- $validWorkbench := partial "protocol_header_valid.html" (dict "name" "researcher-workbench" "record" $workbenchHeader) -}}
+{{- $currentWorkbench := and $validWorkbench (eq $workbenchHeader.contract "researcher-workbench") -}}
+{{- $clientSidecars := dict -}}
+{{- if and $currentWorkbench (reflect.IsMap $sidecars) (eq (len $sidecars) 4) -}}
+  {{- $clientID := $sidecarID -}}
+  {{- if eq $source.sourceKind "conference" }}{{ $clientID = printf "conference-%s" (substr (crypto.SHA256 $source.paperKey) 0 24) }}{{ end -}}
+  {{- $clientRoot := printf "%sclient/papers/%s/%s/" $siteRoot (.Date.Format "2006-01-02") $clientID -}}
+  {{- range $name := slice "citation.json" "citation.bib" "citation.ris" "rethink-context.json" -}}
+    {{- with index $sidecars $name -}}
+      {{- if and (eq .url (printf "%s%s" $clientRoot $name)) (findRE `^[a-f0-9]{64}$` .sha256 1) }}{{ $clientSidecars = merge $clientSidecars (dict $name .) }}{{ end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
 {{- $citationFiles := dict -}}
 {{- $hasGuide := ne (strings.TrimSpace (printf "%s" .Content)) "" -}}
 <section class="paper-tools{{ if not $source.url }} paper-tools--selection-only{{ end }}" aria-labelledby="paper-tools-title" data-paper-title="{{ $source.title }}" data-paper-url="{{ .Permalink }}" data-paper-key="{{ $source.paperKey }}" data-paper-identity-status="{{ $source.identityStatus }}" data-paper-has-guide="{{ $hasGuide }}" data-citation-record="{{ $source | jsonify }}"{{ if $hasID }} data-paper-arxiv-id="{{ $resolvedID }}"{{ end }}>
+  {{- if eq (len $clientSidecars) 4 }}<script type="application/json" class="paper-tools__client-sidecars">{{ $clientSidecars | jsonify | safeJS }}</script>{{ end }}
   <script type="application/json" class="paper-tools__citation-record">{{ $source | jsonify | safeJS }}</script>
   <div class="paper-tools__heading"><h2 id="paper-tools-title">原文与引用</h2><p>论文页面 · PDF · 引用文件</p></div>
   <div class="paper-tools__primary-actions">
@@ -25,11 +50,12 @@
     {{- if $hasID }}
     <div class="paper-tools__group"><span class="paper-tools__identifier">arXiv <code>{{ $resolvedID }}</code></span><button class="paper-tool paper-tool-copy" type="button" data-copy-text="{{ $baseID }}" data-copy-label="arXiv ID" hidden>复制 ID</button>{{ if ne $resolvedID $baseID }}<button class="paper-tool paper-tool-copy" type="button" data-copy-text="{{ $resolvedID }}" data-copy-label="版本 ID" hidden>复制版本 ID</button>{{ end }}</div>
     <div class="paper-tools__group" aria-label="下载引用">
-      {{- if and (eq .Params.paper_digest_workbench_contract "researcher-workbench-v1") (reflect.IsMap $sidecars) }}
+      {{- if and $validWorkbench (reflect.IsMap $sidecars) }}
         {{- range $filename, $label := dict "citation.json" "Citation JSON" "citation.bib" "BibTeX" "citation.ris" "RIS" }}
           {{- $record := index $sidecars $filename -}}
           {{- $url := "" -}}
           {{- with $record }}{{ with .url }}{{ $url = . }}{{ end }}{{ end }}
+          {{- if and $currentWorkbench (eq (len $clientSidecars) 4) }}{{ $url = replace $url "/client/papers/" "/data/papers/" }}{{ end -}}
           {{- if eq $url (printf "%s%s" $sidecarRoot $filename) }}
       <a class="paper-tool paper-tool--download" href="{{ $url | safeURL }}" download>{{ $label }}</a>
             {{- $citationFiles = merge $citationFiles (dict $filename true) -}}

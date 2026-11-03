@@ -1,9 +1,10 @@
 'use strict';
 const test=require('node:test'),assert=require('node:assert/strict');
 const core=require('../assets/js/tag-core'),exporter=require('../assets/js/reading-export'),cases=require('./fixtures/classification-v3-public');
+const originalTagContract=require('../assets/js/protocol-registry').historicalHeader('paper-tag-flat-tags','selected-preferred-labels',null).contract;
 const graph=core.createRegistry(require('../data/taxonomy-registry.json'),require('../data/taxonomy-catalog.json'));
 function entry(f){const r=f.record;return {title:'Synthetic protocol example',pageType:'paper',permalink:'https://example.test/blog/posts/synthetic/',paperId:r.paperId,arxivId:'2601.00001',identityStatus:'verified',
- taxonomyContract:core.contract,taxonomyClassificationContract:r.classificationContract,taxonomyEvidenceContract:'historical-source-taxonomy-supplement-v3',taxonomyEvidenceType:r.evidenceType,taxonomyRegistrySha256:r.registrySha256,taxonomyConcepts:r.concepts,
+ taxonomyContract:originalTagContract,taxonomyClassificationContract:r.classificationContract,taxonomyEvidenceContract:'historical-source-taxonomy-supplement-v3',taxonomyEvidenceType:r.evidenceType,taxonomyRegistrySha256:r.registrySha256,taxonomyConcepts:r.concepts,
  researchType:r.researchType,domainScope:r.domainScope,primaryResearchRole:r.primaryResearchRole,primaryTaskId:r.primaryTaskId,primaryScientificTopicId:r.primaryScientificTopicId,primaryMethodId:r.primaryMethodId,task:r.primaryTaskLabel,method:r.primaryMethodLabel,methodNotApplicable:r.methodNotApplicable,methodNotApplicableReason:r.methodNotApplicableReason,
  citation:{contract:'paper-citation-source-v1',identityStatus:'verified',sourceKind:'arxiv',arxivId:'2601.00001',title:'Synthetic citation fixture',url:'https://arxiv.org/abs/2601.00001',pdfUrl:'https://arxiv.org/pdf/2601.00001',authors:[],date:''}};}
 test('V3 mechanism is a method facet and single primary count, never an inferred engineering task',()=>{

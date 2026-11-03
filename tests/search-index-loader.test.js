@@ -21,7 +21,7 @@ function bundle(parts) {
     files.set(origin + basePath + url, bytes);
     return { url, bytes: bytes.length, sha256, recordCount: part.length };
   });
-  return { files, manifest: { contract: loader.contract, recordCount: parts.reduce((sum, part) => sum + part.length, 0),
+  return { files, manifest: { ...require('../assets/js/protocol-registry').recordHeader(loader.contract, loader.contract), recordCount: parts.reduce((sum, part) => sum + part.length, 0),
     totalBytes: shards.reduce((sum, shard) => sum + shard.bytes, 0), shards } };
 }
 function client(data, customFetch) {
@@ -37,6 +37,52 @@ function client(data, customFetch) {
   };
   return { requests, options: { origin, basePath, fetch, crypto: webcrypto } };
 }
+
+test('新端点只在明确缺失时读取原接口，坏头、坏 JSON 和服务失败不能降级', async () => {
+  const protocols = require('../assets/js/protocol-registry');
+  const currentURL = origin + basePath + 'client/index.json';
+  const data = bundle([[{ id: 'preserved' }]]);
+  const oldTag = protocols.historicalContract(loader.contract, 'sha-bound-ordered-shards');
+  const legacyManifest = { ...data.manifest, ...protocols.recordHeader(oldTag, loader.contract) };
+  delete legacyManifest.schemaFingerprint;
+  for (const status of [404, 410]) {
+    const requests = [];
+    const result = await loader.load(currentURL, { origin, basePath, legacyIndexURL: indexURL, crypto: webcrypto,
+      fetch: async url => {
+        requests.push(url);
+        if (url === currentURL) return { ok: false, status };
+        if (url === indexURL) return response(legacyManifest);
+        return response(data.files.get(url));
+      } });
+    assert.deepEqual(result, [{ id: 'preserved' }]);
+    assert.deepEqual(requests.slice(0, 2), [currentURL, indexURL]);
+  }
+  for (const initial of [response({ ...data.manifest, schemaFingerprint: '0'.repeat(64) }),
+    response(legacyManifest), response([{ id: 'old-array' }]), response(Buffer.from('{broken')),
+    { ok: false, status: 500 }]) {
+    const requested = [];
+    await assert.rejects(loader.load(currentURL, { origin, basePath, legacyIndexURL: indexURL, crypto: webcrypto,
+      fetch: async url => { requested.push(url); return initial; } }));
+    assert.deepEqual(requested, [currentURL]);
+  }
+  await assert.rejects(loader.load(currentURL, { origin, basePath, legacyIndexURL: origin + '/outside/index.json',
+    fetch: async () => { throw new Error('must not fetch'); } }), /同源|目录|兼容/);
+});
+
+test('新端点按自己的目录加载全部分片，结构指纹与原始字节均须相符', async () => {
+  const currentURL = origin + basePath + 'client/index.json';
+  const data = bundle([[{ id: 1 }], [{ id: 2 }]]);
+  const requests = [];
+  const result = await loader.load(currentURL, { origin, basePath, crypto: webcrypto,
+    fetch: async url => {
+      requests.push(url);
+      if (url === currentURL) return response(data.manifest);
+      assert.ok(url.startsWith(origin + basePath + 'client/search-index/'));
+      return response(data.files.get(url.replace('/client/search-index/', '/search-index/')));
+    } });
+  assert.deepEqual(result, [{ id: 1 }, { id: 2 }]);
+  assert.equal(requests.length, 3);
+});
 
 test('verified cache avoids shard downloads, corrupted cache refetches, and progress never exposes partial results', async () => {
   const data=bundle([[{id:1}],[{id:2}]]), saved=new Map(), progress=[];

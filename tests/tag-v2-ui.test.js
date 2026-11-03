@@ -1,9 +1,11 @@
 'use strict';
+const protocols=require('../assets/js/protocol-registry');
+const originalFlat=protocols.historicalContract('paper-tag-flat-tags','selected-preferred-labels');
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
 const core=require('../assets/js/tag-core'),library=require('../assets/js/paper-library'),{fixture,catalog}=require('./fixtures/tag-v2-public');
 const current=JSON.parse(fs.readFileSync(path.resolve(__dirname,'../data/taxonomy-registry.json'))),graph=core.createRegistry(current,catalog);
 function entry(f,slug){const r=f.record;return {title:'Synthetic '+slug,pageType:'paper',permalink:'https://example.test/blog/posts/'+slug+'/',identityStatus:'verified',arxivId:'2601.00001',paperId:r.paperId,
- taxonomyContract:core.contract,taxonomyRegistrySha256:r.registrySha256,taxonomyRegistryVersion:r.registryVersion,taxonomyConcepts:r.concepts,
+ taxonomyContract:originalFlat,taxonomyRegistrySha256:r.registrySha256,taxonomyRegistryVersion:r.registryVersion,taxonomyConcepts:r.concepts,
  taxonomyClassificationContract:r.classificationContract,taxonomyEvidenceType:r.evidenceType,taxonomyEvidenceContract:'historical-source-taxonomy-supplement-v2',
  researchType:r.researchType,domainScope:r.domainScope,primaryResearchRole:r.primaryResearchRole,primaryTaskId:r.primaryTaskId,primaryScientificTopicId:r.primaryScientificTopicId,
  primaryMethodId:r.primaryMethodId,task:r.primaryTaskLabel,method:r.primaryMethodLabel,methodNotApplicable:r.methodNotApplicable,methodNotApplicableReason:r.methodNotApplicableReason};}
@@ -41,7 +43,7 @@ test('NA with method, duplicate concept, wrong science primary ID and task conta
 test('新索引字段读取原v2角色，不给普通来源标签增加强角色资格',()=>{
  const legacy=entry(fixture(),'current-fields'),current={...legacy};
  for(const key of ['taxonomyContract','taxonomyRegistrySha256','taxonomyConcepts','taxonomyClassificationContract','taxonomyEvidenceType','taxonomyEvidenceContract'])delete current[key];
- Object.assign(current,{tagContract:legacy.taxonomyContract,tagCatalogSha256:legacy.taxonomyRegistrySha256,tagConcepts:legacy.taxonomyConcepts,tagClassificationContract:legacy.taxonomyClassificationContract,tagEvidenceType:legacy.taxonomyEvidenceType,tagEvidenceContract:legacy.taxonomyEvidenceContract});
+ Object.assign(current,{tagContract:core.contract,tagSchemaFingerprint:protocols.record(core.contract).schemaFingerprint,tagCatalogSha256:legacy.taxonomyRegistrySha256,tagConcepts:legacy.taxonomyConcepts,tagClassificationContract:legacy.taxonomyClassificationContract,tagEvidenceType:legacy.taxonomyEvidenceType,tagEvidenceContract:legacy.taxonomyEvidenceContract});
  assert.deepEqual(graph.resolveRecord(current),graph.resolveRecord(legacy));
  assert.equal(core.query(core.groupPapers([current],graph),{researchType:current.researchType},graph).length,1);
  const simple={...current,tagClassificationContract:undefined,tagEvidenceContract:'historical-direct-tag-supplement-v2',tagEvidenceType:'source-only-tags'};

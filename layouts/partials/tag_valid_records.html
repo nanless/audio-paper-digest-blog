@@ -4,7 +4,7 @@
 {{- $valid := slice -}}
 {{- $seen := slice -}}
 {{- $proof := partial "tag_page_proof.html" . -}}
-{{- if partial "tag_flat_contract.html" $proof.contract -}}
+{{- if partial "tag_flat_contract.html" $proof -}}
   {{- $snapshot := partial "tag_page_snapshot.html" . -}}
   {{- $byId := partialCached "tag_catalog_index.html" $snapshot ($snapshot.registrySha256 | default "fixture") -}}
   {{- $currentById := partialCached "tag_catalog_index.html" "global" "global" -}}
