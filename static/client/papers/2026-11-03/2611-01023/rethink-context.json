@@ -1,0 +1,98 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.01023v1",
+  "abstract": "Offline-trained speech enhancement models can degrade under deployment mismatch. Test-time adaptation (TTA) addresses this problem using unlabeled test observations, but existing approaches mainly rely on online parameter optimization and do not explicitly exploit the residual discarded by the enhancement backbone. We propose Continual Residual Memory (CRM), a gradient-free continual TTA framework for selective residual recovery. CRM first estimates bounded time-frequency residual recovery from the current utterance alone and then uses causal prototype memory from preceding utterances to refine this estimate. During deployment, adaptation is driven solely by the evolving memory state while the backbone and CRM modules remain frozen. Across DNS, EARS-D, and Libri-MUSAN, CRM improves all seven reported metrics over frozen CMGAN and achieves the best PESQ, CSIG, and COVL on all three test sets among the compared methods. CRM remains lightweight and shows cross-backbone applicability on five additional backbones. Code is available at https://github.com/Ada312/continual-residual-memory.",
+  "abstractSha256": "b9e46bd040c9479b7d9681cf09771113a0df6a199818a15b958229fa3999aff7",
+  "arxivId": "2611.01023",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.01023v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "测试时自适应",
+    "primaryTask": "语音增强",
+    "rankBucket": "前25%",
+    "score": 7.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-enhancement",
+          "label": "语音增强"
+        },
+        {
+          "facet": "method",
+          "id": "method.test-time-adaptation",
+          "label": "测试时自适应"
+        },
+        {
+          "facet": "method",
+          "id": "method.continual",
+          "label": "持续学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "测试时自适应",
+      "primaryMethodId": "method.test-time-adaptation",
+      "primaryTask": "语音增强",
+      "primaryTaskId": "task.speech-enhancement",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yijia Shan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Tianrui Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zixiang Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Sheng Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yao Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yu Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xie Chen"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对离线训练的语音增强模型在新说话人、噪声和声学条件下退化的问题，论文提出冻结主干、只让记忆状态演化的 Continual Residual Memory，通过分时频有界回收被丢掉的残差并用历史原型修正，在三个目标集上一致改进冻结 CMGAN 且额外开销很小。",
+  "originalTitle": "Continual Residual Memory for Gradient-Free Test-Time Adaptation in Speech Enhancement",
+  "pdfUrl": "https://arxiv.org/pdf/2611.01023v1.pdf",
+  "readerTitle": "不调参数也能适应新环境：用被丢掉的残差做语音增强",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

@@ -1,0 +1,86 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.02927v1",
+  "abstract": "Directivity is a defining feature of musical-instrument radiation and is known to vary strongly with frequency. With the growing availability of measured directivity datasets and their use in sound-field simulation and spatial audio, there is a practical need for representations that are both compact and comparable across sources. This work addresses that need by proposing a statistically grounded description of frequency-dependent directivity that reduces complex radiation patterns to a small set of meaningful descriptors. The approach enables directivity patterns to be summarized in an interpretable way and compared consistently across frequency bands, even when the radiation is not well described by a single dominant direction. The resulting representation supports tasks such as analysis, categorization, and model building, providing a bridge between detailed measurements and higher-level descriptors useful for musical acoustics and audio rendering. Experiments on a corpus of 41 orchestral instruments show that the proposed method preserves the distance geometry well while reducing the full order-4, 30-band corpus from about 492~kB to about 100~kB in double-precision storage.",
+  "abstractSha256": "9c57acd7420bc10bad8daf5ddc72017858f8c35beb28d4e13245ff8f7cc40681",
+  "arxivId": "2611.02927",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.02927v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "统计分析",
+    "primaryTask": "音乐分析",
+    "rankBucket": "前50%",
+    "score": 5.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-understanding",
+          "label": "音乐分析"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.spatial-audio",
+          "label": "空间音频"
+        },
+        {
+          "facet": "method",
+          "id": "method.clustering",
+          "label": "聚类与类别匹配"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "统计分析",
+      "primaryMethodId": "method.statistical-analysis",
+      "primaryTask": "音乐分析",
+      "primaryTaskId": "task.music-understanding",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Gioele Greco"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Mirco Pezzoli"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Raffaele Malvermi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Gian Marco Ricci"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Fabio Antonacci"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对乐器随频率变化的辐射方向图难浏览难比较的问题，论文把每频带能量分布用少量 vMF 分量概括，在 41 件乐器上 70% 相似度时把约 492 kB 压缩到约 100 kB 且距离相关达 0.961，代价是高频细节需要更多分量。",
+  "originalTitle": "A Compact Statistical View of Musical-Instrument Directivity",
+  "pdfUrl": "https://arxiv.org/pdf/2611.02927v1.pdf",
+  "readerTitle": "乐器指向性如何用几个统计参数概括：vMF 混合的压缩与比较",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

@@ -1,0 +1,80 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.02709v1",
+  "abstract": "End-to-end neural diarization with vector clustering (EEND-VC) separates local segmentation from global speaker assignment, leaving speaker confusion (SC) despite strong segmentation. We propose shared-encoder sequence-to-sequence (S2S) refinement, which reuses DiariZen's self-supervised learning (SSL) representations for speaker-conditioned decoding and prior-constrained assignment. We study frozen-feature refinement with WavLM and structurally pruned w2v-BERT 2.0, and extend the latter to joint training of local segmentation and refinement heads. The heads learn separate layer mixtures while their losses update one acoustic encoder. Across eight domains, frozen-feature refinement reduces macro diarization error rate (DER) from 12.95% to 12.40% with WavLM and from 12.35% to 12.08% with w2v-BERT 2.0, with relative SC reductions of 17.4% and 14.6%. It adds approximately 15% to system real-time factor. The joint system further lowers macro DER to 11.90%, improving seven of eight domains over non-joint refinement. Error decomposition separates SC-driven refinement gains from detection-driven joint-system gains.",
+  "abstractSha256": "eb470c1e737825b10260b712ad0d7d82cc54571e12c8b93fdf94e56fd0c46329",
+  "arxivId": "2611.02709",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.02709v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多任务学习",
+    "primaryTask": "说话人分离标注",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.diarization",
+          "label": "说话人分离标注"
+        },
+        {
+          "facet": "method",
+          "id": "method.multitask",
+          "label": "多任务学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.pruning",
+          "label": "模型剪枝"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "多任务学习",
+      "primaryMethodId": "method.multitask",
+      "primaryTask": "说话人分离标注",
+      "primaryTaskId": "task.diarization",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ruoyu Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jun Du"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Weixin Zhu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yannan Wang"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "本文用 DiariZen 的自监督表示做说话人条件解码和先验约束重排，在八个领域上把说话人混淆相对降低约 15%，宏平均 DER 降到 11.90%，代价是实时率增加约 15%。",
+  "originalTitle": "Sequence-to-Sequence Refinement for EEND-VC Diarization with a Shared Encoder",
+  "pdfUrl": "https://arxiv.org/pdf/2611.02709v1.pdf",
+  "readerTitle": "共享编码器的序列到序列修正如何改善 EEND-VC 的说话人归属",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

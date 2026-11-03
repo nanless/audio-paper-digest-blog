@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.02803v1",
+  "arxivId": "2611.02803",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.02803v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zihao Fan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xin Lu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jie Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hexin Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xueyang Fu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zheng-Jun Zha"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.02803v1",
+  "originalTitle": "OmniOPD: Stable On-Policy Distillation for Joint Audio-Video Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2611.02803v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

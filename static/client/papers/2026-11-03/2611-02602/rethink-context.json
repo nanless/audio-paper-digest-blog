@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.02602v1",
+  "abstract": "End-of-turn (EoT) detection decides in real-time whether a speaker has finished. Traditional detectors rely on hand-built prosodic features (pitch, speaking rate, pauses), while modern detectors run on a neural ASR encoder that has processed the same audio. Because the encoder reads the signal those features are computed from, it may already hold much of the information they were meant to supply. We test this three ways, reading a streaming Zipformer encoder at four depths from raw input to the final layer. First, we measure how much prosody helps over the encoder alone. Second, we test whether prosody can be recovered from the encoder. Third, we ask whether any single feature still helps given the encoder. The three tests agree; prosody adds a large gain on raw audio, but that gain collapses once the signal passes through even the first encoder layer. The same pattern holds for two open-source encoders, wav2vec2 and Whisper, both of which are offline.",
+  "abstractSha256": "00d720f01dbfe0c4f518244a3e137b9050c63d06d4040ac891a8dd07373c0be1",
+  "arxivId": "2611.02602",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.02602v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "表示探测",
+    "primaryTask": "轮次切换",
+    "rankBucket": "前50%",
+    "score": 6.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.turn-taking",
+          "label": "轮次切换"
+        },
+        {
+          "facet": "method",
+          "id": "method.representation-probing",
+          "label": "表示探测"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.prosody",
+          "label": "韵律"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "表示探测",
+      "primaryMethodId": "method.representation-probing",
+      "primaryTask": "轮次切换",
+      "primaryTaskId": "task.turn-taking",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Rini Sharon"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kadri Hacioglu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Andreas Stolcke"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文以流式 Zipformer 编码器四个深度为轴，用加韵律的增量、从编码器重建韵律、逐特征增量三项检验说明手算韵律在原始输入上有大增益、进第一层后即塌缩，残余多为说话人层面的捷径而非边界定时。",
+  "originalTitle": "How Much Prosody Does Your ASR Encoder Already Know",
+  "pdfUrl": "https://arxiv.org/pdf/2611.02602v1.pdf",
+  "readerTitle": "ASR 编码器已经知道多少韵律：轮流结束检测的三重检验",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

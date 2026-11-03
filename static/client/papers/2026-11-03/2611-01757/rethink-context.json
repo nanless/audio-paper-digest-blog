@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.01757v1",
+  "abstract": "We present a multi-channel target speaker extraction (TSE) framework that is guided by relative spatial cues rather than explicit speaker-dependent references, such as clean enrollment utterances or precise directions of arrival (DOA). The proposed approach encodes the target speaker through discrete, interpretable relations between concurrent speakers, such as left and right or near and far, referred to as the Relative Position Cue (RPC). This relational conditioning effectively leverages spatial information while avoiding explicit DOA estimation, thereby enabling more robust operation under realistic conditions. We evaluate the proposed method across multiple datasets encompassing diverse acoustic conditions, including directional and diffuse babble noise, varying numbers of microphones, mixtures with different numbers of speakers, and dynamic scenarios involving moving speakers. Experimental results demonstrate that the RPC-based approach consistently achieves strong extraction performance and generalizes well across all tested configurations, establishing it as a practical and interpretable alternative for spatially informed speaker extraction.",
+  "abstractSha256": "80f5ab9432ca47a252d0d16dc780f4004f6020e6d04949c9a0cdf697c6f11530",
+  "arxivId": "2611.01757",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.01757v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "目标说话人提取",
+    "rankBucket": "前50%",
+    "score": 6.7,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.target-speaker",
+          "label": "目标说话人提取"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.microphone-array",
+          "label": "麦克风阵列"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "目标说话人提取",
+      "primaryTaskId": "task.target-speaker",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Aviad Eisenberg"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shlomo E. Chazan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Sharon Gannot"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "本文用说话人之间的左右和远近相对关系作为离散指令来引导多通道提取网络，在静态与运动、仿真与实测混响下验证了其在不同麦克风数和说话人数下的提取效果与适用边界。",
+  "originalTitle": "Spatially-Guided Speaker Extraction Based on Relative Position Cues",
+  "pdfUrl": "https://arxiv.org/pdf/2611.01757v1.pdf",
+  "readerTitle": "不用报方位也能挑出目标说话人：相对位置提示的目标语音提取",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

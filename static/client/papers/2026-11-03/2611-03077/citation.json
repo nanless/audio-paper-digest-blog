@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.03077v1",
+  "arxivId": "2611.03077",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.03077v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Thomas Rushton"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Romain Michon"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Tanguy Risset"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.03077v1",
+  "originalTitle": "Ananas: A Networked Audio System for Distributed Spatial Audio Applications",
+  "pdfUrl": "https://arxiv.org/pdf/2611.03077v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

@@ -1,0 +1,92 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.01147v1",
+  "abstract": "\"A car drives from front left to front right while a dog follows it.\" Such a description specifies no particular trajectory, yet imposes a constraint on the joint motion of both sources that must hold at every frame. Existing text-to-spatial-audio methods can position and move each sound source according to its description, but none of them ensures or verifies that such inter-source relations hold. We therefore propose Rel2Traj, which parses the description into sources, relations, and anchors, jointly generates the trajectories of all sources using a relation-conditioned diffusion model, and finally renders sounds from a pretrained text-to-audio model along these trajectories to produce binaural audio. For training and evaluation, we construct a synthetic dataset from a controlled language of source motions and inter-source relations. A single frame-wise relational geometry defines both our evaluation metric, the Relation Satisfaction Rate (RSR), and an auxiliary training loss. On motion-relation combinations held out from training, Rel2Traj maintains all relation types, whereas every baseline fails on at least one. A listening test further confirms that listeners recognize the described relations. To our knowledge, this is the first text-to-spatial-audio work to model relations among moving sources as explicit geometric constraints.",
+  "abstractSha256": "546004327b5da18fc3835a244b97efa649ad27cda10ba8e11330e9c257921465",
+  "arxivId": "2611.01147",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.01147v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "扩散模型",
+    "primaryTask": "空间音频渲染",
+    "rankBucket": "前50%",
+    "score": 7.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.spatial-rendering",
+          "label": "空间音频渲染"
+        },
+        {
+          "facet": "method",
+          "id": "method.diffusion",
+          "label": "扩散模型"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.spatial-audio",
+          "label": "空间音频信号"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "扩散模型",
+      "primaryMethodId": "method.diffusion",
+      "primaryTask": "空间音频渲染",
+      "primaryTaskId": "task.spatial-rendering",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yihang Bao"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Lingfeng Yao"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shengyao Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Junpei Xun"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Miao Pan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jiang Liu"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "Rel2Traj 针对多声源相对运动约束问题，把描述解析为关系图与锚点后联合生成轨迹再渲染双耳音频，在未见过的运动与关系组合上关系满足率达到 0.983，代价是轨迹抖动较大且依赖受控语言与合成数据。",
+  "originalTitle": "Rel2Traj: Inter-Source Relation-Aware Trajectory Generation for Text-To-Spatial-Audio",
+  "pdfUrl": "https://arxiv.org/pdf/2611.01147v1.pdf",
+  "readerTitle": "Rel2Traj：让文字描述变成多声源相对运动都成立的空间音频",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

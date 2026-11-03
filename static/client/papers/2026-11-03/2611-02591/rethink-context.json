@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.02591v1",
+  "abstract": "This paper presents a scalable distributed acoustic surveillance system for real-time gunshot detection and localiza tion in large-area, GNSS-challenged environments. The system consists of multiple low-cost MEMS microphone array units (MAUs) deployed as distributed anchors. Each MAU performs edge-level sound-event detection using a lightweight Sound De tection and Echo Suppression (SDES) algorithm, followed by a TinyML-based classifier for gunshot identification. For detected gunshots, an enhanced Generalized Cross-Correlation (eGCC) al gorithm estimates intra-array time differences of arrival (TDoAs)   with improved robustness under low signal-to-noise ratio and re verberant conditions. Angle-of-arrival (AoA) estimates obtained from individual MAUs are fused through a modified SCO-EV localization framework to determine the gunshot position in a global coordinate system. A misplacement calibration (MC)   algorithm compensates for platform orientation errors, improv ing angular consistency and localization accuracy in practical field conditions. Extensive experiments conducted over coverage areas ranging from 4,985 m2 to 49,063 m2 demonstrate reliable operation across varying spatial scales. The proposed framework achieves a Matthews Correlation Coefficient (MCC) of 0.70 for gunshot recognition and average localization errors below 6.5 m over 25,000 m2 , while maintaining errors under 15 m at larger scales. The results demonstrate the practical potential of the proposed system for distributed gunshot surveillance in GNSS challenged large areas.",
+  "abstractSha256": "4832ee4c3f80e59d117597b105865cff020443b49d76bfebd22d8145797fcfd7",
+  "arxivId": "2611.02591",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.02591v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "硬件系统设计与验证",
+    "primaryTask": "声源定位",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.localization",
+          "label": "声源定位"
+        },
+        {
+          "facet": "method",
+          "id": "method.hardware-system-design",
+          "label": "硬件系统设计与验证"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.microphone-array",
+          "label": "麦克风阵列"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.on-device",
+          "label": "端侧运行"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "硬件系统设计与验证",
+      "primaryMethodId": "method.hardware-system-design",
+      "primaryTask": "声源定位",
+      "primaryTaskId": "task.localization",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Dengke Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Bodhibrata Mukhopadhyay"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Mohamed-Slim Alouini"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对盗猎监测中大面积与弱卫星定位条件下的枪声值守问题，论文用多个边缘麦克风阵列单元先触发再分类再估计阵内时延与到达角并融合定位，在约 5000 至 49000 平方米场测中取得 MCC 0.70 与数米级定位误差，但结论依赖扬声器回放与特定布站条件。",
+  "originalTitle": "A Distributed Microphone Network for Real-Time Gunshot Detection and Localization in GNSS-Challenged Large Areas",
+  "pdfUrl": "https://arxiv.org/pdf/2611.02591v1.pdf",
+  "readerTitle": "分布麦克风网络如何在弱 GNSS 大面积区域实时检测并定位枪声",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

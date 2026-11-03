@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.01047v1",
+  "abstract": "Composers develop music from an original idea, controlling how similar each new section is to it, from near repetition to new material. Game music needs this often, as its material repeats over long play. Music models, however, rarely learn to control similarity from real pieces. We further train a pretrained MIDI model on section pairs from Super Mario pieces. A label states each pair's similarity, and a context vector summarises the given section, or context. For 157 test contexts, the model generates six outputs per label. Twelve measures score the outputs; one main measure each covers melody, pitch content, rhythm and note length. On average, outputs requested as similar are more similar to their context than those requested as dissimilar, and not to other pieces. All twelve measures favour them; each main measure stays significant after correction for multiple tests. On melody, the gap comes mainly from more frequent restatement of the context's melody. Against an otherwise identical model without a label, only the request for high similarity makes outputs more similar. In a listening test, ratings followed melodic overlap with the context most closely of all measures.",
+  "abstractSha256": "50bcef1949168fd29920658a617a86351dbfa8771cbaf00db3488cc5338188db",
+  "arxivId": "2611.01047",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.01047v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "前缀微调",
+    "primaryTask": "符号音乐生成",
+    "rankBucket": "前50%",
+    "score": 5.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.symbolic-music",
+          "label": "符号音乐生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.prefix-tuning",
+          "label": "前缀微调"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "application",
+          "id": "application.games",
+          "label": "游戏音频"
+        },
+        {
+          "facet": "method",
+          "id": "method.subjective-evaluation",
+          "label": "主观评测"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "前缀微调",
+      "primaryMethodId": "method.prefix-tuning",
+      "primaryTask": "符号音乐生成",
+      "primaryTaskId": "task.symbolic-music",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shangxuan Luo"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zixun Guo"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jinjie Shi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Joshua Reiss"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文把同一首马里奥曲子里的段落配成上下文与目标，用复合相似度打出高中低三档标签来微调 Moonbeam，让高相似请求在平均上更贴近原段，主要靠更多复述原旋律，但幅度远小于真实段落差异且听感实验未能检出单次差异。",
+  "originalTitle": "How Close to the Theme? Similarity-Label Conditioning for Game Music Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2611.01047v1.pdf",
+  "readerTitle": "想要多像就多像：用相似度标签控制游戏音乐续写",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

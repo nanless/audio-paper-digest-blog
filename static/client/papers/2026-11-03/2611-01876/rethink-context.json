@@ -1,0 +1,80 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.01876v1",
+  "abstract": "Selective attention enhances cortical tracking of attended speech, but the role of ignored speech remains less clear. In particular, it is unknown whether attended and ignored speech contribute to cortical tracking in a fixed balance or whether this balance changes with listening conditions. We addressed this question across six electroencephalography (EEG) datasets spanning acoustic and attentional challenges, hearing impairment, and hearing-aid processing. We systematically varied the relative weighting of attended and competing speech and studied how their combined contribution affected cortical speech tracking. Across most listening conditions, cortical tracking was improved when we included competing speech, compared with attended speech alone. Importantly, the balance between attended and competing speech changed across conditions. Increasing acoustic difficulty increased both the benefit and the optimal contribution of competing speech, with the same general pattern observed in normal-hearing and hearing-impaired listeners. In the hearing-aid datasets examining noise-reduction conditions, the contribution of competing speech was more limited. Attentional challenges also changed the contribution of competing speech, but differently from acoustic challenges. These findings show that attended and competing speech do not contribute to cortical tracking in a fixed balance. Rather, their balance depends on the listening challenge. Although these results do not define a single optimal ratio, they provide a step toward hearing devices that adapt not only to the attended talker, but also to how competing speech is balanced in complex listening environments.",
+  "abstractSha256": "b6287ec734a8ee08a3228bb0564961ce63784508b8367ece7dac1fc80e3a85b9",
+  "arxivId": "2611.01876",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.01876v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "神经生理实验",
+    "primaryTask": "言语神经解码",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.neural-speech-decoding",
+          "label": "言语神经解码"
+        },
+        {
+          "facet": "method",
+          "id": "method.neurophysiological-experiment",
+          "label": "神经生理实验"
+        },
+        {
+          "facet": "application",
+          "id": "application.hearing-aids",
+          "label": "助听器"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.speech-perception",
+          "label": "言语感知"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "神经生理实验",
+      "primaryMethodId": "method.neurophysiological-experiment",
+      "primaryTask": "言语神经解码",
+      "primaryTaskId": "task.neural-speech-decoding",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Johanna Wilroth"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Martin A. Skoglund"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Emina Alickovic"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Martin Enqvist"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文用加权混合包络加后向解码器在六个脑电数据集上比较只跟随注意语音与加入不同比例竞争语音时的重构相关，发现声学变难通常让最优点向更大竞争权重移动而注意任务改变呈现不同模式但该权重只是模型描述子而非生理比例。",
+  "originalTitle": "Acoustic and Attentional Challenges Shape the Balance Between Attended and Competing Speech Tracking Differently",
+  "pdfUrl": "https://arxiv.org/pdf/2611.01876v1.pdf",
+  "readerTitle": "有人说话也有人插话时，大脑究竟在跟谁：注意与竞争语音的权重如何随场景变化",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

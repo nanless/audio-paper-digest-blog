@@ -1,0 +1,35 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.02651v1",
+  "arxivId": "2611.02651",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.02651v1",
+  "authors": [
+    {
+      "affiliations": [
+        "School of Science, Engineering & Technology",
+        "RMIT University"
+      ],
+      "name": "Vu Vo"
+    },
+    {
+      "affiliations": [
+        "School of Computing Technologies",
+        "RMIT University"
+      ],
+      "name": "Haytham M. Fayek"
+    },
+    {
+      "affiliations": [
+        "School of Science, Engineering & Technology",
+        "RMIT University"
+      ],
+      "name": "Thuy Nguyen"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.02651v1",
+  "originalTitle": "Probe-Guided Gradient Balancing for Multimodal Learning",
+  "pdfUrl": "https://arxiv.org/pdf/2611.02651v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

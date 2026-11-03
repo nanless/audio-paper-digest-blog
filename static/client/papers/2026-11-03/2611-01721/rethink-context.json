@@ -1,0 +1,109 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.01721v1",
+  "abstract": "Existing phase-based backdoor attacks on speaker identification rely on shared absolute phase patterns for cross-sample trigger consistency, while other audio backdoor attacks have explored shared transformations that produce input-dependent triggers. Whether phase-based triggers can achieve similar consistency without imposing identical output phase patterns remains unclear. We propose GDBack, a poison-only group-delay backdoor attack using cascaded second-order analytic all-pass filters. Applying a shared transformation across utterances ideally preserves spectral magnitude while introducing a consistent frequency-dependent phase response and group-delay contribution, without forcing identical output phases. Experiments on LibriSpeech and VoxCeleb1 with ECAPA-TDNN, x-vector, and RawNet3 achieve attack success rates above 94% across all six settings (97.00% on average), while maintaining benign accuracy close to clean models. Phase and magnitude interventions, inverse compensation, and parameter-sensitivity analyses support the role of the induced phase transformation in backdoor activation. Speech quality and content evaluations indicate limited perceptual and linguistic distortion, while robustness experiments, including real over-the-air tests, reveal varying effectiveness across conditions and architectures. These findings demonstrate that cross-sample trigger consistency can arise from a shared phase transformation without requiring a common absolute phase pattern.",
+  "abstractSha256": "8632c366b448b2d1d4d23041227d39fe7115d67b48051de8661ea983c5e429a4",
+  "arxivId": "2611.01721",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.01721v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "对抗攻击构造",
+    "primaryTask": "说话人识别",
+    "rankBucket": "前50%",
+    "score": 6.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speaker-identification",
+          "label": "说话人识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.adversarial-attack",
+          "label": "对抗攻击构造"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.security",
+          "label": "音频安全"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "对抗攻击构造",
+      "primaryMethodId": "method.adversarial-attack",
+      "primaryTask": "说话人识别",
+      "primaryTaskId": "task.speaker-identification",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Bicheng Xiong"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Tao Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Chenhui Cui"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zedong Xing"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Qien Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Weiping Wen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Rubing Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Tsong Yueh Chen"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "GDBack 用同一组二阶全通滤波对投毒语音做相位变换，在两数据集三模型上以 5% 投毒取得 94% 以上攻击成功率，同时保持正常识别与语音质量，其激活依赖中心频率等滤波参数且在强混响与部分防御下仍有局限。",
+  "originalTitle": "GDBack: A Group-Delay Backdoor Attack on Speaker Identification via Analytic All-Pass Filtering",
+  "pdfUrl": "https://arxiv.org/pdf/2611.01721v1.pdf",
+  "readerTitle": "同一组滤波器如何留下可学习的相位痕迹：GDBack 群延迟后门解读",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

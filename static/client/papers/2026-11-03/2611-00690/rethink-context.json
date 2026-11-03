@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.00690v1",
+  "abstract": "Speech-to-speech translation (S2ST) increasingly preserves what is said and how it sounds, but not necessarily when speech and silence occur. For dubbing and other temporally grounded applications, matching total duration is not enough: speech and pauses must also occur at corresponding moments. We formulate timeline-preserving S2ST, which aims to preserve the source endpoint and salient internal pauses on a shared absolute timeline. We present TransDubber, an end-to-end autoregressive system that learns this temporal structure directly from aligned target waveforms, without inference-time frame-level timing control or post-hoc temporal correction. To provide this supervision, we construct 642K exactly duration-matched English-Chinese speech pairs by translating and synthesizing target speech on source-defined temporal scaffolds. Training combines a progressive supervised curriculum with verifier-guided reinforcement learning to balance translation quality and temporal alignment. On a 4,353-utterance test set spanning read and spontaneous speech, TransDubber increases the proportion of translations within 2% of the source duration from 25.6% to 61.5% and pause-alignment F1 from 0.118 to 0.550 compared with UniSS, while maintaining competitive translation quality. Our analysis shows that aligned supervision establishes timeline following, while reinforcement learning refines temporal precision and partially offsets the translation-quality cost of strict synchronization. Together, these results demonstrate the effectiveness of our data and training framework for timeline-preserving S2ST. Audio samples, code, datasets, and pretrained models are available at https://zhishengzheng.com/transdubber/.",
+  "abstractSha256": "60853ed818cf7fac17e89af98f12acaf8e33c448bc7c0f7f38a61ad011955aac",
+  "arxivId": "2611.00690",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.00690v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "自回归模型",
+    "primaryTask": "语音翻译",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-translation",
+          "label": "语音翻译"
+        },
+        {
+          "facet": "task",
+          "id": "task.dubbing",
+          "label": "语音配音"
+        },
+        {
+          "facet": "method",
+          "id": "method.autoregressive",
+          "label": "自回归模型"
+        },
+        {
+          "facet": "method",
+          "id": "method.reinforcement",
+          "label": "强化学习"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "自回归模型",
+      "primaryMethodId": "method.autoregressive",
+      "primaryTask": "语音翻译",
+      "primaryTaskId": "task.speech-translation",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhisheng Zheng"
+    },
+    {
+      "affiliations": [
+        "The University of Texas at Austin"
+      ],
+      "name": "David Harwath"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文把配音式翻译定义为在同一绝对时间轴上保住源端点和显著内部停顿，提出 TransDubber 用对齐目标波形做渐进监督加细粒度强化学习，在 4353 句英中测试上把 2% 时长符合率从 25.6% 提到 61.5%、停顿 F1 从 0.118 提到 0.550，代价是翻译质量仍略低于级联系统。",
+  "originalTitle": "Learning Timeline-Preserving Speech-to-Speech Translation",
+  "pdfUrl": "https://arxiv.org/pdf/2611.00690v1.pdf",
+  "readerTitle": "让译语说在原时间线上：时间线保持的语音到语音翻译",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

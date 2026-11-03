@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.02680v1",
+  "abstract": "Playing technique is crucial for expressive violin performance, yet few violin technique detection models exist. Current systems mainly rely on note-level pipelines that first estimate note boundaries and then classify techniques. This is especially problematic for bowed string instruments such as the violin, where soft onsets and continuous bow-string interaction render note segmentation unreliable. Here, we propose VioTech, a frame-level violin technique detection framework that predicts techniques directly at 10 ms resolution without explicit note segmentation. To handle the large temporal-scale variation among techniques, VioTech combines a frozen MERT encoder with a multi-scale Mixture-of-Experts (MoE) architecture and task-specific routing for tonal, articulation, and legato-related predictions. We also introduce VioTech120, the first manually annotated dataset of violin playing techniques constructed from real solo performance recordings, as well as an accompanying note-labeling user interface. Results demonstrate that VioTech achieved consistent improvements over prior methods and significantly enhanced cross-dataset generalization, establishing a new state-of-the-art in violin technique-aware transcription.",
+  "abstractSha256": "ea6865f30592072362516b929a6bbf712687492469005eb3db2a2dcd5f2eff2e",
+  "arxivId": "2611.02680",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.02680v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "混合专家模型",
+    "primaryTask": "音频事件检测",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.event-detection",
+          "label": "音频事件检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.moe",
+          "label": "混合专家模型"
+        },
+        {
+          "facet": "method",
+          "id": "method.multitask",
+          "label": "多任务学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "混合专家模型",
+      "primaryMethodId": "method.moe",
+      "primaryTask": "音频事件检测",
+      "primaryTaskId": "task.event-detection",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ting-Kang Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Vincent K. M. Cheung"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Nan-Tien Lai"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Li Su"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对小提琴起音柔和导致先切音符再分类不可靠的问题，VioTech 用冻结声学编码器加多尺度专家与任务路由做 10 毫秒逐帧预测，在跨数据集上提升了拨弦与跳弓等瞬态技法的检测，但换弓点检测下降且泛黄音仍困难。",
+  "originalTitle": "VioTech: Frame-Level Violin Playing Technique Detection with Multi-Scale Mixture-of-Experts",
+  "pdfUrl": "https://arxiv.org/pdf/2611.02680v1.pdf",
+  "readerTitle": "VioTech：不用先切音符的小提琴演奏技法逐帧检测",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.02408v1",
+  "abstract": "Local music applications estimate key during library import and benefit from an analyzer that is small, fast, and runs in-process. We start from a compact chroma-template key analyzer that fits this budget but lags behind learned references. Learned systems reach higher accuracy, but their installed model and runtime dependencies can occupy tens to hundreds of megabytes. We present key lime, a 21.5k-parameter DSP-guided transformer reranker with a 115 KB model artifact and a 76.7 MB installed footprint, including the extracted ONNX Runtime. It adds 0.32 ms per track to deterministic DSP scoring. Trained from labels on 4,040 FMAK tracks, with 449 tracks for validation and 1,000 disjoint FMAKv2 tracks held out for evaluation, it improves MIREX from 61.08 to 73.55 +/- 0.46 and exact accuracy from 52.30 to 67.07 +/- 0.65 over three seeds (mean +/- population SD). It approaches a same-manifest local madmom KeyCNN reference at 74.16 MIREX. A 12-parameter circular input stage matches the accuracy range of a 468-parameter linear input projection.",
+  "abstractSha256": "69d9f62fa1beffa41552518b096e55360a31b84703bb4b2afd32728a57b96e80",
+  "arxivId": "2611.02408",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.02408v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "Transformer",
+    "primaryTask": "音乐分析",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-understanding",
+          "label": "音乐分析"
+        },
+        {
+          "facet": "method",
+          "id": "method.transformer",
+          "label": "Transformer"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "Transformer",
+      "primaryMethodId": "method.transformer",
+      "primaryTask": "音乐分析",
+      "primaryTaskId": "task.music-understanding",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Cue Labs"
+      ],
+      "name": "Pardis Noorzad"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对本地音乐应用在导入时需快速、小体积估计调性的问题，论文用确定性色度模板打分做初排，再用 2 万参数的 Transformer 结合帧级色度上下文做残差纠正，在 1000 首密封 FMAKv2 上把 MIREX 从 61.08 提高到 73.55，代价是增加 115 KB 模型和 76.7 MB 含 ONNX Runtime 的安装体积与每首 0.32 ms 推理。",
+  "originalTitle": "Deployment-constrained key estimation with a DSP-guided transformer reranker",
+  "pdfUrl": "https://arxiv.org/pdf/2611.02408v1.pdf",
+  "readerTitle": "小模型如何纠正色度模板的调性判断：DSP 引导的重排序器",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

@@ -1,0 +1,160 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.01143v1",
+  "abstract": "Generative spoken language models (SLMs) offer a route to learning linguistic structure purely from speech, yet they lag far behind text-based models in both capability and data scaling efficiency. We identify two bottlenecks underlying this gap: the limited linguistic quality of existing speech units and the reliance on a single stream of discrete units to represent speech. Multiple codebooks are widely used to encode acoustic features but rarely to represent speech semantics. We present GSLM2, which learns and models complementary properties of speech at multiple levels of abstraction. Its encoder, SpidR 2.0, uses self-supervised learning with differentiable prediction heads to induce high-quality discrete units at multiple levels. A multi-stream SLM then jointly models these units using a shared temporal backbone, stream-specific predictors, and an autoregressive head that captures cross-stream dependencies. Across training data sizes and model scales, up to 6M hours and 6.5B parameters, GSLM2 consistently improves linguistic competence while scaling more efficiently with data. As a result, it substantially narrows the gap between spoken and text-based LMs; across read and conversational speech domains, we shrink the gap by about two orders of magnitude on sWuggy, sBLIMP, and tSC, while also outperforming competitive speech-text systems on all three tasks. We open-source the training code and model checkpoints at https://github.com/facebookresearch/gslm2.",
+  "abstractSha256": "fed53c5404cd6e7238d6009bdfda1a5944e2085094a37b79df9e8d0d46444b72",
+  "arxivId": "2611.01143",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.01143v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "自监督学习",
+    "primaryTask": "语音合成",
+    "rankBucket": "前25%",
+    "score": 8.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-synthesis",
+          "label": "语音合成"
+        },
+        {
+          "facet": "method",
+          "id": "method.self-supervised",
+          "label": "自监督学习"
+        },
+        {
+          "facet": "task",
+          "id": "task.spoken-unit-discovery",
+          "label": "无监督口语单元发现"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "自监督学习",
+      "primaryMethodId": "method.self-supervised",
+      "primaryTask": "语音合成",
+      "primaryTaskId": "task.speech-synthesis",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Meta Superintelligence Labs"
+      ],
+      "name": "Yosuke Higuchi"
+    },
+    {
+      "affiliations": [
+        "Meta Superintelligence Labs",
+        "Université Paris Dauphine-PSL"
+      ],
+      "name": "Tom Fizycki"
+    },
+    {
+      "affiliations": [
+        "Meta Superintelligence Labs"
+      ],
+      "name": "Mahi Luthra"
+    },
+    {
+      "affiliations": [
+        "Meta Superintelligence Labs"
+      ],
+      "name": "Charles-Éric Saint-James"
+    },
+    {
+      "affiliations": [
+        "Meta Superintelligence Labs"
+      ],
+      "name": "Azeez Syed"
+    },
+    {
+      "affiliations": [
+        "Meta Superintelligence Labs"
+      ],
+      "name": "Angel Villar-Corrales"
+    },
+    {
+      "affiliations": [
+        "AMI Labs"
+      ],
+      "name": "Mido Assran"
+    },
+    {
+      "affiliations": [
+        "AMI Labs"
+      ],
+      "name": "Nicolas Ballas"
+    },
+    {
+      "affiliations": [
+        "Meta Superintelligence Labs"
+      ],
+      "name": "Jiayi Shen"
+    },
+    {
+      "affiliations": [
+        "Meta Superintelligence Labs"
+      ],
+      "name": "Dongyan Lin"
+    },
+    {
+      "affiliations": [
+        "Meta Superintelligence Labs"
+      ],
+      "name": "Phillip Rust"
+    },
+    {
+      "affiliations": [
+        "Meta Superintelligence Labs"
+      ],
+      "name": "Surya Parimi"
+    },
+    {
+      "affiliations": [
+        "Meta Superintelligence Labs"
+      ],
+      "name": "Vanessa Stark"
+    },
+    {
+      "affiliations": [
+        "Université Paris Dauphine-PSL"
+      ],
+      "name": "Alexandre Allauzen"
+    },
+    {
+      "affiliations": [
+        "Doctolib"
+      ],
+      "name": "Balázs Kegl"
+    },
+    {
+      "affiliations": [
+        "Meta Superintelligence Labs"
+      ],
+      "name": "Juan Pino"
+    },
+    {
+      "affiliations": [
+        "Meta Superintelligence Labs",
+        "Ecole des Hautes Études en Sciences Sociales"
+      ],
+      "name": "Emmanuel Dupoux"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "GSLM2 针对语音单元语言质量不足和单流表示信息单一的问题，用 SpidR 2.0 在多个编码器层学习可微分的离散单元，再用多流语言模型联合建模这些单元，在 Libri-Light 三档规模和最大 6M 小时口语数据上持续提升词法句法语义得分，但推理计算量明显高于单流模型和文本模型。",
+  "originalTitle": "GSLM2: Multi-Stream Speech Representation Learning and Generative Spoken Language Modeling",
+  "pdfUrl": "https://arxiv.org/pdf/2611.01143v1.pdf",
+  "readerTitle": "GSLM2：多层语音单元与多流建模如何缩小语音与文本的语言能力差距",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

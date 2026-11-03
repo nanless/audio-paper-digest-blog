@@ -1,0 +1,86 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.03050v1",
+  "abstract": "Children's automatic speech recognition (ASR) lags behind adult ASR due to theacoustic mismatch between adult-trained acoustic models and children's speech, as well as the scarcity of labelled children's speech corpora. We investigate whether zero-shot text-to-speech (TTS) synthesis with voice cloning, requiring only a short reference clip per speaker, can serve as a practical substitute for real children's speech when fine-tuning large pre-trained ASR models. Using the OmniVoice multilingual TTS system we synthesise up to 16,000 child-like utterances from two English corpora (ENNI, clinical narrative samples, ages 7-12, and MyST, conversational science-tutor speech, grades 3-5) and fine-tune Whisper-small under different experimental conditions covering real data, synthetic data, cross-corpus data, and all-data combination. A systematic sensitivity analysis over speaker count, text-pool size, and utterances per speaker reveals that synthetic data alone reduces word error rate (WER) from a 19.8 % zero-shot baseline to 16.4 % on ENNI, recovering approximately 30 % of the gap to real-data fine-tuning (8.8 %). Combining synthetic with real data is essentially indistinguishable from real-data-only fine-tuning (9.2 % vs. 8.8 %). Speaker count plateaus at ~40 speakers for cross-domain transfer, while multi-speaker acoustic diversity per transcript, rather than raw text coverage, emerges as the primary determinant of cross-domain generalisation; out-of-vocabulary (OOV) rate proves to be a poor proxy for WER given Whisper's pre-trained language modelling capacity.",
+  "abstractSha256": "5d074d785adda92f120d96eaebe0c8c06dfeaec92defdfe7fb59a5a1e92cc39d",
+  "arxivId": "2611.03050",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.03050v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "数据增强",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 5.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.augmentation",
+          "label": "数据增强"
+        },
+        {
+          "facet": "task",
+          "id": "task.voice-cloning",
+          "label": "语音克隆"
+        },
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "数据增强",
+      "primaryMethodId": "method.augmentation",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Mohammad Mohsen Goodarzi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Stefan Wabnik"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Matthias Stennes"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Stephanus Volke"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Alexander Schwarz"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文用 OmniVoice 零样本克隆训练集儿童声音合成儿童语音，再微调 Whisper-small，在 ENNI 上合成数据单独把词错误率从 19.8% 降到 16.4%，与真实数据合用则与纯真实数据相当，而跨语料泛化主要靠同一文本的多说话人声学多样性而非文本覆盖量。",
+  "originalTitle": "Zero-Shot Voice Cloning for Synthetic Data Augmentation in Children's ASR",
+  "pdfUrl": "https://arxiv.org/pdf/2611.03050v1.pdf",
+  "readerTitle": "只用短参考音频克隆童声来扩充儿童语音识别训练数据",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

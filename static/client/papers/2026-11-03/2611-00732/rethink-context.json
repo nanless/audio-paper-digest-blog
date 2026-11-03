@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.00732v1",
+  "abstract": "We present a native extension to the Free Lossless Audio Codec (FLAC) providing lossless compression for IEEE 754 single-precision (binary32) floating-point audio, alongside a survey and empirical benchmark of existing floating-point compression methods. While professional recording hardware increasingly adopts 32-bit float converters and digital audio workstations process sound exclusively in floating-point math, consumer distribution remains constrained to fixed-point integer PCM. Through Dynamic Positional Alignment (DPA), our implementation achieves approximately 44.1% compression ratios on natural multi-stage ADC recordings--matching the storage footprint of standard 24-bit integer FLAC--and approximately 60.2% on complex digital workstation masters. By preserving dynamic peaks beyond 0 dBFS, the format also allows listeners to undo clipping, providing a practical technical path away from the loudness war with virtually no storage overhead. We do not claim to introduce a fundamentally new compression paradigm; our approach is conceptually similar to the floating-point mechanism in WavPack (which remains undocumented in published literature). Instead, this paper compares existing methods, provides theoretical grounding for why they succeed or fail, benchmarks current codec implementations, and contributes a reference implementation of a proven method within the FLAC ecosystem.",
+  "abstractSha256": "b98baf3dd1f24dd600779a54681454877bbb7ac1b4abe6937173c15beb6b5250",
+  "arxivId": "2611.00732",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.00732v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "信号处理",
+    "primaryTask": "音频编码",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-coding",
+          "label": "音频编码"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "音频编码",
+      "primaryTaskId": "task.audio-coding",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Computer Engineering, Sharif University of Technology"
+      ],
+      "name": "Ali Heydari"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文要解决 32 位浮点音频无法用 FLAC 无损发行的问题，采用帧内按指数对齐再把相干波形与不相关噪声分开编码的办法，在高分辨率音乐上做到与 24 位整数 FLAC 相当的体积并保留超过 0 dBFS 的峰值，代价是上子帧宽度需要折中选择且极端动态要切换到保底编码。",
+  "originalTitle": "8 Bits to End the Loudness War: Lossless Floating-Point Compression for Audio Streams",
+  "pdfUrl": "https://arxiv.org/pdf/2611.00732v1.pdf",
+  "readerTitle": "把 32 位浮点音频无损装进 FLAC：对齐、拆分与回退是如何分工的",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

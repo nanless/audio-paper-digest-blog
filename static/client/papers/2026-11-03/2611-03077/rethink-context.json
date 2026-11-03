@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.03077v1",
+  "abstract": "Spatial audio has an accessibility problem. Largescale spatial and immersive audio installations remain costly and exclusive, with high barriers to entry. We propose ''Ananas,'' a networked audio system consisting of network protocols, control software and microcontroller firmware, with the aim of rendering spatial audio applications accessible to a broad cohort of potential users. Based on a network of low-cost microcontroller development boards programmed in the Faust programming language, synchronised to nanosecond order via IEEE 1588 Precision Time Protocol, and controlled by approachable, digital audio workstation-based tooling, Ananas represents an opportunity to disrupt and democratise the spatial audio landscape. In this paper we demonstrate Ananas's protocols for audio and control data transmission and device discovery, its methods for media clock and presentation time recovery, and its applications to wave field synthesis and higher order ambisonics in a modular, scalable form.",
+  "abstractSha256": "1c9545d15f5ad5d483d2e24ccb625b43508829c501ab3be2484de723b67c0038",
+  "arxivId": "2611.03077",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.03077v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "硬件系统设计与验证",
+    "primaryTask": "空间音频渲染",
+    "rankBucket": "前50%",
+    "score": 6.4,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.spatial-rendering",
+          "label": "空间音频渲染"
+        },
+        {
+          "facet": "method",
+          "id": "method.hardware-system-design",
+          "label": "硬件系统设计与验证"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.spatial-audio",
+          "label": "空间音频信号"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multichannel",
+          "label": "多通道"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "硬件系统设计与验证",
+      "primaryMethodId": "method.hardware-system-design",
+      "primaryTask": "空间音频渲染",
+      "primaryTaskId": "task.spatial-rendering",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Thomas Rushton"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Romain Michon"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Tanguy Risset"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "Ananas 针对分布式空间音频需要多节点严格同步的问题，用 Teensy 4.1 节点加 PTP 同步、多播音频与发现协议和 DAW 控制，在 16 通道 WFS 演示中报告约 80 纳秒平均不同步，但每包通道数和长时间稳定性仍受以太网包长与时钟微调条件限制。",
+  "originalTitle": "Ananas: A Networked Audio System for Distributed Spatial Audio Applications",
+  "pdfUrl": "https://arxiv.org/pdf/2611.03077v1.pdf",
+  "readerTitle": "Ananas：用低成本单片机网络做分布式空间音频",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

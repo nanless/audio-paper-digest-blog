@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.00894v1",
+  "abstract": "Regional target speaker extraction (RSE) aims to extract speech originating from a specified angular region, relaxing the requirement for precise target speaker location when performing location based speech extraction. However, existing RSE methods typically assume a fixed microphone array configuration and microphone number, limiting their applicability to unseen microphone geometries and varying numbers of microphones. In this work, we propose a geometry-aware RSE framework capable of extract with varying microphone array geometry and microphone numbers. Specifically, we introduce an attention-based multichannel front-end to encode inter-microphone phase information, together with a spatial audio reconstruction-based auxiliary objective to improve the front-end spatial representations quality. Experimental results demonstrate that the proposed framework improves SI-SDRi by 5.1 dB over geometry-aware baselines across microphone arrays with four-microphones, while maintaining a performance gap of less than 0.6 dB compared with a tetrahedral geometry-specific baseline when evaluated on the tetrahedral microphone array.",
+  "abstractSha256": "d11060a418d1f1abd4f1cf0764b8cf38cd24168f6a77b5b7dbe3dae7bdf3b59f",
+  "arxivId": "2611.00894",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.00894v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "注意力机制",
+    "primaryTask": "目标说话人提取",
+    "rankBucket": "前50%",
+    "score": 6.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.target-speaker",
+          "label": "目标说话人提取"
+        },
+        {
+          "facet": "method",
+          "id": "method.attention",
+          "label": "注意力机制"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.microphone-array",
+          "label": "麦克风阵列"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.spatial-audio",
+          "label": "空间音频信号"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "注意力机制",
+      "primaryMethodId": "method.attention",
+      "primaryTask": "目标说话人提取",
+      "primaryTaskId": "task.target-speaker",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shitong Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Niki Trigoni"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Andrew Markham"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "本文针对固定阵列假设下区域提取难以换阵列使用的问题，提出随麦克风数量和位置变化的前端与重建辅助目标，在仿真上超过同类可变阵列基线并在四麦克风上接近专用模型，但边界区分仍依赖孔径条件。",
+  "originalTitle": "Microphone Geometry Aware Regional Target Speaker Extraction",
+  "pdfUrl": "https://arxiv.org/pdf/2611.00894v1.pdf",
+  "readerTitle": "麦克风位置变了还能按角度区域提取说话人吗",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

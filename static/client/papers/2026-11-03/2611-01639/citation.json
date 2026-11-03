@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.01639v1",
+  "arxivId": "2611.01639",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.01639v1",
+  "authors": [
+    {
+      "affiliations": [
+        "University of California, Los Angeles"
+      ],
+      "name": "Ruoyu He"
+    },
+    {
+      "affiliations": [
+        "University of Illinois at Urbana-Champaign"
+      ],
+      "name": "Jisen Li"
+    },
+    {
+      "affiliations": [
+        "University of British Columbia"
+      ],
+      "name": "Anthony Ji"
+    },
+    {
+      "affiliations": [
+        "Carnegie Mellon University"
+      ],
+      "name": "Changyi Yang"
+    },
+    {
+      "affiliations": [
+        "Stanford University"
+      ],
+      "name": "Zetian Li"
+    },
+    {
+      "affiliations": [
+        "University of Wisconsin–Madison"
+      ],
+      "name": "Runduo Ma"
+    },
+    {
+      "affiliations": [
+        "University of California, Santa Barbara"
+      ],
+      "name": "Zhen Zhang"
+    },
+    {
+      "affiliations": [
+        "University of Sydney"
+      ],
+      "name": "Zhongzhu Zhou"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.01639v1",
+  "originalTitle": "Local or Escalate? Post-Training Expert Routing for Real-Time Duplex Speech Models",
+  "pdfUrl": "https://arxiv.org/pdf/2611.01639v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

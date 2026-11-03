@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.00402v1",
+  "abstract": "In this paper, we introduce SPHERE (Spatial and Perceptual Human Evaluation and Rating Estimator), a multidimensional no-reference perceptual evaluation framework for binaural speech. SPHERE defines nine distinct perceptual and spatial attributes that characterize the immersive listening experience. We detail the crowdsourcing protocol and evaluation template used to collect ground-truth human ratings. To demonstrate the tractability of automating this framework, we evaluate six baseline configurations across single-branch and Siamese architectures utilizing Mel-spectrograms, complex STFTs, and pretrained spatial embeddings (PhaseCoder). Experimental results demonstrate that these baseline estimators achieve strong correlation with human subjective ratings, proving the feasibility of automated multidimensional spatial audio quality assessment.",
+  "abstractSha256": "97fe7637abb36e623a894ab04a0de2a061f774c201a15877ad525afbdae776e6",
+  "arxivId": "2611.00402",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.00402v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "多任务学习",
+    "primaryTask": "语音质量评估",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-quality",
+          "label": "语音质量评估"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.spatial-audio",
+          "label": "空间音频"
+        },
+        {
+          "facet": "method",
+          "id": "method.crowdsourced-evaluation",
+          "label": "众包评测"
+        },
+        {
+          "facet": "method",
+          "id": "method.multitask",
+          "label": "多任务学习"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "多任务学习",
+      "primaryMethodId": "method.multitask",
+      "primaryTask": "语音质量评估",
+      "primaryTaskId": "task.speech-quality",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Bala Manikya Prasad Puram"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Chandan K A Reddy"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Artem Dementyev"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "SPHERE 针对双耳语音同时做九个感知的无参考预测，用众包听音得到真值，再以单分支与孪生卷积循环基线验证可行性，最好的片段级平均 PCC 为 0.706 而系统级孪生结构占优，但结论只在同类耳机采集与严格防泄漏划分下成立。",
+  "originalTitle": "SPHERE: A Multi-Attribute No-Reference metric for Binaural Speech Quality And Spatial Fidelity",
+  "pdfUrl": "https://arxiv.org/pdf/2611.00402v1.pdf",
+  "readerTitle": "双耳语音既要听得清，也要定位稳：SPHERE 如何把九个听感一次评完",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

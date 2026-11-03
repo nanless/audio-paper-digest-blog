@@ -1,0 +1,110 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.02628v1",
+  "abstract": "Advances in synthesis techniques have made deepfake speech increasingly realistic, amplifying voice security threats, including unauthorized voice cloning and impersonation. Although existing deepfake detectors perform well on digitally generated speech, their performance often degrades on physically replayed deepfakes, which constitute a low-cost and practical threat to real-world systems. Existing research focuses primarily on dataset construction and evaluation, while available dataset diversity and replay-aware detector design remain limited. We propose ReplayFactor, a dual-attribute framework that enhances replay evidence by fusing self-supervised learning (SSL) representations with an acoustic prior, while leveraging multi-task learning and supervised contrastive learning to promote robust, generalizable representations. We also construct ReplayFake-CN, a large-scale, multi-device Chinese dataset comprising approximately 185k replayed synthetic utterances to complement public benchmarks. Our framework improves macro-F1 from 60.99% to 76.44% and reduces EER from 11.86% to 3.05% on the EchoFake open set over the baseline, demonstrating strong potential for practical replayed deepfake detection.",
+  "abstractSha256": "88f4e8caf96ee2a590b15e46d1ee10343636236ccd136405da51dea93772cba5",
+  "arxivId": "2611.02628",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.02628v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多任务学习",
+    "primaryTask": "语音伪造检测",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-spoofing",
+          "label": "语音伪造检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.multitask",
+          "label": "多任务学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.contrastive",
+          "label": "对比学习"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "多任务学习",
+      "primaryMethodId": "method.multitask",
+      "primaryTask": "语音伪造检测",
+      "primaryTaskId": "task.speech-spoofing",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Miao He"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jiayi Zhou"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yu Zheng"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhongjie Ba"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Peng Cheng"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yuxi Zhou"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Junjie Zhu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Changhao Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jian Liu"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对合成语音经扬声器播放再被麦克风录制后伪造痕迹被掩盖的问题，ReplayFactor 用自监督表示加声学先验融合与双属性多任务对比学习来分离来源与回放线索，在 EchoFake 开放集上把宏观 F1 从 60.99% 提高到 76.44%、等错误率从 11.86% 降到 3.05%，代价是需要四类标注和更大的联合训练开销。",
+  "originalTitle": "ReplayFactor: Replay-Aware Dual-Attribute Learning for Practical Speech Deepfake Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2611.02628v1.pdf",
+  "readerTitle": "回放合成语音为什么难检：ReplayFactor 的双属性检测解读",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

@@ -1,0 +1,77 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.02651v1",
+  "abstract": "Jointly trained multimodal networks frequently underutilize weaker modalities, as faster-learning modalities dominate the shared fusion objective and suppress gradients reaching slower ones. Most existing approaches throttle dominant modalities, whereas directly boosting weaker modalities often fails because monitoring signals derived from the joint loss remain dominated by stronger modalities. We propose Probe-Guided Gradient Boosting (PGGB), a gradient modulation approach that boosts weaker modalities while preserving the strength of dominant ones. PGGB attaches lightweight linear classifiers to stop-gradient features from each modality to estimate representation quality independently. The gap between these scores, termed the utilization gap, provides an imbalance signal used to adaptively scale weaker-modality gradients through bounded and smoothed modulation. PGGB is composable with throttling methods, as it leaves the loss function and fusion architecture unchanged. Experiments across eight benchmarks spanning four domains and 2-4 modalities demonstrate that PGGB outperforms state-of-the-art methods on highly imbalanced multimodal datasets while remaining competitive under low or negligible imbalance. We further establish bounded scaling, self-attenuation, and a descent bound for standard SGD under smoothness and bounded-variance assumptions. Code is available at https://github.com/VuVoCodes/PGGB.",
+  "abstractSha256": "d59f5cd2a144f79b6a98d484fb33f480fffebe303ab5f7e532f5a1bee4b702cc",
+  "arxivId": "2611.02651",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.02651v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "多模态情感极性分析",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.multimodal-sentiment",
+          "label": "多模态情感极性分析"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "task",
+          "id": "task.emotion-recognition",
+          "label": "语音情感识别"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "多模态情感极性分析",
+      "primaryTaskId": "task.multimodal-sentiment",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "School of Science, Engineering & Technology",
+        "RMIT University"
+      ],
+      "name": "Vu Vo"
+    },
+    {
+      "affiliations": [
+        "School of Computing Technologies",
+        "RMIT University"
+      ],
+      "name": "Haytham M. Fayek"
+    },
+    {
+      "affiliations": [
+        "School of Science, Engineering & Technology",
+        "RMIT University"
+      ],
+      "name": "Thuy Nguyen"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对联合训练中强模态压制弱模态梯度的问题，论文用止梯度特征上的线性探针估计各模态表征质量并只放大弱编码器梯度，在高度不平衡的 CREMA-D 上与节流方法组合取得 71.45% 准确率，代价是约 1.6% 额外耗时和对工况条件的依赖。",
+  "originalTitle": "Probe-Guided Gradient Balancing for Multimodal Learning",
+  "pdfUrl": "https://arxiv.org/pdf/2611.02651v1.pdf",
+  "readerTitle": "用探测器看清弱模态：PGGB 如何只放大弱者而不压制强者",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

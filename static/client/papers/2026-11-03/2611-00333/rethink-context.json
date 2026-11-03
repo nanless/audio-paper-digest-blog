@@ -1,0 +1,97 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.00333v1",
+  "abstract": "Speech language models encode audio at a much higher rate than text, causing the KV cache to dominate the memory, bandwidth, and decoding cost of long-form generation. KV retrieval can reduce per-step access by attending to only a query-dependent subset of the cache, but existing methods are designed primarily for text and do not account for the structure of audio attention. We first show that retrieval errors may compound autoregressively into generation drift. We then analyze full audio attention during long-form generation and identify three properties relevant to retrieval: unequal attention concentration across query heads, non-contiguous audio support, and temporal continuity across decoding steps. Guided by these observations, we propose $C^3$(Cluster-Compete-Compete), which organizes audio KVs in a hierarchical key-space index, lets query heads sharing a KV head compete for a common retrieval budget, and adaptively reallocates retrieval resolution through paired split-merge updates. Across long-form speech recognition, translation, and summarization on four SpeechLLMs, $C^3$ achieves the strongest overall performance among retrieval methods under comparable final-KV access budgets, with particularly large gains in the tight-budget regime, while improving long-context decoding efficiency and accelerator-memory scaling.",
+  "abstractSha256": "dc4ce1967b0e6eca95586e07fabf8aae7835a068b739a97dbe968323e3b01c15",
+  "arxivId": "2611.00333",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.00333v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "检索增强",
+    "primaryTask": "语音识别",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-translation",
+          "label": "语音翻译"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-summarization",
+          "label": "语音摘要"
+        },
+        {
+          "facet": "method",
+          "id": "method.retrieval-augmented",
+          "label": "检索增强"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "检索增强",
+      "primaryMethodId": "method.retrieval-augmented",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "University at Buffalo, USA"
+      ],
+      "name": "Dancheng Liu"
+    },
+    {
+      "affiliations": [
+        "Amazon AGI, USA"
+      ],
+      "name": "Markus Müller"
+    },
+    {
+      "affiliations": [
+        "Amazon AGI, USA"
+      ],
+      "name": "Rupak Vignesh Swaminathan"
+    },
+    {
+      "affiliations": [
+        "Amazon AGI, USA"
+      ],
+      "name": "Jing Liu"
+    },
+    {
+      "affiliations": [
+        "Amazon AGI, USA"
+      ],
+      "name": "Srikanth Ronanki"
+    },
+    {
+      "affiliations": [
+        "Amazon AGI, USA"
+      ],
+      "name": "Aram Galstyan"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对语音大模型音频 KV 缓存过大带来的长上下文推理瓶颈，论文提出按 KV 头共享竞争与层次分裂合并自适应分配检索粒度的 C3 个方法，在四个语音大模型和识别翻译摘要任务上于相同检索预算下取得最强检索精度且在小预算下优势最大，但结论只在所测模型长度预算与贪婪解码条件下成立并伴随短上下文额外开销。",
+  "originalTitle": "C3: Speech-Guided KV Retrieval for Long-Context SpeechLLM Inference",
+  "pdfUrl": "https://arxiv.org/pdf/2611.00333v1.pdf",
+  "readerTitle": "长语音推理为何变慢变错：C3 如何只取一小部分音频 KV 还能跟住转写",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

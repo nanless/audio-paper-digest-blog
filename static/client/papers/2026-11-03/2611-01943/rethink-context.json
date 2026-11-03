@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.01943v1",
+  "abstract": "Multimodal emotion recognition commonly combines textual, acoustic, and visual signals to infer affective states. Recent work has begun to study conflicts among modalities, but a conflict does not necessarily indicate that a person is concealing an emotion. It may also result from mixed emotions, individual expressive styles, or contextual factors. This proposal aims to distinguish ordinary emotional inconsistency from emotion concealment and to infer the underlying emotion when supported by evidence. We plan to construct a multimodal benchmark with explicit annotations of expressed emotion, internal emotion, and concealment conditions, and to develop an MLLM-based framework that integrates fine-grained facial Action Units (AUs), cross-modal features, and temporal context.",
+  "abstractSha256": "128b08eb4bb9b36dbb8b4380419728fd092f5bdfa05d1f77d2ef1b91b1fd83bf",
+  "arxivId": "2611.01943",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.01943v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "多模态情感极性分析",
+    "rankBucket": "后50%",
+    "score": 3.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.multimodal-sentiment",
+          "label": "多模态情感极性分析"
+        },
+        {
+          "facet": "task",
+          "id": "task.visual-affect-estimation",
+          "label": "视觉情绪与情感估计"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.instruction-tuning",
+          "label": "指令微调"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "多模态情感极性分析",
+      "primaryTaskId": "task.multimodal-sentiment",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yonghao Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jiaxin Zhou"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "这篇研究提案要区分普通多模态情绪不一致与真正的情绪隐藏，计划用面部动作单元、跨模态融合与时间上下文结合多模态大语言模型来建基准并做三级推理，但目前只给出了方案与待建的评测，没有已完成的隐藏情绪识别实验结果。",
+  "originalTitle": "Beyond Multimodal Emotion Conflict: Temporal Context-Aware Hidden Emotion Detection with Multimodal Large Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2611.01943v1.pdf",
+  "readerTitle": "多模态不一致不等于藏起了情绪：这篇提案想如何识别隐藏情绪",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

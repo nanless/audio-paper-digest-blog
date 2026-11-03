@@ -1,0 +1,109 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.01639v1",
+  "abstract": "A full-duplex model should answer easy questions immediately, but hard questions often need stronger reasoning, which may require waiting. The challenge is to choose between these paths at the moment the model begins to speak. Recent systems learn related mode decisions through special-token generation inside the dialogue model, coupling routing to turn-taking and temporally annotated full-duplex training. We study a post-training alternative. We freeze MiniCPM-o 4.5, using only its speech input and output, and fit a logistic failure readout on hidden states already available at its native listen-to-speak transition. The resulting gate requires no additional model generation and exposes thresholds that can be retuned without changing the duplex policy. A probe fitted on text-input states also reads the states of spoken questions, including unseen human recordings. On the internal benchmark, selective handoff improves answer accuracy by 27.1 points. Compared with always using the expert, it reduces mean server time to first answer audio by 31.5 percent. It also outperforms matched random routing across external speech question-answering pools, as well as a zero-shot GPT-5.4 mini router that rates the transcribed question. The training recipe also transfers to a second duplex model family. These results show that an existing duplex model can be equipped to answer easy turns immediately and wait for stronger reasoning or fresher knowledge on the turns that need it, without further duplex training.",
+  "abstractSha256": "48df2068207b3f706ae67a305aaac3ebc921671ad0b28a4c92d2bad7071e8ee2",
+  "arxivId": "2611.01639",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.01639v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "表示探测",
+    "primaryTask": "全双工语音交互",
+    "rankBucket": "前50%",
+    "score": 7.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.full-duplex",
+          "label": "全双工语音交互"
+        },
+        {
+          "facet": "method",
+          "id": "method.representation-probing",
+          "label": "表示探测"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.real-time",
+          "label": "实时处理"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "表示探测",
+      "primaryMethodId": "method.representation-probing",
+      "primaryTask": "全双工语音交互",
+      "primaryTaskId": "task.full-duplex",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "University of California, Los Angeles"
+      ],
+      "name": "Ruoyu He"
+    },
+    {
+      "affiliations": [
+        "University of Illinois at Urbana-Champaign"
+      ],
+      "name": "Jisen Li"
+    },
+    {
+      "affiliations": [
+        "University of British Columbia"
+      ],
+      "name": "Anthony Ji"
+    },
+    {
+      "affiliations": [
+        "Carnegie Mellon University"
+      ],
+      "name": "Changyi Yang"
+    },
+    {
+      "affiliations": [
+        "Stanford University"
+      ],
+      "name": "Zetian Li"
+    },
+    {
+      "affiliations": [
+        "University of Wisconsin–Madison"
+      ],
+      "name": "Runduo Ma"
+    },
+    {
+      "affiliations": [
+        "University of California, Santa Barbara"
+      ],
+      "name": "Zhen Zhang"
+    },
+    {
+      "affiliations": [
+        "University of Sydney"
+      ],
+      "name": "Zhongzhu Zhou"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文冻结 MiniCPM-o 4.5 只在它由听转说的时刻读隐藏状态拟合逻辑回归失败风险门控，内部 240 问上激进策略以 50% 上交率把准确率从 42.1% 提到 69.2%，同时比全部上交把平均服务器等待从 8.68 秒降到 5.95 秒，代价是仍需云端专家和转写合成开销且对多步执行失误几乎无效。",
+  "originalTitle": "Local or Escalate? Post-Training Expert Routing for Real-Time Duplex Speech Models",
+  "pdfUrl": "https://arxiv.org/pdf/2611.01639v1.pdf",
+  "readerTitle": "本地答还是上交专家？冻结双工语音模型的开讲时刻分流",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

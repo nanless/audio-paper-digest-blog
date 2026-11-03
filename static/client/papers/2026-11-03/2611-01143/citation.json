@@ -1,0 +1,118 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.01143v1",
+  "arxivId": "2611.01143",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.01143v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Meta Superintelligence Labs"
+      ],
+      "name": "Yosuke Higuchi"
+    },
+    {
+      "affiliations": [
+        "Meta Superintelligence Labs",
+        "Université Paris Dauphine-PSL"
+      ],
+      "name": "Tom Fizycki"
+    },
+    {
+      "affiliations": [
+        "Meta Superintelligence Labs"
+      ],
+      "name": "Mahi Luthra"
+    },
+    {
+      "affiliations": [
+        "Meta Superintelligence Labs"
+      ],
+      "name": "Charles-Éric Saint-James"
+    },
+    {
+      "affiliations": [
+        "Meta Superintelligence Labs"
+      ],
+      "name": "Azeez Syed"
+    },
+    {
+      "affiliations": [
+        "Meta Superintelligence Labs"
+      ],
+      "name": "Angel Villar-Corrales"
+    },
+    {
+      "affiliations": [
+        "AMI Labs"
+      ],
+      "name": "Mido Assran"
+    },
+    {
+      "affiliations": [
+        "AMI Labs"
+      ],
+      "name": "Nicolas Ballas"
+    },
+    {
+      "affiliations": [
+        "Meta Superintelligence Labs"
+      ],
+      "name": "Jiayi Shen"
+    },
+    {
+      "affiliations": [
+        "Meta Superintelligence Labs"
+      ],
+      "name": "Dongyan Lin"
+    },
+    {
+      "affiliations": [
+        "Meta Superintelligence Labs"
+      ],
+      "name": "Phillip Rust"
+    },
+    {
+      "affiliations": [
+        "Meta Superintelligence Labs"
+      ],
+      "name": "Surya Parimi"
+    },
+    {
+      "affiliations": [
+        "Meta Superintelligence Labs"
+      ],
+      "name": "Vanessa Stark"
+    },
+    {
+      "affiliations": [
+        "Université Paris Dauphine-PSL"
+      ],
+      "name": "Alexandre Allauzen"
+    },
+    {
+      "affiliations": [
+        "Doctolib"
+      ],
+      "name": "Balázs Kegl"
+    },
+    {
+      "affiliations": [
+        "Meta Superintelligence Labs"
+      ],
+      "name": "Juan Pino"
+    },
+    {
+      "affiliations": [
+        "Meta Superintelligence Labs",
+        "Ecole des Hautes Études en Sciences Sociales"
+      ],
+      "name": "Emmanuel Dupoux"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.01143v1",
+  "originalTitle": "GSLM2: Multi-Stream Speech Representation Learning and Generative Spoken Language Modeling",
+  "pdfUrl": "https://arxiv.org/pdf/2611.01143v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

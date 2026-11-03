@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.02081v1",
+  "arxivId": "2611.02081",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.02081v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Engineering Science, University of Oxford, Oxford OX1 3PJ, United Kingdom"
+      ],
+      "name": "Yuanbo Hou"
+    },
+    {
+      "affiliations": [
+        "UCL Institute for Environmental Design and Engineering, The Bartlett, University College London, London WC1H 0NN, United Kingdom"
+      ],
+      "name": "Kening Guo"
+    },
+    {
+      "affiliations": [
+        "UCL Institute for Environmental Design and Engineering, The Bartlett, University College London, London WC1H 0NN, United Kingdom"
+      ],
+      "name": "Francesco Aletta"
+    },
+    {
+      "affiliations": [
+        "School of Electrical and Electronic Engineering, Nanyang Technological University, Singapore 639798, Singapore"
+      ],
+      "name": "Woon-Seng Gan"
+    },
+    {
+      "affiliations": [
+        "Department of Information Technology, Faculty of Engineering and Architecture, Ghent University, 9052 Ghent, Belgium"
+      ],
+      "name": "Dick Botteldooren"
+    },
+    {
+      "affiliations": [
+        "UCL Institute for Environmental Design and Engineering, The Bartlett, University College London, London WC1H 0NN, United Kingdom"
+      ],
+      "name": "Jian Kang"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.02081v1",
+  "originalTitle": "Understanding the relationship between retrospective soundscape attributes and continuous pleasantness and eventfulness ratings",
+  "pdfUrl": "https://arxiv.org/pdf/2611.02081v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

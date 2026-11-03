@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.00746v1",
+  "abstract": "Music genre classification remains a fundamental yet challenging task in music information retrieval, requiring models that capture local time--frequency patterns and long-range temporal dependencies. To address this, we propose ResMamba, a hybrid architecture that augments a ResNet-style four-stage backbone with Mamba blocks. Building upon the selective structured state space sequence model, ResMamba first adapts the selective SSM into a 4D-compatible residual Mamba block that captures global dependencies at linear complexity. We then design the ConvMamba dual-path block, which combines this adapted Mamba branch with a parallel convolutional branch through a learned $1\\times1$ fusion, jointly modeling global sequential context and local spectro-temporal patterns. Furthermore, we adopt a multi-scale fusion head that aggregates hierarchical representations across all four stages. Experiments on the GTZAN dataset demonstrate that our full ResMamba model achieves a 5-fold cross-validation accuracy of $88.99\\% \\pm 1.58\\%$, surpassing the strongest published method in our comparison (88.64\\%). All models are trained from scratch without any pretraining, external data, or data augmentation. Beyond GTZAN, ResMamba also generalizes to the larger FMA benchmarks under the same training protocol, attaining $64.52\\% \\pm 1.88\\%$ on FMA-Small under 10-fold cross-validation --- the best published from-scratch result --- and $65.75\\%$ on FMA-Medium under the official artist-level split, surpassing the widely cited SVM baseline of Defferrard \\textit{et al.} (63\\%).",
+  "abstractSha256": "f5a986cf4824ee409aa2e9c38d5ae9a46218a45b0fc77da6c59325af9a0d2453",
+  "arxivId": "2611.00746",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.00746v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "状态空间模型",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.music-information",
+          "label": "音乐信息检索"
+        },
+        {
+          "facet": "method",
+          "id": "method.cnn",
+          "label": "CNN"
+        },
+        {
+          "facet": "method",
+          "id": "method.state-space",
+          "label": "状态空间模型"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "状态空间模型",
+      "primaryMethodId": "method.state-space",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yingyu Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Pu Qu"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对梅尔频谱图同时需要局部时频纹理和长时跨段结构的问题，ResMamba 在 ResNet 式四阶段主干中并行使用卷积分支抓局部与选择性状态空间分支抓全局并做多尺度融合，在 GTZAN 五折平均 88.99% 且全程从零训练，代价是依赖全分辨率输入与分窗折中。",
+  "originalTitle": "ResMamba: A Dual-Path Convolution-Mamba Model for Music Genre Classification",
+  "pdfUrl": "https://arxiv.org/pdf/2611.00746v1.pdf",
+  "readerTitle": "ResMamba：用双路卷积加状态空间模型做音乐流派分类",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

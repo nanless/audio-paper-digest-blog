@@ -1,0 +1,80 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.00648v1",
+  "abstract": "Distributed semantic communication enables spatially separated terminals to support collaborative inference over wireless links for 6G edge intelligence. In multimodal sensing and cooperative perception, a single terminal captures only a partial view, and full task semantics emerge only when complementary observations from multiple terminals are fused at the receiver. However, under tight uplink budgets, existing task-oriented joint source--channel coding (JSCC) and distributed information bottleneck (IB) methods evaluate rate--distortion trade-offs per terminal, tending to undervalue cross-terminal synergistic features and prune them prematurely. To address this issue, we propose a synergy-credited distributed JSCC (\\method{}) framework that introduces a differentiable, post-equalization matrix Rényi synergy credit as a surrogate to reward complementary task evidence surviving the wireless channel and backpropagates its gradients to local symbol gates. At deployment, the credit branch is removed and binary symbol masks are frozen, allowing each terminal to encode independently without inter-terminal signaling or extra inference overhead. Experiments show that \\method{} recovers the analytical symbol-selection threshold on parity sources and reduces payload symbols by 28.4\\% on AV-MNIST and 32.9\\% on PAMAP2 over an uncredited gated baseline, while achieving a 6.2-point accuracy gain at $-6$~dB under 3GPP TDL-C fading with pilot-aided channel estimation for low-overhead wireless cooperative sensing.",
+  "abstractSha256": "d42fa39998c649621b99847475175be3af60d13b7f012404ec787f724d48e111",
+  "arxivId": "2611.00648",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.00648v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "端到端学习",
+    "primaryTask": "多模态语义传输",
+    "rankBucket": "前50%",
+    "score": 6.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.multimodal-semantic-transport",
+          "label": "多模态语义传输"
+        },
+        {
+          "facet": "method",
+          "id": "method.end-to-end-learning",
+          "label": "端到端学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "端到端学习",
+      "primaryMethodId": "method.end-to-end-learning",
+      "primaryTask": "多模态语义传输",
+      "primaryTaskId": "task.multimodal-semantic-transport",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Fan Gao"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Youzheng Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhijin Qin"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xiaoming Tao"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对两个终端各看局部、合起来才决定标签的分布式语义通信，本文用训练期均衡后协同奖励去修正逐终端计费的门控选择，在奇偶校验上复现理论门限并在 AV-MNIST 与 PAMAP2 上节省约三成负载符号，代价是集中训练与按预算重训门控。",
+  "originalTitle": "Synergy-Aware Symbol Allocation for Distributed Semantic Communication",
+  "pdfUrl": "https://arxiv.org/pdf/2611.00648v1.pdf",
+  "readerTitle": "互补才有意义时，如何分配发送符号：SC-DJSCC 解读",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

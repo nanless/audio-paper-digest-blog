@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.00333v1",
+  "arxivId": "2611.00333",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.00333v1",
+  "authors": [
+    {
+      "affiliations": [
+        "University at Buffalo, USA"
+      ],
+      "name": "Dancheng Liu"
+    },
+    {
+      "affiliations": [
+        "Amazon AGI, USA"
+      ],
+      "name": "Markus Müller"
+    },
+    {
+      "affiliations": [
+        "Amazon AGI, USA"
+      ],
+      "name": "Rupak Vignesh Swaminathan"
+    },
+    {
+      "affiliations": [
+        "Amazon AGI, USA"
+      ],
+      "name": "Jing Liu"
+    },
+    {
+      "affiliations": [
+        "Amazon AGI, USA"
+      ],
+      "name": "Srikanth Ronanki"
+    },
+    {
+      "affiliations": [
+        "Amazon AGI, USA"
+      ],
+      "name": "Aram Galstyan"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.00333v1",
+  "originalTitle": "C3: Speech-Guided KV Retrieval for Long-Context SpeechLLM Inference",
+  "pdfUrl": "https://arxiv.org/pdf/2611.00333v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

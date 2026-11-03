@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.00657v1",
+  "abstract": "Object-based spatial audio promises render-anywhere playback, yet deploying it in a new venue still requires two tasks that are rarely addressed together: acquiring the physical loudspeaker geometry and enabling creators manipulate spatial audio while listening through the target loudspeaker system rather than a headphone proxy. We present Spatial DJ, a system for on-site loudspeaker layout acquisition and real-time spatial audio rendering and control, using head-worn AR in a coordinate frame aligned to the physical loudspeakers. In an 18-loudspeaker room, we evaluate calibration accuracy, repeatability, and control latency, and conduct an 18-participant listener study comparing diffuse and orbiting point-source rendering configurations applied to vocal and instrumental layers. Orbiting point-source conditions received higher ratings of perceived immersion, energy, and novelty than the diffuse baseline. Beyond this controlled setting, four representative deployments illustrate reuse of the same system across heterogeneous loudspeaker venues.",
+  "abstractSha256": "70cfada5ef632024dea4735da65dc20e17326bc772a765f01725a7a462730895",
+  "arxivId": "2611.00657",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.00657v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "信号处理",
+    "primaryTask": "空间音频渲染",
+    "rankBucket": "前50%",
+    "score": 6.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.spatial-rendering",
+          "label": "空间音频渲染"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.spatial-audio",
+          "label": "空间音频信号"
+        },
+        {
+          "facet": "method",
+          "id": "method.user-study",
+          "label": "用户研究"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "空间音频渲染",
+      "primaryTaskId": "task.spatial-rendering",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Anastasia Geleta"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Margarita Geleta"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对新场地不知音箱位置、又想在现场听着真实音箱做空间创作的问题，Spatial DJ 用 AR 对准采集布局、以后端距离增益实时渲染，并以 18 只音箱房的校准误差、控制延迟和 18 人听感实验说明效果与边界。",
+  "originalTitle": "Spatial DJ: Spatial Audio Control for Arbitrary Loudspeaker Layouts",
+  "pdfUrl": "https://arxiv.org/pdf/2611.00657v1.pdf",
+  "readerTitle": "Spatial DJ：在任意音箱布局上现场校准与实时空间混音",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

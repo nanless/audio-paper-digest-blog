@@ -1,0 +1,86 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.02250v1",
+  "abstract": "High-frequency reconstruction in bandwidth extension (BWE) depends on joined interactions among nonlinear spectral, temporal, and perceptual features; assigning a separate discriminator to each such feature may be redundant and may fail to model their joint interactions. We introduce quantum-informed generative model Q-BWE, where we design a five-qubit Quantum Chaos Discriminator (QCD) instead of using separate discriminator for every features, for modeling nonlinear joined-feature interactions efficiently. Our QCD explores a compact five-qubit quantum-inspired inductive bias based on data re-uploading circuit, trainable controlled NOT (CNOT) rotations, quantum entangling gates, and statevector measurement map. Five features for five qubits are selected from a 26-dimensional speech-dynamics bank and are encoded by a two-layer statevector circuit, producing 31 measurements map of local behavior, correlations, mixedness, and Born entropy. QCD guides a Lattice-ConformerNeXt generator with FiLM conditioning and a cosine-masked residual pathway, while delayed-reward Thompson sampling adaptively controls its contribution. The circuit is simulated on classical hardware. Overall, Q-BWE achieves competitive performance on VCTK English, and MLS French datasets in multilingual and multi speaker setups under clean and noisy conditions across a broad set of evaluation metrics with approximately 1.72x fewer parameters (33.5M vs. 19.4M) compared to recent CIS-BWE baseline published in ACL.",
+  "abstractSha256": "5a349011c2e7daf9a8b9f3eafdcb18f0dede5dbcbbc77a7ee27088ec29103399",
+  "arxivId": "2611.02250",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.02250v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "生成对抗网络",
+    "primaryTask": "带宽扩展",
+    "rankBucket": "前50%",
+    "score": 6.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.bandwidth-extension",
+          "label": "带宽扩展"
+        },
+        {
+          "facet": "method",
+          "id": "method.gan",
+          "label": "生成对抗网络"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "生成对抗网络",
+      "primaryMethodId": "method.gan",
+      "primaryTask": "带宽扩展",
+      "primaryTaskId": "task.bandwidth-extension",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Tarikul Islam Tamiti"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Sajid Fardin Dipto"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "David Vergano"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Luke Baja-Ricketts"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Anomadarshi Barua"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "Q-BWE 要从窄带语音恢复缺失高频，用五量子比特的量子混沌判别器一次建模多特征联合分布，并以 FiLM 条件与升余弦掩膜约束生成器，在 VCTK 与 MLS 上以约一半参数达到可比的过平滑与感知质量，但结论只在原文的单种子与多指标折中条件下成立。",
+  "originalTitle": "Q-BWE: Quantum Chaos-Informed Speech Bandwidth Extension",
+  "pdfUrl": "https://arxiv.org/pdf/2611.02250v1.pdf",
+  "readerTitle": "用一个量子混沌判别器做语音带宽扩展：Q-BWE 解读",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

@@ -1,0 +1,86 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.02083v1",
+  "abstract": "We describe two submissions to Task B of the 1st DAFx Parameter Estimation Challenge, which estimates an unknown number of modal frequency, decay, and gain triples from a synthetic plate-reverb impulse response. The first method combines pooled spectral features with time-domain and absolute-scale conditioning in a real-valued convolutional count-density network, while the second uses a complex-valued Transformer count-density network. Both methods jointly infer the modal count and per-mode attributes directly from the IR. On an independently generated 100-IR comparison set, the two neural estimators achieve lower overall challenge error than the evaluated classical baselines, with frequency and decay estimation substantially more accurate than gain estimation.",
+  "abstractSha256": "a065321afcfc39456f447e2c1a2d4540831741ac790f452962bd6ddd82c8c202",
+  "arxivId": "2611.02083",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.02083v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "CNN",
+    "primaryTask": "声学系统参数估计",
+    "rankBucket": "前50%",
+    "score": 7.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.acoustic-parameter-estimation",
+          "label": "声学系统参数估计"
+        },
+        {
+          "facet": "method",
+          "id": "method.cnn",
+          "label": "CNN"
+        },
+        {
+          "facet": "method",
+          "id": "method.transformer",
+          "label": "Transformer"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.comparison",
+          "label": "模型比较"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "CNN",
+      "primaryMethodId": "method.cnn",
+      "primaryTask": "声学系统参数估计",
+      "primaryTaskId": "task.acoustic-parameter-estimation",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Rodrigo Diaz"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Pablo Tablas De Paula"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "David Marttila"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ilias Ibnyahya"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Chin-Yun Yu"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对合成平板混响脉冲响应中未知数量的模态频率、衰减和增益三元组估计问题，论文用计数密度网络同时预测总数与频率分布并解码为整数个模态，在 100 条独立合成脉冲响应的对比中总体误差低于所评估的经典基线，但增益误差仍是主要误差来源，且结论只在相同合成器与频段条件下成立。",
+  "originalTitle": "Count-Density Networks for Modal Plate Parameter Estimation",
+  "pdfUrl": "https://arxiv.org/pdf/2611.02083v1.pdf",
+  "readerTitle": "用计数密度同时估计平板混响的模态个数与参数",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

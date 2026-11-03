@@ -1,0 +1,121 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.03119v1",
+  "abstract": "Multichannel-to-multichannel target speech extraction (MIMO TSE) aims to recover the target speech signal at each microphone while preserving interchannel spatial information. However, existing MIMO TSE systems generally assume a fixed microphone configuration, limiting their applicability to recording devices with varying microphone configurations. In this work, we propose SPATEX, the first array-flexible MIMO TSE framework that reconstructs microphone-wise target speech signals across microphone counts and array geometries. Given microphone coordinates and a target direction-of-arrival (DOA), SPATEX combines geometry-aware channel exchange and shared temporal attention to jointly reconstruct microphone-wise target signals while maintaining permutation equivariance. Experiments show that SPATEX outperforms array-flexible single-output baselines under most test conditions and consistently improves extraction quality and spatial fidelity over fixed-array MIMO baselines. Ablation studies further validate the benefits of temporal coordination and spatial supervision, while additional evaluations demonstrate robustness to target DOA errors. Our code and dataset are available at https://github.com/Wenanzhi/SPATEX.",
+  "abstractSha256": "0e9811ca3ba1e7b4f00e1399b5f96d46efdfb4e3e0659f2223ad1b8338f36c74",
+  "arxivId": "2611.03119",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.03119v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "注意力机制",
+    "primaryTask": "目标说话人提取",
+    "rankBucket": "前25%",
+    "score": 8.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.target-speaker",
+          "label": "目标说话人提取"
+        },
+        {
+          "facet": "method",
+          "id": "method.attention",
+          "label": "注意力机制"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.microphone-array",
+          "label": "麦克风阵列"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.spatial-audio",
+          "label": "空间音频信号"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "注意力机制",
+      "primaryMethodId": "method.attention",
+      "primaryTask": "目标说话人提取",
+      "primaryTaskId": "task.target-speaker",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Wen Wen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Changda Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yu Xi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Haoyu Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Qiang Zhou"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Guanyu Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xiaoyu Gu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Bohan Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shuai Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kai Yu"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "SPATEX 针对多麦克风下既要提目标语音又要保留各通道空间关系、且麦克风数量与几何可变的问题，用几何感知的通道交换与共享时间注意力逐通道重建混响目标像，并以相位差与相干性约束通道间关系，在可变阵列与固定阵列上都报告了提取与空间保真度的提升。",
+  "originalTitle": "SPATEX: Array-Flexible Multichannel-to-Multichannel Target Speech Extraction using Direction Clue",
+  "pdfUrl": "https://arxiv.org/pdf/2611.03119v1.pdf",
+  "readerTitle": "SPATEX：用方向线索做阵列可变的“多进多出” 目标语音提取",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

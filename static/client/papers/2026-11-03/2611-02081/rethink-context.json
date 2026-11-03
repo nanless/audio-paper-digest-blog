@@ -1,0 +1,92 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.02081v1",
+  "abstract": "Soundscape studies ask listeners to rate perceived affective quality (PAQ) attributes, such as pleasant and vibrant, after listening to recordings or experiencing acoustic environments. These retrospective ratings summarise an experience during which impressions may change. International Organization for Standardization (ISO) procedures convert these PAQ ratings into Pleasantness and Eventfulness scores. Pleasantness and Eventfulness (P/E) can also be rated directly and continuously during listening, capturing changes in reported perception over time. Retrospective PAQ ratings and continuous direct P/E describe the same soundscape experience from different perspectives. We examine how PAQs relate to direct P/E and how ISO-derived P/E corresponds to direct judgements, using 1,782 paired 30-s trials involving audiovisual recordings from 18 streets. The results show that PAQs retain a predominantly two-dimensional structure. Vibrant and Monotonous lie closer to the Eventfulness-Uneventfulness axis in the direct P/E plane than in the ISO 2025 reference geometry. The full 30-s direct P/E mean has lower calibrated error against ISO-derived P/E than three 10-s means. An empirical mapping using the same 8 PAQs reduces held-out joint root-mean-square error by 4.9% relative to affine-calibrated ISO 2025 scoring. The findings show that retrospective and continuous assessments offer related but distinct soundscape descriptions.",
+  "abstractSha256": "b81f3d98b8c9356bc93f4b972a92a97c3216f49df675cefadd7b0b34ce8394d5",
+  "arxivId": "2611.02081",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.02081v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "统计分析",
+    "primaryTask": "声音感知情感估计",
+    "rankBucket": "前50%",
+    "score": 5.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-affect-estimation",
+          "label": "声音感知情感估计"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.environmental",
+          "label": "环境声"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "统计分析",
+      "primaryMethodId": "method.statistical-analysis",
+      "primaryTask": "声音感知情感估计",
+      "primaryTaskId": "task.audio-affect-estimation",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Engineering Science, University of Oxford, Oxford OX1 3PJ, United Kingdom"
+      ],
+      "name": "Yuanbo Hou"
+    },
+    {
+      "affiliations": [
+        "UCL Institute for Environmental Design and Engineering, The Bartlett, University College London, London WC1H 0NN, United Kingdom"
+      ],
+      "name": "Kening Guo"
+    },
+    {
+      "affiliations": [
+        "UCL Institute for Environmental Design and Engineering, The Bartlett, University College London, London WC1H 0NN, United Kingdom"
+      ],
+      "name": "Francesco Aletta"
+    },
+    {
+      "affiliations": [
+        "School of Electrical and Electronic Engineering, Nanyang Technological University, Singapore 639798, Singapore"
+      ],
+      "name": "Woon-Seng Gan"
+    },
+    {
+      "affiliations": [
+        "Department of Information Technology, Faculty of Engineering and Architecture, Ghent University, 9052 Ghent, Belgium"
+      ],
+      "name": "Dick Botteldooren"
+    },
+    {
+      "affiliations": [
+        "UCL Institute for Environmental Design and Engineering, The Bartlett, University College London, London WC1H 0NN, United Kingdom"
+      ],
+      "name": "Jian Kang"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文用 1782 个配对试次比较听后 8 个感受词算出的愉悦度-事件度与听时连续直接打分的平均，发现两者二维结构相近但振奋与单调方向偏离较大，全段平均最接近回顾分，而经验映射只把联合误差降低 4.9%。",
+  "originalTitle": "Understanding the relationship between retrospective soundscape attributes and continuous pleasantness and eventfulness ratings",
+  "pdfUrl": "https://arxiv.org/pdf/2611.02081v1.pdf",
+  "readerTitle": "听完 30 秒再打分，和边听边打分是一回事吗",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

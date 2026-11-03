@@ -1,0 +1,95 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.01835v1",
+  "abstract": "Full-duplex speech models execute dense model inference for every audio frame throughout a live interaction. This uniform framewise schedule creates sustained GPU load across dialogue states whose computation has strong, reusable temporal structure. ReFrame formulates full-duplex inference as a silence-aware computation problem. Mutual Silence Speculation (MSS) operates when both participants are silent: it evaluates multi-frame Temporal continuations, verifies text and hidden-state stability, and applies batched Mimi audio-token correction. Listening Frame Folding (LFF) operates while the user speaks and the agent listens: it processes already-arrived user frames through parallel Temporal execution and frame-batched audio-token generation while accepting only the verified prefix. Frame-Budget Reinvestment (FBR) assigns the released frame intervals to resumable external retrieval and language-model workers, then injects timely references through Moshi's conditioning interface. We instantiate ReFrame on five full-duplex models spanning Moshi-family, phase-structured, and flattened autoregressive generation. Across the complete 1,225-conversation FDBench, ReFrame reduces measured GPU execution time by 18.80-31.01% and retains 96.92-100% non-PAD text agreement on five different models. On HaluEval tests, FBR increases the number of correct generated spoken answers from 86 to 205 under the same auxiliary-service budget. ReFrame turns recurring dialogue structure into lower inference cost and higher end-to-end service capability.",
+  "abstractSha256": "616f7b4832837783867b8848e763bfa164506e1e4b296c2e91d26ae046bb7165",
+  "arxivId": "2611.01835",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.01835v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "动态计算与早退",
+    "primaryTask": "全双工语音交互",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.full-duplex",
+          "label": "全双工语音交互"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-dialogue",
+          "label": "语音对话系统"
+        },
+        {
+          "facet": "method",
+          "id": "method.dynamic-computation",
+          "label": "动态计算与早退"
+        },
+        {
+          "facet": "method",
+          "id": "method.retrieval-augmented",
+          "label": "检索增强"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "动态计算与早退",
+      "primaryMethodId": "method.dynamic-computation",
+      "primaryTask": "全双工语音交互",
+      "primaryTaskId": "task.full-duplex",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Tsinghua University"
+      ],
+      "name": "Zheng Zhou"
+    },
+    {
+      "affiliations": [
+        "The Hong Kong University of Science and Technology (Guangzhou)",
+        "ScaleX-IO"
+      ],
+      "name": "Guanyi Chen"
+    },
+    {
+      "affiliations": [
+        "Sun Yat-sen University",
+        "ScaleX-IO"
+      ],
+      "name": "Jing Wei"
+    },
+    {
+      "affiliations": [
+        "Tsinghua University"
+      ],
+      "name": "Haoyuan Liang"
+    },
+    {
+      "affiliations": [
+        "The Hong Kong University of Science and Technology (Guangzhou)",
+        "ScaleX-IO"
+      ],
+      "name": "Jian Zhang"
+    },
+    {
+      "affiliations": [
+        "Tsinghua University"
+      ],
+      "name": "Haohuan Fu"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "ReFrame 针对全双工语音模型每帧都做稠密推理的问题，用双方静音时的推测执行和用户说话时的折叠并行来省 GPU 时间，并把省出的帧预算用于可恢复的检索与语言模型查询，在 1225 段对话上省 18.80-31.01% 执行时间并保持文本基本一致。",
+  "originalTitle": "ReFrame: Silence-Aware Compute Reclamation for Full-Duplex Speech Models",
+  "pdfUrl": "https://arxiv.org/pdf/2611.01835v1.pdf",
+  "readerTitle": "静音时省算力、听人说话时并行算：ReFrame 如何复用全双工对话的沉默结构",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

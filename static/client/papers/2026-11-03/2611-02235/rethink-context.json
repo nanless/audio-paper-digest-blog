@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.02235v1",
+  "abstract": "Speech Bandwidth Extension (BWE) reconstructs missing high frequencies from a band-limited signal. Please note that perceptually important information is often concentrated in short high-frequency (HF) events. Therefore, an effective BWE requires both accurate HF generation and explicit control over where, how often, and in what spectral form HF energy should be produced. To address the above HF supervision, we present HFSWO, a compact complex-spectral Swin-based dual-stream adversarial framework with two newly proposed specialized discriminators: 1. High-Frequency Safeguard Discriminator (HFSD) converts excessive framewise HF-energy ratios into a differentiable safeguard-constraint penalty optimized through a projected primal--dual augmented-Lagrangian update; 2. Weighted Objective Scoring Discriminator (WOSD) learns an interpretable convex objective scoring over spectral flatness, centroid, and rolloff. Our rigorous experiments on VCTK English and MLS French datasets across multiple frequency ranges, including noisy conditions, show significantly improved perceptual scores with 74.6% fewer parameters than the existing baseline AP-BWE, establishing a new baseline in the BWE task in multilingual and multispeaker setups.",
+  "abstractSha256": "4de321b4e5634d753069e3fb6c3937b561afb4663db83ea002d0dcbd685b4586",
+  "arxivId": "2611.02235",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.02235v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "生成对抗网络",
+    "primaryTask": "带宽扩展",
+    "rankBucket": "前50%",
+    "score": 6.9,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.bandwidth-extension",
+          "label": "带宽扩展"
+        },
+        {
+          "facet": "method",
+          "id": "method.gan",
+          "label": "生成对抗网络"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "生成对抗网络",
+      "primaryMethodId": "method.gan",
+      "primaryTask": "带宽扩展",
+      "primaryTaskId": "task.bandwidth-extension",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Tarikul Islam Tamiti"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Sajid Fardin Dipto"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Anomadarshi Barua"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "带限语音缺失的高频需要补回但不能乱补，HFSWO 用幅度相位双流生成器加高频保护与加权评分配别管住高频能量出现频率和频谱形态，在英法数据上感知质量最好且参数比 AP-BWE 少约 74.6%，代价是训练更慢且部分波形指标并未全面占优。",
+  "originalTitle": "High Frequency Safeguard and Weighted Objective Scoring Bandwidth Extension",
+  "pdfUrl": "https://arxiv.org/pdf/2611.02235v1.pdf",
+  "readerTitle": "用两个高频专用判别器管住带宽扩展的上频段：HFSWO 解读",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

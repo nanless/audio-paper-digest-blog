@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.01095v1",
+  "abstract": "Many Automated Speaker Verification Systems (ASVs) commonly employ liveliness detection techniques, such as VoicePop, which identify genuine speech by analyzing low- frequency pop bursts from plosive phonemes using Gammatone Frequency Cepstral Coefficients (GFCC) and an SVM classifier. While effective against traditional replay attacks, such systems are vulnerable to data poisoning techniques. Prior work shows that broadly applied SyntheticPop attacks can collapse model to accuracy to as low as 14.01% using only 20% poisoned samples, but the resulting artifacts are easily detectable when visualizing the waveform energies. This paper introduces Pop Goes the Verifier, a stealthier phoneme injection poisoning attack. By leveraging FastSpeech 2 (FS2) with a modified HiFi-GAN vocoder, we inject localized pop bursts at plosive phoneme locations and overlay subtle Gaussian noise to reduce the visibility of injected artifacts in waveform and spectrogram analysis. Using the ASVSpoof 2019 as the dataset, we observe that the approach achieves a moderate poisoning attack while providing greater resistance to signal-level inspection than the original SyntheticPop attack.",
+  "abstractSha256": "853ca5b47ebc81d125a8120f7b8b24ac1e229d6a958f87c3bdff773ee27f8dff",
+  "arxivId": "2611.01095",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.01095v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "对抗攻击构造",
+    "primaryTask": "语音伪造检测",
+    "rankBucket": "后50%",
+    "score": 5.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-spoofing",
+          "label": "语音伪造检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.adversarial-attack",
+          "label": "对抗攻击构造"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-synthesis",
+          "label": "语音合成"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "对抗攻击构造",
+      "primaryMethodId": "method.adversarial-attack",
+      "primaryTask": "语音伪造检测",
+      "primaryTaskId": "task.speech-spoofing",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Eshaq Jamdar"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Amith Kamath Belman"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文针对依赖爆破音气流声的 VoicePop 活体检测，用 FastSpeech 2 加改过的 HiFi-GAN 在音素对齐位置注入局部低频突发并叠加噪声，在 20% 投毒和均衡训练条件下把准确率从 37.52% 拉低到 25.66%，代价是投毒强度弱于整段正弦波的 SyntheticPop，且双谱统计上更不像真人。",
+  "originalTitle": "Pop Goes the Verifier: Phoneme-Targeted Data Poisoning of Voice Liveness Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2611.01095v1.pdf",
+  "readerTitle": "把爆破音处的气流声做进合成语音：一次针对活体检测的数据投毒",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}
