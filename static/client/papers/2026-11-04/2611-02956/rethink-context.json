@@ -1,0 +1,113 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.02956v1",
+  "abstract": "Classical decompositions of predictive uncertainty, such as the information-theoretic one, are defined for a fixed representation $x$ of the input object. They do not consider that $x$ may be incomplete, nor do they measure how much the missing information can affect the prediction. In Large Language Models, users can clarify an underspecified input without any retraining. The clarified input can describe the user's unobserved intent $z^*$ more accurately and change the predictive uncertainty about the outcome. In this paper, we formalize this setting probabilistically and derive a three-term decomposition of prediction risk into specification, residual aleatoric, and epistemic uncertainties. We show that at the original information level, when only $x$ is available, the aleatoric uncertainty, represented by a Bayes risk, has two components. The first, which we call specification uncertainty, is the expected reduction in this Bayes risk from revealing the intent. The second is the residual aleatoric uncertainty, i.e., the Bayes risk that remains once the intent is known, averaged over its possible values $z$ given $x$. The distinction is important, as specification uncertainty informs the decision to request clarification before making a prediction. We build approximations of these components and connect them to existing uncertainty measures. Our experiments across different domains and modalities show distinct roles for the three components. Specification uncertainty is the most informative for detecting underspecified inputs, while residual aleatoric uncertainty is the most informative for detecting in-distribution prediction errors.",
+  "abstractSha256": "d5352df9bde894928357d539d44aec8bdd92e71cf5ccc0a7ddfdbc89f191154e",
+  "arxivId": "2611.02956",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.02956v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "不确定性估计与校准",
+    "primaryTask": "音频问答",
+    "rankBucket": "前50%",
+    "score": 6.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-question-answering",
+          "label": "音频问答"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.uncertainty-estimation",
+          "label": "不确定性估计与校准"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "不确定性估计与校准",
+      "primaryMethodId": "method.uncertainty-estimation",
+      "primaryTask": "音频问答",
+      "primaryTaskId": "task.audio-question-answering",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "MBZUAI"
+      ],
+      "name": "Roman Vashurin"
+    },
+    {
+      "affiliations": [
+        "AXXX",
+        "S-NLP"
+      ],
+      "name": "Mikhail Seleznyov"
+    },
+    {
+      "affiliations": [
+        "Huawei Technologies Ltd."
+      ],
+      "name": "Assel Yermekova"
+    },
+    {
+      "affiliations": [
+        "MBZUAI"
+      ],
+      "name": "Fedor Chernogorskii"
+    },
+    {
+      "affiliations": [
+        "HSE"
+      ],
+      "name": "Danila Zykov"
+    },
+    {
+      "affiliations": [
+        "HSE"
+      ],
+      "name": "Elena Tutubalina"
+    },
+    {
+      "affiliations": [
+        "AXXX",
+        "S-NLP"
+      ],
+      "name": "Alexander Panchenko"
+    },
+    {
+      "affiliations": [
+        "MBZUAI"
+      ],
+      "name": "Preslav Nakov"
+    },
+    {
+      "affiliations": [
+        "MBZUAI"
+      ],
+      "name": "Nikita Kotelevskii"
+    },
+    {
+      "affiliations": [
+        "MBZUAI"
+      ],
+      "name": "Maxim Panov"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文把给定输入下的预测风险拆成规格不确定性、残余偶然不确定性和认知不确定性，说明只有第一项对应追问澄清的收益，并用文本、图像和音频问答证明三者在检测欠规格输入和预测错误时各有分工，但估计质量依赖澄清生成器和集成近似。",
+  "originalTitle": "Specification-Aware Predictive Uncertainty Decomposition",
+  "pdfUrl": "https://arxiv.org/pdf/2611.02956v1.pdf",
+  "readerTitle": "输入没说清时，不确定性从哪里来：规格、残余与模型的三项分解",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

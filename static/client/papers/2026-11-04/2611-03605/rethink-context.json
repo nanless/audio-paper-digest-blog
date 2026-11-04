@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.03605v1",
+  "abstract": "ufakzeka-kulak is an open Turkish speech-to-text model of 31.6M parameters, a FastConformer encoder with a token-and-duration transducer (TDT) and a CTC head, trained from scratch and released under Apache-2.0. It writes cased, punctuated Turkish with numbers as words. Its 4,977 training hours come from sources whose licences allow commercial use; 281 hours are human-transcribed, and for the other 4,696 the training text is an uploader subtitle or a machine transcript, kept only where a second, independent reading of the audio agrees with it. The recipe, checkpoint, labelling and export choices were made on development data, and the test sets were scored once, in a release gate fixed before training. With greedy TDT decoding the normalised word error rate (WER) is 0.0921 (95 percent interval 0.0792 to 0.1055) on FLEURS Turkish test and 0.0916 (0.0873 to 0.0958) on Common Voice 27.0 Turkish test, lower than Whisper base and Whisper small on both sets with paired intervals wholly below zero; Whisper large-v3 (greedy) scores 0.0604 and 0.0767. On conversational speech the WER is 0.3807. We also report punctuation and casing, degraded audio, and how closely each shipped export reproduces the trained model.",
+  "abstractSha256": "80500d4a7249efd733b7df941ef7d4550e465602406b5732970b22d1087e1ecd",
+  "arxivId": "2611.03605",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.03605v1",
+  "assessment": {
+    "documentType": "模型报告",
+    "primaryMethod": "Conformer",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.conformer",
+          "label": "Conformer"
+        },
+        {
+          "facet": "method",
+          "id": "method.ctc",
+          "label": "CTC"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "Conformer",
+      "primaryMethodId": "method.conformer",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "ufak AI"
+      ],
+      "name": "Sait Furkan Teke"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "本文用约 4977 小时许可清晰的土耳其语音从零训练 31.6M 参数的 FastConformer 加 TDT 模型，在朗读测试上超过 Whisper base 和小模型但仍低于 large-v3，而对话语音错误率高得多且导出部署需要增益和补齐等补偿。",
+  "originalTitle": "ufakzeka-kulak: Building and Evaluating a 31.6M-Parameter Turkish Speech Recognizer from Scratch",
+  "pdfUrl": "https://arxiv.org/pdf/2611.03605v1.pdf",
+  "readerTitle": "只做土耳其语的小模型怎样从零学会听写",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

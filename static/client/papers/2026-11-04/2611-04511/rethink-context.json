@@ -1,0 +1,80 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.04511v1",
+  "abstract": "In this paper, we propose a novel Text-to-Speech (TTS) framework designed to perform adversarial attacks against speech deepfake detection systems. Given a TTS model and a detector capable of classifying its outputs as synthetic, our approach fine-tunes the vocoder by integrating the detector into the TTS training loop. Unlike traditional adversarial methods that rely on post-hoc perturbations or external noise injection, our approach enables the generation of synthetic speech that is intrinsically adversarial, capable of lowering the target detector's reliability without requiring additional post-processing steps. We evaluate the framework in both white-box and black-box settings, showing its effectiveness against known and unseen detectors. We also propose a multi-detector strategy that allows the system to simultaneously learn to deceive multiple detectors, showcasing the scalability of the method. Experimental results confirm the efficacy of our approach, which has the potential to impact forensic security and detection countermeasures. At the same time, subjective listening tests reveal that the proposed method also enhances synthesized speech quality.",
+  "abstractSha256": "d824903411e7fbff4d7e566b411e787b5dcf4e9973e43741203ec5e81206273e",
+  "arxivId": "2611.04511",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.04511v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "对抗攻击构造",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前50%",
+    "score": 6.4,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-spoofing",
+          "label": "语音伪造检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.adversarial-attack",
+          "label": "对抗攻击构造"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.security",
+          "label": "音频安全"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "对抗攻击构造",
+      "primaryMethodId": "method.adversarial-attack",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jiayan Cui"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Davide Salvi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Paolo Bestagini"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Stefano Tubaro"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "该文把语音伪造检测器作为可微反馈冻结后接入声码器微调，用合成保真损失加权检测损失直接生成易被判为真人的语音，并在白盒、黑盒和主客观质量上验证了效果与代价。",
+  "originalTitle": "Detector-Guided Vocoder Training for Adversarial Text-to-Speech Synthesis",
+  "pdfUrl": "https://arxiv.org/pdf/2611.04511v1.pdf",
+  "readerTitle": "把检测器放进声码器训练：内生对抗语音合成解读",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

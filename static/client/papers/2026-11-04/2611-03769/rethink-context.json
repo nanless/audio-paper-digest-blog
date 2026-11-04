@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.03769v1",
+  "abstract": "Respiratory sound classification from auscultation recordings is confounded by heterogeneous acquisition conditions, including recording device, auscultation site, and patient characteristics, that introduce systematic variability unrelated to the underlying pathology. Although such metadata is often available, existing approaches either ignore it or rely on naïve fusion strategies that do not model how distinct metadata sources influence different components of the acoustic representation.   We propose a family of metadata-conditioning mechanisms for the Audio Spectrogram Transformer (AST), progressing from gated residual fusion to Feature-wise Linear Modulation (FiLM) adapted to the Transformer architecture. We further introduce two novel variants: Token-Aware FiLM (TAFiLM), which applies distinct modulation to classification and patch tokens, and Soft-Factorized FiLM (SoftFiLM), which learns soft masks to align metadata factors with disentangled feature subspaces.   Experiments on the ICBHI benchmark demonstrate consistent gains across all conditioning strategies. SoftFiLM achieves 64.11% on the official 4-class task (+3.94% over the baseline) and 72.40% on the 2-class task, establishing a new state-of-the-art on the 2-class task and competitive performance on the 4-class benchmark.",
+  "abstractSha256": "d6784b9c14d5c92ab8ed55550f061da85b36bc4d3945b4f0279ef25f75be0113",
+  "arxivId": "2611.03769",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.03769v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 5.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.transformer",
+          "label": "Transformer"
+        },
+        {
+          "facet": "application",
+          "id": "application.medical",
+          "label": "医疗音频"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "George Kontogiannis"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Pantelis Tzamalis"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Sotiris Nikoletseas"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "本文针对听诊设备、部位和病人差异干扰呼吸音分类的问题，在音频频谱变换器中引入元数据调制，其中软分解调制在官方划分上取得四分类 64.11% 和二分类 72.40%，代价是增加不到 1% 的参数并需要完整的元数据输入。",
+  "originalTitle": "Metadata-Conditioned Audio Transformers for Adaptive Respiratory Sound Classification",
+  "pdfUrl": "https://arxiv.org/pdf/2611.03769v1.pdf",
+  "readerTitle": "用采集信息调节听诊模型的呼吸音分类解读",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

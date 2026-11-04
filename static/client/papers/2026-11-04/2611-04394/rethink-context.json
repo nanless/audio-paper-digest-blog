@@ -1,0 +1,80 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.04394v1",
+  "abstract": "Speaker-aware applications rely on enrolled voice profiles, yet collecting enrollment speech from every participant is impractical. Meeting archives provide an alternative source of enrollment speech, comprising recordings of recurring participants paired with expected attendance lists. We investigate whether expected attendance lists can be cross-referenced with diarized anonymous speaker clusters to identify reliable enrollment speech for recurring participants. The resulting task, multi-participant automatic enrollment, must accommodate two types of attendance noise: a listed participant may not speak, and a speaker may be unlisted. To this end, we introduce a benchmark for the task: a synthetic corpus calibrated to an in-house meeting corpus, paired with a contamination-sensitive evaluation protocol. The reference method we introduce scores cross-session cluster chains against expected-attendance patterns and abstains when the evidence is insufficient. We quantify the reference method's benchmark performance as a trade-off between enrollment success and contamination. Applying synthetic-development thresholds unchanged to real meetings exposes a synthetic-to-real gap that remains an open challenge. We will release the benchmark generator and evaluation code.",
+  "abstractSha256": "fa88d657ea78e89f0c56f2c9cb342c511fe9263ac4132123398484f616ff66d0",
+  "arxivId": "2611.04394",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.04394v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "聚类与类别匹配",
+    "primaryTask": "说话人识别",
+    "rankBucket": "前50%",
+    "score": 6.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speaker-identification",
+          "label": "说话人识别"
+        },
+        {
+          "facet": "application",
+          "id": "application.meeting",
+          "label": "会议转录"
+        },
+        {
+          "facet": "method",
+          "id": "method.clustering",
+          "label": "聚类与类别匹配"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "聚类与类别匹配",
+      "primaryMethodId": "method.clustering",
+      "primaryTask": "说话人识别",
+      "primaryTaskId": "task.speaker-identification",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Minjae Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hee-Soo Heo"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Youngki Kwon"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Bong-Jin Lee"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文研究如何只用匿名说话人聚类和带噪声的预期出席名单为重复参会者找出干净注册语音，提出合成基准和跨会话链打分参考方法，核心证据是合成集上成功与污染的权衡以及合成阈值直接搬到真实会议时出现的明显落差。",
+  "originalTitle": "Attendance-guided speaker enrollment across meetings",
+  "pdfUrl": "https://arxiv.org/pdf/2611.04394v1.pdf",
+  "readerTitle": "靠参会名单给回头客找到注册语音：跨会议的出席引导注册",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

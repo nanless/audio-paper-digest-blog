@@ -1,0 +1,109 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.04282v1",
+  "abstract": "Modern text-to-speech (TTS) systems can synthesize natural and expressive speech, yet a practical speech foundation model must go beyond naturalness to offer stable quality, precise controllability, and a broad set of composable capabilities within a unified framework. We present TTSonic, a unified speech generation model that supports zero-shot TTS, voice cloning, prosody cloning, instruction following, voice conversion, and cloning from noisy reference speech. Rather than relying on separate task-specific models, TTSonic accommodates diverse conditioning signals, including text, natural language instructions, reference speech, and text-described timbre, within the same model framework. Specifically, we develop a semantic--acoustic disentangled speech tokenizer through ASR-supervised semantic learning and reconstruction-guided generative refinement. Serving as the representational foundation of our unified framework, the tokenizer enables the Text-to-Semantic autoregressive model to focus on semantic and prosodic planning, while the acoustic flow-matching model specializes in high-quality speech rendering under diverse acoustic and timbre conditions. Building on this framework, we incorporate CoT-guided instruction-following planning and Text2Timbre voice design to support controllable speech generation. Experiments across zero-shot synthesis, multilingual and cross-lingual TTS, instruction following, voice design, voice conversion, and noisy-reference cloning demonstrate the competitive performance and broad applicability of TTSonic.",
+  "abstractSha256": "2a32ae649d71e3f23d076936b3d11aa4c74b94d6917c6fc0adeed08ff0dfd6d7",
+  "arxivId": "2611.04282",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.04282v1",
+  "assessment": {
+    "documentType": "模型报告",
+    "primaryMethod": "流匹配",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前50%",
+    "score": 6.7,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "task",
+          "id": "task.voice-cloning",
+          "label": "语音克隆"
+        },
+        {
+          "facet": "task",
+          "id": "task.voice-conversion",
+          "label": "语音转换"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "method",
+          "id": "method.neural-codec",
+          "label": "神经编解码与离散单元"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "流匹配",
+      "primaryMethodId": "method.flow-matching",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhedong Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kaiwen Zhou"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Junyan Wu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shengqiang Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xuran Chi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xingui Zeng"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Rui Yan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xu Chen"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "TTSonic 要解决用同一套语音分词器、语义语言模型和声学流匹配模型组合出零样本合成、克隆、转换和指令控制等任务的问题，关键做法是把语义韵律规划和音色声学渲染分开，实验在多个中英文基准上显示内容准确率和说话人相似度具有竞争力，但英文指令跟随仍弱于最强基线。",
+  "originalTitle": "TTSonic: A Unified Framework for Composable and Controllable Speech Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2611.04282v1.pdf",
+  "readerTitle": "TTSonic：用同一组模块组合出多种语音生成任务",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

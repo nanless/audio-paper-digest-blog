@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.03389v1",
+  "arxivId": "2611.03389",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.03389v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Torin Hopkins"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shih-Yu Ma"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zander Trafton-Hancock"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ellen Yi-Luen Do"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Luca Turchet"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.03389v1",
+  "originalTitle": "CrowdForge: Effects of Audio and Visual Audience Participation Modalities on Agency, Collaboration, and Engagement in AI-Mediated MR Performances",
+  "pdfUrl": "https://arxiv.org/pdf/2611.03389v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

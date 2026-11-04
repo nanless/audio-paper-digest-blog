@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.03900v1",
+  "abstract": "Competing speech can cause excess emissions in a connectionist temporal classification (CTC) recognizer. We penalize the amount by which the noisy student's expected collapsed token count exceeds a frozen teacher's count on the paired clean utterance. The one-sided objective caches one scalar per utterance and adds no inference module. With 147,456 trainable parameters in wav2vec 2.0, it improves competing-speech word error rate (WER) over matched CTC-only adaptation across three development seeds. On a locked LibriSpeech test, speech-interference WER falls from 45.198% to 44.323%, while clean WER changes by 0.004 percentage points. Unseen VCTK interferers yield a 0.307-point improvement. Ablations favor collapsed-count control over frame-mass regularization. Longer training increases the speech gain but worsens noise and music performance, identifying an insertion-deletion tradeoff rather than uniform robustness.",
+  "abstractSha256": "bfd336c0a18707ed97f6717564f3386d8f8b6c6bb05978e23726f8193a672433",
+  "arxivId": "2611.03900",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.03900v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "正则化",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 5.9,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.regularization",
+          "label": "正则化"
+        },
+        {
+          "facet": "method",
+          "id": "method.lora",
+          "label": "LoRA"
+        },
+        {
+          "facet": "method",
+          "id": "method.ctc",
+          "label": "CTC"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "正则化",
+      "primaryMethodId": "method.regularization",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yuanbo Zhou"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Junjie Xiong"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "本文针对竞争语音导致 CTC 识别器多吐词的问题，用冻结模型在配对干净语音上的期望折叠词元数作锚，只惩罚混合语音学生的超出部分，在 147456 参数的早期层适配下降低语音干扰词错误率，但长训练会在噪声和音乐上以删除增加为代价。",
+  "originalTitle": "Clean-anchored excess-emission control for CTC adaptation under competing speech",
+  "pdfUrl": "https://arxiv.org/pdf/2611.03900v1.pdf",
+  "readerTitle": "用干净语音锚定输出长度：竞争语音下 CTC 适配的多余发射控制",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

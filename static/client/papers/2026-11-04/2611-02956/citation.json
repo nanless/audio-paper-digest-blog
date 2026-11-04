@@ -1,0 +1,76 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.02956v1",
+  "arxivId": "2611.02956",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.02956v1",
+  "authors": [
+    {
+      "affiliations": [
+        "MBZUAI"
+      ],
+      "name": "Roman Vashurin"
+    },
+    {
+      "affiliations": [
+        "AXXX",
+        "S-NLP"
+      ],
+      "name": "Mikhail Seleznyov"
+    },
+    {
+      "affiliations": [
+        "Huawei Technologies Ltd."
+      ],
+      "name": "Assel Yermekova"
+    },
+    {
+      "affiliations": [
+        "MBZUAI"
+      ],
+      "name": "Fedor Chernogorskii"
+    },
+    {
+      "affiliations": [
+        "HSE"
+      ],
+      "name": "Danila Zykov"
+    },
+    {
+      "affiliations": [
+        "HSE"
+      ],
+      "name": "Elena Tutubalina"
+    },
+    {
+      "affiliations": [
+        "AXXX",
+        "S-NLP"
+      ],
+      "name": "Alexander Panchenko"
+    },
+    {
+      "affiliations": [
+        "MBZUAI"
+      ],
+      "name": "Preslav Nakov"
+    },
+    {
+      "affiliations": [
+        "MBZUAI"
+      ],
+      "name": "Nikita Kotelevskii"
+    },
+    {
+      "affiliations": [
+        "MBZUAI"
+      ],
+      "name": "Maxim Panov"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.02956v1",
+  "originalTitle": "Specification-Aware Predictive Uncertainty Decomposition",
+  "pdfUrl": "https://arxiv.org/pdf/2611.02956v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

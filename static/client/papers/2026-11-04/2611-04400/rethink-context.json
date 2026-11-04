@@ -1,0 +1,98 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.04400v1",
+  "abstract": "Personalized neural audio watermarking systems embed user-specific payloads into audio to trace the user associated with a leaked or misused copy. Existing evaluations mainly assume access to a single personalized copy, but real-world distribution may expose multiple copies of the same recording. We find that simple sample-wise averaging breaks traceability: averaging only two copies produces tracing-failure rates of 87.7-99.7% across the five systems while largely preserving audio quality. Decoder outputs show distinct responses to coalition payload composition across systems, with high majority agreement in TimbreWM but substantially lower agreement in WMCodec. In a more sophisticated payload-aware setting, mixture weighting can further steer the decoder toward a selected nonmember, achieving a target success rate of 92.3% in TimbreWM. Preliminary confidence screening rejects many collusion-induced assignments while retaining most valid single-copy outputs. Code and results are available at https://github.com/Silwan5z/neural-audio-watermark-collusion-attack. This work highlights multi-copy traceability as an additional evaluation dimension for personalized neural audio watermarking alongside conventional single-copy robustness.",
+  "abstractSha256": "04b105d3bcb76a22996d9b39ccdad6588fb6f05b027d98f63d954e7430c3ecac",
+  "arxivId": "2611.04400",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.04400v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "对抗攻击构造",
+    "primaryTask": "音频水印",
+    "rankBucket": "前25%",
+    "score": 8.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.watermarking",
+          "label": "音频水印"
+        },
+        {
+          "facet": "method",
+          "id": "method.adversarial-attack",
+          "label": "对抗攻击构造"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "对抗攻击构造",
+      "primaryMethodId": "method.adversarial-attack",
+      "primaryTask": "音频水印",
+      "primaryTaskId": "task.watermarking",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yangming Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Haiyun Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Dongfu Song"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ziang Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jiehui Luo"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yining Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhiyong Wu"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对同一录音的多份个性化神经音频水印拷贝，论文用逐样本平均证明仅两份混合就能让五种系统大面积无法溯源到共谋者，并对比了可控误指向与置信度筛查的效果与代价。",
+  "originalTitle": "Averaging Collusion Breaks Traceability in Personalized Neural Audio Watermarking",
+  "pdfUrl": "https://arxiv.org/pdf/2611.04400v1.pdf",
+  "readerTitle": "把两份带水印音频平均一下，溯源为什么就失效了",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

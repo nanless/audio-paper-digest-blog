@@ -1,0 +1,87 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.03995v1",
+  "abstract": "The Musical Metaverse (MM) enables geographically distributed musicians, audiences, sound engineers, and AI agents to interact through synchronized audio, visual, kinematic, and haptic streams, imposing latency, synchronization, bandwidth, and scalability requirements that are difficult to satisfy with conventional bit-level communication. This paper argues that semantic communication, understood here as the transmission of musically meaningful information rather than raw audio-visual-haptic samples, provides a principled communication paradigm for the MM. We define the MM from a communication perspective and derive modality-specific require ments; propose a three-pillar framework for musical semantic communication comprising semantics extraction, semantic-aware orchestration, and cross-modal semantic synchronization; survey representative work across semantic communication, music AI and edge orchestration, identifying the gaps that prevent their integration; and propose a semantic-first reference architecture based on device-side semantic encoders, edge semantic routers, and cross-modal semantic synchronization. The resulting framework positions the MM as a concrete and demanding use case for 6G semantic communication.",
+  "abstractSha256": "03b6d52d6fb62033e5e5f59f83707e0a1f3536ed0604f4b00da21139c5bc9467",
+  "arxivId": "2611.03995",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.03995v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "文献综述方法",
+    "primaryTask": "多模态语义传输",
+    "rankBucket": "后50%",
+    "score": 4.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.multimodal-semantic-transport",
+          "label": "多模态语义传输"
+        },
+        {
+          "facet": "method",
+          "id": "method.literature-review",
+          "label": "文献综述方法"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "文献综述方法",
+      "primaryMethodId": "method.literature-review",
+      "primaryTask": "多模态语义传输",
+      "primaryTaskId": "task.multimodal-semantic-transport",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ali Al Housseini"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jaime Llorca"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Cristina Rottondi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Luca Turchet"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Tiziano Leidi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Omran Ayoub"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "本文把音乐元宇宙的通信问题定义为在带宽与时延受限下保住协调演奏所依赖的音乐事件与时间关系，提出提取、编排与同步三支柱与语义优先架构，但未做实测验证，只给出待检验的接口与诊断指标。",
+  "originalTitle": "When Music Needs Meaning: Semantic Communication as a Transformative Enabler for the Musical Metaverse",
+  "pdfUrl": "https://arxiv.org/pdf/2611.03995v1.pdf",
+  "readerTitle": "音乐何时需要意义：面向音乐元宇宙的语义通信框架解读",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

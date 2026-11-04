@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.04716v1",
+  "abstract": "Generative speech models synthesize audio that is difficult to distinguish from human recordings. Synthetic speech can be watermarked as a proactive disclosure method, but watermarking models remain vulnerable to resynthesis attacks using neural audio codecs. This article investigates speech watermarking robustness across neural codec and digital signal processing attacks, when specific neural codecs are used for channel augmentation during training. We also present a novel zero-bit watermarking system that uses Descript Audio Codec as the generator. Our results demonstrate that the choice of augmentation codec significantly influences robustness generalization. Experiments show that augmentation with low-bitrate, high-quality neural codecs-Mimi and SNAC-results in promising robustness against unseen neural codecs and traditional attacks with limited quality impact.",
+  "abstractSha256": "7d8a5d7a6a29dad1e70c87320538270af402649e24f8020a9eb06d997c416364",
+  "arxivId": "2611.04716",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.04716v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "数据增强",
+    "primaryTask": "音频水印",
+    "rankBucket": "前50%",
+    "score": 7.4,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.watermarking",
+          "label": "音频水印"
+        },
+        {
+          "facet": "method",
+          "id": "method.augmentation",
+          "label": "数据增强"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "数据增强",
+      "primaryMethodId": "method.augmentation",
+      "primaryTask": "音频水印",
+      "primaryTaskId": "task.watermarking",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Olli-Pekka Pauna"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xin Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Lauri Juvela"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "本文用冻结编码器加微调解码器的 DAC 零比特水印系统，研究训练时用哪一种神经音频编解码器做信道增强才能泛化到未见过的编解码器与传统失真，最强的证据是 Mimi 与 SNAC 联合增强在多项未见攻击下保持较高检出率，而代价是混响与连续多次重编码仍然困难且音质需受损控制。",
+  "originalTitle": "Cross-Codec Robustness in Speech Watermarking",
+  "pdfUrl": "https://arxiv.org/pdf/2611.04716v1.pdf",
+  "readerTitle": "换一个编解码器重编一次，水印还在吗：跨编解码器鲁棒的语音水印解读",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

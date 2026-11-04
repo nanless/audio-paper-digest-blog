@@ -1,0 +1,20 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.03605v1",
+  "arxivId": "2611.03605",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.03605v1",
+  "authors": [
+    {
+      "affiliations": [
+        "ufak AI"
+      ],
+      "name": "Sait Furkan Teke"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.03605v1",
+  "originalTitle": "ufakzeka-kulak: Building and Evaluating a 31.6M-Parameter Turkish Speech Recognizer from Scratch",
+  "pdfUrl": "https://arxiv.org/pdf/2611.03605v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

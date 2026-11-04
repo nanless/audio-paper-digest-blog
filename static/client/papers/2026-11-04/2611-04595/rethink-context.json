@@ -1,0 +1,80 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.04595v1",
+  "abstract": "Many signal-processing objects are defined by periodicity, normalization, sign or global-phase ambiguity, basis invariance, or positive-semidefinite constraints and therefore cannot be modeled faithfully in ordinary Euclidean space. This paper develops a geometry driven framework for directional statistics in signal processing, connecting signal representations to their natural manifolds or quotient spaces and to probability models compatible with their invariances. After reviewing instances of directional statistics in the signal processing literature, we review circular, toroidal, spherical, projective, Stiefel, Grassmann, and covariance-valued distributions, emphasizing their statistical assumptions, computational requirements, and dimensional limitations relevant to signal processing. We describe various modeling and estimation strategies, including analytical and gradient-based maximum likelihood, structured low-rank parameterizations, mixtures and hidden Markov models (HMMs), score-based and contrastive estimation, and geometry-aware K-means. To exemplify the consequences of geometry-aware modeling, we study multivariate phase coherence in synthetic data and functional neuroimaging, comparing toroidal phase vectors to projective, Grassmann, and positive-semidefinite representations. We also study speaker separation in a car environment, showing that directional representations outperform a standard Euclidean model. These examples demonstrate that when the geometric representation, statistical distribution, inference method, and computational regime are considered together, they have the potential to lead to improved models across a broad range of signal processing applications.",
+  "abstractSha256": "2dcd3c8d0fdac0fc74bbce3d21d1878aa0c2b9e40d5025ebf702a34f3c9ac9b1",
+  "arxivId": "2611.04595",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.04595v1",
+  "assessment": {
+    "documentType": "综述",
+    "primaryMethod": "聚类与类别匹配",
+    "primaryTask": "说话人分离标注",
+    "rankBucket": "前50%",
+    "score": 5.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.diarization",
+          "label": "说话人分离标注"
+        },
+        {
+          "facet": "method",
+          "id": "method.clustering",
+          "label": "聚类与类别匹配"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "聚类与类别匹配",
+      "primaryMethodId": "method.clustering",
+      "primaryTask": "说话人分离标注",
+      "primaryTaskId": "task.diarization",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Anders S. Olsen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kanti V. Mardia"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Dimitri Van De Ville"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Morten Mørup"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "本文把周期、归一化、符号与全局相位、基旋转和半正定约束等不变性对应到圆、环面、球面、投影空间、Stiefel 与 Grassmann 流形和协方差锥，再选相容分布与估计方法，用脑相位相干与车内说话人分离说明表示与模型复杂度如何共同决定无监督状态发现。",
+  "originalTitle": "Directional Statistics in Signal Processing: A Geometry Driven Overview of Models, Learning, and Applications",
+  "pdfUrl": "https://arxiv.org/pdf/2611.04595v1.pdf",
+  "readerTitle": "方向统计怎么做信号建模：从不变性到分布、学习与两个案例",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.04476v1",
+  "abstract": "Audio-based piano transcription is hampered by the sustain pedal and by noisy or missing soundtracks, problems that video-only transcription avoids, since a top-view video shows directly when each key is pressed and released. Most visual transcription networks, however, describe the whole keyboard with one global feature vector and must learn where each key is. In this paper, we propose KeyWise, a lightweight per-key architecture that exploits the known geometry of the keyboard instead of learning it. The rectified keyboard is divided into 88 equal tiles that serve as regions of interest (ROIs), and one small recurrent network, shared by all keys, follows each key over time. On PianoVAM, KeyWise reaches the onset accuracy of the state-of-the-art V2N (95.0% vs. 94.7% onset F1 at 50 ms and 97.8% vs. 97.0% at 100 ms) with 1.3 M instead of 28.2 M parameters, and it runs 4.7 times faster on the same GPU. At 100 ms, it is also significantly more accurate when the key releases (97.0% vs. 95.5% F1) or the velocities (89.4% vs. 84.5% F1) must be correct as well. On PianoYT, KeyWise pre-trained on PianoVAM reaches 69.4% onset F1 at 100 ms, comparable to the best published result, although it needs fine-tuning for new recording conditions.",
+  "abstractSha256": "f80d79adfd5a8060c35ab77ac1aaba5b44acdf2d4bd5221d80bccdad4cdc0ceb",
+  "arxivId": "2611.04476",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.04476v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "RNN",
+    "primaryTask": "视觉音乐转录",
+    "rankBucket": "前25%",
+    "score": 7.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.visual-music-transcription",
+          "label": "视觉音乐转录"
+        },
+        {
+          "facet": "task",
+          "id": "task.midi-velocity-estimation",
+          "label": "MIDI力度估计"
+        },
+        {
+          "facet": "method",
+          "id": "method.rnn",
+          "label": "RNN"
+        },
+        {
+          "facet": "method",
+          "id": "method.cnn",
+          "label": "CNN"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "RNN",
+      "primaryMethodId": "method.rnn",
+      "primaryTask": "视觉音乐转录",
+      "primaryTaskId": "task.visual-music-transcription",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Informatics and Telecommunications, University of Thessaly, Lamia, Greece"
+      ],
+      "name": "Anastasios Chatzigiannis"
+    },
+    {
+      "affiliations": [
+        "Department of Informatics and Telecommunications, University of Thessaly, Lamia, Greece"
+      ],
+      "name": "Natalia Panagou"
+    },
+    {
+      "affiliations": [
+        "Department of Informatics and Telecommunications, University of Thessaly, Lamia, Greece"
+      ],
+      "name": "Maria Koziri"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对延音踏板和缺失音频使声音与按键动作脱节的问题，KeyWise 把校正后的键盘切成 88 个固定按键区域并用一个跨键共享的循环网络逐键判断起始与保持，在 PianoVAM 上以 1.3M 参数达到与 28.2M 参数的 V2N 相当的起始准确率并在 100 ms 容差下更准地找回按键释放与力度，代价是仍需针对新录制条件微调且依赖已知键盘角点。",
+  "originalTitle": "KeyWise: Efficient Video-Only Piano Transcription with a Lightweight Per-Key Architecture",
+  "pdfUrl": "https://arxiv.org/pdf/2611.04476v1.pdf",
+  "readerTitle": "只看俯视键盘视频如何转写钢琴：KeyWise 的逐键设计",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}
