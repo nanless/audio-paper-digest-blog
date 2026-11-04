@@ -59,7 +59,7 @@ test('verifyPaperToolCoverage requires browser-only PDF/citation tools and safe 
   writeFileSync(rich, `<article class="research-workbench--paper"><section class="paper-tools">${selection} ${localTools}</section></article>`);
   writeFileSync(fallback, `<article class="research-workbench--paper"><section class="paper-tools paper-tools--selection-only">${selection} ${unknownSource}</section><a href="https://arxiv.org/pdf/2609.09999.pdf">正文引用的其他论文</a></article>`);
   assert.deepEqual(verifyPaperToolCoverage([rich, fallback]), {
-    paperPages: 2, sourceTools: 2, richArxivTools: 1, richConferenceTools: 0, selectionOnlyFallbacks: 1
+    paperPages: 2, sidecarPages: 0, sourceTools: 2, richArxivTools: 1, richConferenceTools: 0, selectionOnlyFallbacks: 1
   });
   writeFileSync(rich, `<article class="research-workbench--paper"><section class="paper-tools">${selection} ${localTools}<a href="http://127.0.0.1:43128/ui">旧入口</a></section></article>`);
   assert.throws(() => verifyPaperToolCoverage([rich]), /已取消的本机助手/);
