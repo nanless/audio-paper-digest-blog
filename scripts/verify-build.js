@@ -159,6 +159,17 @@ function verifySearchManifest(manifest, buildDir) {
     recordOrderSha256: createHash('sha256').update(JSON.stringify([...records])).digest('hex') };
 }
 
+function countDeclaredClientSidecarSources() {
+  const posts = path.join(__dirname, '..', 'content', 'posts');
+  let count = 0;
+  for (const file of walkFiles(posts)) {
+    if (!file.endsWith('.md')) continue;
+    const text = fs.readFileSync(file, 'utf8');
+    if (text.includes('paper_digest_sidecars') && text.includes('/client/papers/')) count += 1;
+  }
+  return count;
+}
+
 function walkFiles(root) {
   const output = [];
   for (const entry of fs.readdirSync(root, { withFileTypes: true })) {
@@ -169,8 +180,9 @@ function walkFiles(root) {
   return output;
 }
 
-function verifyPaperToolCoverage(files) {
+function verifyPaperToolCoverage(files, root) {
   let paperPages = 0;
+  let sidecarPages = 0;
   let sourceTools = 0;
   let richArxivTools = 0;
   let richConferenceTools = 0;
@@ -196,6 +208,39 @@ function verifyPaperToolCoverage(files) {
     const sourceTag = Array.from(tools.matchAll(/<script\b[^>]*>([\s\S]*?)<\/script>/gi))
       .find(match => attributeValue(match[0], 'class') === 'paper-tools__citation-record');
     invariant(sourceTag, `论文工具缺少结构化引用来源：${file}`);
+    // 客户端声明必须是保留 camelCase 的原始记录；Hugo 参数 map 的嵌套键会被小写化，
+    // 曾把 schemaFingerprint 变成 schemafingerprint，导致已发行客户端打不开导读。
+    const sidecarTag = Array.from(tools.matchAll(/<script\b[^>]*>([\s\S]*?)<\/script>/gi))
+      .find(match => attributeValue(match[0], 'class') === 'paper-tools__client-sidecars');
+    if (sidecarTag) {
+      let sidecars;
+      try { sidecars = JSON.parse(sidecarTag[1]); } catch (_) { throw new Error(`客户端声明不是有效 JSON：${file}`); }
+      const names = ['citation.json', 'citation.bib', 'citation.ris', 'rethink-context.json'];
+      invariant(sidecars && Object.keys(sidecars).sort().join(',') === [...names].sort().join(','),
+        `客户端声明缺少四个已发布文件：${file}`);
+      sidecarPages += 1;
+      const first = sidecars['citation.json'];
+      invariant(first && typeof first === 'object' && typeof first.url === 'string',
+        `客户端声明缺少 citation.json 地址：${file}`);
+      const clientRoot = first.url.replace(/citation\.json$/, '');
+      invariant(clientRoot.startsWith(SITE_PREFIX + 'client/papers/'),
+        `客户端声明不在站点目录下：${file}`);
+      for (const name of names) {
+        const record = sidecars[name];
+        invariant(record && typeof record === 'object' && typeof record.url === 'string' && record.url === clientRoot + name,
+          `客户端声明地址与目录不一致：${file}`);
+        invariant(typeof record.sha256 === 'string' && /^[a-f0-9]{64}$/.test(record.sha256),
+          `客户端声明缺少真实 SHA：${file}`);
+        const asset = path.join(root, record.url.slice(SITE_PREFIX.length));
+        invariant(fs.existsSync(asset), `客户端声明指向的已发布文件不存在：${file}`);
+        invariant(createHash('sha256').update(fs.readFileSync(asset)).digest('hex') === record.sha256,
+          `客户端声明 SHA 与实际文件不一致：${file}`);
+      }
+      const context = sidecars['rethink-context.json'];
+      invariant(context.contract === 'paper-research-context' && typeof context.schemaFingerprint === 'string'
+        && /^[a-f0-9]{64}$/.test(context.schemaFingerprint) && !('schemafingerprint' in context),
+        `上下文声明必须保留 camelCase 的 schemaFingerprint：${file}`);
+    }
     let source;
     try { source = JSON.parse(sourceTag[1]); } catch (_) { throw new Error(`论文引用来源不是有效 JSON：${file}`); }
     invariant(source && source.contract === 'paper-citation-source-v1' && source.pageType === 'paper', `论文引用来源契约错误：${file}`);
@@ -249,7 +294,7 @@ function verifyPaperToolCoverage(files) {
   }
   invariant(paperPages > 0, '构建产物没有论文页');
   invariant(sourceTools === paperPages, '论文页阅读工具覆盖不完整');
-  return { paperPages, sourceTools, richArxivTools, richConferenceTools, selectionOnlyFallbacks };
+  return { paperPages, sidecarPages, sourceTools, richArxivTools, richConferenceTools, selectionOnlyFallbacks };
 }
 
 function verifyBuild(buildDir) {
@@ -298,8 +343,13 @@ function verifyBuild(buildDir) {
     invariant(/\.username/.test(source) && /\.password/.test(source), `论文库脚本缺少 URL 凭据拒绝：${file}`);
   }
   const paperTools = verifyPaperToolCoverage(
-    allFiles.filter((file) => file.startsWith(`${path.join(root, 'posts')}${path.sep}`))
+    allFiles.filter((file) => file.startsWith(`${path.join(root, 'posts')}${path.sep}`)), root
   );
+  // 模板整体失效时，声明会从所有页面一起消失，构建仍可能成功。用源 Markdown
+  // 中承诺了 /client/papers/ 附属资料的页面数做数量对账，把静默降级变成构建错误。
+  const declaredSidecarPages = countDeclaredClientSidecarSources();
+  invariant(paperTools.sidecarPages === declaredSidecarPages,
+    `客户端声明数量与源页面不一致：产物 ${paperTools.sidecarPages}，源页面 ${declaredSidecarPages}`);
 
   const stats = {
     htmlLanguage: headStats.htmlLanguage,

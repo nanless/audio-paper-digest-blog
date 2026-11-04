@@ -38,8 +38,10 @@
     {{- with $tagProof.registrySha256 }}{{ $entry = merge $entry (dict "tagCatalogSha256" .) }}{{ end }}
     {{- with $tagProof.schemaFingerprint }}{{ $entry = merge $entry (dict "tagSchemaFingerprint" .) }}{{ end }}
     {{- $workbenchHeader := dict "contract" (.Params.paper_digest_workbench_contract | default "") "schemaFingerprint" (.Params.paper_digest_workbench_schema_fingerprint | default "") }}
+    {{- $siteRoot := (urls.Parse site.BaseURL).Path }}{{- if not (hasSuffix $siteRoot "/") }}{{ $siteRoot = printf "%s/" $siteRoot }}{{ end }}
     {{- if and (eq $workbenchHeader.contract "researcher-workbench") (partial "protocol_header_valid.html" (dict "name" "researcher-workbench" "record" $workbenchHeader)) }}
-      {{- with .Params.paper_digest_sidecars }}{{ $entry = merge $entry (dict "clientSidecars" .) }}{{ end }}
+      {{- $clientSidecars := partial "client_sidecars.html" (dict "sidecars" .Params.paper_digest_sidecars "siteRoot" $siteRoot "date" (.Date.Format "2006-01-02")) }}
+      {{- if $clientSidecars }}{{ $entry = merge $entry (dict "clientSidecars" $clientSidecars) }}{{ end }}
     {{- end }}
     {{- with $tagProof.evidenceContract }}{{ $entry = merge $entry (dict "tagEvidenceContract" . "tagEvidenceType" ($tagProof.evidenceType | default "canonical-analysis") "tagProofSha256" $tagProof.proofSha256 "tagPageSha256" $tagProof.pageSha256) }}{{ end }}
     {{- if in (slice "historical-source-taxonomy-classification-v2" "historical-source-taxonomy-classification-v3" "exact1028-independent-review-qualified-classification-v1") $tagProof.classificationContract }}

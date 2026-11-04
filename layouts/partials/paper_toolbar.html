@@ -23,15 +23,12 @@
 {{- $validWorkbench := partial "protocol_header_valid.html" (dict "name" "researcher-workbench" "record" $workbenchHeader) -}}
 {{- $currentWorkbench := and $validWorkbench (eq $workbenchHeader.contract "researcher-workbench") -}}
 {{- $clientSidecars := dict -}}
-{{- if and $currentWorkbench (reflect.IsMap $sidecars) (eq (len $sidecars) 4) -}}
+{{- if $currentWorkbench -}}
   {{- $clientID := $sidecarID -}}
   {{- if eq $source.sourceKind "conference" }}{{ $clientID = printf "conference-%s" (substr (crypto.SHA256 $source.paperKey) 0 24) }}{{ end -}}
   {{- $clientRoot := printf "%sclient/papers/%s/%s/" $siteRoot (.Date.Format "2006-01-02") $clientID -}}
-  {{- range $name := slice "citation.json" "citation.bib" "citation.ris" "rethink-context.json" -}}
-    {{- with index $sidecars $name -}}
-      {{- if and (eq .url (printf "%s%s" $clientRoot $name)) (findRE `^[a-f0-9]{64}$` .sha256 1) }}{{ $clientSidecars = merge $clientSidecars (dict $name .) }}{{ end -}}
-    {{- end -}}
-  {{- end -}}
+  {{- /* Hugo 会把参数 map 的嵌套键小写化，不能直接 jsonify；按白名单重建以保留 camelCase。 */ -}}
+  {{- $clientSidecars = partial "client_sidecars.html" (dict "sidecars" $sidecars "expectedRoot" $clientRoot) -}}
 {{- end -}}
 {{- $citationFiles := dict -}}
 {{- $hasGuide := ne (strings.TrimSpace (printf "%s" .Content)) "" -}}

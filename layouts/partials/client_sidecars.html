@@ -1,0 +1,56 @@
+{{- /*
+  把论文页 front matter 的 paper_digest_sidecars 还原成客户端可读的声明。
+
+  Hugo 会把 front matter 解析成参数 map，并把嵌套 map 的键递归小写；
+  直接 jsonify .Params 会把 schemaFingerprint 写成 schemafingerprint，客户端
+  的协议校验因此失败（2026-11-03 起的上下文导读故障）。这里按白名单逐字段
+  重建记录，显式写回 camelCase，保证输出与协议登记一致。
+
+  调用参数：
+  - sidecars：页面参数里的 sidecar 映射；
+  - expectedRoot：可选的精确期望目录（页面模板用）；
+  - siteRoot、date：没有精确目录时用于核对目录前缀（索引模板用）。
+  返回四项齐全且通过协议头校验的映射；任何一项不合法都返回空映射，
+  页面因此不输出 client-sidecars 脚本，回落到旧的兄弟链接路径。
+*/ -}}
+{{- $sidecars := .sidecars -}}
+{{- $expectedRoot := .expectedRoot | default "" -}}
+{{- $siteRoot := .siteRoot | default "" -}}
+{{- $date := printf "%v" (.date | default "") -}}
+{{- $result := dict -}}
+{{- $derivedRoot := "" -}}
+{{- $names := slice "citation.json" "citation.bib" "citation.ris" "rethink-context.json" -}}
+{{- if and (reflect.IsMap $sidecars) (eq (len $sidecars) 4) -}}
+  {{- range $name := $names -}}
+    {{- $item := index $sidecars $name -}}
+    {{- if not (reflect.IsMap $item) -}}{{- $result = dict -}}{{- break -}}{{- end -}}
+    {{- $url := printf "%v" ($item.url | default "") -}}
+    {{- $sha := printf "%v" ($item.sha256 | default "") -}}
+    {{- $valid := and (ne $url "") (findRE `^[a-f0-9]{64}$` $sha 1) -}}
+    {{- $parent := replaceRE `[^/]+$` "" $url -}}
+    {{- if $valid -}}
+      {{- if $expectedRoot -}}
+        {{- $valid = eq $url (printf "%s%s" $expectedRoot $name) -}}
+      {{- else -}}
+        {{- $prefix := printf "%sclient/papers/%s/" $siteRoot $date -}}
+        {{- $valid = and (hasPrefix $url $prefix) (findRE `^[a-z0-9][a-z0-9-]*/$` (strings.TrimPrefix $prefix $parent) 1) -}}
+        {{- if and $valid (eq $derivedRoot "") -}}{{- $derivedRoot = $parent -}}{{- end -}}
+        {{- if and $valid (ne $derivedRoot "") -}}{{- $valid = eq $parent $derivedRoot -}}{{- end -}}
+      {{- end -}}
+    {{- end -}}
+    {{- if not $valid -}}{{- $result = dict -}}{{- break -}}{{- end -}}
+    {{- $record := dict "url" $url "sha256" $sha -}}
+    {{- if eq $name "rethink-context.json" -}}
+      {{- $contract := printf "%v" ($item.contract | default "") -}}
+      {{- /* 参数 map 的键已小写；兼容直接来自 transform.Unmarshal 的驼峰记录。 */ -}}
+      {{- $fingerprint := printf "%v" ((index $item "schemafingerprint") | default (index $item "schemaFingerprint") | default "") -}}
+      {{- $header := dict "contract" $contract "schemaFingerprint" $fingerprint -}}
+      {{- if not (partial "protocol_header_valid.html" (dict "name" "paper-research-context" "record" $header)) -}}
+        {{- $result = dict -}}{{- break -}}
+      {{- end -}}
+      {{- $record = merge $record $header -}}
+    {{- end -}}
+    {{- $result = merge $result (dict $name $record) -}}
+  {{- end -}}
+{{- end -}}
+{{- return $result -}}

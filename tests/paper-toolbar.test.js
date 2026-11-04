@@ -68,6 +68,13 @@ test('current pages declare four exact client originals while released apps keep
   const body=frontmatter+'\npaper_digest_workbench_contract: '+header.contract+'\npaper_digest_workbench_schema_fingerprint: '+header.schemaFingerprint+'\npaper_digest_sidecars: '+JSON.stringify(descriptors);
   const html=renderFixture(body);
   assert.match(html,/class=paper-tools__client-sidecars/);
+  const sidecarScript=html.match(/class=paper-tools__client-sidecars>([\s\S]*?)<\/script>/);
+  assert.ok(sidecarScript,'HTML keeps the client sidecar declaration');
+  const emitted=JSON.parse(sidecarScript[1]);
+  assert.deepEqual(Object.keys(emitted['rethink-context.json']).sort(),['contract','schemaFingerprint','sha256','url']);
+  assert.equal(emitted['rethink-context.json'].schemaFingerprint,protocols.recordHeader('paper-research-context','paper-research-context').schemaFingerprint);
+  assert.equal('schemafingerprint' in emitted['rethink-context.json'],false,'Hugo lowercase keys must not reach clients');
+  for(const name of ['citation.json','citation.bib','citation.ris']) assert.deepEqual(Object.keys(emitted[name]).sort(),['sha256','url']);
   const encoded=html.match(/class=paper-tools__citation-record>([\s\S]*?)<\/script>/);
   assert.ok(encoded,'HTML keeps its actual citation record');
   const compatibilityRecord=JSON.parse(encoded[1]);
