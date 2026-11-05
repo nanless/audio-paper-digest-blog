@@ -34,8 +34,16 @@
 
 搜索索引保留中英文检索字段，省略重复原题；上级名称和别名从共享快照读取。历史首选名称仍可检索，上级名称则使用当前目录。方向搜索没有结果时，目录仍可浏览。论文库筛选和全文关键词搜索需要 JavaScript；没有 JavaScript 时，时间归档、目录和论文原链接仍可访问。
 
-链接保留站点基础路径。完整构建将索引分成每片最多1 MiB的JSON数组，入口清单记录各分片的内容SHA、字节数和记录数；最多128片，总量不超过64 MiB。浏览器最多同时读取四片，全部核验后才接受结果。旧数组入口继续兼容，入口文件仍受原8 MiB限制。
+链接保留站点基础路径。
+
+## 搜索索引分片
+
+搜索索引入口使用 `paper-search-index-manifest` 合同，当前变体为 `sha-bound-ordered-shards`。`client/index.json` 是当前入口；构建同时写出的旧 `index.json` 使用历史合同名 `paper-search-index-manifest-v1`，供已发布客户端继续读取。浏览器仍可读取更早的普通数组，但只在当前入口返回 404 或 410 时回退，不能把旧入口当成当前格式。
+
+`scripts/shard-search-index.js` 把原 `index.json` 数组按原记录顺序切成若干 JSON 数组。每片最多 1 MiB，最多 128 片，全部合计最多 64 MiB；单条记录连同数组括号和分隔逗号也必须放得进一片。分片编号按原顺序递增，记录不重排、不拆分；分片文件名形如 `search-index/part-0001-<sha256 前 12 位>.json`，文件名中的前缀必须与清单里的完整 SHA-256 对应。清单记录 `recordCount`、`totalBytes` 和 `shards`；每个分片记录 `url`、`bytes`、`sha256` 和 `recordCount`。
+
+浏览器 `assets/js/search-index-loader.js` 最多同时读取四片，逐片核对实际字节数、SHA-256、UTF-8 和记录数，全部通过后才接受整份索引。构建后的 `scripts/verify-build.js` 重新读取清单和每个分片：文件必须是普通文件而不是符号链接，实际字节数、SHA-256 和记录数必须与清单一致，分片之间不能有重复的 `permalink`，所有分片字节与记录数之和必须等于 `totalBytes` 和 `recordCount`。它还按分片顺序重算记录顺序的 SHA-256，要求新旧入口的页面集合和顺序一致；旧数组入口仍受 8 MiB 上限。
 
 ## 验证
 
-在沙箱外运行 `npm test` 与 `npm run build:verify`。构建入口先调用 `verify-tags-v2.js`、`verify-tags-v3.js` 和 `verify-fullsite-tags.js`，核验历史记录与当前页面；通过后才生成网站。检查上下级关系、别名、各维度组合、主要角色、不同导读隔离、论文计数、未知身份、旧标签回退及脚本顺序。浏览器还须检查实际文章、390像素宽的手机页面、展开和筛选操作、应用与取消、刷新恢复以及页面是否溢出。
+在沙箱外运行 `npm test` 与 `npm run build:verify`。`npm run build` 在调用 Hugo 前依次运行 `verify-tags-v2.js`、`verify-tags-v3.js` 和 `verify-fullsite-tags.js`，核验历史记录与当前页面；Hugo 成功后调用 `scripts/shard-search-index.js` 分片。`npm run build:verify` 还先运行 `npm run audit:content`，并在构建后运行 `npm run verify` 核验页面与分片。检查上下级关系、别名、各维度组合、主要角色、不同导读隔离、论文计数、未知身份、旧标签回退及脚本顺序。浏览器还须检查实际文章、390像素宽的手机页面、展开和筛选操作、应用与取消、刷新恢复以及页面是否溢出。
