@@ -1,0 +1,45 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.07612v1",
+  "arxivId": "2611.07612",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.07612v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Acoustics Lab, Department of Information and Communications Engineering, Aalto University, Otakaari 5, Espoo, 02150, Finland"
+      ],
+      "name": "Johannes M. Arend"
+    },
+    {
+      "affiliations": [
+        "Audio Communication Group, Technische Universität Berlin, Einsteinufer 17c, Berlin, 10587, Germany"
+      ],
+      "name": "Christian Scheer"
+    },
+    {
+      "affiliations": [
+        "Audio Communication Group, Technische Universität Berlin, Einsteinufer 17c, Berlin, 10587, Germany",
+        "Institute of Computer and Communication Technology, TH Köln - University of Applied Sciences, Betzdorfer Str. 2, Cologne, 50679, Germany"
+      ],
+      "name": "Melissa Ramírez"
+    },
+    {
+      "affiliations": [
+        "Audio Communication Group, Technische Universität Berlin, Einsteinufer 17c, Berlin, 10587, Germany"
+      ],
+      "name": "Stefan Weinzierl"
+    },
+    {
+      "affiliations": [
+        "Audio Communication Group, Technische Universität Berlin, Einsteinufer 17c, Berlin, 10587, Germany"
+      ],
+      "name": "Fabian Brinkmann"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.07612v1",
+  "originalTitle": "Auditory and Visual Virtualization in 6DoF XR: Effects on Plausibility and Dynamic Auditory Distance Perception",
+  "pdfUrl": "https://arxiv.org/pdf/2611.07612v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

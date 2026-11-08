@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.06262v1",
+  "abstract": "Controllable engine sound synthesis, Active Sound Design and engine order analysis all build on the relationship between the sound of an engine and its momentary operating state: its speed and its load. Recordings of engine sound are abundant in archives, sample packs and online video, yet they rarely carry time-aligned annotations of that state, which limits their applicability to controllable engine sound generation. We present SonoDyno, which estimates the engine speed, the cylinder count and an engine-normalized load intensity from a microphone signal alone, with no tachometer, no bus access and no prior knowledge of the engine configuration. A convolutional scorer of 124,302 parameters reads the harmonic order energy of each frame at three time-frequency resolutions to jointly score cylinder count and speed, and a decoder imposes the rotational dynamics of the engine on the speed trajectory. A second head estimates the load intensity, the position of the torque between the engine's drag floor at 0 and its full-load ceiling at 1, from the order levels at the decoded speed. On recordings of engines it has never heard, with microphone position, engine type and cylinder count unknown, SonoDyno places 93 to 97% of the frames within 2% of the true speed, identifies the cylinder count with 80% accuracy and confuses the octave on fewer than 2% of the frames. On an unseen engine of a known type, the load intensity has a mean absolute error of 0.12, and the sign of the torque, driving or braking, is right on 91% of the frames. General pitch trackers fall behind even when the harmonic order of each engine is supplied: on our validation recordings and at a tolerance of 5%, the best of them places 62% of the frames within the tolerance, against 96% for SonoDyno.",
+  "abstractSha256": "472099a2a4e546b746c2db03af3d630a66e09d727286b0e5d740c10522581e1a",
+  "arxivId": "2611.06262",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.06262v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "CNN",
+    "primaryTask": "声学系统参数估计",
+    "rankBucket": "前50%",
+    "score": 6.4,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.acoustic-parameter-estimation",
+          "label": "声学系统参数估计"
+        },
+        {
+          "facet": "method",
+          "id": "method.cnn",
+          "label": "CNN"
+        },
+        {
+          "facet": "method",
+          "id": "method.rnn",
+          "label": "RNN"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "CNN",
+      "primaryMethodId": "method.cnn",
+      "primaryTask": "声学系统参数估计",
+      "primaryTaskId": "task.acoustic-parameter-estimation",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Robin Doerfler"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Beat Rossmy"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对无转速表、无总线、未知缸数的录音标注问题，SonoDyno 用三分辨率阶次能量加联合计分读出转速与缸数并用转动力学解码平滑轨迹，再用第二分支估计发动机归一化负荷，在未见过的真机上多数帧相对误差在 2% 以内，但最快转速变化与怠速仍是主要误差来源。",
+  "originalTitle": "SonoDyno: A Sonic Dynamometer for Engine Speed and Load Estimation from Audio",
+  "pdfUrl": "https://arxiv.org/pdf/2611.06262v1.pdf",
+  "readerTitle": "只听声音读出发动机转速、缸数与负荷：SonoDyno 是怎么做到的",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

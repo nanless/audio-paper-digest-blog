@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.05637v2",
+  "arxivId": "2611.05637",
+  "arxivVersion": 2,
+  "arxivVersionedId": "2611.05637v2",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Mariana Hernandez"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Hector Luna"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Carlos Bruno"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Luis Ricardo Santos"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Elena Simoes"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.05637v2",
+  "originalTitle": "Contextual Pictograms for Repairing Multilingual ASR Errors",
+  "pdfUrl": "https://arxiv.org/pdf/2611.05637v2.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

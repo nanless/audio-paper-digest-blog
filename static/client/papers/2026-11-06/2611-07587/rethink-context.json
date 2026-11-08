@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.07587v1",
+  "abstract": "Speech recognition still works poorly for many people whose speech is affected by conditions such as ALS, Parkinson's disease, cerebral palsy, Down syndrome or stroke. We took part in the Speech Accessibility Project Challenge 2 (SAPC2) with a public speech recognizer that we fine-tuned on the challenge data. Our best entry scored 7.81% character error rate on Test1, the first of two hidden test sets (official baseline 15.26%). Our live entries ran on CPUs with a combined median latency of about 0.9 seconds at 7.96-8.07% error. On new speakers, fine-tuning reduced errors most for the speakers that an off-the-shelf recognizer finds hardest to understand. Sentences already seen in training had far lower error rates than new ones (2.58% vs 6.42%), a larger difference than being a familiar speaker made. We close with lessons for evaluating such systems.",
+  "abstractSha256": "019c54936d6f641e082a4a58f9513a6bdfa5a45a4ad09c3e0973ef69f59c179a",
+  "arxivId": "2611.07587",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.07587v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "SFT",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "task",
+          "id": "task.pathological-speech",
+          "label": "病理语音评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.sft",
+          "label": "SFT"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "SFT",
+      "primaryMethodId": "method.sft",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kien Nguyen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Tuan Dinh"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Bao Phan"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "本文把公开的 Parakeet TDT 1.1B 在约 950 小时障碍语音上整体微调并做权重平均，在隐藏测试集 Test1 上把字符错误率从 15.26% 降到 7.81%，增益集中在原来最难识别的说话人和见过的句子上，而实时版本在普通 CPU 上以约 0.9 秒延迟达到相近精度。",
+  "originalTitle": "Fine-Tuning a Transducer for Impaired Speech: Where the Gains Appear and What They Mean for Evaluation",
+  "pdfUrl": "https://arxiv.org/pdf/2611.07587v1.pdf",
+  "readerTitle": "微调识别障碍语音的 Transducer：增益出现在哪里及其对评测的启示",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

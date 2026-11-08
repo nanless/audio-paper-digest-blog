@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.05744v1",
+  "arxivId": "2611.05744",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.05744v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Oche David Ankeli"
+    },
+    {
+      "affiliations": [
+        "RUZIVO Research Lab, African Leadership University, Kigali, Rwanda"
+      ],
+      "name": "Hassan Adelani Luqman"
+    },
+    {
+      "affiliations": [
+        "RUZIVO Research Lab, African Leadership University, Kigali, Rwanda"
+      ],
+      "name": "Theodora Ngozi Egbunike"
+    },
+    {
+      "affiliations": [
+        "Stanford University, Stanford, CA, USA"
+      ],
+      "name": "Joshua Gottschalk"
+    },
+    {
+      "affiliations": [
+        "Mila – Quebec AI Institute and McGill University, Montreal, Canada"
+      ],
+      "name": "Bonaventure F. P. Dossou"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.05744v1",
+  "originalTitle": "Text-Only Domain Adaptation for Low-Resource Medical ASR: Shallow Fusion and Density Ratio Rescoring for Hausa",
+  "pdfUrl": "https://arxiv.org/pdf/2611.05744v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

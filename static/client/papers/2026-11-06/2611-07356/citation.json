@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.07356v1",
+  "arxivId": "2611.07356",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.07356v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Maria Beatriz Silva"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Lucas Edson Silva de Araújo"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Sergio F. Chevtchenko"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ermeson Andrade"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Danilo Araujo"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Saeed Afshar"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.07356v1",
+  "originalTitle": "Acoustic Anomaly Detection for Early Identification of Drill Jamming",
+  "pdfUrl": "https://arxiv.org/pdf/2611.07356v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

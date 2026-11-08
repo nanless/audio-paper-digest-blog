@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.05678v1",
+  "abstract": "Audio deepfake detection (ADD) aims to distinguish bonafide speech from synthetic or manipulated speech. Representations from different layers of self-supervised learning (SSL) speech encoders vary in their ability to distinguish bonafide from spoofed speech. Comparing representations of the same utterance across encoder depths may reveal useful spoofing cues, yet common layer-selection and aggregation methods do not provide these comparisons as detection inputs. We propose Cross-Layer Relation Modeling (\\ours{}), which explicitly encodes cross-layer relations alongside layer-specific features, making both directly available for ADD. CLRM reuses the existing detector's SSL encoder and identifies informative layer pairs by combining speaker-relative representation geometry with source-domain detection performance. The resulting relation score is fused with the detector's original score, requiring only the training of compact relation heads and fusion parameters while keeping the existing detector frozen. Across five external datasets, CLRM reduces the mean equal error rate (EER) for all three evaluated detectors, achieving relative reductions of 7.8--16.7%. Controlled comparisons with identical layer summaries and approximately matched auxiliary-head parameter counts also show a lower mean EER for explicit relations than direct concatenation, both before and after score fusion. These findings support explicit cross-layer comparisons as useful detection inputs for SSL-based audio deepfake detectors.",
+  "abstractSha256": "d2e69699faa00411cd30077ccafd92e07b987340916cb6867bd005e5f5498162",
+  "arxivId": "2611.05678",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.05678v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "模型融合",
+    "primaryTask": "音频深度伪造检测",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-deepfake",
+          "label": "音频深度伪造检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.model-combination",
+          "label": "模型融合"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.self-supervised",
+          "label": "自监督学习"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "模型融合",
+      "primaryMethodId": "method.model-combination",
+      "primaryTask": "音频深度伪造检测",
+      "primaryTaskId": "task.audio-deepfake",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "EURECOM",
+        "Sophia Antipolis, France"
+      ],
+      "name": "Yangyang Qu"
+    },
+    {
+      "affiliations": [
+        "The Hong Kong Polytechnic University",
+        "Hong Kong SAR, China"
+      ],
+      "name": "Siqing Qin"
+    },
+    {
+      "affiliations": [
+        "The Hong Kong Polytechnic University",
+        "Hong Kong SAR, China"
+      ],
+      "name": "Kong Aik Lee"
+    },
+    {
+      "affiliations": [
+        "EURECOM",
+        "Sophia Antipolis, France"
+      ],
+      "name": "Massimiliano Todisco"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "CLRM 针对同一话语在 XLS-R 不同层表示判别力不同却缺少显式比较的问题，复用冻结检测器的编码器构造 L8-L21 层间关系表示并与原分数融合，在五个外部数据集上把三类检测器的平均等错误率相对降低 7.8%-16.7%，代价是新增三个小型关系头与融合参数的源域训练。",
+  "originalTitle": "CLRM: Cross-Layer Relation Modeling for Audio Deepfake Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2611.05678v1.pdf",
+  "readerTitle": "跨层比较如何为语音伪造检测提供新证据：CLRM 解读",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

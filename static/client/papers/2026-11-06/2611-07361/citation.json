@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.07361v1",
+  "arxivId": "2611.07361",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.07361v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xiaoling Han"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Bin Lin"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Nan Wu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Tony Q. S. Quek"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.07361v1",
+  "originalTitle": "Design of a Speech Enhancement-Based Deep Semantic Autoencoder for Wireless Communications",
+  "pdfUrl": "https://arxiv.org/pdf/2611.07361v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

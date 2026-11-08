@@ -1,0 +1,28 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.05638v1",
+  "arxivId": "2611.05638",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.05638v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Computer Science",
+        "Northwestern University"
+      ],
+      "name": "Xudong Tang"
+    },
+    {
+      "affiliations": [
+        "Management and Organizations",
+        "Kellogg School of Management, Northwestern University"
+      ],
+      "name": "Matthew Groh"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.05638v1",
+  "originalTitle": "VIPBench: A Human-Aligned Benchmark for Voice Identity Perception in the Age of Voice Cloning",
+  "pdfUrl": "https://arxiv.org/pdf/2611.05638v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

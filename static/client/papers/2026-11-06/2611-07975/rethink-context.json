@@ -1,0 +1,80 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.07975v1",
+  "abstract": "Multichannel room impulse responses (RIRs) in acoustics are often long and therefore the sample count becomes large if seen as finite impulse response (FIR) filters, making storage and real-time convolution costly. Pole-zero (PZ) models are an established way to represent RIRs compactly as infinite impulse response (IIR) transfer functions. We show that a PZ model implies a low-rank canonical polyadic decomposition (CPD) of tensorized RIRs: the early reflections form a sparse rank-1 sum, while the late reverberation admits a CPD with factors determined by the poles. This motivates higher-order-tensor-based compression of RIRs via the block term decomposition (BTD), a generalization of the CPD. We propose two multichannel compression schemes: (i) a stacked multichannel block term decomposition (SMCBTD) applied to a (D+1)-mode tensor of RIRs, and (ii) a joint multichannel block term decomposition (JMCBTD) that shares subsets of factors across channels discovered by spectral clustering on factor-subspace affinity graphs. Both are optimized by an alternating higher-order orthogonal iteration (HOOI) procedure. On simulated rooms as well as measured datasets, the proposed methods achieve consistently lower reconstruction error at equal compression ratios compared to separate single-channel decompositions and a generalized low-rank approximation of matrices (GLRAM) baseline. The largest gains occur with scalar cores (i.e., CPD), supporting the PZ-to-CPD modelling link. We also find D = 3 to be a practical sweet spot, offering most of the achievable gain at moderate compute/memory cost. The compressed models enable efficient downstream multichannel convolution.",
+  "abstractSha256": "9b86f94c20b2d0494c5b19cc130c571ff678afaa80d12e7abddd6f86d06fc0f4",
+  "arxivId": "2611.07975",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.07975v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "低秩压缩",
+    "primaryTask": "房间脉冲响应估计",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.rir-estimation",
+          "label": "房间脉冲响应估计"
+        },
+        {
+          "facet": "method",
+          "id": "method.low-rank-compression",
+          "label": "低秩压缩"
+        },
+        {
+          "facet": "method",
+          "id": "method.clustering",
+          "label": "聚类与类别匹配"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multichannel",
+          "label": "多通道"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "低秩压缩",
+      "primaryMethodId": "method.low-rank-compression",
+      "primaryTask": "房间脉冲响应估计",
+      "primaryTaskId": "task.rir-estimation",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Matthias Blochberger"
+    },
+    {
+      "affiliations": [
+        "Department of Information and Communications Engineering, Aalto University, Espoo, Finland"
+      ],
+      "name": "Filip Elvander"
+    },
+    {
+      "affiliations": [
+        "Department of Electronic Systems, Aalborg University, Aalborg, Denmark"
+      ],
+      "name": "Jan Østergaard"
+    },
+    {
+      "affiliations": [
+        "STADIUS, Department of Electrical Engineering, KU Leuven, Leuven, Belgium"
+      ],
+      "name": "Toon van Waterschoot"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "本文把长房间脉冲响应折成高阶张量，用极零点模型解释其低秩结构，并提出堆叠与共享因子的两种块项分解联合压缩方案，在仿真与实测数据上以相同压缩率取得更低重构误差，而标量核的优势与 D=3 的性价比是主要结论与取舍依据。",
+  "originalTitle": "Joint Higher-Order Low-Rank Tensor Decompositions for Multichannel Acoustic System Compression",
+  "pdfUrl": "https://arxiv.org/pdf/2611.07975v1.pdf",
+  "readerTitle": "把多通道房间脉冲响应折成高阶张量再联合压缩",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

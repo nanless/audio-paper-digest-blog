@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.07210v1",
+  "arxivId": "2611.07210",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.07210v1",
+  "authors": [
+    {
+      "affiliations": [
+        "\\institutionCentre for Digital Music, Queen Mary University of London London UK"
+      ],
+      "name": "Shuoyang Jasper Zheng"
+    },
+    {
+      "affiliations": [
+        "\\institutionGraduate School of Media and Governance, Keio University Kanagawa Japan"
+      ],
+      "name": "Keigo Yoshida"
+    },
+    {
+      "affiliations": [
+        "\\institutionCentre for Digital Music, Queen Mary University of London London UK"
+      ],
+      "name": "Nico García-Peguinho"
+    },
+    {
+      "affiliations": [
+        "\\institutionCreative Computing Institute, University of the Arts London London UK"
+      ],
+      "name": "Jiatong Liu"
+    },
+    {
+      "affiliations": [
+        "\\institutionCreative Computing Institute, University of the Arts London London UK"
+      ],
+      "name": "Dan Hearn"
+    },
+    {
+      "affiliations": [
+        "\\institutionCentre for Digital Music, Queen Mary University of London London UK"
+      ],
+      "name": "Anna Xambó Sedó"
+    },
+    {
+      "affiliations": [
+        "\\institutionCreative Computing Institute, University of the Arts London London UK"
+      ],
+      "name": "Nick Bryan-Kinns"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.07210v1",
+  "originalTitle": "Latent Terrain: Adapting Neural Audio Autoencoders as Design Materials in NIME",
+  "pdfUrl": "https://arxiv.org/pdf/2611.07210v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}
