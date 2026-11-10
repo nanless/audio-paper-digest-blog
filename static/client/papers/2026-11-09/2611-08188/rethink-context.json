@@ -1,0 +1,80 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.08188v1",
+  "abstract": "Objective: This review aims to provide a comprehensive synthesis of domain adaptation (DA) and domain general- ization (DG) strategies for AD detection. It focuses on their potential to improve the robustness, generalizability, and clinical reliability of ML-based diagnostic systems. Methods: We conduct a comprehensive scoping review of existing DA and DG approaches across multiple data modalities. The reviewed studies are organized according to data modality, algorithmic framework, adaptation strat- egy, clinical relevance, and reported cross-domain performance. Key methodological trends, performance gains, limitations, and remaining challenges are analyzed to identify future research directions. Results: DA and DG approaches have demonstrated encouraging improvements in cross-domain performance and model robustness. Emerging modalities, such as speech-based approaches, EEG and eye-tracking data, show great po- tential for early, accessible, and non-invasive cognitive assessments. However, important limitations remain, including insufficient external validation, limited interpretability, computational complexity, privacy concerns, and challenges in scaling to routine clinical practice. Conclusion: DA and DG provide important methodological pathways for developing more generalizable ML-based systems for AD detection. Future research should prioritize explainable, computationally efficient, privacy-preserving, and clinically validated DA/DG techniques. Strengthening these aspects will be essential for translating robust AI- based AD detection tools into clinically deployable solutions.",
+  "abstractSha256": "069ec42c1a354b22f288d6ed22732e9b9e72e03a0ead2c2b0a37255becb02899",
+  "arxivId": "2611.08188",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.08188v1",
+  "assessment": {
+    "documentType": "综述",
+    "primaryMethod": "系统综述",
+    "primaryTask": "病理语音评估",
+    "rankBucket": "前50%",
+    "score": 5.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.pathological-speech",
+          "label": "病理语音评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.systematic-review",
+          "label": "系统综述"
+        },
+        {
+          "facet": "method",
+          "id": "method.domain-adaptation",
+          "label": "领域适应"
+        },
+        {
+          "facet": "method",
+          "id": "method.domain-generalization",
+          "label": "域泛化"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "系统综述",
+      "primaryMethodId": "method.systematic-review",
+      "primaryTask": "病理语音评估",
+      "primaryTaskId": "task.pathological-speech",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yingchao Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yuhan Su"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xin Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shanshan Yao"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "本文综述要解决的是同一模型换医院、换设备、换人群后性能下降的问题，梳理神经影像、脑电、眼动、语音与多模态上的域适应和域泛化做法，指出跨站稳健性有改善但多为回顾性基准结果，落地仍需外部验证与缺失模态等考验。",
+  "originalTitle": "Improving the Clinical Generalizability of Machine Learning-Based Alzheimer's Disease Detection Across Domains and Modalities: A Comprehensive Review",
+  "pdfUrl": "https://arxiv.org/pdf/2611.08188v1.pdf",
+  "readerTitle": "跨 cohort 与跨设备的阿尔茨海默病检测：域适应与域泛化综述解读",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

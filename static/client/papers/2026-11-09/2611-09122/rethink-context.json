@@ -1,0 +1,75 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.09122v1",
+  "abstract": "Speech retrieval finds relevant spoken documents given a spoken query. The spoken query alone may not reveal the retrieval goal, such as finding an answer or matching speaker identity. Instruction-aware speech retrieval expresses this goal through a natural-language text instruction. Large audio-language models (LALMs) effectively process speech and text, and our analysis shows that different retrieval requirements favor hidden states from different audio-encoder layers. We introduce IRIS-Embed, which adapts LALMs into embedding models through contrastive training and instruction-aware audio layer weighting. We construct about 900K training samples from real data and synthetic data, with instructions expressing requirements for one or more speech attributes. On INSPIRE, an instruction-aware speech retrieval benchmark, IRIS-Embed consistently outperforms the corresponding LALM baselines. The best model achieves 62.92% macro-average Recall@50, surpassing the strongest baseline at 45.15%. Controlled comparisons demonstrate instruction awareness and the benefits of audio layer weighting. On MAEB, a massive audio embedding benchmark, macro-average gains of 9.4-19.8 points over the corresponding baselines show generalization beyond speech retrieval.",
+  "abstractSha256": "26557eab9a9348cf983194114566d16b75fe115de4aa46a6654a56af5410724e",
+  "arxivId": "2611.09122",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.09122v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "对比学习",
+    "primaryTask": "音频检索",
+    "rankBucket": "前25%",
+    "score": 7.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-retrieval",
+          "label": "音频检索"
+        },
+        {
+          "facet": "method",
+          "id": "method.contrastive",
+          "label": "对比学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.instruction-tuning",
+          "label": "指令微调"
+        },
+        {
+          "facet": "method",
+          "id": "method.lora",
+          "label": "LoRA"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "对比学习",
+      "primaryMethodId": "method.contrastive",
+      "primaryTask": "音频检索",
+      "primaryTaskId": "task.audio-retrieval",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "National Taiwan University"
+      ],
+      "name": "Chen-An Li"
+    },
+    {
+      "affiliations": [
+        "National Taiwan University"
+      ],
+      "name": "Cheng-Han Chiang"
+    },
+    {
+      "affiliations": [
+        "National Taiwan University",
+        "NTU Artificial Intelligence Center of Research Excellence (NTU AI-CoRE)"
+      ],
+      "name": "Hung-yi Lee"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对口语查询本身说不清要找内容还是找说话人等问题，IRIS-Embed 用指令加权的音频层组合与对比训练把大音频语言模型改成检索向量模型，在 INSPIRE 上宏平均召回达到 62.92%，并在 MAEB 上泛化，但依赖冻结编码器与有限属性标注。",
+  "originalTitle": "Improving Large Audio-Language Model Embedding Baselines for Instruction-Aware Speech Retrieval",
+  "pdfUrl": "https://arxiv.org/pdf/2611.09122v1.pdf",
+  "readerTitle": "指令感知语音检索：让大音频语言模型按要求找录音",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

@@ -1,0 +1,81 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.08758v1",
+  "abstract": "Speech deepfake detectors built on large self-supervised learning front-ends achieve high in-domain accuracy, yet suffer degradation under domain shift caused by unseen synthesizers, transmission codecs, or unfamiliar acoustic conditions. Meta-learning, particularly model-agnostic meta-learning for domain generalization (MLDG), addresses this issue by simulating domain shifts. However, applying MLDG directly introduces a bi-level optimization challenge that remains unsolved. First, effective domain-shift emulation requires genuine distributional gaps between meta-splits, yet such gaps can frequently produce gradient conflicts, destabilizing the bi-level optimization. Second, the stochastic nature of mini-batch gradients causes the reference direction to fluctuate across iterations, resulting in an optimization trajectory that fails to achieve domain generalization. We propose a conflict-aware meta-learning (CAML) framework, which addresses both challenges through three complementary components. Firstly, base domain gradient surgery (base-DGS) introduces an asymmetric projection that treats the meta-train gradient as a primary anchor. Secondly, EMA-DGS replaces the unstable anchor with its exponential moving average (EMA), providing a stable optimization trajectory anchor that substantially reduces domain-shift-induced conflict detections. Thirdly, layer-wise DGS (LW-DGS) further extends the framework to individual parameter tensors, enabling fine-grained, layer-specific intervention that targets conflict-prone layers while leaving well-aligned parameters intact. Experimental results demonstrate that the proposed CAML framework achieves lower EER than the compared baselines on most cross-dataset evaluations across multiple cross-dataset benchmarks and architectures, achieving a maximum relative improvement of 45.2% in terms of EER.",
+  "abstractSha256": "00616c93f66a8b18b165daec71a85735a497d8b6da726bc4dff26ee41e5fb541",
+  "arxivId": "2611.08758",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.08758v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "元学习",
+    "primaryTask": "语音伪造检测",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-spoofing",
+          "label": "语音伪造检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.meta-learning",
+          "label": "元学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.domain-generalization",
+          "label": "域泛化"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "元学习",
+      "primaryMethodId": "method.meta-learning",
+      "primaryTask": "语音伪造检测",
+      "primaryTaskId": "task.speech-spoofing",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Siqing Qin"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kong Aik Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Youzhi TU"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Eng Siong Chng"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Man-Wai Mak"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文针对元学习域泛化中有效域偏移模拟常伴随梯度冲突、且小批量梯度抖动导致冲突判断不稳的问题，提出不对称投影与指数滑动平均锚点及逐参数张量干预的冲突感知元学习框架，在多组跨数据集评测上降低等错误率，但结论只在原文的训练域划分、增强与早停条件下成立。",
+  "originalTitle": "Conflict-Aware Meta-Learning for Generalizable Speech Deepfake Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2611.08758v1.pdf",
+  "readerTitle": "冲突感知的元学习如何改善语音伪造检测的跨域泛化",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

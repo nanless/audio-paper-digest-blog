@@ -1,0 +1,98 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.09351v1",
+  "abstract": "Automated red-teaming of text-to-audio models requires test prompts that pass textual screening and expose harmful acoustic content. The central challenge is to connect the sounds produced by the target model to both reusable test generation and prompt revision. Our key idea is to represent test descriptions as structured acoustic plans that organize foreground sounds, context, and vocal attributes. To this end, we propose acoustic plan learning, a framework that learns and refines these plans using waveform feedback. We train the plan generator through supervised fine-tuning followed by reinforcement learning with audio feedback while keeping the target audio model fixed. At inference time, the same trained model generates initial plans and uses feedback to revise their context and vocal attributes while preserving the foreground. Experiments across four target systems show attack success rates of 79.4% on TangoFlux and 95.6% on Kling. The resulting test prompts also transfer across open-source and closed-source models, indicating shared acoustic vulnerabilities.",
+  "abstractSha256": "78bb6d610b741ad538406087b444a9d728c4aa3e73c2454b6e93ac18ebd6383a",
+  "arxivId": "2611.09351",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.09351v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "强化学习",
+    "primaryTask": "音频系统攻击与防御",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-system-attack-defense",
+          "label": "音频系统攻击与防御"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-generation",
+          "label": "音频生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.reinforcement",
+          "label": "强化学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.human-evaluation",
+          "label": "人类参与评测"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "强化学习",
+      "primaryMethodId": "method.reinforcement",
+      "primaryTask": "音频系统攻击与防御",
+      "primaryTaskId": "task.audio-system-attack-defense",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jiashu Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jiaming He"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zheming Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kaizheng Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Bing Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhiyuan Zha"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yi Yu"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对文本能通过审查但生成波形仍可能有害的问题，该工作把测试描述组织成结构化声学计划，用波形反馈学习可复用的生成分布并在推理时修订上下文与人声属性，在四个系统上报告了较高的攻击成功率，但结论依赖特定的审查器、评判器和短音频条件。",
+  "originalTitle": "AUTEUR: Acoustic Plan Learning for Red-Teaming Text-to-Audio Models",
+  "pdfUrl": "https://arxiv.org/pdf/2611.09351v1.pdf",
+  "readerTitle": "AUTEUR：用结构化声学计划做文本转音频模型的红队测试",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

@@ -1,0 +1,80 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.06285v1",
+  "abstract": "This paper presents a virtual microphone array approach for estimating the direction of arrival of a sound source using a moving microphone and a stationary reference microphone. The method exploits the microphone motion to generate a time-varying array geometry, using fiber-optic position sensing to reconstruct the trajectory and determine the resulting virtual microphone configurations. For each configuration, the estimated time difference of arrival between the two microphone signals and the corresponding microphone geometry define a hyperboloid representing all possible sound source positions consistent with the time difference. By combining multiple hyperboloid constraints, the direction of arrival can be estimated in azimuth and elevation relative to the microphone coordinate system. In contrast to conventional arrays with fixed geometries and approaches based on predefined microphone trajectories, the proposed method derives the virtual array geometry directly from the measured microphone motion, enabling a spatially distributed virtual array to be formed using only two physical microphones and offering potential for size- and weight-constrained applications. The approach was experimentally evaluated under controlled low-reflection conditions for different source positions, source distances, and signal characteristics. The influence of microphone motion was further examined, and the method was tested with a moving sound source. The results demonstrate the feasibility of direction-of-arrival estimation using a virtual microphone array without requiring a predefined microphone trajectory.",
+  "abstractSha256": "b724843b83f1592b1c7490d7dad325aa50a3955fa7db41c3f5029926dd561efb",
+  "arxivId": "2611.06285",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.06285v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "信号处理",
+    "primaryTask": "声源定位",
+    "rankBucket": "前50%",
+    "score": 5.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.localization",
+          "label": "声源定位"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.microphone-array",
+          "label": "麦克风阵列"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.spatial-audio",
+          "label": "空间音频"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "声源定位",
+      "primaryTaskId": "task.localization",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Sebastian Schwarze"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jiekai Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Thomas Kissinger"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Stephan Werner"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文用一根摆动碳杆带动一只麦克风、配合光纤测出轨迹形成虚拟阵列，再用多组到达时间差求双曲面交会来估计方位角和俯仰角，在低反射实验室中验证了可行性，但精度与有效率高度依赖声源方向、信号带宽和摆动幅度。",
+  "originalTitle": "Virtual Microphone Array for Direction-of-Arrival Estimation Based on Fiber-Optic Position Sensing",
+  "pdfUrl": "https://arxiv.org/pdf/2611.06285v1.pdf",
+  "readerTitle": "只用两只麦克风做声源测向：靠摆动形成虚拟阵列",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

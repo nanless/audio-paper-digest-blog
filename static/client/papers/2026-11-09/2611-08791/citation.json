@@ -1,0 +1,21 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.08791v1",
+  "arxivId": "2611.08791",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.08791v1",
+  "authors": [
+    {
+      "affiliations": [
+        "New York University",
+        "New York, NY, USA"
+      ],
+      "name": "Kris Atallah"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.08791v1",
+  "originalTitle": "AircraftWitness: How Often Aircraft Can Locate Recordings",
+  "pdfUrl": "https://arxiv.org/pdf/2611.08791v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

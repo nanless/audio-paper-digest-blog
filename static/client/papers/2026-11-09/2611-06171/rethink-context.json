@@ -1,0 +1,80 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.06171v1",
+  "abstract": "Current speech deepfake detectors treat each utterance as a flat sequence of frames, limiting their ability to capture long-range spectral inconsistencies that span non-adjacent regions of an audio signal. We propose \\textbf{GraphSeal}, which constructs a temporal-spectral graph over short speech segments and propagates artifact cues through graph attention layers before a global readout produces the bonafide-vs-spoof decision. Each node in the graph corresponds to a fixed-length segment; edges encode temporal adjacency and spectral similarity, letting the network attend to distant frames that share suspicious spectral patterns. A multi-head graph attention mechanism weights neighboring nodes according to both learned features and edge attributes, and a hierarchical readout aggregates node representations into a single utterance-level embedding for binary classification. GraphSeal is front-end agnostic: it operates on top of any self-supervised or handcrafted feature extractor. On ASVspoof 2019~LA, ASVspoof 2021~LA, ASVspoof~5, and the In-the-Wild dataset, GraphSeal achieves equal error rates of 0.52\\%, 2.41\\%, 8.17\\%, and 5.24\\%, respectively, matching or outperforming prior methods that rely on fixed-topology graph networks or purely sequential architectures.",
+  "abstractSha256": "f30bcf6b049082569befbfaeca9e1809f0e2766b1eedefad36e0f2049cf6c57f",
+  "arxivId": "2611.06171",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.06171v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "图神经网络",
+    "primaryTask": "音频深度伪造检测",
+    "rankBucket": "前50%",
+    "score": 6.7,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-deepfake",
+          "label": "音频深度伪造检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.gnn",
+          "label": "图神经网络"
+        },
+        {
+          "facet": "method",
+          "id": "method.attention",
+          "label": "注意力机制"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "图神经网络",
+      "primaryMethodId": "method.gnn",
+      "primaryTask": "音频深度伪造检测",
+      "primaryTaskId": "task.audio-deepfake",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Lee Seung-woo"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Bowen Qi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kim Min-jun"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jang Won-young"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对整句序列模型难以关联时间上不相邻但频谱相似区域的伪造痕迹，GraphSeal 把语音切成片段建成随每句话变化的图并用图注意力传递证据，在四个评测集上把等错误率降到 0.52%、2.41%、8.17% 和 5.24%，图模块只增加 2.1M 参数和 12 毫秒延迟。",
+  "originalTitle": "GraphSeal: Graph-Augmented Speech Deepfake Detection via Temporal-Spectral Artifact Propagation",
+  "pdfUrl": "https://arxiv.org/pdf/2611.06171v1.pdf",
+  "readerTitle": "GraphSeal：用时谱图在远距离片段之间传递伪造痕迹",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

@@ -1,0 +1,86 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.05637v2",
+  "abstract": "Speech transcription errors can be difficult to recognize when competing word hypotheses are unfamiliar or visually similar. We describe an interface that combines alternative transcripts, replay and contextually checked pictograms for selected uncertain concepts. The system will initially support French and Spanish functional utterances. A counterbalanced study will assess whether pictorial feedback helps listeners recover the speaker's intended action beyond text alternatives alone. We will also quantify semantic mismatch and additional interaction time, since an inappropriate image can reinforce the wrong interpretation rather than repair it.",
+  "abstractSha256": "67e8c7372cc028c8ec29690734ede23c7d2c251495e5611827ff60a10c24d691",
+  "arxivId": "2611.05637",
+  "arxivVersion": 2,
+  "arxivVersionedId": "2611.05637v2",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "规则与词典方法",
+    "primaryTask": "语音识别",
+    "rankBucket": "后50%",
+    "score": 3.9,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "task",
+          "id": "task.intent-slot",
+          "label": "口语意图与槽位识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.user-study",
+          "label": "用户研究"
+        },
+        {
+          "facet": "method",
+          "id": "method.rule-based",
+          "label": "规则与词典方法"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "规则与词典方法",
+      "primaryMethodId": "method.rule-based",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Mariana Hernandez"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Hector Luna"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Carlos Bruno"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Luis Ricardo Santos"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Elena Simoes"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对法语和西班牙语日常功能语句中不确定的具体词，论文提出只在人工按短语核查通过时才用象形图辅助听者二选一，并计划用三条件对照实验检验它能否在已有文本候选和回放之外提高意图恢复，同时计量语义错配和额外时间代价，但目前仍是待验证的方案而非已完成的效果报告。",
+  "originalTitle": "Contextual Pictograms for Repairing Multilingual ASR Errors",
+  "pdfUrl": "https://arxiv.org/pdf/2611.05637v2.pdf",
+  "readerTitle": "用上下文核查过的象形图辅助修复多语言语音识别错误",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

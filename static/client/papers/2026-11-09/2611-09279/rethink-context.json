@@ -1,0 +1,80 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.09279v1",
+  "abstract": "We propose AnomSep, which combines optimiza-tion-based separation with deep neural refinement to achieve accurate anomaly detection with listenable explanations. Anomaly detection requires no predefined anomalous categories, and understanding the basis for each detection helps security personnel assess the validity of each detection. End-to-end anomaly detectors can achieve high detection accuracy but output only scalar scores, and existing anomalous sound separation methods provide listenable explanations with limited detection accuracy. AnomSep first obtains preliminary normal-sound and anomalous-sound estimates through optimization-based separation using a dictionary learned from normal sounds in the target environment. Deep neural refinement then improves the preliminary estimates in a pretrained audio latent space. The separated anomalous sound serves as the listenable explanation, and its energy determines the anomaly score. Experiments on synthetic mixtures and real mixtures show improved separation quality over baseline separators. AnomSep achieves detection performance competitive with the end-to-end baseline and provides listenable explanations directly linked to each detection decision.",
+  "abstractSha256": "799ac87784df427711f541734118545a13e1f1834148aa3b793d3382611d137b",
+  "arxivId": "2611.09279",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.09279v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "流匹配",
+    "primaryTask": "异常声音检测",
+    "rankBucket": "前50%",
+    "score": 6.4,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.anomaly-detection",
+          "label": "异常声音检测"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-separation",
+          "label": "音频分离"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "method",
+          "id": "method.lora",
+          "label": "LoRA"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "流匹配",
+      "primaryMethodId": "method.flow-matching",
+      "primaryTask": "异常声音检测",
+      "primaryTaskId": "task.anomaly-detection",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Koki Shoda"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jun Younes Louhi Kasahara"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Qi An"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Atsushi Yamashita"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对安防音频中异常类别无法穷举且只给分数难以核查的问题，AnomSep 先用正常声音字典做优化分离得到初步估计，再在预训练音频隐空间中做流匹配精修并用异常波形能量打分，在合成与真实混合录音上兼顾分离质量与检测准确，但代价是推理更重且阈值固定未适应环境漂移。",
+  "originalTitle": "AnomSep: Bridging Optimization-Based Separation and Deep Neural Refinement for Anomaly Detection with Listenable Explanations",
+  "pdfUrl": "https://arxiv.org/pdf/2611.09279v1.pdf",
+  "readerTitle": "AnomSep：先用正常声音字典粗分，再用神经网络精修的可听异常检测",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

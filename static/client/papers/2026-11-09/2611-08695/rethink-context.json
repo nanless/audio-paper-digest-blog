@@ -1,0 +1,98 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.08695v1",
+  "abstract": "We present FoleyForge, a generative model for instruction-based editing of sound effects. Given an input clip and a free-form instruction describing the desired change, it applies the edit while preserving the input's identity. A single model handles semantic, stylistic, and DSP-like changes. We introduce a data pipeline that guides an audio language model to author both DSP-based acoustic edits and similarity-preserving semantic edits, thus addressing the lack of publicly available audio editing data. Such data is then used to fine-tune a rectified-flow audio generation model, which we extend to expose attribute controls for loudness change, edit strength, and an input-derived contour envelope, each tunable via classifier-free guidance, yielding a more expressive editing model. FoleyForge achieves state-of-the-art instruction adherence at competitive audio quality and source faithfulness.",
+  "abstractSha256": "5e3f35caf4748550f2b9ca46c9f9a3528762fd0018f4ce4699f056f4a9adb533",
+  "arxivId": "2611.08695",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.08695v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "流匹配",
+    "primaryTask": "音频编辑",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-editing",
+          "label": "音频编辑"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-generation",
+          "label": "音频生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "method",
+          "id": "method.subjective-evaluation",
+          "label": "主观评测"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "流匹配",
+      "primaryMethodId": "method.flow-matching",
+      "primaryTask": "音频编辑",
+      "primaryTaskId": "task.audio-editing",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Giovana Morais"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hugo Flores García"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Prem Seetharaman"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Johannes Imort"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Justin Salamon"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Magdalena Fuentes"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Oriol Nieto"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对单条音效按自由指令做语义、风格和声学编辑并保留原声身份的问题，FoleyForge 用合成三元组数据微调整流流生成模型并加入响度和包络等可控轴，在 Subtle 和 Creative 两组评测上取得较高的指令遵循度，代价是大幅编辑时音质和保真度需要权衡。",
+  "originalTitle": "FoleyForge: Free-form, Controllable, Rectified-flow Editing of Sound Effects",
+  "pdfUrl": "https://arxiv.org/pdf/2611.08695v1.pdf",
+  "readerTitle": "FoleyForge：按一句话指令改音效，还留住原来的声音",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

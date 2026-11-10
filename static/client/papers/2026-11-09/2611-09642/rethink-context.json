@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.09642v1",
+  "abstract": "Antarctic whale vocalization detection requires temporally localizing call boundaries in long underwater recordings and classifying them into predefined call types. Training reliable machine learning models for this task is difficult due to the variability and sparsity of whale calls in passive acoustic monitoring datasets. These difficulties are further amplified by time-varying noise that can mask whale calls and by site-specific ambient sound characteristics to which a trained model may not generalize. In this work, we present NAVE, a Conformer-based detector that improves whale-call detection via three components. First, its input representation combines per-bin complex mean subtraction, which suppresses constant site-specific ambient sound characteristics, with an additional per-channel energy normalization (PCEN) channel that adapts to temporal variations in the noise floor. Second, a frequency-dynamic stem processes these noise-aware representations with convolutions that adapt across the characteristic frequency bands of the target call types. Third, we use a Conformer backbone with a convolution kernel matched to the duration of the target calls that adds an inductive bias and improves temporal localization. We evaluate NAVE on BioDCASE 2026 Task 2 using leave-one-site-out cross-validation across the validation sites, which approximates deployment on unseen recording sites. A single NAVE model with a tuned per-class threshold exceeds the stronger WhaleVAD-BPN baseline, using no boundary-proposal network and no search over post-processing parameters. A controlled ablation study shows that the normalized front-end and a duration-matched convolutional kernel each contribute substantially to recovering the D downsweep, the hardest class for previous detectors, with the wide kernel giving the largest aggregate gain.",
+  "abstractSha256": "9ea5ebb299daa0d99531b5bd8cc80e7d9b57ecc6dee8579e0b95e2c1ce5cd795",
+  "arxivId": "2611.09642",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.09642v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "Conformer",
+    "primaryTask": "音频事件检测",
+    "rankBucket": "前50%",
+    "score": 7.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.event-detection",
+          "label": "音频事件检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.conformer",
+          "label": "Conformer"
+        },
+        {
+          "facet": "application",
+          "id": "application.bioacoustics",
+          "label": "生物声学监测"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.bioacoustics",
+          "label": "生物声学"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "Conformer",
+      "primaryMethodId": "method.conformer",
+      "primaryTask": "音频事件检测",
+      "primaryTaskId": "task.event-detection",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Matthias Nagl"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Paul Primus"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Gerhard Widmer"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对长时被动声学监测中鲸叫稀疏且跨站点噪声多变的问题，NAVE 用去均值加 PCEN 的前端、频率动态卷积干和与呼叫时长匹配的宽卷积 Conformer 做帧级检测，在留一站点验证上主要靠找回 D 类下扫频超过基线，代价是 BMABZ 略降且 D 类仍最弱。",
+  "originalTitle": "NAVE: A Normalized, Adaptive Conformer for Antarctic Whale Vocalization Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2611.09642v1.pdf",
+  "readerTitle": "NAVE：为南极鲸叫检测做的归一化自适应 Conformer",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

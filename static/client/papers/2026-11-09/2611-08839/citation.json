@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.08839v1",
+  "arxivId": "2611.08839",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.08839v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Chalmers University of Technology and University of Gothenburg, Department of Computer Science and Engineering, Gothenburg, Sweden"
+      ],
+      "name": "Changheon Han"
+    },
+    {
+      "affiliations": [
+        "Chalmers University of Technology and University of Gothenburg, Department of Computer Science and Engineering, Gothenburg, Sweden"
+      ],
+      "name": "Hugh Xuechen Liu"
+    },
+    {
+      "affiliations": [
+        "Chalmers University of Technology and University of Gothenburg, Department of Computer Science and Engineering, Gothenburg, Sweden"
+      ],
+      "name": "Ashkan Panahi"
+    },
+    {
+      "affiliations": [
+        "Chalmers University of Technology and University of Gothenburg, Department of Computer Science and Engineering, Gothenburg, Sweden"
+      ],
+      "name": "Kıvanç Tatar"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.08839v1",
+  "originalTitle": "Functional Dependency beyond Similarity: Hierarchical Decomposition of Training Data Attribution in Music Generative Models",
+  "pdfUrl": "https://arxiv.org/pdf/2611.08839v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

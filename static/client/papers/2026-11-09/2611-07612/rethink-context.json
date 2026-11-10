@@ -1,0 +1,87 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.07612v1",
+  "abstract": "Extended reality (XR) enables controlled yet naturalistic multisensory experiments, but its validity depends on whether virtualized cues are perceptually plausible and lead to behavior comparable to the real world. To the best of our knowledge, this is the first study to perceptually evaluate a six-degree-of-freedom (6DoF) XR system that combines real-time room acoustic simulation, binaural rendering, and an audio-visually matched virtual replica of a large laboratory room in terms of both plausibility and behavior. In two experiments with 45 participants, we investigated how auditory and visual virtualization affect plausibility and dynamic auditory distance perception (ADP). A plausibility experiment compared real and virtual sound sources in audio-augmented reality (AAR) and virtual reality (VR), while a locomotion-based ADP experiment assessed distance-judgment accuracy, signed error, and task effort across four virtualization conditions. The system produced plausible binaural rendering in both AAR and VR, with higher plausibility in VR, indicating that perceptual requirements for XR audio depend on the visual reference frame. In the ADP task, any form of virtualization reduced accuracy and increased effort, although performance remained high overall. Virtual audio produced a bias toward nearer perceived source distances, whereas visual-only virtualization reduced accuracy without a significant directional bias. These effects did not add up in full VR. Overall, the findings demonstrate the strong potential of current 6DoF XR systems for interactive perceptual research, while revealing that task-specific behavioral validation may be necessary.",
+  "abstractSha256": "b738c8e807aac32c79f0b5e3eab306b9946ca2d063fa6d53c00ed4e3f230c62e",
+  "arxivId": "2611.07612",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.07612v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "心理声学实验",
+    "primaryTask": "空间音频渲染",
+    "rankBucket": "前50%",
+    "score": 6.7,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.spatial-rendering",
+          "label": "空间音频渲染"
+        },
+        {
+          "facet": "method",
+          "id": "method.psychoacoustic-experiment",
+          "label": "心理声学实验"
+        },
+        {
+          "facet": "method",
+          "id": "method.subjective-evaluation",
+          "label": "主观评测"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.listening-effort",
+          "label": "听觉努力与认知负荷"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "心理声学实验",
+      "primaryMethodId": "method.psychoacoustic-experiment",
+      "primaryTask": "空间音频渲染",
+      "primaryTaskId": "task.spatial-rendering",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Acoustics Lab, Department of Information and Communications Engineering, Aalto University, Otakaari 5, Espoo, 02150, Finland"
+      ],
+      "name": "Johannes M. Arend"
+    },
+    {
+      "affiliations": [
+        "Audio Communication Group, Technische Universität Berlin, Einsteinufer 17c, Berlin, 10587, Germany"
+      ],
+      "name": "Christian Scheer"
+    },
+    {
+      "affiliations": [
+        "Audio Communication Group, Technische Universität Berlin, Einsteinufer 17c, Berlin, 10587, Germany",
+        "Institute of Computer and Communication Technology, TH Köln - University of Applied Sciences, Betzdorfer Str. 2, Cologne, 50679, Germany"
+      ],
+      "name": "Melissa Ramírez"
+    },
+    {
+      "affiliations": [
+        "Audio Communication Group, Technische Universität Berlin, Einsteinufer 17c, Berlin, 10587, Germany"
+      ],
+      "name": "Stefan Weinzierl"
+    },
+    {
+      "affiliations": [
+        "Audio Communication Group, Technische Universität Berlin, Einsteinufer 17c, Berlin, 10587, Germany"
+      ],
+      "name": "Fabian Brinkmann"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文用同一大实验室的真房间与实时仿真虚房间对比，检验六自由度音频渲染能否以假乱真，并量化听觉与视觉虚拟化各自如何降低走动中辨别 5 个扬声器距离的正确率、引入方向性偏差和增加费力感。",
+  "originalTitle": "Auditory and Visual Virtualization in 6DoF XR: Effects on Plausibility and Dynamic Auditory Distance Perception",
+  "pdfUrl": "https://arxiv.org/pdf/2611.07612v1.pdf",
+  "readerTitle": "在能走动的虚实房间里，听声辨位还准吗：6DoF XR 的逼真感与动态距离感知",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

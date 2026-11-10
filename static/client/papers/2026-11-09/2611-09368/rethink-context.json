@@ -1,0 +1,109 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.09368v1",
+  "abstract": "Fisheye cameras offer wide visual coverage but distort facial and lip geometry, challenging audio-visual target speaker extraction. We introduce AISHELL8-FISHEYE, a 47.03-hour corpus of 94 Mandarin speakers with synchronized audio and paired fisheye and normal-camera videos. Speaker-disjoint splits and synthetic two-speaker mixtures support reproducible evaluation under matched acoustic conditions. We also establish a baseline that combines a lip-reading encoder with a frozen distortion-aware branch transferred from fisheye head pose estimation. On fisheye video, adding this branch to an adapted lip encoder improves scale-invariant signal-to-distortion ratio improvement from 10.47 to 11.84 dB. The branch does not improve performance with a frozen lip encoder, highlighting the importance of visual adaptation. A substantial gap to paired normal-camera inputs remains. The corpus and baseline resources support further research on speech extraction from distorted visual cues.",
+  "abstractSha256": "22f8639b1dd266682ffd13564b2c3fc722005738ce7bcca163b0cbc2377fbd5f",
+  "arxivId": "2611.09368",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.09368v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "迁移学习",
+    "primaryTask": "目标说话人提取",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.target-speaker",
+          "label": "目标说话人提取"
+        },
+        {
+          "facet": "method",
+          "id": "method.transfer",
+          "label": "迁移学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "迁移学习",
+      "primaryMethodId": "method.transfer",
+      "primaryTask": "目标说话人提取",
+      "primaryTaskId": "task.target-speaker",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Peijun Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhan Jin"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Juan Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hui Bu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xiaoyi Qin"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ruyi Gan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hao Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ming Li"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文针对鱼眼畸变下唇动线索不可靠的问题，采集 47.03 小时中英双视角配对语料并用冻结的鱼眼头部姿态分支辅助唇读编码器与 TF-GridNet 分离器，在可训练唇编码器时把鱼眼 SI-SDRi 从 10.47 dB 提到 11.84 dB，但仍与普通相机差 7.49 dB 且冻结唇编码器时无效。",
+  "originalTitle": "AISHELL8-FISHEYE: A Fisheye Audio-Visual Dataset for Target Speaker Extraction with Distortion-Aware Baselines",
+  "pdfUrl": "https://arxiv.org/pdf/2611.09368v1.pdf",
+  "readerTitle": "鱼眼镜头下还能看口型捞出目标说话人吗",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

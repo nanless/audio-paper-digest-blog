@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.08791v1",
+  "abstract": "Aircraft overhead can reveal where an outdoor recording was made. Propellers and rotors leave Doppler curves in audio, and public ADS-B archives log equipped aircraft. We measure how often, blind and against chance. Our main test was registered and timestamped before any audio, and its two amendments came before any answer was read. It covers 24 new places, with the recorders' own clocks, a 300 s slack and a 20 km square. The best of three locators places clear-pass clips within 1 km at 4 places, where a uniform guess predicts 0.57 (p = 0.0065 after correcting for the pick). With the wrong time or swapped audio it places none. The other two hit 1 and 2. On 360 clips from 7 places of a GPS-timed network, two locators place 6% and 8% within 1 km. By place, a unit chosen after that run, they hit 4 and 5 of 7 where a uniform guess predicts 2.3. On 1,600 random public recordings, picked and cut without the truth in a time-bounded run, the three locators answer at most 20 times and place at most 2. We release AircraftWitness, a benchmark, and pass labels for 11.7 million recordings.",
+  "abstractSha256": "43dd43725f96c6797af29fdf26f2e48cfb8efb7819a95e9f1b8f19c4f93c1f9f",
+  "arxivId": "2611.08791",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.08791v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "信号处理",
+    "primaryTask": "声学系统参数估计",
+    "rankBucket": "前50%",
+    "score": 6.7,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.acoustic-parameter-estimation",
+          "label": "声学系统参数估计"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.environmental",
+          "label": "环境声"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "声学系统参数估计",
+      "primaryTaskId": "task.acoustic-parameter-estimation",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "New York University",
+        "New York, NY, USA"
+      ],
+      "name": "Kris Atallah"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文把飞机经过时的多普勒音调曲线与公开 ADS-B 航迹配对来猜录音地点，并在事先锁定的盲测中量化了命中率、回答率与对照表现，同时发布了千万级录音的经过标签与评测基准。",
+  "originalTitle": "AircraftWitness: How Often Aircraft Can Locate Recordings",
+  "pdfUrl": "https://arxiv.org/pdf/2611.08791v1.pdf",
+  "readerTitle": "头顶的飞机多久能定位一段录音：AircraftWitness 如何测量",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

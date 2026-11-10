@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.06345v1",
+  "arxivId": "2611.06345",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.06345v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Medical Physics and Acoustics and Cluster of Excellence Hearing4allCarl von Ossietzky Universität Oldenburg, Germany"
+      ],
+      "name": "Tong Xiao"
+    },
+    {
+      "affiliations": [
+        "Institut für Hörtechnik und Audiologie, Jade Hochschule, Oldenburg, Germany"
+      ],
+      "name": "Reinhild Roden"
+    },
+    {
+      "affiliations": [
+        "Institut für Hörtechnik und Audiologie, Jade Hochschule, Oldenburg, Germany"
+      ],
+      "name": "Matthias Blau"
+    },
+    {
+      "affiliations": [
+        "Department of Medical Physics and Acoustics and Cluster of Excellence Hearing4allCarl von Ossietzky Universität Oldenburg, Germany"
+      ],
+      "name": "Simon Doclo"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.06345v1",
+  "originalTitle": "The Hearpiece Database of Binaural Room Impulse Responses and Driver Responses on KEMAR",
+  "pdfUrl": "https://arxiv.org/pdf/2611.06345v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

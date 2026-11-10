@@ -1,0 +1,75 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.07361v1",
+  "abstract": "Speech communication plays a crucial role in the Internet of Things and autonomous networks. However, traditional communication systems suffer from insufficient semantic extraction and limited noise suppression capability. To address these issues, we propose a Speech enhancement-based Deep Semantic Autoencoder (S-DSA) communication system for wireless communications. It consists of a dual-branch semantic encoder, a channel encoder, a channel decoder, and two semantic decoders, enabling joint source-channel coding for robust transmission. A key novelty lies in an adaptive semantic noise decoupling mechanism that disentangles target speech semantics from noise representations through an interaction module, thus maintaining semantic consistency under low SNR conditions. Furthermore, a joint training strategy optimizes speech reconstruction and noise estimation, while a lightweight testing strategy reduces complexity by disabling the noise-decoding path. The proposed S-DSA enables more effective separation between speech and noise, and yields higher robustness as well as better reconstruction quality. These findings highlight the potential of the proposed S-DSA as a practical solution for next-generation intelligent wireless communications.",
+  "abstractSha256": "488227677728ac437577464ec0f677f7e0572b32c3da95117c5fffcd787b89cf",
+  "arxivId": "2611.07361",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.07361v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "端到端学习",
+    "primaryTask": "语音增强",
+    "rankBucket": "前50%",
+    "score": 6.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-enhancement",
+          "label": "语音增强"
+        },
+        {
+          "facet": "method",
+          "id": "method.end-to-end-learning",
+          "label": "端到端学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "端到端学习",
+      "primaryMethodId": "method.end-to-end-learning",
+      "primaryTask": "语音增强",
+      "primaryTaskId": "task.speech-enhancement",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xiaoling Han"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Bin Lin"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Nan Wu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Tony Q. S. Quek"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对带环境噪声的语音语义传输问题，S-DSA 用双分支语义编码加交互门控做语音与噪声解耦并做联合信源信道编码，在 AWGN 等信道和 0 到 20 dB 输入混合信噪比下取得更好的 PESQ 与 STOI，代价是训练时需要双解码器联合监督。",
+  "originalTitle": "Design of a Speech Enhancement-Based Deep Semantic Autoencoder for Wireless Communications",
+  "pdfUrl": "https://arxiv.org/pdf/2611.07361v1.pdf",
+  "readerTitle": "带语音增强的深度语义自编码器如何做抗噪语音传输",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

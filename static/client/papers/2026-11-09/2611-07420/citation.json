@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.07420v1",
+  "arxivId": "2611.07420",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.07420v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xinran Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ning Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yixin Luo"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hongqing Zhu"
+    },
+    {
+      "affiliations": [
+        "organization=School of Information Science and Engineering, East China University of Science and Technology, city=Shanghai, postcode=200237, country=China"
+      ],
+      "name": "Li Tian"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.07420v1",
+  "originalTitle": "Adaptive and High-Fidelity Matching Algorithm for Retrieval-Based Accent Conversion",
+  "pdfUrl": "https://arxiv.org/pdf/2611.07420v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

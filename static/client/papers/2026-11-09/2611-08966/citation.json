@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.08966v1",
+  "arxivId": "2611.08966",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.08966v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Mohammad Faraz Akhtar"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Aditya Parashar"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ayush Jain"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Madhur Gupta"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ritesh Kumar"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Soubhik Chakraborty"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.08966v1",
+  "originalTitle": "Concordance-Optimal Continuous Music Emotion Estimation: Variance Decomposition, Dual-Branch Temporal Fusion, and Conformal Prediction Intervals",
+  "pdfUrl": "https://arxiv.org/pdf/2611.08966v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

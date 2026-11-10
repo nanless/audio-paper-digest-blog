@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.09224v1",
+  "arxivId": "2611.09224",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.09224v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Phi-Hung Hoang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Van-Manh Tran"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Nam-Thuan Trinh"
+    },
+    {
+      "affiliations": [
+        "AIT laboratory, Faculty of Artificial Intelligence, FPT University, Da Nang, 550000, Vietnam"
+      ],
+      "name": "Thi-Thu-Hong Phan"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.09224v1",
+  "originalTitle": "HMMF-Net: A Lightweight Hierarchical Multi-Frame Multimodal Fusion Network for Accurate Fish Feeding Intensity Assessment",
+  "pdfUrl": "https://arxiv.org/pdf/2611.09224v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

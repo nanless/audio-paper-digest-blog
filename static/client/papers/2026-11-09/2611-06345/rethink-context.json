@@ -1,0 +1,80 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.06345v1",
+  "abstract": "This document describes the measurement setup, signal processing, data organization, and MATLAB file format of a database of acoustic responses measured on a Knowles Electronics Manikin for Acoustic Research (KEMAR) using the Hearpiece, a multi-microphone, multi-driver in-ear research device. The data include binaural room impulse responses (BRIRs) and Hearpiece driver responses, together with center-microphone room impulse responses and a loopback impulse response of the playback and recording system. The BRIRs cover two Hearpiece configurations, three room conditions, three independent insertions per configuration, and 24 horizontal source directions. The database supports reproducible research on binaural and hearing-device signal processing, with potential applications in speech enhancement, spatial filtering and source separation, dereverberation, active noise and occlusion control, and acoustic feedback cancellation. The database, MATLAB loading script, and technical documentation are publicly available at https://doi.org/10.5281/zenodo.23667308.",
+  "abstractSha256": "70e85828d098e554f845dc6e13cccde943a4f57ae4b23b609b00a65d838a9a4d",
+  "arxivId": "2611.06345",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.06345v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "数据集构建",
+    "primaryTask": "房间脉冲响应估计",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.rir-estimation",
+          "label": "房间脉冲响应估计"
+        },
+        {
+          "facet": "method",
+          "id": "method.dataset-curation",
+          "label": "数据集构建"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "application",
+          "id": "application.hearing-aids",
+          "label": "助听器"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "数据集构建",
+      "primaryMethodId": "method.dataset-curation",
+      "primaryTask": "房间脉冲响应估计",
+      "primaryTaskId": "task.rir-estimation",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Medical Physics and Acoustics and Cluster of Excellence Hearing4allCarl von Ossietzky Universität Oldenburg, Germany"
+      ],
+      "name": "Tong Xiao"
+    },
+    {
+      "affiliations": [
+        "Institut für Hörtechnik und Audiologie, Jade Hochschule, Oldenburg, Germany"
+      ],
+      "name": "Reinhild Roden"
+    },
+    {
+      "affiliations": [
+        "Institut für Hörtechnik und Audiologie, Jade Hochschule, Oldenburg, Germany"
+      ],
+      "name": "Matthias Blau"
+    },
+    {
+      "affiliations": [
+        "Department of Medical Physics and Acoustics and Cluster of Excellence Hearing4allCarl von Ossietzky Universität Oldenburg, Germany"
+      ],
+      "name": "Simon Doclo"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "该库在 KEMAR 人头模型上用双耳佩戴的 Hearpiece 测了两种佩戴、三种房间、三种插入和 24 个水平声源方向的房间脉冲响应与喇叭传递路径，为助听和耳机算法提供可重复的多通道仿真数据，代价是只覆盖单一人头模型和水平面声源。",
+  "originalTitle": "The Hearpiece Database of Binaural Room Impulse Responses and Driver Responses on KEMAR",
+  "pdfUrl": "https://arxiv.org/pdf/2611.06345v1.pdf",
+  "readerTitle": "在人头模型上同时测房间混响和耳机喇叭：Hearpiece 双耳房间脉冲响应库是怎么建的",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

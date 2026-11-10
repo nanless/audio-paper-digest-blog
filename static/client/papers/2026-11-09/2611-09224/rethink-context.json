@@ -1,0 +1,80 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.09224v1",
+  "abstract": "Automated fish feeding intensity assessment (FFIA) is important for precision aquaculture and feed cost optimization. However, unimodal methods are vulnerable to acoustic noise and visual disturbances, while existing multimodal frameworks often rely on computationally intensive 3D convolutions or Transformers, limiting their use on edge devices. To address these limitations, we propose HMMF-Net, a lightweight multimodal architecture that combines early multi-frame visual encoding and multi-axis acoustic modeling through a hierarchical bidirectional messenger cross-modal fusion (BMCF) mechanism. The visual branch captures temporal variations in feeding behavior by stacking temporally distant frames as a multi-channel input to an adapted 2D EfficientNetB0 backbone. The acoustic branch employs adaptive multi-axis residual units (AMARU) to extract temporal, frequency, and local time-frequency representations from log-mel spectrograms. BMCF progressively exchanges information between the two modalities at intermediate representation levels through compact messenger tokens, reducing the computational overhead of dense cross-modal attention. Evaluated on the AV-FFIA dataset using five-fold cross-validation, HMMF-Net achieves 96.77% accuracy and 96.88% F1-score on the held-out test folds, with 3.987M parameters and 1.002 GFLOPs. Compared with the best-performing visual configuration (95.49% accuracy), HMMF-Net reduces the classification error by 28.38%. Deployment on an NVIDIA Jetson Orin Nano using TensorRT with FP32 precision maintains comparable accuracy, with an inference time of 11.54 ms per 2-second sample and a model size of 18.81 MB. These results demonstrate that HMMF-Net combines effective multimodal representation learning with computational efficiency, enabling accurate and practical FFIA on resource-constrained edge platforms.",
+  "abstractSha256": "1eccd5ce699dd148308fd20c100335721b2affed636f7e2027647da48cec5e8e",
+  "arxivId": "2611.09224",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.09224v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "音视频理解",
+    "rankBucket": "前50%",
+    "score": 5.9,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-understanding",
+          "label": "音视频理解"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.cnn",
+          "label": "CNN"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.on-device",
+          "label": "端侧运行"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "音视频理解",
+      "primaryTaskId": "task.av-understanding",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Phi-Hung Hoang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Van-Manh Tran"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Nam-Thuan Trinh"
+    },
+    {
+      "affiliations": [
+        "AIT laboratory, Faculty of Artificial Intelligence, FPT University, Da Nang, 550000, Vietnam"
+      ],
+      "name": "Thi-Thu-Hong Phan"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对 2 秒音视频判断 None、Weak、Medium、Strong 四档摄食强度，HMMF-Net 用首末帧拼接的 2D 视觉加多轴声学分支和分层信使融合，在 AV-FFIA 完整集五折测试上达到 96.77% 准确率且仅需 3.987M 参数和 1.002 GFLOPs，并在 Jetson Orin Nano 上保持相近精度。",
+  "originalTitle": "HMMF-Net: A Lightweight Hierarchical Multi-Frame Multimodal Fusion Network for Accurate Fish Feeding Intensity Assessment",
+  "pdfUrl": "https://arxiv.org/pdf/2611.09224v1.pdf",
+  "readerTitle": "HMMF-Net：用两帧图像加声音在边缘设备上判断鱼吃食强度",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

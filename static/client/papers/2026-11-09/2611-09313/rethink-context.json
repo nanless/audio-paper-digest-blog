@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.09313v1",
+  "abstract": "Self-supervised speech embeddings jointly encode lexical, speaker, and prosodic information, complicating feature isolation. We introduce Asymmetric Correspondence Learning (ACL), distilling HuBERT features into separate Acoustic Word Embeddings (AWEs) and Acoustic Style Embeddings (ASEs) via a split-latent correspondence bottleneck. Through probing and clustering evaluations on single-word utterances, we demonstrate that substantial variance from extrinsic sources remains encoded within each latent space, despite linear probing indicating the information has been stripped. Whilst the AWE space exhibits cohesive lexical clustering (AP$\\approx$0.90, Fisher$\\approx$6.28), linear probing on the ASE space achieves 97.9\\% speaker accuracy across a diffuse topology (Fisher$\\approx$1.01), yet preserves substantial lexical variance (Fisher$\\approx$0.86) that remains linearly unrecoverable (0.17\\%). To explain these findings, we apply group-level permutation feature importance over eGeMAPS acoustic features, finding that AWEs partition by vocal tract filters and ASEs by $F_0$ dynamics. These findings suggest that standard diagnostic benchmarks may be insufficient for verifying feature isolation, as substantial speech structure can be retained even when it remains entirely hidden from probes.",
+  "abstractSha256": "9ff7e9d8a87f100e88199c8eae58651c9c2055642150fe02c66e1302c08bdd9a",
+  "arxivId": "2611.09313",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.09313v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "自监督学习",
+    "primaryTask": "无监督口语单元发现",
+    "rankBucket": "前50%",
+    "score": 5.7,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.spoken-unit-discovery",
+          "label": "无监督口语单元发现"
+        },
+        {
+          "facet": "task",
+          "id": "task.speaker-identification",
+          "label": "说话人识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.self-supervised",
+          "label": "自监督学习"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.interpretability",
+          "label": "可解释性"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "自监督学习",
+      "primaryMethodId": "method.self-supervised",
+      "primaryTask": "无监督口语单元发现",
+      "primaryTaskId": "task.spoken-unit-discovery",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Michael Whealing"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Robert Gaizauskas"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Thomas Hain"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "本文用三元组非对称重构把 HuBERT 特征拆成词嵌入与风格嵌入，再用探测、聚类与声学特征重要性说明线性探测显示已剥离的信息仍以发音结构保留在隐空间中。",
+  "originalTitle": "Asymmetric Correspondence Learning for Lexical and Style Embeddings: Interpreting Latent Space via Acoustic Features",
+  "pdfUrl": "https://arxiv.org/pdf/2611.09313v1.pdf",
+  "readerTitle": "把词和风格分开装：非对称对应学习如何拆解语音嵌入",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

@@ -1,0 +1,86 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.08972v1",
+  "abstract": "Accent conversion for dubbing must change pronunciation while preserving content, voice, and source timing. Normalization alone cannot produce requested non-native accents, and matching total duration does not ensure local speech/pause alignment. We present AccentCanvas, a shared discrete diffusion model for normalization and L1-to-L2 conversion, trained on cross-paired shared-prompt recordings and synthetic pairs. Frame-level speech activity and repetition-preserving units guide local timing through synthesis. Across both tasks, AccentCanvas achieves the highest accent conversion performance (Accent Arrival) and mean listener-rated accent similarity among compared systems, with over 73% lower speech-boundary error than the best baseline for each task. These gains accompany higher L1-to-L2 WER than TokAN and Vevo-Style, highlighting a tradeoff between requested-accent resemblance and ASR-based content recognition. https://smokedindia.github.io/accentcanvas/",
+  "abstractSha256": "efdd8aec827db54058c1594a088b720c549c438558807e1a14bc046a9a42b55c",
+  "arxivId": "2611.08972",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.08972v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "扩散模型",
+    "primaryTask": "语音转换",
+    "rankBucket": "前50%",
+    "score": 7.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.voice-conversion",
+          "label": "语音转换"
+        },
+        {
+          "facet": "method",
+          "id": "method.diffusion",
+          "label": "扩散模型"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.accent-dialect",
+          "label": "口音与方言"
+        },
+        {
+          "facet": "task",
+          "id": "task.dubbing",
+          "label": "语音配音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "扩散模型",
+      "primaryMethodId": "method.diffusion",
+      "primaryTask": "语音转换",
+      "primaryTaskId": "task.voice-conversion",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Jaehun Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Kang Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Sung Woo Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Junmo Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Joon Son Chung"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "AccentCanvas 用一个离散扩散模型同时做口音规范化和母语到二语口音转换，靠跨配对真人口音数据和帧级语音活动条件来保证请求口音相似度和源端语速暂停同步，但更强的口音贴合伴随更高的词错误率。",
+  "originalTitle": "AccentCanvas: Activity-Guided Bidirectional Accent Conversion",
+  "pdfUrl": "https://arxiv.org/pdf/2611.08972v1.pdf",
+  "readerTitle": "AccentCanvas：兼顾发音转换与语速暂停对齐的双向口音转换",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

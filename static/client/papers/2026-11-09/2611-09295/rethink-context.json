@@ -1,0 +1,63 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.09295v1",
+  "abstract": "Transforming the spike trains produced by spiking neural networks (SNNs) into continuous signals through biologically inspired mechanisms remains an open challenge in generative and regression tasks. In biological systems, a similar transformation occurs when muscles integrate neural spikes to produce smooth, coordinated movements. Inspired by this mechanism, we introduce a muscle-response model, a biologically motivated dynamical layer that converts spike trains into continuous representations. Our approach uses second-order dynamics to model the temporal integration of spiking activity. We investigate how the number of spiking neurons and temporal resolution affect the quality of the generated signals in a text-to-speech task, showing that increasing representational capacity has a greater impact than increasing temporal resolution under the evaluated configurations. Furthermore, an analysis of the learned dynamics reveals that, without explicit constraints on the response type, most neurons converge toward non-oscillatory behavior. These results demonstrate the potential of biologically inspired dynamical decoders for bridging spiking neural computation and continuous signal generation.",
+  "abstractSha256": "735a96ce351b8352acfd5a958e147ff1e4b22ef8e28e35ee174b078a36e5f913",
+  "arxivId": "2611.09295",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.09295v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "脉冲神经网络",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前50%",
+    "score": 5.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.spiking-neural-network",
+          "label": "脉冲神经网络"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "脉冲神经网络",
+      "primaryMethodId": "method.spiking-neural-network",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Maryam Soltani"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Philip N. Garner"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文在冻结的 FastSpeech2 解码器与声码器之间插入 AdLIF 脉冲层加无阈值二阶肌肉响应层来重建 80 维梅尔谱，证明 80 神经元初始配置可懂度尚可但质量下降明显，而扩到 400 神经元或 8 倍上采样能恢复乃至追平基线，且学到的动力学大多自发收敛到非振荡的过阻尼区。",
+  "originalTitle": "Bridging Spiking and Continuous Dynamics in Spiking Neural Networks: A Muscle-Inspired Model",
+  "pdfUrl": "https://arxiv.org/pdf/2611.09295v1.pdf",
+  "readerTitle": "用肌肉式二阶滤波把脉冲串变成连续语音：SNN 语音合成的桥接层解读",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

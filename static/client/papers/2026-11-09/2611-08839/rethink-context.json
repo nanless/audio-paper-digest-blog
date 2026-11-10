@@ -1,0 +1,80 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.08839v1",
+  "abstract": "Copyright analysis focuses on the similarity between two works. However, generative AI models learn from training data through functional relations beyond similarity. Training Data Attribution (TDA) estimates the influence of each training instance on a generated output and may serve as a basis for remuneration. However, prior studies find global influence, where a few training instances rank as the most influential for almost every generation. Used directly, TDA scores would distribute part of every remuneration to these instances regardless of what was generated. To address this, we propose a new approach in which TDA scores are decomposed into three levels of influence, namely global indicating the influence of a training data to a trained model, group for its influence on a group of generated outputs (that could be clustered together), and specific for its influence on a single generated output. Our study finds that, across several music generative models and TDA methods, global- and group-level influence is non-negligible in every case. Based on these observations, we propose the term functional dependency for the relation of training data to a trained model or to its outputs. This notion both encompasses and distinguishes dependencies of different scopes, allowing TDA scores to be interpreted as distinct forms of contribution in legal, economic and ethical discussions on remuneration.",
+  "abstractSha256": "c7874739b4540435e8aeaaa8edb797f37254cde4bcb5cbefc7ad89b0c4cb229b",
+  "arxivId": "2611.08839",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.08839v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "聚类与类别匹配",
+    "primaryTask": "音乐生成",
+    "rankBucket": "前50%",
+    "score": 5.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-generation",
+          "label": "音乐生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.clustering",
+          "label": "聚类与类别匹配"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.interpretability",
+          "label": "可解释性"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "聚类与类别匹配",
+      "primaryMethodId": "method.clustering",
+      "primaryTask": "音乐生成",
+      "primaryTaskId": "task.music-generation",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Chalmers University of Technology and University of Gothenburg, Department of Computer Science and Engineering, Gothenburg, Sweden"
+      ],
+      "name": "Changheon Han"
+    },
+    {
+      "affiliations": [
+        "Chalmers University of Technology and University of Gothenburg, Department of Computer Science and Engineering, Gothenburg, Sweden"
+      ],
+      "name": "Hugh Xuechen Liu"
+    },
+    {
+      "affiliations": [
+        "Chalmers University of Technology and University of Gothenburg, Department of Computer Science and Engineering, Gothenburg, Sweden"
+      ],
+      "name": "Ashkan Panahi"
+    },
+    {
+      "affiliations": [
+        "Chalmers University of Technology and University of Gothenburg, Department of Computer Science and Engineering, Gothenburg, Sweden"
+      ],
+      "name": "Kıvanç Tatar"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文把一个训练样本对一次生成的归因分数拆成全局、分组、特定三层，证明四种音乐模型和多种归因方法下前两层都不可忽略，且每层删除后都会在对应范围内降低似然。",
+  "originalTitle": "Functional Dependency beyond Similarity: Hierarchical Decomposition of Training Data Attribution in Music Generative Models",
+  "pdfUrl": "https://arxiv.org/pdf/2611.08839v1.pdf",
+  "readerTitle": "相似之外的影响：音乐生成模型训练数据归因的分层分解",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

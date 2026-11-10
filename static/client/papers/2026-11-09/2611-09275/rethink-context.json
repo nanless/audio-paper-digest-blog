@@ -1,0 +1,77 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.09275v1",
+  "abstract": "Recent audio embedding models learn representations that transfer across clip- and frame-level tasks, yet they operate almost exclusively on single-channel signals and are blind to spatial structure. Spatial audio models capture that structure but rely on clip-level supervision or contrastive objectives, yielding embeddings unsuitable for frame-level tasks like sound event detection and localization (SELD). We argue this dichotomy is not fundamental: patch-level spatial self-supervision can jointly learn acoustic and spatial features at both temporal granularities. We introduce AudioSphere, a multi-channel masked autoencoder trained on Ambisonics recordings that reconstructs both spectral content and directional cues via a joint spatiotemporal masking strategy that masks both time-frequency patches and intensity vectors. AudioSphere supports frame-level predictions while producing strong clip-level representations via aggregation. Alongside the model, we release RealSELD, a standardized benchmark for evaluating frozen backbones on real-world multi-channel SELD. AudioSphere enables, for the first time, SELD with a frozen self-supervised backbone, while matching or exceeding prior self-supervised audio embedding models on clip-level classification tasks spanning environmental sound, speech, and music, and on frame-level sound event detection. All code and data are available at https://github.com/labhamlet/AudioSphere and https://huggingface.co/labhamlet.",
+  "abstractSha256": "f117dccd28a64c7d8dbe969524807b976879da583f25ad83e958e53fb1513c45",
+  "arxivId": "2611.09275",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.09275v1",
+  "assessment": {
+    "documentType": "模型报告",
+    "primaryMethod": "自监督学习",
+    "primaryTask": "联合声音事件检测定位",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.seld",
+          "label": "联合声音事件检测定位"
+        },
+        {
+          "facet": "method",
+          "id": "method.self-supervised",
+          "label": "自监督学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.spatial-audio",
+          "label": "空间音频信号"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "自监督学习",
+      "primaryMethodId": "method.self-supervised",
+      "primaryTask": "联合声音事件检测定位",
+      "primaryTaskId": "task.seld",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Donders Institute, Radboud University",
+        "Nijmegen, the Netherlands"
+      ],
+      "name": "Goksenin Yuksel"
+    },
+    {
+      "affiliations": [
+        "Donders Institute, Radboud University",
+        "Nijmegen, the Netherlands"
+      ],
+      "name": "Marcel van Gerven"
+    },
+    {
+      "affiliations": [
+        "Donders Institute, Radboud University, Nijmegen, the Netherlands",
+        "Mortimer B Zuckerman Institute, Columbia University, New York, United States"
+      ],
+      "name": "Kiki van der Heijden"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对单通道模型听不见方向、空间模型做不了帧级定位的问题，AudioSphere 用多通道掩码自编码同时重建频谱与方向线索，在冻结主干下兼顾单声道分类检测与真实场景声事件定位检测，代价是依赖仿真房间脉冲与混合训练分布。",
+  "originalTitle": "AudioSphere: Towards Self-Supervised Spatial Audio Representation Models",
+  "pdfUrl": "https://arxiv.org/pdf/2611.09275v1.pdf",
+  "readerTitle": "AudioSphere：能同时听清内容与方向的自监督空间音频表示",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

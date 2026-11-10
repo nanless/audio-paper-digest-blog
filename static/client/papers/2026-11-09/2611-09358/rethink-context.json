@@ -1,0 +1,86 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.09358v1",
+  "abstract": "Low-complexity causal speech separation must preserve speaker information and allocate residual mixture energy without relying on future feature frames. We present GTCRN-SS, a two-stage time-frequency separator that adapts the compact GTCRN enhancement backbone to fixed-output speech separation. The model combines internal residual allocation, reconstruction-conditioned refinement, and frame-aligned recurrent-state transfer. Its complex-mask estimator assigns non-target content to an unreturned residual branch, while the complementary speech estimate conditions a second stage whose final masks remain anchored to the original mixture. A lightweight low-rank adapter transfers causal recurrent evidence between recursive executions without adding another recurrent memory network. The neural graph excludes future feature frames and incurs only the fixed analysis look-ahead of the centered short-time Fourier transform. On noisy Libri2Mix, GTCRN-SS achieves 10.1 dB SDRi and 9.5 dB SI-SNRi with fewer than one million parameters and a low computational footprint. Independently trained ablations confirm the benefits of recurrent-state transfer and reconstruction conditioning, and corpus-level diagnostics show that the internal branch primarily captures residual rather than target-speech content. These results establish GTCRN-SS as an effective quality-efficiency operating point for causal monaural speech separation.",
+  "abstractSha256": "8e9b7e3b178b419582494ad8d5c622fe1032970b0d5abed9e6a421fe2339ec23",
+  "arxivId": "2611.09358",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.09358v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "RNN",
+    "primaryTask": "语音分离",
+    "rankBucket": "前50%",
+    "score": 6.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-separation",
+          "label": "语音分离"
+        },
+        {
+          "facet": "method",
+          "id": "method.rnn",
+          "label": "RNN"
+        },
+        {
+          "facet": "method",
+          "id": "method.attention",
+          "label": "注意力机制"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.single-channel",
+          "label": "单通道"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "RNN",
+      "primaryMethodId": "method.rnn",
+      "primaryTask": "语音分离",
+      "primaryTaskId": "task.speech-separation",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Dept. of Electrical Engineering, National Chi Nan University"
+      ],
+      "name": "Shao-Chun Hu"
+    },
+    {
+      "affiliations": [
+        "Dept. of Electrical Engineering, National Chi Nan University"
+      ],
+      "name": "Zi-Xiang Lin"
+    },
+    {
+      "affiliations": [
+        "Inst. of Information Science, Academia Sinica"
+      ],
+      "name": "Hsin-Min Wang"
+    },
+    {
+      "affiliations": [
+        "Dept. of Electrical Engineering, National Chi Nan University"
+      ],
+      "name": "Jeih-Weih Hung"
+    },
+    {
+      "affiliations": [
+        "Grad. Inst. of AI Interdisciplinary Applied Technology, National Taiwan Normal UniversityEqual contribution"
+      ],
+      "name": "Hung-Shin Lee"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "GTCRN-SS 把单输出增强主干改成两阶段因果分离，用内部残余分支守住混合谱能量守恒并给第二阶段提供语音和线索，在含噪 Libri2Mix 上以 0.9 M 参数取得 10.1 dB SDRi 和 9.5 dB SI-SNRi，但结论只在 8 kHz 双人含噪全 utterance 评测和固定短时傅里叶变换前瞻下成立。",
+  "originalTitle": "GTCRN-SS: Lightweight Causal Speech Separation with Residual Allocation and Reconstruction Refinement",
+  "pdfUrl": "https://arxiv.org/pdf/2611.09358v1.pdf",
+  "readerTitle": "因果轻量语音分离如何分配残余能量并做两阶段精炼：GTCRN-SS 解读",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

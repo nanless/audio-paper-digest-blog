@@ -1,0 +1,88 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.08251v2",
+  "arxivId": "2611.08251",
+  "arxivVersion": 2,
+  "arxivVersionedId": "2611.08251v2",
+  "authors": [
+    {
+      "affiliations": [
+        "X-LANCE Lab, Shanghai Jiao Tong University, China",
+        "Shanghai Innovation Institute, China"
+      ],
+      "name": "Zhikang Niu"
+    },
+    {
+      "affiliations": [
+        "X-LANCE Lab, Shanghai Jiao Tong University, China",
+        "Beijing Institute for General Artificial Intelligence, China"
+      ],
+      "name": "Wenming Tu"
+    },
+    {
+      "affiliations": [
+        "X-LANCE Lab, Shanghai Jiao Tong University, China",
+        "Shanghai Innovation Institute, China"
+      ],
+      "name": "Yalin Li"
+    },
+    {
+      "affiliations": [
+        "X-LANCE Lab, Shanghai Jiao Tong University, China",
+        "Beijing Institute for General Artificial Intelligence, China"
+      ],
+      "name": "Yanru Huo"
+    },
+    {
+      "affiliations": [
+        "X-LANCE Lab, Shanghai Jiao Tong University, China",
+        "Shanghai Innovation Institute, China"
+      ],
+      "name": "Junxi Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Tianrui Wang"
+    },
+    {
+      "affiliations": [
+        "X-LANCE Lab, Shanghai Jiao Tong University, China"
+      ],
+      "name": "Ruiqi Yan"
+    },
+    {
+      "affiliations": [
+        "X-LANCE Lab, Shanghai Jiao Tong University, China",
+        "Shanghai Innovation Institute, China"
+      ],
+      "name": "Junxuan Liang"
+    },
+    {
+      "affiliations": [
+        "Beijing Institute for General Artificial Intelligence, China"
+      ],
+      "name": "Zilong Zheng"
+    },
+    {
+      "affiliations": [
+        "X-LANCE Lab, Shanghai Jiao Tong University, China",
+        "Shanghai Innovation Institute, China"
+      ],
+      "name": "Ziyang Ma"
+    },
+    {
+      "affiliations": [
+        "X-LANCE Lab, Shanghai Jiao Tong University, China",
+        "Shanghai Innovation Institute, China"
+      ],
+      "name": "Xie Chen"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.08251v2",
+  "originalTitle": "VoxCanvas-41M: A Large-Scale Bilingual Dataset for Instruction-Based Speech Editing and Its Learning Dynamics",
+  "pdfUrl": "https://arxiv.org/pdf/2611.08251v2.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.09358v1",
+  "arxivId": "2611.09358",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.09358v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Dept. of Electrical Engineering, National Chi Nan University"
+      ],
+      "name": "Shao-Chun Hu"
+    },
+    {
+      "affiliations": [
+        "Dept. of Electrical Engineering, National Chi Nan University"
+      ],
+      "name": "Zi-Xiang Lin"
+    },
+    {
+      "affiliations": [
+        "Inst. of Information Science, Academia Sinica"
+      ],
+      "name": "Hsin-Min Wang"
+    },
+    {
+      "affiliations": [
+        "Dept. of Electrical Engineering, National Chi Nan University"
+      ],
+      "name": "Jeih-Weih Hung"
+    },
+    {
+      "affiliations": [
+        "Grad. Inst. of AI Interdisciplinary Applied Technology, National Taiwan Normal UniversityEqual contribution"
+      ],
+      "name": "Hung-Shin Lee"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.09358v1",
+  "originalTitle": "GTCRN-SS: Lightweight Causal Speech Separation with Residual Allocation and Reconstruction Refinement",
+  "pdfUrl": "https://arxiv.org/pdf/2611.09358v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

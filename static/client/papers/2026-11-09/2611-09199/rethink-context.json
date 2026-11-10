@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.09199v1",
+  "abstract": "Context is central to human auditory perception, as listeners interpret sounds within their acoustic environment to resolve ambiguity. However, large-scale datasets that jointly capture sound events and acoustic scenes remain limited. We address this by augmenting AudioSet Strong with clip-level scene annotations under two taxonomies for joint sceneevent modeling. A corpus-scale analysis shows that scene identity is better captured by events distinctive to a scene than by those that merely occur frequently. Reweighting event co-occurrences toward scene-specific associations produces representations that better align with human-derived taxonomies, while also exposing scenes where the acoustic and semantic views diverge. This geometric divergence predicts classification errors, while supervised validation confirms that the proposed scene annotations provide meaningful complementary information for developing scalable context-aware machine listening systems.",
+  "abstractSha256": "0dbd986bcf233c5881802a5950ace14f5f18689c1e6955ea4e0927eb670fc0d5",
+  "arxivId": "2611.09199",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.09199v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "数据集构建",
+    "primaryTask": "声学场景分类",
+    "rankBucket": "前50%",
+    "score": 6.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.scene-classification",
+          "label": "声学场景分类"
+        },
+        {
+          "facet": "task",
+          "id": "task.event-detection",
+          "label": "音频事件检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.dataset-curation",
+          "label": "数据集构建"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "数据集构建",
+      "primaryMethodId": "method.dataset-curation",
+      "primaryTask": "声学场景分类",
+      "primaryTaskId": "task.scene-classification",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Michel Olvera"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Paraskevas Stamatiadis"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Romain Serizel"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Slim Essid"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Gaël Richard"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文给 AudioSet Strong 补上片段级场景标注并提出两种分类体系，用频率画像与区分性加权画像对比说明场景身份更依赖特异性事件，再用朴素贝叶斯验证标注可用性，代价是标注来自跨模态集成推理而非人工全量核验。",
+  "originalTitle": "SAS: Scene-Annotated AudioSet Strong for Joint Scene-Event Analysis",
+  "pdfUrl": "https://arxiv.org/pdf/2611.09199v1.pdf",
+  "readerTitle": "用场景标注把 AudioSet Strong 连成场景与事件联合分析资源",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

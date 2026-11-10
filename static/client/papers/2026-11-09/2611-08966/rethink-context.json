@@ -1,0 +1,92 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.08966v1",
+  "abstract": "Continuous music emotion recognition (MER) estimates how Arousal and Valence evolve within a song, yet the field's standard metric, pooled frame-level correlation, is dominated by between-song differences and cannot distinguish a model that tracks emotional dynamics from one that only ranks songs by their average level. We decompose annotation variance into between- and within-song components and show that mean squared error (MSE) targets the former, while windowed Lin's concordance correlation coefficient (CCC = $r \\cdot C_b$) targets the latter by penalising the variance compression MSE induces. A single weight $λ$ controls the trade-off: on 1,764 DEAM songs, raising $λ$ from 0 to 1 lowers pooled Arousal $r$ from 0.843 to 0.810 while raising mean within-song $r$ from 0.204 to 0.368.   Building on this objective, we present MMAS (Multimodal Music Analysis System), an open-source model that predicts Arousal and Valence every 0.5 s from raw audio. It fuses frozen MERT-v1-95M embeddings with ten symbolic features from automatic transcription through a dual-branch temporal convolutional network with cross-modal attention. Because both branches are audio-derived, one model trains jointly on DEAM and PMEmo without domain conditioning. Under song-grouped 5-fold cross-validation (2,531 songs), pooled $r$ reaches 0.801/0.685 (Arousal/Valence) on DEAM and 0.742/0.746 on PMEmo. Against a ridge baseline on identical features, within-song Arousal $r$ roughly triples (0.344 vs. 0.125; $n = 353$ songs, Wilcoxon $p = 1.7 \\times 10^{-21}$, $d = 0.56$). Complete transcription failure costs at most 0.04 pooled $r$. Split-conformal intervals attain 93.7% (Arousal) and 90.0% (Valence) marginal coverage at a 95% target, with the shortfall traced to within-song dependence. MMAS is released as a pip-installable package.",
+  "abstractSha256": "4c4fd25b6018e0cf79f5d95c521600531137da1e08b04754400b7bce39c0371e",
+  "arxivId": "2611.08966",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.08966v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "声音感知情感估计",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-affect-estimation",
+          "label": "声音感知情感估计"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.uncertainty-estimation",
+          "label": "不确定性估计与校准"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "声音感知情感估计",
+      "primaryTaskId": "task.audio-affect-estimation",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Mohammad Faraz Akhtar"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Aditya Parashar"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ayush Jain"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Madhur Gupta"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ritesh Kumar"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Soubhik Chakraborty"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文指出混合所有帧的相关系数主要反映歌曲间平均水平差异，为此用均方误差加窗内一致性系数的组合目标控制歌曲间与歌曲内拟合的交换，并用冻结声学嵌入加自动转录符号特征的双分支时序融合模型在歌曲分组交叉验证下验证了跟踪能力的提升与预测区间的实际覆盖率。",
+  "originalTitle": "Concordance-Optimal Continuous Music Emotion Estimation: Variance Decomposition, Dual-Branch Temporal Fusion, and Conformal Prediction Intervals",
+  "pdfUrl": "https://arxiv.org/pdf/2611.08966v1.pdf",
+  "readerTitle": "连续音乐情绪估计：为什么混合相关会骗人，以及双分支时序模型如何跟踪情绪变化",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

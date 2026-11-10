@@ -1,0 +1,35 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.09275v1",
+  "arxivId": "2611.09275",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.09275v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Donders Institute, Radboud University",
+        "Nijmegen, the Netherlands"
+      ],
+      "name": "Goksenin Yuksel"
+    },
+    {
+      "affiliations": [
+        "Donders Institute, Radboud University",
+        "Nijmegen, the Netherlands"
+      ],
+      "name": "Marcel van Gerven"
+    },
+    {
+      "affiliations": [
+        "Donders Institute, Radboud University, Nijmegen, the Netherlands",
+        "Mortimer B Zuckerman Institute, Columbia University, New York, United States"
+      ],
+      "name": "Kiki van der Heijden"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.09275v1",
+  "originalTitle": "AudioSphere: Towards Self-Supervised Spatial Audio Representation Models",
+  "pdfUrl": "https://arxiv.org/pdf/2611.09275v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

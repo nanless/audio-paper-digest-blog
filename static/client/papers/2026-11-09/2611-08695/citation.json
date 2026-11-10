@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.08695v1",
+  "arxivId": "2611.08695",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.08695v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Giovana Morais"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hugo Flores García"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Prem Seetharaman"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Johannes Imort"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Justin Salamon"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Magdalena Fuentes"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Oriol Nieto"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.08695v1",
+  "originalTitle": "FoleyForge: Free-form, Controllable, Rectified-flow Editing of Sound Effects",
+  "pdfUrl": "https://arxiv.org/pdf/2611.08695v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

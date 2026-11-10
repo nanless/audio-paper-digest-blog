@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.07423v1",
+  "arxivId": "2611.07423",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.07423v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yuan-Chiao Cheng"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yi-Hsuan Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Vincent K. M. Cheung"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.07423v1",
+  "originalTitle": "ProCraft: Instruction-Driven Music Production from Free-Form Text",
+  "pdfUrl": "https://arxiv.org/pdf/2611.07423v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

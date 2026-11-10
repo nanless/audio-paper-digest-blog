@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.07423v1",
+  "abstract": "Music production typically involves multiple editing operations that each require specialized tools and expertise. Existing text-guided music editing systems support few operations or instruments, operate on short clips, or handle only one operation per instruction, unlike real workflows where several changes are requested at once. Here, we present ProCraft, a lightweight 0.5B-parameter autoregressive codec language model that edits 30s music excerpts end-to-end from free-form instructions, including compound requests. ProCraft supports seven operations across eight instruments, from tasks with a unique target (e.g., track removal) to creative ones (e.g., accompaniment generation). We align intermediate representations with pretrained music embeddings and pitch and instrument targets to preserve content outside the edit, and gated cross-attention in every decoder layer to keep generation tied to the instruction. To train on compound requests, we introduce On-the-fly Editing-pair Synthesis, which generates paired instructions and audio combining track-level operations with effect changes. ProCraft performs competitively against task-specific systems on single-task editing, and outperforms four free-text editors on compound instructions for track removal, extraction and denoising on real (MoisesDB) and synthetic (Slakh) recordings. In a user study (16 listeners), ProCraft was rated highest on removal and denoising and on-par with a 16-times larger model on extraction and instrument transfer. Ablations further show that representation alignment and cross-attention reduce leakage from unwanted tracks and raise editing success rates, especially on out-of-domain data.",
+  "abstractSha256": "c0c827ef6ae9d85f4435994aea96f851b780bc98f01b6c76c576526bc7d2e54b",
+  "arxivId": "2611.07423",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.07423v1",
+  "assessment": {
+    "documentType": "模型报告",
+    "primaryMethod": "自回归模型",
+    "primaryTask": "音频编辑",
+    "rankBucket": "前50%",
+    "score": 7.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-editing",
+          "label": "音频编辑"
+        },
+        {
+          "facet": "method",
+          "id": "method.autoregressive",
+          "label": "自回归模型"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "method",
+          "id": "method.neural-codec",
+          "label": "神经编解码与离散单元"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "自回归模型",
+      "primaryMethodId": "method.autoregressive",
+      "primaryTask": "音频编辑",
+      "primaryTaskId": "task.audio-editing",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yuan-Chiao Cheng"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yi-Hsuan Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Vincent K. M. Cheung"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "ProCraft 把 30 秒混音和自由文本放在同一个自回归序列里生成编辑后音频，用常驻编辑头保持指令可达、用中间层对齐保留未改声部，并靠即时合成的复合编辑对训练，在复合指令上超过四个自由文本编辑器，但在大动态分离指标上仍落后于专用分离模型。",
+  "originalTitle": "ProCraft: Instruction-Driven Music Production from Free-Form Text",
+  "pdfUrl": "https://arxiv.org/pdf/2611.07423v1.pdf",
+  "readerTitle": "一句话指令改整首混音：ProCraft 怎么做到的",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

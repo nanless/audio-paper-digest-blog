@@ -1,0 +1,115 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.05988v1",
+  "abstract": "Streaming video-to-audio (V2A) generation is essential for immersive interactive applications. However, real-time constraints leave existing streaming V2A methods far behind offline models: (1) visual frontends shrink their receptive fields to cut look-ahead latency, severely degrading audio-visual alignment; (2) causal autoregressive diffusion backends denoise each audio patch in isolation, impairing audio quality. To this end, we present LiveFoley, a streaming causal autoregressive diffusion architecture that addresses both bottlenecks with imperceptible latency. For the visual frontend, we introduce a Trailing Sliding Window that converts non-causal segment-level encoders into streaming modules without retraining. By simply realigning the window, it preserves precise audio-visual alignment, while a configurable hop size reduces the frontend look-ahead well below the human perceptual threshold. Building on this tunable hop size, we propose the Unified Varhop Framework to accommodate scenarios with diverse latency and computation budgets. For the audio backend, we explore widening the denoising window of the local diffusion transformer (LocDiT) head in two temporal directions. History LocDiT adds past context to improve quality at no latency cost and serves as our default. Alternatively, Future-Warmup LocDiT breaks the autoregressive deadlock with an approximate future condition, further improving generation quality at the cost of an acceptable backend look-ahead. Extensive experiments demonstrate that LiveFoley matches offline models in temporal alignment and leads streaming systems in generation quality. Project page: https://dalision.github.io/livefoley-page/",
+  "abstractSha256": "c94edbd24e3e934d30f3e1e74af926ffb369b8a8df93c7bb41f57c20d16a827a",
+  "arxivId": "2611.05988",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.05988v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "自回归模型",
+    "primaryTask": "视频到声音生成",
+    "rankBucket": "前25%",
+    "score": 8.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.video-to-audio",
+          "label": "视频到声音生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.autoregressive",
+          "label": "自回归模型"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.real-time",
+          "label": "实时处理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "自回归模型",
+      "primaryMethodId": "method.autoregressive",
+      "primaryTask": "视频到声音生成",
+      "primaryTaskId": "task.video-to-audio",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yusheng Dai"
+    },
+    {
+      "affiliations": [
+        "Monash University Nanjing University ShengShu Technology Tampere University"
+      ],
+      "name": "Vladimir Iashin"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kangdi Wang"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Hub, Alibaba Group Tsinghua University Corresponding author"
+      ],
+      "name": "Yuxuan Jiang"
+    },
+    {
+      "affiliations": [
+        "Monash University Nanjing University ShengShu Technology Tampere University"
+      ],
+      "name": "Ilpo Viertola"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Weiqiang Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Qiuhong Ke"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Min Zhao"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jianfei Cai"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "LiveFoley 针对流式视频生成音频的延迟与对齐矛盾，用尾部滑动窗口保留感受野并用可变步长统一框架与加宽去噪窗口，在 156 毫秒端到端延迟下达到接近离线模型的时序对齐。",
+  "originalTitle": "LiveFoley: Dynamic Real-Time Video-to-Audio Generation for Immersive Interactive Worlds",
+  "pdfUrl": "https://arxiv.org/pdf/2611.05988v1.pdf",
+  "readerTitle": "LiveFoley：为实时交互视频生成同步声音",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

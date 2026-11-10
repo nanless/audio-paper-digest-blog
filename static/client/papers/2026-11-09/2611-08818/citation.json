@@ -1,0 +1,40 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.08818v1",
+  "arxivId": "2611.08818",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.08818v1",
+  "authors": [
+    {
+      "affiliations": [
+        "College of Aeronautical Engineering, National University of Sciences & Technology (NUST), Islamabad 24090, Pakistan"
+      ],
+      "name": "Farrukh Pervez"
+    },
+    {
+      "affiliations": [
+        "College of Aeronautical Engineering, National University of Sciences & Technology (NUST), Islamabad 24090, Pakistan"
+      ],
+      "name": "Siddique Latif"
+    },
+    {
+      "affiliations": [
+        "College of Aeronautical Engineering, National University of Sciences & Technology (NUST), Islamabad 24090, Pakistan"
+      ],
+      "name": "Moid Sandhu"
+    },
+    {
+      "affiliations": [
+        "College of Aeronautical Engineering, National University of Sciences & Technology (NUST), Islamabad 24090, Pakistan",
+        "Queensland University of Technology (QUT), Brisbane QLD 4000, Australia",
+        "Commonwealth Scientific and Industrial Research Organisation (CSIRO), Brisbane, QLD 4029, Australia"
+      ],
+      "name": "Raja Jurdak"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.08818v1",
+  "originalTitle": "Fuzzy-FedAvg: Server-Aware Client Selection for Federated Speech Emotion Recognition in Heterogeneous Environments",
+  "pdfUrl": "https://arxiv.org/pdf/2611.08818v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

@@ -1,0 +1,87 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.08818v1",
+  "abstract": "Federated speech emotion recognition (SER) is challenged by speaker-dependent, class-imbalanced data and by heterogeneous client devices. This paper proposes \\textit{Fuzzy-FedAvg}, a server-aware framework in which the server learns Client Selection Weights (CSWs) through fuzzy Q-learning from global-model feedback. The same CSWs weight client accuracy, training time, and \\divkpi{} in both client selection and aggregation, while a dedicated PCAS node manages stragglers through staleness-discounted deferred updates. On IEMOCAP and CREMA-D, \\textit{Fuzzy-FedAvg} achieves higher unweighted average recall (UAR) than FedAvg in all configurations under severe non-IID conditions, and in 22 of 24 participation-level and 10 of 12 training-horizon configurations overall. It also outperforms FedProx and Oort, while SCAFFOLD and Power-of-Choice remain competitive, and it reduces cumulative training time by 81.2\\% in a FedScale-based evaluation. The benefit is greatest under strong statistical heterogeneity and narrows as data become more balanced.",
+  "abstractSha256": "f51e658351a2aba9a38571a8c45855da66dfeed6e3d15242db41cdb6ba820c6f",
+  "arxivId": "2611.08818",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.08818v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "联邦学习",
+    "primaryTask": "语音情感识别",
+    "rankBucket": "前50%",
+    "score": 6.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.emotion-recognition",
+          "label": "语音情感识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.federated",
+          "label": "联邦学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.reinforcement",
+          "label": "强化学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "联邦学习",
+      "primaryMethodId": "method.federated",
+      "primaryTask": "语音情感识别",
+      "primaryTaskId": "task.emotion-recognition",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "College of Aeronautical Engineering, National University of Sciences & Technology (NUST), Islamabad 24090, Pakistan"
+      ],
+      "name": "Farrukh Pervez"
+    },
+    {
+      "affiliations": [
+        "College of Aeronautical Engineering, National University of Sciences & Technology (NUST), Islamabad 24090, Pakistan"
+      ],
+      "name": "Siddique Latif"
+    },
+    {
+      "affiliations": [
+        "College of Aeronautical Engineering, National University of Sciences & Technology (NUST), Islamabad 24090, Pakistan"
+      ],
+      "name": "Moid Sandhu"
+    },
+    {
+      "affiliations": [
+        "College of Aeronautical Engineering, National University of Sciences & Technology (NUST), Islamabad 24090, Pakistan",
+        "Queensland University of Technology (QUT), Brisbane QLD 4000, Australia",
+        "Commonwealth Scientific and Industrial Research Organisation (CSIRO), Brisbane, QLD 4029, Australia"
+      ],
+      "name": "Raja Jurdak"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对说话人差异大且设备快慢不一的联邦语音情感识别，Fuzzy-FedAvg 让服务器从全局反馈中学习三类指标的权重，用同一组权重同时指导选谁参与和更新如何融合，在严重非独立同分布下提升平均召回并大幅缩短累积训练时间，但最差客户端性能并未系统性改善。",
+  "originalTitle": "Fuzzy-FedAvg: Server-Aware Client Selection for Federated Speech Emotion Recognition in Heterogeneous Environments",
+  "pdfUrl": "https://arxiv.org/pdf/2611.08818v1.pdf",
+  "readerTitle": "服务器如何学会挑选客户端：Fuzzy-FedAvg 在非独立同分布语音情感识别中的做法",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

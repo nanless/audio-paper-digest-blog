@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.08860v1",
+  "abstract": "Multimodal emotion recognition in conversations (MERC) integrates textual, acoustic, and visual cues to identify utterance-level emotions. However, existing approaches generally do not explicitly adapt multimodal processing to the degree of inter-modal predictive disagreement. In real conversations, semantic incongruity, concealed emotion, noisy observations, and ambiguity can affect modality-specific emotional evidence differently, while the reliability of individual modalities varies across samples. Rather than identifying each source of inconsistency separately, we model their common consequence for emotion recognition as predictive disagreement among unimodal emotion distributions over the same emotion-label set. Such disagreement makes indiscriminate fusion prone to propagating unreliable or competing evidence. Inspired by the Brunswik Lens Model, we propose MiD-ERC, a divergence-centric framework that quantifies inter-modal predictive disagreement using a normalized divergence score and estimates sample-specific modality reliability. MiD-ERC uses these signals to coordinate divergence-guided cross-modal gating, divergence-modulated reliability weighting, and divergence-conditioned adaptive LLM prompting. The framework is trained end-to-end using only standard emotion annotations, without requiring additional conflict labels, auxiliary data construction, or external retrieval modules. Experiments on IEMOCAP and MELD demonstrate that MiD-ERC achieves state-of-the-art performance, with particularly pronounced improvements on high-divergence samples.",
+  "abstractSha256": "40cfd3bd2ba9656e5afa459ebae666ba951dc7888a1ebbf382fa298f51b7ab58",
+  "arxivId": "2611.08860",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.08860v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "多模态情感极性分析",
+    "rankBucket": "前50%",
+    "score": 6.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.multimodal-sentiment",
+          "label": "多模态情感极性分析"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.llm",
+          "label": "大语言模型"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "method",
+          "id": "method.lora",
+          "label": "LoRA"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "多模态情感极性分析",
+      "primaryTaskId": "task.multimodal-sentiment",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jingwen Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jiao Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yuhang Qian"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yuyin Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Min Zhang"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对文本、语音、视觉各自判断不一致会污染融合的问题，MiD-ERC 用单模态预测分歧度和样本级可靠性来控制跨模态交互、加权与大模型提示，在 IEMOCAP 和 MELD 上取得最高准确率与加权 F1，尤其在高分歧样本上提升更大，但结论只在给定特征、划分与微调设置下成立。",
+  "originalTitle": "Mind the Divergence: Divergence-Guided Reliability-Aware Fusion and Adaptive LLM Prompting for Conversational Emotion Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2611.08860v1.pdf",
+  "readerTitle": "模态吵架时怎么办：用分歧度调节融合与提示的对话情绪识别",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}
