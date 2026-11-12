@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.11137v1",
+  "arxivId": "2611.11137",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.11137v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "William T. Botticelli-Wells"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Manuel Anglada-Tort"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Elif Celen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Rena Far"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Harin Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Peter M. C. Harrison"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Nori Jacoby"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.11137v1",
+  "originalTitle": "GlobalTap: Globally Diverse Beat Tracking Benchmark via Crowdsourced Tapping",
+  "pdfUrl": "https://arxiv.org/pdf/2611.11137v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

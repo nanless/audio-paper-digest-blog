@@ -1,0 +1,80 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.11249v1",
+  "abstract": "Self-supervised speech models (S3Ms) encode a rich hierarchy of acoustic, prosodic, and phonetic information, yet when and where it emerges during pretraining remains unclear. We train frozen-encoder probes on every Transformer layer across pretraining checkpoints of two matched models: HuBERT-Base, whose stage 2 is a separately initialized model trained on new pseudo-label targets, and single-objective wav2vec 2.0-Base. Our five tasks span an acoustic-to-abstract gradient: absolute pitch (F0), speaker-relative pitch, lexical stress, phoneme boundaries, and 38-way phoneme identity. Acoustic-prosodic cues and phone boundaries are decodable from the earliest checkpoints and barely shift across layers, whereas phoneme identity is constructed during pretraining, re-localizing to upper-middle layers under HuBERT's stage-2 targets at a matched update count. Acquisition order therefore tracks abstraction from the acoustic surface, not the segmental/suprasegmental distinction, extending to prosody an account established for phonetic, lexical and syntactic structure; the no-switch wav2vec 2.0 shows no comparable re-localization.",
+  "abstractSha256": "7c5f0749a81def9ae0d13db4b1e33d18ea282d183e4bdaa66d5da6d2a56b1c90",
+  "arxivId": "2611.11249",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.11249v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "表示探测",
+    "primaryTask": "语音属性识别",
+    "rankBucket": "前50%",
+    "score": 6.4,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-attributes",
+          "label": "语音属性识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.representation-probing",
+          "label": "表示探测"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.prosody",
+          "label": "韵律"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "表示探测",
+      "primaryMethodId": "method.representation-probing",
+      "primaryTask": "语音属性识别",
+      "primaryTaskId": "task.speech-attributes",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Masaru Tanibata"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shun Takahashi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hiroki Ouchi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Sakriani Sakti"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文用冻结编码器在检查点乘以层的网格上探测两个模型的五种属性，发现贴近声学表面的线索早而浅地可解码，音素身份则在训练中逐步构建并在 HuBERT 第二阶段重定位到中上层，而跨模型比较不能分离目标与目的差异。",
+  "originalTitle": "Understanding When and Where Self-Supervised Speech Models Learn Phonemes and Prosodic Cues through Layer-Wise and Time-Resolved Probing",
+  "pdfUrl": "https://arxiv.org/pdf/2611.11249v1.pdf",
+  "readerTitle": "自监督语音模型何时在何处学会音素与韵律：分层与分时探测",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

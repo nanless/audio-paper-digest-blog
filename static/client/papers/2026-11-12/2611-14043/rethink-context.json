@@ -1,0 +1,81 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.14043v1",
+  "abstract": "Despite recent advances in neural speech codecs, achieving highfidelity speech reconstruction at low bitrates remains a formidable challenge. To address this limitation, we propose ESDCodec, a speech codec that integrates a thoroughly enhanced semantic quantizer and a conditioned decoder network. Specifically, we employ a randomly initialized and frozen codebook, followed by a lightweight projector, to encode semantic details entirely within a linear space while enhancing codebook utilization. To further improve perceptual quality, we design a condition network that explicitly injects prior subband knowledge into the upsampling decoder. Taking the de-quantized feature as input, this network predicts subband signals, thereby providing fine-grained guidance for waveform reconstruction. Extensive experimental results show that ESDCodec achieves superior reconstruction performance at an ultra-low bitrate of 0.85kbps. For LLM-based speech generation tasks, ESDCodec also consistently outperforms existing codec models.",
+  "abstractSha256": "2f72fd781ef466be6b383ae7cffa405e42606d7630f57a91353e38b5a318a98a",
+  "arxivId": "2611.14043",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.14043v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "神经编解码与离散单元",
+    "primaryTask": "语音编码",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-coding",
+          "label": "语音编码"
+        },
+        {
+          "facet": "method",
+          "id": "method.neural-codec",
+          "label": "神经编解码与离散单元"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "神经编解码与离散单元",
+      "primaryMethodId": "method.neural-codec",
+      "primaryTask": "语音编码",
+      "primaryTaskId": "task.speech-coding",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Nan Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kecan Mao"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xin Gu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yi Zhao"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhi Gong"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "ESDCodec 针对 0.85 kbps 附近重建质量显著下降的问题，用冻结码本加可学习投影的语义量化器做单码语义编码，再用子带条件网络辅助上采样解码，在 LibriSpeech test-clean 上取得 PESQ 2.49 与 ViSQOL 2.74，代价是双流结构与额外 9.6M 条件网络参数。",
+  "originalTitle": "ESDCodec: Ultra-Low Bitrate Speech Codec with Enhanced Semantic Disentanglement and Subband Decoding",
+  "pdfUrl": "https://arxiv.org/pdf/2611.14043v1.pdf",
+  "readerTitle": "超低码率下如何同时保住语义和音质：ESDCodec 的解耦与子带解码",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

@@ -1,0 +1,113 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.11273v1",
+  "arxivId": "2611.11273",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.11273v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Electronic Engineering, Tsinghua University, Beijing 100084, China"
+      ],
+      "name": "Ziyun Cui"
+    },
+    {
+      "affiliations": [
+        "Department of Electronic Engineering, Tsinghua University, Beijing 100084, China"
+      ],
+      "name": "Haoyu Niu"
+    },
+    {
+      "affiliations": [
+        "Shanghai Artificial Intelligence Laboratory, Shanghai 200032, China"
+      ],
+      "name": "Wen Wu"
+    },
+    {
+      "affiliations": [
+        "School of Computer and Communication Engineering, University of Science and Technology Beijing, Beijing 100083, China"
+      ],
+      "name": "Hao Sun"
+    },
+    {
+      "affiliations": [
+        "Beijing Tsinghua Changgung Hospital, School of Clinical Medicine, Tsinghua Medicine, Tsinghua University, Beijing 100084, China"
+      ],
+      "name": "Sihan Zhang"
+    },
+    {
+      "affiliations": [
+        "Vanke School of Public Health, Tsinghua University, Beijing 100084, China"
+      ],
+      "name": "Chang Lei"
+    },
+    {
+      "affiliations": [
+        "Peking Union Medical College Hospital, Beijing 100730, China"
+      ],
+      "name": "Yun Zhang"
+    },
+    {
+      "affiliations": [
+        "Peking University Huilongguan Clinical Medical School, Beijing 100096, China",
+        "Department of Clinical Psychology, Beijing Huilongguan Hospital, Capital Medical University, Beijing 100096, China",
+        "WHO Collaborating Center for Research and Training in Suicide Prevention, Beijing 100096, China"
+      ],
+      "name": "Chunyun Sun"
+    },
+    {
+      "affiliations": [
+        "Peking University Huilongguan Clinical Medical School, Beijing 100096, China",
+        "Department of Clinical Psychology, Beijing Huilongguan Hospital, Capital Medical University, Beijing 100096, China",
+        "WHO Collaborating Center for Research and Training in Suicide Prevention, Beijing 100096, China"
+      ],
+      "name": "Yang Luo"
+    },
+    {
+      "affiliations": [
+        "Department of Data Science and Artificial Intelligence, The Hong Kong Polytechnic University, Hong Kong (SAR), China"
+      ],
+      "name": "Liangliang Cao"
+    },
+    {
+      "affiliations": [
+        "Department of Electronic Engineering, Tsinghua University, Beijing 100084, China"
+      ],
+      "name": "Ji Wu"
+    },
+    {
+      "affiliations": [
+        "Vanke School of Public Health, Tsinghua University, Beijing 100084, China"
+      ],
+      "name": "Runsen Chen"
+    },
+    {
+      "affiliations": [
+        "Peking Union Medical College Hospital, Beijing 100730, China",
+        "Chinese Academy of Medical Sciences, Beijing 100730, China"
+      ],
+      "name": "Lian Zhou"
+    },
+    {
+      "affiliations": [
+        "Peking University Huilongguan Clinical Medical School, Beijing 100096, China",
+        "Department of Clinical Psychology, Beijing Huilongguan Hospital, Capital Medical University, Beijing 100096, China",
+        "WHO Collaborating Center for Research and Training in Suicide Prevention, Beijing 100096, China"
+      ],
+      "name": "Yongsheng Tong"
+    },
+    {
+      "affiliations": [
+        "Department of Electronic Engineering, Tsinghua University, Beijing 100084, China",
+        "Shanghai Artificial Intelligence Laboratory, Shanghai 200032, China",
+        "Department of Speech, Hearing and Phonetic Sciences, University College London (UCL), London WC1N 1PF, United Kingdom"
+      ],
+      "name": "Chao Zhang"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.11273v1",
+  "originalTitle": "Task-adaptive anonymisation enables privacy-preserving sharing of clinical speech data",
+  "pdfUrl": "https://arxiv.org/pdf/2611.11273v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

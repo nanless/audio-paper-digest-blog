@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.11327v1",
+  "arxivId": "2611.11327",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.11327v1",
+  "authors": [
+    {
+      "affiliations": [
+        "CENSE – Center for Environmental and Sustainability Research",
+        "& CHANGE - Global Change and Sustainability Institute",
+        "NOVA School of Science and Technology, NOVA University Lisbon",
+        "Campus de Caparica, 2829-516 Caparica"
+      ],
+      "name": "Paulo A. Condado"
+    },
+    {
+      "affiliations": [
+        "CENSE – Center for Environmental and Sustainability Research",
+        "& CHANGE - Global Change and Sustainability Institute",
+        "DEEI-FCT, Universidade do Algarve",
+        "Campus de Gambelas, 8005-139 Faro, Portugal"
+      ],
+      "name": "Fernando G. Lobo"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.11327v1",
+  "originalTitle": "DIY Customized Speech Recognition for a Person with Speech Disabilities",
+  "pdfUrl": "https://arxiv.org/pdf/2611.11327v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

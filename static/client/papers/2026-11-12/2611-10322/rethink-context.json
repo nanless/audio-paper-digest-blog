@@ -1,0 +1,100 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.10322v1",
+  "abstract": "In the United States, most police departments communicate using police radio, which allows for officer-to-officer and officer-to-dispatch communication without depending on cellular network or WiFi availability. While some departments use encrypted digital radio, many continue to transmit in the clear, and are legally monitored by public citizens with `police scanners.' Because police radio is intended for internal police use and represents real-time communication, it may offer valuable insight into patterns of law enforcement activities without the potential bias and filtering introduced by a press release after the fact. In this study, we collect and examine over 14 million radio transmissions representing over 100,000 hours of speech by officers in 34 cities across the United States from July 2025 through July 2026; to our knowledge the largest scale analysis of Broadcast Police Communication (BPC) to date. We highlight both typical patterns of police communication and categorize anomalous activity that represents incidents including protests and major weather events. We present this dataset as a starting point for an array of police communication studies, conduct our own preliminary analysis, and propose several further areas of inquiry.",
+  "abstractSha256": "25f4ad2491e5204348f6d29eb6204926c03d7a0a8cbbe046381a047608c5037c",
+  "arxivId": "2611.10322",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.10322v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "数据集构建",
+    "primaryTask": "音频理解",
+    "rankBucket": "后50%",
+    "score": 5.4,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-understanding",
+          "label": "音频理解"
+        },
+        {
+          "facet": "method",
+          "id": "method.dataset-curation",
+          "label": "数据集构建"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "method",
+          "id": "method.clustering",
+          "label": "聚类与类别匹配"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "数据集构建",
+      "primaryMethodId": "method.dataset-curation",
+      "primaryTask": "音频理解",
+      "primaryTaskId": "task.audio-understanding",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Vermont Complex Systems Institute, University of Vermont, Burlington, VT, USA",
+        "Network Science Institute, Northeastern University, Boston, MA, USA"
+      ],
+      "name": "Milo Z. Trujillo"
+    },
+    {
+      "affiliations": [
+        "Network Science Institute, Northeastern University, Boston, MA, USA"
+      ],
+      "name": "Adam Perhala"
+    },
+    {
+      "affiliations": [
+        "Network Science Institute, Northeastern University, Boston, MA, USA"
+      ],
+      "name": "Elaine Zou"
+    },
+    {
+      "affiliations": [
+        "Network Science Institute, Northeastern University, Boston, MA, USA"
+      ],
+      "name": "Tyler Mckenzie"
+    },
+    {
+      "affiliations": [
+        "Vermont Complex Systems Institute, University of Vermont, Burlington, VT, USA"
+      ],
+      "name": "Juniper Lovato"
+    },
+    {
+      "affiliations": [
+        "Vermont Complex Systems Institute, University of Vermont, Burlington, VT, USA",
+        "Network Science Institute, Northeastern University, Boston, MA, USA"
+      ],
+      "name": "Brooke Foucault Welles"
+    },
+    {
+      "affiliations": [
+        "Department of Mathematics and Computer Science, College of the Holy Cross, Worcester, MA, USA"
+      ],
+      "name": "Alyssa Hasegawa Smith"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文把公开警用电台流切成单次发射并转写，用话务量分解、关键词时序和主题模型展示芝加哥等地日常节律与抗议和暴风雪等异常，代价是转写噪声、覆盖不均和涉个人信息的原文不能公开。",
+  "originalTitle": "Police Behavior Patterns Through Radio Analysis",
+  "pdfUrl": "https://arxiv.org/pdf/2611.10322v1.pdf",
+  "readerTitle": "用公开警用电台看警察在忙什么：百万小时录音怎么做成可比较的研究",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

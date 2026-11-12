@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.13689v1",
+  "arxivId": "2611.13689",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.13689v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Alkis Koudounas"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Osamu Take"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hayato Futami"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Quentin Jodelet"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Emiru Tsunoo"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.13689v1",
+  "originalTitle": "Walrus Technical Report",
+  "pdfUrl": "https://arxiv.org/pdf/2611.13689v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

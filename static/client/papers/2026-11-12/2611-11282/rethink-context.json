@@ -1,0 +1,63 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.11282v1",
+  "abstract": "This paper develops an output-driven resampling formulation for fine pitch adjustment of recorded signals. A fractional input-position increment combines the desired frequency ratio with independently specified input and output sample rates. Each output sample is evaluated from neighboring input samples, and gradual rate changes preserve the current input position. Musical interval mapping and direct sine synthesis are treated as distinct layers. The formulation separates tuning resolution, numerical accuracy, interpolation quality, and streaming correctness. Optional rational-factor representations use freely chosen approximation parameters; numerical illustrations do not define constants required by the algorithm. Linear interpolation provides a low-cost evaluation kernel but does not establish a universal signal-quality or frequency-accuracy guarantee.",
+  "abstractSha256": "7745300ded87b348515dd05164d03565902a9c197421840d262550ce6deae563",
+  "arxivId": "2611.11282",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.11282v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "音频编辑",
+    "rankBucket": "前50%",
+    "score": 5.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-editing",
+          "label": "音频编辑"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "音频编辑",
+      "primaryTaskId": "task.audio-editing",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "QPI Laboratories, Inc.",
+        "Escondido, CA, US"
+      ],
+      "name": "Andreas Falkenberg"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文把微调写成输出端按步进 q 遍历输入波形的小数位置并用两点线性插值求值，用 1 kHz 正弦在 44.1 kHz 下做 0 到加 50 音分的连续滑音仿真来说明基频跟踪与约负 26 dB 成像底噪并存，代价是线性核本身的频率响应损失与混叠抑制不足仍需另加带宽保护。",
+  "originalTitle": "Real-Time Arbitrary Resampling for Phase-Continuous Microtuning in Audio Streams",
+  "pdfUrl": "https://arxiv.org/pdf/2611.11282v1.pdf",
+  "readerTitle": "输出驱动的任意微调重采样：相位连续的流式做法与代价",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

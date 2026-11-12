@@ -1,0 +1,86 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.12375v1",
+  "abstract": "We introduce AudioCodex, a fully causal autoencoder for live generative audio applications that compresses stereo audio into compact continuous latent sequences at ~10 Hz. It combines a Mean Flow magnitude autoencoder with latent hypersphere projection, bounded-noise augmentation, representation alignment, and adversarial phase recovery to learn representations that support both efficient downstream generation and high-quality reconstruction. Through extensive ablations, we show that AudioCodex outperforms the state-of-the-art in terms of generation-reconstruction trade-off, whilst remaining strictly causal in both encoding and decoding. This work paves the way towards truly real-time interactive and streaming generative audio applications.",
+  "abstractSha256": "edb5d73c50b22b69fa2c3447efd0849b290337c6312715b526343438438e5bed",
+  "arxivId": "2611.12375",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.12375v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "流匹配",
+    "primaryTask": "音频编码",
+    "rankBucket": "前50%",
+    "score": 7.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-coding",
+          "label": "音频编码"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.causal",
+          "label": "严格因果"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "流匹配",
+      "primaryMethodId": "method.flow-matching",
+      "primaryTask": "音频编码",
+      "primaryTaskId": "task.audio-coding",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Marco Pasini"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Javier Nistal"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Cyran Aouameur"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Stefan Lattner"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "George Fazekas"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "AudioCodex 把立体声音频先压缩为约 10 Hz 的连续隐变量再用一步幅度生成加独立相位估计恢复波形，在保持编码解码都严格因果的条件下改善了重建与下游生成的折中，但因果约束和短片段代理评估仍限制结论适用范围。",
+  "originalTitle": "AudioCodex: Streaming Autoencoders for Live Audio",
+  "pdfUrl": "https://arxiv.org/pdf/2611.12375v1.pdf",
+  "readerTitle": "AudioCodex：面向实时交互的流式连续音频自编码器",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

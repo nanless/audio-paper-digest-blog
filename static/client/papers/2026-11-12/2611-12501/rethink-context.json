@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.12501v1",
+  "abstract": "Does grouping translation updates before speech synthesis change the measured completion gap between two translators? We compare StreamAtt with its fixed-audio-history baseline on ten English-German talks. For each translation, we keep the intended text and its availability times fixed and vary how updates are grouped for synthesis. Four-second grouping increases StreamAtt's mean completion lead from 106.6 to 229.1 seconds with XTTS-v2, but reduces it from 169.5 to 146.5 seconds with Piper. Both produce shorter audio; different changes in playback idle account for the opposite effects. These directions recur on a separately selected twenty-talk panel. In continuing CosyVoice 3 sessions, grouping instead leaves paired audio unchanged and delays completion on nineteen of twenty blocks. A speech-timing comparison therefore needs to specify how text enters synthesis, not just which synthesizer is used. Recognition and automatic word timing describe the outputs, but do not establish translation accuracy or intelligibility.",
+  "abstractSha256": "04f9560b064e5ffcfa2492215708dfccb01a1926be5897f19bc2c404093d4827",
+  "arxivId": "2611.12501",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.12501v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "评测协议",
+    "primaryTask": "语音翻译",
+    "rankBucket": "前50%",
+    "score": 6.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-translation",
+          "label": "语音翻译"
+        },
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "评测协议",
+      "primaryMethodId": "method.evaluation-protocol",
+      "primaryTask": "语音翻译",
+      "primaryTaskId": "task.speech-translation",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hieu Minh Truong"
+    },
+    {
+      "affiliations": [
+        "VinUniversity, Vietnam"
+      ],
+      "name": "Dung D. Le"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文固定两路德语译文更新及其可得时间，只改变送入语音合成前的分组等待，证明 4 秒分组在 XTTS-v2 下把 StreamAtt 的平均完播领先从 106.6 秒拉大到 229.1 秒，在 Piper 下却从 169.5 秒缩到 146.5 秒，原因是音频总时长与播放空等的不同变化，而识别与词定时只描述输出不能证明翻译质量。",
+  "originalTitle": "Text Grouping Changes Completion-Time Comparisons in Long-Form Simultaneous Speech Translation",
+  "pdfUrl": "https://arxiv.org/pdf/2611.12501v1.pdf",
+  "readerTitle": "把译文分组再合成会改变长语音同传的完播比较吗",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.13689v1",
+  "abstract": "We present Walrus, a unified 8B speech-and-audio foundation model handling speech recognition (including code-switching and multi-talker speech), speech-to-text and speech-to-speech translation, text-to-speech, emotion recognition, audio captioning, and general audio understanding. Our main contribution is not a new architecture but a data-centric training recipe; we use a standard decoder-only backbone initialized from Gemma 4, so that gains can be traced to the data. For speech generation, Walrus predicts low-bitrate discrete speech tokens, and a lightweight token-to-waveform decoder converts them into high-fidelity audio. The recipe is a three-stage data curriculum that moves from broad multilingual data to multi-talker, code-switching, and domain-specific data. At each stage, task-aware and dataset-aware weighting balances tasks with very different token budgets and protects core skills from forgetting. Trained on over 600M samples covering more than 20 tasks and 100 languages, Walrus leads on most multilingual, multi-talker, and code-switching ASR, speech translation, and audio understanding benchmarks, outperforming both open speech language models of comparable size and dedicated task-specific models. On most benchmarks, it even matches or surpasses the $4\\times$ larger Qwen3-Omni's performance. Results suggest that data engineering is a primary driver of quality in multi-task speech and audio modeling.",
+  "abstractSha256": "bd3eab214ba1ec56b1b754726c06891c6b288a2026b25b0b5db41a6479d86c5b",
+  "arxivId": "2611.13689",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.13689v1",
+  "assessment": {
+    "documentType": "模型报告",
+    "primaryMethod": "课程学习",
+    "primaryTask": "多说话人语音识别",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.multi-talker-asr",
+          "label": "多说话人语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.curriculum",
+          "label": "课程学习"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-translation",
+          "label": "语音翻译"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.unified-audio",
+          "label": "统一音频模型"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "课程学习",
+      "primaryMethodId": "method.curriculum",
+      "primaryTask": "多说话人语音识别",
+      "primaryTaskId": "task.multi-talker-asr",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Alkis Koudounas"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Osamu Take"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hayato Futami"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Quentin Jodelet"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Emiru Tsunoo"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "Walrus 固定用 Gemma 4 解码器结构，靠三阶段数据课程解决多语、多人混叠、语码混合等识别翻译理解任务，代价是超 600M 样本与约 92000 GPU 小时的训练投入。",
+  "originalTitle": "Walrus Technical Report",
+  "pdfUrl": "https://arxiv.org/pdf/2611.13689v1.pdf",
+  "readerTitle": "Walrus：靠数据工程做统一语音音频大模型",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

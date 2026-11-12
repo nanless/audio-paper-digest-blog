@@ -1,0 +1,86 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.13544v1",
+  "abstract": "Multimodal screening for depression, anxiety, and stress in children and adolescents uses verbal and nonverbal behaviour. Most existing multimodal methods learn from a single recording or interview. Yet a participant's behaviour changes with the speaking condition, and these changes hold evidence that is invisible in a single recording. We propose DASWeave to bring this evidence into a neural network that encodes each response and then combines all responses of a participant. We train supervised trees to find which behavioural statistics matter for screening, both within each response and in how they change across conditions. We feed the tree outputs into the network both before and after this combination. We fine-tune a large language model to relate what a participant says to how they say it across conditions, and feed its representation into the network after the combination. The language model reads behaviour as text descriptions. We therefore derive additional training targets for the network from a multimodal large language model that takes in the audio-visual features directly. On the official hidden test set of the ACM Multimedia 2026 AdoDAS Grand Challenge (Track 1), DASWeave ranks second among 95 eligible teams. Its mean F1 is 27.1% higher than that of the official audio-visual baseline. It also has the highest mean AUROC among the top five teams. Ablation studies on the validation set show that the supervised trees and the fine-tuned language model contribute most to mean F1.",
+  "abstractSha256": "2cc750ecfe9f9f4915dbd9408011322a40c7d09a542d90b6e5e35f2b152853e7",
+  "arxivId": "2611.13544",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.13544v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "会话抑郁风险筛查",
+    "rankBucket": "前50%",
+    "score": 6.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.conversational-depression-screening",
+          "label": "会话抑郁风险筛查"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.llm",
+          "label": "大语言模型"
+        },
+        {
+          "facet": "method",
+          "id": "method.ensemble-learning",
+          "label": "集成学习"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "会话抑郁风险筛查",
+      "primaryTaskId": "task.conversational-depression-screening",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "University of Science and Technology of China, Hefei, China"
+      ],
+      "name": "Binyan Chen"
+    },
+    {
+      "affiliations": [
+        "University of Science and Technology of China, Hefei, China"
+      ],
+      "name": "Tong Pan"
+    },
+    {
+      "affiliations": [
+        "University of Science and Technology of China, Hefei, China"
+      ],
+      "name": "Yadong Liu"
+    },
+    {
+      "affiliations": [
+        "University of Science and Technology of China, Hefei, China"
+      ],
+      "name": "Xin Yun"
+    },
+    {
+      "affiliations": [
+        "University of Science and Technology of China, Hefei, China"
+      ],
+      "name": "Shangfei Wang"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对儿童青少年抑郁焦虑压力筛查中单一录音看不到跨场合行为变化的问题，DASWeave 用共享会话编码加两层树融合与微调语言模型组织四段回答的证据，在隐藏测试集上平均 F1 达 0.5853，代价是多分支离线拟合与固定侧表示的主模型训练流程。",
+  "originalTitle": "DASWeave: Weaving Evidence across Speaking Conditions for Multimodal Depression, Anxiety, and Stress Screening",
+  "pdfUrl": "https://arxiv.org/pdf/2611.13544v1.pdf",
+  "readerTitle": "DASWeave：把四种说话场合的差异织进抑郁焦虑压力筛查",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

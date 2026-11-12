@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.13243v1",
+  "abstract": "We present GigaEdge Spench, an open-source SDK for streaming speech enhancement on CPU servers, mobile devices, and in browsers. Applications can build enhancement channels from neural denoising, normalization and dynamics blocks, sample-rate conversion, and acoustic echo cancellation where supported. These stages can be combined, while normalization can also run without a neural model. The release includes an 8 kHz INT8 denoiser and discriminative and hybrid 48 kHz FP32 models. A shared C++ core supports ONNX Runtime and TensorFlow Lite through native interfaces, Android and iOS SDKs, and WebAssembly integration. Independent stream contexts share model resources, and consecutive frames from one stream can be processed in a single inference call. We evaluate the released models on EARS-WHAM v2 and compare their quality and processing costs with RNNoise and DPDFNet2. All tested native and Web configurations process files faster than real time, although larger chunks require more time to collect input. We also measure how many streams a shared model can process on a CPU. Our contribution is a configurable deployment system and an experimental study of how model choice, chunk size, and execution environment affect its use. All reported SDK timing uses ONNX Runtime. Index Terms: speech enhancement, streaming inference, cross-platform deployment, temporal frame grouping, computational efficiency",
+  "abstractSha256": "4456d3b17ec4c9b545fc1635b1f4cbcf571320f062f25726b26de5109fef1f6c",
+  "arxivId": "2611.13243",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.13243v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "信号处理",
+    "primaryTask": "语音增强",
+    "rankBucket": "前50%",
+    "score": 6.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-enhancement",
+          "label": "语音增强"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.open-source-tool",
+          "label": "开源工具"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "语音增强",
+      "primaryTaskId": "task.speech-enhancement",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Tashkent, Uzbekistan"
+      ],
+      "name": "Artem Sokolov"
+    },
+    {
+      "affiliations": [
+        "Moscow, Russia"
+      ],
+      "name": "Artem Khaidarov"
+    },
+    {
+      "affiliations": [
+        "Moscow, Russia"
+      ],
+      "name": "Yana Lysova"
+    },
+    {
+      "affiliations": [
+        "Moscow, Russia"
+      ],
+      "name": "Alexander Gladkikh"
+    },
+    {
+      "affiliations": [
+        "Moscow, Russia"
+      ],
+      "name": "Vitaliy Yulis"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文要解决视频会议中不同设备上连续音频块的实时增强与部署问题，用同一 C++ 核心把神经去噪与可选归一化等串成增强通道，并用 EARS-WHAM v2 和 CPU 实测说明模型、块大小与共享模型路数之间的质量与开销权衡。",
+  "originalTitle": "GigaEdge Spench: An SDK for Practical Streaming Speech Enhancement",
+  "pdfUrl": "https://arxiv.org/pdf/2611.13243v1.pdf",
+  "readerTitle": "流式语音增强怎么做成可部署的通道：GigaEdge Spench 解读",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

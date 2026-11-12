@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.13922v1",
+  "abstract": "Acoustic side-channel attacks (ASCA) recover typed text from the sound of keystrokes, using only a commodity microphone and no access to the victim's device. Prior work establishes that such attacks succeed under idealized laboratory conditions - a single keyboard, a fixed microphone, a quiet room, and training and testing on the same device but leaves open the question that matters for security: whether keystroke inference survives the open world of unseen keyboards, diverse users, noisy environments, and compressed transmission channels. The answer developed here is that it does, provided the acoustic model is made explicitly domain-invariant and its noisy predictions are corrected by a language model.",
+  "abstractSha256": "8c2b33db9c624a0de3ef7cfee3b4643955cf3451723509913ed11ee53d7e3066",
+  "arxivId": "2611.13922",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.13922v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "域泛化",
+    "primaryTask": "音频隐私攻击与防御",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.privacy-attack-defense",
+          "label": "音频隐私攻击与防御"
+        },
+        {
+          "facet": "method",
+          "id": "method.domain-generalization",
+          "label": "域泛化"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.llm",
+          "label": "大语言模型"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "域泛化",
+      "primaryMethodId": "method.domain-generalization",
+      "primaryTask": "音频隐私攻击与防御",
+      "primaryTaskId": "task.privacy-attack-defense",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Bikrant Bikram Pratap Maurya"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文要解决在没见过的键盘、用户和噪声及 VoIP 压缩下仍能从敲键声推断按键的问题，用 Hear 多设备数据训练出去设备染色的 Decker 声学模型并以受限语言模型解码纠错，在未见键盘上把按键准确率做到 81.3% 并显著提升句子恢复，代价是需要多键盘配对训练、语言先验只对低熵文本有效且极端噪声与连续无切分流仍脆弱。",
+  "originalTitle": "Domain-Invariant and Language-Model-Assisted Acoustic Side-Channel Attacks on Keyboards",
+  "pdfUrl": "https://arxiv.org/pdf/2611.13922v1.pdf",
+  "readerTitle": "跨键盘也能听键还原文字：Decker 如何去掉设备染色再靠语言模型纠错",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

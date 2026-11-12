@@ -1,0 +1,117 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.11130v1",
+  "abstract": "Neural network-based virtual microphone estimation (neural-VME) synthesizes microphone signals at unobserved spatial locations from a limited set of real microphone (RM) physical recordings. This enables high-resolution arrays that improve spatial processing for downstream tasks such as speech enhancement. However, existing methods rely on supervised training with ground-truth signals captured at virtual locations, requiring datasets that scale with the number of virtual microphones (VM) and leaving open the question of how to design optimal large-array configurations. We propose Virtual-Flow, a flow-matching framework that implicitly generates VM signals conditioned on real recordings, without requiring ground-truth VM signals. We introduce a semi-supervised training strategy based on pseudo-VM targets constructed from time-delayed superpositions of real recordings. Virtual-Flow shows improved magnitude estimation in high-frequency bands, yielding richer spatial cues for beamforming. Experiments demonstrate that the proposed Virtual-Flow, combined with reflow distillation, outperforms existing neural-VME baselines in VM-based beamforming and achieves competitive end-to-end speech enhancement performance with low computational cost.",
+  "abstractSha256": "70d20200921d6a3da5632440451e82d9c2de45ef7c072394f672239435feb22e",
+  "arxivId": "2611.11130",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.11130v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "流匹配",
+    "primaryTask": "语音增强",
+    "rankBucket": "前50%",
+    "score": 6.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-enhancement",
+          "label": "语音增强"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "method",
+          "id": "method.semi-supervised",
+          "label": "半监督学习"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.microphone-array",
+          "label": "麦克风阵列"
+        },
+        {
+          "facet": "method",
+          "id": "method.beamforming",
+          "label": "波束成形"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "流匹配",
+      "primaryMethodId": "method.flow-matching",
+      "primaryTask": "语音增强",
+      "primaryTaskId": "task.speech-enhancement",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Korea Advanced Institute of Science and Technology (KAIST)",
+        "Daejeon, Republic of Korea"
+      ],
+      "name": "Dongheon Lee"
+    },
+    {
+      "affiliations": [
+        "Meta Reality Labs Research",
+        "Cambridge, Cambridgeshire, UKRedmond, WA, USA,"
+      ],
+      "name": "Ashutosh Pandey"
+    },
+    {
+      "affiliations": [
+        "Meta Reality Labs Research",
+        "Cambridge, Cambridgeshire, UKRedmond, WA, USA,"
+      ],
+      "name": "Sanjeel Parekh"
+    },
+    {
+      "affiliations": [
+        "Meta Reality Labs Research",
+        "Cambridge, Cambridgeshire, UKRedmond, WA, USA,"
+      ],
+      "name": "Zhaoheng Ni"
+    },
+    {
+      "affiliations": [
+        "Meta Reality Labs Research",
+        "Cambridge, Cambridgeshire, UKRedmond, WA, USA,"
+      ],
+      "name": "Daniel Wong"
+    },
+    {
+      "affiliations": [
+        "Meta Reality Labs Research",
+        "Cambridge, Cambridgeshire, UKRedmond, WA, USA,"
+      ],
+      "name": "Jacob Donley"
+    },
+    {
+      "affiliations": [
+        "Meta Reality Labs Research",
+        "Cambridge, Cambridgeshire, UKRedmond, WA, USA,"
+      ],
+      "name": "Buye Xu"
+    },
+    {
+      "affiliations": [
+        "Meta Reality Labs Research",
+        "Cambridge, Cambridgeshire, UKRedmond, WA, USA,"
+      ],
+      "name": "Juan Azcarreta"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "本文用流匹配从 4 路真麦克风信号生成 12 路虚拟麦克风信号，以时延叠加构造的伪目标加波束形成目标做半监督训练，在 4+12 通道下把波束形成增强从 5.7 dB 提升到 10.3 dB，单步推理仅用 7.8 G MAC/s。",
+  "originalTitle": "Virtual-Flow: Virtual Microphone-based Speech Enhancement via Semi-supervised Flow Matching",
+  "pdfUrl": "https://arxiv.org/pdf/2611.11130v1.pdf",
+  "readerTitle": "只用四个真麦克风，怎么“变出” 十二个虚拟麦克风来做增强",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

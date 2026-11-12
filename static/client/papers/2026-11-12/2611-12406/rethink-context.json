@@ -1,0 +1,110 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.12406v1",
+  "abstract": "As modern text-to-speech systems become increasingly intelligible and natural, evaluation is shifting from detecting gross synthesis failures to identifying subtle departures from lifelike human delivery. Because large-scale listening tests are costly and slow, speech reward models can serve as scalable automatic judges for comparing generated utterances, curating data, and supporting iterative TTS development. Existing speech reward models can predict scores or pairwise preferences and may generate natural-language rationales, but their supervision is typically defined at the utterance or pair level. The connection between local acoustic phenomena and the final preference therefore remains implicit. We introduce REAL, a framework for Reward modeling through Evidence-linked Analysis of Lifelikeness in generated speech. Its central idea is to supervise not only the final pairwise preference but also a structured account of its supporting observations, linking local audio spans to perceptual phenomena, affected dimensions, and the overall judgment. Specifically, REAL-Jury constructs these evidence-linked reports through timestamp alignment, multi-model analysis, and dispute-oriented deliberation. REAL-Judge learns to generate them from paired audio inputs. REAL-Eval assesses preference prediction in two tiers, from salient perceptual differences to subtle distinctions among strong TTS systems. Instantiated with MiMo-Audio, REAL-Judge improves pairwise preference accuracy over its backbone by 16.01 and 11.41 percentage points on the two tiers, respectively, and outperforms the open-source speech reward models SpeechJudge and UniSRM on both tiers.",
+  "abstractSha256": "1da1dceddbc0dd83e0431b174cfa492a98343ef3b7e793c5463f93549132be8c",
+  "arxivId": "2611.12406",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.12406v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "SFT",
+    "primaryTask": "语音质量评估",
+    "rankBucket": "前50%",
+    "score": 6.4,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-quality",
+          "label": "语音质量评估"
+        },
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.sft",
+          "label": "SFT"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "SFT",
+      "primaryMethodId": "method.sft",
+      "primaryTask": "语音质量评估",
+      "primaryTaskId": "task.speech-quality",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yaodong Song"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jie Lian"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xusheng Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Genliang Zhao"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hongjie Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jian Kang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhen-Hua Ling"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jie Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yongxiang Li"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对合成语音已很流利、难靠单分判断是否像真人说话的问题，REAL 用带时间定位的证据链报告做监督，把偏好判断和局部听感依据绑在一起，在中文两档评测上相对基座带来明显提升，但细粒度高水平系统区分仍有差距。",
+  "originalTitle": "REAL: Reward Modeling through Evidence-Linked Analysis of Lifelikeness in Generated Speech",
+  "pdfUrl": "https://arxiv.org/pdf/2611.12406v1.pdf",
+  "readerTitle": "REAL：把成段语音偏好拆成带时间证据的逼真度评价",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

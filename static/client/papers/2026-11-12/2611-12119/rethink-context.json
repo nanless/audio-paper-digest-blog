@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.12119v1",
+  "abstract": "The performance of speech classification systems such as speech emotion recognition or pathological speech detection can degrade substantially when there is a domain shift between training and test data. This shift can arise due to e.g., differences in recording setup, acoustic environment, speaker, language, or speaking style. Adversarial domain adaptation addresses this problem by encouraging representations that are less sensitive to domain-specific differences. However, many adversarial approaches rely on training a separate domain discriminator, which can be unstable and difficult to train. In this paper, we propose to use a discriminator-free adversarial learning network (DALN) for unsupervised domain adaptation in speech classification tasks. DALN reuses the task classifier as an implicit discriminator and aligns domains through the nuclear-norm Wasserstein discrepancy on classifier outputs. We extensively evaluate the performance of DALN on intra-lingual, cross-lingual, and noisy adaptations for speech emotion recognition and pathological speech detection. Extensive experimental results show that DALN generally achieves the best performance across the considered tasks and domain shifts, outperforming discriminator-based domain adaptation approaches.",
+  "abstractSha256": "a0ede26b84ad35d8e5fefa6d4faae08fc18e4b500eb2fc2a378d85ec22f144d8",
+  "arxivId": "2611.12119",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.12119v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "领域适应",
+    "primaryTask": "语音情感识别",
+    "rankBucket": "前50%",
+    "score": 6.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.emotion-recognition",
+          "label": "语音情感识别"
+        },
+        {
+          "facet": "task",
+          "id": "task.pathological-speech",
+          "label": "病理语音评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.domain-adaptation",
+          "label": "领域适应"
+        },
+        {
+          "facet": "method",
+          "id": "method.adversarial-training",
+          "label": "对抗训练"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "领域适应",
+      "primaryMethodId": "method.domain-adaptation",
+      "primaryTask": "语音情感识别",
+      "primaryTaskId": "task.emotion-recognition",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yacouba Kaloga"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ina Kodrasi"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文针对训练与测试域不一致导致语音情感识别和病理语音检测下降的问题，把无判别器对抗学习用于冻结自监督表示加轻量适配头的语音分类，在语内、跨语言和加噪迁移上平均提升最大，但并非每个迁移都取胜且显著性依赖配对假设。",
+  "originalTitle": "Discriminator-free adversarial domain adaptation for robust speech classification",
+  "pdfUrl": "https://arxiv.org/pdf/2611.12119v1.pdf",
+  "readerTitle": "不用判别器也能做对抗域适应：语音分类鲁棒性解读",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

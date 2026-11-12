@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.12493v1",
+  "abstract": "We present Textraction, a text-guided speaker extraction framework that enables the selective extraction of desired speakers or noise sources from an audio mixture using only natural-language descriptions. The proposed method operates within a single unified model that supports both single-channel and multi-channel inputs and it allows conditioning on either semantic textual descriptions of the target source or on its spatial description. Dedicated single- and multi-channel encoders feed a shared stack of time--frequency transformer blocks, which is conditioned on the prompt and on the recording configuration in every block through cross-attention and estimates the target directly from the mixture in one forward pass, without a separation stage or a source-selection stage. The system can extract an arbitrary subset of entities from a mixture, assuming up to two simultaneously active speakers and two noise sources, and interprets prompts specifying which entities to keep, which to remove, or both. In addition, we show that the framework naturally applies to a speech-enhancement setting, in which a single target speaker is present alongside background noise. To circumvent the application of computationally costly large language models used in prior work, we introduce a lightweight, task-adapted text encoder obtained by contrastively fine-tuning a compact text-retrieval model, which learns to be sensitive to instruction polarity (e.g., keep vs. remove) while remaining robust to paraphrasing. Experiments across attribute-based extraction, spatially guided extraction, and speech enhancement show that the proposed approach effectively isolates the desired entities under various acoustic and spatial conditions, and matches or surpasses dedicated spatial-extraction and enhancement baselines while offering substantially greater flexibility.",
+  "abstractSha256": "13cf3cbe9ea1528eb5cd79407f1b6b8118a338eded482737dbacef783e468132",
+  "arxivId": "2611.12493",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.12493v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "Transformer",
+    "primaryTask": "目标说话人提取",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.target-speaker",
+          "label": "目标说话人提取"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-enhancement",
+          "label": "语音增强"
+        },
+        {
+          "facet": "method",
+          "id": "method.transformer",
+          "label": "Transformer"
+        },
+        {
+          "facet": "method",
+          "id": "method.contrastive",
+          "label": "对比学习"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "Transformer",
+      "primaryMethodId": "method.transformer",
+      "primaryTask": "目标说话人提取",
+      "primaryTaskId": "task.target-speaker",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Aviad Eisenberg"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Sharon Gannot"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shlomo E. Chazan"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对两说话人加两噪声混合中按自然语言保留或去除任意子集的问题，Textraction 用单双通道共用主干加每块文本交叉注意一次前向直接估计目标，在仿真混响数据上达到属性提取约 11 dB、空间提取约 10.5 dB、增强约 18 dB SI-SDR，代价是仅仿真验证且限于固定源数。",
+  "originalTitle": "Textraction: Unified Text-Guided Speaker Extraction and Enhancement for Single- and Multi-Channel Audio",
+  "pdfUrl": "https://arxiv.org/pdf/2611.12493v1.pdf",
+  "readerTitle": "一句话指令选出想要的声音：Textraction 统一文本引导提取与增强",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

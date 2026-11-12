@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.14421v1",
+  "abstract": "Streaming speech recognizers output a word only after the speaker has finished it, typically 90-400 ms later. For a voice agent every millisecond counts: the sooner the words are outputted, the sooner the agent can start a search or plan its reply. We present Earlybird, a 29M-parameter streaming recognizer (16.8 MB at 4 bits). Earlybird learns from audio cut off at random points, including partway through a word, and is asked to predict every word that is due by then in full, plus a guess of the next two words. Its raw token probabilities give a confidence for every word including the one still being spoken. On clean audiobook speech (LibriSpeech test-clean), the median word is predicted correctly 90 ms before the speaker finishes it, while released streaming models get it 90 to 400 ms after it ends. Earlybird is the earliest on all six test sets we time, covering audiobooks, TED talks, public speech, earnings calls, and synthetic speech. On the same audiobooks, 69% of words are predicted correctly before they end, against 3-25% for the other models. For words still being spoken, confidence is calibrated, with an expected calibration error (ECE) of 3.7 to 5.5. On the eight English Open ASR Leaderboard sets, it is more accurate than Moonshine Tiny on every set and roughly ties Whistle, a model of the same size.",
+  "abstractSha256": "67c689ef1e8cf041477aff056f7970dd523288b761573f7543351ad41bf81f4e",
+  "arxivId": "2611.14421",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.14421v1",
+  "assessment": {
+    "documentType": "模型报告",
+    "primaryMethod": "知识蒸馏",
+    "primaryTask": "语音识别",
+    "rankBucket": "前25%",
+    "score": 8.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        },
+        {
+          "facet": "method",
+          "id": "method.quantization",
+          "label": "模型量化"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "知识蒸馏",
+      "primaryMethodId": "method.distillation",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Sahil Mahendrakar"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "Earlybird 把流式识别训练成在音频被随机截断时就写出完整单词并顺带猜后两个词，在干净有声书上中位提前 90 毫秒认对单词，代价是更多的收回修改和在嘈杂人声下错误率明显上升。",
+  "originalTitle": "Earlybird: Predictive Streaming Speech Recognition in 29M Parameters",
+  "pdfUrl": "https://arxiv.org/pdf/2611.14421v1.pdf",
+  "readerTitle": "还没说完就先认出来：Earlybird 如何提前预测单词",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

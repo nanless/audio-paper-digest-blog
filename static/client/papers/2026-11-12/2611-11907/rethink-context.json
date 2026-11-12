@@ -1,0 +1,92 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.11907v1",
+  "abstract": "Multimodal Emotion Reasoning (MER) requires perceiving and integrating emotion cues from multiple modalities. Recent advances increasingly leverage Multimodal Large Language Models (MLLMs) to enhance reasoning capacity. However, due to the inherent heterogeneity in conveying emotions across modalities, these models often suffer from modality imbalance and confront flawed emotion understanding. In this paper, we conduct an in-depth analysis on MER models and uncover two key empirical insights. (i) In MER, modality imbalance manifests two distinct failure modes: unimodal over-reliance and insufficient cross-modal utilization, which call for different intervention strategies. (ii) MLLM layers exhibit implicit functional hierarchies in multimodal emotion processing, playing separable roles in stabilizing unimodal representations and integrating cross-modal information. Motivated by these observations, we propose a Layer-Aware Modality Rebalancing (LAMR) framework by explicitly aligning intervention strategies with layer roles. Specifically, we first introduce two quantized metrics for adaptive layer role profiling. In each layer, Modality Entropy (ME) measures the dispersion of modality contributions, and Cross-modal Intensity (CMI) captures the strength of cross-modal interactions. Then, we respectively enhance modality equilibrium in stabilization layers and cross-modal propagation in integration layers. Extensive experiments on two comprehensive MER benchmarks demonstrate that LAMR effectively mitigates modality imbalance and improves emotion reasoning across diverse MLLM backbones, without additional training.",
+  "abstractSha256": "77b138fd3aa0e0f3491fa05f2bba822bdf7d999cc5bcefb32ef0b59e0d986d20",
+  "arxivId": "2611.11907",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.11907v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "激活因果干预",
+    "primaryTask": "多模态情感极性分析",
+    "rankBucket": "前50%",
+    "score": 6.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.multimodal-sentiment",
+          "label": "多模态情感极性分析"
+        },
+        {
+          "facet": "method",
+          "id": "method.activation-intervention",
+          "label": "激活因果干预"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.interpretability",
+          "label": "可解释性"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "激活因果干预",
+      "primaryMethodId": "method.activation-intervention",
+      "primaryTask": "多模态情感极性分析",
+      "primaryTaskId": "task.multimodal-sentiment",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "University of Science and Technology of China, Hefei, China"
+      ],
+      "name": "Pengyu Huang"
+    },
+    {
+      "affiliations": [
+        "University of Science and Technology of China, Hefei, China"
+      ],
+      "name": "Peipei Song"
+    },
+    {
+      "affiliations": [
+        "University of Science and Technology of China, Hefei, China"
+      ],
+      "name": "Beier Zhu"
+    },
+    {
+      "affiliations": [
+        "University of Science and Technology of China, Hefei, China"
+      ],
+      "name": "Zhiyuan Han"
+    },
+    {
+      "affiliations": [
+        "Hefei University of Technology, Hefei, China"
+      ],
+      "name": "Jinpeng Hu"
+    },
+    {
+      "affiliations": [
+        "University of Science and Technology of China, Hefei, China"
+      ],
+      "name": "Xun Yang"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对多模态情感推理中单模态依赖过重和跨模态利用不足两类失衡，LAMR 在推理时按层角色分别做均衡与扩散，在三个基座上提升了识别与推理且无需再训练。",
+  "originalTitle": "Layer Roles Matter: Mitigating Modality Imbalance in Multimodal Emotion Reasoning via Adaptive Layer Profiling",
+  "pdfUrl": "https://arxiv.org/pdf/2611.11907v1.pdf",
+  "readerTitle": "层角色不同，干预也要不同：推理时重平衡多模态情感推理",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

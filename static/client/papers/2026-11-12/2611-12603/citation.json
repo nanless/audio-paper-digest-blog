@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.12603v1",
+  "arxivId": "2611.12603",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.12603v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Matteo Ciferri"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Tonio Weidler"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Matteo Ferrante"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Nicola Toschi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Elia Formisano"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.12603v1",
+  "originalTitle": "Direct Conditioning of Audio Diffusion Transformers on fMRI Reveals Cortical Contributions to Sound Reconstruction",
+  "pdfUrl": "https://arxiv.org/pdf/2611.12603v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

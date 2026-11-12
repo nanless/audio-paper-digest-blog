@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.10561v1",
+  "abstract": "Array-agnostic enhancement networks generalize across microphone geometries but produce a single channel, while binaural enhancement methods preserve interaural cues only for one fixed device geometry. We propose BAmbiDrop, a framework that extends array-agnostic enhancement to binaural reproduction without retraining. Exploiting the fact that the Ambisonics origin is an arbitrary point in space, a frozen single-channel AmbiDrop network estimates a complex mask at multiple centers across the array; these masks are fused by a complex mean into a single shared mask, applied to the microphone signals and rendered by fixed BSM filters. Across 21 free-field and rigid-sphere arrays, the fused mask improves enhancement and interaural cue reproduction simultaneously, whereas masking each microphone independently degrades the latter without a consistent gain in the former.",
+  "abstractSha256": "9df46097d9f290233c7aa9024e9e3db95aa46300c989114ac29153a6abb83c1b",
+  "arxivId": "2611.10561",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.10561v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "语音增强",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-enhancement",
+          "label": "语音增强"
+        },
+        {
+          "facet": "task",
+          "id": "task.spatial-rendering",
+          "label": "空间音频渲染"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.microphone-array",
+          "label": "麦克风阵列"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "语音增强",
+      "primaryTaskId": "task.speech-enhancement",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Michael Tatarjitzky"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Vladimir Tourbabin"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Boaz Rafaely"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对固定阵列双耳增强难泛化的问题，BAmbiDrop 把冻结的单通道 AmbiDrop 网络搬到每个麦克风对齐的 Ambisonics 原点上求掩码再平均成共享掩码，最后用固定 BSM 滤波器渲染双耳，在 21 种阵列平均上同时改善增强与空间线索，但绝对分数仍受 BSM 基准限制且依赖仿真条件。",
+  "originalTitle": "BAmbiDrop: Array-Agnostic Speech Enhancement with Zero-Shot binaural Reproduction using Multi-center Ambisonics Encoding",
+  "pdfUrl": "https://arxiv.org/pdf/2611.10561v1.pdf",
+  "readerTitle": "BAmbiDrop：不换模型如何把任意麦克风阵列变成双耳增强输出",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

@@ -1,0 +1,194 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.10162v1",
+  "abstract": "We present M5-TTS, a compact text-to-speech system supporting multilingual and Chinese multidialect synthesis, zero-shot voice cloning, speaker-specific multilingual generation, and CPU streaming. Its 50M-parameter language model, excluding the speech codec, combines a temporal backbone with a local multi-token prediction module over 16 codebooks. GRPO post-training combines global speaker-similarity and pause feedback with a token-level CER process advantage. Character-level error comparisons provide local feedback, with negative credit propagated backward within a clause and projected onto audio-token positions. M5-TTS achieves 1.37% CER on Seed-ZH and 2.91% WER on Seed-EN, corresponding to relative error reductions of 62.2% and 35.3% over MOSS-TTS-Nano with half the language-model parameters. It also achieves lower content error rates in five of six evaluated MiniMax languages, while difficult Chinese inputs remain a limitation. On four Intel Xeon Gold 6530 cores, it achieves a real-time factor of 0.653 and a warm first-chunk latency of 225ms. A 10-listener evaluation gives M5-TTS higher speaker-similarity and intelligibility ratings than MOSS-TTS-Nano, with a lower naturalness rating. We will release training, post-training, and inference code, together with voice-cloning and speaker-specific checkpoints, to support reproducible research on compact speech generation for on-device voice interaction.",
+  "abstractSha256": "b73e1358bc5d5d972eadc6b2d67ad9ef9cc37fee06071e2c1ddd028a0877a06a",
+  "arxivId": "2611.10162",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.10162v1",
+  "assessment": {
+    "documentType": "模型报告",
+    "primaryMethod": "自回归模型",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前50%",
+    "score": 7.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "task",
+          "id": "task.voice-cloning",
+          "label": "语音克隆"
+        },
+        {
+          "facet": "method",
+          "id": "method.autoregressive",
+          "label": "自回归模型"
+        },
+        {
+          "facet": "method",
+          "id": "method.reinforcement",
+          "label": "强化学习"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "自回归模型",
+      "primaryMethodId": "method.autoregressive",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Wenhao Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jingbin Hu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shengming Ling"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xiaming Ren"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Haoyu Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jinrui Liang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hanke Xie"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Qirui Zhan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Guobin Ma"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Huakang Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Chunbo Hao"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jianguo Zheng"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Wenkang Hou"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Dake Guo"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yuepeng Jiang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Linhan Ma"
+    },
+    {
+      "affiliations": [
+        "Shenzhen Pimei Technology Co., Ltd."
+      ],
+      "name": "Yunxiang Chen"
+    },
+    {
+      "affiliations": [
+        "Shenzhen Pimei Technology Co., Ltd."
+      ],
+      "name": "Houdun Liu"
+    },
+    {
+      "affiliations": [
+        "Shenzhen Pimei Technology Co., Ltd."
+      ],
+      "name": "Su Feng"
+    },
+    {
+      "affiliations": [
+        "Moonstep AI"
+      ],
+      "name": "Chuang Ding"
+    },
+    {
+      "affiliations": [
+        "WeNet Open Source Community"
+      ],
+      "name": "Pengcheng Zhu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Liumeng Xue"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Lei Xie"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "M5-TTS 用 50M 语言模型加 16 码本分层预测解决小模型多语多方言与 CPU 流式问题，在 Seed 中英上相对 MOSS-TTS-Nano 大幅降低内容错误率，但难例中文与部分说话人相似度仍有代价与局限。",
+  "originalTitle": "M5-TTS: A Mini-Scale Multilingual and Multi-Dialect Text-to-Speech Language Model with Multi-Token Prediction",
+  "pdfUrl": "https://arxiv.org/pdf/2611.10162v1.pdf",
+  "readerTitle": "小参数如何同时做好多语多方言合成与流式克隆：M5-TTS 解读",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

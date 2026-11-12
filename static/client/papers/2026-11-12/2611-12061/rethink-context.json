@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.12061v1",
+  "abstract": "We present BARS (Beat-Adaptive Rap Synthesis), a non-autoregressive rapping voice generation model based on Flow Matching, conditioned on a beat track (instrumental backing), lyrics, and a short reference voice for zero-shot timbre control. Unlike prior autoregressive rap synthesis, where rap pace and output duration are strictly determined by the beat, BARS enables independent control over the rap tempo, allowing flexible-length generation without explicit duration prediction or phoneme-level alignment. We encode lyrics using a pretrained ByT5 encoder with a lightweight Transformer adapter trained jointly with the model, without relying on speech-pretrained text encoders, enabling natural handling of non-standard orthography (e.g., slang, abbreviations) and numerals common in rap lyrics. To address alignment instabilities, such as token skipping or repetition, under strong beat conditioning, we propose Asymmetric Scaled RoPE for cross-attention, which introduces a positional structure to facilitate sequential lyric-audio alignment learning. Furthermore, the model supports partial re-generation via span masking, enabling lyric-level editing while preserving the surrounding vocal style. Experiments demonstrate that the proposed model achieves high lyric fidelity, natural rap flow that is rhythmically coherent with the beat, and robust tempo control across a wide range of rapping styles and speeds.",
+  "abstractSha256": "d1f1970a7b7ed1c603b7987c5fa699c06c866f9ced121bbc9b732e62cc1b4bdb",
+  "arxivId": "2611.12061",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.12061v1",
+  "assessment": {
+    "documentType": "模型报告",
+    "primaryMethod": "流匹配",
+    "primaryTask": "歌唱生成",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.singing",
+          "label": "歌唱生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "task",
+          "id": "task.voice-cloning",
+          "label": "语音克隆"
+        },
+        {
+          "facet": "method",
+          "id": "method.transformer",
+          "label": "Transformer"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "流匹配",
+      "primaryMethodId": "method.flow-matching",
+      "primaryTask": "歌唱生成",
+      "primaryTaskId": "task.singing",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Taemin Cho"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hector Martel"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Enyan Koh"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "BARS 用非自回归流匹配从伴奏、歌词和 3 秒参考音色生成说唱人声，靠轻量歌词适配器和非对称位置偏置解决强伴奏条件下的漏词重复，并在匹配与错配语速下用词错误率和主观听感验证了歌词保真与节奏可控性。",
+  "originalTitle": "BARS: Beat-Adaptive Rap Synthesis via Flow Matching",
+  "pdfUrl": "https://arxiv.org/pdf/2611.12061v1.pdf",
+  "readerTitle": "BARS：能自己变速、跟着伴奏说的说唱合成",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

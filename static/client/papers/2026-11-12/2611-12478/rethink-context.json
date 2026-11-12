@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.12478v1",
+  "abstract": "Answer accuracy alone does not distinguish failures in acoustic perception, rule knowledge, and rule application. AuDiR (Audio Diagnostic Reasoning) examines these distinctions through controlled input interventions. Each item contains an audio clip, a multiple-choice question, a task-general rule, and a textual description of the acoustic observations needed to answer. Three conditions progressively supply the rule and observations; a fourth removes the audio while retaining the question and rule. The first correct diagnostic condition assigns an operational response label, without identifying a unique internal cause. The current benchmark contains 201 items in 18 families drawn from 9 sources, with answer references documented separately from percept extraction. In a preliminary evaluation of Gemini-3.8-flash, accuracy is 29.3% without supplied information, 31.3% with the rule, and 98.5% with the observations also supplied. No-audio accuracy is 23.9%, with a confidence interval containing the 25.0% chance rate. A family-level knowledge probe associates incomplete rule recall with larger gains from rule provision. These results show the benefit of supplying acoustic observations as text, while incomplete validation, possible recognition shortcuts, and non-monotonic responses limit stronger failure-attribution claims.",
+  "abstractSha256": "93774dc1fa5375ac74e7289072e05ef596fdd6f038eff653d61538896094a7d5",
+  "arxivId": "2611.12478",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.12478v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "音频推理",
+    "rankBucket": "前50%",
+    "score": 5.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-reasoning",
+          "label": "音频推理"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-question-answering",
+          "label": "音频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "音频推理",
+      "primaryTaskId": "task.audio-reasoning",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Chengwei Wei"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yi Ma"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Nancy F. Chen"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "AuDiR 把每道音频推理题拆成可听线索、可复用规则和应用问题，用逐步补信息和去掉音频的对照来区分回答模式，在 201 题上发现给 Gemini-3.8-flash 补上听觉描述文本后准确率大幅上升，但验证不完整与非单调回答限制了更强的归因。",
+  "originalTitle": "AuDiR: Diagnosing Audio Reasoning with Rule and Percept Interventions",
+  "pdfUrl": "https://arxiv.org/pdf/2611.12478v1.pdf",
+  "readerTitle": "只给答案分不清哪里错：AuDiR 用加规则和加听觉描述来定位音频推理失败",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

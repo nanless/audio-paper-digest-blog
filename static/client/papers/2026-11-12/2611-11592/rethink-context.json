@@ -1,0 +1,102 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.11592v1",
+  "abstract": "Recent progress on contrastive audio-language models can be attributed mainly to the scale and quality of their training data. Larger training datasets expose models to a broader range of sounds and corresponding audio captions. To exploit this, we collect 1.48 billion audio samples from academic datasets, internet datasets, web collections, Common Crawl, and YouTube, and process them with a multi-stage curation pipeline. Furthermore, we generate short and long captions for samples in our corpus that lack them. We use our dataset to study the scaling behavior of contrastive audio-language models based on the NaFlex architecture for the audio encoder. Our experiments identify trade-offs between model size and training data for a given compute budget. Moreover, our resulting models, CLAP2, outperform prior audio-text models of comparable size on the MAEB and HEAR benchmarks. We release our dataset, captions, model checkpoints, and code.",
+  "abstractSha256": "e3b671fe566fff42074d79e0dc11a24cabdf46e178d70151f6419f10633d7c5b",
+  "arxivId": "2611.11592",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.11592v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "对比学习",
+    "primaryTask": "音频检索",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-retrieval",
+          "label": "音频检索"
+        },
+        {
+          "facet": "method",
+          "id": "method.contrastive",
+          "label": "对比学习"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.evaluation",
+          "label": "模型评估"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "对比学习",
+      "primaryMethodId": "method.contrastive",
+      "primaryTask": "音频检索",
+      "primaryTaskId": "task.audio-retrieval",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Jülich Supercomputing Center (JSC), Forschungszentrum Jülich (FZJ)",
+        "LAION"
+      ],
+      "name": "Gijs Wijngaard"
+    },
+    {
+      "affiliations": [
+        "Technical University of Munich, MCML"
+      ],
+      "name": "Felix Förster"
+    },
+    {
+      "affiliations": [
+        "LAION"
+      ],
+      "name": "Ross Wightman"
+    },
+    {
+      "affiliations": [
+        "Jülich Supercomputing Center (JSC), Forschungszentrum Jülich (FZJ)",
+        "LAION"
+      ],
+      "name": "Marianna Nezhurina"
+    },
+    {
+      "affiliations": [
+        "LAION"
+      ],
+      "name": "Christoph Schuhmann"
+    },
+    {
+      "affiliations": [
+        "Jülich Supercomputing Center (JSC), Forschungszentrum Jülich (FZJ)",
+        "LAION"
+      ],
+      "name": "Jenia Jitsev"
+    },
+    {
+      "affiliations": [
+        "Technical University of Munich, MCML",
+        "University of Tübingen, Tübingen AI Center"
+      ],
+      "name": "A. Sophia Koepke"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文要解决音频文本对比学习缺大规模公开数据的问题，用 1.48B 原始音频经去重筛选加字幕生成得到 365M 对并训练 27M 到 340M 的 CLAP2，在 MAEB-30 上随计算量呈约每翻倍涨 1.8 点的趋势，但长音频训练更贵而效果更差。",
+  "originalTitle": "LAION-Audio-XL: A Web-Scale Corpus and Scaling Studies for Contrastive Language-Audio Pretraining",
+  "pdfUrl": "https://arxiv.org/pdf/2611.11592v1.pdf",
+  "readerTitle": "用三点六五亿条音频文本对做对比学习：LAION-Audio-XL 如何搭数据与测缩放",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

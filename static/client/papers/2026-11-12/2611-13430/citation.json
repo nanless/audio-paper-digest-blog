@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.13430v1",
+  "arxivId": "2611.13430",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.13430v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Signal and Image Processing Institute, Ming Hsieh Department of Electrical and Computer Engineering, University of Southern California, Los Angeles, California 90089, USA"
+      ],
+      "name": "Zhuoyan Tao"
+    },
+    {
+      "affiliations": [
+        "Signal and Image Processing Institute, Ming Hsieh Department of Electrical and Computer Engineering, University of Southern California, Los Angeles, California 90089, USA"
+      ],
+      "name": "Aditya Kommineni"
+    },
+    {
+      "affiliations": [
+        "Signal and Image Processing Institute, Ming Hsieh Department of Electrical and Computer Engineering, University of Southern California, Los Angeles, California 90089, USA"
+      ],
+      "name": "Shrikanth Narayanan"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.13430v1",
+  "originalTitle": "Off-target posterior mass: A training-free diagnostic for fine-tuning spoken language diarization probes",
+  "pdfUrl": "https://arxiv.org/pdf/2611.13430v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

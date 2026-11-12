@@ -1,0 +1,86 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.11465v1",
+  "abstract": "Audio deepfake detectors trained with known synthesis attacks can learn generator-specific shortcuts that fail as synthesis systems and acoustic conditions evolve. We investigate an attack-free alternative: a normality model trained exclusively on bona fide speech, which scores synthetic audio by its deviation from authentic representations. We propose MLN-WavLM, a method that applies shrinkage-Mahalanobis modeling to pooled hidden states from a frozen large-scale, pre-trained speech processing WavLM Base+ architecture. Evaluated on ASVspoof 2019 LA, our best attack-free variant achieves an 8.45\\% Equal Error Rate (EER), closely tracking a fully supervised WavLM-HM-Conformer baseline (7.86%). However, when subjected to the ASVspoof 2021 DF domain shift, performance drops to 22.12% EER, exposing vulnerabilities in the bona-fide-calibrated operating point. Layer-wise analysis reveals that early WavLM representations dominate the ensemble. To test real-world viability, we simulated deployment streams using unlabeled threshold adaptation. While robust median/MAD recalibration easily handles in-domain contamination up to 10%, recalibrating under the 2021 DF domain shift triggers a total collapse of low-FPR recall. We conclude that while frozen source-domain normality can effectively rank deepfakes, it does not yield a stable open-world decision rule, and downstream threshold adaptation cannot rescue upstream ranking degradation.",
+  "abstractSha256": "598bc93103fd257216938abe1039ab864f60b40fcb02d18cfff2a8b0cc12dbf1",
+  "arxivId": "2611.11465",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.11465v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "统计分析",
+    "primaryTask": "音频深度伪造检测",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-deepfake",
+          "label": "音频深度伪造检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "统计分析",
+      "primaryMethodId": "method.statistical-analysis",
+      "primaryTask": "音频深度伪造检测",
+      "primaryTaskId": "task.audio-deepfake",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Daniel Niekurzak"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Daniel Kozuch"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Weronika Folwarska"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Khan Muhammad"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Rafał Scherer"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文只用真人语音在冻结 WavLM 多层表示上拟合正态分布并以偏离程度打分，在源域排序接近有监督对照，但在 2021 DF 复合域移下排序与可用判决阈值同时失效，且无标签阈值重估无法修复排序本身。",
+  "originalTitle": "When Normality Shifts: Multi-Level WavLM Modeling for Open-World Audio Deepfake Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2611.11465v1.pdf",
+  "readerTitle": "只见过真话的检测器：多层 WavLM 正态建模与开放世界音频伪造检测",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

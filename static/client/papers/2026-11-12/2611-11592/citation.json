@@ -1,0 +1,60 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.11592v1",
+  "arxivId": "2611.11592",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.11592v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Jülich Supercomputing Center (JSC), Forschungszentrum Jülich (FZJ)",
+        "LAION"
+      ],
+      "name": "Gijs Wijngaard"
+    },
+    {
+      "affiliations": [
+        "Technical University of Munich, MCML"
+      ],
+      "name": "Felix Förster"
+    },
+    {
+      "affiliations": [
+        "LAION"
+      ],
+      "name": "Ross Wightman"
+    },
+    {
+      "affiliations": [
+        "Jülich Supercomputing Center (JSC), Forschungszentrum Jülich (FZJ)",
+        "LAION"
+      ],
+      "name": "Marianna Nezhurina"
+    },
+    {
+      "affiliations": [
+        "LAION"
+      ],
+      "name": "Christoph Schuhmann"
+    },
+    {
+      "affiliations": [
+        "Jülich Supercomputing Center (JSC), Forschungszentrum Jülich (FZJ)",
+        "LAION"
+      ],
+      "name": "Jenia Jitsev"
+    },
+    {
+      "affiliations": [
+        "Technical University of Munich, MCML",
+        "University of Tübingen, Tübingen AI Center"
+      ],
+      "name": "A. Sophia Koepke"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.11592v1",
+  "originalTitle": "LAION-Audio-XL: A Web-Scale Corpus and Scaling Studies for Contrastive Language-Audio Pretraining",
+  "pdfUrl": "https://arxiv.org/pdf/2611.11592v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

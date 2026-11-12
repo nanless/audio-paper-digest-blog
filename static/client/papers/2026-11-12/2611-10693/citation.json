@@ -1,0 +1,86 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.10693v2",
+  "arxivId": "2611.10693",
+  "arxivVersion": 2,
+  "arxivVersionedId": "2611.10693v2",
+  "authors": [
+    {
+      "affiliations": [
+        "Shanghai Artificial Intelligence Laboratory",
+        "Harbin Institute of Technology"
+      ],
+      "name": "Liwei Liu"
+    },
+    {
+      "affiliations": [
+        "Shanghai Artificial Intelligence Laboratory",
+        "University of Science and Technology of China"
+      ],
+      "name": "Jun Tao"
+    },
+    {
+      "affiliations": [
+        "Shanghai Artificial Intelligence Laboratory",
+        "Fudan University"
+      ],
+      "name": "Xingyuan Li"
+    },
+    {
+      "affiliations": [
+        "Shanghai Artificial Intelligence Laboratory"
+      ],
+      "name": "Xuenan Xu"
+    },
+    {
+      "affiliations": [
+        "Shanghai Artificial Intelligence Laboratory",
+        "Tsinghua University"
+      ],
+      "name": "Chen Zhang"
+    },
+    {
+      "affiliations": [
+        "Shanghai Artificial Intelligence Laboratory",
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Junyi Wang"
+    },
+    {
+      "affiliations": [
+        "Shanghai Artificial Intelligence Laboratory",
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Boya Zhang"
+    },
+    {
+      "affiliations": [
+        "University of Cambridge"
+      ],
+      "name": "Xiaoyu Yang"
+    },
+    {
+      "affiliations": [
+        "University of Science and Technology of China"
+      ],
+      "name": "Zhen-Hua Ling"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Wen Wu"
+    },
+    {
+      "affiliations": [
+        "Shanghai Artificial Intelligence Laboratory"
+      ],
+      "name": "Chao Zhang"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.10693v2",
+  "originalTitle": "Machine Hearing: Can Audio LLMs Generalize Beyond Human Auditory Perception?",
+  "pdfUrl": "https://arxiv.org/pdf/2611.10693v2.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

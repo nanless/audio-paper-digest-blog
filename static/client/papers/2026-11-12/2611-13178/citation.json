@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.13178v1",
+  "arxivId": "2611.13178",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.13178v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Anoubhav Agarwaal"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Sukesh Perla"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Karthikeyan Mohanraj"
+    },
+    {
+      "affiliations": [
+        "Anoki Inc."
+      ],
+      "name": "Susmita Ghose"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.13178v1",
+  "originalTitle": "Multimodal Judges Flag, Humans Decide: A Review-and-Edit Framework for AI-Generated Product Video Ads",
+  "pdfUrl": "https://arxiv.org/pdf/2611.13178v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

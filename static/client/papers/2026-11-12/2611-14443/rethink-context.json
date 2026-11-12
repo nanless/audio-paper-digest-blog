@@ -1,0 +1,86 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.14443v1",
+  "abstract": "Automatic Music Transcription (AMT) relies on paired audio--MIDI datasets, implicitly assuming near-perfect temporal alignment. However, widely used piano datasets have been shown to contain alignment errors that may bias model evaluation and training. We propose a framework for evaluating audio--MIDI alignment scoring methods through controlled temporal, pitch, and structural MIDI corruptions. We also introduce STI, a scoring method built on AMT models, and benchmark it against existing alignment scoring approaches. Our results show that STI, together with methods based on CENS and spectrograms, achieves the strongest overall performance, with STI exhibiting the highest sensitivity to fine-grained temporal misalignments, the main alignment error in AMT datasets. We then apply the best-performing methods to widely used piano AMT datasets and identify trends in their relative alignment quality. These results support more informed dataset curation, model training, and AMT evaluation.",
+  "abstractSha256": "a10a3136e1379a4973be0181e59ee0fe7cc408c017ad41838445a6c969754e00",
+  "arxivId": "2611.14443",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.14443v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "乐谱对齐",
+    "rankBucket": "前50%",
+    "score": 5.7,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.score-alignment",
+          "label": "乐谱对齐"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "乐谱对齐",
+      "primaryTaskId": "task.score-alignment",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Lucas de Souza Brandão"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Lucas Gris"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Joaquim Cavalcante"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Chukwuemeka Nkama"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Andrea Poltronieri"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文针对钢琴自动转谱数据集默认音频与 MIDI 完全对齐但实际存在错位的问题，用三种可控 MIDI 破坏和四个行为指标比较多种打分方法，并提出结合转谱与音高约束 IOI 的 STI 方法，在细粒度时值错位上最敏感，再用优选方法给出常用数据集相对对齐质量的趋势。",
+  "originalTitle": "Assessing Alignment in Automatic Piano Transcription Datasets: A Benchmark for Scoring Methods",
+  "pdfUrl": "https://arxiv.org/pdf/2611.14443v1.pdf",
+  "readerTitle": "钢琴转谱数据集里的音频与 MIDI 到底对齐得怎么样：一种给对齐打分方法的评测框架",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

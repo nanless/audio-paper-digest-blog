@@ -1,0 +1,80 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.13555v1",
+  "abstract": "Musical AI systems behave in non-linear, dynamic ways that exceed the tool-oriented framings inherited from earlier instrument design. Existing frames of control and ensemble interaction do not articulate the entangled, relational agency that emerges when performers work with AI feedback instruments over time. We examine a duet practice with two AI-enabled feedback instruments, Sù and Agentier, in which feedback operates at the inner level of the AI's recurrent processes and the outer loop of musical interaction between performer, instrument, and co-performer. Our work draws on agential realism and a diffractive dialogue methodology to read our independent reflections through one another across five performances, examining how agency is enacted between performers and AI instruments. We find that control and agency are relational and shift across performances; musical textures enact feedback moments of control with performers; reaching a productive feedback environment is itself a shared exploratory act; and performers maintain their instruments through funnelling and injection, developing the skill of navigating agency along a continuous spectrum. Feedback musicianship with AI instruments demands navigation of this relational agency, displacing the leading-versus-responding binary that initially framed our reflections. This work contributes a materially-grounded vocabulary for AI feedback musicianship and a model of human-AI creative collaboration in which mutual agency is worked for through practice rather than designed in.",
+  "abstractSha256": "ec0872b474db29fcd97947fa00ebabd317ad46d3b7f930a95c40284dd86af631",
+  "arxivId": "2611.13555",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.13555v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "案例研究与实践报告",
+    "primaryTask": "数字乐器接口设计",
+    "rankBucket": "后50%",
+    "score": 5.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.musical-interface-design",
+          "label": "数字乐器接口设计"
+        },
+        {
+          "facet": "method",
+          "id": "method.case-study",
+          "label": "案例研究与实践报告"
+        },
+        {
+          "facet": "task",
+          "id": "task.music-generation",
+          "label": "音乐生成"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "案例研究与实践报告",
+      "primaryMethodId": "method.case-study",
+      "primaryTask": "数字乐器接口设计",
+      "primaryTaskId": "task.musical-interface-design",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "The Australian National University, Canberra, ACT, Australia"
+      ],
+      "name": "Yichen Wang"
+    },
+    {
+      "affiliations": [
+        "The Australian National University, Canberra, ACT, Australia"
+      ],
+      "name": "Charles Patrick Martin"
+    },
+    {
+      "affiliations": [
+        "Dolby Laboratories, Sydney, NSW, Australia"
+      ],
+      "name": "David Gunawan"
+    },
+    {
+      "affiliations": [
+        "Dolby Laboratories, Sydney, NSW, Australia"
+      ],
+      "name": "David Cooper"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "本文用两位演奏者、两件 AI 反馈乐器、五场二重奏加对谈的方法，说明演奏中的控制感是随乐器状态、同伴和经验变化的关系性产物，代价是结论只在该特定实践内成立且没有可迁移的量化指标。",
+  "originalTitle": "Navigating relational agency in AI feedback musicianship: a diffractive dialogue",
+  "pdfUrl": "https://arxiv.org/pdf/2611.13555v1.pdf",
+  "readerTitle": "与 AI 反馈乐器一起演奏：关系中的能动性如何被走出来",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

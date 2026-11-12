@@ -1,0 +1,80 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.14003v1",
+  "abstract": "Microphones let an autonomous vehicle sense into areas its cameras and LiDAR cannot see, by picking up the sound that other traffic participants emit. Locating those sources and fusing them with the visual perception requires the microphone array to be calibrated and registered relative to the vehicle's other sensors. Existing calibration methods assume small, unobstructed indoor rigs, whereas a vehicle body casts an acoustic shadow that straight-line propagation cannot represent, and to our knowledge no calibration of an array distributed around a vehicle has been reported. We propose a pipeline that uses a balloon burst as a single cross-modal target, which the LiDAR locates in metric coordinates, every microphone hears as a sharp onset and a camera times. Each observation is weighted by its own timing variance, which discounts shadowed arrivals instead of discarding them and needs no model of the vehicle. On a full-size vehicle with eight microphones over a 4.9 m aperture, the held-out range residual of 6.37 cm approaches the 6.07 cm floor set by the onset timing noise, and the calibrated array tracks a moving source to within a few degrees of the vehicle's own LiDAR. A dozen bursts spread around the vehicle suffice, and spreading them matters more than adding more.",
+  "abstractSha256": "7bc3bfcc77c60375edf736f8070ce3cf2378e92623d43454826d94177adc7b3a",
+  "arxivId": "2611.14003",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.14003v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "声学系统参数估计",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.acoustic-parameter-estimation",
+          "label": "声学系统参数估计"
+        },
+        {
+          "facet": "task",
+          "id": "task.localization",
+          "label": "声源定位"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.microphone-array",
+          "label": "麦克风阵列"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "声学系统参数估计",
+      "primaryTaskId": "task.acoustic-parameter-estimation",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Marvin Seegert"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Richard Taupitz"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Korbinian Moller"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Johannes Betz"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文用气球爆裂同时做声学脉冲和激光雷达可见目标，在整车 8 麦克风 4.9 米孔径上把保持集外距离残差做到 6.37 厘米，并用移动声源验证方位角中值误差 1.9 度，代价是需要十几个环绕车辆分布的气球且垂直方向约束较弱。",
+  "originalTitle": "Spatio-Temporal Calibration of a Vehicle-Mounted Microphone Array for Autonomous Driving",
+  "pdfUrl": "https://arxiv.org/pdf/2611.14003v1.pdf",
+  "readerTitle": "装在车身周围的麦克风阵列如何用气球爆裂声标定空间和时间",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

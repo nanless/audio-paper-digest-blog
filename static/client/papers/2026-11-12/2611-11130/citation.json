@@ -1,0 +1,70 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.11130v1",
+  "arxivId": "2611.11130",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.11130v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Korea Advanced Institute of Science and Technology (KAIST)",
+        "Daejeon, Republic of Korea"
+      ],
+      "name": "Dongheon Lee"
+    },
+    {
+      "affiliations": [
+        "Meta Reality Labs Research",
+        "Cambridge, Cambridgeshire, UKRedmond, WA, USA,"
+      ],
+      "name": "Ashutosh Pandey"
+    },
+    {
+      "affiliations": [
+        "Meta Reality Labs Research",
+        "Cambridge, Cambridgeshire, UKRedmond, WA, USA,"
+      ],
+      "name": "Sanjeel Parekh"
+    },
+    {
+      "affiliations": [
+        "Meta Reality Labs Research",
+        "Cambridge, Cambridgeshire, UKRedmond, WA, USA,"
+      ],
+      "name": "Zhaoheng Ni"
+    },
+    {
+      "affiliations": [
+        "Meta Reality Labs Research",
+        "Cambridge, Cambridgeshire, UKRedmond, WA, USA,"
+      ],
+      "name": "Daniel Wong"
+    },
+    {
+      "affiliations": [
+        "Meta Reality Labs Research",
+        "Cambridge, Cambridgeshire, UKRedmond, WA, USA,"
+      ],
+      "name": "Jacob Donley"
+    },
+    {
+      "affiliations": [
+        "Meta Reality Labs Research",
+        "Cambridge, Cambridgeshire, UKRedmond, WA, USA,"
+      ],
+      "name": "Buye Xu"
+    },
+    {
+      "affiliations": [
+        "Meta Reality Labs Research",
+        "Cambridge, Cambridgeshire, UKRedmond, WA, USA,"
+      ],
+      "name": "Juan Azcarreta"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.11130v1",
+  "originalTitle": "Virtual-Flow: Virtual Microphone-based Speech Enhancement via Semi-supervised Flow Matching",
+  "pdfUrl": "https://arxiv.org/pdf/2611.11130v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.12351v1",
+  "arxivId": "2611.12351",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.12351v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xinrui Zu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Mark Hoogendoorn"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kevin Sebastian Luck"
+    },
+    {
+      "affiliations": [
+        "Vrije Universiteit Amsterdam, the Netherlands"
+      ],
+      "name": "Shujian Yu"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.12351v1",
+  "originalTitle": "UniOMA: Unified Optimal-Transport Multi-Modal Structural Alignment for Robot Perception",
+  "pdfUrl": "https://arxiv.org/pdf/2611.12351v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

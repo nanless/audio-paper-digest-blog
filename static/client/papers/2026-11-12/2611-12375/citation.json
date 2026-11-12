@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.12375v1",
+  "arxivId": "2611.12375",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.12375v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Marco Pasini"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Javier Nistal"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Cyran Aouameur"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Stefan Lattner"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "George Fazekas"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.12375v1",
+  "originalTitle": "AudioCodex: Streaming Autoencoders for Live Audio",
+  "pdfUrl": "https://arxiv.org/pdf/2611.12375v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

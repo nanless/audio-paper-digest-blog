@@ -1,0 +1,69 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.10245v1",
+  "abstract": "Computer vision (CV) for policing has centred on recognising objects such as seized weapons, while body-worn video (BWV) is still reviewed by people, with existing AI tools using only its audio. Multimodal video AI could make BWV review faster and cheaper. At the object level, we present the KnifeHunter dataset, developed with UK law enforcement, with over 25,000 images of 543 knife classes and a protocol reflecting investigative conditions, and KHNet, a retrieval architecture fusing local and global features, which with about 125,000 distractor images attains 85.7% and 63.4% mean Average Precision (mAP) on the medium and hard protocols. At the event level, we present an evaluation protocol for video understanding pipelines, which describe a video as events and a transcript, that scores transcription, speaker attribution, event detection, temporal localisation and unsupported events. Whether each event is supported by the recording is labelled by a judge validated against blinded human labels. We apply it to complete pipelines, three 2026 omni-modal models and our hybrid NarrativeBridge-PAL-GPT-5 pipeline, on UKBWV-27, a pilot stress-test set of 27 publicly released UK BWV recordings (118 minutes). On this set the hybrid pipeline leads on five of six measures, yet it leaves 13.6% of predicted events unsupported and misattributes 27.7% of utterances, and every pipeline degrades on recordings from edited releases, long recordings and noisy audio. We propose readiness levels separating assistive tasks from those requiring verification of every output.",
+  "abstractSha256": "0d23b335b9f024340d7d6ef6377e2480d003c4fd16dee850dc19e9c5f29c4508",
+  "arxivId": "2611.10245",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.10245v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "评测协议",
+    "primaryTask": "音视频理解",
+    "rankBucket": "前50%",
+    "score": 5.9,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-understanding",
+          "label": "音视频理解"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "评测协议",
+      "primaryMethodId": "method.evaluation-protocol",
+      "primaryTask": "音视频理解",
+      "primaryTaskId": "task.av-understanding",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Centre for Vision, Speech and Signal Processing, University of Surrey, Guildford, United Kingdom",
+        "AI Fellow, Incubator for AI (i.AI), Department for Digital, Culture, Media and Sport, London, United Kingdom"
+      ],
+      "name": "Armin Mustafa"
+    },
+    {
+      "affiliations": [
+        "Centre for Vision, Speech and Signal Processing, University of Surrey, Guildford, United Kingdom"
+      ],
+      "name": "Syed Sameed Husain"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文用已部署的刀具细粒度检索对照实验性的执法记录仪视频理解流水线，说明前者在受控图库上可用平均精度衡量，后者在 27 段公开视频上仍有约一成多事件缺乏录像支撑且说话人归属错误率高，因而只能做辅助分流而不能替代人工复核。",
+  "originalTitle": "From Weapons to Events: Evaluating Evidential Support in Multimodal AI for Policing",
+  "pdfUrl": "https://arxiv.org/pdf/2611.10245v1.pdf",
+  "readerTitle": "从查刀到看执法记录仪：多模态警务 AI 的证据支撑评估",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

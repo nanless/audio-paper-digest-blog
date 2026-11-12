@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.13814v1",
+  "abstract": "Client-side automatic speech recognition (ASR) across Indic and Classical scripts eliminates cloud transcription costs, network tail latency, and server-side audio retention, yet neural exports face four systems bottlenecks in browsers and mobile runtimes: (1) monolithic per-language Conformer checkpoints require ~177 MiB per script (> 2.1 GiB across 12 scripts), exhausting CacheStorage quotas; (2) static relative positional encoding tables embed 10.2-20.5 MB of FP32 constants while 1x1 Conv1d layers trigger slow or unsupported ConvInteger kernels in WebAssembly SIMD; (3) sliding-window CTC flickers on boundary tokens; and (4) mobile WebAudio pipelines suffer 44.1/48 kHz sample-rate mismatches and silent AudioWorklet stalls under iOS WKWebView.   We present Swanada, an open-source 16 kHz streaming ASR system spanning Classical Sanskrit, Indian English, and ten Indian languages (sa, en, hi, kn, mr, bn, ta, te, ml, gu, pa, or) across browser WebAssembly, Node.js, and Python. Swanada pairs capability-routed shared INT8 Conformer encoders (a 17-layer 177.38 MiB Studio tier at $d = 512$ for desktop/servers and a distilled 14-layer 25.35 MiB Mobile tier at $d = 256$ for phones) with twelve hot-swappable 515.0 KiB native-script linear CTC heads ($257 \\times 512$), cutting 12-language storage by $11.6\\times$ (183.4 MiB) and $67.8\\times$ (31.39 MiB; 25.85 MiB first load). Runtime protobuf tail surgery exposes the shared representation in $< 2$ ms, while dynamic positional synthesis, MatMul pointwise convolutions, and post-quantization QInt8 head calibration preserve sub-30 MB accuracy. Across $N = 480$ held-out and $N = 1,280$ open public test clips (FLEURS, LibriSpeech, GLOBE, AMI, wild Sanskrit), Swanada achieves 5.43% held-out and 8.87% 12-language open CER on Studio (18.56% and 19.23% on Mobile) at $0.0097\\times$-$0.0264\\times$ RTF, with 30.6 ms median TTFT and 0.00% committed-prefix churn.",
+  "abstractSha256": "8a9794dfb4f9b881d1a0174c8fe6d945eff81f19927e6f17e41b58ca58bf991d",
+  "arxivId": "2611.13814",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.13814v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "知识蒸馏",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        },
+        {
+          "facet": "method",
+          "id": "method.quantization",
+          "label": "模型量化"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "知识蒸馏",
+      "primaryMethodId": "method.distillation",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hemanth HM"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "Swanada 用一个共享 Conformer 编码器加十二个可热切换的小输出头解决多语模型存不下的问题，再用蒸馏小模型和稳定的流式显示在手机浏览器里做实时识别，Studio 版本在干净集上字符错误率 5.43%、开放集 8.87%，代价是小模型在混响和多人重叠时误差明显上升。",
+  "originalTitle": "Swanada: Split-Encoder Capability-Routed Conformer CTC and Sub-30 MB On-Device Speech Recognition Across Twelve Scripts",
+  "pdfUrl": "https://arxiv.org/pdf/2611.13814v1.pdf",
+  "readerTitle": "十二种文字的浏览器端语音识别：Swanada 如何拆开编码器与输出头",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

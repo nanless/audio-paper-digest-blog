@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.13845v1",
+  "arxivId": "2611.13845",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.13845v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Sezgin Saygili"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Emre Kaplaner"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Oncel Ozgul"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Fikri San Koktas"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.13845v1",
+  "originalTitle": "Alania-2: Turkish text-to-speech with instant and fine-tuned voice cloning",
+  "pdfUrl": "https://arxiv.org/pdf/2611.13845v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

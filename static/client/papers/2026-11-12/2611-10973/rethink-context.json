@@ -1,0 +1,63 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.10973v1",
+  "abstract": "Patchbay is a design for turning the data that an ADS-B receiver collects into sound by wiring typed blocks together. ADS-B reports are the position and altitude messages that aircraft broadcast and that a small ground receiver can collect. We first describe what such a receiver reports: signals that differ in shape (continuous, stepped, circular, categorical), in resolution, in who produces them, and in how long they stay put, which runs from about ten seconds to the whole time an aircraft is in view. From this we derive a small model. Four kinds of connection carry an aircraft set, a value, an event or audio, and 27 blocks select aircraft, read fields, decide when a note starts, shape values and make sound. One of these blocks makes the receiver act as a radar: scanning by bearing it is a line that rotates about the receiver, and scanning by range it is a ring that grows from the centre or shrinks inward. Each aircraft sounds at the moment the scan reaches it, and the scan's period is set in bars of a beat clock. The model does not depend on a browser. Our reference implementation is a browser editor, contained in one HTML file, that replays two recorded captures and records both an audio take and a MIDI take, a file of the notes played rather than of the sound. We say what is not built and place the work beside the closest systems we found, among them a radar-sweep sequencer for tangible objects from 2006 and a range-ring sonification of ADS-B aircraft published in 2026. Sweeps that trigger sound, and typed connections, both exist in earlier systems. To our knowledge, none of the sources we reached carries the aircraft in view, with every field attached, as one kind of connection in an editor.",
+  "abstractSha256": "45045edfdf3f7606d19e0157d612284157a7bb1457719a342704bb5a9a7ae97d",
+  "arxivId": "2611.10973",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.10973v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "规则与词典方法",
+    "primaryTask": "数据声化",
+    "rankBucket": "后50%",
+    "score": 5.4,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.sonification",
+          "label": "数据声化"
+        },
+        {
+          "facet": "method",
+          "id": "method.rule-based",
+          "label": "规则与词典方法"
+        },
+        {
+          "facet": "task",
+          "id": "task.music-generation",
+          "label": "音乐生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "规则与词典方法",
+      "primaryMethodId": "method.rule-based",
+      "primaryTask": "数据声化",
+      "primaryTaskId": "task.sonification",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Independent Researcher",
+        "Sector Labs"
+      ],
+      "name": "Arquimedes Canedo"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文把 ADS-B 接收机看到的飞机集合做成可接线的声音材料，用四种连线和 27 个模块组织选飞机、取数值、定发声时刻与合成，再用方位或距离扫描决定何时发声，并以两个新泽西录制片段和飞行高度层实例验证映射前提，代价是只回放录制数据且只由作者试听判断。",
+  "originalTitle": "Patchbay: a block model for the sonification of ADS-B aircraft data",
+  "pdfUrl": "https://arxiv.org/pdf/2611.10973v1.pdf",
+  "readerTitle": "把飞机广播变成音乐：Patchbay 如何接线、扫描与发声",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

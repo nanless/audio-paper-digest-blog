@@ -1,0 +1,121 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.11125v1",
+  "abstract": "Describing hours of audio requires accurate event timing and sustained descriptive detail throughout the recording. We present LongCap, a framework for timestamped audio captioning (TAC), with the human-annotated LongCapBench and three diarization-inspired metrics: Timeline Error Rate (TER), Granularity Error Rate (GER), and Caption Similarity (tcpCapSim). LongCap interleaves audio chunks with structured event captions, using relative timestamps and retained context to support length extrapolation within a 1M-token inference context window. Event-level reannotation restores caption detail, while systematic studies examine model scaling, dependency supervision, and self-distillation. LongCap-Diar achieves strong benchmark results and extrapolates to 16 hours of concatenated audio despite training on recordings no longer than 40 minutes. Our TAC models are competitive with Qwen3.5-Omni-Plus on short clips, outperform evaluated baselines in caption similarity and timeline accuracy in segment-level comparisons on LongCapBench-TAC-Long, and caption full recordings approaching two hours. On LongCapBench-TAC, 9B and 35B-A3B offer favorable size-performance tradeoffs, while 122B-A10B substantially improves event-dependency recovery. These findings support long-horizon general audio understanding and provide a foundation for always-on voice agents.",
+  "abstractSha256": "3cf8ee5f11408bd6c3ce4b878e6fb77cd5c0d3b8d4222c7af0d300f199a19ddd",
+  "arxivId": "2611.11125",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.11125v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "自回归模型",
+    "primaryTask": "音频字幕生成",
+    "rankBucket": "前50%",
+    "score": 7.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-captioning",
+          "label": "音频字幕生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.autoregressive",
+          "label": "自回归模型"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.long-audio",
+          "label": "长音频处理"
+        },
+        {
+          "facet": "task",
+          "id": "task.diarization",
+          "label": "说话人分离标注"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "自回归模型",
+      "primaryMethodId": "method.autoregressive",
+      "primaryTask": "音频字幕生成",
+      "primaryTaskId": "task.audio-captioning",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jinchuan Tian"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Sen Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Wenbin Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Chao Weng"
+    },
+    {
+      "affiliations": [
+        "Independent ResearcherEqual contribution Project lead"
+      ],
+      "name": "Zhengwei Huang"
+    },
+    {
+      "affiliations": [
+        "Independent ResearcherEqual contribution Project lead"
+      ],
+      "name": "Jiatong Shi"
+    },
+    {
+      "affiliations": [
+        "Independent ResearcherEqual contribution Project lead"
+      ],
+      "name": "Yichen Lu"
+    },
+    {
+      "affiliations": [
+        "Language Technologies Institute, Carnegie Mellon University"
+      ],
+      "name": "Haoran Wang"
+    },
+    {
+      "affiliations": [
+        "Language Technologies Institute, Carnegie Mellon University"
+      ],
+      "name": "Shinji Watanabe"
+    },
+    {
+      "affiliations": [
+        "Independent ResearcherEqual contribution Project lead"
+      ],
+      "name": "Cong Zhou"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文把长录音切块并交错输出带起止时间的结构化事件描述，用相对时间和保留上下文支撑长度外推，在接近两小时的人工基准上验证时间线与描述质量，并发现事件依赖需要更大模型。",
+  "originalTitle": "LongCap: Hour-Scale Timestamped Audio Captioning via Chunk-wise Processing",
+  "pdfUrl": "https://arxiv.org/pdf/2611.11125v1.pdf",
+  "readerTitle": "LongCap：用分块交错生成做小时级带时间戳音频描述",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

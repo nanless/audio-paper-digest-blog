@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.11179v1",
+  "abstract": "Text-to-speech systems built from a language model and a flow-matching mel decoder now run the decoder with two to four Euler steps instead of the official ten or more. At two steps the word error rate (WER) is unchanged, but speaker similarity (SIM) drops by one to six points. This paper shows that most of this loss comes from classifier-free guidance on the first step. At pure noise the network can only return the conditional mean, so guidance shifts every trajectory by nearly the same vector. Later steps do not remove this shift, and its size grows with the length of the first step, so it is negligible with ten or more steps and accounts for most of the loss with two. Two training-free samplers are derived from this analysis. First-step unguided sampling (FSU) leaves the first step unguided and recovers $84$--$91\\%$ of the two-step SIM loss on CosyVoice~2/3 with no significant WER increase. FSU-Mid replaces the two Euler steps by one midpoint step with an unguided first evaluation, recovers $77$--$85\\%$ on IndexTTS-2 and matches the ten-step teacher on CosyVoice~2 and GLM-TTS. Both use three network function evaluations, one fewer than the official two-step sampler, and FSU-Mid gives the highest mean recovery among eight published guidance rules re-run at two steps on four decoders.",
+  "abstractSha256": "af431b4534ee17a7cd38f828c7f0c38eb91fd5204705bde4e7e1eb76a8acf020",
+  "arxivId": "2611.11179",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.11179v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "流匹配",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "task",
+          "id": "task.voice-cloning",
+          "label": "语音克隆"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "流匹配",
+      "primaryMethodId": "method.flow-matching",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jaeho Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Han-Lim Choi"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "两步流匹配声码器在纯噪声第一步加分类器无关引导会产生与首步长度成正比的整体平移并保留到输出，跳过该步引导的 FSU 与中点变体 FSU-Mid 用 3 次网络计算恢复大部分说话人相似度且不明显抬高词错误率。",
+  "originalTitle": "Guidance at Pure Noise Erodes Speaker Similarity in Few-Step Token-Conditioned Flow-Matching TTS",
+  "pdfUrl": "https://arxiv.org/pdf/2611.11179v1.pdf",
+  "readerTitle": "纯噪声上加引导为何在两步语音合成里丢掉音色",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

@@ -1,0 +1,21 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.11282v1",
+  "arxivId": "2611.11282",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.11282v1",
+  "authors": [
+    {
+      "affiliations": [
+        "QPI Laboratories, Inc.",
+        "Escondido, CA, US"
+      ],
+      "name": "Andreas Falkenberg"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.11282v1",
+  "originalTitle": "Real-Time Arbitrary Resampling for Phase-Continuous Microtuning in Audio Streams",
+  "pdfUrl": "https://arxiv.org/pdf/2611.11282v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

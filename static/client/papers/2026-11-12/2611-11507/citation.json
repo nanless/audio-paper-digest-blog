@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.11507v1",
+  "arxivId": "2611.11507",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.11507v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Imperial College London, London, UK"
+      ],
+      "name": "Marta Andronic"
+    },
+    {
+      "affiliations": [
+        "University of California San Diego, San Diego, CA, USA"
+      ],
+      "name": "Olivia Weng"
+    },
+    {
+      "affiliations": [
+        "University of California San Diego, San Diego, CA, USA"
+      ],
+      "name": "Danial Zuberi"
+    },
+    {
+      "affiliations": [
+        "University of California San Diego, San Diego, CA, USA"
+      ],
+      "name": "Ryan Kastner"
+    },
+    {
+      "affiliations": [
+        "Imperial College London, London, UK"
+      ],
+      "name": "George A. Constantinides"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.11507v1",
+  "originalTitle": "ConvLUT: Rethinking Convolutional Architectures for Ultra-Low-Latency LUT-Based Inference",
+  "pdfUrl": "https://arxiv.org/pdf/2611.11507v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

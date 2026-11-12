@@ -1,0 +1,103 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.11777v1",
+  "abstract": "The rapid progress of generative speech models has made high-fidelity voice cloning and editing cheap, fast, and widely accessible, weakening the security of voiceprint-based authentication in mobile speech interactions. Existing speech watermarking techniques focus on offline protection or watermarking synthetic speech, and thus cannot verify whether a live utterance originates from the genuine speaker at capture time. We present \\textit{MoBiMark}, a real-time \\textbf{mo}bile \\textbf{bi}ologic speech water\\textbf{mark}ing system that binds ultrasonic articulatory signatures to speech content and embeds a dynamic watermark during capture. MoBiMark emits a multi-frequency ultrasonic probe on commodity smartphones, extracts echo features from the vocal tract, and fuses them with a content-dependent speech embedding to produce a dual-layer dynamic watermark combining a persistent user identifier (UID) and a per-utterance speech identifier (SID), enabling both source authentication and propagation-time tamper detection. A jointly trained embedder and detector injects the watermark while preserving perceptual quality, and system-level optimization with INT8 quantization enables lightweight on-device deployment. Evaluated on 50 users across four smartphone models, MoBiMark achieves an average 99.79% accuracy in source and propagation attacks, with negligible impact on speech quality and intelligibility.",
+  "abstractSha256": "ca879af74fdb9bceb3de8cf447018a10e2ec5f37cb07ad94f4fa339d5d7a81a6",
+  "arxivId": "2611.11777",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.11777v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "音频水印",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.watermarking",
+          "label": "音频水印"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-forgery",
+          "label": "音频伪造检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.on-device",
+          "label": "端侧运行"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.real-time",
+          "label": "实时处理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "音频水印",
+      "primaryTaskId": "task.watermarking",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Nanjing University, Nanjing, Jiangsu, China"
+      ],
+      "name": "Guodong Liu"
+    },
+    {
+      "affiliations": [
+        "Soochow University, Suzhou, Jiangsu, China"
+      ],
+      "name": "Lei Wang"
+    },
+    {
+      "affiliations": [
+        "Nanjing University, Nanjing, Jiangsu, China"
+      ],
+      "name": "Dongxu Liu"
+    },
+    {
+      "affiliations": [
+        "Nanjing University, Nanjing, Jiangsu, China"
+      ],
+      "name": "Qianran Qiao"
+    },
+    {
+      "affiliations": [
+        "Nanjing University, Nanjing, Jiangsu, China"
+      ],
+      "name": "Haipeng Dai"
+    },
+    {
+      "affiliations": [
+        "Soochow University, Suzhou, Jiangsu, China"
+      ],
+      "name": "He Huang"
+    },
+    {
+      "affiliations": [
+        "Nanjing University, Nanjing, Jiangsu, China"
+      ],
+      "name": "Guihai Chen"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "MoBiMark 针对克隆和剪辑语音绕过声纹验证的问题，用手机超声回波验证发声人并在采集时嵌入随内容变化的水印，在 50 人四机型实验中源端与传播攻击平均检出 99.79%，代价是需要近距离正对手机且依赖可信采集假设。",
+  "originalTitle": "Towards Trustworthy Mobile Speech Interaction: Ensuring Voice Authenticity and Transmission Integrity",
+  "pdfUrl": "https://arxiv.org/pdf/2611.11777v1.pdf",
+  "readerTitle": "MoBiMark：在说话时刻把身体特征绑进语音的水印系统",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

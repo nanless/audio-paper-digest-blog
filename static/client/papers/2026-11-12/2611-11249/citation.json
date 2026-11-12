@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.11249v1",
+  "arxivId": "2611.11249",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.11249v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Masaru Tanibata"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shun Takahashi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hiroki Ouchi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Sakriani Sakti"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.11249v1",
+  "originalTitle": "Understanding When and Where Self-Supervised Speech Models Learn Phonemes and Prosodic Cues through Layer-Wise and Time-Resolved Probing",
+  "pdfUrl": "https://arxiv.org/pdf/2611.11249v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

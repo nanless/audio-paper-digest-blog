@@ -1,0 +1,80 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.13811v1",
+  "abstract": "Antalia-2 Mini is a single-voice Turkish text-to-speech model with 7,620,931 parameters. It reads characters and produces 48 kHz audio at 41 times real time on an Apple M5 laptop CPU (2 threads). Its training audio came only from VoxCPM2 (the teacher), about 300 times larger, cloning one synthetic clip; automatic checks kept about 1,790 h. Fine-tuning the vocoder on the acoustic model's own mel spectrograms cut the word error rate (WER) of Whisper's transcripts from a mean of 3.89% to 1.75% at adjacent pre-release checkpoints. The teacher corrupts the start of a clip when the first word begins with ö, the student learned this, and a spoken prefix we cut from the output hides it. On the 495-sentence Freya-TR-Eval benchmark, where we tuned settings, version 1.0.1 has WER 1.09% and character error rate 0.22% on our public harness. A paired bootstrap cannot distinguish these from EMA Lightning, an 8.6M Turkish model, which scores higher on full-band UTMOS, an English-trained quality proxy. No human listening test exists. Weights, inference code and the benchmark harness are public under Apache-2.0; training code and data are not.",
+  "abstractSha256": "fc95ba2a6a4f5f503120ceed06bd66c4e39319e6fecc0aeb0b41810bb905b0b1",
+  "arxivId": "2611.13811",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.13811v1",
+  "assessment": {
+    "documentType": "模型报告",
+    "primaryMethod": "知识蒸馏",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前50%",
+    "score": 6.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "知识蒸馏",
+      "primaryMethodId": "method.distillation",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Sezgin Saygili"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Emre Kaplaner"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Oncel Ozgul"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Fikri San Koktas"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "Antalia-2 Mini 用约 300 倍大的教师模型 VoxCPM2 合成的约 1790 小时语音训练出 762 万参数的土耳其语单说话人系统，在 495 句基准上以配对自助区间与教师和相近小模型在可懂度上不可区分，但全频带自动质量分更低且无人工听音验证。",
+  "originalTitle": "Antalia-2 Mini: A 7.6-million-parameter Turkish text-to-speech model trained entirely on synthetic speech",
+  "pdfUrl": "https://arxiv.org/pdf/2611.13811v1.pdf",
+  "readerTitle": "只用合成语音训练的土耳其语小模型 Antalia-2 Mini",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

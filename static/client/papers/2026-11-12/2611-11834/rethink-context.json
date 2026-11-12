@@ -1,0 +1,86 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.11834v1",
+  "abstract": "Dense maps of room acoustic parameters (T30, EDT, C50, DRR) describe how a room sounds at every position. Scene-wide estimation predicts such maps from a floor plan but requires a reference impulse response, which is hard to obtain. Our system instead receives a floor plan and easily recorded reverberant speech from one talker-microphone pair. We compare four speech-derived conditioning inputs: MFCCs, an embedding from the blind estimator BERP, BERP's scalar reverberation-time estimate, and an impulse response reconstructed by Rec-RIR. Our main benchmark is the MRAS dataset, where material assignments vary at fixed geometry. The reconstructed impulse response performs best among the four inputs, reducing T30 error from 31.5% with the floor plan alone to 19.9%, 83% of the reduction achieved by the reference response. We find that adding speech mainly sets the overall level of the map, with little improvement in predicting how the acoustics vary across the room.",
+  "abstractSha256": "c81d0e313b36061195c32d61f93ab040ba1db5bc0ce6d1a662525cfbc1348225",
+  "arxivId": "2611.11834",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.11834v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "CNN",
+    "primaryTask": "声学系统参数估计",
+    "rankBucket": "前50%",
+    "score": 6.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.acoustic-parameter-estimation",
+          "label": "声学系统参数估计"
+        },
+        {
+          "facet": "method",
+          "id": "method.cnn",
+          "label": "CNN"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.spatial-audio",
+          "label": "空间音频"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "CNN",
+      "primaryMethodId": "method.cnn",
+      "primaryTask": "声学系统参数估计",
+      "primaryTaskId": "task.acoustic-parameter-estimation",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yi Wu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Olha Townsend"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Qianqian Fang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Magdalena Fuentes"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "You Zhang"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "本文用平面图加一对说话人-麦克风的混响语音代替参考脉冲响应来预测全场景声学参数图，在材料变化的 MRAS 上以 Rec-RIR 重建的响应取得最好效果，但增益主要来自整体水平的校准而非空间细节的改善。",
+  "originalTitle": "Reverberant Speech Conditioning for Material-Aware Acoustic Parameter Mapping",
+  "pdfUrl": "https://arxiv.org/pdf/2611.11834v1.pdf",
+  "readerTitle": "只用平面图加一段混响语音，能画出整间房的声学地图吗",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

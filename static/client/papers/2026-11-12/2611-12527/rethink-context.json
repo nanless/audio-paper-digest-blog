@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.12527v1",
+  "abstract": "This work proposes WaveGen, a fully end-to-end diffusion-based text-to-waveform framework based on Spectral Forcing, which jointly learns an internal spectral trajectory and the target waveform trajectory within a single model, enabling direct end-to-end text-to-waveform generation. Unlike recent TTS pipelines, WaveGen does not rely on separately trained or externally decoded intermediate representations, such as neural audio codecs, Mel-spectrogram vocoders, or VAE-based latent models. In addition, WaveGen performs internal text-speech alignment within a single model, eliminating the need for external alignment modules such as duration predictors. To preserve a truly end-to-end formulation, our framework further avoids dependence on self-supervised representations, such as BERT-based text embeddings and Wav2Vec 2.0-based semantic representations, as well as semantic distillation methods for training optimization. To achieve this, we carefully design Spectral Forcing, a model architecture with disentangled diffusion heads, and a training objective based on a multi-scale spectral $v$-loss. We further validate the scalability of end-to-end TTS models by scaling the model size from 0.1B to 0.6B parameters. Using a single architecture, open-source data, and one-stage training, without external modules such as duration predictor or REPA, WaveGen demonstrates fully end-to-end waveform generation achieving state-of-the-art performance on the Emilia training dataset. In particular, WaveGen achieves a WER of 1.47 and a SIM of 0.75 on the Seed-en benchmark. Source code and checkpoints are available at https://github.com/sh-lee-prml/WaveGen",
+  "abstractSha256": "cd57f2e33d82da61ca656b7277927e82408f6e534621c5fa016f97550d2822e4",
+  "arxivId": "2611.12527",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.12527v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "扩散模型",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前25%",
+    "score": 8.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.diffusion",
+          "label": "扩散模型"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "method",
+          "id": "method.end-to-end-learning",
+          "label": "端到端学习"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "扩散模型",
+      "primaryMethodId": "method.diffusion",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Artificial Intelligence, Ajou University, Suwon, Korea"
+      ],
+      "name": "Sang-Hoon Lee"
+    },
+    {
+      "affiliations": [
+        "Frontier AI Lab, KT Corp., Seoul, Korea"
+      ],
+      "name": "Ha-Yeong Choi"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "WaveGen 用单模型同时学习内部频谱轨迹和波形轨迹来解决文本到高分辨率波形难以对齐和优化的问题，在 Emilia 数据和 Seed-en 上达到 WER 1.47 与相似度 0.75，代价是需要大规模数据、较多采样步数和对压缩音频高频细节的依赖。",
+  "originalTitle": "WaveGen: Truly End-to-End Waveform Generation via Internal Spectral Trajectory Learning",
+  "pdfUrl": "https://arxiv.org/pdf/2611.12527v1.pdf",
+  "readerTitle": "WaveGen：直接从文本生成波形的端到端语音合成",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

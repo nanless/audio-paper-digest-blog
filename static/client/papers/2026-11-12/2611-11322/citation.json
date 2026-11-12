@@ -1,0 +1,64 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.11322v1",
+  "arxivId": "2611.11322",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.11322v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yuhang Qiu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Bohan Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Wenbin Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhihan Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yiwei Guo"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hankun Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xie Chen"
+    },
+    {
+      "affiliations": [
+        "X-LANCE Lab, Department of Computer Science and Engineering, Shanghai Jiao Tong University",
+        "MoE Key Lab of Artificial Intelligence, Jiangsu Key Lab of Language Computing, China",
+        "Corresponding author: Kai Yu"
+      ],
+      "name": "Kai Yu"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.11322v1",
+  "originalTitle": "Capability-Guided Iterative Online Optimization of Cascaded Spoken-Dialogue Modules",
+  "pdfUrl": "https://arxiv.org/pdf/2611.11322v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

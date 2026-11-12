@@ -1,0 +1,110 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.13687v1",
+  "abstract": "Answering spatial questions about multi-source scenes requires a model both to identify each sound and to locate it. Existing spatial audio-language models obtain spatial information from a dedicated encoder, which separates spatial and semantic processing into distinct feature spaces. We study whether a general-audio codec trained without spatial supervision can serve both purposes. A controlled layer-wise analysis shows that the frozen codec retains spatial information, with lateral cues carried by the difference between the two ear channels. This information, however, is not readily accessible: in dual-source scenes, a model trained on these features predicts left/right at chance and, on the remaining axes, assigns the detected direction to the queried and the non-queried source equally often. We attribute this failure to an audio--text information asymmetry, in which the audio contains both sources while the answer describes only the queried one. A controlled $2\\times2$ experiment shows that either completing the scene description or exposing the inter-channel difference lifts left/right accuracy above chance, whereas binding directions to the queried source requires both. Building on these findings, AURA keeps the codec and the language model frozen and exceeds the strongest dedicated system on SpatialSoundQA by 10.31 points in dual-source direction accuracy, with about 40\\% of its trainable parameters.",
+  "abstractSha256": "69add0e612b7d6c541d64c8331043192df1f020f8be57ac71070b9ce1e79a4d0",
+  "arxivId": "2611.13687",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.13687v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "神经编解码与离散单元",
+    "primaryTask": "音频问答",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-question-answering",
+          "label": "音频问答"
+        },
+        {
+          "facet": "task",
+          "id": "task.localization",
+          "label": "声源定位"
+        },
+        {
+          "facet": "method",
+          "id": "method.neural-codec",
+          "label": "神经编解码与离散单元"
+        },
+        {
+          "facet": "method",
+          "id": "method.lora",
+          "label": "LoRA"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "神经编解码与离散单元",
+      "primaryMethodId": "method.neural-codec",
+      "primaryTask": "音频问答",
+      "primaryTaskId": "task.audio-question-answering",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Boyan Han"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xiaoyan Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhe Sun"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ziqi Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yujun Cai"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hongli Cao"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yiwei Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ming-Hsuan Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Liang An"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文研究双声源下既要认出声音又要定位的问题，用冻结的通用音频编解码器加六槽表示和场景监督来恢复方位读取与声源绑定，在 SpatialSoundQA 双声源方向准确率上超过专用系统 10.31 个百分点，代价是只训练投影器和 LoRA 共 64.63M 参数。",
+  "originalTitle": "AURA: Auditory Spatial Intelligence via a Unified Representation from a General-Audio Encoder through Complete Alignment",
+  "pdfUrl": "https://arxiv.org/pdf/2611.13687v1.pdf",
+  "readerTitle": "一个通用音频编码器为何也能听出方位：AURA 的统一表示与完整对齐",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

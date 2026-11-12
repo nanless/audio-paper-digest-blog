@@ -1,0 +1,51 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.11989v1",
+  "arxivId": "2611.11989",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.11989v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Soongsil University"
+      ],
+      "name": "Donghyun Kim"
+    },
+    {
+      "affiliations": [
+        "Chung-Ang University"
+      ],
+      "name": "Jin Hong"
+    },
+    {
+      "affiliations": [
+        "Soongsil University",
+        "AIM Intelligence"
+      ],
+      "name": "Seungmin Kim"
+    },
+    {
+      "affiliations": [
+        "Soongsil University"
+      ],
+      "name": "Dain Kim"
+    },
+    {
+      "affiliations": [
+        "Chung-Ang University"
+      ],
+      "name": "Junseok Kwon"
+    },
+    {
+      "affiliations": [
+        "Soongsil University"
+      ],
+      "name": "Daeseon Choi"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.11989v1",
+  "originalTitle": "MUTE: Multi-Level Alignment Uncoupling Against Talking-Head Exploitation for Voice Protection",
+  "pdfUrl": "https://arxiv.org/pdf/2611.11989v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

@@ -1,0 +1,75 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.11564v1",
+  "abstract": "Occupancy-based controls regulate lighting and HVAC according to whether a space is in use. Passive infrared (PIR) sensors, the most common choice, respond to motion and can report an occupied room as vacant when its occupants remain still. Sound offers an alternative cue, since seated occupants type, turn pages and cough, but microphones raise privacy concerns. We therefore study a two-stage design: an on-device encoder maps each second of audio to a short embedding, and a server-side temporal model turns the stream of embeddings into an occupancy state. To our knowledge, no publicly available dataset pairs office audio with occupancy labels, so we evaluate the two stages separately on public data. The encoder is trained on synthetic scenes that mix empty-room recordings, room impulse responses, office sounds and read speech, and tested on unseen rooms, recordings and speakers for whether a second contains a sound made by a person. On 11 real office recordings (DCASE 2013) it reaches an AUC of 0.87, against 0.76 for log-mel statistics. Attacks on the transmitted embeddings recover at most 1% of the spoken words, against 94% from log-mel frames, but still identify the speaker among 40 in 69 to 77% of the utterances. Noise-floor normalization with adversarial training, an 8-dimensional embedding, or sending only class probabilities lowers this to 38 to 55% without hurting detection. On HPDmobile, which pairs home occupancy labels with an amplitude envelope of the audio, a causal temporal model pretrained with a hierarchical contrastive loss matches hand-crafted features (AUC 0.75) and does better when only one labelled day per home is available. These results make the two-stage design a practical basis for privacy-aware acoustic occupancy sensing, with speaker identity as the one leak still to close.",
+  "abstractSha256": "47cca33688766677a534998d0f6a51c9f4447d7d6f2b9924f3631379cf9e3fe4",
+  "arxivId": "2611.11564",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.11564v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "对抗训练",
+    "primaryTask": "音频事件检测",
+    "rankBucket": "前50%",
+    "score": 5.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.event-detection",
+          "label": "音频事件检测"
+        },
+        {
+          "facet": "task",
+          "id": "task.speaker-identification",
+          "label": "说话人识别"
+        },
+        {
+          "facet": "task",
+          "id": "task.privacy-attack-defense",
+          "label": "音频隐私攻击与防御"
+        },
+        {
+          "facet": "method",
+          "id": "method.adversarial-training",
+          "label": "对抗训练"
+        },
+        {
+          "facet": "method",
+          "id": "method.contrastive",
+          "label": "对比学习"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "对抗训练",
+      "primaryMethodId": "method.adversarial-training",
+      "primaryTask": "音频事件检测",
+      "primaryTaskId": "task.event-detection",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "School of Architecture",
+        "University of Illinois Urbana-Champaign"
+      ],
+      "name": "Myeongwon Chae"
+    },
+    {
+      "affiliations": [
+        "School of Architecture",
+        "University of Kentucky"
+      ],
+      "name": "Seonghyuk Son"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文把占用感知拆成设备端每秒声学表示与服务端长时间时序判断两段，在公开数据上分别验证人声检测效果与语音内容和说话人可恢复性，并说明在什么标注和输入条件下结论成立。",
+  "originalTitle": "From Sound to Occupancy: Privacy-Aware Audio Sensing for Buildings",
+  "pdfUrl": "https://arxiv.org/pdf/2611.11564v1.pdf",
+  "readerTitle": "从声音判断房间是否有人：兼顾隐私的建筑音频占用感知",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

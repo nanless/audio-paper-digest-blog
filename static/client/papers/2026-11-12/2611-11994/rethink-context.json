@@ -1,0 +1,98 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.11994v1",
+  "abstract": "Small multimodal models can misjudge emotion when words, voice, and visual cues conflict. We present EmoHarness, which runs such a model, the frozen student, inside a harness: the prompts, settings, and verification code around its calls. A human-written starting harness, the scaffold, numbers the student's visual observations, transcript, and prosody descriptions as citable evidence and has the student weigh candidate emotions against it. In Meta-Harness Evolving (MHE), a stronger LLM, the Builder, reads the student's errors and execution traces offline and edits the harness; static checks and validation gates decide which edits are kept, and the Builder never sees evaluation items. On 5,507 MME-Emotion items, EmoHarness raises task-macro Recognition by 7.6-13.4 points over a single video-only call for all four students and both Builders. Transcripts and prosody descriptions supply most of this boost (+5.38 to +10.71); the scaffold changes the audio-augmented call by -0.79 to +2.54, partly through extra multi-label predictions, and evolved edits add at most +0.95, although no evolved increment survives Holm correction. The harness's emotion context also transfers to IntentQA, with small gains for three of four students, none of which survives correction. EmoHarness thus boosts small multimodal students chiefly by supplying and organizing audio-derived evidence.",
+  "abstractSha256": "a986f4e32abdbf4045ebdd03d7ba11a5d055fbc2ce48b9ded9930ef02fabe08e",
+  "arxivId": "2611.11994",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.11994v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "进化优化",
+    "primaryTask": "多模态情感极性分析",
+    "rankBucket": "前50%",
+    "score": 6.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.multimodal-sentiment",
+          "label": "多模态情感极性分析"
+        },
+        {
+          "facet": "task",
+          "id": "task.av-question-answering",
+          "label": "音视频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.evolutionary-optimization",
+          "label": "进化优化"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "进化优化",
+      "primaryMethodId": "method.evolutionary-optimization",
+      "primaryTask": "多模态情感极性分析",
+      "primaryTaskId": "task.multimodal-sentiment",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "University of Illinois Urbana-Champaign"
+      ],
+      "name": "Fenghai Li"
+    },
+    {
+      "affiliations": [
+        "University of Illinois Urbana-Champaign"
+      ],
+      "name": "Bingxuan Li"
+    },
+    {
+      "affiliations": [
+        "University of California, Davis"
+      ],
+      "name": "Jiawen Zhang"
+    },
+    {
+      "affiliations": [
+        "University of Illinois Urbana-Champaign"
+      ],
+      "name": "Yifan Shen"
+    },
+    {
+      "affiliations": [
+        "University of Illinois Urbana-Champaign"
+      ],
+      "name": "Jiateng Liu"
+    },
+    {
+      "affiliations": [
+        "Stanford University"
+      ],
+      "name": "Yutong Zhang"
+    },
+    {
+      "affiliations": [
+        "University of Illinois Urbana-Champaign"
+      ],
+      "name": "Yue Guo"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文把参数冻结的小多模态模型放在可改写提示与校验代码的流程里做情绪识别，在 5507 个样本上主要靠转录与韵律描述文本提升识别率，而离线改写流程本身只带来很小且未通过多重校正的增量，同时需要约四倍调用量。",
+  "originalTitle": "EmoHarness: Boosting Multimodal Emotion Understanding with Meta-Harness Evolving",
+  "pdfUrl": "https://arxiv.org/pdf/2611.11994v1.pdf",
+  "readerTitle": "小模型读不懂情绪时，换一套做法能不能帮忙",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

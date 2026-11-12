@@ -1,0 +1,86 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.14307",
+  "abstract": "Streaming multi-reference video generation establishes a scene from specified people and objects, then continues it under changing instructions. We introduce TaoMate-R1, a streaming multi-reference generator that organizes adaptation parameters through temporal role specialization. It assigns separate low-rank adapters to scene establishment and continuation on a frozen backbone. Each adapter performs both denoising and context writing for its role; Self Gradient Forcing jointly trains the roles through the history they construct. This allocation contrasts with operation-based specialization, which separates denoising from context writing across all chunks. A fixed-replay gradient analysis characterizes the update directions admitted by the two sharing schemes. On 32 multi-reference cases, we compare the schemes at the same two-adapter budget. Across ten approximately two-minute streams with changing instructions and shared teacher-audio conditioning, TaoMate-R1 reduces the mean boundary luminance jump from 1.96 to 0.613, with higher boundary feature similarity. It also achieves higher mean CLIP and DINO temporal similarity across short interactions, long streams, and public reference compositions. These results support grouping adaptation parameters by scene establishment and continuation for streaming multi-reference generation. Our code and model are released at https://github.com/TaoLiveAIGC/TaoMate-H3.",
+  "abstractSha256": "60bf9258d4fe8ab511997bf63c02ee660d0f745b35ae3202eda316a2522db4ea",
+  "arxivId": "2611.14307",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "LoRA",
+    "primaryTask": "视频生成",
+    "rankBucket": "前50%",
+    "score": 6.7,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.video-generation",
+          "label": "视频生成"
+        },
+        {
+          "facet": "task",
+          "id": "task.av-generation",
+          "label": "音视频生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.lora",
+          "label": "LoRA"
+        },
+        {
+          "facet": "method",
+          "id": "method.autoregressive",
+          "label": "自回归模型"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "LoRA",
+      "primaryMethodId": "method.lora",
+      "primaryTask": "视频生成",
+      "primaryTaskId": "task.video-generation",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Qijun Gan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Chenwei Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xinyang Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Meiguang Jin"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Junfeng Ma"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文比较同为两个适配器时按时间角色分组与按操作分组的差异，在 32 个多参考案例上时间角色分组获得更高的时序相似均值，并在约两分钟长流的指令边界处把平均亮度跳变从 1.96 降到 0.613，代价是参考相似与问答指标随场景而变化且长流评测依赖缓存音频与尾帧条件。",
+  "originalTitle": "TaoMate-R1: Temporal Role Specialization for Streaming Multi-Reference Video Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2611.14307.pdf",
+  "readerTitle": "开场建场景、后续接动作：TaoMate-R1 如何按时间角色分配适配参数",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

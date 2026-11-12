@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.13258v1",
+  "arxivId": "2611.13258",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.13258v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Electrical and Computer Engineering"
+      ],
+      "name": "Yash Sukhdeve"
+    },
+    {
+      "affiliations": [
+        "Department of Computer ScienceClarkson University, Potsdam, NY 13699, USA"
+      ],
+      "name": "Aaron Storey"
+    },
+    {
+      "affiliations": [
+        "Department of Electrical and Computer Engineering"
+      ],
+      "name": "Masudul H. Imtiaz"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.13258v1",
+  "originalTitle": "Which Acoustic Features Survive Compression? Tracker-Estimated First-Formant Statistics for Codec-Robust Audio DeepfakeDetection",
+  "pdfUrl": "https://arxiv.org/pdf/2611.13258v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

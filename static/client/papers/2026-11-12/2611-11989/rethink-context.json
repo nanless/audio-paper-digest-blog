@@ -1,0 +1,93 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.11989v1",
+  "abstract": "Talking-head generation models, which synthesize realistic facial animations from audio, are increasingly vulnerable to misuse in multimodal deepfake scenarios. Protecting such systems remains challenging, as talking-head models fundamentally rely on precise audio-visual alignment, while effective audio protection methods remain largely underexplored. In this work, we propose MUTE, an audio protection framework that uncouples the underlying audio-visual alignment through a multi-level strategy. Specifically, MUTE combines (1) Alignment-level Disruption, which directly perturbs cross-modal attention to disrupt structural alignment, and (2) Representation-level Degradation, which perturbs temporal audio embeddings to degrade their representations. To improve robustness, perturbations are constrained in the STFT domain to high-energy regions, making them resistant to post-processing, denoising, and adaptive attacks. An optional speaker-level objective further mitigates potential bypass via TTS-based resynthesis. Extensive experiments demonstrate that MUTE consistently degrades lip synchronization across both white-box and black-box talking-head models while preserving perceptual audio quality. The proposed method remains effective under real-world transformations and can be combined with image-based approaches to provide stronger multimodal protection. The source code and project page are available at https://github.com/jindl465/MUTE.",
+  "abstractSha256": "356da7b71b4c7a7c2b4334dc51c533fcad60863d8f081c8f5db013d6d32d2d20",
+  "arxivId": "2611.11989",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.11989v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "对抗攻击构造",
+    "primaryTask": "音频系统攻击与防御",
+    "rankBucket": "前25%",
+    "score": 8.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-system-attack-defense",
+          "label": "音频系统攻击与防御"
+        },
+        {
+          "facet": "method",
+          "id": "method.adversarial-attack",
+          "label": "对抗攻击构造"
+        },
+        {
+          "facet": "task",
+          "id": "task.talking-portrait",
+          "label": "语音驱动人像视频生成"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "对抗攻击构造",
+      "primaryMethodId": "method.adversarial-attack",
+      "primaryTask": "音频系统攻击与防御",
+      "primaryTaskId": "task.audio-system-attack-defense",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Soongsil University"
+      ],
+      "name": "Donghyun Kim"
+    },
+    {
+      "affiliations": [
+        "Chung-Ang University"
+      ],
+      "name": "Jin Hong"
+    },
+    {
+      "affiliations": [
+        "Soongsil University",
+        "AIM Intelligence"
+      ],
+      "name": "Seungmin Kim"
+    },
+    {
+      "affiliations": [
+        "Soongsil University"
+      ],
+      "name": "Dain Kim"
+    },
+    {
+      "affiliations": [
+        "Chung-Ang University"
+      ],
+      "name": "Junseok Kwon"
+    },
+    {
+      "affiliations": [
+        "Soongsil University"
+      ],
+      "name": "Daeseon Choi"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "MUTE 只在语音里加人耳难察觉的扰动，用注意力结构失配加逐帧表征退化让合成口型错乱，并把扰动藏进语音高能量时频区以抵抗净化，代价是需要两百步迭代且要在听感与破坏强度之间取舍。",
+  "originalTitle": "MUTE: Multi-Level Alignment Uncoupling Against Talking-Head Exploitation for Voice Protection",
+  "pdfUrl": "https://arxiv.org/pdf/2611.11989v1.pdf",
+  "readerTitle": "MUTE：只改音频，让说话人视频的口型对不上声音",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

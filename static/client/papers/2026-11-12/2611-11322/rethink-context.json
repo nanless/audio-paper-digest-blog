@@ -1,0 +1,111 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.11322v1",
+  "abstract": "Cascaded spoken dialogue systems comprise perception-and-comprehension, decision-making, and response-generation modules. We study iterative optimization of the first and last modules. Their reciprocal speech-content interfaces enable one-sided data to provide cross-module supervision: acoustic observations, such as waveforms or feature sequences, can be pseudo-labeled to train generation, whereas content-only samples can be rendered into speech to train comprehension. Because the reliable teacher-student direction varies across domains, we propose a two-stage, capability-guided pipeline for iterative online optimization. Stage 1 compares both modules through a shared intelligibility probe and obtains a domain-wise capability prior. Stage 2 activates the compatible one-sided-data route, constructs and filters supervision with the current teacher, updates the selected student, and refreshes the relevant checkpoints across cycles. We instantiate comprehension with Whisper large-v3 and generation with CosyVoice2. After only 200 steps for Whisper and 600 for CosyVoice2 of our iterative online optimization, we observe that, on the Chinese MAGICDATA-RAMC dataset, Whisper reduces CER from 14.18% to 10.77%, while CosyVoice2 reduces it from 4.78% to 4.04%. On the Japanese Common Voice dataset, Whisper reduces CER from 15.23% to 15.10%, while CosyVoice2 reduces it from 14.85% to 11.18%. These results demonstrate the feasibility of capability-guided iterative optimization of complementary spoken-dialogue modules.",
+  "abstractSha256": "5c84402ccf7d1665c1703823854491e7906ccb31bd7ac6363e216ef053460079",
+  "arxivId": "2611.11322",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.11322v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "半监督学习",
+    "primaryTask": "语音对话系统",
+    "rankBucket": "前50%",
+    "score": 6.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-dialogue",
+          "label": "语音对话系统"
+        },
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.semi-supervised",
+          "label": "半监督学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "半监督学习",
+      "primaryMethodId": "method.semi-supervised",
+      "primaryTask": "语音对话系统",
+      "primaryTaskId": "task.speech-dialogue",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yuhang Qiu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Bohan Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Wenbin Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhihan Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yiwei Guo"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hankun Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xie Chen"
+    },
+    {
+      "affiliations": [
+        "X-LANCE Lab, Department of Computer Science and Engineering, Shanghai Jiao Tong University",
+        "MoE Key Lab of Artificial Intelligence, Jiangsu Key Lab of Language Computing, China",
+        "Corresponding author: Kai Yu"
+      ],
+      "name": "Kai Yu"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文针对级联语音对话两端模块在不同领域强弱不同，提出先用可懂度探测决定更新方向、再用在线构造与筛选做迭代更新的方法，在日语和中文评测上相对官方初始模型降低了字错率，但在线方式相对一次性静态构造的效果因模块而异且带有额外筛选与保持代价。",
+  "originalTitle": "Capability-Guided Iterative Online Optimization of Cascaded Spoken-Dialogue Modules",
+  "pdfUrl": "https://arxiv.org/pdf/2611.11322v1.pdf",
+  "readerTitle": "谁当老师谁当学生：按能力决定方向的语音理解与生成迭代优化",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

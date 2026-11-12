@@ -1,0 +1,158 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.13614v1",
+  "abstract": "Generating long-form speech requires models to keep content, speaker identity, turn-taking, and expressive style consistent over time. Yet most open training corpora contain examples lasting only tens of seconds and open long-form benchmarks cover at most two speakers per recording. We introduce Emilia2, a 229K-hour multilingual dataset for controllable long-form speech generation. From in-the-wild data, Emilia2 constructs short utterances, single-speaker long-form speech, and multi-speaker dialogues, preserving transcripts, speaker identities, pauses, and acoustic transitions. Examples longer than five minutes account for 50.0% of single-speaker long-form hours and 66.8% of dialogue hours. To support expressive control, Emilia2 provides natural language instructions for 4.77M examples and nonverbal-vocalization tags for 933K examples. We also introduce Emilia2-testset, 23 hours of bilingual recordings of up to 30 minutes and four speakers, each speaker paired with reference audio. We train autoregressive (AR) and non-autoregressive (NAR) models on Emilia2. Our 0.6B-backbone NAR model achieves the lowest Chinese CER and English WER on TTSD-Eval (5.27%/9.93%) among compared systems, while our AR model is on par with Qwen3-TTS-12Hz-VD on InstructTTSEval (zh/en: 76.2/78.3 vs. 77.1/77.9). These results validate Emilia2 as a comprehensive data foundation for long-form speech generation and minute-scale expressive control. Demo: https://charlesnii.github.io/Emilia2-demo/.",
+  "abstractSha256": "782b473f6f264ff3159d26ec393d0a6e9174b1ae1f18ca7433bf7d35f1722941",
+  "arxivId": "2611.13614",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.13614v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "数据集构建",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前25%",
+    "score": 7.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.dataset-curation",
+          "label": "数据集构建"
+        },
+        {
+          "facet": "task",
+          "id": "task.prosody-style-control",
+          "label": "韵律与风格控制"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "数据集构建",
+      "primaryMethodId": "method.dataset-curation",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Qinke Ni"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Dekun Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Junwen Qiu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Huan Liao"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xu Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xingwen Han"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Wan Lin"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kunyu Feng"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yuxiang Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yusheng Mu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Chaoren Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yingda Shen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Mingjie Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Haolong Zheng"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xulin Fan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Mark A. Hasegawa-Johnson"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhizheng Wu"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "Emilia2 用同一批网络音频同时构造短句、单人长语音和多人对话三种视图并配上风格指令与非语言发声标注，再用 0.6B 的自回归与非自回归两套模型验证长时连贯与分钟级可控生成的可行性与代价。",
+  "originalTitle": "Emilia2: A Large-Scale Dataset for Controllable Long-Form Speech Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2611.13614v1.pdf",
+  "readerTitle": "Emilia2：面向可控长时语音生成的大规模数据集",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

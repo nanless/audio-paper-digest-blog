@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.11994v1",
+  "arxivId": "2611.11994",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.11994v1",
+  "authors": [
+    {
+      "affiliations": [
+        "University of Illinois Urbana-Champaign"
+      ],
+      "name": "Fenghai Li"
+    },
+    {
+      "affiliations": [
+        "University of Illinois Urbana-Champaign"
+      ],
+      "name": "Bingxuan Li"
+    },
+    {
+      "affiliations": [
+        "University of California, Davis"
+      ],
+      "name": "Jiawen Zhang"
+    },
+    {
+      "affiliations": [
+        "University of Illinois Urbana-Champaign"
+      ],
+      "name": "Yifan Shen"
+    },
+    {
+      "affiliations": [
+        "University of Illinois Urbana-Champaign"
+      ],
+      "name": "Jiateng Liu"
+    },
+    {
+      "affiliations": [
+        "Stanford University"
+      ],
+      "name": "Yutong Zhang"
+    },
+    {
+      "affiliations": [
+        "University of Illinois Urbana-Champaign"
+      ],
+      "name": "Yue Guo"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.11994v1",
+  "originalTitle": "EmoHarness: Boosting Multimodal Emotion Understanding with Meta-Harness Evolving",
+  "pdfUrl": "https://arxiv.org/pdf/2611.11994v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

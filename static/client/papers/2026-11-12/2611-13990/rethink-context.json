@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.13990v1",
+  "abstract": "Which linguistic units minimise the bitrate required to encode speech content: phones, syllables, words, maybe larger units, or something in between? This question has implications for the development of speech and language systems and theories of human language processing. Using a transcribed corpus of 960 hours of English audiobooks, I compare the information rates of phones, syllables, words, multi-word combinations and intermediate tokenisations. While all units are equivalent under a perfect language model, it makes sense to compare these under limited modelling budgets; I use $n$-gram and transformer language models. The lowest bitrates are achieved using words, with slightly longer units sometimes performing best. The results show that, when modelling capacity is limited, units larger than syllables but smaller than long multi-word phrases provide the most efficient representation in terms of information rate.",
+  "abstractSha256": "fdcbe6254ef65ec403808ff5841f74ae909d6869c64f33d8d20aa7598b75b569",
+  "arxivId": "2611.13990",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.13990v1",
+  "assessment": {
+    "documentType": "理论研究",
+    "primaryMethod": "统计分析",
+    "primaryTask": "语音编码",
+    "rankBucket": "前50%",
+    "score": 6.7,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-coding",
+          "label": "语音编码"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.phonetics",
+          "label": "语音学与音系"
+        },
+        {
+          "facet": "method",
+          "id": "method.transformer",
+          "label": "Transformer"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "统计分析",
+      "primaryMethodId": "method.statistical-analysis",
+      "primaryTask": "语音编码",
+      "primaryTaskId": "task.speech-coding",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Herman Kamper"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "在 960 小时英语有声书转写上比较音素、音节、词和多词合并的比特率，发现建模预算受限时词及略长于词的单元最省，20M 参数 Transformer 下词单元达到 28.07 bps，但结论依赖有限模型和英语数据条件。",
+  "originalTitle": "On the information rate of phones, syllables and words",
+  "pdfUrl": "https://arxiv.org/pdf/2611.13990v1.pdf",
+  "readerTitle": "音素、音节和词：谁编码语音内容更省比特",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

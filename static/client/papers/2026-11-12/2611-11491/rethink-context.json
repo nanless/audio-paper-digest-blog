@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.11491v1",
+  "abstract": "Many studies of animal vocalizations require clean recordings, but animals are usually recorded in the field, with background noise from weather, vehicles, and other animals. Animal vocalization denoising is challenged by the scarcity of clean training data and the extreme diversity of animal vocalizations. Classical spectral gates leave residual noise, especially without voice activity detection (VAD), while detector-free neural denoisers designed for bioacoustics remove less noise. We show that a general-purpose source separation foundation model, SAM-Audio, removes more noise than either of these types of methods, when used without training and prompted with time spans from a simple animal VAD. To turn this heavy method into a practical tool, we distill it into CallCleaner, a 19M-parameter denoiser that needs no detector and runs ~90x faster than real time on a laptop CPU. We find that SI-SDR has limited utility in our setting as it penalizes regenerated output and conflates noise removal with call fidelity, a trade-off our separate metrics reveal. CallCleaner leaves 11 dB less noise around the call than Biodenoising, the leading neural bioacoustic denoiser with public weights, and among fast, CPU-capable systems it pushes the Pareto frontier of noise removal vs. call fidelity, without requiring a detector. We release code and weights for CallCleaner, which enables fast, private, local denoising of single-caller recordings without specialized hardware.",
+  "abstractSha256": "a5619b480b7b4ce8f4e48ad10b9a3cfdeb46a40e7672295b88ea8cfbddc45807",
+  "arxivId": "2611.11491",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.11491v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "知识蒸馏",
+    "primaryTask": "音频分离",
+    "rankBucket": "前50%",
+    "score": 6.4,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-separation",
+          "label": "音频分离"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        },
+        {
+          "facet": "application",
+          "id": "application.bioacoustics",
+          "label": "生物声学监测"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "知识蒸馏",
+      "primaryMethodId": "method.distillation",
+      "primaryTask": "音频分离",
+      "primaryTaskId": "task.audio-separation",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Michael Xie"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Gašper Beguš"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Morris Alper"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对野外单只前景动物叫声去噪缺少干净训练数据的问题，论文先用动物 VAD 时间跨度提示 SAM-Audio 做零样本分离，再将其蒸馏为 19M、无需检测器的 CallCleaner，并在叫声内外分开评价的条件下证明其去噪量与保真度的权衡位置。",
+  "originalTitle": "CallCleaner: Lightweight Bioacoustic Denoising from an Audio Foundation Model",
+  "pdfUrl": "https://arxiv.org/pdf/2611.11491v1.pdf",
+  "readerTitle": "CallCleaner：用通用分离基础模型蒸馏轻量动物叫声去噪器",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

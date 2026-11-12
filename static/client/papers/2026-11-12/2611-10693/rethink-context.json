@@ -1,0 +1,128 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.10693v2",
+  "abstract": "Multimodal LLMs have made remarkable progress in perceiving the physical world, while their perceptual scope remains largely human-centric, focusing on what humans can directly see or hear. This progress raises the prospect of perception beyond human limits, such as extending hearing to sounds that are inaudible to humans. More broadly, the physical world is full of waves, vibrations, and oscillations, only a small fraction of which are directly audible to humans. This invites the extension of multimodal LLMs toward a broader form of machine hearing, which remains largely underexplored. To investigate this direction, we introduce the Machine Hearing Benchmark (MHB), comprising 6,128 instances across 13 tasks and seven domains. MHB spans highly heterogeneous input regimes, with sampling rates from approximately $10^{-5}$ to $10^6$ Hz, sequence lengths from $10^1$ to $10^6$ samples, and both single- and multi-channel inputs. Evaluations of current open-source and proprietary Audio LLMs (ALLMs) reveal limited zero-shot transfer to machine hearing. Supervised adaptation on machine-hearing data alone does not close this gap, suggesting that the challenge extends beyond data exposure to a systematic mismatch between existing audio front ends and machine-hearing inputs. To address this mismatch, we introduce MachEar, a lightweight encoder extension that complements the pretrained Audio LLM for machine-hearing inputs. The results show that MachEar equips a pretrained Audio LLM with stronger machine-hearing capabilities while largely preserving its existing audio understanding performance.",
+  "abstractSha256": "3a5a6f4d592d136fc2e180ab86b062c170b1514c7d38c12844a1c0e8784c0dee",
+  "arxivId": "2611.10693",
+  "arxivVersion": 2,
+  "arxivVersionedId": "2611.10693v2",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 7.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.audio-language",
+          "label": "音频大模型"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Shanghai Artificial Intelligence Laboratory",
+        "Harbin Institute of Technology"
+      ],
+      "name": "Liwei Liu"
+    },
+    {
+      "affiliations": [
+        "Shanghai Artificial Intelligence Laboratory",
+        "University of Science and Technology of China"
+      ],
+      "name": "Jun Tao"
+    },
+    {
+      "affiliations": [
+        "Shanghai Artificial Intelligence Laboratory",
+        "Fudan University"
+      ],
+      "name": "Xingyuan Li"
+    },
+    {
+      "affiliations": [
+        "Shanghai Artificial Intelligence Laboratory"
+      ],
+      "name": "Xuenan Xu"
+    },
+    {
+      "affiliations": [
+        "Shanghai Artificial Intelligence Laboratory",
+        "Tsinghua University"
+      ],
+      "name": "Chen Zhang"
+    },
+    {
+      "affiliations": [
+        "Shanghai Artificial Intelligence Laboratory",
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Junyi Wang"
+    },
+    {
+      "affiliations": [
+        "Shanghai Artificial Intelligence Laboratory",
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Boya Zhang"
+    },
+    {
+      "affiliations": [
+        "University of Cambridge"
+      ],
+      "name": "Xiaoyu Yang"
+    },
+    {
+      "affiliations": [
+        "University of Science and Technology of China"
+      ],
+      "name": "Zhen-Hua Ling"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Wen Wu"
+    },
+    {
+      "affiliations": [
+        "Shanghai Artificial Intelligence Laboratory"
+      ],
+      "name": "Chao Zhang"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文用 6128 个跨域振动信号检验音频大模型能否走出人耳范围，发现零样本几乎失效、只微调也不够，于是用并行的频域加时域小编码器补上极短与极端采样输入的短板。",
+  "originalTitle": "Machine Hearing: Can Audio LLMs Generalize Beyond Human Auditory Perception?",
+  "pdfUrl": "https://arxiv.org/pdf/2611.10693v2.pdf",
+  "readerTitle": "机器听觉：音频大模型能听懂人耳听不到的信号吗",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

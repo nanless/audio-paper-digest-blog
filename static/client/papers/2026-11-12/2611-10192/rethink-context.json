@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.10192v1",
+  "abstract": "Perceptual audio codecs often use predictive coding to further reduce signal redundancy. Rather than learning the entire codec pipeline end-to-end, we insert a small neural network as a drop-in, deterministic predictor in an otherwise conventional codec: the network estimates the next Modified Discrete Cosine Transform (MDCT) coefficient block from a short context of reconstructed blocks, and the encoder transmits the quantized residual. We compare Multilayer Perceptron (MLP) and Convolutional Neural Network (CNN) predictors against a non-predictive baseline and a per-line Normalized Least Mean Squares (NLMS) linear predictor (similar to the MPEG-2 AAC Main Profile predictor). The CNN consistently outperforms the MLP, the linear predictor, and the baseline in signal-to-noise ratio (SNR), noise-to-mask ratio (NMR), and MUSHRA evaluation scores. Using a 512-sample analysis window (w = 512), our neural predictors recover, and the CNN exceeds, the coded quality obtained by the non-predictive baseline after quadrupling the analysis-window length to w = 2048, at substantially lower algorithmic delay. The CNN uses only 0.13M parameters (roughly 20x fewer than the MLP) and has a decoder real-time factor (RTF) of ~0.10 on a consumer CPU.",
+  "abstractSha256": "e5470136ef190e0f3d7a506aca58d1db87193219a96c2588607aaea663a846b5",
+  "arxivId": "2611.10192",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.10192v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "音频编码",
+    "rankBucket": "前50%",
+    "score": 6.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-coding",
+          "label": "音频编码"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "method",
+          "id": "method.cnn",
+          "label": "CNN"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "音频编码",
+      "primaryTaskId": "task.audio-coding",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Center for Computer Research in Music and Acoustics (CCRMA), Stanford University, Stanford, CA, USA"
+      ],
+      "name": "Niccolo Abate"
+    },
+    {
+      "affiliations": [
+        "Center for Computer Research in Music and Acoustics (CCRMA), Stanford University, Stanford, CA, USA"
+      ],
+      "name": "Gabriel Soule"
+    },
+    {
+      "affiliations": [
+        "Center for Computer Research in Music and Acoustics (CCRMA), Stanford University, Stanford, CA, USA"
+      ],
+      "name": "Marina Bosi"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文把多层感知机或卷积网络作为确定性预测器插入常规 MDCT 感知编码的残差路径，用已重建系数块预测当前块并只传量化残差，在 512 点短窗下以约 0.13M 参数的卷积模型取得优于线性预测和长窗基线的信噪比、噪声掩蔽比和主观分，代价是编码端选带开销增大而解码仍远快于实时。",
+  "originalTitle": "Lightweight Neural Prediction for MDCT-Based Perceptual Audio Coding",
+  "pdfUrl": "https://arxiv.org/pdf/2611.10192v1.pdf",
+  "readerTitle": "在短窗 MDCT 编码里加一个小神经网络预测器",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

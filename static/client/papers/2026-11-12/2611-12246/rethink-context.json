@@ -1,0 +1,116 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.12246v1",
+  "abstract": "Streaming Sortformer introduced an arrival-order speaker cache to maintain speaker identities across chunks in end-to-end streaming speaker diarization, with a single model supporting configurable latency profiles spanning offline operation to ultra-low-latency streaming. Nemotron 3 Diarization addresses the original model's four-speaker limitation by extending support to eight speakers while improving both accuracy and computational efficiency. The previous FastConformer-Transformer stack is streamlined into a pure Transformer encoder. A learned upsampling layer then maps the encoder's coarse 80-ms representations to 10-ms resolution, enabling fine-grained predictions. Training leverages large-scale simulated mixtures and adds activity and phantom-speaker losses to the standard Sortformer objectives. Despite doubling speaker capacity over its predecessor, the new architecture reduces training memory by a factor of 2.8, makes training $2.2\\times$ faster, and delivers up to $6.4\\times$ higher inference throughput. Nemotron 3 Diarization establishes a new state of the art in DER on DIHARD III and CALLHOME. When used to condition DiCoW, it also achieves state-of-the-art tcpWER on the single-microphone conditions of AMI and NOTSOFAR-1. Training code is open source, and model weights are released under the permissive OpenMDW-1.1 license.",
+  "abstractSha256": "1206e524fe712a522650850b90c0540269b44a9aa74a6efdb171ca01c63a265e",
+  "arxivId": "2611.12246",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.12246v1",
+  "assessment": {
+    "documentType": "模型报告",
+    "primaryMethod": "端到端学习",
+    "primaryTask": "说话人分离标注",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.diarization",
+          "label": "说话人分离标注"
+        },
+        {
+          "facet": "task",
+          "id": "task.multi-talker-asr",
+          "label": "多说话人语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.end-to-end-learning",
+          "label": "端到端学习"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.real-time",
+          "label": "实时处理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "端到端学习",
+      "primaryMethodId": "method.end-to-end-learning",
+      "primaryTask": "说话人分离标注",
+      "primaryTaskId": "task.diarization",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ivan Medennikov"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Taejin Park"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Tatiana Timofeeva"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "He Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Alexander Polok"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Sofia Kostandian"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Weiqing Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Dongji Gao"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jagadeesh Balam"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Boris Ginsburg"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对流式说话人日志要在分块、低延迟下保持身份、支持更多说话人和更精细边界的问题，该工作用纯 Transformer 编码器加学习上采样、八说话人到达序缓存与活动和幻影辅助损失，在 DIHARD III 和 CALLHOME 等集上降低 DER 并在 AMI 和 NOTSOFAR-1 上下游转写上降低 tcpWER，同时减少训练内存和提高推理吞吐。",
+  "originalTitle": "Nemotron 3 Diarization: Advancing the Accuracy-Efficiency Frontier in Streaming Speaker Diarization",
+  "pdfUrl": "https://arxiv.org/pdf/2611.12246v1.pdf",
+  "readerTitle": "Nemotron 3 Diarization：把流式说话人日志推到八人、10 毫秒与更高吞吐",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

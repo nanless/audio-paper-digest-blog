@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.11497v1",
+  "abstract": "We describe the system submitted by Telefónica Innovación Digital to the Speech-COSER Challenge 2026, which features spontaneous speech from elderly speakers recorded in rural Spain. For ASR, we perform CTC-based pseudo-forced alignment scores audio-text match quality to guide a two-stage LoRA curriculum, followed by post-hoc magnitude pruning of the LoRA matrices to enhance generalization. An ensemble of seven systems combined via ROVER achieves 36.25\\% unnormalized and 22.17\\% normalized WER.",
+  "abstractSha256": "4658002b553e07bb381f29b1d06104dd906bb47a1ad34f2b354331b208c90fbc",
+  "arxivId": "2611.11497",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.11497v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "模型剪枝",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.pruning",
+          "label": "模型剪枝"
+        },
+        {
+          "facet": "method",
+          "id": "method.lora",
+          "label": "LoRA"
+        },
+        {
+          "facet": "method",
+          "id": "method.curriculum",
+          "label": "课程学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.model-ensemble",
+          "label": "模型集成"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "模型剪枝",
+      "primaryMethodId": "method.pruning",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Fernando López"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jordi Luque"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对西班牙乡村老年自发语音的识别困难，论文用 CTC 对齐分数筛选数据、做两阶段 LoRA 微调加事后剪枝，再用七系统 ROVER 投票把官方 WER 降到 36.25%，代价是需要多模型训练解码和经验阈值选择。",
+  "originalTitle": "TID System for Speech-COSER Challenge 2026: ASR Track",
+  "pdfUrl": "https://arxiv.org/pdf/2611.11497v1.pdf",
+  "readerTitle": "乡村老年自发语音怎么做识别：对齐打分、两阶段微调与多系统投票",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

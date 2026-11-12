@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.11522v1",
+  "abstract": "We propose a music inpainting technique combining similarity matching and a diffusion-based generative model to replace large segments of audio recordings with suitable alternatives. The proposed hybrid method, Similarity-Guided Diffusion Posterior Sampling (SimDPS), retrieves candidate replacement segments from the wider signal based on contextual similarity and uses them to guide the diffusion process toward coherent reconstructions. Being model-agnostic, the framework is compatible with any pre-trained diffusion model operating in either the waveform or latent domain. Objective evaluations demonstrate that SimDPS outperforms widely adopted RePaint and DPS methods across acoustic features and neural-embedding distance metrics. Subjective evaluations on multi-genre music datasets confirm that SimDPS enhances perceptual plausibility compared to previous diffusion-based methods and demonstrates robustness to poorly matched similarity candidates. These findings pave the way for improved music restoration and context-aware audio editing.",
+  "abstractSha256": "e41ec28fd7c53f53560e945763ed0cafa4fc2e00c5e55f69b0c79e3ffd839bb4",
+  "arxivId": "2611.11522",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.11522v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "扩散模型",
+    "primaryTask": "音频修复",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-restoration",
+          "label": "音频修复"
+        },
+        {
+          "facet": "method",
+          "id": "method.diffusion",
+          "label": "扩散模型"
+        },
+        {
+          "facet": "method",
+          "id": "method.retrieval-augmented",
+          "label": "检索增强"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "扩散模型",
+      "primaryMethodId": "method.diffusion",
+      "primaryTask": "音频修复",
+      "primaryTaskId": "task.audio-restoration",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Sean Turland"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Eloi Moliner"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Vesa Välimäki"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文要补多秒长的音乐空洞，用同一首歌里找到的相似片段做辅助观测去引导预训练扩散模型的后验采样，在通用音乐潜空间和钢琴波形上都做了听感与特征评测，但效果高度依赖检索质量与参数设置。",
+  "originalTitle": "Music Inpainting With Similarity-Guided Latent Diffusion",
+  "pdfUrl": "https://arxiv.org/pdf/2611.11522v1.pdf",
+  "readerTitle": "用相似片段引导扩散模型补全长段缺失音乐",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

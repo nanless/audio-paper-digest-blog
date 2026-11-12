@@ -1,0 +1,155 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.11273v1",
+  "abstract": "Clinical speech is increasingly used for disease screening and clinical assessment, but directly distributing speech recordings poses privacy risks because they contain both speaker-identifying voiceprints and sensitive spoken content. Existing speech anonymisation approaches are primarily developed for general speech applications or task-specific clinical speech and overlook that different clinical tasks rely on distinct speech characteristics, necessitating task-adaptive anonymisation strategies to protect patient privacy while preserving clinical utility. Here we introduce CASA, a clinically adaptive speech anonymisation agent that transforms anonymisation from a fixed processing procedure into a task-guided optimisation process, dynamically tailoring voiceprint and content anonymisation to task-specific privacy and clinical utility requirements. Through recursive self-improvement (RSI), CASA iteratively evaluates and refines anonymisation strategies against task-specific privacy and clinical utility requirements, while learning from these outcomes to guide more efficient planning in subsequent clinical tasks. CASA is validated across 14 clinical tasks encompassing five languages, diverse elicitation paradigms, and mental health, cognitive and voice disorders. CASA preserved disease-related classification performance while meeting speaker-anonymisation requirements across all clinical tasks, versus only 8/14 for the strongest fixed method. Assessments of resistance to speaker re-identification by external attackers and identification and redaction of sensitive personal information in clinical speech further demonstrated CASA's dual protection of speaker identity and sensitive spoken content. Clinical expert assessments further supported the preservation of clinically relevant information and the acceptability of anonymised speech for controlled research sharing.",
+  "abstractSha256": "91279af68b6ef608d73a6000253b81bc1b19e24d55929f00ed0a283b5489c081",
+  "arxivId": "2611.11273",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.11273v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "工具增强与约束解码",
+    "primaryTask": "说话人匿名化",
+    "rankBucket": "前25%",
+    "score": 8.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.anonymization",
+          "label": "说话人匿名化"
+        },
+        {
+          "facet": "task",
+          "id": "task.pathological-speech",
+          "label": "病理语音评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.tool-augmentation",
+          "label": "工具增强与约束解码"
+        },
+        {
+          "facet": "application",
+          "id": "application.speech-biomarker",
+          "label": "语音生物标志物"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "工具增强与约束解码",
+      "primaryMethodId": "method.tool-augmentation",
+      "primaryTask": "说话人匿名化",
+      "primaryTaskId": "task.anonymization",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Electronic Engineering, Tsinghua University, Beijing 100084, China"
+      ],
+      "name": "Ziyun Cui"
+    },
+    {
+      "affiliations": [
+        "Department of Electronic Engineering, Tsinghua University, Beijing 100084, China"
+      ],
+      "name": "Haoyu Niu"
+    },
+    {
+      "affiliations": [
+        "Shanghai Artificial Intelligence Laboratory, Shanghai 200032, China"
+      ],
+      "name": "Wen Wu"
+    },
+    {
+      "affiliations": [
+        "School of Computer and Communication Engineering, University of Science and Technology Beijing, Beijing 100083, China"
+      ],
+      "name": "Hao Sun"
+    },
+    {
+      "affiliations": [
+        "Beijing Tsinghua Changgung Hospital, School of Clinical Medicine, Tsinghua Medicine, Tsinghua University, Beijing 100084, China"
+      ],
+      "name": "Sihan Zhang"
+    },
+    {
+      "affiliations": [
+        "Vanke School of Public Health, Tsinghua University, Beijing 100084, China"
+      ],
+      "name": "Chang Lei"
+    },
+    {
+      "affiliations": [
+        "Peking Union Medical College Hospital, Beijing 100730, China"
+      ],
+      "name": "Yun Zhang"
+    },
+    {
+      "affiliations": [
+        "Peking University Huilongguan Clinical Medical School, Beijing 100096, China",
+        "Department of Clinical Psychology, Beijing Huilongguan Hospital, Capital Medical University, Beijing 100096, China",
+        "WHO Collaborating Center for Research and Training in Suicide Prevention, Beijing 100096, China"
+      ],
+      "name": "Chunyun Sun"
+    },
+    {
+      "affiliations": [
+        "Peking University Huilongguan Clinical Medical School, Beijing 100096, China",
+        "Department of Clinical Psychology, Beijing Huilongguan Hospital, Capital Medical University, Beijing 100096, China",
+        "WHO Collaborating Center for Research and Training in Suicide Prevention, Beijing 100096, China"
+      ],
+      "name": "Yang Luo"
+    },
+    {
+      "affiliations": [
+        "Department of Data Science and Artificial Intelligence, The Hong Kong Polytechnic University, Hong Kong (SAR), China"
+      ],
+      "name": "Liangliang Cao"
+    },
+    {
+      "affiliations": [
+        "Department of Electronic Engineering, Tsinghua University, Beijing 100084, China"
+      ],
+      "name": "Ji Wu"
+    },
+    {
+      "affiliations": [
+        "Vanke School of Public Health, Tsinghua University, Beijing 100084, China"
+      ],
+      "name": "Runsen Chen"
+    },
+    {
+      "affiliations": [
+        "Peking Union Medical College Hospital, Beijing 100730, China",
+        "Chinese Academy of Medical Sciences, Beijing 100730, China"
+      ],
+      "name": "Lian Zhou"
+    },
+    {
+      "affiliations": [
+        "Peking University Huilongguan Clinical Medical School, Beijing 100096, China",
+        "Department of Clinical Psychology, Beijing Huilongguan Hospital, Capital Medical University, Beijing 100096, China",
+        "WHO Collaborating Center for Research and Training in Suicide Prevention, Beijing 100096, China"
+      ],
+      "name": "Yongsheng Tong"
+    },
+    {
+      "affiliations": [
+        "Department of Electronic Engineering, Tsinghua University, Beijing 100084, China",
+        "Shanghai Artificial Intelligence Laboratory, Shanghai 200032, China",
+        "Department of Speech, Hearing and Phonetic Sciences, University College London (UCL), London WC1N 1PF, United Kingdom"
+      ],
+      "name": "Chao Zhang"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "临床语音既要防声音指纹和敏感话语泄露，又要保留疾病线索，CASA 用智能体按任务选声纹与内容匿名组合并用评估反馈迭代，在 14 个临床任务上同时满足隐私与效用要求，但结论只在原文的阈值、分类器和评测条件下成立。",
+  "originalTitle": "Task-adaptive anonymisation enables privacy-preserving sharing of clinical speech data",
+  "pdfUrl": "https://arxiv.org/pdf/2611.11273v1.pdf",
+  "readerTitle": "按任务选匿名策略：CASA 如何同时保隐私和保诊断信息",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

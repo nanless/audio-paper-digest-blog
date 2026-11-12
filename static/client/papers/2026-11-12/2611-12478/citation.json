@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.12478v1",
+  "arxivId": "2611.12478",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.12478v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Chengwei Wei"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yi Ma"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Nancy F. Chen"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.12478v1",
+  "originalTitle": "AuDiR: Diagnosing Audio Reasoning with Rule and Percept Interventions",
+  "pdfUrl": "https://arxiv.org/pdf/2611.12478v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

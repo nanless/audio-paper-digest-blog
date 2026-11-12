@@ -1,0 +1,80 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.12351v1",
+  "abstract": "Achieving generalizable and well-aligned multimodal representations remains a core challenge in robot learning. While recent approaches have attempted to align modalities by modeling conditional or higher-order statistical dependencies, they do not explicitly consider the structural coherence across modalities. In this work, we propose a novel multimodal alignment method that augments existing contrastive losses with a geometry-aware Gromov--Wasserstein (GW) distance-based regularization. To this end, we encode intra-modal geometry for each modality and reduce cross-modal structural discrepancies through a dynamically learned GW barycenter, thereby encouraging structural consistency in addition to instance-level contrastive alignment. We apply this optimal-transport-based alignment strategy to robot perception tasks involving underexplored modalities such as force and tactile signals, where modality data often exhibit varying sample densities. Extensive experiments on five robotic benchmarks show that our method improves structural alignment and downstream performance over state-of-the-art multimodal contrastive baselines across a wide range of downstream tasks, including robot and environment state prediction. Moreover, our GW-based regularization can be seamlessly integrated into most InfoNCE-like objectives.",
+  "abstractSha256": "4677e84991d07a09e706e08c4ef033923cd4d8adfab05bab6b408a09d7a8d5c7",
+  "arxivId": "2611.12351",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.12351v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "音频检索",
+    "rankBucket": "前50%",
+    "score": 5.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-retrieval",
+          "label": "音频检索"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.contrastive",
+          "label": "对比学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.reinforcement",
+          "label": "强化学习"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "音频检索",
+      "primaryTaskId": "task.audio-retrieval",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xinrui Zu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Mark Hoogendoorn"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kevin Sebastian Luck"
+    },
+    {
+      "affiliations": [
+        "Vrije Universiteit Amsterdam, the Netherlands"
+      ],
+      "name": "Shujian Yu"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对对比学习只管实例配对不管模态内几何的问题，UniOMA 用输入空间相似矩阵和可学习的 GW 重心做结构正则，在机器人多模态任务上多数情况下提升下游效果，但要多付每轮约 1.6 倍的训练时间。",
+  "originalTitle": "UniOMA: Unified Optimal-Transport Multi-Modal Structural Alignment for Robot Perception",
+  "pdfUrl": "https://arxiv.org/pdf/2611.12351v1.pdf",
+  "readerTitle": "UniOMA：用结构一致性补上多模态对齐缺的一块",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

@@ -1,0 +1,104 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.12118v1",
+  "abstract": "Full-duplex voice agents enable natural, hands-free interaction, allowing users to refine requests, redirect ongoing work, and seek clarification while the agent is speaking. However, existing voice-agent benchmarks insufficiently isolate coordination between task execution and conversation. We introduce a benchmark that assesses this coordination by examining whether agents track what is being executed, what has been completed, what has been communicated, and what remains to be reported as the conversation evolves. We propose an interactive user simulator that introduces configurable interventions at designated timing in tool execution and spoken result delivery, supporting controllable and reproducible evaluation conditions. We evaluate five leading commercial voice agents along three dimensions: execution responsiveness, coordination under request changes, and coordination under interruptions. Agent evaluations reveal persistent coordination failures. Under request changes, the highest result completion rate is only 55%, indicating difficulty for current voice agents adapting to new requests while preserving earlier obligations. After user interruption, four of the five agents exhibit average information omission rates of at least 23%. These findings highlight task coordination as a central challenge for current voice agents in complex, evolving conversations.",
+  "abstractSha256": "2b1540edc858104732e87831cbc181b219671ac7dca87096ec0f76dd9ea15456",
+  "arxivId": "2611.12118",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.12118v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "语音代理规划与工具使用",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.voice-agent-planning",
+          "label": "语音代理规划与工具使用"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "task",
+          "id": "task.full-duplex",
+          "label": "全双工语音交互"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "语音代理规划与工具使用",
+      "primaryTaskId": "task.voice-agent-planning",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xiangheng He"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Mingjun Zhao"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhehao Fan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhengjia Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xiaopeng Sun"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Qingqing Xiao"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Haolan Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yu Xu"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文研究全双工语音助手在工具执行和语音播报过程中如何跟踪已做、已说和待说的工作，方法是可控干预的用户模拟器加三维评测，最强证据是五款商用助手在需求变化和打断后普遍漏报，而代价是受控的模拟工具和英文无噪环境。",
+  "originalTitle": "Joi-Bench-Task: Benchmarking Task Coordination in Full-duplex Voice Agents through Interactive Simulation",
+  "pdfUrl": "https://arxiv.org/pdf/2611.12118v1.pdf",
+  "readerTitle": "一边干活一边说话：全双工语音助手如何跟上变化的需求",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

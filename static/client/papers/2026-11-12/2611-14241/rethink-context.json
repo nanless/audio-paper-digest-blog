@@ -1,0 +1,80 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.14241v1",
+  "abstract": "We introduce DyShip, a framework for classifying speaker familiarity and kinship from dyadic conversations in the Seamless Interaction corpus. We compare five speech representations: spectrograms, MFCCs, self-supervised WavLM representations, x-vectors, and estimated articulatory movements. Spectral features perform best for familiarity classification, reaching an accuracy of 87.81%, while WavLM achieves the highest kinship accuracy of 85.17%. X-vectors and articulatory features yield weaker results on familiarity classifiaction, but shine for kinship classification, with an AUC of 0.909 for x-vectors. Most classifiers exceed previously reported human and audio language model scores on the same dataset. These findings highlight the potential of conventional acoustic features for relationship inference and motivate further investigation of the conversational cues captured by different representations.",
+  "abstractSha256": "195bc7dc744bae115f1771a6057e2cc2549a3ac4820efa3af5c07984a04bfa83",
+  "arxivId": "2611.14241",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.14241v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "CNN",
+    "primaryTask": "互动亲和度估计",
+    "rankBucket": "前50%",
+    "score": 5.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.rapport-estimation",
+          "label": "互动亲和度估计"
+        },
+        {
+          "facet": "method",
+          "id": "method.cnn",
+          "label": "CNN"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.self-supervised",
+          "label": "自监督学习"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "CNN",
+      "primaryMethodId": "method.cnn",
+      "primaryTask": "互动亲和度估计",
+      "primaryTaskId": "task.rapport-estimation",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kieran Sturges"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Thomas Thebaud"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yaohan Guan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Najim Dehak"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "DyShip 用双人对话的语音判断整段对话的熟悉与亲缘关系，对比五种语音表示后发现频谱特征更适合判断熟悉、WavLM 和说话人向量更适合判断亲缘，但结论只在 Seamless Interaction 划分与会话级聚合条件下成立。",
+  "originalTitle": "Dyship: Leveraging Acoustic Features For Speaker Relationship Classification From Dyadic Conversations",
+  "pdfUrl": "https://arxiv.org/pdf/2611.14241v1.pdf",
+  "readerTitle": "DyShip：只用声音判断两个人是熟人还是亲人",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

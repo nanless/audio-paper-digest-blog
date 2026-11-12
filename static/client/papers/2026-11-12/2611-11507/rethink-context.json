@@ -1,0 +1,86 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.11507v1",
+  "abstract": "Lookup-table (LUT)-based neural networks (NNs) offer a compelling path to ultra-low-latency inference on FPGAs. However, existing LUT-based neural networks have largely been restricted to MLP-style topologies, leaving structured vision and audio tasks underexplored. We present ConvLUT, a family of fully unrolled LUT-mappable convolutional architectures targeting the MLPerf Tiny benchmarks. It is comprised of a standard convolutional model built around a hierarchical tree of LUTs and a depthwise separable model following the MobileNet design philosophy. These architectures are enabled by four key contributions: a unified LUT-based convolutional framework supporting standard, depthwise, and pointwise convolutions under explicit fan-in constraints; a LUT-tree that addresses the $k^2c$ receptive field dimensionality bottleneck; a channel-partitioned LUT pooling layer that replaces conventional spatial pooling; and a hardware-aware iterative pruning strategy for stable convergence at scale. Evaluated on CIFAR-10, Visual Wake Words, and Keyword Spotting, ConvLUT achieves competitive accuracy with fully unrolled inference latencies below $\\sim 50$ ns. On CIFAR-10 it reaches at least a $8844\\times$ latency reduction over non-logic-based prior implementations, and outperforms existing MLP-style LUT-based models on the same task by at least $20$ pp in test accuracy.",
+  "abstractSha256": "e5f3e7ccf463ca5a23ba00bfa1ef7925d7b7fe7f2926f66078eb1f0f77113363",
+  "arxivId": "2611.11507",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.11507v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "CNN",
+    "primaryTask": "关键词检测",
+    "rankBucket": "前50%",
+    "score": 6.7,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.keyword-detection",
+          "label": "关键词检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.cnn",
+          "label": "CNN"
+        },
+        {
+          "facet": "method",
+          "id": "method.pruning",
+          "label": "模型剪枝"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.real-time",
+          "label": "实时处理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "CNN",
+      "primaryMethodId": "method.cnn",
+      "primaryTask": "关键词检测",
+      "primaryTaskId": "task.keyword-detection",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Imperial College London, London, UK"
+      ],
+      "name": "Marta Andronic"
+    },
+    {
+      "affiliations": [
+        "University of California San Diego, San Diego, CA, USA"
+      ],
+      "name": "Olivia Weng"
+    },
+    {
+      "affiliations": [
+        "University of California San Diego, San Diego, CA, USA"
+      ],
+      "name": "Danial Zuberi"
+    },
+    {
+      "affiliations": [
+        "University of California San Diego, San Diego, CA, USA"
+      ],
+      "name": "Ryan Kastner"
+    },
+    {
+      "affiliations": [
+        "Imperial College London, London, UK"
+      ],
+      "name": "George A. Constantinides"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "ConvLUT 针对 MLPerf Tiny 上的图像与关键词任务，用稀疏 L-LUT 卷积、LUT 树扩展感受野与通道分区池化加迭代剪枝，在全展开 FPGA 实现下换来纳秒级延迟与有条件的精度竞争力，代价是极高的 LUT 占用。",
+  "originalTitle": "ConvLUT: Rethinking Convolutional Architectures for Ultra-Low-Latency LUT-Based Inference",
+  "pdfUrl": "https://arxiv.org/pdf/2611.11507v1.pdf",
+  "readerTitle": "ConvLUT：把卷积装进查找表的超低延迟推理",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

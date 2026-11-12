@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.11374v1",
+  "abstract": "Large-scale generative AI (GenAI) models have become increasingly integrated into contemporary creative practice, yet they often reproduce cultural biases and fail to meaningfully engage with non-Western artistic traditions. In response, this paper explores a small-data approach that foregrounds artist-curated and culturally informed dataset creation and model training. Through a case study on sarir (the distinctive sound produced by the reed pen in Persian calligraphy), we demonstrate how small-data GenAI can operate within a highly situated cultural context that lies beyond the representational reach of large-scale GenAI models. We construct a bespoke sarir audio dataset and train two models, RAVE and StyleGAN2, adapting each to the sonic domain through audio synthesis and spectrogram generation. The resulting models learn the fine-grained timbral and gestural nuances of sarir, enabling both real-time interaction and extended generative output. By comparing these results with state-of-the-art text-to-audio models, we clearly demonstrate the disparity in their performance and highlight the expressive possibilities unlocked through the small data approach. This focused case study demonstrates the feasibility of small-data GenAI for culturally specific artistic creation and underscores the value of further investigations that extend this approach to other cultural materials and artistic domains.",
+  "abstractSha256": "62eb8836b2dba2eb375c49a6ef98f3b6a59e2d389ee0ac60b0f22f7ae7acd6f7",
+  "arxivId": "2611.11374",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.11374v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "生成对抗网络",
+    "primaryTask": "音频生成",
+    "rankBucket": "前50%",
+    "score": 5.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-generation",
+          "label": "音频生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.gan",
+          "label": "生成对抗网络"
+        },
+        {
+          "facet": "method",
+          "id": "method.vae",
+          "label": "变分自编码器"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "生成对抗网络",
+      "primaryMethodId": "method.gan",
+      "primaryTask": "音频生成",
+      "primaryTaskId": "task.audio-generation",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Arshia Sobhan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Paul Triana"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Philippe Pasquier"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文针对大型文本到音频模型完全无法表现波斯书法芦苇笔声 sarir 的问题，用自建的 220 分钟专用数据集分别训练 RAVE 和 StyleGAN2，最好的 StyleGAN2 验证 FID 为 9.37，代价是需要较强的技术投入和本地算力。",
+  "originalTitle": "Small Data Generative AI for Culturally Specific Artistic Creation: A Case Study on the Sonic Space of sarir",
+  "pdfUrl": "https://arxiv.org/pdf/2611.11374v1.pdf",
+  "readerTitle": "小数据生成模型如何学习波斯书法笔声 sarir",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

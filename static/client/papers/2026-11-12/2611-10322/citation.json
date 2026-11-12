@@ -1,0 +1,58 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.10322v1",
+  "arxivId": "2611.10322",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.10322v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Vermont Complex Systems Institute, University of Vermont, Burlington, VT, USA",
+        "Network Science Institute, Northeastern University, Boston, MA, USA"
+      ],
+      "name": "Milo Z. Trujillo"
+    },
+    {
+      "affiliations": [
+        "Network Science Institute, Northeastern University, Boston, MA, USA"
+      ],
+      "name": "Adam Perhala"
+    },
+    {
+      "affiliations": [
+        "Network Science Institute, Northeastern University, Boston, MA, USA"
+      ],
+      "name": "Elaine Zou"
+    },
+    {
+      "affiliations": [
+        "Network Science Institute, Northeastern University, Boston, MA, USA"
+      ],
+      "name": "Tyler Mckenzie"
+    },
+    {
+      "affiliations": [
+        "Vermont Complex Systems Institute, University of Vermont, Burlington, VT, USA"
+      ],
+      "name": "Juniper Lovato"
+    },
+    {
+      "affiliations": [
+        "Vermont Complex Systems Institute, University of Vermont, Burlington, VT, USA",
+        "Network Science Institute, Northeastern University, Boston, MA, USA"
+      ],
+      "name": "Brooke Foucault Welles"
+    },
+    {
+      "affiliations": [
+        "Department of Mathematics and Computer Science, College of the Holy Cross, Worcester, MA, USA"
+      ],
+      "name": "Alyssa Hasegawa Smith"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.10322v1",
+  "originalTitle": "Police Behavior Patterns Through Radio Analysis",
+  "pdfUrl": "https://arxiv.org/pdf/2611.10322v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

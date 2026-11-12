@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.11125v1",
+  "arxivId": "2611.11125",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.11125v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jinchuan Tian"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Sen Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Wenbin Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Chao Weng"
+    },
+    {
+      "affiliations": [
+        "Independent ResearcherEqual contribution Project lead"
+      ],
+      "name": "Zhengwei Huang"
+    },
+    {
+      "affiliations": [
+        "Independent ResearcherEqual contribution Project lead"
+      ],
+      "name": "Jiatong Shi"
+    },
+    {
+      "affiliations": [
+        "Independent ResearcherEqual contribution Project lead"
+      ],
+      "name": "Yichen Lu"
+    },
+    {
+      "affiliations": [
+        "Language Technologies Institute, Carnegie Mellon University"
+      ],
+      "name": "Haoran Wang"
+    },
+    {
+      "affiliations": [
+        "Language Technologies Institute, Carnegie Mellon University"
+      ],
+      "name": "Shinji Watanabe"
+    },
+    {
+      "affiliations": [
+        "Independent ResearcherEqual contribution Project lead"
+      ],
+      "name": "Cong Zhou"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.11125v1",
+  "originalTitle": "LongCap: Hour-Scale Timestamped Audio Captioning via Chunk-wise Processing",
+  "pdfUrl": "https://arxiv.org/pdf/2611.11125v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

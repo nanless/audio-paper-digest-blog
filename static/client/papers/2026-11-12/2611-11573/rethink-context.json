@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.11573v1",
+  "abstract": "Audio language model benchmarks provide comprehensive evaluation across diverse tasks. However, some tasks can be answered from the transcript or even the question alone, and benchmark scores can therefore confound acoustic understanding with language modeling ability. We distinguish lexical tasks, for which the transcript usually suffices, from global-attribute and within-recording-structure tasks, which require the model to analyse the recording beyond its words, either as a whole, for properties such as the speaker and emotion, or within it, for patterns such as stress and intonation. We evaluated 19 open models and Gemini 3.1 Pro on 92 tasks from 6 benchmarks and estimated the recording gain, the accuracy advantage of the original recording over references that retain its words, by comparing the recording with synthetic readings of its transcript and by adding it to the transcript. On attribute and structure tasks, the open models fall behind Gemini by 28.6 and 41.9 percentage points, and about half or more of each deficit lies in the recording gain. Nevertheless, linear probes in Gemma-4 12B and Qwen2.5-Omni-7B show that the acoustic information needed for answering is already readable in early language-model layers, while the readout of many cues declines in the layers that follow. We therefore constructed training data and trained LoRA adapters in these layers, with a content anchor, which raises attribute and structure accuracy by 12.8 to 44.4 points in the two models and keeps mean lexical accuracy within 1 point of the base model. Most of the improvement appears as larger recording gains. These results suggest that training improves the use of acoustic information that the models already encode.",
+  "abstractSha256": "16c9ea5a53566aaa0690b298b6944404e1fec13ab440624737ff3ea8d0d48d0c",
+  "arxivId": "2611.11573",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.11573v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "表示探测",
+    "primaryTask": "音频问答",
+    "rankBucket": "前50%",
+    "score": 6.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-question-answering",
+          "label": "音频问答"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-reasoning",
+          "label": "音频推理"
+        },
+        {
+          "facet": "method",
+          "id": "method.representation-probing",
+          "label": "表示探测"
+        },
+        {
+          "facet": "method",
+          "id": "method.lora",
+          "label": "LoRA"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "表示探测",
+      "primaryMethodId": "method.representation-probing",
+      "primaryTask": "音频问答",
+      "primaryTaskId": "task.audio-question-answering",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "University of Connecticut"
+      ],
+      "name": "Linkai Peng"
+    },
+    {
+      "affiliations": [
+        "The University of Texas at Austin"
+      ],
+      "name": "Baorian Nuchged"
+    },
+    {
+      "affiliations": [
+        "University of Oxford"
+      ],
+      "name": "Yuyang Yao"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文把能否只靠文字回答作为任务划分标准，用合成朗读和加文字两种对照估计录音增益，发现开源模型在属性与结构任务上落后于 Gemini 的一半以上来自录音增益，并在两个模型中用探测与定层 LoRA 训练把声学利用补回来，同时用内容锚保持词汇任务基本不变。",
+  "originalTitle": "Beyond the Transcript: Measuring and Improving the Use of Acoustic Information in Audio Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2611.11573v1.pdf",
+  "readerTitle": "录音比文字多提供了什么：音频语言模型声学信息利用的测量与修复",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

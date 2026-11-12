@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.11327v1",
+  "abstract": "General-purpose state-of-the-art automatic speech recognition (ASR) systems fail systematically for speakers with moderate to severe speech disabilities. This paper describes the design, implementation, and evaluation of a customized ASR system built for the first author, a researcher with cerebral palsy and dysarthria. We fine-tuned OpenAI's Whisper medium and large-v3 models using Low-Rank Adaptation (LoRA) on audio samples recorded from the first author's own speech on consumer-grade hardware. On a held-out test set of 100 previously unseen utterances, the corresponding transcriptions resulted in a Word Error Rate drop from 49% to 17% for medium and from 30% to 12% for large-v3, while the Character Error Rate fell from 26% to 7% for medium and from 16% to 5% for large-v3, indicating that the residual errors are minor phonemic substitutions. Based on these models, the first author developed AVoz, a mobile application that acts as a real-time interpreter, converting his speech into synthesized voice for the listener. All processing is performed locally, ensuring that no audio data leaves the user's machine. We argue that the methodology is replicable. Moreover, we publish the full LoRA configuration, the implementation, and a step-by-step recording and training protocol, so that other people with speech disabilities, or their family members and caregivers, can build their own systems with a few hours of labeled audio data and a couple of days of GPU time.",
+  "abstractSha256": "d18f59598a115d9ccb98422ec606e6d2236f662956b35b333fdcb38e243ad6d3",
+  "arxivId": "2611.11327",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.11327v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "LoRA",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.lora",
+          "label": "LoRA"
+        },
+        {
+          "facet": "task",
+          "id": "task.pathological-speech",
+          "label": "病理语音评估"
+        },
+        {
+          "facet": "application",
+          "id": "application.accessibility",
+          "label": "无障碍"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "LoRA",
+      "primaryMethodId": "method.lora",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "CENSE – Center for Environmental and Sustainability Research",
+        "& CHANGE - Global Change and Sustainability Institute",
+        "NOVA School of Science and Technology, NOVA University Lisbon",
+        "Campus de Caparica, 2829-516 Caparica"
+      ],
+      "name": "Paulo A. Condado"
+    },
+    {
+      "affiliations": [
+        "CENSE – Center for Environmental and Sustainability Research",
+        "& CHANGE - Global Change and Sustainability Institute",
+        "DEEI-FCT, Universidade do Algarve",
+        "Campus de Gambelas, 8005-139 Faro, Portugal"
+      ],
+      "name": "Fernando G. Lobo"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文针对通用 Whisper 听不懂第一作者本人中度至重度构音障碍语音的问题，用 765 句本人口语录音做 LoRA 微调，在 100 句未见过测试句上把词错误率从 49.2% 降到 17.0%（medium）和从 30.4% 降到 12.4%（large-v3），并据此做成本地运行的实时转述应用 AVoz，代价是单人单环境数据与消费级机器上数天的微调时间。",
+  "originalTitle": "DIY Customized Speech Recognition for a Person with Speech Disabilities",
+  "pdfUrl": "https://arxiv.org/pdf/2611.11327v1.pdf",
+  "readerTitle": "为一个人定制语音识别：用少量录音让 Whisper 听懂构音障碍语音",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

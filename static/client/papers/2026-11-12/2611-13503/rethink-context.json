@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.13503v1",
+  "abstract": "Temporal analysis in music information retrieval concerns the positions of musical events and structures within recordings. Joint modeling has demonstrated the value of combining musical descriptions, but existing resources differ in joint coverage and expert verification across dimensions, constraining detailed joint supervision and the analysis of relationships on the same recordings. To support multitask modeling and the study of relationships among musical dimensions in popular music, we introduce FaiSonic Multidimensional Music Dataset (FaiSonic MMD), containing 500 songs totaling approximately 32.86 hours, comprising 250 Chinese-language and 250 English-language songs. Professional musicians annotate phrases, sections, chords, and rhythm in real recordings, followed by independent review. Events and intervals across dimensions share a recording-based time reference while retaining their respective musical granularity and boundaries, allowing direct comparison across musical descriptions. We describe the annotations, collection procedure, and statistics, and establish a comprehensive multitask baseline for phrase boundaries, section boundaries, section functions, chords, beats, and downbeats. We report reference performance for all prediction targets. FaiSonic MMD provides shared expert annotations and accompanying benchmarks for temporal music analysis.",
+  "abstractSha256": "87d343ec16358b2df364f83fc9bdee3e0547d743fce509c2c9b25ae8cf7d26d5",
+  "arxivId": "2611.13503",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.13503v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "数据集构建",
+    "primaryTask": "音乐结构分析",
+    "rankBucket": "前25%",
+    "score": 7.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-structure-analysis",
+          "label": "音乐结构分析"
+        },
+        {
+          "facet": "task",
+          "id": "task.beat-tracking",
+          "label": "节拍跟踪"
+        },
+        {
+          "facet": "task",
+          "id": "task.chord-recognition",
+          "label": "和弦识别"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "method",
+          "id": "method.dataset-curation",
+          "label": "数据集构建"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "数据集构建",
+      "primaryMethodId": "method.dataset-curation",
+      "primaryTask": "音乐结构分析",
+      "primaryTaskId": "task.music-structure-analysis",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Tieyao Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yuke Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jiaxing Yu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xinda Wu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Genfang Chen"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文针对同一批真实流行录音上四个时间维度缺少共同专家核验的问题，发布 500 首中英文歌曲的联合标注与多任务基线，在固定划分上给出六类预测的参考成绩，扩充同类专家数据后各项指标继续提升。",
+  "originalTitle": "FaiSonic MMD: A popular music dataset with temporally aligned multidimensional annotations for multitask music analysis",
+  "pdfUrl": "https://arxiv.org/pdf/2611.13503v1.pdf",
+  "readerTitle": "同一批流行歌上同时标注乐句、段落、和弦与节奏：FaiSonic MMD 做了什么",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

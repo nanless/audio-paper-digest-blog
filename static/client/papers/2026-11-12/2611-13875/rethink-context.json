@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.13875v1",
+  "abstract": "Existing instruction-based TTS systems primarily support one-shot, utterance-level control, where a single instruction determines the speaking style of an entire utterance. As a result, even minor refinements require rewriting the instruction and regenerating the full utterance, limiting fine-grained interactive control. We propose DialInstruct-TTS, an interactive multi-turn expressive TTS framework that enables users to iteratively refine generated speech through natural-language dialogue until the desired style is achieved. At each dialogue turn, a Qwen-based planner integrates the dialogue history and latest user instruction into a complete TemporalPlan, while a temporal acoustic control module provides fine-grained control over emotion, speaking rate, volume, and phonation. Reference-latent revision preserves non-target regions across turns, allowing users to modify only the requested attributes or temporal spans while retaining previously satisfactory speech. Subjective evaluations demonstrate improved global instruction following, accurate local style realization, and effective non-target preservation. Compared with conventional one-shot interaction requiring full instruction restatement and utterance regeneration, DialInstruct-TTS substantially improves perceived convenience and interaction comfort. Audio samples are available at https://anonymous.4open.science/w/eacl-demo-17C5/.",
+  "abstractSha256": "bd72dfa2367e2f5320b31cf7b907189a7787a97bb452cee08433835b47f0074f",
+  "arxivId": "2611.13875",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.13875v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "流匹配",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前50%",
+    "score": 6.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "task",
+          "id": "task.prosody-style-control",
+          "label": "韵律与风格控制"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-editing",
+          "label": "语音编辑"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "流匹配",
+      "primaryMethodId": "method.flow-matching",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Wangzixi Zhou"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Bagus Tris Atmaja"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Sakriani Sakti"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对一次指令只能定整句风格、想改一小段也得重写重生成的问题，该文用记住历史的对话规划器加只改目标时间段的声学模块实现多轮细粒度修改，主观评测显示指令符合度更高且多轮交互更省事，但结论只限日语、小规模受控评测和特定风格集合。",
+  "originalTitle": "DialInstruct-TTS: Interactive Expressive Speech Generation via Multi-Turn Dialogue with Fine-Grained Temporal Control",
+  "pdfUrl": "https://arxiv.org/pdf/2611.13875v1.pdf",
+  "readerTitle": "DialInstruct-TTS：用多轮对话一点点改出想要的语音风格",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

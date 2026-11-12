@@ -1,0 +1,80 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.13834v1",
+  "abstract": "Music editing transforms existing recordings while preserving their original attributes. Recent approaches adapt pretrained text-to-music models for tasks like inpainting, event insertion, or restoration by conditioning them with context audio. It was recently proposed for image editing to unify generation and editing by treating the source image as in-context information. However, applying this directly to music is computationally expensive due to long audio sequences. In this work, we develop MusicFlux, a text-guided music editor built on an efficient pretrained flow-matching text-to-audio model. We introduce two conditioning approaches that trade off editing performance and computational efficiency. Experiments show that both are competitive with strong baselines, with one achieving better editing quality and the other preserving the original sequence length and substantially improving computational efficiency.",
+  "abstractSha256": "3b60909985f11ca39a9feb855c5bf5bac48d6fa6f358480ede1fa6e4078be3f8",
+  "arxivId": "2611.13834",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.13834v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "流匹配",
+    "primaryTask": "音频编辑",
+    "rankBucket": "前50%",
+    "score": 6.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-editing",
+          "label": "音频编辑"
+        },
+        {
+          "facet": "task",
+          "id": "task.music-generation",
+          "label": "音乐生成"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-restoration",
+          "label": "音频修复"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "流匹配",
+      "primaryMethodId": "method.flow-matching",
+      "primaryTask": "音频编辑",
+      "primaryTaskId": "task.audio-editing",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Teysir Baoueb"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Leonardo Boulitreau de Menezes Martins Marques"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Paraskevas Stamatiadis"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Gaël Richard"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "MusicFlux 针对长音频编辑时拼接上下文代价过高的问题，在 TangoFlux 上比较了拼接上下文与加性偏移两种条件方式，在域内修复与生成上接近专用基线，但跨域泛化与细粒度恢复仍受限，且偏移方式以部分编辑保真为代价换取序列长度不变与推理开销下降。",
+  "originalTitle": "MusicFlux: Flexible Conditioning for Text-Guided Music Generation and Editing",
+  "pdfUrl": "https://arxiv.org/pdf/2611.13834v1.pdf",
+  "readerTitle": "MusicFlux：用两种条件方式统一文本生成音乐与局部修复",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

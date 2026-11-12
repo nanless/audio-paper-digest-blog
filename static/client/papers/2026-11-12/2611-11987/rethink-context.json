@@ -1,0 +1,80 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.11987v1",
+  "abstract": "Multimodal Emotion Recognition in Conversation (MERC) combines lexical, acoustic, visual and conversational cues, but accepting audio and video does not establish their effective or robust use. We audit off-the-shelf Omni models while holding the target transcript and prior textual context fixed and adding, removing or replacing target audio and video. In the primary evaluation of Qwen2.5-Omni-7B, Baichuan-Omni-1.5 and MiniCPM-o 2.6 on MELD and the full five-session six-class IEMOCAP set, T+A improves Accuracy in all six model-dataset pairs, with four gains significant after false discovery rate (FDR) correction. Across three source mappings, unrelated A/V (RandA/V) lowers Accuracy relative to Full in all 18 comparisons; all 18 remain significant under dialogue-cluster inference and BH-FDR correction, both on common-valid pairs and when invalid/OOM outcomes are treated as incorrect. Comparisons with modality-omission baselines further distinguish replacement penalties from mismatch-specific harm. A Qwen/MELD case study finds significantly greater gold-vs-best-candidate margin recovery in Late than Early or Middle under decision-query audio knockout, relative to an edge-count-matched Video-Sham control, using Holm-corrected tests. These results distinguish genuine-modality benefit from sensitivity and vulnerability to misleading input.",
+  "abstractSha256": "1bfa0655f41de3babe41a5884df96f85f6a74e89b51da3fcc996fd58b96219ee",
+  "arxivId": "2611.11987",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.11987v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "激活因果干预",
+    "primaryTask": "多模态情感极性分析",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.multimodal-sentiment",
+          "label": "多模态情感极性分析"
+        },
+        {
+          "facet": "method",
+          "id": "method.activation-intervention",
+          "label": "激活因果干预"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "激活因果干预",
+      "primaryMethodId": "method.activation-intervention",
+      "primaryTask": "多模态情感极性分析",
+      "primaryTaskId": "task.multimodal-sentiment",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Youngseok Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Minjae Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Eunsoo Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jihie Kim"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文固定文本转录和上文语境，只替换目标音频视频，检验三个现成 Omni 模型在 MELD 和 IEMOCAP 上何时从真实语音获益、何时被无关音视频带偏，并用决策查询干预定位后期层的作用。",
+  "originalTitle": "When Audio and Video Mislead: Evaluating Multimodal AI for Conversational Emotion Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2611.11987v1.pdf",
+  "readerTitle": "当音频和视频误导判断：对话情感识别的多模态依赖审计",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

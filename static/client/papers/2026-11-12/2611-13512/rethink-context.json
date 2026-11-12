@@ -1,0 +1,86 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.13512v1",
+  "abstract": "Nepali speakers regularly mix English words into conversation, but multilingual speech recognisers often struggle with language switches and the writing script used for English words. We study how to adapt SraVaani, a 449M-parameter hybrid TDT-CTC model, using a 172.8-hour corpus covering six Nepali speech domains. Its pretrained tokenizer does not support digits and several common symbols. Rather than replace it or discard these recordings, we generate Nepali and English readings for numbers and use zero-shot ASR output to select a plausible form. Full fine-tuning reduces test word error rate (WER) from 48.6% to 17.1%; a 12-epoch run reaches 16.3%, compared with 16.4% for fine-tuned Whisper large-v3-turbo. Freezing the encoder increases WER to 25.5%, while excluding numeric clips raises WER on numeric test speech from 14.3% to 21.3%. We also evaluate on FLEURS using both its original references and mixed-script alternatives. The comparison shows that transcription conventions explain part, but not all, of the out-of-domain performance loss.",
+  "abstractSha256": "d60fbb8d1c145eb69a0dce783d6dd09238441888f5e7ecadb2bbbc1e03dd7e08",
+  "arxivId": "2611.13512",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.13512v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "SFT",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.sft",
+          "label": "SFT"
+        },
+        {
+          "facet": "method",
+          "id": "method.dataset-curation",
+          "label": "数据集构建"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.code-switching",
+          "label": "代码转换"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "SFT",
+      "primaryMethodId": "method.sft",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jeevan Neupane"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Janardan Bhetwal"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kshitiz Paudel"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Anup Aryal"
+    },
+    {
+      "affiliations": [
+        ", Nepal"
+      ],
+      "name": "Bipin Bashyal"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文针对尼泊尔语中混入英语且书写要求分脚本的问题，用 172.8 小时六领域语料在保留分词器下做数字双语口语化与全参数微调，把测试词错误率从 48.6% 降到 16.3%，代价是域外读写差异仍带来损失且数字标签需再核验。",
+  "originalTitle": "Nepali-English Code-Mixed Speech Recognition: Data Preparation and Adaptation of a Speech Foundation Model",
+  "pdfUrl": "https://arxiv.org/pdf/2611.13512v1.pdf",
+  "readerTitle": "尼泊尔语英语混读语音识别：数据准备与语音基础模型适配",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

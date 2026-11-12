@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.10852v1",
+  "abstract": "Public automatic speech recognition (ASR) benchmarks increasingly report low sequence error rates, yet production systems still use hotword lists, contextual biasing, retrieval, and post-correction. This motivates a complementary question: does a transcript preserve selected names, products, technical terms, versions, and relational phrases? We present KeyASRBench, a bilingual pilot that operationalizes occurrence-based Keyword Error Rate (KER) over frozen whole-phrase annotations. The 10-hour model-conditioned challenge set contains 1,501 Chinese and English clips with 4,723 keyword occurrences. Across five locally inferred checkpoints and two official API systems, language-specific MER/WER ranges from 5.31% to 12.91%, while KER ranges from 13.61% to 33.81%. A disjoint 30-minute model-blind control yields KER of 10.65%-27.31%. The control confirms that selected-phrase errors extend beyond challenge-set selection.",
+  "abstractSha256": "455b530610714e59d02405f01951375e1c8376ab93cf6e3e5f45633623b94033",
+  "arxivId": "2611.10852",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.10852v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.evaluation",
+          "label": "模型评估"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Guanzheng Wei"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ziyi Zhao"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "KeyASRBench 针对播客与技术讨论中的人名产品名与版本关系短语，用冻结整词标注与出现次数统计的关键词错误率揭示序列错误率很低时整词仍大量丢失，并在 10 小时挑战集与 30 分钟盲测对照上验证七套系统的这一差距与代价。",
+  "originalTitle": "KeyASRBench: Measuring Whole-Phrase Keyword Preservation in Real-World ASR",
+  "pdfUrl": "https://arxiv.org/pdf/2611.10852v1.pdf",
+  "readerTitle": "整句错得不多，关键词却丢了：KeyASRBench 如何度量整词短语保留",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

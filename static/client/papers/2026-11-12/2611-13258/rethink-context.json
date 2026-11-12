@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.13258v1",
+  "abstract": "Audio deepfake detectors that work well on clean lab recordings often degrade after telephone or platform compression. This paper asks a specific question: which low-dimensional acoustic descriptors stay informative after codec degradation? We screen 36 utterance-level features(formants, PNCCs, LFCCs, prosody) on ASVspoof 2019 data and test on the official ASVspoof 2021 LA set across seven codec conditions. Of 33 statistically significant descriptors, only four show large practical separation (|r| >0.5, bootstrap 95% CIs), all first-formant (F1) measures, highly redundant (PC1: 79% variance). The payoff is stability: the 36-feature SVM degrades 14 pp under codec mismatch (9.5%-23.5% EER), while the four-feature RBF-SVM degrades only 5.9 pp (17.0%-22.9%). The F1 subset varies 3.4 pp across conditions versus 13.1 pp for the full set. F1 differences persist after controlling for speaker identity (p greater than 10^10, mixed-effects model). The results suggest that physically interpretable F1 statistics offer a compact, codec-stable diagnostic signal that may complement higher accuracy neural detectors.",
+  "abstractSha256": "930d313688a335a102fab1de06494087facf6ccbede2412df700aa65b12c3d7a",
+  "arxivId": "2611.13258",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.13258v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "统计分析",
+    "primaryTask": "音频深度伪造检测",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-deepfake",
+          "label": "音频深度伪造检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.interpretability",
+          "label": "可解释性"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "统计分析",
+      "primaryMethodId": "method.statistical-analysis",
+      "primaryTask": "音频深度伪造检测",
+      "primaryTaskId": "task.audio-deepfake",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Electrical and Computer Engineering"
+      ],
+      "name": "Yash Sukhdeve"
+    },
+    {
+      "affiliations": [
+        "Department of Computer ScienceClarkson University, Potsdam, NY 13699, USA"
+      ],
+      "name": "Aaron Storey"
+    },
+    {
+      "affiliations": [
+        "Department of Electrical and Computer Engineering"
+      ],
+      "name": "Masudul H. Imtiaz"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文在 ASVspoof 2019 干净数据上训练、在 2021 七种编码条件下筛选 36 个话语级声学描述子，发现只有四个第一共振峰统计量具有大效应分离，四特征支持向量机跨条件摆动更小，但干净条件下绝对等错率高于全特征模型和神经基线。",
+  "originalTitle": "Which Acoustic Features Survive Compression? Tracker-Estimated First-Formant Statistics for Codec-Robust Audio DeepfakeDetection",
+  "pdfUrl": "https://arxiv.org/pdf/2611.13258v1.pdf",
+  "readerTitle": "压缩后还剩什么线索：第一共振峰统计为何更耐编码器",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

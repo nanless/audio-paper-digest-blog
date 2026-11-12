@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.13777v1",
+  "abstract": "A user utterance does not uniquely determine the next action in full-duplex dialogue: its consequences depend on the assistant's response state and interaction history. Speech activity, utterance completion, and interruption intent provide related evidence, whose implications for a response require an explicit action policy. We formulate this task at collected-segment endpoints and introduce Omni-JEV, which maps text or role-indexed user and assistant-reference speech to probabilities over five interaction actions. An aligned speech-to-speech understanding backbone encodes the acoustic roles separately and shares its candidate readout with text inputs. Bilingual weak supervision supports cross-entropy fine-tuning followed by reinforcement learning for probability-sensitive decisions (RLCD). We compare Gaussian-logit and categorical Choice RLCD from the same supervised initialization under matched training exposure, observing different trade-offs between classification and probability quality. Gaussian Omni-JEV achieves test accuracies of 84.08% for audio and 96.55% for text. This common action interface supports decisions about when a full-duplex voice assistant should respond, preserve ongoing speech, interrupt, or resume an interrupted response.",
+  "abstractSha256": "3d818e84ebfcb2bf6885274c0c12043b01c5aec1c1966d91e7eeba5207a1c933",
+  "arxivId": "2611.13777",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.13777v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "强化学习",
+    "primaryTask": "全双工语音交互",
+    "rankBucket": "前50%",
+    "score": 5.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.full-duplex",
+          "label": "全双工语音交互"
+        },
+        {
+          "facet": "method",
+          "id": "method.reinforcement",
+          "label": "强化学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        },
+        {
+          "facet": "method",
+          "id": "method.weak-supervised",
+          "label": "弱监督学习"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "强化学习",
+      "primaryMethodId": "method.reinforcement",
+      "primaryTask": "全双工语音交互",
+      "primaryTaskId": "task.full-duplex",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Merit Interactive Research Institute"
+      ],
+      "name": "Shengzhou Kong"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "Omni-JEV 把收集到的用户语音片段和同一时段的助手参考语音放在决策端点，用同一个候选分布输出听、开始、保持、打断、恢复五个动作，在固定弱标签测试上高斯延续语音准确率 84.08%、文本 96.55%，而类别延续概率误差更低，两者各有取舍。",
+  "originalTitle": "Omni-JEV: Text and Dual-Stream Speech Decisions",
+  "pdfUrl": "https://arxiv.org/pdf/2611.13777v1.pdf",
+  "readerTitle": "全双工语音助手何时该听、该说、该打断：Omni-JEV 的五动作决策",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

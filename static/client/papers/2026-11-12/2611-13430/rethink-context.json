@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.13430v1",
+  "abstract": "Spoken Language Diarization (SLD) models provide frame-level language information of a speech recording. SLD modeling pipeline includes feature extraction from pre-trained speech models followed by clustering. Fine-tuning pre-trained speech models has shown performance gains for SLD with its magnitude being dataset dependent. Off-target Posterior Mass (OTPM), computed based on posterior language identification probabilities is proposed as a diagnostic metric to forecast performance gains from SLD fine-tuning. OTPM obtains positive correlation with probe gains, 0.56 on unseen synthetic bilingual data and 0.23 on real-world corpora. These results indicate promising potential of OTPM as a diagnostic metric for SLD.",
+  "abstractSha256": "8ed08c280f77de605867a002f776793554d8c1b6e0fa6b05378abe36539ec13e",
+  "arxivId": "2611.13430",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.13430v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "表示探测",
+    "primaryTask": "语言识别",
+    "rankBucket": "前50%",
+    "score": 5.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.language-identification",
+          "label": "语言识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.representation-probing",
+          "label": "表示探测"
+        },
+        {
+          "facet": "method",
+          "id": "method.clustering",
+          "label": "聚类与类别匹配"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "表示探测",
+      "primaryMethodId": "method.representation-probing",
+      "primaryTask": "语言识别",
+      "primaryTaskId": "task.language-identification",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Signal and Image Processing Institute, Ming Hsieh Department of Electrical and Computer Engineering, University of Southern California, Los Angeles, California 90089, USA"
+      ],
+      "name": "Zhuoyan Tao"
+    },
+    {
+      "affiliations": [
+        "Signal and Image Processing Institute, Ming Hsieh Department of Electrical and Computer Engineering, University of Southern California, Los Angeles, California 90089, USA"
+      ],
+      "name": "Aditya Kommineni"
+    },
+    {
+      "affiliations": [
+        "Signal and Image Processing Institute, Ming Hsieh Department of Electrical and Computer Engineering, University of Southern California, Los Angeles, California 90089, USA"
+      ],
+      "name": "Shrikanth Narayanan"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "本文针对口语语种分割中是否值得为新语料标注并微调预训练语音模型的问题，提出免训练免标注的非目标后验质量并用直线拟合预测探针增益，在合成双语上排序为正而在真实语料上变弱且整体高估。",
+  "originalTitle": "Off-target posterior mass: A training-free diagnostic for fine-tuning spoken language diarization probes",
+  "pdfUrl": "https://arxiv.org/pdf/2611.13430v1.pdf",
+  "readerTitle": "用非目标后验质量预判语种分割微调收益",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

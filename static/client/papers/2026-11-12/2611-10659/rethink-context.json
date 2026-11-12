@@ -1,0 +1,133 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.10659v1",
+  "abstract": "Diarization-conditioned target-speaker ASR (TS-ASR), in particular Diarization-conditioned Whisper (DiCoW), is an accurate and data-efficient approach to multi-talker transcription. It has, however, three structural limitations: the model transcribes each speaker independently, operates on short (30 s) windows, and optimizes its diarization and TS-ASR components separately. We address the first two. We integrate the diarization conditioning into a longform Parakeet backbone (DiCoP) and add cross-speaker attention, which lets the model attend across the speaker dimension so that speakers are no longer decoded in isolation, and an STNO mask refiner that re-estimates the diarization-derived conditioning. As conversational data with genuine multi-speaker interaction is scarce, we scale training with a pseudo-labeling pipeline that mines 5.4k hours of in-the-wild multi-speaker audio from YODAS2. Combining these with synthetic and real data yields state-of-the-art results across several meeting benchmarks. We open-source the resulting models, DiCoP and Pandemonium, and the pseudo-labeled data.",
+  "abstractSha256": "0824f1feb3c299dc058b592296d69d66e5a61a4e41063779ea3cc402ced824e0",
+  "arxivId": "2611.10659",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.10659v1",
+  "assessment": {
+    "documentType": "模型报告",
+    "primaryMethod": "注意力机制",
+    "primaryTask": "多说话人语音识别",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.multi-talker-asr",
+          "label": "多说话人语音识别"
+        },
+        {
+          "facet": "task",
+          "id": "task.diarization",
+          "label": "说话人分离标注"
+        },
+        {
+          "facet": "method",
+          "id": "method.attention",
+          "label": "注意力机制"
+        },
+        {
+          "facet": "application",
+          "id": "application.meeting",
+          "label": "会议转录"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.long-audio",
+          "label": "长音频处理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "注意力机制",
+      "primaryMethodId": "method.attention",
+      "primaryTask": "多说话人语音识别",
+      "primaryTaskId": "task.multi-talker-asr",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Alexander Polok"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Dominik Klement"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ivan Medennikov"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Antoine Laurent"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Petr Pálka"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Samuele Cornell"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shinji Watanabe"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Sanjeev Khudanpur"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jagadeesh Balam"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jan Černocký"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Lukáš Burget"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Matthew Wiesner"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文解决多人重叠长录音的逐人转写问题，把说话人分离条件的识别器搬到可一次处理整场会议的 Parakeet 长窗骨干上，再用跨说话人注意力和掩码精修器让各说话人通道互相参照，并用合成加 5.4k 小时伪标注加真会场数据的三段训练换来多个会议基准上的最低拼接词错率，代价是仍依赖外部分离结果且 CTC 长窗训练比短窗 TDT 精度略有损失。",
+  "originalTitle": "Pandemonium: Longform Target-Speaker Speech Recognition with Cross-Speaker Interactions",
+  "pdfUrl": "https://arxiv.org/pdf/2611.10659v1.pdf",
+  "readerTitle": "多人长对话怎么逐人识别：Pandemonium 的条件、交互与长窗解码",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

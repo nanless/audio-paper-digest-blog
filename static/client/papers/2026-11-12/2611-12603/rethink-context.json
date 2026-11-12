@@ -1,0 +1,86 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.12603v1",
+  "abstract": "Reconstructing audio from brain activity remains challenging. Existing brain-to-audio pipelines typically map neural responses to predefined stimulus representations before synthesis. While recent work in the visual domain has explored direct conditioning on brain activity, this approach has not yet been extended to audio diffusion models. We introduce MAAS (Multi-Area Auditory Synthesis), an end-to-end framework that conditions a pretrained audio diffusion transformer on ROI-wise fMRI responses without first supervising a decoder to predict an external stimulus representation. MAAS uses region-specific projections and learned brain tokens to condition Stable Audio through a dedicated cross-attention pathway. On a 7T fMRI dataset, we demonstrate consistent improvements over baselines, including two-stage fMRI-to-latent conditioning, across both acoustic and semantic evaluation metrics. In addition, we introduce a fidelity metric grounded in a computational model of auditory neural processing, which allows us to quantify the contribution of individual auditory cortical regions to reconstructed audio representations.",
+  "abstractSha256": "31f5e1fd8ea68e4f403138042a56ef7315a4b1bd7be4a0078f08354b5d476b33",
+  "arxivId": "2611.12603",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.12603v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "Adapter",
+    "primaryTask": "言语神经解码",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.neural-speech-decoding",
+          "label": "言语神经解码"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-generation",
+          "label": "音频生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.diffusion",
+          "label": "扩散模型"
+        },
+        {
+          "facet": "method",
+          "id": "method.adapter",
+          "label": "Adapter"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "Adapter",
+      "primaryMethodId": "method.adapter",
+      "primaryTask": "言语神经解码",
+      "primaryTaskId": "task.neural-speech-decoding",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Matteo Ciferri"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Tonio Weidler"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Matteo Ferrante"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Nicola Toschi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Elia Formisano"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对从 fMRI 重建自然声音时两阶段映射会丢失频谱细节的问题，MAAS 用分区脑信号直接条件化 Stable Audio，并在 7T 小样本与 3T 外部数据上用声学与语义指标验证了神经信息的贡献与早期听觉区的核心作用。",
+  "originalTitle": "Direct Conditioning of Audio Diffusion Transformers on fMRI Reveals Cortical Contributions to Sound Reconstruction",
+  "pdfUrl": "https://arxiv.org/pdf/2611.12603v1.pdf",
+  "readerTitle": "直接用脑信号驱动音频扩散模型：MAAS 如何重建听到的声音",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

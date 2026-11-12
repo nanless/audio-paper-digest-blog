@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.11777v1",
+  "arxivId": "2611.11777",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.11777v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Nanjing University, Nanjing, Jiangsu, China"
+      ],
+      "name": "Guodong Liu"
+    },
+    {
+      "affiliations": [
+        "Soochow University, Suzhou, Jiangsu, China"
+      ],
+      "name": "Lei Wang"
+    },
+    {
+      "affiliations": [
+        "Nanjing University, Nanjing, Jiangsu, China"
+      ],
+      "name": "Dongxu Liu"
+    },
+    {
+      "affiliations": [
+        "Nanjing University, Nanjing, Jiangsu, China"
+      ],
+      "name": "Qianran Qiao"
+    },
+    {
+      "affiliations": [
+        "Nanjing University, Nanjing, Jiangsu, China"
+      ],
+      "name": "Haipeng Dai"
+    },
+    {
+      "affiliations": [
+        "Soochow University, Suzhou, Jiangsu, China"
+      ],
+      "name": "He Huang"
+    },
+    {
+      "affiliations": [
+        "Nanjing University, Nanjing, Jiangsu, China"
+      ],
+      "name": "Guihai Chen"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.11777v1",
+  "originalTitle": "Towards Trustworthy Mobile Speech Interaction: Ensuring Voice Authenticity and Transmission Integrity",
+  "pdfUrl": "https://arxiv.org/pdf/2611.11777v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

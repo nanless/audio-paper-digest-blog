@@ -1,0 +1,80 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.13178v1",
+  "abstract": "Generative pipelines can now turn every product page of an e-commerce catalog into a short video ad, but deciding whether such an ad is usable is not one good-or-bad call. We describe how we operationalized the review and editing of these ads so that both can keep pace with generation: reviewers go through each ad scene by scene and answer six questions, on the product, scene quality, pronunciation, script, sound and captions; judges built from vision-language, speech and language models file each finding under the matching question, and reviewers accept or reject each finding and add what the judges missed. Each confirmed issue then opens an edit tool matched to it. The questions and the routing from a finding to its fix do not depend on the models that generate the ad. Across 120 ads from our pipeline, reviewed with judge findings on screen, reviewers marked the product wrong on 60% of scenes, and script, caption or sound problems on under 10% each. On 60 of these ads, they marked the product wrong on 58% of scenes, far more than the 26% marked by two reviewers who later saw the ads with the judges hidden; one reviewer who saw the ads both ways marked 57% with judge findings and 19% without. On 120 blind-labeled scenes, a product judge that watches the clip with the catalog photos reached AUC 0.84, while video-quality and photo-similarity scores were close to chance. We tune the judges for recall: the product judge catches nearly all defects but also flags many clean scenes, so reviewers decide; together, the judges widen what reviewers mark and reviewers add what the judges miss. Without judge findings, one reviewer's marking faded over a session. We release a review-portal template and our review data (120 ads and 562 scenes with judge findings and human marks, plus 120 blind-labeled scenes with baseline scores) at https://github.com/anoubhav/ad-review-and-edit.",
+  "abstractSha256": "0736378165d9fdf8b413f55f4e125899bc13e2f2c217d9df32391bdd844c386b",
+  "arxivId": "2611.13178",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.13178v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "人类参与评测",
+    "primaryTask": "音视频理解",
+    "rankBucket": "前50%",
+    "score": 5.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-understanding",
+          "label": "音视频理解"
+        },
+        {
+          "facet": "method",
+          "id": "method.human-evaluation",
+          "label": "人类参与评测"
+        },
+        {
+          "facet": "task",
+          "id": "task.video-generation",
+          "label": "视频生成"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "人类参与评测",
+      "primaryMethodId": "method.human-evaluation",
+      "primaryTask": "音视频理解",
+      "primaryTaskId": "task.av-understanding",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Anoubhav Agarwaal"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Sukesh Perla"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Karthikeyan Mohanraj"
+    },
+    {
+      "affiliations": [
+        "Anoki Inc."
+      ],
+      "name": "Susmita Ghose"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文把每条 15 秒广告拆到场景、台词和字幕逐项回答六个问题，用看得见证据的模型法官先标、人工逐条表决再定向改最小单元，在 120 条广告上产品错误最突出且有法官时标出更多，但法官误报多仍需人工把关。",
+  "originalTitle": "Multimodal Judges Flag, Humans Decide: A Review-and-Edit Framework for AI-Generated Product Video Ads",
+  "pdfUrl": "https://arxiv.org/pdf/2611.13178v1.pdf",
+  "readerTitle": "生成式产品视频广告如何审改：六个问题、两类评审与定向修复",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

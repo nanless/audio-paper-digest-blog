@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.13957v1",
+  "abstract": "} Predicting who will speak next, and when, is a prerequisite for conversational agents and social robots that take turns without waiting for silence. Multiparty next-speaker prediction (NSP) has been studied on corpora with per-speaker sensors, each with its own event definitions. No public benchmark covers the single camera and microphone a robot has, and no model has been compared against how well people perform the same prediction. We turn AVCC, a 31-hour audio-visual corpus of two- and three-speaker online conversation recorded with a single static camera and microphone, into a public NSP benchmark. We add a speaker-disjoint seven-video test partition with 865 hold and 865 shift events at mutual-silence gaps, word-level forced-aligned transcripts for the whole corpus, and a human reference benchmark collected at the same events. We score an audio-only Role-Relative VAP model (RoleVAP) and the multimodal MuVAP model. Labels, transcripts, per-response human data, and the scripts that reproduce every number are released.",
+  "abstractSha256": "29346da0d31f711f1807293dd12cffea6d53bb5d396b6076979111861c6298da",
+  "arxivId": "2611.13957",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.13957v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "轮次切换",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.turn-taking",
+          "label": "轮次切换"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "method",
+          "id": "method.crowdsourced-evaluation",
+          "label": "众包评测"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "轮次切换",
+      "primaryTaskId": "task.turn-taking",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Haotian Qi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Gabriel Skantze"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文把 31 小时双人和三人在线对话做成在静音间隙预测下一位说话人的公开基准，用同一批事件比较人类、纯音频模型和音视频模型的保持与转换判断，并指出三人时难在选出具体是谁。",
+  "originalTitle": "AVCC: Audio-Visual Conversation Corpus for Turn-Taking Prediction with a Human Benchmark",
+  "pdfUrl": "https://arxiv.org/pdf/2611.13957v1.pdf",
+  "readerTitle": "机器人只用一个摄像头和麦克风，怎么猜到下一个是谁说话",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

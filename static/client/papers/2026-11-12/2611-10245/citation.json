@@ -1,0 +1,27 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.10245v1",
+  "arxivId": "2611.10245",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.10245v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Centre for Vision, Speech and Signal Processing, University of Surrey, Guildford, United Kingdom",
+        "AI Fellow, Incubator for AI (i.AI), Department for Digital, Culture, Media and Sport, London, United Kingdom"
+      ],
+      "name": "Armin Mustafa"
+    },
+    {
+      "affiliations": [
+        "Centre for Vision, Speech and Signal Processing, University of Surrey, Guildford, United Kingdom"
+      ],
+      "name": "Syed Sameed Husain"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.10245v1",
+  "originalTitle": "From Weapons to Events: Evaluating Evidential Support in Multimodal AI for Policing",
+  "pdfUrl": "https://arxiv.org/pdf/2611.10245v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

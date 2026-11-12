@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.12006v1",
+  "abstract": "Effective pitch-evidence strength governs the concentration of tonal-state posteriors. Expert local-key annotations cannot calibrate this strength because they do not specify the posterior distribution over the 24 candidate keys. This study constrains evidence strength through tonal continuity, quantified by a measure $λ$ derived from adjacent-window posterior overlap. Passages with $λ$ > 0.50 exhibit relatively strong tonal continuity. At $λ$ = 0.50, carrying forward the preceding tonal belief is predictively equivalent to starting afresh with a uniform, key-neutral prior. Across 26 subcorpora of the Distant Listening Corpus, median $λ$ remains above 0.50 for changes from major keys to IV, V, and vi throughout the examined range of evidence strengths, whereas changes to i, ii, and iii cross this threshold as evidence strength increases. Because these latter three keys share the departed key's tonic or differ from it by a single key-signature accidental, such changes are expected to retain $λ$ > 0.50 in a substantial proportion of cases. An event share G therefore assesses how often this expectation holds as tonal selectivity increases in 4-bar windows. The resulting high-G region identifies evidence-strength settings that may be appropriate for tonal-state inference. When $λ$ is extended to cross-scale compatibility, the Presto finale of Mozart's Piano Sonata K. 310 shows that, within this region, a 4-bar C-minor interpretation remains compatible with its 16-bar C-major context. The findings establish tonal continuity as a music-theoretical constraint on evidence strength and illustrate how local and prevailing-key interpretations can coexist when pitch evidence is integrated over nested spans.",
+  "abstractSha256": "c16aa22c9e74a5a2056e8e7a251b2fa65283cd73c6e74249571f3f493aee67a5",
+  "arxivId": "2611.12006",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.12006v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "统计分析",
+    "primaryTask": "音乐分析",
+    "rankBucket": "前50%",
+    "score": 5.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-understanding",
+          "label": "音乐分析"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        },
+        {
+          "facet": "method",
+          "id": "method.formal-analysis",
+          "label": "形式化分析"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "统计分析",
+      "primaryMethodId": "method.statistical-analysis",
+      "primaryTask": "音乐分析",
+      "primaryTaskId": "task.music-understanding",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Chen-Gia Tsai"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文用相邻窗口后验重叠定义的调性连续性 λ 来约束证据强度 N=k(hbB)^α，在 26 个子语料上以大三和弦到 i、ii、iii 的 325 次转调形成事件份额 G 的高值脊，并在莫扎特 K.310 末乐章说明 4 小节 c 小调与 16 小节 C 大调可在该脊内共存，代价是结论只在所选关系、窗口与筛选条件下成立。",
+  "originalTitle": "Constraining Evidence Strength in Bayesian Tonal-State Inference: A Posterior-Continuity Diagnostic",
+  "pdfUrl": "https://arxiv.org/pdf/2611.12006v1.pdf",
+  "readerTitle": "调性连续性如何约束贝叶斯调性推断中的证据强度",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

@@ -1,0 +1,103 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.11137v1",
+  "abstract": "Existing beat-tracking benchmarks draw from a narrow range of musical cultures, predominantly Western, and are difficult to scale due to reliance on expert annotation. We address both limits with GlobalTap, a benchmark of 200 popular-music excerpts spanning 59 countries, annotated by 746 participants recruited across ten countries. The benchmark is created using a scalable online tapping pipeline that records taps via audio for high temporal precision, aggregates pooled tap times into consensus beat annotations, and computes intrinsic quality measures that flag perceptually difficult excerpts without requiring a reference. In a separate study on a different 240-excerpt validation set, tapped by an additional 733 participants, an independent group of 130 listeners rated how well the resulting beat tracks lined up with the music, and we detected no overall difference between our annotations and existing reference annotations. Crowd-derived annotations occasionally diverged from the references in phase and metrical interpretation, yet listeners did not consistently prefer the reference versions, suggesting that crowd-derived and existing reference annotations can reflect different perceptual or structural interpretations. The disagreements were often systematic rather than random, and metrical-level choices differed across the ten recruitment countries. We release GlobalTap together with open-source pipeline code as a listener-derived resource for evaluating beat-tracking systems on culturally diverse music.",
+  "abstractSha256": "3bafa8f755727ce63c9c9f16528ef4e3347850eb2673a46b99af96667e8dab3f",
+  "arxivId": "2611.11137",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.11137v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "众包评测",
+    "primaryTask": "节拍跟踪",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.beat-tracking",
+          "label": "节拍跟踪"
+        },
+        {
+          "facet": "method",
+          "id": "method.crowdsourced-evaluation",
+          "label": "众包评测"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "众包评测",
+      "primaryMethodId": "method.crowdsourced-evaluation",
+      "primaryTask": "节拍跟踪",
+      "primaryTaskId": "task.beat-tracking",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "William T. Botticelli-Wells"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Manuel Anglada-Tort"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Elif Celen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Rena Far"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Harin Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Peter M. C. Harrison"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Nori Jacoby"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文用在线拍点加密度聚合与网格拟合得到听众共识节拍，在 240 段验证集上听感与已有参考总体相当，并据此发布 59 国 200 段的 GlobalTap 基准，代价是启发式网格难以处理大幅变速且目前只适合评测。",
+  "originalTitle": "GlobalTap: Globally Diverse Beat Tracking Benchmark via Crowdsourced Tapping",
+  "pdfUrl": "https://arxiv.org/pdf/2611.11137v1.pdf",
+  "readerTitle": "GlobalTap：用众包拍点为多样音乐做节拍标注",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

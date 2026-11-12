@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.12124v1",
+  "abstract": "Audio-text models such as Contrastive Language-Audio Pretraining (CLAP) typically pool frame and token sequences uniformly into global embeddings. This discards temporal structure and impairs both retrieval and localization, especially for short events in long recordings. We introduce SCLAP, a sequence-level contrastive framework that aligns audio frames and text tokens using monotone one-dimensional optimal transport. Its learned marginals and transport plan provide fine-grained temporal supervision from clip-level captions alone. On short-form audio (i.e., Clotho and TACOS datasets with 15-30s recordings), SCLAP remains competitive for retrieval while improving zero-shot localization over CLAP and Text-aware Attention Pooling. On long-form audio (i.e., CASTELLA dataset with up to 300s recordings), SCLAP improves retrieval performance and its localization advantage grows as the event-to-context ratio decreases. At inference, SCLAP requires no optimal transport computation since retrieval can use pooled embeddings and localization can use inexpensive frame-text cosine scores.",
+  "abstractSha256": "b0f2cb556d510b5e5d4ff25de910d3bb39e668b02f414caee39a0a87f602f40c",
+  "arxivId": "2611.12124",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.12124v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "对比学习",
+    "primaryTask": "音频时间定位",
+    "rankBucket": "前50%",
+    "score": 5.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.temporal-grounding",
+          "label": "音频时间定位"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-retrieval",
+          "label": "音频检索"
+        },
+        {
+          "facet": "method",
+          "id": "method.contrastive",
+          "label": "对比学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "对比学习",
+      "primaryMethodId": "method.contrastive",
+      "primaryTask": "音频时间定位",
+      "primaryTaskId": "task.temporal-grounding",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yacouba Kaloga"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ina Kodrasi"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对长录音中目标事件占比小、均匀池化丢失时间信息的问题，SCLAP 在每个音频题注对内学习帧词单调传输对齐，短音频检索持平而定位提升，长音频检索均值最优且上下文越长定位优势越大，推理时无需解传输。",
+  "originalTitle": "SCLAP: Temporal structural alignment improves localization in long-form audio",
+  "pdfUrl": "https://arxiv.org/pdf/2611.12124v1.pdf",
+  "readerTitle": "SCLAP：用单调传输对齐帧与词，改善长音频定位",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

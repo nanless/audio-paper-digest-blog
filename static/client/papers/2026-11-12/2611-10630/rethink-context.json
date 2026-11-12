@@ -1,0 +1,122 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.10630v1",
+  "abstract": "Unified audio editors support diverse operations, yet often struggle to modify the intended source while preserving non-target content. We show that source selection in audio editing is shaped by early denoising states, while incorrect early selections can hardly be corrected during subsequent denoising. Motivated by these findings, we propose Source-selection Training via Early-trajectory Emphasis and Recovery (STEER), a two-stage post-training algorithm for reliable selective audio editing. STEER-Emphasis prioritizes training on task-critical early states to reduce source-selection errors, while STEER-Recovery learns corrective denoising from self-generated rollout states to recover from early deviations. To systematically assess source-selection reliability, we introduce the Selective Audio Editing Benchmark, enabling large-scale automatic evaluation of target manipulation and non-target preservation. Applying STEER to our pretrained multitask base editor gives SteerSound, a unified audio editor with leading selective editing performance among open-source audio editors. Experiments on our base editor, UNISON, and SAM Audio demonstrate that STEER consistently improves both selective editing capability and overall editing performance. Early-trajectory emphasis further brings substantial improvements in transcript-conditioned target speaker removal and separation, highlighting the broader applicability of this training principle.",
+  "abstractSha256": "f88db35422fb1698b8b00a9be4284a59f7f445ac04a12a1b280d90d25d7dbcf3",
+  "arxivId": "2611.10630",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.10630v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "流匹配",
+    "primaryTask": "音频编辑",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-editing",
+          "label": "音频编辑"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-generation",
+          "label": "音频生成"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-separation",
+          "label": "音频分离"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "流匹配",
+      "primaryMethodId": "method.flow-matching",
+      "primaryTask": "音频编辑",
+      "primaryTaskId": "task.audio-editing",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Youquan Fu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Dongnuan Cai"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yu Pan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Henghui Du"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yujia Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ping Luo"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Quande Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yake Wei"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xi Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hongyuan Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Di Hu"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文发现统一音频编辑选错对象主要在去噪早期形成且后期难以自行纠正，因此提出两阶段后训练 STEER 分别加强早期关键状态训练和从自身偏离轨迹中恢复的能力，在自建基准与复杂场景上都提高了选对目标并保留非目标的能力，但提升幅度依赖任务类型与评测条件。",
+  "originalTitle": "Steer Unified Audio Editing Toward Reliable Source Selection",
+  "pdfUrl": "https://arxiv.org/pdf/2611.10630v1.pdf",
+  "readerTitle": "统一音频编辑为什么总改错对象：早期轨迹如何决定选择与如何纠偏",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}
