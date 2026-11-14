@@ -1,0 +1,109 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.15691v1",
+  "abstract": "Low-resource, agglutinative languages challenge low-latency ASR, as fixed lookahead windows fail when grapheme order diverges, suffixes cross code-switch boundaries, or code-switching data is imbalanced. We present the first comprehensive study of streaming ASR for intra-sentential Bangla-English code-switching, identifying a mismatch between strict causal streaming and long-range morphological dependencies. We introduce a Dynamic Block-Online framework with VAD-aligned inference that balances semantics, latency, and context, enabling global bidirectional attention to preserve morphological integrity. To mitigate data scarcity, we propose Script-Anchored Loanword Injection, augmenting training text with English loanwords to model phonotactic transitions. We introduce CS-WER to diagnose switch, root, and suffix errors, and show that flexible latency budgets enhance recognition of agglutinative and mixed-language speech, with successful transfer to menstrual-medical domains.",
+  "abstractSha256": "dc75831115631e7013790f7a9c04d33cf8f4424a539d9321ae378a7b41cfe104",
+  "arxivId": "2611.15691",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.15691v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "数据增强",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 5.7,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.augmentation",
+          "label": "数据增强"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.code-switching",
+          "label": "代码转换"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.low-resource",
+          "label": "低资源"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "数据增强",
+      "primaryMethodId": "method.augmentation",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kazi Rafat"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Afifa Imran"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Md. Ismail Hossain"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Md. Romzan Ali"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Fuad Rahman"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Sifat Momen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shafin Rahman"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Nabeel Mohammed"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文针对低资源、黏着语形态与句内孟加拉语—英语代码切换在因果流式中的截断问题，用 VAD 对齐的动态块在线推理和脚本锚定借词注入，在相同 3 s 预算下把根词与形态边界误差进一步压低，但仍以略高的全局 WER、最多 3 s 的延迟和良好 VAD 为代价。",
+  "originalTitle": "Dynamic Block-Online Streaming ASR for Low-Resource Agglutinative Code-Switching Speech with Morphology-Aware Evaluation",
+  "pdfUrl": "https://arxiv.org/pdf/2611.15691v1.pdf",
+  "readerTitle": "动态块在线如何缓解孟加拉语—英语流式识别中的形态截断",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.14774v1",
+  "abstract": "Full-duplex spoken dialogue, in which a system listens while it speaks and can backchannel, yield the floor, and be interrupted, is usually obtained by training on hundreds of thousands to millions of hours of speech. This is costly, rewrites the language model that supplies the system's knowledge, and still leaves turn-taking either implicit or decided coarsely rather than word by word. We show that a frozen, general-purpose multimodal LLM can instead be adapted into a word-level full-duplex system with little data. Our system is a thinker-talker cascade on an 80 ms frame clock. The thinker keeps the LLM frozen and trains only lightweight adapters and a few new token embeddings (97M parameters); at every frame it emits one token of agent text, with pauses, yields, and onsets represented as tokens of the same vocabulary and kept legal by a finite-state machine. A four-stage curriculum, each stage anchored to the model's own behavior under the previous format, performs the conversion in about 30 GPU-hours. The talker reads only the thinker's discrete tokens, so the two halves are trained independently. On Full-Duplex-Bench and InteractionBench, the system is competitive with open-source full-duplex systems built through large-scale speech training: among them, it is the least likely to take the floor when the user merely pauses, backchannels most often, and leads in spoken-task accuracy, groundedness, and coherence over long conversations.",
+  "abstractSha256": "4454484376adb3ac350a0b237bc2519874794386b31226394e1269abea64bda5",
+  "arxivId": "2611.14774",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.14774v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "参数高效微调",
+    "primaryTask": "全双工语音交互",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.full-duplex",
+          "label": "全双工语音交互"
+        },
+        {
+          "facet": "task",
+          "id": "task.turn-taking",
+          "label": "轮次切换"
+        },
+        {
+          "facet": "method",
+          "id": "method.peft",
+          "label": "参数高效微调"
+        },
+        {
+          "facet": "method",
+          "id": "method.curriculum",
+          "label": "课程学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.tool-augmentation",
+          "label": "工具增强与约束解码"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "参数高效微调",
+      "primaryMethodId": "method.peft",
+      "primaryTask": "全双工语音交互",
+      "primaryTaskId": "task.full-duplex",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Tairan Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Richard Yucheng He"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yihang Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Baodong Cao"
+    },
+    {
+      "affiliations": [
+        "AveraLabs"
+      ],
+      "name": "Chen Xu"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文把已具备语音理解能力的冻结多模态大模型通过轻量适配器、逐帧时序 token 和有限状态机改造成词级全双工对话系统，在公开基准上以约 30.5 GPU 小时的适配取得有竞争力但响应、相关性和语音控制仍有限的结果。",
+  "originalTitle": "An LLM Is All You Need: Data-Efficient Adaptation to Full-Duplex, Word-Level Spoken Dialogue",
+  "pdfUrl": "https://arxiv.org/pdf/2611.14774v1.pdf",
+  "readerTitle": "冻结多模态大模型如何以轻量适配实现词级全双工语音对话",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.15087v1",
+  "abstract": "End-to-end ASR systems must jointly solve speech- text alignment and token prediction from sequence-level super- vision. We study this problem in Aligner-Encoder ASR, where alignment is performed inside encoder self-attention and can thus be directly intervened on with an attention mask. We use forced alignment to build an attention mask that confines selected encoder self-attention heads to a narrow window around the alignment path. The mask is faded out over training, leaving a deployable model with an unmodified inference architecture; alternatively, kept active at training and inference, it serves as an oracle that measures recognition performance once alignment is externally resolved. On LibriSpeech, the faded alignment mask improves test-clean/test-other WER from 3.9/6.4 to 3.5/5.9 over an Aligner baseline. The oracle masks are far stronger, reaching 1.2/2.9 WER, which can be thought of as an upper- bound accuracy in the 100M-class Conformer regime without an external language model. This indicates that alignment inference is a major bottleneck in Aligner-Encoder ASR, and suggests that improved alignment mechanisms might yield substantial accuracy gains for end-to-end ASR.",
+  "abstractSha256": "3c4bb706bff18073eea748f89d200b65df459ab68d5e7ae86a82f0cae588b30b",
+  "arxivId": "2611.15087",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.15087v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "注意力机制",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.attention",
+          "label": "注意力机制"
+        },
+        {
+          "facet": "method",
+          "id": "method.conformer",
+          "label": "Conformer"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "注意力机制",
+      "primaryMethodId": "method.attention",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jaeyoung Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Masato Mimura"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文把 RNN-T 强制对齐路径转化为编码器自注意力遮罩，在 LibriSpeech 上以渐隐路径带把 Aligner 的 test-clean/test-other WER 从 3.9/6.4 降到 3.5/5.9，并用保持到推理的 oracle 遮罩显示对齐瓶颈的上界，但 oracle 依赖参考长度或对齐路径、并非可部署方案。",
+  "originalTitle": "Scaffolding Self-Transduction with Alignment Attention Mask for Aligner-Encoder ASR",
+  "pdfUrl": "https://arxiv.org/pdf/2611.15087v1.pdf",
+  "readerTitle": "用对齐注意力遮罩为 Aligner-Encoder 的自转导搭脚手架",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

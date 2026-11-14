@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.15101v1",
+  "arxivId": "2611.15101",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.15101v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Pengyang Shi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jinlu Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Chunze Lin"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yizhou Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Li Yi"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.15101v1",
+  "originalTitle": "CFGComposer: Compositional Audio-Text-to-Motion Generation via Copula Score Correction",
+  "pdfUrl": "https://arxiv.org/pdf/2611.15101v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

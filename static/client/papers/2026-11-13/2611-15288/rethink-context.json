@@ -1,0 +1,98 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.15288v1",
+  "abstract": "Speaker representation learning is fundamental to speech processing tasks such as speaker verification and diarization. Although long-context speaker encoders can produce stable and discriminative embeddings, short-duration verification and diarization require finer-grained temporal representations. Short temporal contexts limit the available speaker evidence and make speaker identity difficult to disentangle from phonetic and acoustic variability. This creates a temporal resolution-representation reliability trade-off: speaker representations should maintain local within-speaker consistency, between-speaker discriminability and remain sensitive to speaker changes at fine temporal resolution. Accordingly, we propose a framework for reliable speaker representation learning at fine temporal resolution. FineSpeaker first constructs resolution-controllable frame-wise speaker representations through mean pooling over an adjustable n-frame window, enabling flexible control of representation granularity. It then introduces a speaker encoder with local temporal modeling that exploits short-range speaker context to improve the stability and discriminability of short-duration and frame-wise representations. Furthermore, we develop a generative disentanglement strategy for optimizing frame-level speaker representations, combining VAE-based probabilistic modeling with flow matching to characterize speaker-related variation and suppress non-speaker interference. Experiments demonstrate competitive full-utterance performance, improved fine-grained speaker verification on VoxCeleb and CN-Celeb, and strong zero-shot diarization results, highlighting the benefits of balancing temporal resolution and representation reliability.",
+  "abstractSha256": "417a3eaf3255065cee44471a9476f581fd0537ce0a57a597fc186f37d5991a9f",
+  "arxivId": "2611.15288",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.15288v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "流匹配",
+    "primaryTask": "说话人验证",
+    "rankBucket": "前50%",
+    "score": 6.7,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speaker-verification",
+          "label": "说话人验证"
+        },
+        {
+          "facet": "task",
+          "id": "task.diarization",
+          "label": "说话人分离标注"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "method",
+          "id": "method.vae",
+          "label": "变分自编码器"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.zero-shot",
+          "label": "零样本"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "流匹配",
+      "primaryMethodId": "method.flow-matching",
+      "primaryTask": "说话人验证",
+      "primaryTaskId": "task.speaker-verification",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Guangdong Provincial Key Laboratory of Ultra High Definition lmmersive Media Technology, Shenzhen Graduate School, Peking University",
+        "ADSPLAB, School of ECE, Peking University, Shenzhen, China"
+      ],
+      "name": "Yongkang Yin"
+    },
+    {
+      "affiliations": [
+        "MiML Plus, Xiaomi Inc., Beijing, China"
+      ],
+      "name": "Wenhao Yang"
+    },
+    {
+      "affiliations": [
+        "MiML Plus, Xiaomi Inc., Beijing, China"
+      ],
+      "name": "Lichun Fan"
+    },
+    {
+      "affiliations": [
+        "MiML Plus, Xiaomi Inc., Beijing, China"
+      ],
+      "name": "Jian Luan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hang Su"
+    },
+    {
+      "affiliations": [
+        "Guangdong Provincial Key Laboratory of Ultra High Definition lmmersive Media Technology, Shenzhen Graduate School, Peking University"
+      ],
+      "name": "Yuexian Zou"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "FineSpeaker 用局部时序编码器和生成式解耦训练，在短时与帧段级说话人验证及零样本日志上取得改进，但全话语性能并非全面领先，生成分支的推理使用方式也需要澄清。",
+  "originalTitle": "FineSpeaker: Reliable Speaker Representation Learning at Fine Temporal Resolution",
+  "pdfUrl": "https://arxiv.org/pdf/2611.15288v1.pdf",
+  "readerTitle": "细时间分辨率下的可靠说话人表示：FineSpeaker 的方法与证据",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

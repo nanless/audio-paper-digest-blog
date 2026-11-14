@@ -1,0 +1,75 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.14634v1",
+  "abstract": "Despite the increasing sophistication of generative Artificial Intelligence (AI), research on the evaluation of AI-generated musical creativity remains limited. To address this gap, this paper proposes a quantitative framework for the formalization and evaluation of AI musical creativity. Building on Margaret Boden's theory, which conceptualizes creativity in terms of value, novelty, and surprise, the framework adapts and operationalizes these three dimensions for the musical domain. On the hypothesis that certain aspects of musical creativity can be assessed with a degree of objectivity, a domain-specific set of quantitative metrics for evaluating the creativity of AI-generated music is introduced. Rather than reducing musical creativity to a single unifying measure, this article proposes an ensemble of complementary metrics that capture its different dimensions, recognizing the complexity of musical artifacts and the difficulty of defining meaningful multi-objective compositional criteria. The framework has two implications. First, it gives researchers and developers a principled methodology and quantitative tools for empirically evaluating creative outputs, enabling more informed model development and reducing unnecessary computational costs. Second, it lays the groundwork for future generative models to optimize directly for creativity by adopting these metrics as learning objectives.",
+  "abstractSha256": "0fae8b6e86beaf20acb575d61959bc24066d3f3e2a5de87c4a2b5b334dc0d2ec",
+  "arxivId": "2611.14634",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.14634v1",
+  "assessment": {
+    "documentType": "理论研究",
+    "primaryMethod": "评测协议",
+    "primaryTask": "音乐分析",
+    "rankBucket": "前50%",
+    "score": 6.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-understanding",
+          "label": "音乐分析"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.music-information",
+          "label": "音乐信息检索"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "评测协议",
+      "primaryMethodId": "method.evaluation-protocol",
+      "primaryTask": "音乐分析",
+      "primaryTaskId": "task.music-understanding",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Arts and Sciences, University College London, Malet Place, London, WC1E 7JG, United Kingdom"
+      ],
+      "name": "Hindy Rossignol"
+    },
+    {
+      "affiliations": [
+        "Department of Computer Science and Engineering, University of Bologna, Viale del Risorgimento, 2, Bologna, 40136, Italy"
+      ],
+      "name": "Giorgio Franceschelli"
+    },
+    {
+      "affiliations": [
+        "Department of Computer Science and Engineering, University of Bologna, Viale del Risorgimento, 2, Bologna, 40136, Italy",
+        "Centre for Artificial Intelligence, Department of Computer Science, University College London, 66-72 Gower Street, London, WC1E 6EA, United Kingdom"
+      ],
+      "name": "Mirco Musolesi"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文把 Boden 的价值、新颖性和惊奇拆成 M-value、M-novelty、M-surprise 及可计算子指标，给出面向音乐作品的多维评测提案；其贡献是概念框架而非实证验证，主要代价是主观价值、参考集与编码器依赖，以及 HC-surprise 和 PS-surprise 难以直接测量。",
+  "originalTitle": "Evaluating AI Musical Creativity: Towards a Quantitative Multi-Dimensional Framework Based on Value, Novelty, and Surprise",
+  "pdfUrl": "https://arxiv.org/pdf/2611.14634v1.pdf",
+  "readerTitle": "如何把 AI 音乐创造力拆成可计算的多维指标",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

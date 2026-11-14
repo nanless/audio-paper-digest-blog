@@ -1,0 +1,86 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.16051v1",
+  "abstract": "Listeners can judge an agent's speech on how human it sounds (human-likeness) and on how much they would want to talk to it (conversational preference). Listening tests rarely ask about conversational preference, so the relation between the two judgments is unclear. We compared them in paired-choice tests on 120 turns that actors improvised as customer-service representatives. On each trial, two agents spoke the same turn. In Study 1, both agents came from six commercial text-to-speech systems, each with eight voices. In Study 2, one was the actor's original recording and the other a system. Some systems ranked higher on human-likeness, and others on conversational preference. Listeners chose systems over actors in 19% of human-likeness trials but 36% of conversational preference trials (and 49% for the most preferred system). On both judgments, variation among a system's voices was about three-quarters of that between systems. Of three automatic naturalness scores, two predicted lower human-likeness, and none predicted conversational preference. In this setting, listeners tended to favor faster speech and fewer pauses between clauses on both judgments, and more pitch variation for conversational preference. Thus, measuring only human-likeness or testing one voice per system can misjudge which agents listeners would rather talk to.",
+  "abstractSha256": "87bb51ee073afa5b3500c5e2b7aea4ff53b1efa8384b7f4412bc14d16f8c6334",
+  "arxivId": "2611.16051",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.16051v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "主观评测",
+    "primaryTask": "语音质量评估",
+    "rankBucket": "前50%",
+    "score": 6.9,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-quality",
+          "label": "语音质量评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.subjective-evaluation",
+          "label": "主观评测"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.prosody",
+          "label": "韵律"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "主观评测",
+      "primaryMethodId": "method.subjective-evaluation",
+      "primaryTask": "语音质量评估",
+      "primaryTaskId": "task.speech-quality",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jeffrey M. Girard"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Antony D'Avirro"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jason Z. Zheng"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jacqueline R. Vertino"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Benjamin Peloquin"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文用 120 个客服代表轮次的配对选择听测比较人类相似度判断和交谈偏好，发现两者排序不一致且单音色和自然度分数都不能替代，最强证据是合成语音战胜真人录音的概率从 19% 升到 36% 而自动分数全部失效，代价是需要大量人工听测和多音色建模。",
+  "originalTitle": "Human-Likeness and Conversational Preference Diverge for Synthesized Agent Speech in Customer-Service Calls",
+  "pdfUrl": "https://arxiv.org/pdf/2611.16051v1.pdf",
+  "readerTitle": "像真人不等于想多聊：客服电话合成语音的两类评价",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

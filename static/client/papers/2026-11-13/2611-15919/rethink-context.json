@@ -1,0 +1,63 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.15919v1",
+  "abstract": "The vocal-tract transfer function links the physical articulatory model to speech. Quantum encoding of vocal-tract transfer functions requires circuits that preserve acoustic structure under hardware noise. This paper proposes the qVocalTract framework, which uses optimized, ancilla-free staircase layers for spectral loading. Simulations and a superconducting processor compare this approach with sequential matrix-product-state preparation on vocal-tract data. Staircase preparation lowers spectral error and improves resonance recovery, while a modal probe demonstrates coherent processing. The comparison reveals a trade-off between approximation accuracy and accumulated circuit noise. These findings guide practical support for further quantum acoustic processing with physical vocal-tract models.",
+  "abstractSha256": "eb6b2e4ad1ee34ff6d68d3b752328201f40b39b43b44bedaeddb551e8eba8396",
+  "arxivId": "2611.15919",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.15919v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "音频特征提取",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-feature-extraction",
+          "label": "音频特征提取"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "音频特征提取",
+      "primaryTaskId": "task.audio-feature-extraction",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Sheng Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jiyi Li"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文把 DVTD 声道传递函数编码成量子态，在无辅助位阶梯层与顺序 MPS 制备之间用 256-bin 谱包络误差和共振恢复在 ibm_kawasaki 上比较，发现三层阶梯在该硬件上兼顾近似与噪声，但代价是需要已知完整目标向量、较多采样和重复运行。",
+  "originalTitle": "qVocalTract: Efficient encoding framework of vocal-tract spectra on a quantum computer",
+  "pdfUrl": "https://arxiv.org/pdf/2611.15919v1.pdf",
+  "readerTitle": "qVocalTract：噪声量子硬件上的声道谱编码与共振恢复",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

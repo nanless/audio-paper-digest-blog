@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.17070v1",
+  "abstract": "Automatic setlist identification aims to identify the songs performed in live concert recordings by matching noisy and variable-quality audio against a database of reference tracks. This task presents challenges beyond conventional music version identification, including substantial arrangement differences, background noise, and the need to process continuous recordings efficiently at large scale. In this work, we evaluate modern music version retrieval methods for setlist identification using the ASID benchmark, comparing the established Re-MOVE system with CLEWS and NAVE, an internal neural audio version embedding model. Our results show that NAVE and CLEWS substantially outperform Re-MOVE. Notably, NAVE uses 256-dimensional embeddings, compared with 1024 dimensions for CLEWS, providing a four-fold reduction in embedding storage while achieving better retrieval performance. We further evaluate music/non-music gating and find modest improvements in detection and temporal coverage, while qualitative analysis suggests that such preprocessing can improve recognition boundaries beyond what the standard ASID metrics capture. Overall, the results demonstrate that segment-level audio embeddings provide a strong basis for scalable setlist identification and that compact representations can achieve strong accuracy under realistic live-concert conditions at much lower storage and serving cost.",
+  "abstractSha256": "9262cbdba26f3b3bd4accdfcc48ef51a50ec288fa0e232bebfe457d7a826f8be",
+  "arxivId": "2611.17070",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.17070v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "评测协议",
+    "primaryTask": "翻唱与曲目识别",
+    "rankBucket": "前50%",
+    "score": 6.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.cover-song-identification",
+          "label": "翻唱与曲目识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.comparison",
+          "label": "模型比较"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.long-audio",
+          "label": "长音频处理"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.music-information",
+          "label": "音乐信息检索"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "评测协议",
+      "primaryMethodId": "method.evaluation-protocol",
+      "primaryTask": "翻唱与曲目识别",
+      "primaryTaskId": "task.cover-song-identification",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Nowon AG, Switzerland"
+      ],
+      "name": "Andres Ferraro"
+    },
+    {
+      "affiliations": [
+        "Nowon AG, Switzerland"
+      ],
+      "name": "Albin Correya"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文在重建的 ASID 评测集（62 场演唱会）上比较 Re-MOVE、CLEWS 与 Nowon 内部 NAVE 的现场曲目单识别，片段级嵌入把无 SVM 的 Re-MOVE DAP 0.779 提升到 CLEWS/NAVE 的 0.903–0.910，但 NAVE 细节不足以独立复现、门控收益有限，且指标饱和与数据口径差异限制了结论外推。",
+  "originalTitle": "Evaluation of Music Version Retrieval Methods for Setlist Identification in Live Concerts",
+  "pdfUrl": "https://arxiv.org/pdf/2611.17070v1.pdf",
+  "readerTitle": "现场演唱会曲目单识别中的音乐版本检索评测",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

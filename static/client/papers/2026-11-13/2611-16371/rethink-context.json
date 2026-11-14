@@ -1,0 +1,86 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.16371v1",
+  "abstract": "We propose structured speaker conditioning (SSC) for diarization-guided target-speaker recognition. SSC combines local activity structure with session-level acoustic identity to construct identity-consistent target conditions that control the acoustic encoder. Target-centric relational encoding (TCRE) retains per-speaker activity histories and factorized second- and third-order relations, capturing overlap and turn changes with aggregation cost linear in the number of tracks. Reference-based speaker conditioning (RSC) supplies session-derived identities that disambiguate local activity patterns within TCRE. Conditional low-rank modulation (CLRM) converts the joint condition into channel-wise affine modulation and a low-rank cross-channel residual with a condition-dependent core. On Qwen3-ASR-0.6B with oracle diarization, SSC uses 1.46M conditioning parameters and achieves a 6.23% mean relative reduction in concatenated minimum-permutation error rate (cpER) over four-state diagonal conditioning across four meeting test sets. SSC also transfers across audio foundation models. With predicted diarization and target-error group sequence policy optimization, the FireRedAudio text system achieves mean relative error reductions of 17.9% and 17.3% over DiCoW and MOSS-TD on the same four sets, and also outperforms both on three unseen domains. Scenario analyses identify gains under challenging overlap conditions, while fixed-checkpoint interventions support the contributions of session identity and the condition-dependent core. A timestamp variant jointly produces sentence boundaries and text. With predicted diarization, macro-average cpER across the four sets is 15.60% for text and 15.96% with timestamps.",
+  "abstractSha256": "2117d4312ea198fd4f144d200b0768720373da24772d5c9163ab3be384b5325a",
+  "arxivId": "2611.16371",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.16371v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "Adapter",
+    "primaryTask": "目标说话人提取",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.target-speaker",
+          "label": "目标说话人提取"
+        },
+        {
+          "facet": "application",
+          "id": "application.meeting",
+          "label": "会议转录"
+        },
+        {
+          "facet": "method",
+          "id": "method.adapter",
+          "label": "Adapter"
+        },
+        {
+          "facet": "method",
+          "id": "method.reinforcement",
+          "label": "强化学习"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "Adapter",
+      "primaryMethodId": "method.adapter",
+      "primaryTask": "目标说话人提取",
+      "primaryTaskId": "task.target-speaker",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ruoyu Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shutong Niu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jun Du"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Weixin Zhu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yannan Wang"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "长会议按窗识别时目标会随重叠与交接而难以锁定，论文用保留多轨历史与会话身份的关系条件去控制编码器的通道缩放与低秩跨通道组合，在 Qwen3-ASR-0.6B 上以 1.46M 调节参数取得对四状态对角基线 6.23% 平均相对降低，并在 FireRedAudio 上经目标错误策略优化后对 DiCoW 与 MOSS-TD 取得约 17% 域内降低，代价是依赖会话级日志先验与额外参考编码与调制计算。",
+  "originalTitle": "Structured Speaker Conditioning for Diarization-Guided Target-Speaker ASR",
+  "pdfUrl": "https://arxiv.org/pdf/2611.16371v1.pdf",
+  "readerTitle": "在重叠与轮替中锁定同一说话人：结构化条件引导的目标语音识别",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

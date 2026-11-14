@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.14929v1",
+  "arxivId": "2611.14929",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.14929v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhisheng Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yifan Mi"
+    },
+    {
+      "affiliations": [
+        "Shenzhen International Graduate School, Tsinghua University"
+      ],
+      "name": "Yixuan Zhou"
+    },
+    {
+      "affiliations": [
+        "Shenzhen International Graduate School, Tsinghua University"
+      ],
+      "name": "Haiyun Li"
+    },
+    {
+      "affiliations": [
+        "Shenzhen International Graduate School, Tsinghua University"
+      ],
+      "name": "Shengbo Cai"
+    },
+    {
+      "affiliations": [
+        "Shenzhen International Graduate School, Tsinghua University"
+      ],
+      "name": "Dongfu Song"
+    },
+    {
+      "affiliations": [
+        "Shenzhen International Graduate School, Tsinghua University"
+      ],
+      "name": "Ziang Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jie Hao"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhiyong Wu"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.14929v1",
+  "originalTitle": "Speech Tokenizers are Vulnerable: Transferable Semantic Attack and Robust Tokenizer",
+  "pdfUrl": "https://arxiv.org/pdf/2611.14929v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

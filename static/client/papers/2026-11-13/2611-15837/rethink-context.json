@@ -1,0 +1,80 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.15837v1",
+  "abstract": "We introduce the BEATS dataset, a robust compilation of psycho-physiological data collected in the wild from 30 participants while they listened to curated playlists intended to promote well-being. An acronym for Biomarkers, Experience and Affect from Therapeutic Soundscapes, the BEATS dataset aims to support research on wellbeing, music psychology, affective computing and signal processing. More specifically, this dataset includes: (1) sensor data collected during music listening sessions using a research-grade wearable device in free-movement environments; (2) music listening activity records, stimulus metadata, acoustic features, and self-reports associated with the listening sessions (3) individual characteristics, such as demographics, music preference, musical skills, and personality traits; and (4) self-reported psychological measures before and after their experimental participation spanning for a number of weeks. By situating data collection outside of lab settings, the BEATS dataset offers the opportunity to study real-world music-listening scenarios, allowing for a richer exploration of the physiological, subjective and therapeutic effects of music under real-world conditions.",
+  "abstractSha256": "d1bc07b6440fbdb3b0eb3ce9bf2d95d42ffca94ca3ed143617b5d6c4999e03f1",
+  "arxivId": "2611.15837",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.15837v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "数据集构建",
+    "primaryTask": "声音感知情感估计",
+    "rankBucket": "前25%",
+    "score": 7.7,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-affect-estimation",
+          "label": "声音感知情感估计"
+        },
+        {
+          "facet": "method",
+          "id": "method.dataset-curation",
+          "label": "数据集构建"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.biosignal",
+          "label": "生理信号"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "数据集构建",
+      "primaryMethodId": "method.dataset-curation",
+      "primaryTask": "声音感知情感估计",
+      "primaryTaskId": "task.audio-affect-estimation",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "University of Glasgow, United Kingdom"
+      ],
+      "name": "Benjamin Gutierrez Serafin"
+    },
+    {
+      "affiliations": [
+        "University of Glasgow, United Kingdom"
+      ],
+      "name": "Tanaya Guha"
+    },
+    {
+      "affiliations": [
+        "University of Glasgow, United Kingdom",
+        "OmniBuds Ltd, United Kingdom"
+      ],
+      "name": "Fahim Kawsar"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "BEATS 要解决实验室短片段听歌无法反映日常长期生理变化的问题，用 30 人 21 天野外同步采集的手环生理与助益歌单听歌记录来补证据，最强的技术验证是三类音乐声学可分与听中生理趋稳的趋势，代价是野外混杂多、听歌分布不均且只能做相关观察。",
+  "originalTitle": "The BEATS Dataset: Towards Understanding Music-Physiology Dynamics in Real-World Scenarios",
+  "pdfUrl": "https://arxiv.org/pdf/2611.15837v1.pdf",
+  "readerTitle": "在真实生活里听歌时，身体发生了什么：BEATS 数据集解读",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

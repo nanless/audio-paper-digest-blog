@@ -1,0 +1,115 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.14929v1",
+  "abstract": "Speech tokenizers serve as speech front ends, encoding input speech signals into representations for downstream models, such as automatic speech recognition (ASR) systems and large audio-language models (LALMs). In this paper, we find that speech tokenizers are fragile at the semantic level: small perturbations can disrupt their semantic encoding process and consequently cause severe degradation in downstream ASR and LALM performance. To study this vulnerability, we propose T-SemAttack, a transferable semantic attack based on a semantic encoder ensemble. By jointly drifting the representation spaces of multiple semantic encoders, T-SemAttack effectively disrupts the semantic content of speech while preserving perceptual quality, thereby inducing error features. We further analyze layer-wise representation drift and cross-model gradient alignment. Our findings show that perturbations can induce substantial shifts in deep semantic representations and that the input gradients of different surrogate encoders exhibit directional alignment. These observations suggest that shared adversarially sensitive directions in the input space may be a key factor underlying cross-model attack transferability. Building on these, we introduce ROSETok, a robust speech tokenizer that combines noisy training with robust semantic distillation to improve reconstruction fidelity and downstream SpeechLLM robustness. Extensive experiments on multiple datasets, 9 open-source and black-box ASR systems, and 4 LALMs demonstrate that T-SemAttack achieves strong transferable attack performance, while the proposed Robust Speech Tokenizer exhibits robustness under high-fidelity reconstruction and downstream tasks. Our code and demo are available at https://wxzyd123.github.io/t-semattack.",
+  "abstractSha256": "7ea51fb5d72f1d7466912b64f8ddc05f08420a8719ed31fc4fcc863bf7e0c243",
+  "arxivId": "2611.14929",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.14929v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "对抗攻击构造",
+    "primaryTask": "音频系统攻击与防御",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-system-attack-defense",
+          "label": "音频系统攻击与防御"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-coding",
+          "label": "语音编码"
+        },
+        {
+          "facet": "method",
+          "id": "method.adversarial-attack",
+          "label": "对抗攻击构造"
+        },
+        {
+          "facet": "method",
+          "id": "method.adversarial-training",
+          "label": "对抗训练"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.adversarial-robustness",
+          "label": "对抗鲁棒性"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "对抗攻击构造",
+      "primaryMethodId": "method.adversarial-attack",
+      "primaryTask": "音频系统攻击与防御",
+      "primaryTaskId": "task.audio-system-attack-defense",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhisheng Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yifan Mi"
+    },
+    {
+      "affiliations": [
+        "Shenzhen International Graduate School, Tsinghua University"
+      ],
+      "name": "Yixuan Zhou"
+    },
+    {
+      "affiliations": [
+        "Shenzhen International Graduate School, Tsinghua University"
+      ],
+      "name": "Haiyun Li"
+    },
+    {
+      "affiliations": [
+        "Shenzhen International Graduate School, Tsinghua University"
+      ],
+      "name": "Shengbo Cai"
+    },
+    {
+      "affiliations": [
+        "Shenzhen International Graduate School, Tsinghua University"
+      ],
+      "name": "Dongfu Song"
+    },
+    {
+      "affiliations": [
+        "Shenzhen International Graduate School, Tsinghua University"
+      ],
+      "name": "Ziang Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jie Hao"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhiyong Wu"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文把语音分词器视为语义安全的前端瓶颈，提出联合多个代理语义编码器的可迁移语义攻击 T-SemAttack，并据此设计结合含噪训练和语义蒸馏的 ROSETok；主实验显示攻击在保持可接受听感的同时提高多个 ASR 与 LALM 的 WER，但它是离线且计算较慢，ROSETok 的鲁棒性也只在其训练分布和威胁模型内得到验证。",
+  "originalTitle": "Speech Tokenizers are Vulnerable: Transferable Semantic Attack and Robust Tokenizer",
+  "pdfUrl": "https://arxiv.org/pdf/2611.14929v1.pdf",
+  "readerTitle": "语音分词器为何脆弱：迁移语义攻击与鲁棒分词器",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.15961v1",
+  "arxivId": "2611.15961",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.15961v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Péter Mihajlik"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Katalin Mády"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Anna Kohári"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Fruzsina Sára Vargha"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Gábor Kiss"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Tekla Etelka Gráczi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "A. Seza Doğruöz"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.15961v1",
+  "originalTitle": "Is Spoken Hungarian Low-resource?: A Quantitative Survey of Hungarian Speech Data Sets",
+  "pdfUrl": "https://arxiv.org/pdf/2611.15961v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.16710v1",
+  "abstract": "Breathing monitoring is important for well-being, stress regulation, and guided breathing exercises, yet existing approaches often rely on contact-based sensors or controlled environments. This paper presents a non-invasive framework for respiratory phase detection using acoustic signals recorded on commodity smartphones. The proposed hybrid CNN-Transformer architecture combines local spectral feature extraction with long-range temporal modeling to capture the cyclic structure of breathing. The model is evaluated using a Leave-One-Subject-Out (LOSO) protocol on the Foundation Dataset and on an independent unseen test set comprising over 1300 breathing cycles and 2 hours of continuous recordings. The proposed 3-class formulation achieves 72.85% frame-level accuracy and 96.6% cycle-level exhalation detection efficiency in the LOSO evaluation, while achieving 76.94% frame-level accuracy, a Cohen's Kappa score of 0.65, and 99.2% cycle-level exhalation detection efficiency on the unseen test set. Results suggest that accurate respiratory monitoring may be achievable under data-constrained conditions, indicating that appropriate temporal modeling can learn transferable respiratory representations and generalize to previously unseen participants. An end-to-end ONNX deployment pipeline enables privacy-preserving on-device inference with latency below 20 ms, supporting real-time monitoring on mobile and wearable devices.",
+  "abstractSha256": "9b342368781843014c97229f964ef65334b973ecd9f3b6ab4d9f8beb638f496c",
+  "arxivId": "2611.16710",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.16710v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "Transformer",
+    "primaryTask": "音频事件检测",
+    "rankBucket": "前50%",
+    "score": 5.7,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.event-detection",
+          "label": "音频事件检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.transformer",
+          "label": "Transformer"
+        },
+        {
+          "facet": "method",
+          "id": "method.cnn",
+          "label": "CNN"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.on-device",
+          "label": "端侧运行"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.low-resource",
+          "label": "低资源"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "Transformer",
+      "primaryMethodId": "method.transformer",
+      "primaryTask": "音频事件检测",
+      "primaryTaskId": "task.event-detection",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Julian Szymanski"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Tomasz Sankowski"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Piotr Sulewski"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Iwo Czartowski"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Javier Medina Quero"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文用约 3.5 s 的手机麦克风音频、CNN 局部频谱特征和 Transformer 长程时序建模来逐帧判别吸气、呼气、静默或呼气、背景，并在 LOSO 与 13 名未见被试上报告周期级呼气检测和呼吸率误差；结果支持有限数据下的可行性，但训练被试仅 3 人、标签来自同一段音频的人工标注，且缺少上下文长度和循环模型对照，结论只适用于论文测试条件。",
+  "originalTitle": "Acoustic Respiratory Phase Detection on Mobile Devices",
+  "pdfUrl": "https://arxiv.org/pdf/2611.16710v1.pdf",
+  "readerTitle": "手机麦克风中的呼吸相位检测：从帧分类到周期级呼吸率",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

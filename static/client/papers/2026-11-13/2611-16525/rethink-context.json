@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.16525v1",
+  "abstract": "ZONOS3-Mini is an ultra-compact, ultra-fast, zero-shot voice-cloning TTS model. The model can run in real time on a laptop or smartphone. For its latency and size, it achieves state-of-the-art accuracy and cloning fidelity. To achieve this we propose a latent MoE backbone with only 886M parameters (100M active per token) and a new audio codec, Zyphra Audio Codec 1 (ZAC-1), which represents 44.1 kHz audio at a 15 Hz frame rate. On the new ZTTS2-Eval benchmark, ZONOS3-Mini reaches a 6.71% macro-average WER over 55 language sets (35 clean and 20 in the wild), which is competitive with larger and slower state-of-the-art models. We release the model weights, inference, and training code.",
+  "abstractSha256": "3bda5e8992f09c35fe890508e7854d5578f22ec8b3b3d9592b3c21d921d3cf4b",
+  "arxivId": "2611.16525",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.16525v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "神经编解码与离散单元",
+    "primaryTask": "语音克隆",
+    "rankBucket": "前50%",
+    "score": 7.4,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.voice-cloning",
+          "label": "语音克隆"
+        },
+        {
+          "facet": "method",
+          "id": "method.neural-codec",
+          "label": "神经编解码与离散单元"
+        },
+        {
+          "facet": "method",
+          "id": "method.moe",
+          "label": "混合专家模型"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.on-device",
+          "label": "端侧运行"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "神经编解码与离散单元",
+      "primaryMethodId": "method.neural-codec",
+      "primaryTask": "语音克隆",
+      "primaryTaskId": "task.voice-cloning",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Gabriel Clark"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Sofian Mejjoute"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "George Close"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Beren Millidge"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "报告用 15 Hz 的 ZAC-1 音频编解码器和 886M 总参数、100M 激活参数的潜在专家混合与 GDN/注意力主干，把零样本语音克隆 TTS 压到端侧可运行的规模；在自建 55 部分 ZTTS2-Eval 上，后训练后的嵌入条件路径取得 6.71% 宏平均 WER 和 81.2 的宏平均说话人相似度，代价是原始音频条件在野外相似度较低、自动指标覆盖有限，且量化实验没有覆盖最终后训练模型。",
+  "originalTitle": "ZONOS3-Mini Technical Report",
+  "pdfUrl": "https://arxiv.org/pdf/2611.16525v1.pdf",
+  "readerTitle": "小模型如何在端侧做零样本语音克隆：ZONOS3-Mini 的编解码器、主干与评测",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

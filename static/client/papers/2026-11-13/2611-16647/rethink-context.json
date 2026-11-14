@@ -1,0 +1,129 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.16647v1",
+  "abstract": "Multimodal depression screening estimates risk from speech, visual behavior and language. Current methods mainly predict labels, with limited evidence of departures from a non-depressed reference. Recording-level supervision also leaves fine-grained emotional dynamics unannotated. Motivated by emotional inertia, the persistence of affect, InertiaMPDD learns healthy next-state patterns using a world-model-inspired latent predictor. Using pretrained multimodal representations, it predicts from observed history and context. Reference deviation, residual decay rate and a Jacobian spectral descriptor form reference-derived emotional dynamics descriptors, evaluated as candidate proxy biomarkers for standalone screening and personalized decision correction. Across five cohorts from four datasets, fusion reaches 98.41% F1 on D-Vlog and 84.98% on LMVD. Standalone descriptors outperform fixed additive fusion on MPDD but discriminate weakly on AVEC2014. These findings distinguish reference informativeness from fusion benefit and reveal context-dependent utility.",
+  "abstractSha256": "e847fde08594883407d621f9c0f19a774740c85ddf8ca5926760f9b869c385a7",
+  "arxivId": "2611.16647",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.16647v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "自监督学习",
+    "primaryTask": "会话抑郁风险筛查",
+    "rankBucket": "前50%",
+    "score": 6.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.conversational-depression-screening",
+          "label": "会话抑郁风险筛查"
+        },
+        {
+          "facet": "method",
+          "id": "method.self-supervised",
+          "label": "自监督学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "自监督学习",
+      "primaryMethodId": "method.self-supervised",
+      "primaryTask": "会话抑郁风险筛查",
+      "primaryTaskId": "task.conversational-depression-screening",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Northeastern University",
+        "The University of Osaka"
+      ],
+      "name": "Changzeng Fu"
+    },
+    {
+      "affiliations": [
+        "The University of Osaka"
+      ],
+      "name": "Songyang Wang"
+    },
+    {
+      "affiliations": [
+        "Northeastern University"
+      ],
+      "name": "Chang Gao"
+    },
+    {
+      "affiliations": [
+        "Northeastern University"
+      ],
+      "name": "Xinyi Zhang"
+    },
+    {
+      "affiliations": [
+        "Northeastern University"
+      ],
+      "name": "Peilin Li"
+    },
+    {
+      "affiliations": [
+        "Northeastern University"
+      ],
+      "name": "Mo Meng"
+    },
+    {
+      "affiliations": [
+        "Northeastern University"
+      ],
+      "name": "Jiarui Wu"
+    },
+    {
+      "affiliations": [
+        "Northeastern University"
+      ],
+      "name": "Mingze Li"
+    },
+    {
+      "affiliations": [
+        "Northeastern University"
+      ],
+      "name": "Hongwei Ding"
+    },
+    {
+      "affiliations": [
+        "Northeastern University"
+      ],
+      "name": "Shiqi Zhao"
+    },
+    {
+      "affiliations": [
+        "Southeast University"
+      ],
+      "name": "Yong Li"
+    },
+    {
+      "affiliations": [
+        "Xi’an University of Posts and Telecommunications"
+      ],
+      "name": "Lang He"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对整段录音只有一个标签而缺少逐段情绪标注的困难，InertiaMPDD 用只在非抑郁训练录音上学的下一步预测器算出偏离、残差波动持续与局部谱三类描述子来校正群体判断，在自录 vlog 上得到互补增益而在访谈任务上随参照覆盖变化，代价是需维护冻结参照与逐录音的残差和雅可比计算。",
+  "originalTitle": "InertiaMPDD: Multimodal Personalized Depression Detection via Emotional Inertia-Inspired Dynamics Modeling",
+  "pdfUrl": "https://arxiv.org/pdf/2611.16647v1.pdf",
+  "readerTitle": "用健康下一步预测度量行为偏离来辅助抑郁筛查",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

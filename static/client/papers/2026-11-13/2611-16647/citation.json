@@ -1,0 +1,87 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.16647v1",
+  "arxivId": "2611.16647",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.16647v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Northeastern University",
+        "The University of Osaka"
+      ],
+      "name": "Changzeng Fu"
+    },
+    {
+      "affiliations": [
+        "The University of Osaka"
+      ],
+      "name": "Songyang Wang"
+    },
+    {
+      "affiliations": [
+        "Northeastern University"
+      ],
+      "name": "Chang Gao"
+    },
+    {
+      "affiliations": [
+        "Northeastern University"
+      ],
+      "name": "Xinyi Zhang"
+    },
+    {
+      "affiliations": [
+        "Northeastern University"
+      ],
+      "name": "Peilin Li"
+    },
+    {
+      "affiliations": [
+        "Northeastern University"
+      ],
+      "name": "Mo Meng"
+    },
+    {
+      "affiliations": [
+        "Northeastern University"
+      ],
+      "name": "Jiarui Wu"
+    },
+    {
+      "affiliations": [
+        "Northeastern University"
+      ],
+      "name": "Mingze Li"
+    },
+    {
+      "affiliations": [
+        "Northeastern University"
+      ],
+      "name": "Hongwei Ding"
+    },
+    {
+      "affiliations": [
+        "Northeastern University"
+      ],
+      "name": "Shiqi Zhao"
+    },
+    {
+      "affiliations": [
+        "Southeast University"
+      ],
+      "name": "Yong Li"
+    },
+    {
+      "affiliations": [
+        "Xi’an University of Posts and Telecommunications"
+      ],
+      "name": "Lang He"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.16647v1",
+  "originalTitle": "InertiaMPDD: Multimodal Personalized Depression Detection via Emotional Inertia-Inspired Dynamics Modeling",
+  "pdfUrl": "https://arxiv.org/pdf/2611.16647v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

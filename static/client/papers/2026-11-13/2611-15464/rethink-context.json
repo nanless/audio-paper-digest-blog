@@ -1,0 +1,127 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.15464v1",
+  "abstract": "Can a speech generator also serve as an effective voice encoder? We show that a pretrained autoregressive text-to-speech (TTS) backbone can be repurposed for reference compression, improving speaker similarity in subsequent synthesis. Jointly encoding reference speech and its transcript further strengthens this capability. Controlled ablations and activation interventions trace the text benefit through intermediate acoustic representations into the compressed vectors that condition generation. Building on these findings, we introduce RSE-TTS, whose Reconstructive Speaker Encoder (RSE) shares the generation backbone and compresses paired reference text and speech into eight continuous vectors. Sharing reduces encoder-generator parameters by 48% relative to independent pretrained encoding. Large-scale English training yields a 118M-parameter generator that improves both word error rate and speaker similarity over the corresponding official MOSS-TTS-Nano cloning modes on all three English benchmarks. Combined with acoustic continuation, RSE-TTS approaches the speaker similarity of substantially larger systems while achieving lower WER than the evaluated CosyVoice 3 and MOSS-TTS-Local models. Audio samples are available at https://voxnexusai.github.io/RSE-TTS/.",
+  "abstractSha256": "0530a51f38c133af98294223f36ac42ef81277374b9f5fd4629df443c9e7cca8",
+  "arxivId": "2611.15464",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.15464v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "迁移学习",
+    "primaryTask": "语音克隆",
+    "rankBucket": "前50%",
+    "score": 7.4,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.voice-cloning",
+          "label": "语音克隆"
+        },
+        {
+          "facet": "method",
+          "id": "method.transfer",
+          "label": "迁移学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.activation-intervention",
+          "label": "激活因果干预"
+        },
+        {
+          "facet": "method",
+          "id": "method.autoregressive",
+          "label": "自回归模型"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "迁移学习",
+      "primaryMethodId": "method.transfer",
+      "primaryTask": "语音克隆",
+      "primaryTaskId": "task.voice-cloning",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ming Ma"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Mingjie Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yuanzhong Zheng"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hengyao Bao"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hailin Yu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shijing Yu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hao Qiu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Gongfan Cao"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xiao Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xuemin Zhao"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Youhai Jiang"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "RSE-TTS 让参考编码与目标生成共用同一个 Global transformer，将成对参考文本和语音压成八个条件向量，在 118.2M 可训练编码—生成参数下改善官方 MOSS-TTS-Nano 的 WER 与 SIM，但固定条件仍不如声学续写的说话人相似度，并要求参考转写。",
+  "originalTitle": "RSE-TTS: Compact Text-to-Speech through Shared Text-Aware Reference Encoding and Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2611.15464v1.pdf",
+  "readerTitle": "RSE-TTS：共享文本感知参考编码与生成",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

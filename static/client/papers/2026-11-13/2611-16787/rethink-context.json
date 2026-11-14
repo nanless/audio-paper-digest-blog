@@ -1,0 +1,103 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.16787v1",
+  "abstract": "Spatial hearing in multi-receiver environments requires identifying who speaks, where they are, and how they move. Existing benchmarks evaluate spatial prediction, transcription, tracking, and distributed speech processing, but offer limited evaluation of whether speech signal remains associated with the correct physical source across receivers and motion. We introduce MESH, which evaluates this association through egocentric and allocentric views of shared acoustic scenes. The egocentric view uses local recordings and peer metadata, while the allocentric view combines synchronized recordings from multiple receivers in a shared 3D world frame. MESH contains nearly 40,000 questions across 13 static and dynamic localization and spatial transcription tasks. We evaluate eleven audio-model configurations and a language-model agent using specialist tools. The best static distance-estimation and dynamic direction-tracking accuracies are only 21.90% and 41.54%, respectively, while the lowest word error rates across four transcription tasks range from 59.15% to 73.10%. Ablation studies and additional experiments reveal that existing models are not yet able to effectively leverage peer information and struggle to handle multi-speaker and dynamic scenarios. These findings highlight the gap between access to distributed acoustic information and its effective use for spatial speech understanding. We release the dataset and evaluation code to support further research on collaborative and distributed spatial hearing.",
+  "abstractSha256": "649646141b8d6904d60318e1f12c8bce48f907b78055c434e771c4c3332b3406",
+  "arxivId": "2611.16787",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.16787v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "声源定位",
+    "rankBucket": "前50%",
+    "score": 7.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "task",
+          "id": "task.localization",
+          "label": "声源定位"
+        },
+        {
+          "facet": "task",
+          "id": "task.multi-talker-asr",
+          "label": "多说话人语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.spatial-audio",
+          "label": "空间音频"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "声源定位",
+      "primaryTaskId": "task.localization",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Wen Wen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Bohan Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "KwanHo Tam"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Yu Xi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Jing Peng"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Shuai Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Kai Yu"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "MESH 用共享场景中的 13 个静态与动态定位、空间转录任务，在自我中心与全局中心两种坐标视图下检查语音是否仍与正确物理声源关联；最佳静态距离估计和动态方向跟踪准确率仅为 21.90% 与 41.54%，四个转录任务的最低 WER 仍落在 59.15%–73.10%，说明现有模型能接入部分空间输入，却没有稳定利用同伴信息与分布式录音。",
+  "originalTitle": "MESH: Multi-receiver Evaluation of Spatial Hearing across Egocentric and Allocentric Views",
+  "pdfUrl": "https://arxiv.org/pdf/2611.16787v1.pdf",
+  "readerTitle": "MESH：多接收器空间听觉中的自我中心与全局中心评测",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

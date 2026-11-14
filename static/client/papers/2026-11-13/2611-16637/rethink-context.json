@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.16637v1",
+  "abstract": "The interaction of acoustic features in leaking private information remains underexplored. This work focuses on time-domain features, i.e., broadband RMS level and pitch, alone and combined with temporally smoothed and subsampled Mel spectrograms. Privacy is assessed using informed automatic speech recognition and speaker-verification attacks, while utility for conversational analysis is evaluated using voice activity detection and speaker diarisation. RMS level and pitch alone exposed limited information, but fusion with 500 ms-smoothed Mel spectrograms enhanced utility while substantially increasing speech-content leakage. Specifically, the combination with RMS level showed that fine-grained temporal dynamics can amplify leakage from coarsely sampled spectral features. Speaker-identity protection remained limited for all tested features. Overall, these findings indicate that privacy assessments performed on individual acoustic features may underestimate leakage after feature fusion.",
+  "abstractSha256": "7e4e0264d9404efa8e3812312a649e3978131db7e35f077e20cedd5ed61a025c",
+  "arxivId": "2611.16637",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.16637v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "音频隐私攻击与防御",
+    "rankBucket": "前50%",
+    "score": 6.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.privacy-attack-defense",
+          "label": "音频隐私攻击与防御"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.privacy",
+          "label": "隐私保护"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "音频隐私攻击与防御",
+      "primaryTaskId": "task.privacy-attack-defense",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jule Pohlhausen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jörg Bitzer"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文在同一套知情攻击与对话分析评测中比较宽带 RMS 电平、基频及其与时间平滑子采样 Mel 频谱图的拼接，发现 RMS 与平滑 Mel 组合能改善语音活动检测，却会把内容泄漏显著推高，说明逐特征评估可能低估组合后的隐私风险。",
+  "originalTitle": "The Unseen Threat: How Complementary Combinations of Acoustic Features Compromise Speech Privacy",
+  "pdfUrl": "https://arxiv.org/pdf/2611.16637v1.pdf",
+  "readerTitle": "声学特征互补组合如何改变语音隐私与对话分析效用",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

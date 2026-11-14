@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.15242v1",
+  "abstract": "Raga recognition in Hindustani classical music is difficult because a raga is not defined only by the notes used in it. Its identity also depends on the way notes are emphasized, the movement between notes and characteristic phrases. In this work, we develop a computational approach to analyse these characteristics directly from audio recordings. The method uses pitch extracted from recordings and represents it using a 44-position note framework based on the 22-shruti system. From this representation, Raga features based on the Indian classical musicology are extracted.Each feature is compared with a reference representation of the raga and the resulting scores are combined to obtain an overall similarity score. The method is first studied using Raga Yaman and is then tested on recordings of other ragas. The computational results are also compared with the theoretical description of Yaman to identify which raga characteristics are captured well and where the method has limitations.",
+  "abstractSha256": "14384e0149e2280810ffc352df678b9a0c5d528d206e3620256f12209d5ae58c",
+  "arxivId": "2611.15242",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.15242v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "规则与词典方法",
+    "primaryTask": "音乐分析",
+    "rankBucket": "后50%",
+    "score": 5.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-understanding",
+          "label": "音乐分析"
+        },
+        {
+          "facet": "method",
+          "id": "method.rule-based",
+          "label": "规则与词典方法"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.music-information",
+          "label": "音乐信息检索"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "规则与词典方法",
+      "primaryMethodId": "method.rule-based",
+      "primaryTask": "音乐分析",
+      "primaryTaskId": "task.music-understanding",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Janay Sukheja"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shailaja D. Sharma"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文把主音归一化后的 44 位置音高序列按印度音乐理论拆成六类拉格特征，再与 Yaman 参考模型比较得到总体相似度；最强证据是 Yaman 在报告的五类曲目中得到 84.0% 的最高分，但总分如何由子分数合成未公开，主音也需人工给定，因此结论目前只支持有足够慢速材料的相似度比较，而不是概率化识别。",
+  "originalTitle": "Computational Raga Recognition: A Theory-Driven Approach",
+  "pdfUrl": "https://arxiv.org/pdf/2611.15242v1.pdf",
+  "readerTitle": "从音高轨迹到拉格相似度：理论驱动的计算识别",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

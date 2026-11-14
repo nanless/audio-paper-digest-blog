@@ -1,0 +1,80 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.17181v1",
+  "abstract": "VocalTrax recovers interpretable articulatory controls from a recording by gradient descent through a differentiable Pink Trombone synthesizer. Its vocal tract is a Kelly-Lochbaum waveguide updated twice per audio sample, so every gradient step backpropagates through a long recurrence, which is slow on GPUs. We propose Convolutional VocalTrax, which computes the exact frequency response of the same waveguide and applies it as a causal convolution. We assume that the tract is stationary within 5.8 ms blocks and that its lossy impulse response can be truncated after 93 ms. Gradients then pass through FFTs and a short recursion along the tract instead of through time. On 600 AudioMNIST recordings, the tract forward and backward pass runs 47 to 63 times faster on an A100 GPU, and a classifier trained only on real speech recognizes our reconstructions more often than those of VocalTrax (14.5% vs. 10.0%), although the log-mel distance to the target is 11% higher. Parameters fitted with our model keep this gain when rendered by the original VocalTrax (13.8%).",
+  "abstractSha256": "58c251ac5b3d8657ba57947bf8528c49aedd0958f3625495ae45983ff9c48e09",
+  "arxivId": "2611.17181",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.17181v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "声学到构音反演",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.acoustic-articulatory-inversion",
+          "label": "声学到构音反演"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.end-to-end",
+          "label": "端到端"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.phonation",
+          "label": "发声与构音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "声学到构音反演",
+      "primaryTaskId": "task.acoustic-articulatory-inversion",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yongyi Zang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Debasish Ray Mohapatra"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Randal Leistikow"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Perry R. Cook"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文把 VocalTrax 的 Kelly-Lochbaum 声道在短块内视为时不变，精确计算其频率响应并用因果卷积与 FFT 重叠相加实现，使 A100 上声道前向和反向传播快 47 至 63 倍，并在 AudioMNIST 上以略差的对数梅尔距离换取更高的相对识别率；但收益主要限于单条或长音频的 GPU 管线。",
+  "originalTitle": "Convolutional VocalTrax: Replacing Backpropagation Through Time with Convolution in Differentiable Articulatory Synthesis",
+  "pdfUrl": "https://arxiv.org/pdf/2611.17181v1.pdf",
+  "readerTitle": "用卷积替代沿时间反传：可微分发声合成中的声道响应块卷积",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

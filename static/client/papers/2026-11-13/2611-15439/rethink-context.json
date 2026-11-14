@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.15439v1",
+  "abstract": "Large audio-language models (LALMs) typically encode audio once and conduct subsequent multi-step reasoning in a language-dominated space, weakening access to fine-grained acoustic evidence. Although recent multimodal approaches have explored re-engaging perceptual inputs during reasoning, whether a frozen LALM can actively revisit crucial acoustic evidence in the latent space at test time remains underexplored. To bridge this gap, we introduce Decoupled Audio Latent Reasoning (DeALR), a novel test-time latent reasoning framework that shifts the paradigm from text-dominated deliberation to active audio-latent interaction. Inspired by the human cognitive process of \"backtracking\" to specific acoustic cues during complex listening tasks, DeALR establishes a dynamic interaction between learnable thought tokens and acoustic segments. Specifically, we introduce Span-Level Acoustic Backtracking, which traces initial attention distributions to dynamically isolate contiguous, key acoustic spans. Furthermore, we propose Decoupled Audio-Latent Optimization (DALO), a test-time reinforcement learning algorithm that jointly refines thought vectors and acoustic patches via confidence-guided policy gradients. Crucially, DALO explicitly decouples trajectory search from response generation by reinstating uncorrupted, high-fidelity audio embeddings prior to text synthesis, entirely eliminating optimization-induced distribution drift while retaining the navigation of the refined thoughts. Comprehensive experiments on benchmarks demonstrate that DeALR consistently outperforms prior test-time optimization approaches, delivering substantial improvements in both confidence calibration and reasoning accuracy.",
+  "abstractSha256": "5c13a19a139835e6f8e47f62af7288238cb8fe1a0a0eea41f62ae7e4eb55c12c",
+  "arxivId": "2611.15439",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.15439v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "强化学习",
+    "primaryTask": "音频推理",
+    "rankBucket": "前50%",
+    "score": 6.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-reasoning",
+          "label": "音频推理"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-question-answering",
+          "label": "音频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.reinforcement",
+          "label": "强化学习"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.audio-language",
+          "label": "音频大模型"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "强化学习",
+      "primaryMethodId": "method.reinforcement",
+      "primaryTask": "音频推理",
+      "primaryTaskId": "task.audio-reasoning",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Haoyu He"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yan Rong"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Li Liu"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "DeALR 在冻结音频语言模型的测试阶段，用注意力定位连续声学片段并让思维向量与音频 patch 共同搜索，最后把原始音频嵌入复原后再解码；MMAR/MMAU 等表显示平均准确率高于所比较的若干测试时方法，但部分子项并非最高，且 MMAU 上单次查询延迟为 3.45 s，高于直接推理的 1.05 s。",
+  "originalTitle": "DeALR: Decoupled Audio-Latent Optimization with Acoustic Backtracking for Test-Time Reasoning",
+  "pdfUrl": "https://arxiv.org/pdf/2611.15439v1.pdf",
+  "readerTitle": "DeALR：冻结音频语言模型中的声学回溯式测试时推理",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

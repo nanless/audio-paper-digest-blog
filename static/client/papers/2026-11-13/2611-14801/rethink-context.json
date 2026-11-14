@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.14801v1",
+  "abstract": "BEST-RQ, based on random projection and quantization, has been a well-established self-supervised learning approach to learn speech representations from large-scale unlabeled audio due to its high performance and efficiency. However, in BEST-RQ representations learned by random quantization can be sensitive to the choice of quantization targets. To address this issue, we propose a distributionally robust extension of BEST-RQ that seeks representations robust across multiple quantization configurations. Specifically, we define groups by codebooks and formulate the training as a group Distributionally Robust Optimization (DRO) problem. Rather than optimizing solely for the average loss across groups, our approach adaptively reweights groups to emphasize those performing poorly. Additionally, we regularize DRO with a Kullback-Leibler divergence to prevent excessive distribution deviation. We evaluate our approach on the Multilingual LibriSpeech dataset and show that the distributionally robust BEST-RQ achieves superior performance over the conventional uniform average across multiple codebooks.",
+  "abstractSha256": "1420a2d8845d94ae5d98f81fdd52adcecb14b8971e8cb604901150623bc4a4cc",
+  "arxivId": "2611.14801",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.14801v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "自监督学习",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.4,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.self-supervised",
+          "label": "自监督学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.multitask",
+          "label": "多任务学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.regularization",
+          "label": "正则化"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "自监督学习",
+      "primaryMethodId": "method.self-supervised",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Muhammad Khan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xiaodong Cui"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Brian Kingsbury"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "George Saon"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "本文研究多个随机码本如何影响 BEST-RQ 的离散目标学习，提出把每个码本视为一组、用带 KL 正则的分组分布鲁棒优化自适应加权的 DRO-BEST-RQ；在 MLS 五语种上，λ=1.0 的平均 WER 为 8.4%，低于均匀多码本 BEST-RQ 的 8.9%，代价是多个预测头、额外的组权重更新和需要调节 λ，且证据只覆盖这一组数据与设置。",
+  "originalTitle": "Distributionally Robust BEST-RQ For Speech Representation Learning",
+  "pdfUrl": "https://arxiv.org/pdf/2611.14801v1.pdf",
+  "readerTitle": "多码本 BEST-RQ 的分布鲁棒训练：目标空间、权重更新与 MLS 结果",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

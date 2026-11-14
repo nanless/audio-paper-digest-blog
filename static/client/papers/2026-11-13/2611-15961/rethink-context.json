@@ -1,0 +1,98 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.15961v1",
+  "abstract": "Even though various speech data sets are available in Hungarian, there is a lack of a general overview about their types and sizes. To fill in this gap, we provide a survey of available data sets in spoken Hungarian in five categories (e.g., monolingual, Hungarian part of multilingual, pathological, child-related and dialectal collections). In total, the estimated size of available data is about 2800 hours (across 7500 speakers) and it represents a rich spoken language diversity. However, the distribution of the data and its alignment to real-life (e.g. speech recognition) tasks is far from optimal indicating the need for additional larger-scale natural language speech data sets. Our survey presents an overview of available data sets for Hungarian explaining their strengths and weaknesses which is useful for researchers working on Hungarian across disciplines. In addition, our survey serves as a starting point towards a unified foundational speech model specific to Hungarian.",
+  "abstractSha256": "72aa4d206fa9576b63bbc2b6239c8d6da128bb0fd370815f3a2bf2c793c8fa47",
+  "arxivId": "2611.15961",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.15961v1",
+  "assessment": {
+    "documentType": "综述",
+    "primaryMethod": "文献综述方法",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 5.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.literature-review",
+          "label": "文献综述方法"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.language-resource-coverage",
+          "label": "语言技术资源覆盖与适用性"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.low-resource",
+          "label": "低资源"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "文献综述方法",
+      "primaryMethodId": "method.literature-review",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Péter Mihajlik"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Katalin Mády"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Anna Kohári"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Fruzsina Sára Vargha"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Gábor Kiss"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Tekla Etelka Gráczi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "A. Seza Doğruöz"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文系统盘点五类匈牙利语口语数据集，按小时和说话人数统计并检查可获取性与转写一致性，指出总量看似接近数千小时、近八千名说话人，但对现代语音识别和统一基础语音模型而言，真正可访问、格式统一且贴近任务的带转写语音仍然不足。",
+  "originalTitle": "Is Spoken Hungarian Low-resource?: A Quantitative Survey of Hungarian Speech Data Sets",
+  "pdfUrl": "https://arxiv.org/pdf/2611.15961v1.pdf",
+  "readerTitle": "匈牙利语口语真的低资源吗：语音数据集定量调查的论文解读",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

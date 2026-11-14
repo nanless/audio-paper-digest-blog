@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.15362v1",
+  "abstract": "Semantic endpointing must distinguish a completed turn from a temporary pause, yet its binary output does not require the full generation pathway of an audio-language model. We propose JEV-VAD, an ASR-free framework that combines task-first conditioning, a scalar endpoint readout, and decoder-prefix pruning. The question and completion criteria are placed before audio tokens, allowing causal decoder attention to construct audio states conditioned on the endpointing objective. A dedicated scalar head maps the assistant-prefix state directly to a stop probability, removing transcript generation, answer decoding, and vocabulary-sized output projection. To reduce representation cost, decoder-prefix pruning physically retains only the initial decoder blocks. Matched head refitting then identifies which retained depths provide useful endpoint information under a common adaptation budget. The framework is built on Qwen3-ASR-0.6B and adapted through supervised fine-tuning followed by reinforcement learning for calibrated decisions. Together, these components address input conditioning, output complexity, and decoder depth within one endpointing framework. Experiments on EOT-bench show cross-language transfer from English endpoint supervision and useful discrimination in shallow prefixes, supporting a selectable quality-resource trade-off.",
+  "abstractSha256": "d8b476eece46dc69fbf2026f4345359b473fce438e0a3181693db743d1e52f71",
+  "arxivId": "2611.15362",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.15362v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "模型剪枝",
+    "primaryTask": "轮次切换",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.turn-taking",
+          "label": "轮次切换"
+        },
+        {
+          "facet": "method",
+          "id": "method.pruning",
+          "label": "模型剪枝"
+        },
+        {
+          "facet": "method",
+          "id": "method.lora",
+          "label": "LoRA"
+        },
+        {
+          "facet": "method",
+          "id": "method.reinforcement",
+          "label": "强化学习"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.cross-lingual",
+          "label": "跨语言"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "模型剪枝",
+      "primaryMethodId": "method.pruning",
+      "primaryTask": "轮次切换",
+      "primaryTaskId": "task.turn-taking",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Tianjin University"
+      ],
+      "name": "Jintao Liang"
+    },
+    {
+      "affiliations": [
+        "Tianjin Normal University"
+      ],
+      "name": "Nan Li"
+    },
+    {
+      "affiliations": [
+        "Tianjin University"
+      ],
+      "name": "Longbiao Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Tubin Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Min Xu"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "JEV-VAD 把完成问题与判定标准放在音频 token 之前，用 1025 个参数的标量头直接输出停止概率，并在匹配头重拟合下研究浅层解码器前缀；它在 EOT-bench 上以英语监督取得中文 cut@300 ms 19.57% 和 14 语言平均 19.09%，主要代价是工作点依赖语言与预算，而且论文只报告参数和矩阵计算下降，没有测出端到端墙钟加速。",
+  "originalTitle": "JEV-VAD: Efficient Semantic Endpointing via Task-First Conditioning and Decoder-Prefix Pruning",
+  "pdfUrl": "https://arxiv.org/pdf/2611.15362v1.pdf",
+  "readerTitle": "JEV-VAD：用任务前置条件与浅层解码器做语义端点判定",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.14016v1",
+  "abstract": "A loudspeaker in a closed box is modeled as a rigid sphere with an axially moving cap. For an axisymmetric cone-velocity profile, its radiation impedance is written as a network. Each spherical-harmonic mode has an impedance rational in frequency, realized exactly as a finite passive ladder of masses and compliances terminated in a resistance. Ideal transformers set by Legendre coefficients couple these ladders; truncated modes reduce to a residual mass. Despite the different geometry, the impedance resembles that of a baffled piston but, at equal volume velocity, has half its low-frequency resistance and about three quarters of its radiation mass.",
+  "abstractSha256": "75742aa45d8c1d0420b0e94fa6fe857b31966a6d0bcb983e68ef0293841e7a4e",
+  "arxivId": "2611.14016",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.14016v1",
+  "assessment": {
+    "documentType": "理论研究",
+    "primaryMethod": "形式化分析",
+    "primaryTask": "声学响应预测",
+    "rankBucket": "前25%",
+    "score": 8.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.acoustic-response-prediction",
+          "label": "声学响应预测"
+        },
+        {
+          "facet": "method",
+          "id": "method.formal-analysis",
+          "label": "形式化分析"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.physical-acoustics",
+          "label": "物理声学与声信号机理"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.theory",
+          "label": "理论分析"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "形式化分析",
+      "primaryMethodId": "method.formal-analysis",
+      "primaryTask": "声学响应预测",
+      "primaryTaskId": "task.acoustic-response-prediction",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ronald M. Aarts"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文把刚性球上轴向运动球冠的辐射阻抗分解到球面模态，用理想变压器连接每个模态的有限 Cauer 梯形，并用残余质量截断无限模态，从而给出可按 N 控制带宽的无源网络；数值上复现声功率级数并在小帽极限接近障板活塞，但尚未与实测辐射阻抗比较。",
+  "originalTitle": "Passive ladder-network representation of the radiation impedance of a spherical cap on a rigid sphere",
+  "pdfUrl": "https://arxiv.org/pdf/2611.14016v1.pdf",
+  "readerTitle": "球冠辐射阻抗的无源梯形网络：从模态到可仿真电路",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.16787v1",
+  "arxivId": "2611.16787",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.16787v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Wen Wen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Bohan Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "KwanHo Tam"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Yu Xi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Jing Peng"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Shuai Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Kai Yu"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.16787v1",
+  "originalTitle": "MESH: Multi-receiver Evaluation of Spatial Hearing across Egocentric and Allocentric Views",
+  "pdfUrl": "https://arxiv.org/pdf/2611.16787v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

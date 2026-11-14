@@ -1,0 +1,82 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.14971v1",
+  "abstract": "Existing studies have shown that music generative models can generate synchronized tracks that play alongside an input song. Can we extend this capability to develop a generative approach to beat tracking? To answer this question, we equip a pretrained MusicGen model with an audio-conditioning adapter to generate percussion tracks synchronized with the input music, from which we extract the beat positions. We train separate models with percussion targets of varying rhythmic complexity and compare them with two other generative models and conventional beat trackers. On GTZAN, our model achieves performance close to state-of-the-art beat trackers. Our model also demonstrates greater robustness: it shows the smallest drop in F-measure when drums are removed from the input at inference time. In certain genres, such as metal and disco, our model is also less likely to be misled by strong onsets or to miss beats with weak onsets. These results suggest that percussion generation has the potential to become a viable approach to beat tracking, and that its output is not merely a sequence of beat positions but an audible percussion track.",
+  "abstractSha256": "e5eb4ee21dd52ee4cab2652a5415cdb522b0967ee348614d27be14846ec76a0a",
+  "arxivId": "2611.14971",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.14971v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "生成模型",
+    "primaryTask": "节拍跟踪",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.beat-tracking",
+          "label": "节拍跟踪"
+        },
+        {
+          "facet": "task",
+          "id": "task.music-generation",
+          "label": "音乐生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.generative",
+          "label": "生成模型"
+        },
+        {
+          "facet": "method",
+          "id": "method.adapter",
+          "label": "Adapter"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "生成模型",
+      "primaryMethodId": "method.generative",
+      "primaryTask": "节拍跟踪",
+      "primaryTaskId": "task.beat-tracking",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Schulich School of Music, McGill University, Montréal, QC, Canada",
+        "Centre for Interdisciplinary Research in Music Media and Technology (CIRMMT), Montréal, Canada"
+      ],
+      "name": "Kun Fang"
+    },
+    {
+      "affiliations": [
+        "Courant Institute, New York University, New York, USA",
+        "Mohamed bin Zayed University of Artificial Intelligence (MBZUAI), Abu Dhabi, UAE"
+      ],
+      "name": "Ziyu Wang"
+    },
+    {
+      "affiliations": [
+        "Schulich School of Music, McGill University, Montréal, QC, Canada",
+        "Centre for Interdisciplinary Research in Music Media and Technology (CIRMMT), Montréal, Canada"
+      ],
+      "name": "Ichiro Fujinaga"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文把拍子跟踪改成先按歌曲生成同步打击乐再提取拍点，在 GTZAN 上 F-measure 约 0.85 接近传统方法，主模型去鼓后下降较小，但生成器冻结、只训练 10.4 M 适配器，音质初步评估偏低。",
+  "originalTitle": "Can Music Generation Models Tap Along? Evaluating Generative Approaches to Beat Tracking",
+  "pdfUrl": "https://arxiv.org/pdf/2611.14971v1.pdf",
+  "readerTitle": "跟着歌曲打鼓能找到拍子吗：生成式拍子跟踪解读",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

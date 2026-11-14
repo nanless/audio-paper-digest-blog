@@ -1,0 +1,35 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.14971v1",
+  "arxivId": "2611.14971",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.14971v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Schulich School of Music, McGill University, Montréal, QC, Canada",
+        "Centre for Interdisciplinary Research in Music Media and Technology (CIRMMT), Montréal, Canada"
+      ],
+      "name": "Kun Fang"
+    },
+    {
+      "affiliations": [
+        "Courant Institute, New York University, New York, USA",
+        "Mohamed bin Zayed University of Artificial Intelligence (MBZUAI), Abu Dhabi, UAE"
+      ],
+      "name": "Ziyu Wang"
+    },
+    {
+      "affiliations": [
+        "Schulich School of Music, McGill University, Montréal, QC, Canada",
+        "Centre for Interdisciplinary Research in Music Media and Technology (CIRMMT), Montréal, Canada"
+      ],
+      "name": "Ichiro Fujinaga"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.14971v1",
+  "originalTitle": "Can Music Generation Models Tap Along? Evaluating Generative Approaches to Beat Tracking",
+  "pdfUrl": "https://arxiv.org/pdf/2611.14971v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.16718v1",
+  "abstract": "Recent music foundation models have achieved remarkable progress in music representation learning, yet most existing approaches rely on Transformer architectures whose quadratic attention complexity introduces substantial computational and memory overhead when modeling long-duration music recordings. In this work, we propose MusicRWKV, a multimodal music representation learning framework built upon the RWKV architecture. MusicRWKV jointly models waveform, spectrogram, and metadata information within a unified self-supervised learning framework. To improve efficiency for long musical sequences, we introduce an invertible compression module that reduces sequence length while preserving reconstruction capability. A FiLM-based conditioning strategy is employed to facilitate modality-aware representation learning without introducing expensive cross-attention operations. We further investigate the integration of Soft ROSA as a differentiable retrieval mechanism for neural-symbolic interaction. Experimental evaluation across a diverse collection of Music Information Retrieval (MIR) benchmarks demonstrates that the proposed RWKV-based architecture can be effectively adapted to heterogeneous music understanding tasks. A controlled pretraining ablation shows that Soft ROSA improves validation performance, while layer-wise telemetry analysis reveals a progressive transition from distributed retrieval to selective retrieval in deeper network layers. These results suggest that RWKV provides a promising architectural alternative to Transformer-based models for multimodal music understanding.",
+  "abstractSha256": "75e69419155b65e9d4ede1a65bd2dfbdab8eb429b2330647b49595a3f6e79c0e",
+  "arxivId": "2611.16718",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.16718v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "自监督学习",
+    "primaryTask": "音乐分析",
+    "rankBucket": "前50%",
+    "score": 5.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-understanding",
+          "label": "音乐分析"
+        },
+        {
+          "facet": "method",
+          "id": "method.self-supervised",
+          "label": "自监督学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.state-space",
+          "label": "状态空间模型"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.long-context",
+          "label": "长上下文"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "自监督学习",
+      "primaryMethodId": "method.self-supervised",
+      "primaryTask": "音乐分析",
+      "primaryTaskId": "task.music-understanding",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Terry Tan"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文把波形、频谱和元数据 token 送入多条 RWKV 支路，用可逆压缩、FiLM 条件调制和拼接融合降低长序列与多模态交互成本，下游结果支持同一主干可适配多类 MIR 任务，但比较协议不完全一致、Soft ROSA 有明显额外开销，不能外推为全面优于 Transformer。",
+  "originalTitle": "MusicRWKV: A Multimodal RWKV Framework for Music Representation Learning",
+  "pdfUrl": "https://arxiv.org/pdf/2611.16718v1.pdf",
+  "readerTitle": "MusicRWKV：多模态音乐表示学习的主干替换、融合步骤与结论边界",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

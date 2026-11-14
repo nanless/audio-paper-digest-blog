@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.14724v1",
+  "abstract": "Natural-language audio editing requires connecting a user's intent to specific sounds and time regions while preserving surrounding content. Complex requests make this connection demanding: an edit may select one occurrence, depend on a temporal relation, or modify a source that overlaps with other sounds. We introduce Harmony, an agentic framework that bridges audio understanding and editing through collaboration among an LLM planner, an audio-language model, and external tools. Harmony combines two mechanisms. Edit-driven collaborative planning uses targeted questions and tool measurements to determine the target, timing, and operation parameters. Evidence-guided execution uses observations of the first separated or generated audio to trigger bounded corrections before final mixing. Together, these mechanisms connect semantic decisions to waveform operations throughout the editing process. Harmony supports addition, removal, replacement, and volume adjustment. On 420 MMAE examples spanning these operations, Harmony achieves an exact match rate of 22.62%, compared with 13.57% for the strongest baseline, and improves aggregate instruction following and context preservation.",
+  "abstractSha256": "a7c9c02c845b29f035198dc450d5898ba35500b7d53cb8d7bd3e58f4eb2c0126",
+  "arxivId": "2611.14724",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.14724v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "工具增强与约束解码",
+    "primaryTask": "音频编辑",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-editing",
+          "label": "音频编辑"
+        },
+        {
+          "facet": "method",
+          "id": "method.tool-augmentation",
+          "label": "工具增强与约束解码"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-understanding",
+          "label": "音频理解"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-generation",
+          "label": "音频生成"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "工具增强与约束解码",
+      "primaryMethodId": "method.tool-augmentation",
+      "primaryTask": "音频编辑",
+      "primaryTaskId": "task.audio-editing",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhongyi Tong"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yapeng Tian"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对自然语言音频编辑中选准目标声、定准时间窗并保住其余内容的问题，Harmony 用大语言模型规划器协同音频观察与测量工具做规划，再对首次分离或生成结果做有界修正后混音，在 420 个 MMAE 样本上把完全成功率做到 22.62%，代价是平均每个输入约 105.30 s 与 4.25 次大模型调用。",
+  "originalTitle": "Harmony: Bridging Audio Understanding and Editing through Agentic Collaboration",
+  "pdfUrl": "https://arxiv.org/pdf/2611.14724v1.pdf",
+  "readerTitle": "把一句话编辑意图变成可执行的声波操作：Harmony 的协同规划与执行",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

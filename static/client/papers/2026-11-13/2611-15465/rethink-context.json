@@ -1,0 +1,97 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.15465v1",
+  "abstract": "Acoustic Anomaly Detection (AAD) serves as a non-contact approach for machine condition monitoring, yet much of the existing research is evaluated offline and rarely addresses embedded hardware constraints or microphone variations under operational drift. This paper presents a comparative evaluation of on-edge continual AAD across two embedded platforms the ESP32-S3 (with an external I2S digital microphone) and the Arduino Nicla Vision (with an onboard Pulse Density Modulation (PDM) microphone) using a shared detection model. The model utilizes a lightweight ShallowNet encoder and contrastive prototype learning to map spectrograms into a 32-dimensional embedding space. Both boards run an identical TensorFlow Lite for Microcontrollers (TFLM) encoder, performing on-device prototype learning updated via an exponential moving average. A cloud pipeline orchestrated through Firebase and MQTT enables remote data collection and retraining. Evaluated via a controlled speaker-replay protocol using standardized Detection and Classification of Acoustic Scenes and Events (DCASE) Challenge Task 2 machine sounds, the ESP32-S3 achieved 82.35% to 95.00% accuracy across five machine types, while the Nicla Vision achieved 79.41% to 95.00%. The two platforms demonstrated comparable performance, confirming that the lightweight prototypical architecture transfers reliably across distinct hardware and sensor tiers.",
+  "abstractSha256": "235c402372e842eb2d0b389ab2b05f15a0a8e8ea5c6a49b04f3a09a02113ae83",
+  "arxivId": "2611.15465",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.15465v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "对比学习",
+    "primaryTask": "异常声音检测",
+    "rankBucket": "前50%",
+    "score": 5.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.anomaly-detection",
+          "label": "异常声音检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.contrastive",
+          "label": "对比学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.continual",
+          "label": "持续学习"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.comparison",
+          "label": "模型比较"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.on-device",
+          "label": "端侧运行"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "对比学习",
+      "primaryMethodId": "method.contrastive",
+      "primaryTask": "异常声音检测",
+      "primaryTaskId": "task.anomaly-detection",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Rami Zewail"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yehia Ehab"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Karim Ali"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ahmed Mahrous"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Mohamed Awad"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Bassem Mokhtar"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文要在 ESP32-S3 与 Arduino Nicla Vision 上用同一轻量原型模型做物理回放声学异常检测，检验不同麦克风与板卡下模型能否稳定迁移；在五类 DCASE 机器声音上，两块板准确率分别为 82.35%–95.00% 与 79.41%–95.00%，但证据受扬声器回放、小样本和原型掉电丢失限制。",
+  "originalTitle": "On-Edge Acoustic Continual Anomaly Detection: A Cross-Platform Comparative Study",
+  "pdfUrl": "https://arxiv.org/pdf/2611.15465v1.pdf",
+  "readerTitle": "边缘声学持续异常检测：同一轻量原型模型跨两块开发板的表现",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

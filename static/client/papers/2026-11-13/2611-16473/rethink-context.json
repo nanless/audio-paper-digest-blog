@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.16473v1",
+  "abstract": "Until recently, the biggest obstacles to natural spoken interaction with social robots were speech recognition errors and turn-taking failures. Advances in speech recognition have enabled much better spoken interaction, but turn-taking failures and other misunderstandings continue to be far too prevalent. This short paper looks back at earlier methods for improving speech recognition and turn-taking in interaction with social robots, and then looks at what can be done today, arguing that multimodal bidirectional streaming is needed to reduce the frequency of turn-taking failures.",
+  "abstractSha256": "12145b15d8839da456a7c6560c4d06ea84579817c473ec2c75296fd9fc64eac4",
+  "arxivId": "2611.16473",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.16473v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "案例研究与实践报告",
+    "primaryTask": "轮次切换",
+    "rankBucket": "后50%",
+    "score": 3.9,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.turn-taking",
+          "label": "轮次切换"
+        },
+        {
+          "facet": "method",
+          "id": "method.case-study",
+          "label": "案例研究与实践报告"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "案例研究与实践报告",
+      "primaryMethodId": "method.case-study",
+      "primaryTask": "轮次切换",
+      "primaryTaskId": "task.turn-taking",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "CDM Interact and University of Helsinki, Helsinki, Finland"
+      ],
+      "name": "Graham Wilcock"
+    },
+    {
+      "affiliations": [
+        "University of Helsinki and CNRS-AIST Joint Robotics Lab, Tsukuba, Japan"
+      ],
+      "name": "Kristiina Jokinen"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对机器人在自己说话时听不见用户而频繁出现话轮失败的问题，论文回顾预测词与按钮打断等旧办法并主张改用多模态双向流，以 Furhat 记忆追问中两次漏听和 ADK 小熊字母读取为例说明边说边听的必要性，代价是需要全双工流式架构与持续感知。",
+  "originalTitle": "Robots That Talk Too Much and Don't Listen Enough",
+  "pdfUrl": "https://arxiv.org/pdf/2611.16473v1.pdf",
+  "readerTitle": "话太多听太少：社交机器人为什么接不上话",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}
