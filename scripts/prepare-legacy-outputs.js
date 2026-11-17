@@ -17,7 +17,7 @@ function bibliographyBytes(citation,kind){
   const title=text(citation.originalTitle),id=text(citation.id);
   need(Array.isArray(citation.authors)&&citation.authors.length>0,'Citation lacks original structured authors');
   const authors=citation.authors.map(author=>{need(author&&typeof author==='object'&&!Array.isArray(author),'Citation author is not structured');return text(author.name);});
-  const escapes={'\\':'{\\textbackslash{}}','{':'\\{','}':'\\}','&':'\\&','%':'\\%','$':'\\$','#':'\\#','_':'\\_','~':'{\\textasciitilde{}}','^':'{\\textasciicircum{}}'};
+  const escapes={'\\':'{\\textbackslash{}}','{':'\\{','}':'\\}','&':'\\&','%':'\\%','$':'\\$','#':'\\#','_':'\\_','~':'\\textasciitilde{}','^':'\\textasciicircum{}'};
   const escape=value=>value.replace(/[\\{}&%$#_~^]/g,character=>escapes[character]);
   const key=kind+'_'+id.toLowerCase().replace(/[^a-z0-9]+/g,'_');
   const authorText=authors.map(author=>'{'+escape(author)+'}').join(' and ');
