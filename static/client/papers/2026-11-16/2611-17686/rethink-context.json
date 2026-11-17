@@ -1,0 +1,69 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.17686v1",
+  "abstract": "Self-supervised speech models (S3Ms) have been scaled up to thousands of languages and millions of hours of audio, yet little is known about how these models structure semantic knowledge across languages. In this work, we probe sentence-level semantics in massively multilingual S3Ms across 76 languages, using linear maps from frozen speech representations into a frozen text embedding space, evaluated by cross-modal retrieval. Sentence meaning is linearly accessible but highly uneven across languages and resource tiers. Cross-lingual probes can match language-specific probes on languages never seen in probe training, but per-model monolingual decodability does not predict transfer. Within the OmniASR wav2vec family, scaling from 300M--7B disproportionately benefits high-resource languages, and ASR tuning sharply improves semantic decodability while making representations more language-specific. However, semantic content is entangled with acoustics, inflating apparent performance on single-speaker corpora.",
+  "abstractSha256": "fc80e814baedc3755f3a2de4dc0258e977784b3fdb57fe23c5282b650c9eefa4",
+  "arxivId": "2611.17686",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.17686v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "表示探测",
+    "primaryTask": "口语理解",
+    "rankBucket": "前50%",
+    "score": 6.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.spoken-understanding",
+          "label": "口语理解"
+        },
+        {
+          "facet": "method",
+          "id": "method.representation-probing",
+          "label": "表示探测"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "表示探测",
+      "primaryMethodId": "method.representation-probing",
+      "primaryTask": "口语理解",
+      "primaryTaskId": "task.spoken-understanding",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kevin Krahn"
+    },
+    {
+      "affiliations": [
+        "Dept. of Computer Science and Engineering",
+        "The Ohio State University"
+      ],
+      "name": "Eric Fosler-Lussier"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文用冻结语音表示到冻结文本空间的线性映射加跨模态检索，在 76 种语言上测句子语义的可解码性与跨语言共享程度，发现线性可达但极不均衡，跨语言迁移真实存在却不由单语分数预测，规模与 ASR 调优都放大资源差异且语义与声学纠缠。",
+  "originalTitle": "What Do Multilingual Self-Supervised Speech Encoders Know About Sentence Meaning?",
+  "pdfUrl": "https://arxiv.org/pdf/2611.17686v1.pdf",
+  "readerTitle": "多语自监督语音编码器知道多少句子含义",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

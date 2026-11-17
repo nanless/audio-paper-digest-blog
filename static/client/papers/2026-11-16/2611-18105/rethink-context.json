@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.18105v1",
+  "abstract": "TRIBE v2 (d'Ascoli et al., 2026) predicts fMRI responses across the cortical surface from video, audio and text. Its authors validated it with category-selective localizers (faces, places, bodies, words) and language contrasts, but not with the classic topographic organization of sensory cortex: retinotopy, tonotopy, and motion selectivity in area MT+. There is a clear architectural reason to expect retinotopy to fail: TRIBE's video features are averaged over space before the response head, which should discard visual-field position. I present mapping stimuli, a fitting pipeline adapted from standard fMRI mapping analyses, and a stand-in model with known ground truth that serves as a positive and negative control, and apply them to TRIBE v2's predictions, comparing the fitted maps with human atlases using spin tests. TRIBE v2 shows a sharp split. There is no contralateral hemifield response and no polar-angle map, robustly across stimulus controls. There is no tonotopic gradient in primary auditory cortex: best frequencies span an interquartile range of only 0.14 octaves across core and belt, and the null persists with loudness-equalized tones. An eccentricity-like gradient appears only when the ring geometry changes, consistent with global image statistics rather than a positional code. In contrast, motion selectivity is strong and precisely localized: 22% of the 1% most motion-selective vertices fall in MT+, which covers 0.42% of cortex. In-silico experiments that depend on feature identity appear viable with TRIBE v2, while those that depend on visual-field or frequency position are not supported by the current model.",
+  "abstractSha256": "cc3e001d77ab54a92fefe5c97d5b38ee087870652928172cefa8fdb6286dfde8",
+  "arxivId": "2611.18105",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.18105v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "表示探测",
+    "primaryTask": "刺激到脑响应预测",
+    "rankBucket": "前50%",
+    "score": 6.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.brain-response-encoding",
+          "label": "刺激到脑响应预测"
+        },
+        {
+          "facet": "method",
+          "id": "method.representation-probing",
+          "label": "表示探测"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.evaluation",
+          "label": "模型评估"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "表示探测",
+      "primaryMethodId": "method.representation-probing",
+      "primaryTask": "刺激到脑响应预测",
+      "primaryTaskId": "task.brain-response-encoding",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "StrawAI, Krakow, Poland"
+      ],
+      "name": "Jakub Strawa"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "本文用经典视网膜定位、半视野、运动和纯音扫描刺激驱动 TRIBE v2 并按常规 fMRI 拟合管线求解，发现在视野位置与频率位置上无可用编码而运动选择精确定位于 MT+，代价是位置依赖的虚拟实验不可信。",
+  "originalTitle": "An In-Silico Audit of Topographic Organization in a Multimodal Brain-Response Model",
+  "pdfUrl": "https://arxiv.org/pdf/2611.18105v1.pdf",
+  "readerTitle": "在计算机里给大脑模型做地形图审计：TRIBE v2 缺了什么、留下了什么",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

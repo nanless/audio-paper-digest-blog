@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.18330v1",
+  "abstract": "Speech applications require decisions about term presence, turn completion, and language within an audio window. We present Marimba, an interface for typed speech decisions built on frozen Qwen3-ASR 0.6B features. Lexical questions use zero-shot scoring of ASR transcripts; non-lexical questions use a question-conditioned head and a separate layer-18 turn-end readout. Language identification uses the ASR model's own language scores. On private conversational test sets, decoder AUROC is 0.80-0.92; on public read speech it is 0.92-0.97. Speech Commands four-way accuracy is 0.93; binary lexical ECE is at most 0.08. Personal-information detection, which passes the greedy transcript to a private, curated PII pipeline, reaches item-level F1 0.904 on synthetic Brazilian Portuguese speech (1.000 on reference transcripts). Layer-12 speaker readouts detect speaker change with AUROC 0.966-0.980 on AMI and VoxConverse, above an ECAPA baseline, and count speakers (0, 1, 2, or 3+) more accurately than pyannote 3.1. The turn-end readout reaches AUROC 0.930 versus Smart Turn v3.2 at 0.982 on Smart Turn's own test set. On a subset of ICSI meetings labeled by next speaker, AUROC is 0.716 versus 0.712; the paired confidence interval includes zero.",
+  "abstractSha256": "1f58f63920d203082e4762857b2f8a0a126813ccb005e801038b69cb54a4ed97",
+  "arxivId": "2611.18330",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.18330v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "不确定性估计与校准",
+    "primaryTask": "音频问答",
+    "rankBucket": "前50%",
+    "score": 6.7,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-question-answering",
+          "label": "音频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.uncertainty-estimation",
+          "label": "不确定性估计与校准"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.zero-shot",
+          "label": "零样本"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "不确定性估计与校准",
+      "primaryMethodId": "method.uncertainty-estimation",
+      "primaryTask": "音频问答",
+      "primaryTaskId": "task.audio-question-answering",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "charcot.ai"
+      ],
+      "name": "Solano Amadori"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "Marimba 要解决同一段语音窗口内词项、轮次、语音活动和语种等不同判断如何共用一次编码的问题，它用冻结 Qwen3-ASR 编码加词法转写计分与问题条件头加专用读出的分路设计，在会话与朗读数据上给出可比较的排序与校准结果，而词法路径保留自回归解码成为主要延迟代价。",
+  "originalTitle": "Marimba: A System One Model for Speech",
+  "pdfUrl": "https://arxiv.org/pdf/2611.18330v1.pdf",
+  "readerTitle": "一个编码器回答多种语音判断：Marimba 系统解读",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

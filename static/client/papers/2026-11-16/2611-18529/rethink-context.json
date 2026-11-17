@@ -1,0 +1,86 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.18529v1",
+  "abstract": "Meetings last up to an hour, and nobody knows in advance how many people will speak. Neural diarizers with a fixed number of output slots, such as Streaming Sortformer and Nemotron-3, are accurate and run online, but they cannot name more speakers than they have slots. We remove this limit without retraining. The slot head keeps deciding who is active and when speech overlaps, and speaker embeddings are clustered inside a single slot, with the official e-means algorithm, only after every slot has been used. In the streaming system, re-clustering is confined to a bounded window, labels are revised for a few seconds, and identities are anchored to the slots of the head. The resulting system has no limit on the number of speakers and stays accurate when speakers outnumber the slots, where fixed-slot models break down. On meetings that grow to an hour it stays far more accurate than Streaming Sortformer, which accumulates errors, and its cost per update does not grow with the meeting. The same recipe turns the four-slot Streaming Sortformer into an open-speaker system. Across recordings, e-means makes it affordable to link the speakers of a large archive frame by frame, a task that arises when conversational corpora are prepared, and it reaches the clustering quality of Lloyd's $k$-means several times faster. The method needs little tuning, and e-means runs with its default recipe from a few hundred to more than a million embeddings.",
+  "abstractSha256": "242221251a392bda2ba362b6bd2398f9387c6f3ade748df0313a1df17575cc33",
+  "arxivId": "2611.18529",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.18529v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "聚类与类别匹配",
+    "primaryTask": "说话人分离标注",
+    "rankBucket": "前50%",
+    "score": 7.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.diarization",
+          "label": "说话人分离标注"
+        },
+        {
+          "facet": "method",
+          "id": "method.clustering",
+          "label": "聚类与类别匹配"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        },
+        {
+          "facet": "application",
+          "id": "application.meeting",
+          "label": "会议转录"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "聚类与类别匹配",
+      "primaryMethodId": "method.clustering",
+      "primaryTask": "说话人分离标注",
+      "primaryTaskId": "task.diarization",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "KAIST AI"
+      ],
+      "name": "Kyudan Jung"
+    },
+    {
+      "affiliations": [
+        "KAIST AI"
+      ],
+      "name": "Jihwan Kim"
+    },
+    {
+      "affiliations": [
+        "KAIST AI"
+      ],
+      "name": "Minwoo Lee"
+    },
+    {
+      "affiliations": [
+        "Ewha W. University"
+      ],
+      "name": "Eunji Shin"
+    },
+    {
+      "affiliations": [
+        "KAIST AI"
+      ],
+      "name": "Jaegul Choo"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对固定槽位数模型无法输出更多说话人和在线聚类随会议变长而漂移的问题，eDIAR 让槽位头继续管活跃与重叠、仅在槽位用尽后对槽内嵌入做球面 e-means 分裂，并用 90 秒有界窗口与槽位锚定身份保持流式稳定，在多人、长会议与跨档案链接上验证了收益与边界。",
+  "originalTitle": "eDIAR: Training-Free Open-Speaker Streaming Diarization for Long Meetings and Large Archives via e-means",
+  "pdfUrl": "https://arxiv.org/pdf/2611.18529v1.pdf",
+  "readerTitle": "eDIAR：不重训的开放人数流式说话人日志",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

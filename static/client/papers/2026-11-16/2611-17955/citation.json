@@ -1,0 +1,146 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.17955v1",
+  "arxivId": "2611.17955",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.17955v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Imene Kerboua"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Fatemeh Pesaran Zadeh"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xing Han Lù"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Weijian Qi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Alexander Miller"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Junyi Song"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yunjia Tian"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Dongjin Kang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Seyeon Choi"
+    },
+    {
+      "affiliations": [
+        "McGill University Mila -- Quebec AI Institute"
+      ],
+      "name": "Marzia Nouri"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ewen Gueguen"
+    },
+    {
+      "affiliations": [
+        "McGill University Mila -- Quebec AI Institute"
+      ],
+      "name": "Matteo Boglioni"
+    },
+    {
+      "affiliations": [
+        "McGill University Mila -- Quebec AI Institute"
+      ],
+      "name": "Fengyuan Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zeyi Liao"
+    },
+    {
+      "affiliations": [
+        "The Ohio State University University of Hong Kong"
+      ],
+      "name": "Mengqi Yuan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yue Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Alexandre Lacoste"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Alexandre Drouin"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Spandana Gella"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Huan Sun"
+    },
+    {
+      "affiliations": [
+        "INSA Lyon, LIRIS Esker Seoul National University"
+      ],
+      "name": "Gunhee Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Siva Reddy"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.17955v1",
+  "originalTitle": "WebArena-Pro: A Heterogeneous, Multimodal, Reproducible Benchmark for Web Agents",
+  "pdfUrl": "https://arxiv.org/pdf/2611.17955v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

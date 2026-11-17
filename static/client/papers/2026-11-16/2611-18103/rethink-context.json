@@ -1,0 +1,80 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.18103v1",
+  "abstract": "An Acoustic Room Transformation (ART) method is proposed for clinical applications to render simulated acoustic environments using six loudspeakers in a reverberant room. In typical clinical settings, testing rooms are not acoustically treated and only a limited number of loudspeakers are available. The ART approach enables control of the playback-room reverberation, allowing speech intelligibility tests to be performed under realistic and perceptually compensated conditions. The method focuses on the two most common Speech Reception Threshold (SRT) configurations: S0N90 and S0N90. One front and one side loudspeaker reproduce the direct sound components, while the remaining four loudspeakers (two in front and two behind the listener) generate the reverberant sound field. The direct sound is optimized in terms of energy, and the reverberant field is adjusted based on both energy and interaural coherence. An additional direct-sound gain is applied to match the clarity index (C50) of the reproduced signals to that of the reference target. Results from speech intelligibility tests demonstrate that, with ART processing, the reproduced scenarios achieve SRT values very close to those of the reference signal in both S0N0 and S0N90 conditions and therefore allow for comparable speech test results independent of the particular test room acoustics.",
+  "abstractSha256": "f0afcc199e7d4f66c65d2afa7aaefa1dbfa16cf6e6b2e2084f49f4c5a01aa4a9",
+  "arxivId": "2611.18103",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.18103v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "语音可懂度评估",
+    "rankBucket": "前50%",
+    "score": 5.9,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.intelligibility",
+          "label": "语音可懂度评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.spatial-audio",
+          "label": "空间音频信号"
+        },
+        {
+          "facet": "method",
+          "id": "method.psychoacoustic-experiment",
+          "label": "心理声学实验"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "语音可懂度评估",
+      "primaryTaskId": "task.intelligibility",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Ali Fallah"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Kirsten C Wagener"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Pascal Pflueger"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Steven van de Par"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对诊室混响不可控且音箱很少时言语测试不可比的问题，本文用两只直达声音箱加四只混响声音箱的声学房间变换把回放房间的影响补偿掉，在两个仿真房间和两种空间配置下把言语接收阈恢复到接近耳机参考的水平，但结论只在正常听力、耳机模拟回放和起伏噪声条件下成立。",
+  "originalTitle": "Reproduction of Simulated Acoustics Scenes Using Acoustics Room Transformer for speech intelligibility tests in Clinics",
+  "pdfUrl": "https://arxiv.org/pdf/2611.18103v1.pdf",
+  "readerTitle": "在普通混响房间里用 6 只音箱重放仿真房间的清晰度测试场景",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

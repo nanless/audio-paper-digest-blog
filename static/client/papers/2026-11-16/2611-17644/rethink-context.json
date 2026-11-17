@@ -1,0 +1,141 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.17644v1",
+  "abstract": "Rapid progress in text-to-audio (TTA) generation demands reliable and explainable automatic evaluation. However, existing metrics fail to simultaneously deliver high correlation with human judgments and meaningful, audio-grounded explanations, forcing reliance on labor-intensive human evaluation that bottlenecks model development iteration. To address this, we propose CoTTAGE, a reasoning-based evaluator for text relevance (REL) and audio quality (OVL). Following a reason-then-predict paradigm, CoTTAGE first generates an audio-grounded rationale to diagnose errors before predicting scores. Supported by over 10K newly collected human OVL annotations, CoTTAGE is first trained via supervised fine-tuning and then refined with reinforcement learning using a Thurstone-based preference objective that converts sampled score distributions into pairwise preference probabilities and rewards agreement with rankings derived from human judgments. Across six benchmarks spanning REL and OVL, CoTTAGE achieves state-of-the-art correlation with human judgments while producing human-preferred explanations to accelerate TTA development.",
+  "abstractSha256": "c8a01fe7670221d9e499535282707e494039c68d0f67b5e90146b66f736703f4",
+  "arxivId": "2611.17644",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.17644v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "偏好优化",
+    "primaryTask": "音频质量评估",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-quality",
+          "label": "音频质量评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.preference-optimization",
+          "label": "偏好优化"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-reasoning",
+          "label": "音频推理"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "偏好优化",
+      "primaryMethodId": "method.preference-optimization",
+      "primaryTask": "音频质量评估",
+      "primaryTaskId": "task.audio-quality",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "National Taiwan University"
+      ],
+      "name": "Yu-Xiang Lin"
+    },
+    {
+      "affiliations": [
+        "National Taiwan University"
+      ],
+      "name": "Yun-Man Hsu"
+    },
+    {
+      "affiliations": [
+        "Amazon AGI"
+      ],
+      "name": "Bo-Ru Lu"
+    },
+    {
+      "affiliations": [
+        "National Taiwan University"
+      ],
+      "name": "Kuan-Po Huang"
+    },
+    {
+      "affiliations": [
+        "National Taiwan University"
+      ],
+      "name": "Wenze Ren"
+    },
+    {
+      "affiliations": [
+        "National Taiwan University"
+      ],
+      "name": "Ming-To Chuang"
+    },
+    {
+      "affiliations": [
+        "National Taiwan University"
+      ],
+      "name": "Chun-Yi Kuan"
+    },
+    {
+      "affiliations": [
+        "National Taiwan University"
+      ],
+      "name": "Jiawei Du"
+    },
+    {
+      "affiliations": [
+        "Amazon AGI"
+      ],
+      "name": "Byeonggeun Kim"
+    },
+    {
+      "affiliations": [
+        "Amazon AGI"
+      ],
+      "name": "Qingming Tang"
+    },
+    {
+      "affiliations": [
+        "Amazon AGI"
+      ],
+      "name": "Chieh-Chi Kao"
+    },
+    {
+      "affiliations": [
+        "Amazon AGI"
+      ],
+      "name": "Ankur Gandhe"
+    },
+    {
+      "affiliations": [
+        "Amazon AGI"
+      ],
+      "name": "Chao Wang"
+    },
+    {
+      "affiliations": [
+        "National Taiwan University",
+        "NTU AI-CoRE"
+      ],
+      "name": "Hung-yi Lee"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对文本生成音频缺少可解释自动评价的问题，论文用先给依据再打分的单模型同时评相关性和整体质量，并用监督微调加不确定性感知的成对偏好强化学习训练，在六个基准上与人类评分的相关性最高，但结论只在短环境音和现有标注者分布下成立。",
+  "originalTitle": "CoTTAGE: An Explainable Judge for Text-to-Audio Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2611.17644v1.pdf",
+  "readerTitle": "能说出依据的文本生成音频评价器 CoTTAGE",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

@@ -1,0 +1,99 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.17644v1",
+  "arxivId": "2611.17644",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.17644v1",
+  "authors": [
+    {
+      "affiliations": [
+        "National Taiwan University"
+      ],
+      "name": "Yu-Xiang Lin"
+    },
+    {
+      "affiliations": [
+        "National Taiwan University"
+      ],
+      "name": "Yun-Man Hsu"
+    },
+    {
+      "affiliations": [
+        "Amazon AGI"
+      ],
+      "name": "Bo-Ru Lu"
+    },
+    {
+      "affiliations": [
+        "National Taiwan University"
+      ],
+      "name": "Kuan-Po Huang"
+    },
+    {
+      "affiliations": [
+        "National Taiwan University"
+      ],
+      "name": "Wenze Ren"
+    },
+    {
+      "affiliations": [
+        "National Taiwan University"
+      ],
+      "name": "Ming-To Chuang"
+    },
+    {
+      "affiliations": [
+        "National Taiwan University"
+      ],
+      "name": "Chun-Yi Kuan"
+    },
+    {
+      "affiliations": [
+        "National Taiwan University"
+      ],
+      "name": "Jiawei Du"
+    },
+    {
+      "affiliations": [
+        "Amazon AGI"
+      ],
+      "name": "Byeonggeun Kim"
+    },
+    {
+      "affiliations": [
+        "Amazon AGI"
+      ],
+      "name": "Qingming Tang"
+    },
+    {
+      "affiliations": [
+        "Amazon AGI"
+      ],
+      "name": "Chieh-Chi Kao"
+    },
+    {
+      "affiliations": [
+        "Amazon AGI"
+      ],
+      "name": "Ankur Gandhe"
+    },
+    {
+      "affiliations": [
+        "Amazon AGI"
+      ],
+      "name": "Chao Wang"
+    },
+    {
+      "affiliations": [
+        "National Taiwan University",
+        "NTU AI-CoRE"
+      ],
+      "name": "Hung-yi Lee"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.17644v1",
+  "originalTitle": "CoTTAGE: An Explainable Judge for Text-to-Audio Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2611.17644v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

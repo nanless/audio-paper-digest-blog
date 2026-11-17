@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.18103v1",
+  "arxivId": "2611.18103",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.18103v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Ali Fallah"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Kirsten C Wagener"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Pascal Pflueger"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Steven van de Par"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.18103v1",
+  "originalTitle": "Reproduction of Simulated Acoustics Scenes Using Acoustics Room Transformer for speech intelligibility tests in Clinics",
+  "pdfUrl": "https://arxiv.org/pdf/2611.18103v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

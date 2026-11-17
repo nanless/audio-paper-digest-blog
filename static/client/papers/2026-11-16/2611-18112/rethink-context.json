@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.18112v1",
+  "abstract": "Audio phase relations encode source locations, yet existing large audio-language models (LALM) reduce audio to single-channel content to stabilise general audio understanding, leaving spatial information for direction, distance, and source-relation questions unused. We present SpheraAudio, which accepts recordings with any channel count -- mono, stereo, First-Order Ambisonics (FOA), or higher -- and maps them into a single token stream. A spatial encoder turns complex multichannel spectra into spatial tokens interleaved with audio tokens at corresponding temporal positions. Spatial Multimodal RoPE (SMRoPE) makes each token's modality identity and temporal slot visible to rotary attention without altering the language model's original RoPE. Training runs in three stages -- spatial-encoder pretraining, projector alignment, and joint supervised-and-reinforcement learning -- progressing from geometric supervision to language-based spatial decisions, with answers trained as explicit spatial chain-of-thought: step-by-step geometric reasoning over the heard scene. Current benchmarks tie questions to a fixed channel-count format and score answers without spatial reasoning evidence. We introduce SpheraQA, which spans mono, stereo, and FOA recordings and organises questions hierarchically from single-attribute perception through cross-source relations to multi-step reasoning, scored programmatically against simulated scene geometry and real-recording annotations with step-by-step solution references. Across SpheraQA and public spatial-audio benchmarks, SpheraAudio sets a new performance standard for spatial audio understanding. It supports high-precision localisation, tracking, and reasoning over static and moving sound sources while preserving strong general-audio capabilities. We will release code, SpheraQA, and evaluation metrics to support reproducibility.",
+  "abstractSha256": "3ea109e9f352a5f9104abc3acc4b2c1197eb964d05e6f66e24e0093863cf2552",
+  "arxivId": "2611.18112",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.18112v1",
+  "assessment": {
+    "documentType": "模型报告",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "音频问答",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-question-answering",
+          "label": "音频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "task",
+          "id": "task.localization",
+          "label": "声源定位"
+        },
+        {
+          "facet": "method",
+          "id": "method.reinforcement",
+          "label": "强化学习"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "音频问答",
+      "primaryTaskId": "task.audio-question-answering",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Alibaba Group"
+      ],
+      "name": "Yuhuan You"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University"
+      ],
+      "name": "Wenxiang Guo"
+    },
+    {
+      "affiliations": [
+        "Alibaba Group"
+      ],
+      "name": "Zhifang Guo"
+    },
+    {
+      "affiliations": [
+        "Alibaba Group"
+      ],
+      "name": "Yuxuan Wang"
+    },
+    {
+      "affiliations": [
+        "Alibaba Group"
+      ],
+      "name": "Jin Xu"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对多通道空间线索被单通道压缩丢掉的问题，SpheraAudio 用内容与空间双编码器加时间配对交织与 SMRoPE 把单声道、双声道和 Ambisonics 统一为一条令牌流，再经几何预训练、带空间思维链的微调和结果奖励强化学习实现定位与推理，在 SpheraQA 上达到 60.18% 整体准确率，代价是每秒音频的令牌量翻倍且部分运动方向判断仍弱于基线。",
+  "originalTitle": "Any Channel Count, One Token Stream: Incorporating Spatial Audio Understanding and Reasoning into Large Audio-Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2611.18112v1.pdf",
+  "readerTitle": "任意通道数、单一令牌流：SpheraAudio 如何让大音频语言模型听懂空间",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

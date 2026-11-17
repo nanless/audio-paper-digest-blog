@@ -1,0 +1,95 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.17870v1",
+  "abstract": "Vision-language models (VLMs) can answer questions about musical scores, but their ability to recognise notation, recover its structure and interpret its musical meaning requires separate evaluation. Existing optical music recognition (OMR) resources establish detection and transcription measurements; a transcription score alone leaves the strengths and bottlenecks of a VLM score reader unresolved. We introduce OmniScore-Bench, an evaluation of OMR capabilities in VLMs through 3,000 questions spanning six aspects and 24 task subtypes. Each question specifies a visible scope, reference annotations and an answer schema, enabling automatic evaluation from symbol localisation to musical consistency and evidence-linked question answering. Our assessment of twelve VLMs reveals operation-specific capability profiles and different transcription leaders across excerpt, single-page and multipage tasks. Controlled analyses examine the roles of score images, auxiliary givens and additional page context. On the tested subset, image removal exposes visual dependence in pitch and repeat interpretation while measuring how much performance remains with public context alone. Separate format and content analyses distinguish answer-format violations from musical errors. OmniScore-Bench supports diagnosing which score-reading operations VLMs perform reliably and which require improvement.",
+  "abstractSha256": "ca0c8b4f34b1216d3c29bc1cee1522238bbf71530dedbd15ebde226c22c2b9b0",
+  "arxivId": "2611.17870",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.17870v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "光学乐谱识别",
+    "rankBucket": "前50%",
+    "score": 7.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.optical-music-recognition",
+          "label": "光学乐谱识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "task",
+          "id": "task.document-visual-grounding",
+          "label": "文档视觉问答与定位"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "光学乐谱识别",
+      "primaryTaskId": "task.optical-music-recognition",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Central Conservatory of Music",
+        "Tsinghua University"
+      ],
+      "name": "Congren Dai"
+    },
+    {
+      "affiliations": [
+        "Central Conservatory of Music",
+        "Tsinghua University"
+      ],
+      "name": "Zhancheng Guo"
+    },
+    {
+      "affiliations": [
+        "Central Conservatory of Music"
+      ],
+      "name": "Danni Zhao"
+    },
+    {
+      "affiliations": [
+        "Central Conservatory of Music",
+        "Tsinghua University"
+      ],
+      "name": "Wenchu Wang"
+    },
+    {
+      "affiliations": [
+        "Central Conservatory of Music"
+      ],
+      "name": "Xiaobing Li"
+    },
+    {
+      "affiliations": [
+        "Central Conservatory of Music"
+      ],
+      "name": "Maosong Sun"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对视觉语言模型读谱时定位、关联与乐理推断混在一起难以诊断的问题，论文用 3,000 道分范围、分契约的题目把六类操作分开测量，发现 excerpt 与单页转录领先者在多页上被反超，而去图与格式对照说明视觉依赖与内容错误需要分开判断。",
+  "originalTitle": "OmniScore-Bench: Evaluating Vision-Language Models on Musical Score Reading",
+  "pdfUrl": "https://arxiv.org/pdf/2611.17870v1.pdf",
+  "readerTitle": "OmniScore-Bench：把乐谱阅读拆成六类操作分别考查",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

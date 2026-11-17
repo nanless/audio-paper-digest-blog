@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.17895v1",
+  "abstract": "Acoustic condition monitoring often relies on normal recordings with limited operating-condition information. This study proposes an anomalous sound detection system that learns from normal recordings without external pre-training and uses machine-type information to organize training and normal references. A separator learns target-component estimation from mixtures of normal target and non-target recordings. With the separator frozen, regional attention and multi-stage fusion are trained on paired mixtures sharing a target, using contrastive and target-reference consistency objectives. Paired-mixture embedding differences provide covariance statistics for correction with normal-reference centering, followed by cosine nearest-neighbor scoring. On Task 2 development-test data from the 2022 Detection and Classification of Acoustic Scenes and Events challenge, the two-block, 64-channel system achieves an overall harmonic mean of 64.56% on average across three independent training and evaluation runs, with a sample standard deviation of 0.33 percentage points. This mean exceeds that of direct paired-mixture learning by 2.23 percentage points and is 0.31 percentage points below that of the evaluated distillation system using an externally pre-trained teacher. For the learned embeddings, cosine nearest-neighbor scoring outperforms the evaluated Mahalanobis scorers based on global normal statistics. These results demonstrate the effectiveness of combining separation-based representation learning, interference-based correction, and local normal-reference scoring for anomalous sound detection without detailed operating metadata.",
+  "abstractSha256": "8ac8fe53ef02579dcdc55f320fc40d416f003b068f86e2bb79bbd2910bde6212",
+  "arxivId": "2611.17895",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.17895v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "对比学习",
+    "primaryTask": "异常声音检测",
+    "rankBucket": "前50%",
+    "score": 6.4,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.anomaly-detection",
+          "label": "异常声音检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.contrastive",
+          "label": "对比学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.environmental",
+          "label": "环境声"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "对比学习",
+      "primaryMethodId": "method.contrastive",
+      "primaryTask": "异常声音检测",
+      "primaryTaskId": "task.anomaly-detection",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Seunghyeon Shin"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Seokjin Lee"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对只有正常录音和机器类型信息而缺少转速负载等工况标注的异常声音检测问题，论文用目标成分分离特征加配对混合表示学习与干涉校正组织训练与评分，在 DCASE 2022 任务 2 开发测试集上代表系统三轮平均总体谐波均值达到 64.56%，代价是为每种机器类型单独训练分离器与聚合网络并保存全量正常参照库做最近邻比较。",
+  "originalTitle": "Anomalous Sound Detection Using Separation Features and Paired-Mixture Representation Learning",
+  "pdfUrl": "https://arxiv.org/pdf/2611.17895v1.pdf",
+  "readerTitle": "只用机器类型标注时，分离特征与配对混合如何做异常声音检测",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

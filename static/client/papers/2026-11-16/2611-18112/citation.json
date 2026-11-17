@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.18112v1",
+  "arxivId": "2611.18112",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.18112v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Alibaba Group"
+      ],
+      "name": "Yuhuan You"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University"
+      ],
+      "name": "Wenxiang Guo"
+    },
+    {
+      "affiliations": [
+        "Alibaba Group"
+      ],
+      "name": "Zhifang Guo"
+    },
+    {
+      "affiliations": [
+        "Alibaba Group"
+      ],
+      "name": "Yuxuan Wang"
+    },
+    {
+      "affiliations": [
+        "Alibaba Group"
+      ],
+      "name": "Jin Xu"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.18112v1",
+  "originalTitle": "Any Channel Count, One Token Stream: Incorporating Spatial Audio Understanding and Reasoning into Large Audio-Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2611.18112v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

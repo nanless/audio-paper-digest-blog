@@ -1,0 +1,20 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.18105v1",
+  "arxivId": "2611.18105",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.18105v1",
+  "authors": [
+    {
+      "affiliations": [
+        "StrawAI, Krakow, Poland"
+      ],
+      "name": "Jakub Strawa"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.18105v1",
+  "originalTitle": "An In-Silico Audit of Topographic Organization in a Multimodal Brain-Response Model",
+  "pdfUrl": "https://arxiv.org/pdf/2611.18105v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.18050v1",
+  "abstract": "When a conversational Voice AI agent places an outbound call, the far end may be a live person, a voicemail greeting, an interactive voice response (IVR) system, or increasingly another AI system answering on the callee's behalf. Standard Answering Machine Detection (AMD) reports only whether a human or a machine picked up, a design meant for human call centres, where one machine is as uninteresting as another. That single bit does not tell a Voice AI agent what to do, since leaving a voicemail message, navigating an IVR and holding a short exchange with another AI are three different actions and a two-valued label cannot distinguish them. In 1,000 randomly sampled calls from our own outbound deployment, a live person answered 48.1%, a voicemail system 44.6%, an AI 6.9% and an IVR 0.4%. Our proposed framework, FEND, reads the far end's audio and its streaming transcript and runs one detector for each automated class (voicemail, IVR, AI callee), with human the default when nothing fires, returning a single label within 20 seconds. On a public benchmark the voicemail components reach 100% accuracy without ever misclassifying a live human, where Asterisk's AMD misclassifies 30 to 66% of them. For the AI callee, acoustic features do not transfer across recording conditions, but speech timing does, separating AI from human at 0.952 ROC-AUC, because synthesised speech leaves far shorter gaps between words. On production traffic, separating a live person from any automated far end reaches F1 0.979, and only 2.9% of live people are given an automated label, the error that matters most for an agent acting on the result.",
+  "abstractSha256": "3ca43ec1a1a35897df8d77d75d4a80cd8ae32a7b61319ce645721de301cd5c64",
+  "arxivId": "2611.18050",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.18050v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "工具增强与约束解码",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 6.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-dialogue",
+          "label": "语音对话系统"
+        },
+        {
+          "facet": "method",
+          "id": "method.tool-augmentation",
+          "label": "工具增强与约束解码"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "工具增强与约束解码",
+      "primaryMethodId": "method.tool-augmentation",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Abhishek Kumar"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Suraj Agrawal"
+    },
+    {
+      "affiliations": [
+        "Observe.AI, India"
+      ],
+      "name": "Aashraya Sachdeva"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文把外呼接听端分成真人、留言信箱、组织自动语音和个人代接智能体，用四个并行检测器加 20 s 窗口仲裁实现四分类，最强证据是留言组合在公开切分上 100% 准确且人不误报、真人与自动区分 F1 0.979，代价是留言与代接智能体仍易混淆且节奏证据只适用于话轮足够长的一部分通话。",
+  "originalTitle": "FEND: Far-End Detection in Outbound Voice AI Calls",
+  "pdfUrl": "https://arxiv.org/pdf/2611.18050v1.pdf",
+  "readerTitle": "外呼智能体先听清对面是谁：四类远端检测",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}
