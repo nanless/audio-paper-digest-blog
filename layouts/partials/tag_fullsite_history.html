@@ -2,6 +2,10 @@
      build preflight parses duplicate JSON keys; Hugo independently verifies
      physical shards, all refs, original hashes, membership and exact schemas. */ -}}
 {{- $memoKey := "fullsite-history:reconstructed:v1" -}}
+{{- $out := dict -}}
+{{- if not (and (eq (printf "%T" .) "string") (eq . "__partialCached_global__")) -}}
+  {{- $out = partialCached "tag_fullsite_history.html" "__partialCached_global__" "global" -}}
+{{- else -}}
 {{- if not (site.Store.Get (printf "%s:ready" $memoKey)) -}}
   {{- $history := index hugo.Data "fullsite-taxonomy-history" | default dict }}{{ $result := dict -}}
   {{- if eq ($history.contract | default "") "fullsite-source-taxonomy-audit-supplement-v1" -}}
@@ -91,4 +95,6 @@
   {{- end -}}
   {{- site.Store.Set $memoKey $result }}{{ site.Store.Set (printf "%s:ready" $memoKey) true -}}
 {{- end -}}
-{{- return (site.Store.Get $memoKey) -}}
+{{- $out = site.Store.Get $memoKey -}}
+{{- end -}}
+{{- return $out -}}

@@ -33,15 +33,18 @@
 
 {{- /* 3. 读取计数：直接 N 篇 / 含子树 M 篇 */}}
 {{- $stats := partialCached "tag_concept_counts.html" "global" }}
+{{- $statsById := newScratch }}{{ $statsById.Set "map" dict }}
+{{- range $stats }}{{ $statsById.SetInMap "map" .id . }}{{ end }}
+{{- $statsMap := $statsById.Get "map" }}
 
 {{- /* 4. 组装可见行：计数为 0 的子标签不显示 */}}
 {{- $rows := slice }}
 {{- range $child := $children }}
   {{- $d := 0 }}
   {{- $m := 0 }}
-  {{- with where $stats "id" "eq" $child.id }}
-    {{- $d = (index . 0).direct }}
-    {{- $m = (index . 0).sub }}
+  {{- with index $statsMap $child.id }}
+    {{- $d = .direct }}
+    {{- $m = .sub }}
   {{- end }}
   {{- if gt $m 0 }}
     {{- $kids := slice }}
@@ -49,9 +52,9 @@
       {{- if eq $g.parent $child.id }}
         {{- $kd := 0 }}
         {{- $km := 0 }}
-        {{- with where $stats "id" "eq" $g.concept.id }}
-          {{- $kd = (index . 0).direct }}
-          {{- $km = (index . 0).sub }}
+        {{- with index $statsMap $g.concept.id }}
+          {{- $kd = .direct }}
+          {{- $km = .sub }}
         {{- end }}
         {{- if gt $km 0 }}{{ $kids = $kids | append (dict "concept" $g.concept "direct" $kd "sub" $km) }}{{ end }}
       {{- end }}

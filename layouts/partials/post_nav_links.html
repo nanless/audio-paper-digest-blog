@@ -1,0 +1,38 @@
+{{- $navMemoKey := "research-site:post_nav_links:v1" -}}
+{{- if not (site.Store.Get (printf "%s:ready" $navMemoKey)) -}}
+  {{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections -}}
+  {{- $nav := newScratch -}}{{- $nav.Set "map" dict -}}
+  {{- $total := len $pages -}}
+  {{- if gt $total 1 -}}
+    {{- range $i, $p := $pages -}}
+      {{- $fp := "" -}}{{- with $p.File }}{{ $fp = .Path }}{{ end -}}
+      {{- $k := printf "%s|%s" $p.RelPermalink $fp -}}
+      {{- if not (isset ($nav.Get "map") $k) -}}
+        {{- $next := dict -}}{{- $prev := dict -}}
+        {{- if gt $i 0 }}{{ $np := index $pages (sub $i 1) }}{{ $next = dict "permalink" $np.Permalink "name" $np.Name }}{{ end -}}
+        {{- if lt (add $i 1) $total }}{{ $pp := index $pages (add $i 1) }}{{ $prev = dict "permalink" $pp.Permalink "name" $pp.Name }}{{ end -}}
+        {{- $nav.SetInMap "map" $k (dict "next" $next "prev" $prev) -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+  {{- site.Store.Set $navMemoKey ($nav.Get "map") -}}
+  {{- site.Store.Set (printf "%s:ready" $navMemoKey) true -}}
+{{- end -}}
+{{- $curFile := "" -}}{{- with .File }}{{ $curFile = .Path }}{{ end -}}
+{{- $curKey := printf "%s|%s" .RelPermalink $curFile -}}
+{{- with index (site.Store.Get $navMemoKey) $curKey }}
+<nav class="paginav">
+  {{- with .next }}
+  <a class="prev" href="{{ .permalink }}">
+    <span class="title">« {{ i18n "prev_page" }}</span>
+    <span>{{- .name -}}</span>
+  </a>
+  {{- end }}
+  {{- with .prev }}
+  <a class="next" href="{{ .permalink }}">
+    <span class="title">{{ i18n "next_page" }} »</span>
+    <span>{{- .name -}}</span>
+  </a>
+  {{- end }}
+</nav>
+{{- end }}

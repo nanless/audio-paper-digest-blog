@@ -1,3 +1,10 @@
-{{- $actual := slice -}}{{- $valid := reflect.IsMap .value -}}
-{{- if $valid }}{{ range $k,$_ := .value }}{{ $actual = $actual | append $k }}{{ end }}{{ $valid = eq (delimit (sort $actual) "|") (delimit (sort .keys) "|") }}{{ end -}}
+{{- $valid := and (reflect.IsMap .value) (reflect.IsSlice .keys) -}}
+{{- if $valid -}}
+  {{- $valid = eq (len .value) (len .keys) -}}
+  {{- if $valid -}}
+    {{- range $k, $_ := .value -}}
+      {{- if not (in $.keys $k) }}{{ $valid = false }}{{ break }}{{ end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
 {{- return $valid -}}

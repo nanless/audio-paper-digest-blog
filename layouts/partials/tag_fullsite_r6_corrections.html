@@ -1,12 +1,16 @@
 {{- /* A separate publication overlay; original collections/holds stay intact. */ -}}
 {{- $memo := "fullsite-r6-exact-six:v1" -}}
+{{- $out := dict -}}
+{{- if not (and (eq (printf "%T" .) "string") (eq . "__partialCached_global__")) -}}
+  {{- $out = partialCached "tag_fullsite_r6_corrections.html" "__partialCached_global__" "global" -}}
+{{- else -}}
 {{- if not (site.Store.Get (printf "%s:ready" $memo)) -}}
  {{- $result := dict }}{{ $file := "data/fullsite-r6-corrections-authority.json" -}}
  {{- if fileExists $file -}}
   {{- $valid := eq (crypto.SHA256 (readFile $file)) "110d10cca5d32a0477ab5160b9dad58ab42c8122becdc8c6ab49c7474c613086" -}}
   {{- $authority := index hugo.Data "fullsite-r6-corrections-authority" | default dict }}{{ $history := index hugo.Data "fullsite-r6-corrections-history" | default dict -}}
   {{- $valid = and $valid (eq $authority.contract "fullsite-exact-six-successor-publication-authority-v1") (eq $authority.rootAuthoritySha256 "a93cde51642f0e387a097cec990cf6396e2b16497b2f2a5eeb2507718a294852") (eq (len $authority.rows) 6) (eq $history.contract "fullsite-source-taxonomy-audit-supplement-v1") (eq (len $history.records) 6) (eq (len $history.classificationRecords) 6) -}}
-  {{- $oldHolds := partial "tag_old_v2_publication_holds.html" . }}{{ $oldAuthority := index hugo.Data "taxonomy-old-v2-publication-holds" | default dict }}{{ $oldHistory := partial "tag_fullsite_history.html" . -}}
+  {{- $oldHolds := partialCached "tag_old_v2_publication_holds.html" "__partialCached_global__" "global" }}{{ $oldAuthority := index hugo.Data "taxonomy-old-v2-publication-holds" | default dict }}{{ $oldHistory := partialCached "tag_fullsite_history.html" "__partialCached_global__" "global" -}}
   {{- $valid = and $valid $oldHolds.valid }}{{ $seen := slice }}{{ $eligible := dict -}}
   {{- range $row := $authority.rows -}}
    {{- $id := $row.paperId }}{{ $a := index $history.classificationRecords $id | default dict }}{{ $c := $a.classificationRecord | default dict }}{{ $pages := slice -}}
@@ -35,4 +39,6 @@
  {{- end -}}
  {{- site.Store.Set $memo $result }}{{ site.Store.Set (printf "%s:ready" $memo) true -}}
 {{- end -}}
-{{- return (site.Store.Get $memo) -}}
+{{- $out = site.Store.Get $memo -}}
+{{- end -}}
+{{- return $out -}}

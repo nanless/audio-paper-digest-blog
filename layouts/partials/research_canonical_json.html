@@ -4,9 +4,11 @@
      so literal "\\u2028" text and arbitrary backslash parity stay byte exact.
      Serialized JSON cannot contain a literal NUL; it is always escaped. */ -}}
 {{- $json := . | jsonify (dict "noHTMLEscape" true) -}}
-{{- $sentinel := printf "%c" 0 -}}
-{{- $json = replace $json `\\` $sentinel -}}
-{{- $json = replace $json `\u2028` (printf "%c" 8232) -}}
-{{- $json = replace $json `\u2029` (printf "%c" 8233) -}}
-{{- $json = replace $json $sentinel `\\` -}}
+{{- if or (in $json `\u2028`) (in $json `\u2029`) -}}
+  {{- $sentinel := printf "%c" 0 -}}
+  {{- $json = replace $json `\\` $sentinel -}}
+  {{- $json = replace $json `\u2028` (printf "%c" 8232) -}}
+  {{- $json = replace $json `\u2029` (printf "%c" 8233) -}}
+  {{- $json = replace $json $sentinel `\\` -}}
+{{- end -}}
 {{- return $json -}}

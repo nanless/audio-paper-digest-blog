@@ -3,8 +3,8 @@
 {{- $memoKey := "research-page:tag_fullsite_page_proof:v1" -}}
 {{- if not (.Store.Get (printf "%s:ready" $memoKey)) -}}
   {{- $result := dict -}}
-  {{- $history := partial "tag_fullsite_history.html" . -}}
-  {{- $selection := partial "tag_fullsite_publication_selection.html" . -}}
+  {{- $history := partialCached "tag_fullsite_history.html" "__partialCached_global__" "global" -}}
+  {{- $selection := partialCached "tag_fullsite_publication_selection.html" "__partialCached_global__" "global" -}}
   {{- if and (eq .Section "posts") .File (eq ($history.contract | default "") "fullsite-source-taxonomy-audit-supplement-v1") -}}
     {{- $path := printf "content/%s" .File.Path }}{{ $record := index ($history.records | default dict) $path | default dict -}}
     {{- if $record -}}

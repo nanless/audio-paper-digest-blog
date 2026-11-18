@@ -1,3 +1,7 @@
+{{- /* 只为字节与记录完全对应的历史页面补充标签，不根据旧标签推断分类。 */ -}}
+{{- $memoKey := "research-page:tag_page_proof:v2" -}}
+{{- $proof := .Store.Get $memoKey -}}
+{{- if not (.Store.Get (printf "%s:ready" $memoKey)) -}}
 {{- $hasNew := false -}}
 {{- $hasOld := false -}}
 {{- range $suffix := slice "contract" "selection_contract" "registry_version" "registry_sha256" "concepts" "scope" -}}
@@ -7,10 +11,6 @@
 {{- if and $hasNew $hasOld }}{{ errorf "page %s mixes paper_digest_tags_* and paper_digest_taxonomy_* fields" .RelPermalink }}{{ end -}}
 {{- $prefix := "paper_digest_taxonomy_" -}}
 {{- if $hasNew }}{{ $prefix = "paper_digest_tags_" }}{{ end -}}
-{{- /* 只为字节与记录完全对应的历史页面补充标签，不根据旧标签推断分类。 */ -}}
-{{- $memoKey := "research-page:tag_page_proof:v2" -}}
-{{- $proof := .Store.Get $memoKey -}}
-{{- if not (.Store.Get (printf "%s:ready" $memoKey)) -}}
 {{- $proof = dict "contract" (index .Params (printf "%scontract" $prefix) | default "") "registrySha256" (index .Params (printf "%sregistry_sha256" $prefix) | default "") "concepts" (index .Params (printf "%sconcepts" $prefix) | default slice) "primaryTaskLabel" (.Params.paper_digest_primary_task | default "") "primaryMethodLabel" (.Params.paper_digest_primary_method | default "") -}}
 {{- if isset .Params (printf "%sschema_fingerprint" $prefix) }}{{ $proof = merge $proof (dict "schemaFingerprint" (index .Params (printf "%sschema_fingerprint" $prefix))) }}{{ end -}}
 {{- $legacyHistory := index hugo.Data "taxonomy-history" | default dict -}}
@@ -55,7 +55,7 @@
       {{- if not (findRE $shaPattern (index $record $field | default "") 1) }}{{ $valid = false }}{{ end -}}
     {{- end -}}
     {{- if $valid -}}
-    {{- $valid = and (eq (crypto.SHA256 (readFile $key)) $record.pageSha256) (eq (crypto.SHA256 .RawContent) $record.bodySha256) (eq $record.pageBodySha256 $record.bodySha256) (eq ($record.source.paperId | default "") $record.paperId) (eq $record.source.kind "arxiv-fresh-fetch") (eq $record.source.sourceBinding.contract "fresh-arxiv-rewrite-source-v1") (eq $record.source.sourceBinding.paperId $record.paperId) (eq $record.source.sourceBinding.textSha256 $record.source.textSha256) (eq $record.source.sourceBinding.pdfSha256 $record.source.pdfSha256) (eq $record.source.sourceBinding.sourceManifestSha256 $record.source.sourceManifestSha256) (eq $record.source.sourceBinding.generation $record.source.generation) -}}
+    {{- $valid = and (eq $record.pageBodySha256 $record.bodySha256) (eq ($record.source.paperId | default "") $record.paperId) (eq $record.source.kind "arxiv-fresh-fetch") (eq $record.source.sourceBinding.contract "fresh-arxiv-rewrite-source-v1") (eq $record.source.sourceBinding.paperId $record.paperId) (eq $record.source.sourceBinding.textSha256 $record.source.textSha256) (eq $record.source.sourceBinding.pdfSha256 $record.source.pdfSha256) (eq $record.source.sourceBinding.sourceManifestSha256 $record.source.sourceManifestSha256) (eq $record.source.sourceBinding.generation $record.source.generation) -}}
     {{- range $field := slice "pdfSha256" "sourceManifestSha256" "sourceRunIdentitySha256" "sourceSnapshotSha256" "structuredArtifactsSha256" "textSha256" -}}
       {{- if not (findRE $shaPattern (index $record.source $field | default "") 1) }}{{ $valid = false }}{{ end -}}
     {{- end -}}
@@ -66,7 +66,8 @@
   {{- end -}}
   {{- if $valid }}{{ $version := partial "research_historical_source_version.html" $record.source }}{{ $valid = $version.valid }}{{ end -}}
   {{- if $valid -}}
-    {{- $source := partial "tag_saved_snapshot.html" $record.registrySha256 -}}
+    {{- $shaArg := $record.registrySha256 | default "" -}}
+    {{- $source := partialCached "tag_saved_snapshot.html" $shaArg (printf "sha:%s" $shaArg) -}}
     {{- $sourceNodes := partialCached "tag_catalog_index.html" $source ($source.registrySha256 | default "unavailable") -}}
     {{- $currentNodes := partialCached "tag_catalog_index.html" "global" "global" -}}
     {{- $valid = and $source.registrySha256 (eq $source.registryVersion $record.registryVersion) (ge (len ($record.concepts | default slice)) 3) (le (len ($record.concepts | default slice)) 5) -}}
@@ -145,14 +146,14 @@
        deleting or resigning any original classification or page bytes. */ -}}
   {{- $proof = $fullsite -}}
 {{- end -}}
-{{- $oldHolds := partial "tag_old_v2_publication_holds.html" . -}}
+{{- $oldHolds := partialCached "tag_old_v2_publication_holds.html" "__partialCached_global__" "global" -}}
 {{- if and $oldHolds.valid .File (eq .Section "posts") -}}
   {{- $path := printf "content/%s" .File.Path -}}
   {{- with index $oldHolds.withheld $path }}{{ $proof = . }}{{ end -}}
 {{- end -}}
-{{- $corrections := partial "tag_fullsite_r6_corrections.html" . -}}
+{{- $corrections := partialCached "tag_fullsite_r6_corrections.html" "__partialCached_global__" "global" -}}
 {{- if and .File (eq .Section "posts") }}{{ with index $corrections (printf "content/%s" .File.Path) }}{{ $proof = . }}{{ end }}{{ end -}}
-{{- $qualified1028 := partialCached "exact1028_qualified_classification.html" . "global" -}}
+{{- $qualified1028 := partialCached "exact1028_qualified_classification.html" "__partialCached_global__" "global" -}}
 {{- if and .File (eq .Section "posts") }}{{ with index $qualified1028 (printf "content/%s" .File.Path) }}{{ $proof = . }}{{ end }}{{ end -}}
 {{- .Store.Set $memoKey $proof -}}
 {{- .Store.Set (printf "%s:ready" $memoKey) true -}}

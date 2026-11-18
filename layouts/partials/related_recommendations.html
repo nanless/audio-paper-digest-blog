@@ -3,8 +3,8 @@
 {{- $current := index $catalog.records $identity -}}
 {{- $out := slice -}}
 {{- with $current -}}
-  {{- /* Ranking helper keys its site store by direct IDs and original signed labels. */ -}}
-  {{- range (partial "related_rankings.html" .) -}}
+  {{- /* Ranking helper keys its partialCached singleflight by direct IDs and original signed labels. */ -}}
+  {{- range (partialCached "related_rankings.html" . .rankingKey) -}}
     {{- if ne .identity $identity }}{{ $out = $out | append . }}{{ end -}}
   {{- end -}}
 {{- end -}}

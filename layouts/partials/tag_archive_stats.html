@@ -3,16 +3,29 @@
 {{- $term := .termName -}}
 {{- $groups := newScratch }}{{ $groups.Set "papers" dict -}}
 {{- $paperPages := 0 }}{{ $unclassifiedPages := 0 -}}
+{{- $memberMemoKey := "research-page:tag_archive_member:v1" -}}
 {{- range $page.Pages -}}
-  {{- $metadata := partial "research_metadata.html" . -}}
-  {{- if eq $metadata.pageType "paper" -}}
+  {{- if not (.Store.Get (printf "%s:ready" $memberMemoKey)) -}}
+    {{- $metadata := partial "research_metadata.html" . -}}
+    {{- $isPaper := eq $metadata.pageType "paper" -}}
+    {{- $valid := false -}}{{- $ids := slice -}}{{- $key := "" -}}
+    {{- if $isPaper -}}
+      {{- $proof := partial "tag_page_proof.html" . -}}
+      {{- $validRecords := partial "tag_valid_records.html" . -}}
+      {{- $valid = and (partial "tag_flat_contract.html" $proof) (gt (len $validRecords) 0) (eq (len $validRecords) (len ($proof.concepts | default slice))) -}}
+      {{- if $valid }}{{ range $validRecords }}{{ $ids = union $ids (slice .id) }}{{ end }}{{ end -}}
+      {{- $key = partial "research_identity.html" . -}}
+    {{- end -}}
+    {{- .Store.Set $memberMemoKey (dict "isPaper" $isPaper "valid" $valid "ids" $ids "key" $key) -}}
+    {{- .Store.Set (printf "%s:ready" $memberMemoKey) true -}}
+  {{- end -}}
+  {{- $member := .Store.Get $memberMemoKey -}}
+  {{- if $member.isPaper -}}
     {{- $paperPages = add $paperPages 1 -}}
-    {{- $proof := partial "tag_page_proof.html" . -}}
-    {{- $validRecords := partial "tag_valid_records.html" . -}}
-    {{- $valid := and (partial "tag_flat_contract.html" $proof) (gt (len $validRecords) 0) (eq (len $validRecords) (len ($proof.concepts | default slice))) -}}
-    {{- $ids := slice }}{{ if $valid }}{{ range $validRecords }}{{ $ids = union $ids (slice .id) }}{{ end }}{{ end -}}
+    {{- $valid := $member.valid -}}
+    {{- $ids := $member.ids -}}
     {{- if not $valid }}{{ $unclassifiedPages = add $unclassifiedPages 1 }}{{ end -}}
-    {{- $key := partial "research_identity.html" . -}}
+    {{- $key := $member.key -}}
     {{- with index ($groups.Get "papers") $key }}{{ $valid = or .classified $valid }}{{ $ids = union .ids $ids }}{{ end -}}
     {{- $groups.SetInMap "papers" $key (dict "classified" $valid "ids" $ids) -}}
   {{- end -}}

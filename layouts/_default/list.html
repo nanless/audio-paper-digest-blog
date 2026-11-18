@@ -34,7 +34,7 @@
        paper identities rather than mistaking sidecar pages for old tags. */}}
 {{- if and (eq .Kind "term") (eq .Type "tags") }}
 {{- $termName := .Data.Term | default .Title }}
-{{- $archive := partial "tag_archive_stats.html" (dict "page" . "termName" $termName) }}
+{{- $archive := partialCached "tag_archive_stats.html" (dict "page" . "termName" $termName) "tag-archive" .RelPermalink $termName }}
 <aside class="tag-notice tag-notice--current" aria-label="标签索引与研究方向">
   <p class="tag-notice__title">标签索引</p>
   <p class="tag-notice__body">此入口按页面中保留的标签名称收录，共 {{ $archive.totalPages }} 页，包含 {{ $archive.paperCount }} 条论文记录{{ if $archive.nonPaperPages }}及 {{ $archive.nonPaperPages }} 页汇总或其他内容{{ end }}。论文记录按已核身份去重，身份待核时按页面保留；其中 {{ $archive.classifiedPaperCount }} 条已有已核验的研究方向。标签名称的收录范围与研究方向筛选不同。</p>
@@ -56,7 +56,7 @@
   <a href="{{ "tags/" | relURL }}">浏览全部研究方向 →</a>
 </section>
 {{- end }}
-{{- partial "tag_drilldown.html" (dict "page" . "termName" $termName "concept" $archive.concept) }}
+{{- partialCached "tag_drilldown.html" (dict "page" . "termName" $termName "concept" $archive.concept) "tag-drilldown" .RelPermalink $termName }}
 {{- end }}
 
 {{- if .Content }}
@@ -67,22 +67,28 @@
 </div>
 {{- end }}
 
-{{- $pages := union .RegularPages .Sections }}
+{{- $listPagesKey := "research-list:pages:v1" }}
+{{- if not (.Store.Get (printf "%s:ready" $listPagesKey)) }}
+{{- $computedPages := union .RegularPages .Sections }}
 
 {{- if .IsHome }}
-{{- $pages = slice }}
+{{- $computedPages = slice }}
 {{- range where site.RegularPages "Type" "in" site.Params.mainSections }}
-  {{- if eq (partial "research_metadata.html" .).pageType "daily" }}{{ $pages = $pages | append . }}{{ end }}
+  {{- if eq (partial "research_metadata.html" .).pageType "daily" }}{{ $computedPages = $computedPages | append . }}{{ end }}
 {{- end }}
-{{- $pages = sort $pages "Date" "desc" }}
+{{- $computedPages = sort $computedPages "Date" "desc" }}
 {{- end }}
 
 {{- if not .IsHome }}
-{{- $pinned := where $pages "Weight" "<" 0 }}
-{{- $others := where $pages "Weight" ">=" 0 }}
+{{- $pinned := where $computedPages "Weight" "<" 0 }}
+{{- $others := where $computedPages "Weight" ">=" 0 }}
 {{- $others = sort $others "Date" "desc" }}
-{{- $pages = union $pinned $others }}
+{{- $computedPages = union $pinned $others }}
 {{- end }}
+{{- .Store.Set $listPagesKey $computedPages }}
+{{- .Store.Set (printf "%s:ready" $listPagesKey) true }}
+{{- end }}
+{{- $pages := .Store.Get $listPagesKey }}
 
 {{- $paginator := .Paginate $pages }}
 

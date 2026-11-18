@@ -30,10 +30,18 @@
     {{- $groups.SetInMap "records" $identity (dict "identity" $identity "page" $page "ids" $ids "nodes" ($nodes.Get "labels")) -}}
   {{- end -}}
 {{- end -}}
+{{- $final := newScratch -}}{{- $final.Set "records" dict -}}
 {{- $index := newScratch -}}
 {{- $index.Set "concepts" dict -}}
 {{- $index.Set "names" slice -}}
 {{- range $identity, $record := ($groups.Get "records") -}}
+  {{- $p := $record.page -}}
+  {{- $meta := partial "research_metadata.html" $p -}}
+  {{- $hasDesc := false -}}{{- $descHtml := "" -}}
+  {{- with $p.Description }}{{ $hasDesc = true }}{{ $descHtml = . | markdownify | plainify | truncate 120 }}{{ end -}}
+  {{- $sortedIds := sort $record.ids -}}
+  {{- $rankingKey := printf "research-related-rankings:%s" (crypto.SHA256 (dict "ids" $sortedIds "nodes" $record.nodes | jsonify)) -}}
+  {{- $final.SetInMap "records" $identity (dict "identity" $identity "ids" $sortedIds "nodes" $record.nodes "rankingKey" $rankingKey "relPermalink" $p.RelPermalink "headline" $meta.headline "hasDescription" $hasDesc "descriptionHtml" $descHtml) -}}
   {{- range $record.ids -}}
     {{- $bucketKey := printf "bucket:%s" . -}}
     {{- if not ($index.Get $bucketKey) -}}
@@ -46,4 +54,4 @@
 {{- range ($index.Get "names") -}}
   {{- $index.SetInMap "concepts" . ($index.Get (printf "bucket:%s" .)) -}}
 {{- end -}}
-{{- return (dict "records" ($groups.Get "records") "concepts" ($index.Get "concepts")) -}}
+{{- return (dict "records" ($final.Get "records") "concepts" ($index.Get "concepts")) -}}

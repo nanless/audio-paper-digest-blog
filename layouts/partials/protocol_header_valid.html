@@ -10,8 +10,15 @@
 {{- end -}}
 {{- $matches := 0 -}}
 {{- if $valid -}}
+  {{- $contractIsString := eq (printf "%T" $record.contract) "string" -}}
   {{- range ($family.formats | default slice) -}}
-    {{- if and (eq (.tag | partial "research_canonical_json.html") ($record.contract | partial "research_canonical_json.html")) (eq (.fp | default "") $selector) -}}
+    {{- $tagMatch := false -}}
+    {{- if eq (printf "%T" .tag) "string" -}}
+      {{- if $contractIsString }}{{ $tagMatch = eq .tag $record.contract }}{{ end -}}
+    {{- else -}}
+      {{- $tagMatch = eq (.tag | partial "research_canonical_json.html") ($record.contract | partial "research_canonical_json.html") -}}
+    {{- end -}}
+    {{- if and $tagMatch (eq (.fp | default "") $selector) -}}
       {{- $matches = add $matches 1 -}}{{- $expected = .header -}}
     {{- end -}}
   {{- end -}}
@@ -19,11 +26,18 @@
 {{- $valid = and $valid (eq $matches 1) (gt (len $expected) 0) -}}
 {{- if $valid -}}
   {{- $keys := dict "contract" true "schemaFingerprint" true "version" true "schemaVersion" true "policyVersion" true "__proto__" true -}}
-  {{- range $key, $_ := $expected }}{{ $keys = merge $keys (dict $key true) }}{{ end -}}
+  {{- range $key, $_ := $expected }}{{ if not (isset $keys $key) }}{{ $keys = merge $keys (dict $key true) }}{{ end }}{{ end -}}
   {{- range $key, $_ := $keys -}}
     {{- if isset $expected $key -}}
       {{- if not (isset $record $key) -}}{{- $valid = false -}}
-      {{- else if ne ((index $record $key) | partial "research_canonical_json.html") ((index $expected $key) | partial "research_canonical_json.html") -}}{{- $valid = false -}}{{- end -}}
+      {{- else -}}
+        {{- $rv := index $record $key -}}{{- $ev := index $expected $key -}}
+        {{- if and (eq (printf "%T" $rv) "string") (eq (printf "%T" $ev) "string") -}}
+          {{- if ne $rv $ev }}{{ $valid = false }}{{ end -}}
+        {{- else if ne ($rv | partial "research_canonical_json.html") ($ev | partial "research_canonical_json.html") -}}
+          {{- $valid = false -}}
+        {{- end -}}
+      {{- end -}}
     {{- else if isset $record $key -}}{{- $valid = false -}}{{- end -}}
   {{- end -}}
 {{- end -}}

@@ -3,10 +3,14 @@
      Physical selector pin preserves original ordered tuples; Go maps do not
      pretend to reproduce JavaScript JSON property-order transport bytes. */ -}}
 {{- $memoKey := "fullsite-publication-selection:v1" -}}
+{{- $out := dict -}}
+{{- if not (and (eq (printf "%T" .) "string") (eq . "__partialCached_global__")) -}}
+  {{- $out = partialCached "tag_fullsite_publication_selection.html" "__partialCached_global__" "global" -}}
+{{- else -}}
 {{- if not (site.Store.Get (printf "%s:ready" $memoKey)) -}}
-  {{- $history := partial "tag_fullsite_history.html" . -}}
+  {{- $history := partialCached "tag_fullsite_history.html" "__partialCached_global__" "global" -}}
   {{- $result := dict "required" false "valid" true "eligible" dict "withheld" dict -}}
-  {{- $profiles := partial "tag_fullsite_profiles.html" . -}}
+  {{- $profiles := partialCached "tag_fullsite_profiles.html" "production" "production" -}}
   {{- $expected := slice -}}
   {{- range $profiles -}}
     {{- if and (eq .admissionProjectionSha256 ($history.admissionProjectionSha256 | default "")) (eq .sourceProjectionSha256 ($history.sourceProjectionSha256 | default "")) -}}
@@ -20,7 +24,7 @@
     {{- $s := dict }}{{ if $valid }}{{ $bytes := readFile $file }}{{ $valid = eq (crypto.SHA256 $bytes) $pin }}{{ if $valid }}{{ $s = $bytes | transform.Unmarshal }}{{ end }}{{ end -}}
     {{- $keys := slice }}{{ range $k, $v := $s }}{{ $keys = $keys | append $k }}{{ end -}}
     {{- $valid = and $valid (eq (sort $keys) (sort (slice "contract" "collectionSha256" "admissionSha256" "sourcesSha256" "inputInventorySha256" "eligible" "withheld" "counts"))) (eq $s.contract "fullsite-exact-native-publication-selection-v1") (eq $s.collectionSha256 (crypto.SHA256 (readFile "data/fullsite-taxonomy-history.json"))) (eq $s.admissionSha256 $history.admissionProjectionSha256) (eq $s.sourcesSha256 $history.sourceProjectionSha256) (reflect.IsSlice $s.eligible) (reflect.IsSlice $s.withheld) -}}
-    {{- $state := newScratch }}{{ $state.Set "tuples" dict }}{{ $state.Set "eligible" dict }}{{ $state.Set "withheld" dict }}{{ $state.Set "pages" dict }}{{ $state.Set "keys" slice -}}
+    {{- $state := newScratch }}{{ $state.Set "tuples" dict }}{{ $state.Set "eligible" dict }}{{ $state.Set "withheld" dict }}{{ $state.Set "pages" dict }}{{ $state.Set "keys" dict -}}
     {{- $held := "arxiv:2604.21628" -}}
     {{- $w := dict }}{{ if eq (len ($s.withheld | default slice)) 1 }}{{ $w = index $s.withheld 0 }}{{ end -}}
     {{- $wkeys := slice }}{{ range $k, $v := $w }}{{ $wkeys = $wkeys | append $k }}{{ end -}}
@@ -35,8 +39,9 @@
         {{- $row := index ($history.records | default dict) $p.pagePath | default dict -}}
         {{- $pfields := slice }}{{ range $k, $v := $p }}{{ $pfields = $pfields | append $k }}{{ end -}}
         {{- $expectedPage := dict "pagePath" $p.pagePath "pageKey" $row.pageKey "pageSha256" $row.pageSha256 "bodySha256" $row.bodySha256 "pageProofSha256" $row.proofSha256 -}}
-        {{- $valid = and $valid $row (eq $row.paperId $id) (eq (sort $pfields) (sort (slice "pagePath" "pageKey" "pageSha256" "bodySha256" "pageProofSha256"))) (eq (partial "research_canonical_json.html" $p) (partial "research_canonical_json.html" $expectedPage)) (not (isset ($state.Get "pages") $p.pagePath)) (not (in ($state.Get "keys") $p.pageKey)) -}}
-        {{- $state.SetInMap "pages" $p.pagePath true }}{{ $state.Set "keys" (($state.Get "keys") | append $p.pageKey) }}{{ $pages = $pages | append $expectedPage -}}
+        {{- $pKey := printf "%v" ($p.pageKey | default "") -}}
+        {{- $valid = and $valid $row (eq $row.paperId $id) (eq (sort $pfields) (sort (slice "pagePath" "pageKey" "pageSha256" "bodySha256" "pageProofSha256"))) (eq (partial "research_canonical_json.html" $p) (partial "research_canonical_json.html" $expectedPage)) (not (isset ($state.Get "pages") $p.pagePath)) (not (isset ($state.Get "keys") $pKey)) -}}
+        {{- $state.SetInMap "pages" $p.pagePath true }}{{ $state.SetInMap "keys" $pKey true }}{{ $pages = $pages | append $expectedPage -}}
         {{- if eq $id $held }}{{ $state.SetInMap "withheld" $p.pagePath true }}{{ else }}{{ $state.SetInMap "eligible" $p.pagePath true }}{{ end -}}
       {{- end -}}
       {{- $expectedTuple := dict "paperId" $id "runId" $audit.runId "auditRecordSha256" (crypto.SHA256 (partial "research_canonical_json.html" $audit)) "outerProofSha256" $audit.proofSha256 "classificationRecordSha256" (crypto.SHA256 (partial "research_canonical_json.html" $c)) "nativeProofSha256" $c.proofSha256 "sourceDescriptorSha256" (crypto.SHA256 (partial "research_canonical_json.html" $c.source)) "issuerDependencySha256" $audit.fingerprintInputs.protectedDependencySha256 "pages" $pages -}}
@@ -66,4 +71,6 @@
   {{- end -}}
   {{- site.Store.Set $memoKey $result }}{{ site.Store.Set (printf "%s:ready" $memoKey) true -}}
 {{- end -}}
-{{- return (site.Store.Get $memoKey) -}}
+{{- $out = site.Store.Get $memoKey -}}
+{{- end -}}
+{{- return $out -}}

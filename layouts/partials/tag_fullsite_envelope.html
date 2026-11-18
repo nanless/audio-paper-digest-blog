@@ -38,17 +38,23 @@
     {{- $valid = and $valid (eq (crypto.SHA256 ($concepts | partial "research_canonical_json.html")) (crypto.SHA256 ($r.concepts | partial "research_canonical_json.html"))) -}}
     {{- range $roles }}{{ $valid = and $valid (eq (crypto.SHA256 (index $c . | partial "research_canonical_json.html")) (crypto.SHA256 (index $r . | partial "research_canonical_json.html"))) }}{{ end -}}
     {{- $transportValid = not (not $valid) -}}
-    {{- $profiles := partial "tag_fullsite_profiles.html" "production" -}}
-    {{- if and (eq (.syntheticFullsiteFixture | default false) true) (eq ($c.fingerprintInputs.model | default "") "synthetic-test-model") }}{{ $profiles = slice .fixtureProfile }}{{ end -}}
+    {{- $profiles := partialCached "tag_fullsite_profiles.html" "production" "production" -}}
+    {{- $isFixture := and (eq (.syntheticFullsiteFixture | default false) true) (eq ($c.fingerprintInputs.model | default "") "synthetic-test-model") -}}
+    {{- if $isFixture }}{{ $profiles = slice .fixtureProfile }}{{ end -}}
     {{- $actualPins := dict -}}
-    {{- if and (eq (.syntheticFullsiteFixture | default false) true) (eq $c.fingerprintInputs.model "synthetic-test-model") }}{{ $actualPins = dict "admissionSha256" (crypto.SHA256 (.fixtureAdmissionBytes | default "")) "sourceSha256" (crypto.SHA256 (.fixtureSourceBytes | default "")) }}{{ else }}{{ $actualPins = partialCached "tag_fullsite_byte_pins.html" $f.protectedDependencySha256 $f.protectedDependencySha256 }}{{ end -}}
+    {{- if $isFixture }}{{ $actualPins = dict "admissionSha256" (crypto.SHA256 (.fixtureAdmissionBytes | default "")) "sourceSha256" (crypto.SHA256 (.fixtureSourceBytes | default "")) }}{{ else }}{{ $actualPins = partialCached "tag_fullsite_byte_pins.html" $f.protectedDependencySha256 $f.protectedDependencySha256 }}{{ end -}}
     {{- $n := 0 -}}
     {{- range $candidate := $profiles -}}
       {{- if and (eq $candidate.contract $a.contract) (eq $candidate.registrySha256 $r.registrySha256) (eq $candidate.implementationSha256 $c.fingerprintInputs.implementationSha256) (eq $candidate.nativeDependencySha256 $c.protectedDependencySha256) (eq $candidate.auditDependencySha256 $f.protectedDependencySha256) (eq $candidate.manifestSha256 $f.manifestSha256) (eq $candidate.scopeSha256 $f.scopeSha256) (eq $candidate.blogHead $f.blogHead) (eq $candidate.blogTree $f.blogTree) (eq $candidate.admissionProjectionSha256 $actualPins.admissionSha256) (eq $candidate.sourceProjectionSha256 $actualPins.sourceSha256) }}{{ $n = add $n 1 }}{{ $profile = $candidate }}{{ end -}}
     {{- end -}}
     {{- $valid = and $valid (eq $n 1) -}}
     {{- if $valid -}}
-      {{- $authority := partial "tag_fullsite_authority.html" (dict "profile" $profile "syntheticFullsiteFixture" (and (eq (.syntheticFullsiteFixture | default false) true) (eq $c.fingerprintInputs.model "synthetic-test-model")) "fixtureAdmissionBytes" (.fixtureAdmissionBytes | default "") "fixtureSourceBytes" (.fixtureSourceBytes | default "")) -}}
+      {{- $authority := dict -}}
+      {{- if $isFixture -}}
+        {{- $authority = partial "tag_fullsite_authority.html" (dict "profile" $profile "syntheticFullsiteFixture" true "fixtureAdmissionBytes" (.fixtureAdmissionBytes | default "") "fixtureSourceBytes" (.fixtureSourceBytes | default "")) -}}
+      {{- else -}}
+        {{- $authority = partialCached "tag_fullsite_authority.html" (dict "profile" $profile "syntheticFullsiteFixture" false) $profile.auditDependencySha256 $profile.admissionProjectionSha256 $profile.sourceProjectionSha256 $profile.manifestSha256 $profile.scopeSha256 $profile.blogHead $profile.blogTree -}}
+      {{- end -}}
       {{- $valid = and $valid $authority.valid -}}
       {{- $member = index $authority.members $r.paperId | default dict -}}
       {{- $valid = and $valid (eq ($member.paperAuthoritySha256 | default "unapproved") $f.paperAuthoritySha256) (eq ($member.sourceAuthoritySha256 | default "unapproved") $admission.sourceAuthoritySha256) (eq ($member.pagesSha256 | default "unapproved") (crypto.SHA256 ($admission.pages | partial "research_canonical_json.html"))) (eq ($member.sourceDescriptorSha256 | default "unapproved") (crypto.SHA256 ($c.source | partial "research_canonical_json.html"))) -}}

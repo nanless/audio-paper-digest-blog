@@ -1,32 +1,57 @@
-{{- $memoKey := printf "research-related-rankings:%s" (crypto.SHA256 (dict "ids" (sort .ids) "nodes" .nodes | jsonify)) -}}
-{{- $memoValue := site.Store.Get $memoKey -}}
-{{- if not (site.Store.Get (printf "%s:ready" $memoKey)) -}}
 {{- $catalog := partialCached "related_catalog.html" "global" -}}
 {{- $current := . -}}
-{{- $scores := newScratch -}}
-{{- $scores.Set "matches" dict -}}
-{{- range $id := (sort $current.ids) -}}
+{{- $sortedIds := sort $current.ids -}}
+{{- $scores := newScratch -}}{{- $scores.Set "s" dict -}}
+{{- $maxScore := 0 -}}
+{{- range $id := $sortedIds -}}
   {{- $concept := index $current.nodes $id -}}
   {{- $weight := 1 -}}
-  {{- $role := "相同研究条件" -}}
-  {{- if eq $concept.facet "task" }}{{ $weight = 4 }}{{ $role = "共同研究任务" }}
-  {{- else if eq $concept.facet "method" }}{{ $weight = 3 }}{{ $role = "共同研究方法" }}
-  {{- else if eq $concept.facet "legacy" }}{{ $role = "相同关键词" }}{{ end -}}
-  {{- range $otherIdentity, $matched := (index $catalog.concepts $id) -}}
-    {{- $score := $weight -}}
-    {{- $reasons := slice (printf "%s：%s" $role $concept.zh) -}}
-    {{- with index ($scores.Get "matches") $otherIdentity -}}
-      {{- $score = add .score $weight -}}
-      {{- $reasons = union .reasons $reasons -}}
-    {{- end -}}
-    {{- $scores.SetInMap "matches" $otherIdentity (dict "identity" $otherIdentity "score" $score "sortKey" (printf "%08d:%s" (sub 100000 $score) $otherIdentity) "reasons" $reasons "page" (index $catalog.records $otherIdentity).page) -}}
+  {{- if eq $concept.facet "task" }}{{ $weight = 4 }}
+  {{- else if eq $concept.facet "method" }}{{ $weight = 3 }}{{ end -}}
+  {{- range $otherIdentity, $_ := (index $catalog.concepts $id) -}}
+    {{- $next := add (index ($scores.Get "s") $otherIdentity | default 0) $weight -}}
+    {{- if gt $next $maxScore }}{{ $maxScore = $next }}{{ end -}}
+    {{- $scores.SetInMap "s" $otherIdentity $next -}}
   {{- end -}}
 {{- end -}}
-{{- $out := slice -}}
-{{- range ($scores.Get "matches") }}{{ $out = $out | append . }}{{ end -}}
-{{- /* One extra result keeps the exact top three after excluding the current identity. */ -}}
-{{- $memoValue = first 4 (sort $out "sortKey") -}}
-{{- site.Store.Set $memoKey $memoValue -}}
-{{- site.Store.Set (printf "%s:ready" $memoKey) true -}}
+{{- $scoreMap := $scores.Get "s" -}}
+{{- $cutoff := 1 -}}
+{{- if and (gt $maxScore 1) (le $maxScore 1000) (gt (len $scoreMap) 4) -}}
+  {{- $hist := newScratch -}}
+  {{- range $_, $sc := $scoreMap }}{{ $hist.Add (printf "%d" $sc) 1 }}{{ end -}}
+  {{- $acc := 0 -}}
+  {{- range $i := seq 1 $maxScore -}}
+    {{- $sc := add (sub $maxScore $i) 1 -}}
+    {{- if lt $acc 4 -}}
+      {{- $acc = add $acc ($hist.Get (printf "%d" $sc) | default 0) -}}
+      {{- if ge $acc 4 }}{{ $cutoff = $sc }}{{ end -}}
+    {{- end -}}
+  {{- end -}}
 {{- end -}}
-{{- return (site.Store.Get $memoKey) -}}
+{{- $candidates := slice -}}
+{{- range $otherIdentity, $sc := $scoreMap -}}
+  {{- if ge $sc $cutoff -}}
+    {{- $candidates = $candidates | append (dict "identity" $otherIdentity "score" $sc "sortKey" (printf "%08d:%s" (sub 100000 $sc) $otherIdentity)) -}}
+  {{- end -}}
+{{- end -}}
+{{- /* One extra result keeps the exact top three after excluding the current identity. */ -}}
+{{- $top := first 4 (sort $candidates "sortKey") -}}
+{{- $out := slice -}}
+{{- range $winner := $top -}}
+  {{- $otherIdentity := $winner.identity -}}
+  {{- $reasons := slice -}}
+  {{- range $id := $sortedIds -}}
+    {{- if isset (index $catalog.concepts $id) $otherIdentity -}}
+      {{- $concept := index $current.nodes $id -}}
+      {{- $role := "相同研究条件" -}}
+      {{- if eq $concept.facet "task" }}{{ $role = "共同研究任务" }}
+      {{- else if eq $concept.facet "method" }}{{ $role = "共同研究方法" }}
+      {{- else if eq $concept.facet "legacy" }}{{ $role = "相同关键词" }}{{ end -}}
+      {{- $r := slice (printf "%s：%s" $role $concept.zh) -}}
+      {{- if $reasons }}{{ $reasons = union $reasons $r }}{{ else }}{{ $reasons = $r }}{{ end -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $rec := index $catalog.records $otherIdentity -}}
+  {{- $out = $out | append (dict "identity" $otherIdentity "score" $winner.score "sortKey" $winner.sortKey "reasons" $reasons "relPermalink" $rec.relPermalink "headline" $rec.headline "hasDescription" $rec.hasDescription "descriptionHtml" $rec.descriptionHtml) -}}
+{{- end -}}
+{{- return $out -}}

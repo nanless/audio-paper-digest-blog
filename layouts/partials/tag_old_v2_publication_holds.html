@@ -1,6 +1,10 @@
 {{- /* Root-approved exact original tuple qualification. Original objects and
      their source/review proofs are replayed before any hold is applied. */ -}}
 {{- $memoKey := "tag-old-v2-publication-holds:v1" -}}
+{{- $out := dict -}}
+{{- if not (and (eq (printf "%T" .) "string") (eq . "__partialCached_global__")) -}}
+  {{- $out = partialCached "tag_old_v2_publication_holds.html" "__partialCached_global__" "global" -}}
+{{- else -}}
 {{- if not (site.Store.Get (printf "%s:ready" $memoKey)) -}}
   {{- $history := index hugo.Data "taxonomy-history-v2" | default dict }}{{ $file := "data/taxonomy-old-v2-publication-holds.json" -}}
   {{- $ids := slice "conference:icassp:2026:icassp-arnumber:11461028" "conference:icassp:2026:icassp-arnumber:11461877" "conference:icassp:2026:icassp-arnumber:11461446" "conference:icassp:2026:icassp-arnumber:11464546" "conference:icassp:2026:icassp-arnumber:11464268" -}}
@@ -31,4 +35,6 @@
   {{- end -}}
   {{- site.Store.Set $memoKey $result }}{{ site.Store.Set (printf "%s:ready" $memoKey) true -}}
 {{- end -}}
-{{- return (site.Store.Get $memoKey) -}}
+{{- $out = site.Store.Get $memoKey -}}
+{{- end -}}
+{{- return $out -}}
