@@ -1,0 +1,98 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.20436v1",
+  "abstract": "Speech language models (SLMs) exhibit strong capabilities in automatic speech recognition (ASR) and general-purpose speech understanding, yet ASR-specific training often degrades spoken question answering (QA) performance. We revisit this conflict from the perspective of task-specific input--output mappings and one-hot supervision. Our findings reveal pronounced task-asymmetric effects: ASR-only training severely limits QA capability, whereas QA-only training retains reasonable ASR performance. We hypothesize that the relatively deterministic mapping of ASR, combined with single-reference supervision, biases models toward transcription-specific behavior. Motivated by this perspective, we advocate broadening ASR learning objectives while preserving recognition accuracy. We propose Learning from Distribution (LFD), which aligns speech-conditioned predictions with the conditional output distributions of a pretrained text LLM. Extensive experiments demonstrate that LFD improves both ASR and QA performance, exhibits superior data efficiency, and remains effective under full-parameter fine-tuning. CoT-ASR further supports the broader applicability of our proposed supervision principle.",
+  "abstractSha256": "fe642ac33d227171d89973ac70eec975b263e53020c8219a51b053f76aa653cd",
+  "arxivId": "2611.20436",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.20436v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "知识蒸馏",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-question-answering",
+          "label": "音频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        },
+        {
+          "facet": "method",
+          "id": "method.adapter",
+          "label": "Adapter"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "知识蒸馏",
+      "primaryMethodId": "method.distillation",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "College of Computer Science, Nankai University"
+      ],
+      "name": "Yujie Guo"
+    },
+    {
+      "affiliations": [
+        "Xingchen AGI Lab, China Telecom Artificial Intelligence Technology Co. Ltd"
+      ],
+      "name": "Hongjie Chen"
+    },
+    {
+      "affiliations": [
+        "College of Computer Science, Nankai University"
+      ],
+      "name": "Jiaming Zhou"
+    },
+    {
+      "affiliations": [
+        "Xingchen AGI Lab, China Telecom Artificial Intelligence Technology Co. Ltd"
+      ],
+      "name": "Jian Kang"
+    },
+    {
+      "affiliations": [
+        "Xingchen AGI Lab, China Telecom Artificial Intelligence Technology Co. Ltd"
+      ],
+      "name": "Jie Li"
+    },
+    {
+      "affiliations": [
+        "Xingchen AGI Lab, China Telecom Artificial Intelligence Technology Co. Ltd"
+      ],
+      "name": "Yongxiang Li"
+    },
+    {
+      "affiliations": [
+        "College of Computer Science, Nankai University"
+      ],
+      "name": "Yong Qin"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文研究只用语音识别数据微调语音大模型会导致口语问答能力下降的问题，提出用冻结文本大模型的条件输出分布代替独热标签来监督语音分支，实验显示在相同识别数据下问答能力得以保留且识别也有提升，但结论只在所用模型、数据量和评测集条件下成立。",
+  "originalTitle": "Learning from Distribution: Rethinking One-Hot Supervision for ASR and QA in Speech Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2611.20436v1.pdf",
+  "readerTitle": "只用识别数据训练，为什么问答能力会消失：从分布中学习",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.18893v1",
+  "abstract": "This paper proposes a lightweight, interpretable audio anti-spoofing method that distinguishes between bona fide human speech and replay attacks by analyzing physical acoustic signatures rather than learned spectro-temporal patterns. Unlike black-box Deep Neural Networks (DNNs), our approach exploits fundamental physical invariants, specifically source kinematics, binaural phase dynamics, and aerodynamic consistency, captured via multi-channel microphone arrays. By extracting these explicit physical descriptors and classifying them with an efficient XGBoost model, we achieve detection performance (Equal Error Rate (EER) of 17.8% on 6-channel arrays) comparable to state-of-the-art deep learning baselines, but with a fraction of the computational cost. The proposed system operates with a 1 MB memory footprint and 0.9 s latency on a standard ARM Cortex-M7 microcontroller, enabling privacy-preserving, real-time liveness detection on edge devices.",
+  "abstractSha256": "5ddb53745fa7bc2ddc0f06ca4eb0d875032f541f742350a949dffa459ff31ff8",
+  "arxivId": "2611.18893",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.18893v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "语音伪造检测",
+    "rankBucket": "前50%",
+    "score": 6.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-spoofing",
+          "label": "语音伪造检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.interpretability",
+          "label": "可解释性"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.on-device",
+          "label": "端侧运行"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "语音伪造检测",
+      "primaryTaskId": "task.speech-spoofing",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Saba Nasiri"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Alireza Amirshahi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Milos Cernak"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对多通道语音回放检测问题，该文用到达时间差运动轨迹、双通道强度相位动态和低频气流能量等可解释物理描述子结合 XGBoost 分类，在 ReMASC 上 D3 六通道取得 17.8% 等错误率的同时把内存控制在 0.6 MB 量级。",
+  "originalTitle": "Lightweight Replay Attack Detection via Interpretable Physical Descriptors",
+  "pdfUrl": "https://arxiv.org/pdf/2611.18893v1.pdf",
+  "readerTitle": "用物理运动与气流痕迹判断语音是真人还是喇叭回放",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

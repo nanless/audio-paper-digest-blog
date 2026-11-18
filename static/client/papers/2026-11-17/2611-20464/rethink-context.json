@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.20464v1",
+  "abstract": "Multimodal foundation models (MFMs) support generalizable inference in distributed mobile sensing applications by integrating heterogeneous data streams. However, existing MFM inference pipelines typically require complete and synchronized multimodal inputs, whereas mobile sensing streams arrive asynchronously due to network variability and heterogeneous data volumes across modalities. Waiting for all modalities increases end-to-end latency, while inference with incomplete inputs can reduce accuracy. We argue that multimodal inference should depend on the utility of available information rather than modality completeness. Based on this principle, we propose AdaModalX, a progressive multimodal inference framework that decouples inference execution from modality synchronization through runtime utility-aware orchestration. At each device, importance-aware data uploading uses a lightweight probe distilled from the edge-side MFM to allow reliable samples to exit locally while uncertain samples continue uploading. At the edge, on-demand MFM activation constructs candidates from fully received samples and, when needed, imputed features derived from partially received delayed inputs. A lightweight contribution assessor built on frozen MFM encoders estimates candidate utility and activates the MFM once the candidate meets its corresponding utility threshold. Experiments on four mobile sensing applications show that AdaModalX improves the accuracy-latency trade-off, achieving up to 26.97% accuracy improvement and up to 64.75% end-to-end latency reduction.",
+  "abstractSha256": "3d7de47b29bcf242fb89c52970dbe9e0f72a0d9ca75405a6d383a9287c619690",
+  "arxivId": "2611.20464",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.20464v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "动态计算与早退",
+    "primaryTask": "音频事件检测",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.event-detection",
+          "label": "音频事件检测"
+        },
+        {
+          "facet": "task",
+          "id": "task.video-action-recognition",
+          "label": "视频动作识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.dynamic-computation",
+          "label": "动态计算与早退"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.on-device",
+          "label": "端侧运行"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "动态计算与早退",
+      "primaryMethodId": "method.dynamic-computation",
+      "primaryTask": "音频事件检测",
+      "primaryTaskId": "task.event-detection",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xiangrui Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Sicong Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhiwen Yu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zimu Zhou"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Bin Guo"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对分布式移动感知中各模态到达边缘时间不一致导致要么等齐要么缺信息推理的问题，AdaModalX 用设备端按置信度决定上传与否、边缘端按候选效用决定何时激活多模态基础模型，在四个移动任务上以可忽略的评估开销换来端到端延迟大幅下降且精度基本保持。",
+  "originalTitle": "AdaModalX: Synchronization-Free MFM Inference for Distributed Multimodal Mobile Sensing via Progressive Data Orchestration",
+  "pdfUrl": "https://arxiv.org/pdf/2611.20464v1.pdf",
+  "readerTitle": "不等慢模态的推理：AdaModalX 如何按需触发多模态基础模型",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

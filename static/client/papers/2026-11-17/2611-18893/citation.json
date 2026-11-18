@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.18893v1",
+  "arxivId": "2611.18893",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.18893v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Saba Nasiri"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Alireza Amirshahi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Milos Cernak"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.18893v1",
+  "originalTitle": "Lightweight Replay Attack Detection via Interpretable Physical Descriptors",
+  "pdfUrl": "https://arxiv.org/pdf/2611.18893v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.20819v1",
+  "abstract": "We transpose the Surprise-Gated Memory recipe, a frozen encoder plus a calibrated novelty signal that gates a one-shot episodic store consolidated by periodic replay, from continual visual learning to live speaker diarization. The moment-to-moment question a streaming diarizer must answer, whether an arriving voice belongs to an already-heard speaker or a new one, is a known-versus-novel decision, exactly the decision the surprise gate is built for. On a frozen fine-tuned DiariZen backbone, our online system SGM-Diar recovers 4.8 of the 9.2 diarization-error points separating a naive online baseline from the offline oracle on AMI-SDM (52%) and 1.9 of 2.3 points on VoxConverse (82%), in the end-of-meeting revisable mode, with calibration frozen on development data and transferred cross-domain without adjustment. These are single-seed runs on three AMI meetings and five VoxConverse sessions, so the ordering of conditions rather than the absolute rates is the result. Beyond error rate, we measure the gate's behaviour directly and find a coherent memory-like profile: one-shot speaker recall at 0.857, a novelty response that habituates as speakers become familiar, re-identification that is invariant to the length of intervening silence, and a false-novelty rate of 0.001. Two ablations reproduce, now on audio, the central prediction of the visual SGM work: a sliding replay window is worse than no replay at all. The memory is strictly intra-meeting and is wiped at the end, and no gradient touches the run-time system. We report SGM-Diar as a proof-of-concept and state its limitations explicitly.",
+  "abstractSha256": "73dbc28d1ea990b4200f9b19a16663fcbc75d6095671f00fe1af2671b38a3c43",
+  "arxivId": "2611.20819",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.20819v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "持续学习",
+    "primaryTask": "说话人分离标注",
+    "rankBucket": "前50%",
+    "score": 6.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.diarization",
+          "label": "说话人分离标注"
+        },
+        {
+          "facet": "method",
+          "id": "method.continual",
+          "label": "持续学习"
+        },
+        {
+          "facet": "application",
+          "id": "application.meeting",
+          "label": "会议转录"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "持续学习",
+      "primaryMethodId": "method.continual",
+      "primaryTask": "说话人分离标注",
+      "primaryTaskId": "task.diarization",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Louis Mouchon"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Alexis Lainault"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对流式说话人日志必须实时判断已知还是新说话人的难题，该文在冻结的 DiariZen 骨干上用校准后的新颖性信号控制一次性原型记忆并以整段缓冲重聚类做睡眠巩固，在三个 AMI 会议和五个 VoxConverse 会话的单次运行中恢复了大部分在线到离线的误差差距，但因果严格轨因重编号而很差且结论只保序不保绝对值。",
+  "originalTitle": "Surprise-Gated Memory for Live Speaker Diarization",
+  "pdfUrl": "https://arxiv.org/pdf/2611.20819v1.pdf",
+  "readerTitle": "直播会议中记住说话人：惊奇门控记忆的在线日志方案",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

@@ -1,0 +1,45 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.19118v1",
+  "arxivId": "2611.19118",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.19118v1",
+  "authors": [
+    {
+      "affiliations": [
+        "AI Lab, Freight Technologies Inc., Monterrey, N.L., Mexico"
+      ],
+      "name": "Jovan Popoca Moran"
+    },
+    {
+      "affiliations": [
+        "AI Lab, Freight Technologies Inc., Monterrey, N.L., Mexico",
+        "Tecnológico de Monterrey, School of Engineering and Sciences, Monterrey, N.L., Mexico"
+      ],
+      "name": "Eduardo de Avila-Armenta"
+    },
+    {
+      "affiliations": [
+        "AI Lab, Freight Technologies Inc., Monterrey, N.L., Mexico"
+      ],
+      "name": "Raúl Alejandro Aquino-Ibarra"
+    },
+    {
+      "affiliations": [
+        "AI Lab, Freight Technologies Inc., Monterrey, N.L., Mexico"
+      ],
+      "name": "Jorge Octavio Nicolás-Díaz"
+    },
+    {
+      "affiliations": [
+        "AI Lab, Freight Technologies Inc., Monterrey, N.L., Mexico"
+      ],
+      "name": "Umberto Leon-Dominguez"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.19118v1",
+  "originalTitle": "Latency, Speech Recognition and Turn-Taking in Voice Agents for Spanish Phone Negotiation: An Externally Measured Comparison of Pipecat, LiveKit and GPT-Live",
+  "pdfUrl": "https://arxiv.org/pdf/2611.19118v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

@@ -1,0 +1,98 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.19484v1",
+  "abstract": "In multiparty conversations, a pause does not always mean a speaker has finished, and another voice does not necessarily indicate a change in who holds the conversational floor. Reliable turn-taking therefore requires recognising not only whether a speaker is ready to yield the floor, but also when a possible transition deserves attention. We propose a dual-process-inspired framework that separates continuous candidate discovery from selective verification. A fast, recall-oriented stage identifies plausible transition points. In contrast, a deliberative stage combines acoustic, linguistic, speaker-related, and predicted future-activity evidence, together with multimodal cues where available, to reject false candidates and refine transition timing. We evaluate the framework through three distinct tasks: SHIFT/HOLD classification at supplied decision points, verification of automatically generated candidates, and continuous discovery and localisation of floor transfers. On VoxConverse, we derive action-aware turn-taking events from speaker-diarization annotations to examine unconstrained conversations with varying numbers of speakers. Multi-TPC provides complementary evaluation of controlled triadic interactions using speech, gaze, motion, and prosodic information. The findings reveal that identifying plausible transitions is considerably easier than reliably confirming and localising genuine floor transfers, while the contribution of individual evidence sources varies across conversational settings. These results highlight the importance of treating multiparty turn-taking as a continuous discovery-and-verification problem rather than classification at predefined boundaries.",
+  "abstractSha256": "e4490e2d419dd8ed855aa058aa06e430443d3ffad63741797abe5d38f7d22eb0",
+  "arxivId": "2611.19484",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.19484v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "轮次切换",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.turn-taking",
+          "label": "轮次切换"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "轮次切换",
+      "primaryTaskId": "task.turn-taking",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Rutherford A. Patamia"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Ming Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Wei Luo"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Favour Ekong"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Rehan Mohammed"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Gang Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Akan Cosgun"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "本文把多人轮替预测拆成高召回的候选发现与选择性核验与定位，用 VoxConverse 和 Multi-TPC 说明已知边界分类远易于连续发现，而证据组合的效果随场景变化且计算只在候选处触发。",
+  "originalTitle": "Leveraging Dual-Process Theory for Multimodal Multiparty Turn-Taking Prediction",
+  "pdfUrl": "https://arxiv.org/pdf/2611.19484v1.pdf",
+  "readerTitle": "多人对话中何时换人说话：发现与核验分开做的轮替预测",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

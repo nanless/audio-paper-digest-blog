@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.21372v1",
+  "arxivId": "2611.21372",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.21372v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kunyu Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shenghui Feng"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xiangjie Shi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zeqing Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yingxu Wang"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.21372v1",
+  "originalTitle": "Learning What Pairs Miss for Higher-Order Multimodal Alignment",
+  "pdfUrl": "https://arxiv.org/pdf/2611.21372v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

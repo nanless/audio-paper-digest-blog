@@ -1,0 +1,86 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.19512v1",
+  "abstract": "Callers to Arabic customer-service lines speak their own dialect, while speech recognizers are built and evaluated mainly on Modern Standard Arabic (MSA). A recognizer that mishears the dialect breaks the call before anything else can help. We present Sada-ASR, the speech recognizer of EchoNova's production Arabic voice agent. On a 120-hour test set of MSA and eight dialects, it has the lowest word and character error rates of twelve systems, against eleven from Microsoft, ElevenLabs, Google, OpenAI, Speechmatics, IFM, Cohere, NVIDIA and Audar: 11.69% word error rate against 13.51% for the strongest, Microsoft's MAI-Transcribe-2 (a lead of 0.74 points on clips unaffected by that system's fixed number and script conventions), and 15.52% against 16.96% averaged over varieties. Its largest margins are on Omani (4.30 points), Egyptian (3.78) and Saudi (2.19) speech; it is level on Syrian and loses on Lebanese (24.96% against 23.05%), mostly because it writes Lebanese words in MSA forms and is less verbatim. On six public test sets its average word error rate under the leaderboard's current scoring is 17.17%, below every published figure we found, among them Falcon-ASR (20.92%), Jais-ASR (22.85%) and Audar-ASR-V1-Turbo (23.17%), though none of these states that it used that scoring, so the comparison is indicative. We describe the data pipeline and methodology behind Sada-ASR and release a 20-hour subset of the test set with our scoring code.",
+  "abstractSha256": "1e8578c2f629f28542dfa243552714d63a5f95295bdc426dd1aa86ae8691d6a4",
+  "arxivId": "2611.19512",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.19512v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "数据集构建",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 5.9,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.dataset-curation",
+          "label": "数据集构建"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.accent-dialect",
+          "label": "口音与方言"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "数据集构建",
+      "primaryMethodId": "method.dataset-curation",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Mahmoud Khaled"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Mohammed Abd-Elnaser"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Mahmoud Mohsen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hazem Ahmed"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Abdelrahman Hafez"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对客服电话里方言与标准语错配导致识别先出错的问题，论文用自建标注加弱标注网络音频训练注意力编码器解码器识别器并用贪婪解码统一评测，在 120 小时私有九种变体测试上整体词错误率最低但在黎巴嫩方言上落后，公开六集上的比较则因评分版本不同只具指示性。",
+  "originalTitle": "Sada-ASR: A Production Multidialectal Arabic Speech Recognition System",
+  "pdfUrl": "https://arxiv.org/pdf/2611.19512v1.pdf",
+  "readerTitle": "方言电话里听错一步就全错：Sada-ASR 怎么做多方言阿拉伯语识别",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

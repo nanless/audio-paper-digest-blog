@@ -1,0 +1,80 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.20822v1",
+  "abstract": "Gender expansive voices remain underrepresented in speech datasets, which could cause challenges with generalizability in zero-shot Text-To-Speech (TTS) systems. We evaluate six zero-shot TTS models on two datasets: one containing non gender expansive voices (N-GE) and one with gender expansive (GE) voices from self-identified speakers. Human ratings found that 2 of the 6 models synthesize less similar GE voices compared to N-GE voices, and 3 have improved performance for GE voices. Automated evaluations yield conflicting results, with speaker similarity and automated mean opinion score predictors rating performance of GE voices inconsistently between models and human ratings. This highlights a potential blind spot in evaluation pipelines, emphasizing a need for more representative data and metrics that better capture human perceptual judgments. Our findings stress the need to include transgender, queer, and minority communities in creation of better datasets and model training.",
+  "abstractSha256": "f9460b34731be5a4f216618be8bddcdc9a8b6ed8838c6ae5003f0517c3c518c4",
+  "arxivId": "2611.20822",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.20822v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "主观评测",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前50%",
+    "score": 6.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "task",
+          "id": "task.voice-cloning",
+          "label": "语音克隆"
+        },
+        {
+          "facet": "method",
+          "id": "method.subjective-evaluation",
+          "label": "主观评测"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.fairness",
+          "label": "公平性"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "主观评测",
+      "primaryMethodId": "method.subjective-evaluation",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Juliana Francis"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Robin Netzorg"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Joakim Gustafson"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Éva Székely"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文用两组声音对比六个零样本语音合成系统的人工相似度与机器自动评分，发现人工听感因模型而异且自动评价与人工判断经常不一致，提示评价流程对性别延展声音存在盲区。",
+  "originalTitle": "No-Shot Text-to-Speech: Limitations of Zero-Shot TTS and its Evaluation Methods in Representing Queer and Transgender Voices",
+  "pdfUrl": "https://arxiv.org/pdf/2611.20822v1.pdf",
+  "readerTitle": "零样本语音克隆能否留住性别延展声音：方法、听感与自动评价的分歧",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

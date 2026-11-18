@@ -1,0 +1,113 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.20050v1",
+  "arxivId": "2611.20050",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.20050v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Electronic Engineering, Tsinghua University, Beijing, 100084, China"
+      ],
+      "name": "Siyuan Hou"
+    },
+    {
+      "affiliations": [
+        "Department of Otorhinolaryngology Head and Neck Surgery, Beijing Tongren Hospital, Capital Medical University, Beijing, 100730, China"
+      ],
+      "name": "Shuting Yang"
+    },
+    {
+      "affiliations": [
+        "Department of Electronic Engineering, Tsinghua University, Beijing, 100084, China"
+      ],
+      "name": "Zengrui Jin"
+    },
+    {
+      "affiliations": [
+        "Department of Otorhinolaryngology Head and Neck Surgery, Beijing Tongren Hospital, Capital Medical University, Beijing, 100730, China"
+      ],
+      "name": "Liyu Cheng"
+    },
+    {
+      "affiliations": [
+        "Department of Electronic Engineering, Tsinghua University, Beijing, 100084, China"
+      ],
+      "name": "Siyin Wang"
+    },
+    {
+      "affiliations": [
+        "Department of Otorhinolaryngology Head and Neck Surgery, Beijing Tongren Hospital, Capital Medical University, Beijing, 100730, China"
+      ],
+      "name": "Yunhan Shi"
+    },
+    {
+      "affiliations": [
+        "Department of Otorhinolaryngology Head and Neck Surgery, Beijing Tongren Hospital, Capital Medical University, Beijing, 100730, China"
+      ],
+      "name": "Xueyan Li"
+    },
+    {
+      "affiliations": [
+        "Department of Otorhinolaryngology Head and Neck Surgery, Beijing Tongren Hospital, Capital Medical University, Beijing, 100730, China"
+      ],
+      "name": "Rong Hu"
+    },
+    {
+      "affiliations": [
+        "Department of Otorhinolaryngology Head and Neck Surgery, Beijing Tongren Hospital, Capital Medical University, Beijing, 100730, China"
+      ],
+      "name": "Yuhong Lin"
+    },
+    {
+      "affiliations": [
+        "Department of Otorhinolaryngology Head and Neck Surgery, Beijing Tongren Hospital, Capital Medical University, Beijing, 100730, China"
+      ],
+      "name": "Qiyu Chen"
+    },
+    {
+      "affiliations": [
+        "Department of Otorhinolaryngology Head and Neck Surgery, Beijing Tongren Hospital, Capital Medical University, Beijing, 100730, China"
+      ],
+      "name": "Yanru Li"
+    },
+    {
+      "affiliations": [
+        "Department of Electronic Engineering, Tsinghua University, Beijing, 100084, China"
+      ],
+      "name": "Ji Wu"
+    },
+    {
+      "affiliations": [
+        "Department of Electronic Engineering, Tsinghua University, Beijing, 100084, China",
+        "Shanghai Artificial Intelligence Laboratory, Shanghai, 200030, China"
+      ],
+      "name": "Bowen Zhou"
+    },
+    {
+      "affiliations": [
+        "Yuquan Hospital, School of Clinical Medicine, Tsinghua Medicine, Tsinghua University, Beijing, 100040, China"
+      ],
+      "name": "Mangsuo Zhao"
+    },
+    {
+      "affiliations": [
+        "Department of Otorhinolaryngology Head and Neck Surgery, Beijing Tongren Hospital, Capital Medical University, Beijing, 100730, China"
+      ],
+      "name": "Wen Xu"
+    },
+    {
+      "affiliations": [
+        "Department of Electronic Engineering, Tsinghua University, Beijing, 100084, China",
+        "Shanghai Artificial Intelligence Laboratory, Shanghai, 200030, China",
+        "Department of Human Communication Sciences, University College London, London, WC1E 6BT, United Kingdom"
+      ],
+      "name": "Chao Zhang"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.20050v1",
+  "originalTitle": "Clinician Assessment of Laryngeal Disease with Auditory AI before Laryngoscopy: A Paired Reader Study",
+  "pdfUrl": "https://arxiv.org/pdf/2611.20050v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

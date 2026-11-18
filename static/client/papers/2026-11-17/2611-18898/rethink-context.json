@@ -1,0 +1,97 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.18898v1",
+  "abstract": "Speech tokenizers convert audio into discrete units, enabling language models to process and generate speech. The goal is to learn compact, text-like representations while preserving enough detail to reconstruct a speaker's voice and delivery. We propose Facto: a factorized tokenizer that disentangles time-varying information (content and prosody) from static components (speaker identity and recording conditions). We build on a recent linear factorization method for self-supervised features, extending it to handle unseen speakers. Then, we cluster the factorized space and train a lightweight decoder to reconstruct audio from the resulting tokens. By removing the static components before clustering, our tokens are more robust to small noise perturbations. We validate this by testing token stability under various noise conditions. Next, we theoretically analyze Facto's convergence and scaling properties, quantifying how the factorization improves with the number of training speakers. Finally, we evaluate Facto on a range of downstream tasks. We show that greater token stability translates into improved text-to-speech performance and competitive results in voice conversion and spoken language modeling. Code and checkpoints at https://github.com/ubisoft/ubisoft-laforge-facto/ and demo page at https://ubisoft-laforge.github.io/speech/facto/.",
+  "abstractSha256": "41c86a5545674cdece52b571cda18e0816f75c44f889c0ffada68ff7f4c0b433",
+  "arxivId": "2611.18898",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.18898v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "神经编解码与离散单元",
+    "primaryTask": "语音编码",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-coding",
+          "label": "语音编码"
+        },
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "task",
+          "id": "task.voice-conversion",
+          "label": "语音转换"
+        },
+        {
+          "facet": "method",
+          "id": "method.neural-codec",
+          "label": "神经编解码与离散单元"
+        },
+        {
+          "facet": "method",
+          "id": "method.clustering",
+          "label": "聚类与类别匹配"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "神经编解码与离散单元",
+      "primaryMethodId": "method.neural-codec",
+      "primaryTask": "语音编码",
+      "primaryTaskId": "task.speech-coding",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Benjamin Van Niekerk"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jean-Philippe Letendre"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Nicol Visser"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hugo Seute"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Herman Kamper"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Mirco Ravanelli"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "Facto 用线性分解把自监督特征拆成共享内容与说话人变换，再用最小二乘估计器推广到未见说话人并聚类成单码本令牌，以更稳定的令牌在文本转语音上取得优势，同时保持重建与变换能力，代价是仍需传输说话人嵌入且验证集中在朗读英语上。",
+  "originalTitle": "Factorized Self-Supervised Speech Tokenization",
+  "pdfUrl": "https://arxiv.org/pdf/2611.18898v1.pdf",
+  "readerTitle": "把说什么和谁说的分开：Facto 因式分解语音分词器",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

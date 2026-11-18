@@ -1,0 +1,86 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.21088v1",
+  "abstract": "Significant privacy and copyright concerns are raised by the use of publicly available audio recordings to train audio large language models (LLMs), yet effective auditing methods remain limited. Existing membership inference attacks typically assume knowledge of complete training examples, including their associated textual supervision. In practice, however, audio recordings may be paired with privately generated transcripts, captions, or question-answer pairs that are unavailable to owners of the recordings. This motivates audio-file-level membership inference, which determines whether a recording was used for training without assuming knowledge of its training tasks and annotations. This paper provides the first systematic investigation of this challenge and introduces AudioTraceBench, a controlled benchmark comprising 1,285 audio recordings with explicit fine-tuning membership labels. Evaluations across three audio LLMs show that existing text- and video-based membership inference methods adapted to audio perform close to random guessing.   To address this challenge, AudioTrace is proposed, where audio-conditioned proxy questions are generated using the target model, and membership evidence is extracted from its responses and aggregated at the recording level. Consistent improvements over existing baselines are observed, with AUROC reaching 0.60 and increasing further under increased fine-tuning exposure or adaptation capacity. Further experiments were conducted to examine the factors influencing membership signals for audio-file-level detection. These findings establish audio-file-level membership inference as a distinct and practically important auditing challenge, with AudioTrace providing an effective initial approach to this challenge.",
+  "abstractSha256": "8853c5399852766cd6c4d3f823c39d58e41dce5cabc2d3dcb622c64e07811a86",
+  "arxivId": "2611.21088",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.21088v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "不确定性估计与校准",
+    "primaryTask": "音频隐私攻击与防御",
+    "rankBucket": "前50%",
+    "score": 6.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.privacy-attack-defense",
+          "label": "音频隐私攻击与防御"
+        },
+        {
+          "facet": "method",
+          "id": "method.uncertainty-estimation",
+          "label": "不确定性估计与校准"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "不确定性估计与校准",
+      "primaryMethodId": "method.uncertainty-estimation",
+      "primaryTask": "音频隐私攻击与防御",
+      "primaryTaskId": "task.privacy-attack-defense",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Guangzhi Sun"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xiao Zhan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shuai Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jose Such"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Phil Woodland"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文把音频文件是否参与微调当作审计目标，用目标模型自己为录音出题再按回答的不确定性打分并取最可疑的几题平均，在三套音频大模型上把区分度从随机猜测提升到 0.55 到 0.60 左右，代价是每个文件要做三十多次生成与打分且证据仍较弱。",
+  "originalTitle": "AudioTrace: File-Level Membership Detection for Audio Large Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2611.21088v1.pdf",
+  "readerTitle": "不知道训练用了什么问题，还能判断音频是否被训练过吗",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

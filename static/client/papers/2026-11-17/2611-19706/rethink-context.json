@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.19706v1",
+  "abstract": "Recent generative speech separation methods have shown promising performance, yet mixtures of overlapping speech in different languages remain underexplored. To this end, we first curate MuSSeD, an English-Korean benchmark comprising two- to four- speaker mixtures across varying overlap ratios. We further propose MOUSSE, a flow matching framework that incorporates boundary-aware training and frame-wise predictive uncertainty through a permutation-invariant Gaussian negative log-likelihood. The predicted scale is further used to adapt classifier-free guidance during sampling. MOUSSE achieves 13.18 dB SI-SDRi and 0.175 ESTOIi, outperforming discriminative and flow matching-based separation baselines, with a 1.58 dB SI-SDRi improvement over the strongest model.",
+  "abstractSha256": "138c9b5e7c57ca0ebefe66a9fb4d161d14cbb1a344aed4454095c1fe3886f849",
+  "arxivId": "2611.19706",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.19706v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "流匹配",
+    "primaryTask": "语音分离",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-separation",
+          "label": "语音分离"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "method",
+          "id": "method.uncertainty-estimation",
+          "label": "不确定性估计与校准"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "流匹配",
+      "primaryMethodId": "method.flow-matching",
+      "primaryTask": "语音分离",
+      "primaryTaskId": "task.speech-separation",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Su Yeon Shim"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yejin Jeon"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "David Ifeoluwa Adelani"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Young-Joo Suh"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对英韩混合的两人到四人重叠语音分离，MOUSSE 在流匹配分离器上加入边界感知加权训练和逐帧预测尺度并用尺度调节采样引导，在 MuSSeD 上取得更高的信号与可懂度改善，但结论只在该合成数据与相同评测条件下成立。",
+  "originalTitle": "MOUSSE: Multilingual Overlapped Speech Separation with Predictive Uncertainty Estimation",
+  "pdfUrl": "https://arxiv.org/pdf/2611.19706v1.pdf",
+  "readerTitle": "多语重叠语音分离：MOUSSE 如何用边界加权与逐帧不确定性做分离",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

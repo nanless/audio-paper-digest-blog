@@ -1,0 +1,92 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.20095v1",
+  "abstract": "Nemotron 3.5 Transcribe ranks first among open-weight models on the Hugging Face Open ASR leaderboards. Serving it efficiently takes more than fast operators: continuous batching changes the amount and mix of work at every iteration, and the best fusion granularity changes with it. We present a serving engine that, for every pass, chooses between persistent megakernels and chains of fused kernels at crossovers measured offline. On an H100 SXM GPU, throughput of our accuracy-preserving serving peaks at 4,345x real time, 1.39x the peak of tuned vLLM, and is up to 4.39x faster at low concurrency; on B200 it peaks at 6,367x, 1.64x vLLM at the highest concurrency we measured. Word error rate (WER) is 1.91 to 1.93% against 1.88 to 1.93% for vLLM. Within a 400 ms budget for p95 end-to-end completion time, it serves 8x as many concurrent requests. Choosing per pass beats either level alone: 23% higher throughput than always using megakernels at 128 concurrent requests, and 9% higher than always using fused kernels at 8. Opt-in switches, including greedy MoE layer skipping, add 13 to 16% throughput on B200 for offline jobs that can accept higher WER.",
+  "abstractSha256": "b482ea061e9751a2b306d79f74c90adc0248d62ffe320a0640db280961ec3583",
+  "arxivId": "2611.20095",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.20095v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "动态计算与早退",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.dynamic-computation",
+          "label": "动态计算与早退"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.real-time",
+          "label": "实时处理"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "动态计算与早退",
+      "primaryMethodId": "method.dynamic-computation",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "NVIDIA, Bangalore, India"
+      ],
+      "name": "Aditya Chatterjee"
+    },
+    {
+      "affiliations": [
+        "NVIDIA, Pune, India"
+      ],
+      "name": "Sanjay Singh Chauhan"
+    },
+    {
+      "affiliations": [
+        "NVIDIA, Pune, India"
+      ],
+      "name": "Mayank Jain"
+    },
+    {
+      "affiliations": [
+        "NVIDIA, Pune, India"
+      ],
+      "name": "Arushi Dhingra"
+    },
+    {
+      "affiliations": [
+        "NVIDIA, Pune, India"
+      ],
+      "name": "Sahin Chowdhury"
+    },
+    {
+      "affiliations": [
+        "NVIDIA, Pune, India"
+      ],
+      "name": "Rahul Mittal"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对 Nemotron 3.5 Transcribe 转录服务中每轮工作量都在变的论文，论文用按 pass 大小在持久大内核与融合内核链之间切换的 regime-aware 设计，在保持词错误率基本不变下把 H100 SXM 峰值做到 4345 倍实时并把 400 毫秒预算内容许的并发数提高到 8 倍。",
+  "originalTitle": "High-Throughput Serving of Nemotron 3.5 Transcribe with Regime-Aware Megakernels and Kernel Fusion",
+  "pdfUrl": "https://arxiv.org/pdf/2611.20095v1.pdf",
+  "readerTitle": "转录大模型上线时为什么越忙越要换内核",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

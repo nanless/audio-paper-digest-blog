@@ -1,0 +1,80 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.18971v1",
+  "abstract": "Child safety in AI depends on the accurate identification of minor users. Young children tend to talk rather than type when interacting with AI, so in practice this identification requires predicting age from speech. We evaluated whether three audio-capable large language models can predict a child's age from their speech across five studies using two speech corpora of children under the age of 13. Models classified children as over 13 on 2.5% to 42.5% of audio responses, and every model that answered placed some 5- to 11-year-olds over 18. While measuring these rates, we uncovered three distinct failure modes. A client library silently double-encoded speech samples, leading one model to classify children aged 5 to 10 years old as being in their thirties and forties with hallucinated explanations. A second model's endpoint was replaced by a successor that refused nearly every age-related question and never produced an age. Every model sometimes placed the same speech sample under 13 and over 18 years of age, but a third model went further, giving threshold answers that contradicted its own numeric estimates. None of these failure modes produced a warning, a status code, or a change in output format, so they would all pass standard monitoring. These results demonstrate why child-safety claims about age assurance should be evaluated at the level of the pipeline rather than the model. We describe the reporting practices that would make such failures detectable.",
+  "abstractSha256": "e90bdbc4ffe044ae36199bf70d32fa8c44d8c72c55b89dbe56c29a0bcccf175b",
+  "arxivId": "2611.18971",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.18971v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "案例研究与实践报告",
+    "primaryTask": "语音属性识别",
+    "rankBucket": "前50%",
+    "score": 6.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-attributes",
+          "label": "语音属性识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.case-study",
+          "label": "案例研究与实践报告"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "案例研究与实践报告",
+      "primaryMethodId": "method.case-study",
+      "primaryTask": "语音属性识别",
+      "primaryTaskId": "task.speech-attributes",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "University of Memphis"
+      ],
+      "name": "Christopher M. Stewart"
+    },
+    {
+      "affiliations": [
+        "San José State University"
+      ],
+      "name": "Kelsey Kraus"
+    },
+    {
+      "affiliations": [
+        "University of Memphis"
+      ],
+      "name": "J. Elliott Casal"
+    },
+    {
+      "affiliations": [
+        "University of Wisconsin–Madison"
+      ],
+      "name": "Geoffrey L. Brown"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文用两批 13 岁以下儿童语音测试三个语音大模型能否按 13 岁和 18 岁门槛正确识别未成年人，发现误报率远高于自设参考线，并揭示输入损坏、模型替换与自相矛盾三类无告警的管道失效。",
+  "originalTitle": "Three Invisible Failure Modes in Speech-Based Age Estimation for Child Safety",
+  "pdfUrl": "https://arxiv.org/pdf/2611.18971v1.pdf",
+  "readerTitle": "当语音年龄判断用于儿童保护时会发生什么",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

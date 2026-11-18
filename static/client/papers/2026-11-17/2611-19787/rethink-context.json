@@ -1,0 +1,121 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.19787v1",
+  "abstract": "Zero-shot voice cloning typically emphasizes preserving the timbre and prosodic characteristics of a reference speaker. However, in real-world use, speech should adapt its delivery to the target text rather than remain tied to a fixed speaking style. In this work, we formulate this problem as text-adaptive prosody synthesis for zero-shot voice cloning and study how post-training can endow a cloning model with this capability. We develop a three-stage framework. First, Direct Preference Optimization (DPO) provides a cold start by aligning the model with text-appropriate expressive speech. Second, Group Sequence Policy Optimization (GSPO) jointly optimizes prosodic expressiveness, acoustic quality, intelligibility, and speaker similarity. Finally, context-conditioned On-Policy Self-Distillation (OPSD) enables self-improvement by transferring expressive behavior from strong-reference to weak-reference conditions. On Qwen3-TTS, our framework improves Emotion from 18.5 to 81.2 and Paralinguistics from 38.4 to 73.9. Extensive ablations validate the role of each stage.",
+  "abstractSha256": "445d6954b52a63e4bcd49e81a1bcbcf79059b95e1e5ac4c5a5b815bb1729a519",
+  "arxivId": "2611.19787",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.19787v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "偏好优化",
+    "primaryTask": "语音克隆",
+    "rankBucket": "前50%",
+    "score": 6.7,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.voice-cloning",
+          "label": "语音克隆"
+        },
+        {
+          "facet": "task",
+          "id": "task.prosody-style-control",
+          "label": "韵律与风格控制"
+        },
+        {
+          "facet": "method",
+          "id": "method.preference-optimization",
+          "label": "偏好优化"
+        },
+        {
+          "facet": "method",
+          "id": "method.reinforcement",
+          "label": "强化学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "偏好优化",
+      "primaryMethodId": "method.preference-optimization",
+      "primaryTask": "语音克隆",
+      "primaryTaskId": "task.voice-cloning",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jingbin Hu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xinfa Zhu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hao Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Wenjie Tian"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kangxiang Xia"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hangrui Hu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kexin Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jin Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Liumeng Xue"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Lei Xie"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "本文把零样本克隆从模仿参考韵律改为按目标文本生成合适韵律，用偏好数据冷启动、多目标策略优化和弱参考自蒸馏依次推进，在 Qwen3-TTS 上把表情与副语言得分大幅提高，但说话人相似度有所下降。",
+  "originalTitle": "Rethinking Post-Training for Expressive Zero-Shot Text-to-Speech",
+  "pdfUrl": "https://arxiv.org/pdf/2611.19787v1.pdf",
+  "readerTitle": "让克隆的声音按文本要求去表达：三段式后训练怎么做",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

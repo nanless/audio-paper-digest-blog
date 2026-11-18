@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.19375v1",
+  "arxivId": "2611.19375",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.19375v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Mingze Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Satoshi Nakamura"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.19375v1",
+  "originalTitle": "CausalGloss: Multi-Evidence Action Control for a Simultaneous Mandarin Speech-to-ASL Gloss Cascade",
+  "pdfUrl": "https://arxiv.org/pdf/2611.19375v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

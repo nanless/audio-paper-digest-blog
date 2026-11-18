@@ -1,0 +1,72 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.19572v1",
+  "abstract": "A frozen diffusion generator may need to change several output properties while preserving others. We study when guidance faithfully realizes such a structured request and whether local inverse correction improves its direction. Our account links this benefit to the interaction between the request and the objective-specific remaining-sampler Jacobian: conditioning alone is insufficient. Spectral steering combines a request-specific cosine-gain predictor with damped inverse correction and fixed-time relinearization for finite edits. Scalar nulls and matched-movement controls test the predicted mechanism. Across 8,923 instances in a retrospectively identified local regime, predicted and realized gains correlate at Spearman 0.79, versus -0.11 for condition number. Experiments span images, audio, robotics, and control and planning, including complex character motion generation. On 50 paired inpainting cases, four corrections improve unobserved-pixel PSNR over Adam by 3.25 dB at equal total derivative traversals. Together, the analysis and controls connect request-dependent geometry to directional gains and establish where these gains translate into downstream performance.",
+  "abstractSha256": "0e17491485faf0f46d0e89f873403ba961315eeb7ee235987d94b0e93395d4ce",
+  "arxivId": "2611.19572",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.19572v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "约束数值优化",
+    "primaryTask": "音频编辑",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-editing",
+          "label": "音频编辑"
+        },
+        {
+          "facet": "task",
+          "id": "task.bandwidth-extension",
+          "label": "带宽扩展"
+        },
+        {
+          "facet": "method",
+          "id": "method.constrained-numerical-optimization",
+          "label": "约束数值优化"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "约束数值优化",
+      "primaryMethodId": "method.constrained-numerical-optimization",
+      "primaryTask": "音频编辑",
+      "primaryTaskId": "task.audio-editing",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "University of Applied Sciences and Arts of Southern Switzerland (SUPSI), IDSIA",
+        "Università della Svizzera italiana (USI)"
+      ],
+      "name": "Angelo Moroncelli"
+    },
+    {
+      "affiliations": [
+        "University of Applied Sciences and Arts of Southern Switzerland (SUPSI), IDSIA",
+        "Università della Svizzera italiana (USI)"
+      ],
+      "name": "Alessandro Leanza"
+    },
+    {
+      "affiliations": [
+        "University of Applied Sciences and Arts of Southern Switzerland (SUPSI), IDSIA",
+        "Politecnico di Milano"
+      ],
+      "name": "Loris Roveda"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "冻结生成器要同时改动部分下游属性并保持其余属性时，一阶梯度会按奇异增益扭曲请求方向，谱转向用阻尼局部逆补偿这种扭曲并用固定时间重线性化处理有限编辑，在 8923 例局部区间内预测增益与实现增益 Spearman 相关 0.79，50 例配对修复中 K4 在等总导数遍历下比 Adam 高 3.25 dB，但结论只在局部模型有效、目标覆盖完整且执行可传递的条件下成立。",
+  "originalTitle": "Spectral Steering: Local Inverse Geometry for Frozen Diffusion Generators",
+  "pdfUrl": "https://arxiv.org/pdf/2611.19572v1.pdf",
+  "readerTitle": "冻结扩散生成器的谱转向：为改动与保持请求校正方向",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

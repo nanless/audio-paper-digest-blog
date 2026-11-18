@@ -1,0 +1,21 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.19840v1",
+  "arxivId": "2611.19840",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.19840v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Independent Researcher",
+        "Code and data: RA-Eval v0.1, Zenodo DOI 10.5281/zenodo.24237533"
+      ],
+      "name": "Dongwu Qian"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.19840v1",
+  "originalTitle": "Grounding Language Models in Speech Does Not Fix \"AI Flavor\": Calibrated LLM Judges, Goodhart Traps, and a Preference-Tuning Fix",
+  "pdfUrl": "https://arxiv.org/pdf/2611.19840v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

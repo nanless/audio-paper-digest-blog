@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.20819v1",
+  "arxivId": "2611.20819",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.20819v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Louis Mouchon"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Alexis Lainault"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.20819v1",
+  "originalTitle": "Surprise-Gated Memory for Live Speaker Diarization",
+  "pdfUrl": "https://arxiv.org/pdf/2611.20819v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

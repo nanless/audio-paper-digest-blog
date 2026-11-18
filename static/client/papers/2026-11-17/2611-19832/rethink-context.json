@@ -1,0 +1,72 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.19832v1",
+  "abstract": "Natural speech conveys meaning not only through words, but also through the prominence on a few words. Yet most text-to-speech (TTS) systems remain prominence-unaware, existing prominence-aware TTS require external stress annotations, while unsupervised stress detectors operate in isolation, disconnected from synthesis. This creates a fundamental gap no existing system can automatically discover where stress should be placed, realize it as natural-sounding prosody, and offer user control over emphasis placement, all within a single model. To circumvent this, we propose ProTTS, a unified framework where stress detection emerges from the TTS model itself and, in turn, guides it to synthesize more natural and controllable speech. We incorporate a clustering head into the variance adaptor of FastSpeech_2 that discovers word stress directly from aggregated prosodic features. The discovered stress then drives emphasis variance predictors that modify pitch, energy, and duration for stressed words. The framework is trained end-to-end: TTS reconstruction and clustering losses jointly shape a stress-discriminative feature space without requiring stress labels at any stage. At inference, the same architecture also supports user-controllable emphasis by accepting a custom stress mask. We evaluate ProTTS on ISLE (non-native), LibriTTS, VCTK (native training), and three evaluation benchmarks (Tatoeba, TinyStress-15k, EmphAssess). Listeners prefer ProTTS over the baseline with a MOS of 3.96 vs. 3.12 and 83.5% preference rate. For stress detection, ProTTS achieves 0.839/0.861 F1 on ISLE (German/Italian L2), outperforming unsupervised (0.70) and supervised (0.82) baselines, and 0.933 F1 in zero-shot transfer to Tatoeba.",
+  "abstractSha256": "e9c38d6da6dddccaff94029f7090fa639a5e37ac3aa7cc85b2adbc82ad3c9429",
+  "arxivId": "2611.19832",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.19832v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "聚类与类别匹配",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "task",
+          "id": "task.prosody-style-control",
+          "label": "韵律与风格控制"
+        },
+        {
+          "facet": "method",
+          "id": "method.clustering",
+          "label": "聚类与类别匹配"
+        },
+        {
+          "facet": "method",
+          "id": "method.end-to-end-learning",
+          "label": "端到端学习"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "聚类与类别匹配",
+      "primaryMethodId": "method.clustering",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Speech Processing Lab, LTRC",
+        "IIIT Hyderabad",
+        "Hyderabad, India"
+      ],
+      "name": "Sai Harshitha Aluru"
+    },
+    {
+      "affiliations": [
+        "Speech Processing Lab, LTRC",
+        "IIIT Hyderabad",
+        "Hyderabad, India"
+      ],
+      "name": "Chiranjeevi Yarra"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "ProTTS 在 FastSpeech 2 的变化适配器内用无监督聚类从自身预测的音高、能量和时长中发现词重读，再用门控增量实现重读，在母语和非母语数据上取得有证据的重读检测与听感提升，但仍受纯声学线索和二分类假设限制。",
+  "originalTitle": "ProTTS: End-to-End Prominence-aware Natural and Controllable Text-to-Speech via Automatic Word Stress Discovery",
+  "pdfUrl": "https://arxiv.org/pdf/2611.19832v1.pdf",
+  "readerTitle": "ProTTS：从合成模型内部发现词重读并实现可控合成",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

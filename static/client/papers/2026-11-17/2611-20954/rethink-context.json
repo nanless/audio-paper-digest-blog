@@ -1,0 +1,92 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.20954v1",
+  "abstract": "Encoder-free audio-capable multimodal language models pro- vide a unique setting for studying how speech representations emerge inside a language-model decoder. In Gemma-4-12B, short waveform frames are projected directly into the shared embedding space, and all subsequent contextual processing is performed by the decoder layers. We use this architecture to examine where acoustic, phonetic, segmental, and paralinguis- tic information becomes linearly accessible across depth. Us- ing the TIMIT corpus, we extract all 49 representations from the frozen model, including the embedding output and the out- puts of its 48 decoder layers. We train linear probes for log- F0, log-energy, voicing, phone identity, word-onset structure, speaker identity, recorded speaker gender, and dialect-region labels. The results show a broad progression in linear acces- sibility. Acoustic properties are most strongly decodable in the early layers, paralinguistic attributes are most accessible in the early-to-middle layers, and phone identity and boundary- sensitive information reach their highest performance around layer 11. Several properties remain strongly decodable across broad near-peak regions rather than at a single uniquely optimal layer. In deeper layers, phone identity and closed-set speaker identity decline sharply, while voicing, log-F0, and gender re- main more accessible. These findings provide an initial map of how speech information develops when the decoder is the first contextual stage to process audio.",
+  "abstractSha256": "2e86564e566a4f41e167ab4918d92184ce6c5cf0d80db84b6483636f8a33fd21",
+  "arxivId": "2611.20954",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.20954v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "表示探测",
+    "primaryTask": "语音属性识别",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-attributes",
+          "label": "语音属性识别"
+        },
+        {
+          "facet": "task",
+          "id": "task.speaker-identification",
+          "label": "说话人识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.representation-probing",
+          "label": "表示探测"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.interpretability",
+          "label": "可解释性"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "表示探测",
+      "primaryMethodId": "method.representation-probing",
+      "primaryTask": "语音属性识别",
+      "primaryTaskId": "task.speech-attributes",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Laishram Rahul"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shruthi B. S."
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Parismita Gogoi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Sishir Kalita"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Deepak KT"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "S R Mahadeva Prasanna"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文冻结无编码器音频语言模型并逐层训练线性探针，在 TIMIT 上描出声学、音素、词切分与超音段属性的可线性解码位置，发现早期偏声学、中部偏音素与边界敏感信息，深层则选择性保留宽泛属性而非均匀遗忘。",
+  "originalTitle": "Layer-wise Linear Probing of an Encoder-free Audio-capable Language Model",
+  "pdfUrl": "https://arxiv.org/pdf/2611.20954v1.pdf",
+  "readerTitle": "没有语音编码器时，语言模型解码器在哪一层读出语音信息",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

@@ -1,0 +1,63 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.19030v1",
+  "arxivId": "2611.19030",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.19030v1",
+  "authors": [
+    {
+      "affiliations": [
+        "National Taiwan University"
+      ],
+      "name": "Yi-Cheng Lin"
+    },
+    {
+      "affiliations": [
+        "National Taiwan University"
+      ],
+      "name": "Jia-Kai Dong"
+    },
+    {
+      "affiliations": [
+        "National Taiwan University"
+      ],
+      "name": "Kuan-Yu Chen"
+    },
+    {
+      "affiliations": [
+        "National Taiwan University"
+      ],
+      "name": "Szu-Chi Chen"
+    },
+    {
+      "affiliations": [
+        "National Taiwan University"
+      ],
+      "name": "Jian-Jiun Ding"
+    },
+    {
+      "affiliations": [
+        "NVIDIA"
+      ],
+      "name": "Sung-Feng Huang"
+    },
+    {
+      "affiliations": [
+        "NVIDIA"
+      ],
+      "name": "Yusuke Hirota"
+    },
+    {
+      "affiliations": [
+        "National Taiwan University",
+        "Artificial Intelligence Center of Research Excellence, National Taiwan University"
+      ],
+      "name": "Hung-yi Lee"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.19030v1",
+  "originalTitle": "Beyond Controllability: Speaker Diversity in Instruction-Guided Text-to-Speech",
+  "pdfUrl": "https://arxiv.org/pdf/2611.19030v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

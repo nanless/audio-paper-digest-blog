@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.20095v1",
+  "arxivId": "2611.20095",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.20095v1",
+  "authors": [
+    {
+      "affiliations": [
+        "NVIDIA, Bangalore, India"
+      ],
+      "name": "Aditya Chatterjee"
+    },
+    {
+      "affiliations": [
+        "NVIDIA, Pune, India"
+      ],
+      "name": "Sanjay Singh Chauhan"
+    },
+    {
+      "affiliations": [
+        "NVIDIA, Pune, India"
+      ],
+      "name": "Mayank Jain"
+    },
+    {
+      "affiliations": [
+        "NVIDIA, Pune, India"
+      ],
+      "name": "Arushi Dhingra"
+    },
+    {
+      "affiliations": [
+        "NVIDIA, Pune, India"
+      ],
+      "name": "Sahin Chowdhury"
+    },
+    {
+      "affiliations": [
+        "NVIDIA, Pune, India"
+      ],
+      "name": "Rahul Mittal"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.20095v1",
+  "originalTitle": "High-Throughput Serving of Nemotron 3.5 Transcribe with Regime-Aware Megakernels and Kernel Fusion",
+  "pdfUrl": "https://arxiv.org/pdf/2611.20095v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

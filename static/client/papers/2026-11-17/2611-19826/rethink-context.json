@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.19826v1",
+  "abstract": "Open-weight model hubs now ship not only chat checkpoints but a long tail of derivatives---fine-tunes, safety guards, vision--language models (VLMs), audio wrappers, and generative heads---yet residual-stream safety audits still often intervene at a single site, usually the text decoder $T$. We ask a localization question under one shared mean / rank-1 difference-in-means (DiM) extract$=$intervene protocol, with matched-norm random and empty-rate controls: does causal chat attack lift concentrate at $T$, or do perceptual encoders, projectors, and fusion paths ($E$/$P$/$F$) supply a comparable bypass? On the mixed-input settings we stress-test---HADES adversarial images paired with harmful text prompts, and spoken AdvBench via text-to-speech (TTS) or silence---text DiM at $T$ raises attack success rate (ASR) while the same mean DiM at $E$/$P$/$F$ does not; attacks track harmful text rather than image or audio content. Margin-rank and leverage probes on a Vision leaf show that this recipe is extremal at $T$ and near chance at $P$/$E$, which pressures a weak-extractor reading of those flat cells for the DiM family we study. Catalog breadth and mapper-free base$\\to$derivative transfer when residual widths match provide supporting coverage under the same gates; generative U-Nets are a separate band under generation judges. The primary claim is this recipe-scoped $T$ vs.\\ non-text intervenability asymmetry---intervention accessibility under mean / rank-1 DiM, not a claim that refusal is absent or fully represented outside $T$ (text vs.\\ perceptual contrasts and pooling differ by site). On VLGuard Unsafe prompts ($n{=}200$; Llama-Guard), the same $T$ vs.\\ $P$/$E$ directionality holds at modest absolute ASR ($0.030{\\to}0.150$ at $T$). An intervention-oriented Class$\\times$site ledger records where this protocol still hooks as supporting coverage, not as a universal multimodal bypass.",
+  "abstractSha256": "1bf6bbd3ba075c7aab6f3ded6c5c27953333a87c9ed308a88fba2deccda6c615",
+  "arxivId": "2611.19826",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.19826v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "激活因果干预",
+    "primaryTask": "文本系统攻击与防御",
+    "rankBucket": "后50%",
+    "score": 5.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.text-system-attack-defense",
+          "label": "文本系统攻击与防御"
+        },
+        {
+          "facet": "method",
+          "id": "method.activation-intervention",
+          "label": "激活因果干预"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.llm",
+          "label": "大语言模型"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.multimodal",
+          "label": "多模态模型"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "激活因果干预",
+      "primaryMethodId": "method.activation-intervention",
+      "primaryTask": "文本系统攻击与防御",
+      "primaryTaskId": "task.text-system-attack-defense",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "NICT"
+      ],
+      "name": "Chansu Han"
+    },
+    {
+      "affiliations": [
+        "Yonsei University"
+      ],
+      "name": "Seok-Hwan Choi"
+    },
+    {
+      "affiliations": [
+        "NICT"
+      ],
+      "name": "Takeshi Takahashi"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文用同一套均值差秩一提取即干预协议比较文本解码器与感知编码器投影器融合路径，发现混合输入下的聊天攻击抬升集中在文本解码器，而感知位点同法无效，并用边际秩与位移探针说明这是该配方家族的介入能力差异而非拒绝特征不存在。",
+  "originalTitle": "Where Is Rank-1 DiM Refusal Intervenable in Multimodal LM Derivatives?",
+  "pdfUrl": "https://arxiv.org/pdf/2611.19826v1.pdf",
+  "readerTitle": "同一套秩一干预在多模态衍生模型里哪里还管用",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

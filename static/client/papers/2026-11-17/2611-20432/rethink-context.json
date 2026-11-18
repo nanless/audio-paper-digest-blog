@@ -1,0 +1,98 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.20432v1",
+  "abstract": "Acoustic-to-articulatory inversion provides a promising way to estimate vocal-tract behaviour directly from speech, but inferred articulatory variables need to be validated against independent physical measurements before they can be interpreted as faithful estimates of articulation. We investigate this using paired real-time MRI (rtMRI) and speech. A WavLM-based inversion model is trained to predict eight vocal tract variables (TVs) extracted from rtMRI, achieving a mean correlation of 0.643 on held-out speakers. Prediction accuracy is substantially higher for constriction degree than for constriction location, and the inferred trajectories systematically underestimate the dynamic range of rtMRI-derived articulation. We then use articulatory-to-acoustic synthesis as a functional probe of these errors, comparing speech generated from inversion-derived and rtMRI-derived TVs while holding the source features fixed. The discrepancy is small for vowels, approximants, stops, and nasals, but increases markedly for fricatives and affricates, where speech production depends on maintaining a narrow critical constriction and small geometric errors can strongly affect the acoustics. These results show that current acoustic-to-articulatory models recover broad vocal-tract behaviour well, but further work is required before inferred TVs can be regarded as faithful measurements of fine articulatory geometry.",
+  "abstractSha256": "8c6d6180d1f84469528e4166318fc7a22810624e30ac1a73c40183c9108213ae",
+  "arxivId": "2611.20432",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.20432v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "评测协议",
+    "primaryTask": "声学到构音反演",
+    "rankBucket": "前50%",
+    "score": 6.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.acoustic-articulatory-inversion",
+          "label": "声学到构音反演"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-synthesis",
+          "label": "语音合成"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.phonation",
+          "label": "发声与构音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "评测协议",
+      "primaryMethodId": "method.evaluation-protocol",
+      "primaryTask": "声学到构音反演",
+      "primaryTaskId": "task.acoustic-articulatory-inversion",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Tharinda Piyadasa"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Michael Proctor"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Amelia Gully"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Tuende Szalay"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Emily Kiff"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kirrie Ballard"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Craig Jin"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文用配对实时磁共振检验从声音反推的八个声道变量有多接近真实声道形状，并用固定声源的合成对照发现宽大致动作可恢复但擦音和塞擦音的精细收缩几何误差会被放大，代价是位置变量压缩更重且小样本音素结论受限。",
+  "originalTitle": "Validating Acoustic-to-Articulatory Inversion with Real-Time MRI: From Vocal-Tract Fidelity to Phonetic Consequences",
+  "pdfUrl": "https://arxiv.org/pdf/2611.20432v1.pdf",
+  "readerTitle": "从声音猜发音动作靠谱吗：用实时磁共振检验声学到发音反演",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

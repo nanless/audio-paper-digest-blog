@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.19160v1",
+  "abstract": "Speaker diarization can drop people who speak only a little from its output entirely, and such losses barely affect the diarization error rate (DER), which measures the fraction of misattributed time. We examine Nemotron-3, an end-to-end diarization model with eight output slots, on 990 recordings from four corpora, and count lost speakers by how they were lost (overlap, merge, miss). Nine in ten lost speakers are low-activity speakers with less than 10 s of total speech, and the cause splits by the number of speakers in the recording. In recordings with nine or more speakers, merges and misses caused by running out of slots dominate; re-running the model on short windows only for recordings that fill all eight slots, without any training, reduces these losses from 228 to 101 speakers, while extra output speakers grow from 5 to 50. In recordings with up to eight speakers, 60% of the losses are speakers hidden under someone else's speech, and none of the training-free methods we tried reduced them.",
+  "abstractSha256": "0b8bc9ef34d8b1ec31ec7fcaa320b990f305bad5410acfc28797026a3cd90f87",
+  "arxivId": "2611.19160",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.19160v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "聚类与类别匹配",
+    "primaryTask": "说话人分离标注",
+    "rankBucket": "前50%",
+    "score": 5.9,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.diarization",
+          "label": "说话人分离标注"
+        },
+        {
+          "facet": "method",
+          "id": "method.clustering",
+          "label": "聚类与类别匹配"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "task",
+          "id": "task.overlap-detection",
+          "label": "重叠语音检测"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "聚类与类别匹配",
+      "primaryMethodId": "method.clustering",
+      "primaryTask": "说话人分离标注",
+      "primaryTaskId": "task.diarization",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Fumiaki Yamaguchi"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文追问说话不足 10 s 的人为何整个人从输出消失，按重叠遮挡与槽位不足拆分丢失原因，并证明只对占满八个输出槽位的录音做 120 s 短窗口重跑加全局分配，能把 9 人以上录音的丢失从 228 降到 101，代价是额外说话人从 5 增至 50，而 8 人以下录音中六成由重叠造成的丢失用免训练方法都无法恢复。",
+  "originalTitle": "Why Do Low-Activity Speakers Disappear in Speaker Diarization? Decomposing Lost Speakers and What Training-Free Fixes Can Recover",
+  "pdfUrl": "https://arxiv.org/pdf/2611.19160v1.pdf",
+  "readerTitle": "说话很少的人为何在说话人日志里整体消失",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

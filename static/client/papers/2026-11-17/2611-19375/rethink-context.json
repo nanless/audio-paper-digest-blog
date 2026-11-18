@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.19375v1",
+  "abstract": "Simultaneous Mandarin speech-to-American Sign Language (ASL) gloss translation requires deciding when an evolving utterance supports committing each gloss. Fixed Wait-k cannot adapt to source-gloss reordering, while training only on reference histories causes exposure bias. We present CausalGloss, an English-prefix-to-ASL-gloss action policy for a Mandarin-speech cascade. It combines lexical and semantic evidence, bounded delay, negation constraints, burst WRITE actions, and incomplete-history recovery. On a frozen 500-example How2Sign-derived benchmark with weak LLM-generated references, CausalGloss improves the fixed Wait-k frontier and nearly matches a three-seed TransLLaMA-style learned adaptive baseline at k = 5 in Token F1 (0.7047 versus 0.7067), with 54.4% lower LAAL. Against CLERC Epee human-gloss references, it achieves 0.649 Token F1 and Pareto-dominates three-seed TransLLaMA-style k = 5 and fixed k = 5, 7, reducing LAAL by 58.2-69.9%. Ablations separate timing from retention. A synthetic Mandarin-speech cascade preserves a smaller computation-aware latency gain, although outputs remain over-long. We also construct ChineseSpeech-ASLGloss-v1, a 19,924-utterance, 36.54-h controlled evaluation corpus.",
+  "abstractSha256": "8f5f5c8298b0d5daafaa797f0ccdd9523de5e2c38d0a83dfc15b2e2b7a2e9956",
+  "arxivId": "2611.19375",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.19375v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "SFT",
+    "primaryTask": "语音翻译",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-translation",
+          "label": "语音翻译"
+        },
+        {
+          "facet": "method",
+          "id": "method.sft",
+          "label": "SFT"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "SFT",
+      "primaryMethodId": "method.sft",
+      "primaryTask": "语音翻译",
+      "primaryTaskId": "task.speech-translation",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Mingze Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Satoshi Nakamura"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文把普通话语音先增量译成英语、再由英语前缀策略决定何时写出手语 gloss，CausalGloss 用词法、语义、延迟和否定多路证据控制提交时机，在锁定 500 例上接近学习型自适应基线的质量并明显降低延迟，但结论只在弱参考、冻结评测和合成语音条件下成立且输出偏长问题未解决。",
+  "originalTitle": "CausalGloss: Multi-Evidence Action Control for a Simultaneous Mandarin Speech-to-ASL Gloss Cascade",
+  "pdfUrl": "https://arxiv.org/pdf/2611.19375v1.pdf",
+  "readerTitle": "普通话语音到美国手语 gloss 的同步级联：何时可以提交下一个 gloss",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

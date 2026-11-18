@@ -1,0 +1,98 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.19714v1",
+  "abstract": "Dysarthria reduces speech intelligibility, requiring self-directed rehabilitation based on fine-grained feedback to capture gradual articulatory changes. For Japanese speakers, such feedback is naturally provided in mora units due to its distinct moraic timing and consonant-vowel structure. While recent visualization methods have explored distance-based feedback, most are limited to vowels. Extending them to consonants is challenging, as generative embeddings often smooth transient spectral structures. We propose a visualization system for Japanese consonant morae that maps articulatory deviations onto a two-dimensional space defined by temporal and spectral distances from healthy reference speech. Experiments show consistent geometric separation of consonant categories, with Silhouette Coefficients exceeding 0.5 and origin-based ROC-AUC scores above 0.86. Furthermore, evaluations using real dysarthric speech achieved a high ROC-AUC of 0.897 in screening for unclear pronunciations. Perturbation tests confirm orthogonal temporal and spectral shifts, yielding a physically interpretable mapping for rehabilitation.",
+  "abstractSha256": "156a3cc34cfb82ca65957ee5aa95e43bafa9990456cf8ee72f202dffa67dff47",
+  "arxivId": "2611.19714",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.19714v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "病理语音评估",
+    "rankBucket": "前50%",
+    "score": 5.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.pathological-speech",
+          "label": "病理语音评估"
+        },
+        {
+          "facet": "task",
+          "id": "task.pronunciation-assessment",
+          "label": "发音评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.interpretability",
+          "label": "可解释性"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "病理语音评估",
+      "primaryTaskId": "task.pathological-speech",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yuma Enomoto"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Misa Yamaguchi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hiroki Nishikawa"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ittetsu Taniguchi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kazuhide Matsunaga"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Narikazu Uzawa"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Takao Onoye"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对日语辅音拍康复反馈需要连续且可解释偏差方向的问题，该研究用健康参考的时长比与 WavLM 加动态时间规整的频谱距离构成二维坐标，在健康语音分离、受控扰动正交性与 5 例舌部术后构音障碍语音的清晰度筛查中验证其表现与适用边界。",
+  "originalTitle": "An Interpretable Acoustic Coordinate System for Japanese Consonant Morae in Dysarthric Speech",
+  "pdfUrl": "https://arxiv.org/pdf/2611.19714v1.pdf",
+  "readerTitle": "把辅音拍的偏差画在时间与频谱坐标上",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

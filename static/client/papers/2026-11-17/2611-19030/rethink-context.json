@@ -1,0 +1,105 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.19030v1",
+  "abstract": "Instruction-guided text-to-speech (ITTS) lets users specify voice properties in natural language. Applications from conversational AI character voices to synthetic training data for downstream speech models depend on the system producing many distinct voices when the same broad category is requested repeatedly. No prior work audits whether ITTS outputs are in fact diverse, either compared to real speech or across attribute values. We evaluate seven open-source ITTS systems using speaker embeddings whose representational capacity we independently validate. Every system produces speaker distributions markedly narrower than real speech. Furthermore, female prompts produce less diverse voice pools than male prompts across most systems. In contrast, accent and emotion prompts barely alter speaker diversity in most systems, but reveal a strong controllability bias toward North American English and neutral speech. These results show that diversity and controllability capture complementary weaknesses, neither of which alone is sufficient to evaluate ITTS. Our code and data are available at https://github.com/dlion168/ITTS-Speaker-Diversity.",
+  "abstractSha256": "099d292023339759112f9fabe28a260965e00c1e4e1832e5dd754c1b31daf132",
+  "arxivId": "2611.19030",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.19030v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前50%",
+    "score": 6.7,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.fairness",
+          "label": "公平性"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.evaluation",
+          "label": "模型评估"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "National Taiwan University"
+      ],
+      "name": "Yi-Cheng Lin"
+    },
+    {
+      "affiliations": [
+        "National Taiwan University"
+      ],
+      "name": "Jia-Kai Dong"
+    },
+    {
+      "affiliations": [
+        "National Taiwan University"
+      ],
+      "name": "Kuan-Yu Chen"
+    },
+    {
+      "affiliations": [
+        "National Taiwan University"
+      ],
+      "name": "Szu-Chi Chen"
+    },
+    {
+      "affiliations": [
+        "National Taiwan University"
+      ],
+      "name": "Jian-Jiun Ding"
+    },
+    {
+      "affiliations": [
+        "NVIDIA"
+      ],
+      "name": "Sung-Feng Huang"
+    },
+    {
+      "affiliations": [
+        "NVIDIA"
+      ],
+      "name": "Yusuke Hirota"
+    },
+    {
+      "affiliations": [
+        "National Taiwan University",
+        "Artificial Intelligence Center of Research Excellence, National Taiwan University"
+      ],
+      "name": "Hung-yi Lee"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文把“同一宽泛描述重复请求时能否得到不同说话人” 作为待测问题，用先校验再测量的说话人嵌入加两种集合内指标，对比真人录音和七个开源指令语音合成系统，并用属性分类器同时看可控性，发现所有系统都比真人窄且女性、儿童等条件下偏差互补，调大随机性也补不上差距。",
+  "originalTitle": "Beyond Controllability: Speaker Diversity in Instruction-Guided Text-to-Speech",
+  "pdfUrl": "https://arxiv.org/pdf/2611.19030v1.pdf",
+  "readerTitle": "同一句“女声” 能变出多少种声音：指令语音合成的说话人多样性审计",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

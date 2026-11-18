@@ -1,0 +1,77 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.20630v1",
+  "abstract": "Speech foundation models pretrained via self-supervised learning provide powerful representations for deepfake detection, yet we find that standard fine-tuning exploits only the deepest transformer layers-leaving the majority of the network's capacity discriminatively inert. Layer-wise probing of XLS-R-128 reveals that the top two-thirds of the transformer stack contribute negligibly to anti-spoofing performance after standard fine-tuning, a phenomenon we term shallow-layer dormancy. We connect this observation to the representational redundancy of pretrained transformers: adjacent layers encode highly similar information, and fine-tuning without explicit intermediate supervision reinforces rather than breaks this redundancy. To address this, we propose Progressive Layer-wise Supervision (PLS), a training framework that attaches a shared linear classifier to every transformer layer and schedules layer-wise loss contributions via an exponentially annealed power weighting. Early training concentrates supervision on deep layers to preserve the pretrained representational hierarchy; later training progressively redistributes supervision to shallower layers, converting dormant earlier representations into discriminative ones. Competitive detection (<9.25% average EER) is achievable on XLS-R-128 at layer 7, which reduces the parameter count from 315M to 101M and exemplifies an early exit mechanism. Experiments across twelve benchmarks spanning in-domain, and out-of-domain deepfake scenarios show PLS achieves a new state-of-the-art with 239M parameters, outperforming prior methods with larger and more complex architectures.",
+  "abstractSha256": "a5385268d897375b40029d2f4565da3a3be23c18d0b3a6ed66dfdb29e39ddcde",
+  "arxivId": "2611.20630",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.20630v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "课程学习",
+    "primaryTask": "音频深度伪造检测",
+    "rankBucket": "前50%",
+    "score": 6.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-deepfake",
+          "label": "音频深度伪造检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.curriculum",
+          "label": "课程学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.dynamic-computation",
+          "label": "动态计算与早退"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.speech",
+          "label": "语音大模型"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "课程学习",
+      "primaryMethodId": "method.curriculum",
+      "primaryTask": "音频深度伪造检测",
+      "primaryTaskId": "task.audio-deepfake",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Université de Rennes, CNRS, IRISA",
+        "Lannion, France"
+      ],
+      "name": "Hoan My Tran"
+    },
+    {
+      "affiliations": [
+        "National Institute of Informatics",
+        "Tokyo, Japan"
+      ],
+      "name": "Xin Wang"
+    },
+    {
+      "affiliations": [
+        "Xi’an Jiaotong-Liverpool University",
+        "Taicang, China"
+      ],
+      "name": "Xuechen Liu"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对标准微调只用深层做伪造检测而浪费浅层容量的问题，用共享分类器加由深到浅退火的层权重激活全栈表达，在保持浅层提前退出的同时把域外平均等错误率做到更低，但结论只在大型多语模型和给定评测套件下成立。",
+  "originalTitle": "Progressive Layer-wise Supervision: Deep-to-Shallow Supervision Annealing for Efficient and Robust Speech Deepfake Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2611.20630v1.pdf",
+  "readerTitle": "让语音基础模型的浅层也学会辨别真伪：由深到浅的逐层监督退火",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

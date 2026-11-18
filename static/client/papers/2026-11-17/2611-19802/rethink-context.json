@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.19802v1",
+  "abstract": "Machine interpreting (MI), or AI-enabled speech translation, is increasingly visible in professional and public-facing communication, yet its performance relative to human simultaneous interpreters remains insufficiently understood. Existing studies are often limited by a single discourse mode and evaluation frameworks that are not well aligned with interpreting as a discourse-level communicative activity. The present study compares five commercial MI systems with 26 human interpreters (14 professionals, 12 advanced students) on English-to-Chinese simultaneous interpreting across planned and unplanned discourse, focusing on meaning and target-language quality. In these materials, MI performance differed sharply between the two discourse modes. In the planned formal speech, the strongest system became highly competitive on meaning, entering the upper human range, and a second system also performed strongly. In the extemporaneous interview, however, no MI system approached the stronger human tiers. Code-level analysis further shows that similar overall scores often masked different error profiles. Human interpreters were more likely to preserve the broader communicative trajectory through selective omission, restructuring, and contextual inference, whereas even the best MI systems were more vulnerable to semantic distortion, discourse-tracking failures, and context-insensitive interpretation. On target-language quality, the human advantage proved more stable than on meaning. Unintelligible or nonsensical output and disfluency carryover emerge as particularly salient weaknesses in machine performance, especially in spontaneous discourse. Overall, the findings are consistent with a discourse-sensitive account of where MI appears competitive, where it remains limited, and why these distinctions matter for interpreting practice, interpreter education, and future MI development.",
+  "abstractSha256": "ec00a5add0d33e642e4f36c6b8655774337fe89fbf3d622189e0333a2c108661",
+  "arxivId": "2611.19802",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.19802v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "人类参与评测",
+    "primaryTask": "语音翻译",
+    "rankBucket": "前50%",
+    "score": 6.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-translation",
+          "label": "语音翻译"
+        },
+        {
+          "facet": "method",
+          "id": "method.human-evaluation",
+          "label": "人类参与评测"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.cross-lingual",
+          "label": "跨语言"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.pragmatics-discourse",
+          "label": "语用与话语"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "人类参与评测",
+      "primaryMethodId": "method.human-evaluation",
+      "primaryTask": "语音翻译",
+      "primaryTaskId": "task.speech-translation",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Yuanyuan Ding"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文比较 5 套商用机器同传与 26 名人类译员在已备演讲和即兴访谈中的英中同传表现，发现最强机器只在计划话语的意义层面进入人类上游区间，在非计划话语和译语质量上人类优势更稳，且相同总分背后是省略与扭曲的不同错误构成。",
+  "originalTitle": "Machine interpreting competitiveness: a discourse-sensitive comparison of meaning and target-language quality in English-Chinese simultaneous interpreting",
+  "pdfUrl": "https://arxiv.org/pdf/2611.19802v1.pdf",
+  "readerTitle": "机器同传在什么话语下接近人类：英中同声传译的意义与译语质量比较",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

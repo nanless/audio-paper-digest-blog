@@ -1,0 +1,30 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.19832v1",
+  "arxivId": "2611.19832",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.19832v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Speech Processing Lab, LTRC",
+        "IIIT Hyderabad",
+        "Hyderabad, India"
+      ],
+      "name": "Sai Harshitha Aluru"
+    },
+    {
+      "affiliations": [
+        "Speech Processing Lab, LTRC",
+        "IIIT Hyderabad",
+        "Hyderabad, India"
+      ],
+      "name": "Chiranjeevi Yarra"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.19832v1",
+  "originalTitle": "ProTTS: End-to-End Prominence-aware Natural and Controllable Text-to-Speech via Automatic Word Stress Discovery",
+  "pdfUrl": "https://arxiv.org/pdf/2611.19832v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

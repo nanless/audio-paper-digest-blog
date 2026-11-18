@@ -1,0 +1,86 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.19389v1",
+  "abstract": "Open-vocabulary keyword spotting (KWS) allows users to enroll arbitrary keywords at inference time. However, character and phoneme-based text encoders rely on fixed symbol vocabularies learned during training, limiting their ability to handle unseen or visually similar symbols such as homoglyphs, l33tspeak substitutions, and accented characters. We propose PIXEL-KWS, an open-vocabulary KWS framework that represents characters through rendered glyphs rather than learned embedding lookups. We render each character as a grayscale image and encode it with a lightweight CNN, enabling the text encoder to generalize from visual form rather than a fixed vocabulary. On LibriPhrase, PIXEL-KWS and its matched character-based counterpart achieve 9.57% and 9.55% EER on LibriPhrase-hard, 0.43% and 0.41% EER on LibriPhrase-easy, outperforming all published baselines without pre-training or synthetic data. PIXEL-KWS provides substantially greater robustness to both homoglyph and l33tspeak symbol-level perturbations. These results highlight glyph-based representations as a simple and effective approach for robust open-vocabulary KWS in practical settings.",
+  "abstractSha256": "212d936a5fb4230ee5040af3aaa1c992de9c567a54ad9ce5336d9bb67dc44aab",
+  "arxivId": "2611.19389",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.19389v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "对比学习",
+    "primaryTask": "关键词检测",
+    "rankBucket": "前50%",
+    "score": 6.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.keyword-detection",
+          "label": "关键词检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.contrastive",
+          "label": "对比学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "对比学习",
+      "primaryMethodId": "method.contrastive",
+      "primaryTask": "关键词检测",
+      "primaryTaskId": "task.keyword-detection",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Adarsh Arigala"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ramesh Gundluru"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Srinivasan Umesh"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ludovick Lepauloux"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hakim Hacid"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对用户注册词中可能出现同形字和数字替换导致固定字符表失效的问题，PIXEL-KWS 把每个字符渲染成 16×16 灰度字形图像再编码，在 LibriPhrase-hard 上以 9.57% 等错误率与匹配的字符基线相当，并在全量同形字腐蚀下只退化 11.23 个百分点，代价是增加一个轻量卷积前端。",
+  "originalTitle": "Pixel-KWS: Rendered-Glyph Representations for Orthographically Robust Open-Vocabulary Keyword Spotting",
+  "pdfUrl": "https://arxiv.org/pdf/2611.19389v1.pdf",
+  "readerTitle": "把字符画成图像做关键词检测：PIXEL-KWS 如何应对拼写花招",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

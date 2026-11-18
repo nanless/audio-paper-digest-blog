@@ -1,0 +1,63 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.19236v1",
+  "arxivId": "2611.19236",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.19236v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Foundation Model Research Center, Institute of AutomationChinese Academy of Sciences, Beijing, China",
+        "School of Artificial Intelligence, University of Chinese Academy of SciencesBeijing, China"
+      ],
+      "name": "Linge Wang"
+    },
+    {
+      "affiliations": [
+        "Foundation Model Research Center, Institute of AutomationChinese Academy of Sciences, Beijing, China",
+        "School of Artificial Intelligence, University of Chinese Academy of SciencesBeijing, China"
+      ],
+      "name": "Yingying Chen"
+    },
+    {
+      "affiliations": [
+        "Foundation Model Research Center, Institute of AutomationChinese Academy of Sciences, Beijing, China",
+        "School of Artificial Intelligence, University of Chinese Academy of SciencesBeijing, China"
+      ],
+      "name": "Bingke Zhu"
+    },
+    {
+      "affiliations": [
+        "Foundation Model Research Center, Institute of AutomationChinese Academy of Sciences, Beijing, China",
+        "School of Artificial Intelligence, University of Chinese Academy of SciencesBeijing, China"
+      ],
+      "name": "Lu Zhou"
+    },
+    {
+      "affiliations": [
+        "Foundation Model Research Center, Institute of AutomationChinese Academy of Sciences, Beijing, China",
+        "School of Artificial Intelligence, University of Chinese Academy of SciencesBeijing, China"
+      ],
+      "name": "Haixin Wang"
+    },
+    {
+      "affiliations": [
+        "Huawei Technologies Ltd., Beijing, China"
+      ],
+      "name": "Zhipiao Liu"
+    },
+    {
+      "affiliations": [
+        "Foundation Model Research Center, Institute of AutomationChinese Academy of Sciences, Beijing, China",
+        "School of Artificial Intelligence, University of Chinese Academy of SciencesBeijing, China",
+        "Objecteye Inc., Beijing, China"
+      ],
+      "name": "Jinqiao Wang"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.19236v1",
+  "originalTitle": "Attribution-Guided Shared-Private Decoupling for Noise-Reduced Audio-Visual Representation Learning",
+  "pdfUrl": "https://arxiv.org/pdf/2611.19236v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

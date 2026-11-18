@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.19844v1",
+  "abstract": "Target-speaker automatic speech recognition (TS-ASR) is essential for reliable human-machine interaction in complex acoustic environments, where overlapping speech and background noise make it difficult to identify and recognize the intended speaker. Existing approaches typically rely on speaker enrollment or cascaded processing pipelines, limiting their flexibility in practical applications. To address these limitations, we propose an enrollment-free Speech-LLM framework that leverages wake-word text as a lexical cue to guide target-speaker recognition. Specifically, a text-cue encoder extracts lexical representations from the wake word, which are integrated into a pretrained speech encoder through cross-attention to establish an implicit association between the wake-word occurrence and the target speaker. This enables the model to selectively recognize subsequent commands from the target speaker without requiring enrollment speech or explicit wake-word boundaries. Furthermore, a large language model (LLM) unifies command transcription and non-target speaker rejection within a single autoregressive framework. To improve robustness against complex acoustic interference, we develop a large-scale speech synthesis and simulation pipeline with a progressive four-stage training strategy. Experimental results demonstrate that the proposed framework achieves a command character error rate of 16.15% and a non-target speaker rejection rate of 91.56%, yielding a unified score of 87.70%, compared with 71.70% for the strongest enrollment-free baseline. These results demonstrate the effectiveness of wake-word-guided speaker selection and highlight the potential of integrating target-speaker recognition and rejection within a unified Speech-LLM framework for robust human-machine interaction.",
+  "abstractSha256": "1c94ec3ec04c3c8e0fae34965571b7bb0b37e29f3430886afbb2eb43c0d11bc7",
+  "arxivId": "2611.19844",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.19844v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "目标说话人提取",
+    "rankBucket": "前50%",
+    "score": 6.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.target-speaker",
+          "label": "目标说话人提取"
+        },
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "application",
+          "id": "application.smart-speaker",
+          "label": "智能音箱"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "目标说话人提取",
+      "primaryTaskId": "task.target-speaker",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yuxiang Mei"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Dongxing Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yanhua Long"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对多人混叠与家电噪声下需要判断命令是否来自唤醒词说话人的问题，论文用唤醒词文本条件化语音编码器加 Qwen2.5 统一完成转写与拒识，并以大规模合成加四阶段训练学习该能力，在 midea-test 上得到主要证据，代价是需要大量合成数据与多阶段优化。",
+  "originalTitle": "A Speech-LLM Framework for Enrollment-Free Wake-Word-Guided Target-Speaker Recognition in Complex Noisy Scenarios for Seamless Human-Machine Interaction",
+  "pdfUrl": "https://arxiv.org/pdf/2611.19844v1.pdf",
+  "readerTitle": "不用注册语音，用唤醒词文字找到目标说话人并识别指令",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

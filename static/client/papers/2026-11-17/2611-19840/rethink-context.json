@@ -1,0 +1,63 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.19840v1",
+  "abstract": "Chinese outputs of large language models carry a perceptible \"AI flavor\": formulaic sentence frames, stacked written-register connectives, repetition loops, and layout leakage. A popular hypothesis blames text-only training for the missing inner-speech layer of human writing; injecting speech or prosody signals should therefore reduce it. We test it with controlled interventions on a 0.6B model; all three fail: (i) phoneme-interleaved continued pretraining yields no spokenness gain under text-matched controls while raising repetition (+0.13 [+0.03, +0.23]); (ii) prosody-plan conditional generation reaches an adherence of only 0.257 against a pre-registered 0.50 gate; (iii) a rule-based reward built on TTS prosody-feature distance is imperceptible in double-blind evaluation by both humans (8/16) and a calibrated LLM judge (9/16).   A root cause is evaluation: single-rater blind evaluation at n~20 only detects extreme (>=85%) preferences. We therefore build a calibrated LLM-judge protocol: the judge passes catch trials on known-answer pairs (16/16; single-text 22/24, same-topic pairs 24/24, versus 0.75 for the human rater), then annotates with two independent judges under A/B swapping, counting disagreement as a tie. Using the judge's agree labels directly as DPO pairs (no reward model), we obtain the first positive result: held-out blind win rate 0.833 [0.699, 0.972], repetition 0.114 to 0.000, unchanged MMLU. We further identify a Goodhart channel: the judge's length preference transduces into output-length collapse via pairwise DPO (median 75 chars vs a 300-char prompt); an SFT-anchor repairs it (w is a style knob: w=0.1 preserves gains, w=0.3 does not). Scaling preference data from 89 to 240 pairs yields no additional judge-visible gain. We release RA-Eval v0.1: a three-layer Chinese AI-flavor evaluation framework with 382 judge-annotated preference pairs.",
+  "abstractSha256": "132172a034c75642caf80af32caf9447d0b81c78bb800cb0f1cd1ff99fac96a1",
+  "arxivId": "2611.19840",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.19840v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "偏好优化",
+    "primaryTask": "朗读友好文本生成",
+    "rankBucket": "前50%",
+    "score": 6.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts-friendly-text-generation",
+          "label": "朗读友好文本生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.preference-optimization",
+          "label": "偏好优化"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "偏好优化",
+      "primaryMethodId": "method.preference-optimization",
+      "primaryTask": "朗读友好文本生成",
+      "primaryTaskId": "task.tts-friendly-text-generation",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Independent Researcher",
+        "Code and data: RA-Eval v0.1, Zenodo DOI 10.5281/zenodo.24237533"
+      ],
+      "name": "Dongwu Qian"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文检验给 0.6B 模型加语音或韵律信号能否减轻中文 AI 味，三条语音路线在受控对照下均未通过感知门限，转而把校准后评判器的一致标注直接做偏好训练得到盲评胜率提升，但评判器的长度偏好会传导为长度坍缩，需用已选答案锚修复。",
+  "originalTitle": "Grounding Language Models in Speech Does Not Fix \"AI Flavor\": Calibrated LLM Judges, Goodhart Traps, and a Preference-Tuning Fix",
+  "pdfUrl": "https://arxiv.org/pdf/2611.19840v1.pdf",
+  "readerTitle": "语音信号能去掉中文 AI 味吗：三组否定实验与校准评判器偏好训练",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

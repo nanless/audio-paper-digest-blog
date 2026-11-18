@@ -1,0 +1,105 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.21001v1",
+  "abstract": "Autonomous voice agents now conduct routine clinical follow-up calls, so some automated triage is unavoidable. A patient becoming frustrated is one thing that triage should catch. These systems typically read only the transcript the speech-to-text stage produces, not the voice, and whether that is enough is largely untested on real clinical speech. We study per-turn frustration detection on real patient calls from a deployed clinical voice agent: 150 turns from six calls labelled by three annotators, with a length-matched acted corpus as a control, and 714 turns from 30 calls. Patient turns are overwhelmingly short: across the deployed calls, roughly 59% are one or two words, against 13% in the full acted corpus, and a corpus accuracy gap remains even after the acted set is length-matched. On one-word turns, transcript-only detection does not exclude chance. Across five audio-capable language models, the transcript flags 3 or 4 of the 39 frustrated one-word turns in the 30 calls, and a classifier given only the word count reaches 57.3%. Whether audio helps depends on the model and on the instruction. Asked to attend to delivery, two Gemini 2.5 models gain 3.0 pp over the transcript across 30 calls (-1.0 to 7.5 pp). Of the turns they confidently clear, 6.9% were in fact frustrated for audio against 13.0% for the transcript, a difference of 6.1 pp (2.2 to 10.4 pp). Across the 30 calls, given one prompt identical for both inputs, no model's audio-text interval excludes zero. Under the input-specific prompts, a newer Gemini model and two smaller open models do worse with audio than with the transcript (-3.5, -8.6 and -10.6 pp). A WavLM probe trained on the clinical calls matches the best prompted model overall (71.6%) but misses every frustrated one-word turn in the 24 added calls. When a patient's turn is short, the transcript alone is not enough to rule out frustration.",
+  "abstractSha256": "dd8b818ec14b5dade107392b493005fbc044c7911c0deb21e2671fb78f7059e2",
+  "arxivId": "2611.21001",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.21001v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "评测协议",
+    "primaryTask": "语音情感识别",
+    "rankBucket": "前50%",
+    "score": 6.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.emotion-recognition",
+          "label": "语音情感识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "method",
+          "id": "method.representation-probing",
+          "label": "表示探测"
+        },
+        {
+          "facet": "application",
+          "id": "application.medical",
+          "label": "医疗音频"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "评测协议",
+      "primaryMethodId": "method.evaluation-protocol",
+      "primaryTask": "语音情感识别",
+      "primaryTaskId": "task.emotion-recognition",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Ufonia Limited",
+        "London, UK"
+      ],
+      "name": "Annika Michael"
+    },
+    {
+      "affiliations": [
+        "Ufonia Limited",
+        "London, UK"
+      ],
+      "name": "Zachary Ellis"
+    },
+    {
+      "affiliations": [
+        "Ufonia Limited",
+        "London, UK"
+      ],
+      "name": "Yuxiang Zhou"
+    },
+    {
+      "affiliations": [
+        "King’s College London",
+        "London, UK"
+      ],
+      "name": "Samuel Thio"
+    },
+    {
+      "affiliations": [
+        "Ufonia Limited",
+        "London, UK"
+      ],
+      "name": "Yajie Vera He"
+    },
+    {
+      "affiliations": [
+        "Newcastle University",
+        "Newcastle upon Tyne, UK"
+      ],
+      "name": "Spencer Hazel"
+    },
+    {
+      "affiliations": [
+        "Ufonia Limited",
+        "London, UK"
+      ],
+      "name": "Jared Joselowitz"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "在已部署眼科随访语音电话的逐轮挫折感判断中，短轮次占主导导致只看转写文本无法排除偶然，而能否用上声音取决于模型和是否明确要求听语气，训练的声学探针总体持平但同样修不好短轮次。",
+  "originalTitle": "Does the Voice Matter? Evaluating Frustration Detection on Deployed Clinical Voice-Agent Calls",
+  "pdfUrl": "https://arxiv.org/pdf/2611.21001v1.pdf",
+  "readerTitle": "声音重要吗？已部署临床语音电话中的挫折感检测",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.20822v1",
+  "arxivId": "2611.20822",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.20822v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Juliana Francis"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Robin Netzorg"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Joakim Gustafson"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Éva Székely"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.20822v1",
+  "originalTitle": "No-Shot Text-to-Speech: Limitations of Zero-Shot TTS and its Evaluation Methods in Representing Queer and Transgender Voices",
+  "pdfUrl": "https://arxiv.org/pdf/2611.20822v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

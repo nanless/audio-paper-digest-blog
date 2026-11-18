@@ -1,0 +1,155 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.20050v1",
+  "abstract": "Background: Before laryngoscopy, clinicians assess the likely cause of hoarseness and whether to suspect a precancerous or malignant lesion. Whether voice-based artificial intelligence (AI) supports pre-laryngoscopic categorization is unknown.   Methods: We developed an auditory large language model that generates a patient-level assessment card (provisional category, voice-quality ratings, and rationale) and a prespecified malignancy alert from voice recordings, patient information, and acoustic measures obtained before laryngoscopy at one center. We evaluated both in a held-out test set and a later cohort. In a sequential reader study, 32 otolaryngology clinicians categorized held-out cases without AI and, 1 to 2 weeks later, reviewed their initial categories with the card (without the alert).   Results: Across 800 paired assessments, reader accuracy was 49.8% before and 56.8% after review (difference, 7.0 percentage points; 95% CI, 1.7 to 13.5; P < 0.001); 99 categories changed from incorrect to correct and 43 from correct to incorrect (ratio, 2.30; 95% CI, 1.22 to 5.31). Accuracy rose 14.7 points when the model was correct and fell 8.7 when incorrect. Provisional-category accuracy was 72% in held-out testing and 67% in temporal validation. The malignancy alert flagged 85.7% and 86.8% of precancerous or malignant lesions. Sensitivity for precancerous or malignant lesions increased from 53.9% to 75.0% after AI-assisted review (difference, 21.1 percentage points; 95% CI, 4.3 to 42.0).   Conclusions: In this single-center study, clinicians' pre-laryngoscopic categorization accuracy was higher after reviewing the AI assessment card, although the sequential design cannot fully separate AI assistance from reassessment; gains depended on model correctness without clearly selective adoption. Randomized and external evaluations, including of the malignancy alert, are needed.",
+  "abstractSha256": "da47521f1d8ce80485f46797f2cd24380aea1c069f3eb49d1e30f24fed198dc0",
+  "arxivId": "2611.20050",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.20050v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "多任务学习",
+    "primaryTask": "病理语音评估",
+    "rankBucket": "前50%",
+    "score": 6.7,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.pathological-speech",
+          "label": "病理语音评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.multitask",
+          "label": "多任务学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.lora",
+          "label": "LoRA"
+        },
+        {
+          "facet": "application",
+          "id": "application.medical",
+          "label": "医疗音频"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "多任务学习",
+      "primaryMethodId": "method.multitask",
+      "primaryTask": "病理语音评估",
+      "primaryTaskId": "task.pathological-speech",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Electronic Engineering, Tsinghua University, Beijing, 100084, China"
+      ],
+      "name": "Siyuan Hou"
+    },
+    {
+      "affiliations": [
+        "Department of Otorhinolaryngology Head and Neck Surgery, Beijing Tongren Hospital, Capital Medical University, Beijing, 100730, China"
+      ],
+      "name": "Shuting Yang"
+    },
+    {
+      "affiliations": [
+        "Department of Electronic Engineering, Tsinghua University, Beijing, 100084, China"
+      ],
+      "name": "Zengrui Jin"
+    },
+    {
+      "affiliations": [
+        "Department of Otorhinolaryngology Head and Neck Surgery, Beijing Tongren Hospital, Capital Medical University, Beijing, 100730, China"
+      ],
+      "name": "Liyu Cheng"
+    },
+    {
+      "affiliations": [
+        "Department of Electronic Engineering, Tsinghua University, Beijing, 100084, China"
+      ],
+      "name": "Siyin Wang"
+    },
+    {
+      "affiliations": [
+        "Department of Otorhinolaryngology Head and Neck Surgery, Beijing Tongren Hospital, Capital Medical University, Beijing, 100730, China"
+      ],
+      "name": "Yunhan Shi"
+    },
+    {
+      "affiliations": [
+        "Department of Otorhinolaryngology Head and Neck Surgery, Beijing Tongren Hospital, Capital Medical University, Beijing, 100730, China"
+      ],
+      "name": "Xueyan Li"
+    },
+    {
+      "affiliations": [
+        "Department of Otorhinolaryngology Head and Neck Surgery, Beijing Tongren Hospital, Capital Medical University, Beijing, 100730, China"
+      ],
+      "name": "Rong Hu"
+    },
+    {
+      "affiliations": [
+        "Department of Otorhinolaryngology Head and Neck Surgery, Beijing Tongren Hospital, Capital Medical University, Beijing, 100730, China"
+      ],
+      "name": "Yuhong Lin"
+    },
+    {
+      "affiliations": [
+        "Department of Otorhinolaryngology Head and Neck Surgery, Beijing Tongren Hospital, Capital Medical University, Beijing, 100730, China"
+      ],
+      "name": "Qiyu Chen"
+    },
+    {
+      "affiliations": [
+        "Department of Otorhinolaryngology Head and Neck Surgery, Beijing Tongren Hospital, Capital Medical University, Beijing, 100730, China"
+      ],
+      "name": "Yanru Li"
+    },
+    {
+      "affiliations": [
+        "Department of Electronic Engineering, Tsinghua University, Beijing, 100084, China"
+      ],
+      "name": "Ji Wu"
+    },
+    {
+      "affiliations": [
+        "Department of Electronic Engineering, Tsinghua University, Beijing, 100084, China",
+        "Shanghai Artificial Intelligence Laboratory, Shanghai, 200030, China"
+      ],
+      "name": "Bowen Zhou"
+    },
+    {
+      "affiliations": [
+        "Yuquan Hospital, School of Clinical Medicine, Tsinghua Medicine, Tsinghua University, Beijing, 100040, China"
+      ],
+      "name": "Mangsuo Zhao"
+    },
+    {
+      "affiliations": [
+        "Department of Otorhinolaryngology Head and Neck Surgery, Beijing Tongren Hospital, Capital Medical University, Beijing, 100730, China"
+      ],
+      "name": "Wen Xu"
+    },
+    {
+      "affiliations": [
+        "Department of Electronic Engineering, Tsinghua University, Beijing, 100084, China",
+        "Shanghai Artificial Intelligence Laboratory, Shanghai, 200030, China",
+        "Department of Human Communication Sciences, University College London, London, WC1E 6BT, United Kingdom"
+      ],
+      "name": "Chao Zhang"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对喉镜前仅凭嗓音和常规问诊信息难以预判喉疾病类别且易漏诊癌前与恶性病变的问题，论文用同一嗓音评估构建评估卡和恶性预警并做医生前后对照读片，最强证据是 800 对评估中医生准确率从 49.8% 升至 56.8% 而恶性敏感性明显提升，但增益完全依赖模型正确与否且设计无法排除重复判读本身的影响。",
+  "originalTitle": "Clinician Assessment of Laryngeal Disease with Auditory AI before Laryngoscopy: A Paired Reader Study",
+  "pdfUrl": "https://arxiv.org/pdf/2611.20050v1.pdf",
+  "readerTitle": "喉镜前只听声音能做什么：听觉大模型辅助医生预分类的配对读片研究",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

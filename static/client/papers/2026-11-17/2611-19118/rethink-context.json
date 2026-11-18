@@ -1,0 +1,92 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.19118v1",
+  "abstract": "A voice agent that negotiates by phone must answer quickly, understand spoken amounts and cope with a caller who talks over it. We compared three architectures for such an agent, negotiating freight rates in Spanish: two cascades (speech recognition, language model and speech synthesis) orchestrated by Pipecat and by LiveKit Agents, and GPT-Live, an OpenAI speech model that listens and speaks without separate stages. A program played the carrier with the same 47 recordings of one speaker for all agents, without the telephone network, in 77 calls per architecture over five negotiation scenarios, and measured latency on the listener's side with a validated instrument. Median latency to the content response was 2,616.0 ms (Pipecat), 3,090.0 ms (LiveKit) and 2,444.8 ms (GPT-Live); the confidence interval of GPT-Live's 171.2 ms advantage over Pipecat includes zero. According to its own timestamps, GPT-Live began to answer 800 ms after the end of the line, close to the 0.8 s published by OpenAI; most of the remaining wait, about 1,367 ms and nearly constant, is the audio's round trip through OpenAI's service. A tool call added 0.9-1.1 s in every architecture, more than any difference between them, and the frameworks' self-reported latency fell short of the listener's wait by 9% (Pipecat) and 22% (LiveKit). Word error rates were low (6.03, 4.93 and 1.47%), but the error on amounts was 13.01% and 12.61% in the cascades, against 2.86% in GPT-Live. With default settings, Pipecat and LiveKit stopped at almost every backchannel and often took it as the carrier's answer: an \"ok\" spoken over the agent ended in a registered agreement in 3 of 15 Pipecat calls, 2 of 15 LiveKit calls and no GPT-Live call (descriptive counts, not tested). Latency should therefore be measured on the listener's side, and a cascade needs safeguards for spoken amounts and backchannels.",
+  "abstractSha256": "72a36bc8d3938ad7c6fce08637c8d819c9bbf7734496f82262c9b7d1bb767b6f",
+  "arxivId": "2611.19118",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.19118v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "评测协议",
+    "primaryTask": "语音对话系统",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-dialogue",
+          "label": "语音对话系统"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "task",
+          "id": "task.turn-taking",
+          "label": "轮次切换"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.real-time",
+          "label": "实时处理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "评测协议",
+      "primaryMethodId": "method.evaluation-protocol",
+      "primaryTask": "语音对话系统",
+      "primaryTaskId": "task.speech-dialogue",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "AI Lab, Freight Technologies Inc., Monterrey, N.L., Mexico"
+      ],
+      "name": "Jovan Popoca Moran"
+    },
+    {
+      "affiliations": [
+        "AI Lab, Freight Technologies Inc., Monterrey, N.L., Mexico",
+        "Tecnológico de Monterrey, School of Engineering and Sciences, Monterrey, N.L., Mexico"
+      ],
+      "name": "Eduardo de Avila-Armenta"
+    },
+    {
+      "affiliations": [
+        "AI Lab, Freight Technologies Inc., Monterrey, N.L., Mexico"
+      ],
+      "name": "Raúl Alejandro Aquino-Ibarra"
+    },
+    {
+      "affiliations": [
+        "AI Lab, Freight Technologies Inc., Monterrey, N.L., Mexico"
+      ],
+      "name": "Jorge Octavio Nicolás-Díaz"
+    },
+    {
+      "affiliations": [
+        "AI Lab, Freight Technologies Inc., Monterrey, N.L., Mexico"
+      ],
+      "name": "Umberto Leon-Dominguez"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "在相同录音 carrier 与听者一侧外部测量下，Pipecat、LiveKit 与 GPT-Live 的内容延迟差异小于工具调用代价，真正的差距在金额听写与附和性应答处理上，而框架自报延迟都漏掉了传输时间。",
+  "originalTitle": "Latency, Speech Recognition and Turn-Taking in Voice Agents for Spanish Phone Negotiation: An Externally Measured Comparison of Pipecat, LiveKit and GPT-Live",
+  "pdfUrl": "https://arxiv.org/pdf/2611.19118v1.pdf",
+  "readerTitle": "电话议价中语音代理的延迟、金额听写与插话处理比较",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

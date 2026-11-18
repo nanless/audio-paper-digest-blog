@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.19280v1",
+  "abstract": "Beamforming has been widely recognized for its spatial filtering capability in speech signal processing, enabling effective interference rejection and signal enhancement. The performance of adaptive beamforming methods, e.g., the conventional minimum variance distortionless response (MVDR) beamforming, often deteriorate significantly in complex and dynamic acoustic environments. Part of the reason is that such conventional beamforming ignores the intrinsic characteristics of speech. To address this issue, this paper proposes Plug-and-Play Minimum Variance Distortionless Response (PnP-MVDR) algorithm, which integrates data-driven speech prior information into the MVDR framework to enhance robustness against non-stationary noise while maintaining its interpretability. The PnP-MVDR framework supports joint interaction of signal processing and deep learning methods and is designed to be compatible with modern DSP-NPU architectures, making it hardware-friendly for potential edge deployment. Beyond the algorithmic innovation, we have developed a complete microphone beamforming system to validate practical feasibility. Experimental results demonstrate that the proposed framework consistently outperforms traditional and deep learning-based baselines, establishing PnP-MVDR as an effective and deployable solution for edge audio scenarios.",
+  "abstractSha256": "46e3df25cc9cc8af68d34913fe113ac7cf6101ff2b718a74cbee87a93f5241ee",
+  "arxivId": "2611.19280",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.19280v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "波束成形",
+    "primaryTask": "语音分离",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-separation",
+          "label": "语音分离"
+        },
+        {
+          "facet": "method",
+          "id": "method.beamforming",
+          "label": "波束成形"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.microphone-array",
+          "label": "麦克风阵列"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.hardware",
+          "label": "硬件原型"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "波束成形",
+      "primaryMethodId": "method.beamforming",
+      "primaryTask": "语音分离",
+      "primaryTaskId": "task.speech-separation",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Chengbo Chang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ziye Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jie Chen"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对两说话人加噪的多通道分离问题，论文在保持无失真约束的最小方差波束形成基础上用去噪器引入语音先验并交替迭代求解，在仿真与自采实测上比较了多种级联与端到端基线，代价是需要调参和多次迭代且结论限于给定阵列与数据条件。",
+  "originalTitle": "Hardware-Friendly Plug-and-Play MVDR Beamforming for Microphone Arrays: Algorithm, Prototype, and System-Level Feasibility",
+  "pdfUrl": "https://arxiv.org/pdf/2611.19280v1.pdf",
+  "readerTitle": "把语音先验放进波束形成：PnP-MVDR 如何工作与何时有效",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

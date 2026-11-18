@@ -1,0 +1,104 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.19202v1",
+  "abstract": "Omni-modal agents are expected to move beyond multimodal understanding toward completing complex tasks in realistic multimodal environments. In these settings, information is distributed across heterogeneous files and modalities, with cross-file and cross-modal dependencies requiring agents to continually coordinate perception, reasoning, and tool use as newly gathered evidence informs subsequent actions. However, existing omni-modal benchmarks primarily focus on multimodal perception and understanding, leaving complex task completion through sustained interaction with multimodal workspaces underexplored. We introduce Omni-Workspace, a benchmark comprising 380 deep-research-style tasks across four multimodal workspace types and two difficulty levels. These tasks require agents to inspect and process workspace files, retrieve external information when needed, integrate evidence across files and modalities, and produce artifacts satisfying explicit requirements. Evaluating 18 representative models reveals limitations in long-horizon multimodal workspace execution, with the best model scoring only 65.93 on average. Further analysis identifies multimodal context inflation and task-state drift as recurring challenges. Motivated by these findings, we further propose OmniFocus, a lightweight approach combining multimodal working-memory management with explicit task-state tracking to improve performance and efficiency. Omni-Workspace advances the evaluation and development of omni-modal agents toward autonomous completion of complex tasks in multimodal workspaces.",
+  "abstractSha256": "e3faa9ed1bbf891aef07600a9f97b48dc80754b8151d3977711b0d63ca9cde06",
+  "arxivId": "2611.19202",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.19202v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "自动化科学研究流程",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.automated-scientific-workflow",
+          "label": "自动化科学研究流程"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "method",
+          "id": "method.tool-augmentation",
+          "label": "工具增强与约束解码"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "自动化科学研究流程",
+      "primaryTaskId": "task.automated-scientific-workflow",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Yuhao Wang"
+    },
+    {
+      "affiliations": [
+        "Tongyi Lab, Alibaba Group"
+      ],
+      "name": "Yucheng Zhao"
+    },
+    {
+      "affiliations": [
+        "Tongyi Lab, Alibaba Group"
+      ],
+      "name": "Yiran Zhong"
+    },
+    {
+      "affiliations": [
+        "Tongyi Lab, Alibaba Group"
+      ],
+      "name": "Feida Zhu"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Hongcheng Liu"
+    },
+    {
+      "affiliations": [
+        "Nanyang Technological University"
+      ],
+      "name": "Qichao Wang"
+    },
+    {
+      "affiliations": [
+        "University of Chinese Academy of SciencesCorresponding author"
+      ],
+      "name": "Ming Ma"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Yu Wang"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "Omni-Workspace 用 380 个需要跨文件跨模态取证并生成目标文件的研究型任务检验智能体，最强模型平均分只有 65.93，而记录关键观察并显式维护任务状态的 OmniFocus 能在提分的同时大幅减少输入 token 与估计成本。",
+  "originalTitle": "Omni-Workspace: Benchmarking Omni-Modal AI Assistants on Multimodal Workspace Tasks",
+  "pdfUrl": "https://arxiv.org/pdf/2611.19202v1.pdf",
+  "readerTitle": "在多文件工作空间里做完研究报告：Omni-Workspace 在考什么",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

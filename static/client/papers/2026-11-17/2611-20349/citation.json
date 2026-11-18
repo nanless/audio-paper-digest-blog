@@ -1,0 +1,63 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.20349v1",
+  "arxivId": "2611.20349",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.20349v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Shandong University Shenzhen Loop Area Institute"
+      ],
+      "name": "Wenhao Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Chong Xiao"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xiaokun Bai"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Rundong He"
+    },
+    {
+      "affiliations": [
+        "The Hong Kong Polytechnic University National University of Singapore"
+      ],
+      "name": "Zhuang Qi"
+    },
+    {
+      "affiliations": [
+        "Shandong University Shenzhen Loop Area Institute",
+        "City University of Hong Kong"
+      ],
+      "name": "Xusheng Liang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhibin Wu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Qiangchang Wang"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.20349v1",
+  "originalTitle": "Words Speak Louder? Exploring the Language Shortcut of LLM-Driven Incomplete Multimodal Learning",
+  "pdfUrl": "https://arxiv.org/pdf/2611.20349v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

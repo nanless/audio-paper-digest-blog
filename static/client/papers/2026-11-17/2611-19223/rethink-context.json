@@ -1,0 +1,86 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.19223v1",
+  "abstract": "We study zero-shot fine-grained singing technique conversion (STC), which applies specified techniques to selected regions of an existing singing recording while preserving lyrics, melody, timing, and singer identity. Existing singing conversion and synthesis methods offer complementary strengths in source preservation and explicit technique control, but combining both in an audio-to-audio setting remains underexplored, especially with limited technique-annotated data. We propose ProSing, a zero-shot fine-grained STC framework that adapts a pretrained flow-matching acoustic model with frame-level technique conditioning. To mitigate conditioning shortcuts during adaptation, we introduce a paired training strategy to learn generalizable technique representations. We further incorporate continuous pitch trajectories for explicit and expressive control of pitch-related techniques. Subjective and objective evaluations on unseen singers and source recordings show that ProSing achieves accurate technique control while preserving singing naturalness and singer similarity.",
+  "abstractSha256": "f17e14f103e5cffbd90a59a806ff45f8d528f0b887a315ab6ca4b581e878f03f",
+  "arxivId": "2611.19223",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.19223v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "SFT",
+    "primaryTask": "语音转换",
+    "rankBucket": "前50%",
+    "score": 6.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.voice-conversion",
+          "label": "语音转换"
+        },
+        {
+          "facet": "method",
+          "id": "method.sft",
+          "label": "SFT"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.zero-shot",
+          "label": "零样本"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "SFT",
+      "primaryMethodId": "method.sft",
+      "primaryTask": "语音转换",
+      "primaryTaskId": "task.voice-conversion",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xinhao Guan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jingyue Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kangrui Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Julian McAuley"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhong-Qiu Wang"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "ProSing 研究零样本细粒度演唱技巧转换，用帧级标签加连续音高轨迹适配预训练流匹配声学模型，配对训练减少条件走捷径，在未见歌手上提升技巧可控性并保持自然度和音色相似，代价是额外演唱数据会部分回落技巧跟随分数。",
+  "originalTitle": "ProSing: Zero-Shot Fine-Grained Singing Technique Conversion",
+  "pdfUrl": "https://arxiv.org/pdf/2611.19223v1.pdf",
+  "readerTitle": "在保留原唱的基础上按区域施加演唱技巧",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

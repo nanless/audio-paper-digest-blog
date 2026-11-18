@@ -1,0 +1,105 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.19236v1",
+  "abstract": "Audio-visual representation learning commonly aligns paired audio and visual signals with sample-level contrastive objectives. However, real-world audio-visual pairs usually contain heterogeneous patch tokens: only a subset carries reliable cross-modal shared semantics, while many others mainly encode modality-private residuals. Aggregating all tokens into a single global representation can therefore introduce semantic noise into cross-modal alignment. Motivated by the minimal-sufficiency principle, we propose an attribution-guided shared-private decoupling framework to mitigate this issue. Our key idea is to identify shared-cover subviews that preserve dominant cross-modal information while suppressing modality-private residuals, and use them to supervise decoupled shared and private representations. To identify such subviews efficiently, we draw on transformer attribution method and introduce Layer-Truncated Attribution (LTA), which provides a lightweight estimate of token-level relevance to cross-modal shared information. We further adopt a teacher-student framework, where the teacher provides attribution-induced supervision and the student internalizes shared-private decoupling into its representations, without introducing extra inference cost. Experiments on retrieval, classification, and sound-prompted semantic segmentation show consistent gains over strong baselines. Compared with baseline, our method improves the average zero-shot R@1 by 4.0 across AudioSet and VGGSound retrieval, and improves AS20K classification mAP by 3.1, demonstrating the effectiveness of fine grained attribution guidance for reducing semantic noise.reducing semantic noise. Code will be released at https://github.com/wanglg20/LTA",
+  "abstractSha256": "95cadbdb34293a3cc95bcf1a87c1ed9f344f0f8b039d290660cf13976e833e26",
+  "arxivId": "2611.19236",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.19236v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "知识蒸馏",
+    "primaryTask": "音频检索",
+    "rankBucket": "前50%",
+    "score": 7.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-retrieval",
+          "label": "音频检索"
+        },
+        {
+          "facet": "task",
+          "id": "task.av-sounding-object-segmentation",
+          "label": "音视频发声对象分割"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        },
+        {
+          "facet": "method",
+          "id": "method.contrastive",
+          "label": "对比学习"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "知识蒸馏",
+      "primaryMethodId": "method.distillation",
+      "primaryTask": "音频检索",
+      "primaryTaskId": "task.audio-retrieval",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Foundation Model Research Center, Institute of AutomationChinese Academy of Sciences, Beijing, China",
+        "School of Artificial Intelligence, University of Chinese Academy of SciencesBeijing, China"
+      ],
+      "name": "Linge Wang"
+    },
+    {
+      "affiliations": [
+        "Foundation Model Research Center, Institute of AutomationChinese Academy of Sciences, Beijing, China",
+        "School of Artificial Intelligence, University of Chinese Academy of SciencesBeijing, China"
+      ],
+      "name": "Yingying Chen"
+    },
+    {
+      "affiliations": [
+        "Foundation Model Research Center, Institute of AutomationChinese Academy of Sciences, Beijing, China",
+        "School of Artificial Intelligence, University of Chinese Academy of SciencesBeijing, China"
+      ],
+      "name": "Bingke Zhu"
+    },
+    {
+      "affiliations": [
+        "Foundation Model Research Center, Institute of AutomationChinese Academy of Sciences, Beijing, China",
+        "School of Artificial Intelligence, University of Chinese Academy of SciencesBeijing, China"
+      ],
+      "name": "Lu Zhou"
+    },
+    {
+      "affiliations": [
+        "Foundation Model Research Center, Institute of AutomationChinese Academy of Sciences, Beijing, China",
+        "School of Artificial Intelligence, University of Chinese Academy of SciencesBeijing, China"
+      ],
+      "name": "Haixin Wang"
+    },
+    {
+      "affiliations": [
+        "Huawei Technologies Ltd., Beijing, China"
+      ],
+      "name": "Zhipiao Liu"
+    },
+    {
+      "affiliations": [
+        "Foundation Model Research Center, Institute of AutomationChinese Academy of Sciences, Beijing, China",
+        "School of Artificial Intelligence, University of Chinese Academy of SciencesBeijing, China",
+        "Objecteye Inc., Beijing, China"
+      ],
+      "name": "Jinqiao Wang"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对整图聚合把无关块也拉入跨模态对齐的问题，该文用最后一层梯度注意力为每个块打分并切出高低两组子视图，再以教师锚监督学生的共享与私有令牌，在检索、分类和声音引导分割上取得提升，代价是教师预训练与归因计算只发生在训练阶段。",
+  "originalTitle": "Attribution-Guided Shared-Private Decoupling for Noise-Reduced Audio-Visual Representation Learning",
+  "pdfUrl": "https://arxiv.org/pdf/2611.19236v1.pdf",
+  "readerTitle": "用归因挑出共享子视图：降低音频视觉对齐中语义噪声的解耦学习",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

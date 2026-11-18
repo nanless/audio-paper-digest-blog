@@ -1,0 +1,105 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.20349v1",
+  "abstract": "Is a face or a voice still heard once the words are known? Incomplete multimodal learning increasingly uses large language models (LLMs) as fusion engines: modality features enter as token blocks and missing modalities become placeholders. We find that LLM-driven fusion can override non-verbal evidence it can read. Contrasting its full-input prediction with counterfactual views, the same model shown one modality or no content, we identify language shortcuts. We build MR-Bench: MR-Bench-A types every test sample of four sentiment benchmarks; MR-Bench-H contains 900 human-validated clips (620 language-shortcut, LS; 280 non-verbal-shortcut, NS) from seven sources, and every model is scored on all of them. Zero-shot MLLMs solve at most 32.7% of the LS clips; adding the transcript to the muted video lowers vision-language accuracy by 46.1-53.1 points. Yet inverting a text-only model's answers solves 94.4%, so LS accuracy alone cannot establish use of non-verbal evidence. Inside the fusion LLM, fused states align increasingly with the text view late in the decoder. Counterfactual-View Reliability learning (CoVeR) trains views as unimodal judges and withholds fused supervision where they disagree. It achieves state-of-the-art results on five benchmarks without extra inference cost in accuracy mode. On MR-Bench-H, it reaches 61.7% LS and 93.6% NS accuracy; robust mode raises LS accuracy to 63.0% while lowering NS accuracy to 84.8%. Among LS clips solved without text, adding text causes errors on 30.1% with CoVeR versus 32.2% with LLM-Fusion. Project page: https://peacelwh.github.io/CoVeR/.",
+  "abstractSha256": "a5dfe28a81d0f9455e8cf0fe3b08311fa574d737e316f5ee427e36838172caaf",
+  "arxivId": "2611.20349",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.20349v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "多模态情感极性分析",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.multimodal-sentiment",
+          "label": "多模态情感极性分析"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.llm",
+          "label": "大语言模型"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "多模态情感极性分析",
+      "primaryTaskId": "task.multimodal-sentiment",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Shandong University Shenzhen Loop Area Institute"
+      ],
+      "name": "Wenhao Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Chong Xiao"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xiaokun Bai"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Rundong He"
+    },
+    {
+      "affiliations": [
+        "The Hong Kong Polytechnic University National University of Singapore"
+      ],
+      "name": "Zhuang Qi"
+    },
+    {
+      "affiliations": [
+        "Shandong University Shenzhen Loop Area Institute",
+        "City University of Hong Kong"
+      ],
+      "name": "Xusheng Liang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhibin Wu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Qiangchang Wang"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文发现以大语言模型做融合会在文字与其他模态冲突时跟随文字，为此构造冲突评测并用反事实视图训练单模态裁判来扣留冲突样本的融合监督，在五个情感基准上提升相关性并减少文字覆盖错误，但稳健性仍需在非言语捷径上权衡。",
+  "originalTitle": "Words Speak Louder? Exploring the Language Shortcut of LLM-Driven Incomplete Multimodal Learning",
+  "pdfUrl": "https://arxiv.org/pdf/2611.20349v1.pdf",
+  "readerTitle": "话说得好听，脸和声音却在摇头：大模型融合为什么只听文字",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

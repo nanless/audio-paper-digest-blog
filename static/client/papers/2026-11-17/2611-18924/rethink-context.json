@@ -1,0 +1,88 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.18924v1",
+  "abstract": "Supervisory control of multiple autonomous unmanned aerial vehicles (UAVs) imposes high visual and cognitive demands on human operators, particularly when communicating mission objectives and system constraints. Voice command provides a natural interaction modality that can reduce operator workload; however, its reliability is affected by environmental noise, speech variability, and recognition errors. This paper presents a dependable voice command framework for multi-UAV swarm supervision using Small Language Models (SLMs). The proposed architecture integrates an Automatic Speech Recognition (ASR) module with an SLM-based semantic processing layer to transform spoken operator commands into structured task definitions for downstream multi-UAV planning and execution. To evaluate robustness, an end-to-end assessment pipeline is developed using a Probabilistic Context-Free Grammar (PCFG) to generate synthetic supervisory commands, which are converted into audio samples with varying operator accents and environmental signal-to-noise ratios (SNR). The resulting speech signals are processed by the ASR module, and the SLM performs contextual interpretation and phonetic correction of transcriptions when required. The evaluation isolates the resilience of the voice command pipeline under acoustic degradation and speech variation, demonstrating reliable task generation for multi-UAV supervision in challenging operational conditions.",
+  "abstractSha256": "2513cc973d8f1d19f3a6cd7ae9769643ccdbcf4160f3509e490be40e8e3023ef",
+  "arxivId": "2611.18924",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.18924v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "规则与词典方法",
+    "primaryTask": "口语意图与槽位识别",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.intent-slot",
+          "label": "口语意图与槽位识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.rule-based",
+          "label": "规则与词典方法"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.accent-dialect",
+          "label": "口音与方言"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "规则与词典方法",
+      "primaryMethodId": "method.rule-based",
+      "primaryTask": "口语意图与槽位识别",
+      "primaryTaskId": "task.intent-slot",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Afshin Ameri"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Luiz Giacomossi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Håkan Forsberg"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ivan Tomasic"
+    },
+    {
+      "affiliations": [
+        "Mälardalen University",
+        "Västerås, Sweden",
+        "*These authors contributed equally and share co-first authorship."
+      ],
+      "name": "Baran Cürüklü"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对多人多机监督中语音转写易错的问题，该工作用本地小语言模型把带口音和噪声的转写文本规整为结构化任务并用阈值决定执行还是追问，在合成口音与噪声评测中发音纠正提高了意图与目标识别并降低了灾难性执行，但代价是更多的澄清干预和剩余的混淆错误。",
+  "originalTitle": "Dependable Voice Command for Multi-UAV Swarms Using Small Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2611.18924v1.pdf",
+  "readerTitle": "多无人机群的语音指挥如何做到可依赖",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

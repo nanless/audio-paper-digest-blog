@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.20436v1",
+  "arxivId": "2611.20436",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.20436v1",
+  "authors": [
+    {
+      "affiliations": [
+        "College of Computer Science, Nankai University"
+      ],
+      "name": "Yujie Guo"
+    },
+    {
+      "affiliations": [
+        "Xingchen AGI Lab, China Telecom Artificial Intelligence Technology Co. Ltd"
+      ],
+      "name": "Hongjie Chen"
+    },
+    {
+      "affiliations": [
+        "College of Computer Science, Nankai University"
+      ],
+      "name": "Jiaming Zhou"
+    },
+    {
+      "affiliations": [
+        "Xingchen AGI Lab, China Telecom Artificial Intelligence Technology Co. Ltd"
+      ],
+      "name": "Jian Kang"
+    },
+    {
+      "affiliations": [
+        "Xingchen AGI Lab, China Telecom Artificial Intelligence Technology Co. Ltd"
+      ],
+      "name": "Jie Li"
+    },
+    {
+      "affiliations": [
+        "Xingchen AGI Lab, China Telecom Artificial Intelligence Technology Co. Ltd"
+      ],
+      "name": "Yongxiang Li"
+    },
+    {
+      "affiliations": [
+        "College of Computer Science, Nankai University"
+      ],
+      "name": "Yong Qin"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.20436v1",
+  "originalTitle": "Learning from Distribution: Rethinking One-Hot Supervision for ASR and QA in Speech Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2611.20436v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

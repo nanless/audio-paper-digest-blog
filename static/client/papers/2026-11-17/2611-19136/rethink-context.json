@@ -1,0 +1,86 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.19136v1",
+  "abstract": "LLM-based architectures offer strong generalization and instruction-following capabilities for streaming automatic speech recognition (ASR), but multi-talker use introduces coupled transcription, attribution, and latency challenges. Our wearable setting requires real-time transcription of a conversation between a near-field device wearer and a far-field partner. Because partial hypotheses are rendered on persistent sides of a dialogue UI, speaker roles cannot be permuted and each speaker tag must precede its turn. These sparse tags are weakly optimized by supervised fine-tuning (SFT), while committing to a leading tag can delay the text that follows. We therefore post-train a streaming LLM-based ASR model with reinforcement learning with verifiable rewards (RLVR), combining a fixed-role Speaker-Attributed WER (SA-WER) grader with a turn-level onset-delay reward. On an eight-direction multi-talker cohort, SA-WER RL reduces SA-WER from $20.51\\%$ for SFT to $13.14\\%$. Adding the delay objective reduces onset $p50$ by $65\\%$ (from $0.918\\,\\text{s}$ to $0.320\\,\\text{s}$) and $p90$ by $44\\%$ (from $1.389\\,\\text{s}$ to $0.780\\,\\text{s}$) relative to SA-WER-only RL, while achieving $12.70\\%$ SA-WER. These results demonstrate that fixed-role recognition quality and streaming responsiveness can be improved jointly.",
+  "abstractSha256": "5d764a2b1eb0c0645c49cde2c76e0164af10b655c23c84db8c90a13ed344d364",
+  "arxivId": "2611.19136",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.19136v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "强化学习",
+    "primaryTask": "多说话人语音识别",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.multi-talker-asr",
+          "label": "多说话人语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.reinforcement",
+          "label": "强化学习"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "强化学习",
+      "primaryMethodId": "method.reinforcement",
+      "primaryTask": "多说话人语音识别",
+      "primaryTaskId": "task.multi-talker-asr",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jing Pan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ruizhi Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ju Lin"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jing Zheng"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Florian Metze"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对佩戴者与对话伙伴固定分边的流式多人语音识别，论文用固定角色 SA-WER 奖励先把转写与归属练准，再用有界的轮次起始延迟因子把典型等待时间压下来，代价是小幅提前抢说和对长尾仍不稳定。",
+  "originalTitle": "Low-Latency LLM-Based Streaming Multi-Talker ASR with Verifiable Rewards",
+  "pdfUrl": "https://arxiv.org/pdf/2611.19136v1.pdf",
+  "readerTitle": "可穿戴双人对话里又要分清谁在说又要播得快：固定角色转写与起始延迟一起练",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

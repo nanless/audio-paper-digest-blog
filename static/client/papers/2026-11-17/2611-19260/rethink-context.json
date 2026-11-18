@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.19260v1",
+  "abstract": "Conventional text-to-speech (TTS) systems can lose intelligibility in noise environments because they cannot adapt to environmental changes. However, humans tend to increase their vocal efforts in noisy environments, a phenomenon known as the Lombard effect. Building on an auditory-feedback Lombard TTS, we investigate whether a pretrained Flow-based TTS can learn acoustic adaptation directly from auditory feedback without explicit prosodic control. Signal-to-noise ratio (SNR) feedback and automatic speech recognition (ASR) feedback are extracted from the noise-corrupted waveforms and injected into the Flow-matching condition for utterance refinement and causal block-level updates. We assess feedback benefits across prompting and noise conditions using plain/Lombard prompting, prompt-switching controls, and paired-finetuning. Experiments show that while finetuning provides strong robustness under in-domain conditions, auditory feedback yields additional cue-dependent benefits that generalize to unseen noise. Moreover, stronger power/F0 tracking alone does not guarantee better speech intelligibility or quality.",
+  "abstractSha256": "9210627a811cf4f9ddfe4d6a80b26e28612bb90571a6b410c289139c2edf9afd",
+  "arxivId": "2611.19260",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.19260v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "流匹配",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "流匹配",
+      "primaryMethodId": "method.flow-matching",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yunya Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Satoshi Nakamura"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文把噪声程度和识别难度两路听觉反馈直接做成 Flow 声学模型的附加条件，在不指定音高和能量数值的前提下做两遍式精炼与因果分块更新，域内主要靠配对微调保底、未见噪声下反馈带来额外可懂度收益，但功率与基频跟随强弱不能决定可懂度和听感。",
+  "originalTitle": "Auditory-Feedback-Conditioned Flow TTS for Implicit Lombard Adaptation",
+  "pdfUrl": "https://arxiv.org/pdf/2611.19260v1.pdf",
+  "readerTitle": "听着噪声说话：Flow 语音合成如何从听觉反馈里学 Lombard 适应",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

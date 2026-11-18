@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.20064v1",
+  "abstract": "Voice agents need accurate transcripts soon after a user stops speaking. We propose Decode Early, Verify Late (DEVL), a training-free framework for streaming inference with offline ASR models. The server keeps partial transcripts as drafts and verifies the latest against the complete audio in one forward pass at turn end. Under stated input and decoding conditions, the final equals the model's greedy offline output in exact arithmetic. We adapt DEVL to four model families. In our five-recognizer comparison, 95-100% of final transcripts are byte-identical to the offline transcripts, WER stays within 0.13 points of offline, and single-stream time to final falls 1.5-7.3x. Serving Qwen3-ASR-1.7B on one A100, DEVL returns finals a median 22-26 ms after turn end at up to 64 streams, 2.7-3.9x sooner than the official streaming mode. It is the only system we tested that meets a 100 ms p99 target, up to 80 streams on Pipecat-STT and 64 on WildASR.",
+  "abstractSha256": "46adc16d7938ef66bf29f3c6053b0982608a77890aa87fa310d4e7fbbd7625b3",
+  "arxivId": "2611.20064",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.20064v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "动态计算与早退",
+    "primaryTask": "语音识别",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.dynamic-computation",
+          "label": "动态计算与早退"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.real-time",
+          "label": "实时处理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "动态计算与早退",
+      "primaryMethodId": "method.dynamic-computation",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Doyeob Kim"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对语音助手在说话结束时要又快又准地拿到终稿的问题，该文用流式过程中已算出的部分转写做草稿、在结束时一次前向验证并只补解码分歧之后的内容，在五种识别器上把终稿时间缩短到数十毫秒量级且终稿基本保持离线贪婪解码结果，代价是检查点要占图形处理器时间且高并发下草稿赶不上提交。",
+  "originalTitle": "Decode Early, Verify Late: Streaming Offline Speech Recognizers Without Accuracy Loss",
+  "pdfUrl": "https://arxiv.org/pdf/2611.20064v1.pdf",
+  "readerTitle": "早解码晚验证：让离线语音识别器做流式输出",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

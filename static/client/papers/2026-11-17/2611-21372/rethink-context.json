@@ -1,0 +1,86 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.21372v1",
+  "abstract": "Contrastive learning beyond two modalities now scores the whole tuple with multilinear products, volumes, and fusion heads, critics that can represent the joint distribution. In practice these critics still behave like bags of pairs. Their negatives break at least two of the three pairs, a single pairwise check rejects them, and when most samples can be solved by pairs the higher-order term receives almost no gradient. To solve this problem, we propose CHORD (Contrastive Higher-Order Residuals with Decoys), which trains a residual against decoys drawn from a calibrated pairwise model, negatives that the pairwise model finds plausible, so that rejecting them often needs all three modalities. Drawing decoys costs one inner-product query over a memory bank, and the optimal residual is the log-ratio between the data and the pairwise model, so the decoy loss also bounds what that model misses. On M3-Mix, where one in ten training samples needs all three modalities, our CHORD improves accuracy on those samples by 21.2 percentage points over the strongest of eight baselines. CHORD also gives the best two-to-one results on every real dataset, and its residual improves other retrievers without retraining.",
+  "abstractSha256": "ecaa3b7063d703a37261240c86e53717c89f049e5ba7c09bca99a479508f203a",
+  "arxivId": "2611.21372",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.21372v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "对比学习",
+    "primaryTask": "统一多模态检索",
+    "rankBucket": "前50%",
+    "score": 6.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.unified-multimodal-retrieval",
+          "label": "统一多模态检索"
+        },
+        {
+          "facet": "method",
+          "id": "method.contrastive",
+          "label": "对比学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "对比学习",
+      "primaryMethodId": "method.contrastive",
+      "primaryTask": "统一多模态检索",
+      "primaryTaskId": "task.unified-multimodal-retrieval",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kunyu Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shenghui Feng"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xiangjie Shi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zeqing Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yingxu Wang"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对三元组打分器被随机负例饿死的问题，CHORD 用校准成对桥采样诱饵只训练零初始化残差，在少数样本需要三元组的受控集上大幅恢复准确率，而真实收益只出现在残差诊断量大的数据集上并保持一对一检索与低检索代价。",
+  "originalTitle": "Learning What Pairs Miss for Higher-Order Multimodal Alignment",
+  "pdfUrl": "https://arxiv.org/pdf/2611.21372v1.pdf",
+  "readerTitle": "三模态对齐为何学不会三元组：诱饵与残差如何补上成对模型漏掉的信息",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

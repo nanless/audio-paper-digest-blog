@@ -1,0 +1,98 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.20725v1",
+  "abstract": "Audio Moment Retrieval (AMR) aims to locate the temporal segment within a long audio recording that semantically corresponds to a natural-language query. This task is particularly challenging because query-related audio events are often sparsely distributed and embedded in complex acoustic environments, where background sounds and acoustically similar events can easily obscure the target moments. Existing methods mainly strengthen audio-text semantic interaction to enhance the query-related information in audio frames, but seldom refine the resulting audio representations before temporal localization, limiting their ability to accurately distinguish target events from irrelevant acoustic interference. To address this issue, we propose ETR-AMR, a post-fusion event-aware time-frequency refinement framework for AMR. Specifically, an event-aware time-frequency refinement (ETR) strategy is proposed after audio-text interaction to refine fused audio frame features before temporal moment localization. ETR consists of two complementary mechanisms: time frame gating and frequency refinement. The time frame gating mechanism estimates frame-wise event relevance to emphasize query-related audio frames and suppress redundant temporal responses, while frequency refinement applies learnable time-frequency reweighting to enhance discriminative event-related frequency patterns and reduce background-dominant interference. By jointly refining fused audio frame features in the temporal and frequency domains, ETR produces more discriminative event-aware features for accurate temporal boundary prediction. Experiments on four AMR datasets demonstrate that ETR-AMR achieves superior performance compared with existing methods, especially on the high-quality CASTELLA benchmark. Duration-wise analysis further confirms the effectiveness of ETR for medium and long audio moments.",
+  "abstractSha256": "aeb723b3ff4889db2edd17403f19a3ea1a1e5abb37280081d1790e4c74402f37",
+  "arxivId": "2611.20725",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.20725v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "时频分析",
+    "primaryTask": "音频时间定位",
+    "rankBucket": "前50%",
+    "score": 6.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.temporal-grounding",
+          "label": "音频时间定位"
+        },
+        {
+          "facet": "method",
+          "id": "method.time-frequency",
+          "label": "时频分析"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.long-audio",
+          "label": "长音频处理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "时频分析",
+      "primaryMethodId": "method.time-frequency",
+      "primaryTask": "音频时间定位",
+      "primaryTaskId": "task.temporal-grounding",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Feiyang Xiao"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Li'ang Luo"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kejia Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Qiaoxi Zhu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Guangjun He"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Pengming Feng"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jian Guan"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对长音频中查询相关事件稀疏且易被背景淹没的问题，论文在音频文本交互之后插入时间帧门控与频率加权两步精炼，并在以人工标注为主的 CASTELLA 等四个数据集上验证其边界定位效果与适用边界。",
+  "originalTitle": "Post-fusion Event-aware Time-Frequency Refinement for Audio Moment Retrieval",
+  "pdfUrl": "https://arxiv.org/pdf/2611.20725v1.pdf",
+  "readerTitle": "融合之后再精炼：用时间与频率两路处理找准音频片段",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.20111v1",
+  "abstract": "Knowledge-guided generative systems use explicit domain constraints to improve decision consistency and alignment with human-created solutions. However, locally valid decisions do not necessarily preserve contextual relationships in human decision-making. This paper examines when structural constraints improve or degrade agreement with human reference solutions.   We introduce HARMONIX, an experimental framework using automated musical harmonization as a controlled testbed for knowledge-guided decision-making. Four configurations share the same Viterbi-based optimization mechanism: a baseline, repetition constraints, functional constraints, and their combination. Experiments cover 19,745 records and 143,634 motif pairs across training and validation partitions.   Combined constraints improve reference root-interval agreement by approximately five percentage points in stable structural contexts but reduce it by nearly nine percentage points in contexts involving transposition tracking. These opposing effects are consistent across both partitions, while overall exact chord agreement changes only marginally. Contexts are identified retrospectively using reference annotations; no adaptive constraint-selection mechanism is evaluated.   The findings demonstrate that interpretable constraints can introduce systematic context-specific failures concealed by aggregate accuracy metrics. They highlight the need to evaluate relationships between decisions and the contextual applicability of constraints in knowledge-guided generative systems.",
+  "abstractSha256": "c6eb23e4cf48b09adbda23638418effd1442fc03bdf801d3186107bc73de6bdb",
+  "arxivId": "2611.20111",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.20111v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "约束数值优化",
+    "primaryTask": "符号音乐生成",
+    "rankBucket": "前50%",
+    "score": 5.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.symbolic-music",
+          "label": "符号音乐生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.constrained-numerical-optimization",
+          "label": "约束数值优化"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "约束数值优化",
+      "primaryMethodId": "method.constrained-numerical-optimization",
+      "primaryTask": "符号音乐生成",
+      "primaryTaskId": "task.symbolic-music",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Software Engineering, Faculty of Information Technology, Czech Technical University in Prague, Czech Republic"
+      ],
+      "name": "Josef Pavlíček"
+    },
+    {
+      "affiliations": [
+        "Department of Software Engineering, Faculty of Information Technology, Czech Technical University in Prague, Czech Republic"
+      ],
+      "name": "Petra Pavlíčková"
+    },
+    {
+      "affiliations": [
+        "Faculty of Electrical Engineering, Czech Technical University in Prague, Prague 6, Czech Republic"
+      ],
+      "name": "Martin Molhanec"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文用自动和声作可控试验，研究两种结构偏好在相同优化器下何时提高、与人类参考和声关系的一致性，何时降低一致性，最强的证据是分情境的根音音程关系出现了方向相反的变化，而代价是总体和弦命中率几乎不动且需要事后依赖参考标注划分情境。",
+  "originalTitle": "When Valid Decisions Are Not Enough: Evaluating Structural Constraints in Knowledge-Guided Generative Systems",
+  "pdfUrl": "https://arxiv.org/pdf/2611.20111v1.pdf",
+  "readerTitle": "局部合理为何不够：用自动和声实验看结构约束何时帮忙、何时帮倒忙",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}
