@@ -1,6 +1,7 @@
 'use strict';
 const { spawnSync } = require('node:child_process');
 const { shardIndex } = require('./shard-search-index');
+const { exportDesktopDetails } = require('./export-desktop-details');
 // This check runs before Hugo or any output mutation. An invalid v2 supplement
 // must fail the real build entry, not merely a separately invoked audit.
 require('./verify-tags-v2').verify(process.cwd());
@@ -20,4 +21,6 @@ if (result.error || result.signal || result.status !== 0) {
 } else {
   const manifest = shardIndex('public');
   process.stdout.write(JSON.stringify({ recordCount: manifest.recordCount, totalBytes: manifest.totalBytes, shardCount: manifest.shards.length }) + '\n');
+  const desktopDetails = exportDesktopDetails('public', process.cwd());
+  process.stdout.write('desktop-details: ' + JSON.stringify(desktopDetails) + '\n');
 }

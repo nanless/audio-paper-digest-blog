@@ -42,6 +42,9 @@ function verifyPageNavigation(buildDir, baseUrl = 'https://nanless.github.io/aud
   const fail = (relative, message) => errors.push(`${relative}: ${message}`);
   for (const file of files.filter(item => item.endsWith('.html'))) {
     const relative = path.relative(root, file).split(path.sep).join('/');
+    // Content-addressed desktop article fragments intentionally omit site chrome (<html/head/main/h1>)
+    // and are verified fail-closed by verifyDesktopDetails in verify-build.js.
+    if (/^client\/details\/articles\/[a-f0-9]{64}\.html$/.test(relative)) continue;
     const documentUrl = new URL(relative.split('/').map(encodeURIComponent).join('/'), base);
     // Preserve the script opening tag for src checks, ignore JS/JSON contents.
     const html = fs.readFileSync(file, 'utf8').replace(/<!--[\s\S]*?-->/g, '')

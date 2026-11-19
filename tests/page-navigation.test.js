@@ -23,6 +23,9 @@ test('rendered navigation resolves base paths, encoded names, entities, fragment
   write('tags/语音-#测试/index.html', '<h2 id="章节">章节</h2><a href="#top">Top</a><a href="../../">Home</a>');
   fs.writeFileSync(path.join(root, 'image.png'), 'fixture');
   fs.writeFileSync(path.join(root, 'redirect.html'), '<html><head><meta http-equiv="refresh" content="0; url=/blog/"></head></html>');
+  const articleDir = path.join(root, 'client/details/articles');
+  fs.mkdirSync(articleDir, { recursive: true });
+  fs.writeFileSync(path.join(articleDir, `${'a'.repeat(64)}.html`), '<div id="article-body"><p>Fragment</p></div>');
   assert.deepEqual(verifyPageNavigation(root, 'https://example.test/blog/'), { htmlPages: 3, redirectPages: 1, references: 6, fragmentLinks: 2 });
 });
 

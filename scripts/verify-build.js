@@ -4,7 +4,34 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { createHash } = require('node:crypto');
 const { CONTRACT: INDEX_CONTRACT, MAX_SHARD_BYTES, SHARD_URL_PATTERN } = require('./shard-search-index');
+const {
+  MANIFEST_CONTRACT: DESKTOP_MANIFEST_CONTRACT,
+  SNAPSHOT_CONTRACT: DESKTOP_SNAPSHOT_CONTRACT,
+  DETAIL_CONTRACT: DESKTOP_DETAIL_CONTRACT,
+  MAX_MANIFEST_BYTES: MAX_DESKTOP_MANIFEST_BYTES,
+  MAX_SNAPSHOT_BYTES: MAX_DESKTOP_SNAPSHOT_BYTES,
+  MAX_SHARD_BYTES: MAX_DESKTOP_SHARD_BYTES,
+  MAX_SHARDS: MAX_DESKTOP_SHARDS,
+  MAX_TOTAL_CATALOG_BYTES: MAX_DESKTOP_TOTAL_CATALOG_BYTES,
+  MAX_DETAIL_BYTES: MAX_DESKTOP_DETAIL_BYTES,
+  MAX_ARTICLE_BYTES: MAX_DESKTOP_ARTICLE_BYTES,
+  MAX_ASSET_BYTES: MAX_DESKTOP_ASSET_BYTES,
+  MAX_ARTICLE_RESOURCES: MAX_DESKTOP_ARTICLE_RESOURCES,
+  MAX_BUNDLED_ARTICLE_ASSETS_BYTES: MAX_DESKTOP_BUNDLED_ASSETS_BYTES,
+  SNAPSHOT_URL_PATTERN,
+  CATALOG_SHARD_URL_PATTERN,
+  TOMBSTONE_SHARD_URL_PATTERN,
+  DETAIL_URL_PATTERN,
+  ARTICLE_URL_PATTERN,
+  APPEARANCE_ID_PATTERN,
+  SAFE_RELATIVE_URL_PATTERN,
+  ISO_TIMESTAMP_WITH_TZ_PATTERN,
+  COMMIT_OID_PATTERN,
+  SHA256_PATTERN,
+  assertSafeArticleHtml
+} = require('./export-desktop-details');
 const indexProtocols = require('../assets/js/protocol-registry');
+const tagCore = require('../assets/js/tag-core');
 const { verifyPageNavigation } = require('./verify-page-navigation');
 const { verifyEditionFeature } = require('./verify-edition-feature');
 
@@ -297,6 +324,494 @@ function verifyPaperToolCoverage(files, root) {
   return { paperPages, sidecarPages, sourceTools, richArxivTools, richConferenceTools, selectionOnlyFallbacks };
 }
 
+function hasExactKeys(object, expectedKeys, label) {
+  invariant(object && typeof object === 'object' && !Array.isArray(object), `${label} 必须为对象`);
+  const actual = Object.keys(object);
+  invariant(
+    actual.length === expectedKeys.length && expectedKeys.every(key => Object.prototype.hasOwnProperty.call(object, key)),
+    `${label} 字段集合不匹配`
+  );
+}
+
+function readVerifiedBytes(root, relative, expectedBytes, expectedSha256, maxBytes, label) {
+  invariant(typeof relative === 'string' && SAFE_RELATIVE_URL_PATTERN.test(relative), `${label} 路径非法：${relative}`);
+  let cursor = root;
+  const parts = relative.split('/');
+  for (const part of parts.slice(0, -1)) {
+    cursor = path.join(cursor, part);
+    invariant(fs.existsSync(cursor), `缺少目录：${cursor}`);
+    const dirStat = fs.lstatSync(cursor);
+    invariant(dirStat.isDirectory() && !dirStat.isSymbolicLink(), `${label} 父路径不是普通目录：${relative}`);
+  }
+  const file = path.join(root, relative);
+  invariant(fs.existsSync(file), `缺少构建产物：${file}`);
+  const stat = fs.lstatSync(file);
+  invariant(stat.isFile() && !stat.isSymbolicLink() && fs.realpathSync(file) === file, `${label} 不是普通文件：${relative}`);
+  invariant(stat.size > 0 && stat.size <= maxBytes, `${label} 大小越界：${relative} (${stat.size})`);
+  if (expectedBytes !== null) {
+    invariant(stat.size === expectedBytes, `${label} 字节数漂移：${relative} (期望 ${expectedBytes}，实际 ${stat.size})`);
+  }
+  const buffer = fs.readFileSync(file);
+  invariant(buffer.length === stat.size, `${label} 读取字节长度不一致：${relative}`);
+  const actualSha = createHash('sha256').update(buffer).digest('hex');
+  if (expectedSha256 !== null) {
+    invariant(actualSha === expectedSha256, `${label} SHA-256 漂移：${relative}`);
+  }
+  return { buffer, sha256: actualSha };
+}
+
+function decodeUtf8Strict(buffer, label) {
+  try {
+    return new TextDecoder('utf-8', { fatal: true }).decode(buffer);
+  } catch {
+    throw new Error(`${label} 不是合法 UTF-8`);
+  }
+}
+
+function parseJsonStrict(buffer, label) {
+  const text = decodeUtf8Strict(buffer, label);
+  try {
+    return { text, value: JSON.parse(text) };
+  } catch {
+    throw new Error(`${label} 不是合法 JSON`);
+  }
+}
+
+function verifyDesktopDetails(buildDir) {
+  const requested = path.resolve(buildDir);
+  const rootStat = fs.lstatSync(requested);
+  invariant(rootStat.isDirectory() && !rootStat.isSymbolicLink(), '构建目录必须为普通目录');
+  const root = fs.realpathSync(requested);
+
+  const detailsDir = path.join(root, 'client', 'details');
+  invariant(fs.existsSync(detailsDir), `缺少桌面静态数据包目录：${detailsDir}`);
+  const detailsDirStat = fs.lstatSync(detailsDir);
+  invariant(detailsDirStat.isDirectory() && !detailsDirStat.isSymbolicLink(), 'client/details 必须为普通目录');
+
+  // Verify content-addressed directory hygiene (no symlinks, every content-addressed filename matches raw SHA-256)
+  const allowedSubdirs = new Set(['snapshots', 'catalog', 'tombstones', 'papers', 'articles', 'assets']);
+  const diskDetailsFiles = new Set();
+  for (const entry of fs.readdirSync(detailsDir, { withFileTypes: true })) {
+    const entryFull = path.join(detailsDir, entry.name);
+    const st = fs.lstatSync(entryFull);
+    invariant(!st.isSymbolicLink(), `client/details 禁止符号链接：${entryFull}`);
+    if (st.isFile()) {
+      invariant(entry.name === 'manifest.json', `client/details 根目录存在未知文件：${entry.name}`);
+      diskDetailsFiles.add('client/details/manifest.json');
+    } else if (st.isDirectory()) {
+      invariant(allowedSubdirs.has(entry.name), `client/details 存在未知子目录：${entry.name}`);
+      for (const child of fs.readdirSync(entryFull, { withFileTypes: true })) {
+        const childFull = path.join(entryFull, child.name);
+        const cst = fs.lstatSync(childFull);
+        invariant(cst.isFile() && !cst.isSymbolicLink(), `client/details/${entry.name} 仅允许普通文件：${child.name}`);
+        const match = entry.name === 'assets'
+          ? child.name.match(/^([a-f0-9]{64})(\.[a-z0-9]+)$/)
+          : child.name.match(/^([a-f0-9]{64})(\.(?:json|html))$/);
+        const expectedExt = entry.name === 'articles' ? '.html' : (entry.name === 'assets' ? match?.[2] : '.json');
+        invariant(match && match[2] === expectedExt, `内容寻址文件命名非法：${entry.name}/${child.name}`);
+        const raw = fs.readFileSync(childFull);
+        invariant(createHash('sha256').update(raw).digest('hex') === match[1],
+          `内容寻址文件实际字节与文件名 SHA 不符：${entry.name}/${child.name}`);
+        diskDetailsFiles.add(`client/details/${entry.name}/${child.name}`);
+      }
+    } else {
+      throw new Error(`client/details 含非常规文件系统对象：${entryFull}`);
+    }
+  }
+
+  // 1. Verify client/details/manifest.json
+  const manifestRead = readVerifiedBytes(
+    root,
+    'client/details/manifest.json',
+    null,
+    null,
+    MAX_DESKTOP_MANIFEST_BYTES,
+    'client/details/manifest.json'
+  );
+  const { text: manifestText, value: manifest } = parseJsonStrict(manifestRead.buffer, 'client/details/manifest.json');
+  invariant(!manifestText.includes(manifestRead.sha256), 'manifest.json 禁止包含自身 SHA');
+  invariant(indexProtocols.isCurrentHeader(manifest, DESKTOP_MANIFEST_CONTRACT),
+    'manifest.json 合同声明或结构指纹未登记或已失效');
+  const manifestSchema = indexProtocols.declaredSchema(
+    manifest.contract, DESKTOP_MANIFEST_CONTRACT, manifest.schemaFingerprint
+  );
+  hasExactKeys(manifest, ['contract', 'schemaFingerprint', ...manifestSchema.fields], 'manifest.json');
+  invariant(manifest.basePath === SITE_PREFIX, `manifest.basePath 非法：${manifest.basePath}`);
+  invariant(COMMIT_OID_PATTERN.test(manifest.sourceCommit), `manifest.sourceCommit 非法：${manifest.sourceCommit}`);
+  invariant(
+    ISO_TIMESTAMP_WITH_TZ_PATTERN.test(manifest.generatedAt) && Number.isFinite(Date.parse(manifest.generatedAt)),
+    `manifest.generatedAt 非法：${manifest.generatedAt}`
+  );
+  invariant(SHA256_PATTERN.test(manifest.snapshotId), `manifest.snapshotId 非法：${manifest.snapshotId}`);
+  hasExactKeys(manifest.snapshot, manifestSchema.descriptorFields, 'manifest.snapshot');
+  invariant(
+    manifest.snapshot.url === `client/details/snapshots/${manifest.snapshotId}.json`
+    && SNAPSHOT_URL_PATTERN.test(manifest.snapshot.url)
+    && manifest.snapshot.sha256 === manifest.snapshotId
+    && Number.isSafeInteger(manifest.snapshot.bytes)
+    && manifest.snapshot.bytes > 0
+    && manifest.snapshot.bytes <= MAX_DESKTOP_SNAPSHOT_BYTES,
+    'manifest.snapshot 描述符非法或与 snapshotId 不一致'
+  );
+
+  // 2. Verify snapshot JSON
+  const snapshotRead = readVerifiedBytes(
+    root,
+    manifest.snapshot.url,
+    manifest.snapshot.bytes,
+    manifest.snapshot.sha256,
+    MAX_DESKTOP_SNAPSHOT_BYTES,
+    manifest.snapshot.url
+  );
+  const { text: snapshotText, value: snapshot } = parseJsonStrict(snapshotRead.buffer, manifest.snapshot.url);
+  invariant(!snapshotText.includes(manifest.snapshotId), '快照 JSON 禁止包含自身 SHA');
+  invariant(indexProtocols.isCurrentHeader(snapshot, DESKTOP_SNAPSHOT_CONTRACT),
+    '快照 JSON 合同声明或结构指纹未登记或已失效');
+  const snapshotSchema = indexProtocols.declaredSchema(
+    snapshot.contract, DESKTOP_SNAPSHOT_CONTRACT, snapshot.schemaFingerprint
+  );
+  hasExactKeys(snapshot, ['contract', 'schemaFingerprint', ...snapshotSchema.fields], 'snapshot');
+  invariant(snapshot.sourceCommit === manifest.sourceCommit, 'manifest 与 snapshot 的 sourceCommit 不一致（混入不同提交版本）');
+  invariant(
+    Number.isSafeInteger(snapshot.recordCount) && snapshot.recordCount > 0
+    && Number.isSafeInteger(snapshot.appearanceCount) && snapshot.appearanceCount === snapshot.recordCount
+    && Number.isSafeInteger(snapshot.paperCount) && snapshot.paperCount > 0 && snapshot.paperCount <= snapshot.appearanceCount
+    && Number.isSafeInteger(snapshot.tombstoneCount) && snapshot.tombstoneCount >= 0,
+    'snapshot 计数非法或不闭合'
+  );
+
+  // 3. Verify tagCatalogs closure
+  invariant(snapshot.tagCatalogs && typeof snapshot.tagCatalogs === 'object', 'snapshot.tagCatalogs 缺失');
+  const tagSnapDesc = snapshot.tagCatalogs.snapshot;
+  const tagVerDesc = snapshot.tagCatalogs.versions;
+  invariant(tagSnapDesc && tagVerDesc, 'snapshot.tagCatalogs 缺少成对词表描述符');
+  const tagSnapRead = readVerifiedBytes(
+    root, tagSnapDesc.url, tagSnapDesc.bytes, tagSnapDesc.sha256, 16 * 1024 * 1024, 'tagCatalogs.snapshot'
+  );
+  const tagVerRead = readVerifiedBytes(
+    root, tagVerDesc.url, tagVerDesc.bytes, tagVerDesc.sha256, 16 * 1024 * 1024, 'tagCatalogs.versions'
+  );
+  const { value: tagSnapVal } = parseJsonStrict(tagSnapRead.buffer, tagSnapDesc.url);
+  const { value: tagVerVal } = parseJsonStrict(tagVerRead.buffer, tagVerDesc.url);
+  invariant(indexProtocols.hasValidHeader(tagSnapVal, 'paper-tag-catalog-snapshot'), 'tagCatalogs.snapshot 头部非法');
+  invariant(indexProtocols.hasValidHeader(tagVerVal, 'paper-tag-catalog-versions'), 'tagCatalogs.versions 头部非法');
+  tagCore.createRegistry(tagSnapVal, tagVerVal);
+
+  // 4. Verify catalogShards
+  invariant(
+    Array.isArray(snapshot.catalogShards) && snapshot.catalogShards.length > 0 && snapshot.catalogShards.length <= MAX_DESKTOP_SHARDS,
+    'snapshot.catalogShards 数量非法'
+  );
+  let catalogTotalBytes = 0;
+  let catalogRecordCount = 0;
+  const seenCatalogShardUrls = new Set();
+  const activeAppearances = new Map();
+
+  for (const shard of snapshot.catalogShards) {
+    hasExactKeys(shard, snapshotSchema.shardFields, 'catalogShard');
+    const urlMatch = typeof shard.url === 'string' ? shard.url.match(CATALOG_SHARD_URL_PATTERN) : null;
+    invariant(
+      urlMatch && urlMatch[1] === shard.sha256 && !seenCatalogShardUrls.has(shard.url),
+      `目录分片路径非法或重复：${shard.url}`
+    );
+    seenCatalogShardUrls.add(shard.url);
+    invariant(
+      Number.isSafeInteger(shard.bytes) && shard.bytes > 0 && shard.bytes <= MAX_DESKTOP_SHARD_BYTES
+      && Number.isSafeInteger(shard.recordCount) && shard.recordCount > 0,
+      `目录分片大小或记录数非法：${shard.url}`
+    );
+    const shardRead = readVerifiedBytes(root, shard.url, shard.bytes, shard.sha256, MAX_DESKTOP_SHARD_BYTES, shard.url);
+    const { value: rows } = parseJsonStrict(shardRead.buffer, shard.url);
+    invariant(Array.isArray(rows) && rows.length === shard.recordCount, `目录分片条数漂移：${shard.url}`);
+    for (const row of rows) {
+      hasExactKeys(row, snapshotSchema.catalogRecordFields, `catalogRecord(${row?.appearanceId})`);
+      invariant(APPEARANCE_ID_PATTERN.test(row.appearanceId) && !activeAppearances.has(row.appearanceId),
+        `目录记录 appearanceId 非法或重复：${row.appearanceId}`);
+      invariant(row.pageUrl === row.appearanceId, `目录记录 pageUrl 与 appearanceId 不一致：${row.appearanceId}`);
+      invariant(['paper', 'daily', 'conference'].includes(row.pageType), `目录记录 pageType 非法：${row.pageType}`);
+      invariant(['active', 'retracted'].includes(row.publicationStatus), `目录记录 publicationStatus 非法：${row.publicationStatus}`);
+      invariant(SHA256_PATTERN.test(row.articleRevisionId), `目录记录 articleRevisionId 非法：${row.appearanceId}`);
+      activeAppearances.set(row.appearanceId, row);
+    }
+    catalogTotalBytes += shardRead.buffer.length;
+    catalogRecordCount += rows.length;
+  }
+  invariant(
+    catalogRecordCount === snapshot.recordCount && catalogTotalBytes <= MAX_DESKTOP_TOTAL_CATALOG_BYTES,
+    '目录分片总条数或总大小不闭合'
+  );
+
+  // 5. Verify tombstoneShards and strict disjointness from active catalog
+  invariant(Array.isArray(snapshot.tombstoneShards) && snapshot.tombstoneShards.length <= MAX_DESKTOP_SHARDS,
+    'snapshot.tombstoneShards 非法');
+  if (snapshot.tombstoneCount === 0) {
+    invariant(snapshot.tombstoneShards.length === 0, 'tombstoneCount 为 0 时 tombstoneShards 必须为空数组');
+  } else {
+    invariant(snapshot.tombstoneShards.length > 0, 'tombstoneCount > 0 时必须存在 tombstoneShards');
+  }
+  let actualTombstoneCount = 0;
+  const seenTombstoneShardUrls = new Set();
+  const seenTombstoneAppearances = new Set();
+  for (const shard of snapshot.tombstoneShards) {
+    hasExactKeys(shard, snapshotSchema.shardFields, 'tombstoneShard');
+    const urlMatch = typeof shard.url === 'string' ? shard.url.match(TOMBSTONE_SHARD_URL_PATTERN) : null;
+    invariant(
+      urlMatch && urlMatch[1] === shard.sha256 && !seenTombstoneShardUrls.has(shard.url),
+      `tombstone 分片路径非法或重复：${shard.url}`
+    );
+    seenTombstoneShardUrls.add(shard.url);
+    invariant(
+      Number.isSafeInteger(shard.bytes) && shard.bytes > 0 && shard.bytes <= MAX_DESKTOP_SHARD_BYTES
+      && Number.isSafeInteger(shard.recordCount) && shard.recordCount > 0,
+      `tombstone 分片大小或条数非法：${shard.url}`
+    );
+    const shardRead = readVerifiedBytes(root, shard.url, shard.bytes, shard.sha256, MAX_DESKTOP_SHARD_BYTES, shard.url);
+    const { value: tombs } = parseJsonStrict(shardRead.buffer, shard.url);
+    invariant(Array.isArray(tombs) && tombs.length === shard.recordCount, `tombstone 分片条数漂移：${shard.url}`);
+    for (const tomb of tombs) {
+      hasExactKeys(tomb, snapshotSchema.tombstoneRecordFields, `tombstone(${tomb?.appearanceId})`);
+      invariant(APPEARANCE_ID_PATTERN.test(tomb.appearanceId), `tombstone appearanceId 非法：${tomb.appearanceId}`);
+      invariant(!seenTombstoneAppearances.has(tomb.appearanceId), `重复的 tombstone：${tomb.appearanceId}`);
+      invariant(!activeAppearances.has(tomb.appearanceId),
+        `tombstone 与当前活动目录记录相交（恢复记录未退出 tombstone）：${tomb.appearanceId}`);
+      seenTombstoneAppearances.add(tomb.appearanceId);
+      invariant(SHA256_PATTERN.test(tomb.previousArticleRevisionId), `tombstone previousArticleRevisionId 非法：${tomb.appearanceId}`);
+      invariant(['site-removed', 'retracted', 'replaced'].includes(tomb.reason), `tombstone reason 非法：${tomb.reason}`);
+      invariant(COMMIT_OID_PATTERN.test(tomb.sourceCommit), `tombstone sourceCommit 非法：${tomb.sourceCommit}`);
+      invariant(
+        ISO_TIMESTAMP_WITH_TZ_PATTERN.test(tomb.effectiveAt) && Number.isFinite(Date.parse(tomb.effectiveAt)),
+        `tombstone effectiveAt 非法：${tomb.effectiveAt}`
+      );
+      if (tomb.reason === 'retracted') {
+        invariant(
+          typeof tomb.evidenceUrl === 'string' && /^https:\/\/[^\s<>"\\]+$/.test(tomb.evidenceUrl)
+          && typeof tomb.note === 'string' && tomb.note.trim().length > 0,
+          `正式撤稿 tombstone 缺少 HTTPS evidenceUrl 或说明：${tomb.appearanceId}`
+        );
+      }
+      if (tomb.reason === 'replaced') {
+        invariant(
+          typeof tomb.replacementAppearanceId === 'string' && activeAppearances.has(tomb.replacementAppearanceId),
+          `replaced tombstone 的替换目标不在当前活动目录中：${tomb.appearanceId}`
+        );
+      }
+    }
+    actualTombstoneCount += tombs.length;
+  }
+  invariant(actualTombstoneCount === snapshot.tombstoneCount, 'tombstone 总条数不闭合');
+
+  // 6. Verify ALL detail JSONs, ALL article HTML fragments, sidecars, and bundled asset descriptors
+  const detailSchema = indexProtocols.declaredSchema(
+    DESKTOP_DETAIL_CONTRACT, DESKTOP_DETAIL_CONTRACT, indexProtocols.schemaFingerprint(DESKTOP_DETAIL_CONTRACT)
+  );
+  const verifiedDetails = new Set();
+  const verifiedArticles = new Map(); // url -> { bytes, sha256 }
+  const verifiedBundledFiles = new Map(); // url -> { bytes, sha256 }
+  const verifiedSidecarAbstracts = new Map(); // url -> string | null
+  const distinctPaperKeys = new Set();
+
+  for (const [appearanceId, row] of activeAppearances.entries()) {
+    hasExactKeys(row.detail, detailSchema.descriptorFields, `catalog.detail(${appearanceId})`);
+    const detailMatch = typeof row.detail.url === 'string' ? row.detail.url.match(DETAIL_URL_PATTERN) : null;
+    invariant(
+      detailMatch && detailMatch[1] === row.detail.sha256
+      && Number.isSafeInteger(row.detail.bytes) && row.detail.bytes > 0 && row.detail.bytes <= MAX_DESKTOP_DETAIL_BYTES,
+      `详情描述符非法：${appearanceId}`
+    );
+    verifiedDetails.add(row.detail.url);
+    const detailRead = readVerifiedBytes(
+      root, row.detail.url, row.detail.bytes, row.detail.sha256, MAX_DESKTOP_DETAIL_BYTES, row.detail.url
+    );
+    const { value: detail } = parseJsonStrict(detailRead.buffer, row.detail.url);
+    invariant(indexProtocols.isCurrentHeader(detail, DESKTOP_DETAIL_CONTRACT),
+      `详情 JSON 合同声明或结构指纹未登记：${row.detail.url}`);
+    hasExactKeys(detail, ['contract', 'schemaFingerprint', ...detailSchema.fields], row.detail.url);
+
+    // Prevent cross-paper / cross-snapshot mixups
+    invariant(
+      detail.appearanceId === appearanceId
+      && detail.paperId === row.paperId
+      && detail.identityStatus === row.identityStatus
+      && detail.sourceKind === row.sourceKind
+      && detail.sourceVersion?.sourceVersionId === row.sourceVersionId
+      && detail.appearance?.appearanceId === appearanceId
+      && detail.appearance?.pageType === row.pageType
+      && detail.appearance?.publicationStatus === row.publicationStatus
+      && detail.articleRevision?.articleRevisionId === row.articleRevisionId
+      && detail.articleRevision?.appearanceId === appearanceId
+      && detail.dates?.blogPublishedAt === row.blogPublishedAt
+      && detail.dates?.articleUpdatedAt === row.articleUpdatedAt,
+      `目录记录与详情记录字段不一致（串稿或混版本）：${appearanceId}`
+    );
+
+    if (row.pageType === 'paper') {
+      if (row.identityStatus === 'verified') {
+        invariant(typeof row.paperId === 'string' && row.paperId.length > 0, `已核验论文缺少 paperId：${appearanceId}`);
+        distinctPaperKeys.add(row.paperId);
+      } else {
+        invariant(row.paperId === null && row.sourceVersionId === null, `未核验论文不得伪造 paperId 或 sourceVersionId：${appearanceId}`);
+        distinctPaperKeys.add(`unverified:${appearanceId}`);
+      }
+      invariant(
+        Array.isArray(detail.appearance.memberAppearanceIds) && detail.appearance.memberAppearanceIds.length === 0
+        && Array.isArray(detail.appearance.memberPaperIds) && detail.appearance.memberPaperIds.length === 0,
+        `单篇论文页不得声明汇总成员关系：${appearanceId}`
+      );
+    } else {
+      invariant(
+        row.paperId === null && row.sourceVersionId === null && row.identityStatus === 'aggregate-page'
+        && detail.titles?.originalTitle === null,
+        `汇总页不得伪装为单篇论文身份：${appearanceId}`
+      );
+      invariant(Array.isArray(detail.appearance.memberAppearanceIds) && Array.isArray(detail.appearance.memberPaperIds),
+        `汇总页成员关系必须为数组：${appearanceId}`);
+      for (const memberApp of detail.appearance.memberAppearanceIds) {
+        const target = activeAppearances.get(memberApp);
+        invariant(target && target.pageType === 'paper', `汇总页引用了不存在或非单篇的成员页面：${appearanceId} -> ${memberApp}`);
+      }
+    }
+
+    if (row.publicationStatus === 'retracted') {
+      invariant(
+        detail.appearance.retraction
+        && typeof detail.appearance.retraction.evidenceUrl === 'string'
+        && /^https:\/\/[^\s<>"\\]+$/.test(detail.appearance.retraction.evidenceUrl)
+        && typeof detail.appearance.retraction.note === 'string'
+        && detail.appearance.retraction.note.trim().length > 0,
+        `retracted 页面缺少真实 HTTPS 撤稿证据：${appearanceId}`
+      );
+    }
+
+    // Citation check
+    invariant(
+      detail.citation && indexProtocols.hasValidHeader(detail.citation.sourceRecord, 'paper-citation-source')
+      && Array.isArray(detail.citation.missingFields) && detail.citation.fieldStatus && typeof detail.citation.fieldStatus === 'object',
+      `详情 citation 结构或来源头非法：${appearanceId}`
+    );
+    if (!detail.citation.sourceRecord.date) {
+      invariant(detail.dates.paperPublishedAt === null, `不得使用博客日期伪造缺失的论文发表日期：${appearanceId}`);
+    }
+
+    // Sidecars & abstract check
+    invariant(detail.sidecars && typeof detail.sidecars.available === 'boolean' && detail.sidecars.files,
+      `详情 sidecars 结构非法：${appearanceId}`);
+    if (detail.sidecars.available) {
+      for (const sName of ['citation.json', 'citation.bib', 'citation.ris', 'rethink-context.json']) {
+        const sDesc = detail.sidecars.files[sName];
+        invariant(sDesc && typeof sDesc.url === 'string' && SHA256_PATTERN.test(sDesc.sha256) && sDesc.bytes > 0,
+          `详情 sidecar 描述符缺失：${appearanceId} ${sName}`);
+        let cached = verifiedBundledFiles.get(sDesc.url);
+        if (!cached) {
+          const sRead = readVerifiedBytes(root, sDesc.url, sDesc.bytes, sDesc.sha256, 512 * 1024, sDesc.url);
+          cached = { bytes: sRead.buffer.length, sha256: sRead.sha256 };
+          verifiedBundledFiles.set(sDesc.url, cached);
+          if (sName === 'rethink-context.json') {
+            const { value: ctxVal } = parseJsonStrict(sRead.buffer, sDesc.url);
+            invariant(indexProtocols.hasValidHeader(ctxVal, 'paper-research-context'), `上下文协议头非法：${sDesc.url}`);
+            verifiedSidecarAbstracts.set(sDesc.url, ctxVal.abstract && ctxVal.abstract.length > 0 ? ctxVal.abstract : null);
+          }
+        }
+        invariant(cached.bytes === sDesc.bytes && cached.sha256 === sDesc.sha256, `sidecar 缓存核对不符：${sDesc.url}`);
+      }
+      const expectedAbstract = verifiedSidecarAbstracts.get(detail.sidecars.files['rethink-context.json'].url) ?? null;
+      invariant(detail.abstract === expectedAbstract, `详情原摘要与已核验 rethink-context.json 不一致：${appearanceId}`);
+    } else {
+      invariant(detail.abstract === null, `无已核验上下文 sidecar 时严禁用 AI 摘要冒充原摘要：${appearanceId}`);
+    }
+
+    // Article HTML fragment check
+    const artDesc = detail.articleRevision.articleDescriptor;
+    hasExactKeys(artDesc, detailSchema.descriptorFields, `articleDescriptor(${appearanceId})`);
+    const artMatch = typeof artDesc.url === 'string' ? artDesc.url.match(ARTICLE_URL_PATTERN) : null;
+    invariant(
+      artMatch && artMatch[1] === artDesc.sha256
+      && Number.isSafeInteger(artDesc.bytes) && artDesc.bytes > 0 && artDesc.bytes <= MAX_DESKTOP_ARTICLE_BYTES,
+      `正文描述符非法：${appearanceId}`
+    );
+    let cachedArticle = verifiedArticles.get(artDesc.url);
+    if (!cachedArticle) {
+      const artRead = readVerifiedBytes(root, artDesc.url, artDesc.bytes, artDesc.sha256, MAX_DESKTOP_ARTICLE_BYTES, artDesc.url);
+      const artHtml = decodeUtf8Strict(artRead.buffer, artDesc.url);
+      assertSafeArticleHtml(artHtml, artDesc.url);
+      cachedArticle = { bytes: artRead.buffer.length, sha256: artRead.sha256 };
+      verifiedArticles.set(artDesc.url, cachedArticle);
+    }
+    invariant(cachedArticle.bytes === artDesc.bytes && cachedArticle.sha256 === artDesc.sha256,
+      `正文缓存大小或 SHA 不一致：${artDesc.url}`);
+
+    // Resources check
+    invariant(Array.isArray(detail.resources) && detail.resources.length <= MAX_DESKTOP_ARTICLE_RESOURCES,
+      `详情资源列表非法：${appearanceId}`);
+    let bundledBytesSum = 0;
+    for (const res of detail.resources) {
+      invariant(
+        res && typeof res.resourceId === 'string' && res.resourceId
+        && typeof res.kind === 'string' && res.kind
+        && typeof res.mediaType === 'string' && res.mediaType
+        && typeof res.sourceUrl === 'string' && res.sourceUrl
+        && typeof res.requiredForOffline === 'boolean'
+        && ['bundled', 'external', 'missing'].includes(res.availability),
+        `资源记录字段非法：${appearanceId}`
+      );
+      if (res.availability === 'bundled') {
+        invariant(res.descriptor && typeof res.descriptor === 'object', `bundled 资源缺少文件描述符：${appearanceId}`);
+        hasExactKeys(res.descriptor, detailSchema.descriptorFields, `resource.descriptor(${appearanceId})`);
+        invariant(
+          Number.isSafeInteger(res.descriptor.bytes) && res.descriptor.bytes > 0 && res.descriptor.bytes <= MAX_DESKTOP_ASSET_BYTES
+          && SHA256_PATTERN.test(res.descriptor.sha256),
+          `bundled 资源大小或 SHA 非法：${appearanceId}`
+        );
+        let cachedAsset = verifiedBundledFiles.get(res.descriptor.url);
+        if (!cachedAsset) {
+          const assetRead = readVerifiedBytes(
+            root, res.descriptor.url, res.descriptor.bytes, res.descriptor.sha256, MAX_DESKTOP_ASSET_BYTES, res.descriptor.url
+          );
+          cachedAsset = { bytes: assetRead.buffer.length, sha256: assetRead.sha256 };
+          verifiedBundledFiles.set(res.descriptor.url, cachedAsset);
+        }
+        invariant(cachedAsset.bytes === res.descriptor.bytes && cachedAsset.sha256 === res.descriptor.sha256,
+          `bundled 资源与实际文件不一致：${res.descriptor.url}`);
+        bundledBytesSum += res.descriptor.bytes;
+      } else {
+        invariant(res.descriptor === null, `external/missing 资源禁止伪造 descriptor 或 0 字节 SHA：${appearanceId}`);
+      }
+    }
+    invariant(bundledBytesSum <= MAX_DESKTOP_BUNDLED_ASSETS_BYTES, `单篇捆绑资源总字节越界：${appearanceId}`);
+  }
+
+  invariant(snapshot.paperCount === distinctPaperKeys.size,
+    `snapshot.paperCount (${snapshot.paperCount}) 与实际去重论文数 (${distinctPaperKeys.size}) 不一致`);
+
+  // Enforce 100% exact set equality between client/details files on disk and verified reachable descriptors
+  const reachableDetailsFiles = new Set([
+    'client/details/manifest.json',
+    manifest.snapshot.url,
+    ...seenCatalogShardUrls,
+    ...seenTombstoneShardUrls,
+    ...verifiedDetails,
+    ...verifiedArticles.keys(),
+    ...[...verifiedBundledFiles.keys()].filter(rel => rel.startsWith('client/details/'))
+  ]);
+  for (const diskFile of diskDetailsFiles) {
+    invariant(reachableDetailsFiles.has(diskFile), `client/details 存在未被当前快照引用的残留或伪造文件：${diskFile}`);
+  }
+  invariant(diskDetailsFiles.size === reachableDetailsFiles.size,
+    `client/details 磁盘文件数 (${diskDetailsFiles.size}) 与可达引用集合 (${reachableDetailsFiles.size}) 不一致`);
+
+  return {
+    snapshotId: manifest.snapshotId,
+    sourceCommit: manifest.sourceCommit,
+    recordCount: snapshot.recordCount,
+    paperCount: snapshot.paperCount,
+    appearanceCount: snapshot.appearanceCount,
+    tombstoneCount: snapshot.tombstoneCount,
+    catalogShards: snapshot.catalogShards.length,
+    tombstoneShards: snapshot.tombstoneShards.length,
+    verifiedArticles: verifiedArticles.size,
+    verifiedBundledFiles: verifiedBundledFiles.size
+  };
+}
+
 function verifyBuild(buildDir) {
   const root = path.resolve(buildDir);
   const allFiles = walkFiles(root);
@@ -351,6 +866,18 @@ function verifyBuild(buildDir) {
   invariant(paperTools.sidecarPages === declaredSidecarPages,
     `客户端声明数量与源页面不一致：产物 ${paperTools.sidecarPages}，源页面 ${declaredSidecarPages}`);
 
+  const desktopDetails = verifyDesktopDetails(root);
+  // Ensure desktop catalog covers every non-chrome research page in client/index.json
+  let expectedResearchRecords = 0;
+  for (const shard of clientIndex.shards) {
+    const arr = JSON.parse(fs.readFileSync(path.join(root, 'client', shard.url), 'utf8'));
+    for (const item of arr) {
+      if (item.pageType !== 'page') expectedResearchRecords += 1;
+    }
+  }
+  invariant(desktopDetails.recordCount === expectedResearchRecords,
+    `桌面详情目录条数 (${desktopDetails.recordCount}) 与搜索索引研究页条数 (${expectedResearchRecords}) 不一致`);
+
   const stats = {
     htmlLanguage: headStats.htmlLanguage,
     icons: headStats.iconCount,
@@ -358,6 +885,7 @@ function verifyBuild(buildDir) {
     rss: rssStats,
     searchIndex: indexStats,
     clientSearchIndex: clientIndexStats,
+    desktopDetails,
     searchScripts: searchScripts.length,
     libraryScripts: libraryScripts.length,
     paperTools,
@@ -378,5 +906,5 @@ if (require.main === module) {
 
 module.exports = {
   extractHead, verifyHead, verifyRss, verifySearchIndex,
-  verifyPaperToolCoverage, verifyBuild, verifySearchManifest
+  verifyPaperToolCoverage, verifyBuild, verifySearchManifest, verifyDesktopDetails
 };
