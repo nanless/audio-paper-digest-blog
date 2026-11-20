@@ -1,0 +1,80 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.24794v1",
+  "abstract": "Prior work on engagement modeling in children with autism spectrum disorder (ASD) has demonstrated substantial individual variability in behavioral features, particularly in visual modalities. In this work, we extend the literature to acoustic features in naturalistic interactions, where multiple speakers and atypical interaction patterns complicate speaker-specific analysis. We investigated whether speaker diarization improved acoustic engagement modeling during month-long, in-home socially assistive robot (SAR) interventions with seven children with ASD. We trained classical machine learning models using acoustic features extracted from diarized child and parent/caregiver audio and compared their performance with models trained on undiarized audio. Diarized audio consistently yielded higher area under the receiver operating characteristic curve (AUROC) values, although these differences were not statistically significant. More importantly, the relative contributions of child and caregiver acoustic features varied across participants, indicating that the acoustic information associated with engagement was not consistent across children. These findings extend evidence of participant-level variability in ASD engagement modeling to the acoustic domain and demonstrate the feasibility of isolating speaker-specific vocalizations for studying engagement in complex, naturalistic interactions.",
+  "abstractSha256": "7b2d24e5e04a4c1041773fd0a0f7328cb8985a26324414ac53a84e2bd724ef73",
+  "arxivId": "2611.24794",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.24794v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "统计分析",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 5.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "task",
+          "id": "task.diarization",
+          "label": "说话人分离标注"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "统计分析",
+      "primaryMethodId": "method.statistical-analysis",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kaleen Shrestha"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Austin Joel Dympep"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Young Suh Hong"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Maja Matarić"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文用七名自闭症儿童一个月的家庭机器人干预录音，研究先做说话人日志再提取声学特征能否更好地区分参与和不参与，并发现儿童和照顾者声音的相对作用因人而异，但区分效果提升有限且代价是丢掉大量重叠语音。",
+  "originalTitle": "Exploring Speaker-Aware Engagement Modeling for Children with Autism Spectrum Disorder",
+  "pdfUrl": "https://arxiv.org/pdf/2611.24794v1.pdf",
+  "readerTitle": "在家里和机器人玩时，怎样分开孩子和大人的声音来判断参与度",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

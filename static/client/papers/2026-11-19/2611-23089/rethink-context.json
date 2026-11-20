@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.23089v1",
+  "abstract": "First-Order Ambisonics (FOA) offers a practical representation for spatial audio, but its low-order reproduction introduces distinct perceptual limitations during binaural rendering. While recent methods synthesize Higher-Order Ambisonics (HOA) from FOA to overcome these constraints, the importance and potential of early reflections in the upscaling process have not yet been comprehensively explored. To bridge this knowledge gap and understand the potential of incorporating early reflections in FOA upscaling, this work develops an experimental framework that selectively upscales these reflections. By utilizing an energy-based criterion, the proposed framework identifies and selectively renders the strongest early reflections with high-order resolution. The selection mechanism is evaluated across three domains: long-term temporal, short-time temporal, and the joint time-frequency (TF) domain. Validation through objective metrics, including the Scale-Invariant Signal-to-Distortion Ratio (SI-SDR), the clarity index ($C_{50}$), and Interaural Cross-Correlation (IACC), alongside listening tests, demonstrates that the TF-domain provides superior performance. By exploiting the sparsity of speech, the TF approach maintains robust performance in complex multi-talker scenarios, providing insights into the benefits of early reflections for the design of future parametric and data-driven FOA upscaling methods.",
+  "abstractSha256": "d20b7564775b71814851628a6fc81cc92ed37c366c3cf3b08e300cd201dca3c6",
+  "arxivId": "2611.23089",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.23089v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "时频分析",
+    "primaryTask": "空间音频渲染",
+    "rankBucket": "前50%",
+    "score": 5.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.spatial-rendering",
+          "label": "空间音频渲染"
+        },
+        {
+          "facet": "method",
+          "id": "method.time-frequency",
+          "label": "时频分析"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.spatial-audio",
+          "label": "空间音频信号"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.subjective-evaluation",
+          "label": "主观评测"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "时频分析",
+      "primaryMethodId": "method.time-frequency",
+      "primaryTask": "空间音频渲染",
+      "primaryTaskId": "task.spatial-rendering",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "School of Electrical and Computer Engineering, Ben-Gurion University of the Negev, P.O. Box 653, Beer-Sheva, 8410501, Israel"
+      ],
+      "name": "Oded Levi"
+    },
+    {
+      "affiliations": [
+        "School of Electrical and Computer Engineering, Ben-Gurion University of the Negev, P.O. Box 653, Beer-Sheva, 8410501, Israel"
+      ],
+      "name": "Boaz Rafaely"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "本文用已知各条反射信号的理想条件研究只把少量早期反射提升到高阶能否改善双耳重放，并比较长时、短时和时频三种能量选择，发现时频选择在多说话人高直混比下优势最大，但结论依赖理想声场和已知分离这一前提。",
+  "originalTitle": "Insight into Parametric First-Order Ambisonics Upscaling in Time and Frequency Domains",
+  "pdfUrl": "https://arxiv.org/pdf/2611.23089v1.pdf",
+  "readerTitle": "只把最强的几个早期反射做高阶：时域还是时频域选更划算",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

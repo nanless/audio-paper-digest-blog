@@ -1,0 +1,126 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.23348v1",
+  "abstract": "Clinical interviews are central to depression assessment but time-consuming and rater-dependent. Automated severity estimation offers scalable screening, yet existing methods often retain interviewer speech (confounding participant cues), fuse modalities late (losing fine-grained cross-modal dynamics), or score symptoms independently (ignoring inter-symptom correlations). We present SIGMA, a speaker-aware, symptom-structured framework for depression-severity estimation from semi-clinical interviews. SIGMA uses speaker diarization to restrict input to participant speech, cross-attention so that text, audio and video condition one another during encoding, and a graded-response head that predicts the eight questionnaire items jointly through a shared latent severity trait with item-specific ordered thresholds. On the Extended Distress Analysis Interview Corpus, SIGMA achieves state-of-the-art performance (CCC 0.762, RMSE 4.13, MAE 3.30 over five seeds). Ablations confirm that isolating participant speech and joint, structured symptom prediction each substantially improve concordance and estimation accuracy.",
+  "abstractSha256": "11fd8ba43993ad082d5ad8a4cd685f688b7c331ce0a9d969ec3227aa5d4f60c1",
+  "arxivId": "2611.23348",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.23348v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "会话抑郁风险筛查",
+    "rankBucket": "前50%",
+    "score": 5.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.conversational-depression-screening",
+          "label": "会话抑郁风险筛查"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.multitask",
+          "label": "多任务学习"
+        },
+        {
+          "facet": "application",
+          "id": "application.mental-health",
+          "label": "精神健康筛查"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "会话抑郁风险筛查",
+      "primaryTaskId": "task.conversational-depression-screening",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Biostatistics and Health Informatics, King’s College London, London, UK",
+        "Department of Intelligence and Computing, School of Computer Software, Tianjin University, Tianjin, China"
+      ],
+      "name": "Zhuoyuan Tang"
+    },
+    {
+      "affiliations": [
+        "Department of Biostatistics and Health Informatics, King’s College London, London, UK"
+      ],
+      "name": "Tao Wang"
+    },
+    {
+      "affiliations": [
+        "College of Economics, Shenzhen University, Shenzhen, China"
+      ],
+      "name": "Kai Yang"
+    },
+    {
+      "affiliations": [
+        "School of Software Engineering, South China University of Technology, Guangzhou, China"
+      ],
+      "name": "Li Yuan"
+    },
+    {
+      "affiliations": [
+        "Department of Biostatistics and Health Informatics, King’s College London, London, UK"
+      ],
+      "name": "Yuezhou Zhang"
+    },
+    {
+      "affiliations": [
+        "Department of Biostatistics and Health Informatics, King’s College London, London, UK",
+        "Shanghai Mental Health Center, School of Medicine, Shanghai Jiao Tong University, Shanghai, China"
+      ],
+      "name": "Rongrong Zhong"
+    },
+    {
+      "affiliations": [
+        "School of Software Engineering, South China University of Technology, Guangzhou, China"
+      ],
+      "name": "Yi Cai"
+    },
+    {
+      "affiliations": [
+        "Department of Biostatistics and Health Informatics, King’s College London, London, UK"
+      ],
+      "name": "Saskia C. Sanderson"
+    },
+    {
+      "affiliations": [
+        "Department of Psychology, King’s College London, London, UK"
+      ],
+      "name": "Jaime Delgadillo"
+    },
+    {
+      "affiliations": [
+        "Department of Biostatistics and Health Informatics, King’s College London, London, UK",
+        "Institute of Health Informatics, University College London, Euston Road, London NW1 2DA, United Kingdom;",
+        "Health Data Research UK London, University College London, Euston Road, London NW1 2DA, United Kingdom;"
+      ],
+      "name": "Richard Dobson"
+    },
+    {
+      "affiliations": [
+        "Department of Biostatistics and Health Informatics, King’s College London, London, UK"
+      ],
+      "name": "Angus Roberts"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对访谈中混入访问者语音、多模态融合粗糙和症状独立建模的问题，SIGMA 用说话人分离保留被试话语、用等级反应头联合预测八个有序症状条目，在官方测试集上同时取得更好的一致性和更小的误差，但增益主要来自文本与输入清理而非声音画面本身。",
+  "originalTitle": "SIGMA: speaker-isolated, symptom-structured multimodal estimation of depression severity from clinical interviews",
+  "pdfUrl": "https://arxiv.org/pdf/2611.23348v1.pdf",
+  "readerTitle": "只听被试说话、分症状建模：SIGMA 如何从访谈估计抑郁严重度",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

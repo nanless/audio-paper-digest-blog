@@ -1,0 +1,80 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.22593v1",
+  "abstract": "Neural vocoders have achieved remarkable progress in high-fidelity waveform generation in recent years, but most existing methods still rely on full-precision operators, leading to non-negligible storage and computational costs during inference. Binary neural networks (BNNs) provide an alternative direction by quantizing weights and activations to 1 bit. However, directly applying binarization to neural vocoders is rather challenging as it inherently incurs severe information loss. To this end, we propose BiVoC, a BNN-oriented time-frequency neural vocoder for high-fidelity waveform generation. Building on our previous full-precision RNDVoC framework, BiVoC adapts the inverse-problem formulation, range-null decomposition, and fineto-coarse non-uniform subband modeling to the 1-bit setting. Specifically, we develop a simple binarized convolutional unit to provide stable time-frequency feature modeling under binary representations. Furthermore, we analyze the quality-complexity sensitivity of different modules and propose a mixed-precision design to retain quality-sensitive components in full precision while binarizing computation-dominant parts. Extensive experiments are conducted on LibriTTS and multiple out-of-distribution benchmarks. Both objective and subjective results demonstrate that BiVoC substantially outperforms BNN variants obtained by directly binarizing existing vocoders, while achieving competitive performance against several mainstream full-precision vocoder baselines under much lower theoretical computational cost. These results demonstrate the promising potential of BNNs in the audio generation field. Codes and pre-trained weights are available at https://github.com/Andong-Li-speech/BiVoC.",
+  "abstractSha256": "632c2472c534a76fcd238b53091dcf4a40435c0f96c35b78236fcf5a20648112",
+  "arxivId": "2611.22593",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.22593v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "模型量化",
+    "primaryTask": "语音合成",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-synthesis",
+          "label": "语音合成"
+        },
+        {
+          "facet": "method",
+          "id": "method.quantization",
+          "label": "模型量化"
+        },
+        {
+          "facet": "method",
+          "id": "method.gan",
+          "label": "生成对抗网络"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "模型量化",
+      "primaryMethodId": "method.quantization",
+      "primaryTask": "语音合成",
+      "primaryTaskId": "task.speech-synthesis",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Andong Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Tong Lei"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xiaodong Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Chengshi Zheng"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对 mel 频谱图到波形的重建任务，BiVoC 用值域-零空间分解保留可解析部分、只让二值网络估计剩余幅度和相位，并配合非均匀子带与简单二值单元，在 LibriTTS 训练、外部分布测试上明显优于直接二值化的 HiFiGAN 与 Vocos，代价是理论等效算力与通用硬件实测速度不一致且仍需专用位运算内核才能兑现。",
+  "originalTitle": "High-Fidelity Binarized Neural Vocoder",
+  "pdfUrl": "https://arxiv.org/pdf/2611.22593v1.pdf",
+  "readerTitle": "把声码器压到 1 比特还能保真吗：BiVoC 的做法",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

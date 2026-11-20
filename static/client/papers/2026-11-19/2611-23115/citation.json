@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.23115v1",
+  "arxivId": "2611.23115",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.23115v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Dankook University"
+      ],
+      "name": "JunYeong Park"
+    },
+    {
+      "affiliations": [
+        "Beijing Jiaotong University"
+      ],
+      "name": "Shijing Wang"
+    },
+    {
+      "affiliations": [
+        "NVIDIA"
+      ],
+      "name": "Seonwook Park"
+    },
+    {
+      "affiliations": [
+        "NVIDIA"
+      ],
+      "name": "Michael Stengel"
+    },
+    {
+      "affiliations": [
+        "NVIDIA"
+      ],
+      "name": "Shalini De Mello"
+    },
+    {
+      "affiliations": [
+        "Dankook University"
+      ],
+      "name": "Sang-Il Choi"
+    },
+    {
+      "affiliations": [
+        "University of Birmingham"
+      ],
+      "name": "Hyung Jin Chang"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.23115v1",
+  "originalTitle": "Nunchi: Ears Help Eyes in Multi-Party Conversations",
+  "pdfUrl": "https://arxiv.org/pdf/2611.23115v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

@@ -1,0 +1,80 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.21809v1",
+  "abstract": "Subjective user studies are one of the major methods for evaluating music generation models. However, subjective evaluation protocols vary widely and are rarely specified in enough detail to be reproduced, hindering comparison across studies. In this paper, we map subjective evaluation methods in ISMIR music generation papers from 2020-2025 and apply generative psychometrics to assess the stability of their items. We extract 284 items from the papers' methodological descriptions, using an LLM and manual validation to standardize them. We represent these items as contextual embeddings and apply Unique Variable Analysis to remove redundant, locally dependent items and Bootstrap Exploratory Graph Analysis to estimate their latent dimensions. Results show the network converges onto a taxonomy of six stable quality dimensions: Rhythm, Melody, Audio, Composition, Structure, and Lyrics, pointing to a unified methodology for conducting user studies to evaluate music generation models.",
+  "abstractSha256": "282d77963c93370e93a2d1ae617e8d3ef97fc391aaa08e6c581052139222b3da",
+  "arxivId": "2611.21809",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.21809v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "心理测量",
+    "primaryTask": "音乐生成",
+    "rankBucket": "前50%",
+    "score": 6.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-generation",
+          "label": "音乐生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.psychometrics",
+          "label": "心理测量"
+        },
+        {
+          "facet": "method",
+          "id": "method.subjective-evaluation",
+          "label": "主观评测"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.music-information",
+          "label": "音乐信息检索"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "心理测量",
+      "primaryMethodId": "method.psychometrics",
+      "primaryTask": "音乐生成",
+      "primaryTaskId": "task.music-generation",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "João Carlos Santana Silveira"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Caio Von Rondow Morais"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Frederico Pedrosa"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Lucas N. Ferreira"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "本文针对音乐生成听感评价写法各异、难以横向比较的问题，把 2020 至 2025 年 ISMIR 中 150 篇生成论文里的 284 个标准化题目转成向量并做网络分析，得到节奏、旋律、音质、作曲、结构、歌词六个在重采样中稳定存在的维度，并给出每个维度最具代表性的提问。",
+  "originalTitle": "Evaluating the Evaluation of Music Generation Models with Generative Psychometrics",
+  "pdfUrl": "https://arxiv.org/pdf/2611.21809v1.pdf",
+  "readerTitle": "音乐生成的主观评价到底在问什么：从 284 个问题到六个稳定维度",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

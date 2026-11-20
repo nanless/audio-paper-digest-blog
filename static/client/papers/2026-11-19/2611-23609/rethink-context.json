@@ -1,0 +1,80 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.23609v1",
+  "abstract": "How much the teacher talks and when are among the most informative and costly-to-measure signals of teaching. Yet, classroom audio is among the most sensitive data an AI system can process: recordings capture minors and fall under GDPR, preventing raw audio from leaving the recording device. We present a teacher-student segmentation pipeline designed to meet exactly this constraint: label-free at inference, running on a recording device, and requiring no per-session calibration. The pipeline chains a lightweight voice activity detector, compactly pretrained speaker embeddings, agglomerative clustering, and a small logistic regression that assigns the teacher role based on session-relative structure rather than voice identity. We show that our structural cue transfers across classrooms, languages, and acoustic conditions.   In leave-one-teacher-out cross-validation on 292 recordings from 63 teachers across English and German corpora, our pipeline achieves teacher F1 of 0.81 and 0.87, respectively, outperforming both enrollment-based baselines and a 30-second supervised enrollment ceiling. On a commodity smartphone, its performance matches pyannote, a strong neural diarization tool, while running 4.8x faster at comparable peak memory at a real-time factor of ~0.18. We also find that transcribing filtered audio only marginally increases teacher's word error rate from $0.26$ to 0.28. Residual failures concentrate where teacher and student voices are not acoustically separable. However, we show how to flag these sessions label-free at inference so that they can be routed to human review, enabling selective, privacy-preserving deployment.",
+  "abstractSha256": "789e3eb27d883659314139d9dcd3e9da7eee8012ec3ed18d72fb6a3d528b7dff",
+  "arxivId": "2611.23609",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.23609v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "聚类与类别匹配",
+    "primaryTask": "说话人分离标注",
+    "rankBucket": "前50%",
+    "score": 6.9,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.diarization",
+          "label": "说话人分离标注"
+        },
+        {
+          "facet": "task",
+          "id": "task.vad",
+          "label": "语音活动检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.clustering",
+          "label": "聚类与类别匹配"
+        },
+        {
+          "facet": "application",
+          "id": "application.education",
+          "label": "教育"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "聚类与类别匹配",
+      "primaryMethodId": "method.clustering",
+      "primaryTask": "说话人分离标注",
+      "primaryTaskId": "task.diarization",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Nitin Jain"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Tim Fütterer"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Babette Bühler"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Çağatay Yıldız"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对课堂录音不能出设备、不能预先注册老师声音的限制，论文用语音检测加说话人嵌入加聚类加会话内结构分类的四步流水线恢复老师语音，并在英德两套录音上验证其跨语言可迁移性与手机端实时性，代价是 teacher 与 student 声音不可分时仍需转人工复核。",
+  "originalTitle": "Label-Free Role-Aware Segmentation of Classroom Recordings: Recovering the Teacher from Transferable Structure",
+  "pdfUrl": "https://arxiv.org/pdf/2611.23609v1.pdf",
+  "readerTitle": "不靠注册声音找回课堂里的老师：用课堂结构做角色切分",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

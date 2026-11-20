@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.24086v1",
+  "arxivId": "2611.24086",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.24086v1",
+  "authors": [
+    {
+      "affiliations": [
+        "University of Toronto, Toronto, Canada"
+      ],
+      "name": "Yifang Pan"
+    },
+    {
+      "affiliations": [
+        "JALI Research, Toronto, Canada"
+      ],
+      "name": "Chris Landreth"
+    },
+    {
+      "affiliations": [
+        "University of Toronto, Toronto, Canada"
+      ],
+      "name": "Karan Singh"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.24086v1",
+  "originalTitle": "Constructing Dynamic Conversations with Neural Back-channel Generation and Voice-line Scheduling",
+  "pdfUrl": "https://arxiv.org/pdf/2611.24086v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

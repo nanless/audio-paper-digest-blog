@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.22661v1",
+  "arxivId": "2611.22661",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.22661v1",
+  "authors": [
+    {
+      "affiliations": [
+        "University of Electronic Science and Technology of China, Chengdu, China"
+      ],
+      "name": "Caoxin Wang"
+    },
+    {
+      "affiliations": [
+        "University of Electronic Science and Technology of China, Chengdu, China"
+      ],
+      "name": "Shengkai Gan"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University, Hangzhou, China"
+      ],
+      "name": "Xiang Hu"
+    },
+    {
+      "affiliations": [
+        "University of Electronic Science and Technology of China, Chengdu, China"
+      ],
+      "name": "Lili Pan"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.22661v1",
+  "originalTitle": "The Between-Round Decision in Autonomous Research: An LLM Controller That Reads the Whole Trajectory",
+  "pdfUrl": "https://arxiv.org/pdf/2611.22661v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

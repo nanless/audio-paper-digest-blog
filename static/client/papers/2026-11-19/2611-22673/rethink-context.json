@@ -1,0 +1,92 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.22673v1",
+  "abstract": "We introduce Faithfulness Video Score (FVSCORE), a neuro-symbolic framework for specification-driven video generation evaluation. Existing evaluators rely on holistic MLLM judgments or vision-language metrics, yet aligning their scores with human judgments and tracing them to specific temporal violations remain open challenges. FVSCORE addresses these limitations by compiling each video into explicit propositions capturing prompt requirements and implicit propositions capturing unstated physical, temporal, and cross-modal constraints. It grounds each proposition using specialized perceptual tools and evaluates the resulting confidence traces with soft temporal operators inspired by Linear Temporal Logic. A Significance-Aware Calibration step then aligns verification with human perception by retaining only perceptually significant violations before producing a timestamp- and evidence-grounded report. We conduct extensive experiments across public and complex multi-event benchmarks with the strongest video models to date, demonstrating that FVSCORE outperforms holistic and agent-based evaluators in human correlation while providing highly accurate and interpretable feedback.",
+  "abstractSha256": "e7b517de5d5286f079bb3c7d8b0c33c37915377d9e06122f8161140afaacc955",
+  "arxivId": "2611.22673",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.22673v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "工具增强与约束解码",
+    "primaryTask": "视听联合质量评估",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-quality-assessment",
+          "label": "视听联合质量评估"
+        },
+        {
+          "facet": "task",
+          "id": "task.av-synchronization",
+          "label": "音画同步"
+        },
+        {
+          "facet": "method",
+          "id": "method.tool-augmentation",
+          "label": "工具增强与约束解码"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "工具增强与约束解码",
+      "primaryMethodId": "method.tool-augmentation",
+      "primaryTask": "视听联合质量评估",
+      "primaryTaskId": "task.av-quality-assessment",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Do Xuan Long"
+    },
+    {
+      "affiliations": [
+        "Google Cloud AI Research"
+      ],
+      "name": "Long T. Le"
+    },
+    {
+      "affiliations": [
+        "Google Cloud AI Research"
+      ],
+      "name": "Yiwen Song"
+    },
+    {
+      "affiliations": [
+        "National University of Singapore"
+      ],
+      "name": "Min-Yen Kan"
+    },
+    {
+      "affiliations": [
+        "Google Cloud AI Research"
+      ],
+      "name": "Tomas Pfister"
+    },
+    {
+      "affiliations": [
+        "Google Cloud AI Research"
+      ],
+      "name": "Yale Song"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对生成视频是否忠实实现提示词和隐含物理因果与音画对应这一问题，FVScore 把提示词和视频观察编译成显式与隐式命题并用专用工具逐条验证，用软时序算子和感知校准对齐人工判断，代价是每视频约二十多次大模型调用。",
+  "originalTitle": "FVScore: Specification-Driven Neuro-Symbolic Video Evaluation",
+  "pdfUrl": "https://arxiv.org/pdf/2611.22673v1.pdf",
+  "readerTitle": "FVScore：把视频评测拆成可定位的命题验证",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

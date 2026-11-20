@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.24453v1",
+  "arxivId": "2611.24453",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.24453v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Mohamed bin Zayed University of Artificial Intelligence"
+      ],
+      "name": "Ruiji Yu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Gus Xia"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.24453v1",
+  "originalTitle": "Harmonic Circuit: Chord Progression Lies in a Sparse Principal Information Flow in Symbolic Music Models",
+  "pdfUrl": "https://arxiv.org/pdf/2611.24453v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

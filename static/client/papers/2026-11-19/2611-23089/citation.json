@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.23089v1",
+  "arxivId": "2611.23089",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.23089v1",
+  "authors": [
+    {
+      "affiliations": [
+        "School of Electrical and Computer Engineering, Ben-Gurion University of the Negev, P.O. Box 653, Beer-Sheva, 8410501, Israel"
+      ],
+      "name": "Oded Levi"
+    },
+    {
+      "affiliations": [
+        "School of Electrical and Computer Engineering, Ben-Gurion University of the Negev, P.O. Box 653, Beer-Sheva, 8410501, Israel"
+      ],
+      "name": "Boaz Rafaely"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.23089v1",
+  "originalTitle": "Insight into Parametric First-Order Ambisonics Upscaling in Time and Frequency Domains",
+  "pdfUrl": "https://arxiv.org/pdf/2611.23089v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

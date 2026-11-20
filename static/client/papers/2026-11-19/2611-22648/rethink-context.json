@@ -1,0 +1,92 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.22648v1",
+  "abstract": "Existing multimodal depression assessment methods often summarize long recordings into global behavioral descriptions. This leaves the source and decision relevance of individual observations difficult to inspect. We propose EDA, an evidence-grounded framework organized around Observe, Verify, and Assess. In Observe, literature-informed acoustic and visual cues are localized into source-linked Evidence Records with temporal intervals and behavioral measurements. In Verify, frozen multimodal agents examine whether the cited media support each observation. The simplified Support admission policy retains positively verified records and their review grounds. In Assess, statistical descriptors and temporal events support reference-based behavioral comparison, while PHQ-9-guided text analysis provides complementary symptom evidence. Cross-modal disagreement triggers review of the original text before final selection. Experiments on D-Vlog and LMVD evaluate human-referenced cue agreement and downstream assessment utility separately. AI cue annotations achieve 91.02% accuracy against human consensus labels on shared source segments. With a frozen 7B backbone, EDA Support improves F1 over direct prediction by 7.61 and 9.88 percentage points on D-Vlog Leave-Query-Out and LMVD, respectively. These findings support explicit, source-linked behavioral evidence for inspectable multimodal depression assessment.",
+  "abstractSha256": "657b2731ceaf003cd124b79d6586754bb62d9a249da741920de548c19a629554",
+  "arxivId": "2611.22648",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.22648v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "会话抑郁风险筛查",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.conversational-depression-screening",
+          "label": "会话抑郁风险筛查"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "会话抑郁风险筛查",
+      "primaryTaskId": "task.conversational-depression-screening",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Changzeng Fu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ming Shang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xinyi Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jiadong Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Runhao Zeng"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shiqi Zhao"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对长视频抑郁评估中行为依据难溯源的问题，EDA 用可定位的声学与视觉线索记录加原文核查与参照比较组织判断，在冻结 7B 骨干上提升 F1 但增益只在给定参照与评估条件下成立。",
+  "originalTitle": "EDA: Observe, Verify, and Assess for Evidence-Grounded Multimodal Depression Analysis",
+  "pdfUrl": "https://arxiv.org/pdf/2611.22648v1.pdf",
+  "readerTitle": "从全局描述到可核查证据：EDA 如何做抑郁的多模态评估",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.24323v1",
+  "abstract": "Chest auscultation depends on the listener, and software that classifies lung sounds could give a second reading where trained listeners are scarce. The most accurate published classifiers fine-tune large pretrained networks, and their accuracy is rarely reported with running cost or paired statistics. This study makes three contributions. (i) It proposes RespCCT and FreqCCT, two compact convolutional transformers of 173,187 and 124,999 parameters that learn from random initialization on mel, constant-Q and cepstral images of 5 s frames from three public databases, ICBHI, KAUH and RD@TR, with 1,665 audio files in seven classes. (ii) It compares both models with five ImageNet-pretrained networks and larger distilled variants on one test set, using paired bootstrap intervals. (iii) It measures the cost of every pipeline stage on one CPU thread, tests whether attribution maps depend on the trained weights, and probes whether the learned features reveal the recording source. On the test fold, RespCCT reaches an accuracy of 98.13% and a macro F1 of 0.970, and FreqCCT reaches 97.58% and 0.951. Over five folds, RespCCT with three seeds reaches 97.65% and 0.959, and FreqCCT with one seed reaches 96.95% and 0.941. The two strongest pretrained networks reach a macro F1 of 0.984, whereas RespCCT needs 2.0 to 64.6 times less weight storage. Computing the three input images takes longer than running either model, and a linear probe identifies the source database with 0.958 accuracy. A team can weigh accuracy against storage and time before device testing.",
+  "abstractSha256": "3da967677e68bf071f6f031c38ea6181bf64fd242c4a4be339f88dc7a9f64c2e",
+  "arxivId": "2611.24323",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.24323v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "Transformer",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.transformer",
+          "label": "Transformer"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.interpretability",
+          "label": "可解释性"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "Transformer",
+      "primaryMethodId": "method.transformer",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "ELITE Research Lab, New York, NY, USA"
+      ],
+      "name": "Auntor Chakma"
+    },
+    {
+      "affiliations": [
+        "Department of Computer Science and Engineering, East Delta University, Abdullah Al Noman Road, Noman Society, East Nasirabad, Khulshi, Chattogram, 4209, Bangladesh"
+      ],
+      "name": "Mst. Farhana Akter"
+    },
+    {
+      "affiliations": [
+        "Department of Computer Science and Engineering, United International University, United City, Madani Avenue, Badda, Dhaka, 1212, Bangladesh"
+      ],
+      "name": "Abu Henaf Rashid Ahmad Mufti"
+    },
+    {
+      "affiliations": [
+        "Department of Computer Science and Engineering, East Delta University, Abdullah Al Noman Road, Noman Society, East Nasirabad, Khulshi, Chattogram, 4209, Bangladesh"
+      ],
+      "name": "Asmana Yasmin"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文把三个公开库的肺音切成 5 s 帧并堆成三通道时频图，用从零训练的紧凑卷积 Transformer 做七类诊断，再以配对区间、蒸馏、归因检查和全链路计时说明它接近但未超过最强预训练网络，且图像计算才是主要耗时。",
+  "originalTitle": "RespCCT and FreqCCT: Compact, Explainable and Cost-Aware Convolutional Transformers for Multi-Class Respiratory Disease Classification",
+  "pdfUrl": "https://arxiv.org/pdf/2611.24323v1.pdf",
+  "readerTitle": "用三张时频图做七类肺音分类：RespCCT 与 FreqCCT 的小模型、代价与可解释检查",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.24125v1",
+  "abstract": "Independent control of voice and emotional style characteristics of speech is a long-standing problem in text-to-speech (TTS) systems. We investigate how the conditioning location of voice and style prompts across TTS decoder layers affects the trade-off between preservation and expressiveness for voice identity and emotional style. We introduce a layer-dependent gated fusion mechanism and systematically study which layers should be influenced by which prompt type. Our findings show an asymmetric relationship. Voice benefits from early conditioning for identity preservation, while style benefits from early conditioning for expressiveness. Our findings provide practical guidance that helps neural network architects make an appropriate trade-off for the architecture of TTS systems according to their use cases.",
+  "abstractSha256": "e737cbe9b811823a74ff883f128ae4c03cee65afb1f64ee10d1d8102566a9447",
+  "arxivId": "2611.24125",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.24125v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "提示学习",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前50%",
+    "score": 5.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "task",
+          "id": "task.prosody-style-control",
+          "label": "韵律与风格控制"
+        },
+        {
+          "facet": "method",
+          "id": "method.prompt-learning",
+          "label": "提示学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "提示学习",
+      "primaryMethodId": "method.prompt-learning",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "David Lindevelt"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Suzan Verberne"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Joost Broekens"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "本文研究自然语言语音提示与风格提示应注入解码器哪几层，用门控融合控制各层偏向哪种提示，发现保住音色要把语音放前面、增强表现力要把风格放前面，而两者无法同时最优，需按应用取舍。",
+  "originalTitle": "Location Matters: Layer-wise Prompt Conditioning for Voice--Style Disentanglement in Text-to-Speech",
+  "pdfUrl": "https://arxiv.org/pdf/2611.24125v1.pdf",
+  "readerTitle": "条件放在哪一层：语音与风格在合成中的分工",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

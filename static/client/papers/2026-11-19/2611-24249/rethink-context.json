@@ -1,0 +1,86 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.24249v1",
+  "abstract": "Advancing physical artificial intelligence (Physical AI) requires moving beyond static object recognition to ground how real-world mechanics (e.g., impact, friction, and force transfer) unfold over time. While multimodal aligners seek to capture these interactions by matching multi-sensor streams, prevailing architectures compress each temporal sequence into a single pooled embedding. We show that this paradigm fails on twin events: distinct physical executions recorded under identical task conditions. Collapsing the temporal dimension averages out transient cross-modal dynamics, effectively reducing physical event alignment to static scene recognition. Formally, we prove that as sequence length increases, any temporally pooled representation converges to the stationary recording condition. Consequently, as windows grow, no choice of loss function or embedding geometry can disambiguate twin events from pooled features alone. Instead, we show that physical events are uniquely identified by the event gap, namely the instantaneous, synchronous co-fluctuations across modalities that are erased by pooling and accumulate only along unpooled trajectories. To recover this signal, we introduce CounterPoint, a lightweight plug-in module that strips out each modality's temporal mean to score frame-level cross-modal agreement. Integrated across four state-of-the-art (SOTA) multimodal aligners, CounterPoint shifts representations from coarse condition matching to fine-grained physical event alignment, consistently outperforming existing temporal alignment methods.",
+  "abstractSha256": "da2436cf01def267e12950ffd5106e6fe486bd820a0c1fe6809025cdd719a554",
+  "arxivId": "2611.24249",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.24249v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "视觉触觉物理感知",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.visuotactile-perception",
+          "label": "视觉触觉物理感知"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-retrieval",
+          "label": "音频检索"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.contrastive",
+          "label": "对比学习"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "视觉触觉物理感知",
+      "primaryTaskId": "task.visuotactile-perception",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yiyang Zhu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Guangyuan Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jingdi Lei"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Li Wei"
+    },
+    {
+      "affiliations": [
+        "Nanyang Technological University, Zhejiang University"
+      ],
+      "name": "Chau Yuen"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对同一条件下不同次执行难以区分的问题，论文证明时间池化会坍缩到条件，用去均值时间锁定轨迹累积跨模态同步起伏，并在两种触觉滑动数据上验证了检索改善及其依赖事件间隔的条件与额外检索代价。",
+  "originalTitle": "From Points to Trajectories: Rethinking Multimodal Alignment for Physical Events",
+  "pdfUrl": "https://arxiv.org/pdf/2611.24249v1.pdf",
+  "readerTitle": "从单点到轨迹：物理事件的多模态对齐为何需要保留时间",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

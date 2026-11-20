@@ -1,0 +1,80 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.23847v1",
+  "abstract": "Audio artificial intelligence (AI) now recognizes speech, sounds, and music remarkably well, yet voice agents still act when they should not: they execute commands addressed to others, act on misheard content, and commit before the user finishes speaking. This position article argues that the bottleneck in agentic audio AI has shifted from recognition to decision-making. We propose a reference architecture with an explicit decision layer, separate from perception and reasoning, that chooses whether to act, wait, ask, or remain silent from evidence on addressedness, speaker identity, content confidence, tool reliability, utterance completeness, and action risk. We motivate the design through six recurring decision failures and a decision-theoretic argument that transcript confidence alone is insufficient to justify an action. We implement the layer with fuzzy inference, evolutionary optimization, and sequential decision-making, and evaluate it through simulations, ablations, and recorded audio, including egocentric recordings. Addressedness and speaker evidence matter most, risk-aware gating suppresses costly errors, and well-tuned policies perform similarly, with fuzzy gates more robust to overconfident addressedness estimates. On recorded audio, explicit gating cuts executed side talk from 41\\% to 7--10\\% while serving 83--85\\% of valid requests under successful clarification, outperforming prompting-based baselines. These results support explicit action gating as an architectural requirement for reliable voice agents.",
+  "abstractSha256": "905e78b89b78af0fa6a723ee20126f245a5ced5b46d9e7aab4173bcf5e37b486",
+  "arxivId": "2611.23847",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.23847v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "规则与词典方法",
+    "primaryTask": "语音代理规划与工具使用",
+    "rankBucket": "前50%",
+    "score": 6.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.voice-agent-planning",
+          "label": "语音代理规划与工具使用"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-dialogue",
+          "label": "语音对话系统"
+        },
+        {
+          "facet": "method",
+          "id": "method.rule-based",
+          "label": "规则与词典方法"
+        },
+        {
+          "facet": "method",
+          "id": "method.evolutionary-optimization",
+          "label": "进化优化"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "规则与词典方法",
+      "primaryMethodId": "method.rule-based",
+      "primaryTask": "语音代理规划与工具使用",
+      "primaryTaskId": "task.voice-agent-planning",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Siddique Latif"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Moid Sandu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Farrukh Pervez"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Raja Jurdak"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文指出语音智能体的瓶颈已从识别转到何时行动的决策，提出用定向性、说话人、内容、风险等证据做显式门控，并在仿真和录音上把误执行的旁话从约四成降到一成以下，代价是约三成询问率。",
+  "originalTitle": "Great Listeners, Poor Decision-Makers: Rethinking Agentic Audio AI",
+  "pdfUrl": "https://arxiv.org/pdf/2611.23847v1.pdf",
+  "readerTitle": "听得准不等于做得好：为语音智能体加上显式决策层",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

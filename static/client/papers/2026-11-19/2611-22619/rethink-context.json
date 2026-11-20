@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.22619v1",
+  "abstract": "Omni Models process audio, vision, and text within a unified language backbone, yet often produce different answers for semantically equivalent inputs across modalities. Existing representation-level analyses do not distinguish between information that predicts whether disagreement will occur and the representation whose perturbation affects the model's answer. In this paper, we estimate a low-dimensional Answer Subspace from answer-position representations and use it to separate answer-related components from the remaining representation. Across three Omni Models and two multimodal reasoning tasks, information predictive of cross-modal inconsistency lies mainly outside the Answer Subspace, concentrating in a reproducible two-dimensional representation that is not explained by a fixed modality offset. Matched interventions reveal distinct behavioral roles: perturbing the Answer Subspace substantially changes the model's predictions, whereas perturbing the disagreement representation, like a random subspace of the same dimensionality, leaves them almost unchanged. Our key finding is that cross-modal disagreement can be induced by misaligning modality-specific answer representations: perturbing the Answer Subspace for only one modality induces disagreement, whereas applying the same perturbation to both largely preserves agreement. Thus, the representation that predicts disagreement is distinct from the answer-level representation through which disagreement can be induced, showing that linear decodability does not imply behavioral efficacy.",
+  "abstractSha256": "815f73660d9184b5872c85a9fe5e015af4121c39b2998dc19b196359c610c167",
+  "arxivId": "2611.22619",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.22619v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "激活因果干预",
+    "primaryTask": "通用多模态问答",
+    "rankBucket": "前50%",
+    "score": 6.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.generic-multimodal-qa",
+          "label": "通用多模态问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.activation-intervention",
+          "label": "激活因果干预"
+        },
+        {
+          "facet": "method",
+          "id": "method.representation-probing",
+          "label": "表示探测"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.interpretability",
+          "label": "可解释性"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "激活因果干预",
+      "primaryMethodId": "method.activation-intervention",
+      "primaryTask": "通用多模态问答",
+      "primaryTaskId": "task.generic-multimodal-qa",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Seonghyeon Cho"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Chanjun Park"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文把答案位置表示拆成三维答案子空间与其正交补余，发现能否预测音频与图像答案分歧的信息主要在补余中的二维方向上，而真正能改变答案和制造分歧的是对答案子空间的非对称扰动，六个模型任务条件下可复现但只在足够扰动强度下成立。",
+  "originalTitle": "Understanding Cross-Modal Inconsistency through Representation Subspaces in Omni Models",
+  "pdfUrl": "https://arxiv.org/pdf/2611.22619v1.pdf",
+  "readerTitle": "跨模态不一致藏在哪里：Omni 模型答案位置的两种表示分工",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

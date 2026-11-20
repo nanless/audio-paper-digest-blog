@@ -1,0 +1,63 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.24290v1",
+  "abstract": "This paper presents a framework for computer-aided music composition and performance based on quantum reinforcement learning and multi-agent interaction. We introduce the agentic orchestra, where musical agents evolve distinct mindsets through trial-and-error engagement with a musical environment, rather than through training on large datasets. The agents are implemented as parameterised quantum circuits. They evolve distinct compositional behaviours, referred to as mindsets. This enables the exploration of musical decision spaces using quantum superposition and entanglement within a hybrid quantum-classical loop. We present two complementary agent architectures: atomistic agents, which process pitch and rhythm independently, and holistic agents, which handle pitch and duration as unified note events. Mindsets are shaped through musically grounded reward functions, which can be combined and weighted to develop different mindsets across agents. The resulting system positions quantum computing agents less as autonomous composers and more as adaptive musical partners, each developing its own musical personality through interaction rather than imitation. Demonstrations show how agents generalise their learned behaviour to previously unseen material, operating in interactive and offline batch modes using MIDI-encoded music. While quantum computers are still in development, experiments conducted on IBM quantum hardware confirmed that musically meaningful learning is achievable with existing quantum computers. For composers and performers, the agentic orchestra opens new possibilities for emergent, process-oriented musical creativity, offering a scalable foundation for quantum computer-aided music composition as quantum computing technology continues to advance.",
+  "abstractSha256": "0ceae86b5d70ee50d3b2459d217f4a22663d0920ca407a6afd9b0d92096660f9",
+  "arxivId": "2611.24290",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.24290v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "强化学习",
+    "primaryTask": "符号音乐生成",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.symbolic-music",
+          "label": "符号音乐生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.reinforcement",
+          "label": "强化学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "强化学习",
+      "primaryMethodId": "method.reinforcement",
+      "primaryTask": "符号音乐生成",
+      "primaryTaskId": "task.symbolic-music",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Interdisciplinary Centre for Computer Music Research (ICCMR), University of Plymouth, Plymouth PL4 8AA, UK"
+      ],
+      "name": "Eduardo Reck Miranda"
+    },
+    {
+      "affiliations": [
+        "Interdisciplinary Centre for Computer Music Research (ICCMR), University of Plymouth, Plymouth PL4 8AA, UK"
+      ],
+      "name": "Moein Fahmideh Vatandoost"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文用参数化量子电路做强化学习智能体，在滑动窗口和三类音乐奖励下从小片段试错学出可复用的节奏与旋律偏好，并在模拟与 IBM 真机上验证了可学习的音乐变换与向未见材料的单次迁移，代价是单片段训练、方差大且只在给定奖励下成立。",
+  "originalTitle": "Beyond Corpus-Driven Imitation: Evolving Musical Mindsets in the Agentic Orchestra via Quantum Reinforcement Learning",
+  "pdfUrl": "https://arxiv.org/pdf/2611.24290v1.pdf",
+  "readerTitle": "不用大数据模仿：让量子智能体在试错中长出作曲偏好",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

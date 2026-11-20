@@ -1,0 +1,81 @@
+{
+  "absUrl": "https://arxiv.org/abs/2607.21179",
+  "abstract": "The goal of this paper is to reduce the input token cost of Omni-modal large language models (Omni-LLMs) at inference time. Omni-LLMs reason jointly over audio, video and text, but the cost of the three streams is highly unbalanced: visual tokens account for the vast majority of the input, and are highly redundant. In this paper, we propose ReMo, a training-free framework that compresses visual tokens by redistributing their information across modalities: a visual token is kept only if its information appears nowhere else. ReMo achieves this in two ways: (i) it aligns audio and video in a shared space via closed-form calibration, and removes visual tokens already explained by the audio or by other visual tokens; and (ii) it replaces object-level visual tokens, identified by a lightweight object detector, with compact text proxies, short descriptions of each object and its location, conveying the same content in far fewer tokens. On Qwen2.5-Omni at two model scales, ReMo removes 54% of the input tokens with comparable accuracy. It performs comparably to the full-token model, reaching 101.2% and 101.4% of its average accuracy over five audio-visual benchmarks.",
+  "abstractSha256": "9815fe18f5d2558d9fa002b99902d361182d89c6d7cea0be452de3186ad407c2",
+  "arxivId": "2607.21179",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "模型压缩",
+    "primaryTask": "音视频问答",
+    "rankBucket": "前50%",
+    "score": 6.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-question-answering",
+          "label": "音视频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.compression",
+          "label": "模型压缩"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "模型压缩",
+      "primaryMethodId": "method.compression",
+      "primaryTask": "音视频问答",
+      "primaryTaskId": "task.av-question-answering",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "KAIST"
+      ],
+      "name": "Suho Yoo"
+    },
+    {
+      "affiliations": [
+        "KAIST",
+        "VGG, University of Oxford"
+      ],
+      "name": "Youngjoon Jang"
+    },
+    {
+      "affiliations": [
+        "KAIST"
+      ],
+      "name": "Hyebin Cho"
+    },
+    {
+      "affiliations": [
+        "KAIST"
+      ],
+      "name": "Joon Son Chung"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对 Omni 大模型视觉 Token 占九成以上导致推理代价过高的问题，ReMo 在不训练的情况下用音频对齐删冗余视觉 Token 并用带位置的物体词代理补回语义，在 54% 左右的全序列压缩下保持与全量输入相当的精度，但效果依赖音频视频确有重叠且检测器基本正确。",
+  "originalTitle": "Out of Sight, Still in Mind: Token Compression for Omni-LLMs",
+  "pdfUrl": "https://arxiv.org/pdf/2607.21179.pdf",
+  "readerTitle": "看不见也能记得：把视觉信息分流到音频和文字的 Token 压缩",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

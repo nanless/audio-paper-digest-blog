@@ -1,0 +1,97 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.24481v1",
+  "abstract": "Multimodal Emotion Recognition (MER) seeks to identify emotions conveyed through or elicited by media comprising diverse modality compositions. Research in this field has largely evolved along two paradigms: task-specific models and approaches based on Multimodal Large Language Models (MLLMs). Despite their distinct strengths, neither fully reconciles three capabilities essential to human-like emotion understanding: cross-task generalization, efficient decision-making, and receptiveness to multiple plausible interpretations. Inspired by recent advances in decision models, we explore a unified framework that maps multimodal inputs, guided by natural language instructions, directly to distributions over candidate options, addressing these requirements through direct probabilistic decisions. We instantiate this framework in UEmo-D1, the first decision model for MER to our knowledge. To support joint training and systematic evaluation, we also curate UEmo-Data, comprising 977,270 training samples and 41 evaluation subsets across six MER tasks. Extensive experiments demonstrate UEmo-D1's combination of strong recognition performance, low inference latency, and well-calibrated confidence estimates. Complementary analyses further reveal how training strategies and data composition influence these capabilities, providing practical insights into unified MER modeling. Together, our findings establish decision models as a feasible direction toward human-level emotion recognition. Project page: https://github.com/wdqqdw/UEmo-D1.",
+  "abstractSha256": "7c7984f88266e918803387d9fc2cf55851f32ec92b1623f579cc485d2f8b9443",
+  "arxivId": "2611.24481",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.24481v1",
+  "assessment": {
+    "documentType": "模型报告",
+    "primaryMethod": "多任务学习",
+    "primaryTask": "多模态情感极性分析",
+    "rankBucket": "前50%",
+    "score": 6.4,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.multimodal-sentiment",
+          "label": "多模态情感极性分析"
+        },
+        {
+          "facet": "task",
+          "id": "task.emotion-recognition",
+          "label": "语音情感识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.multitask",
+          "label": "多任务学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.uncertainty-estimation",
+          "label": "不确定性估计与校准"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "多任务学习",
+      "primaryMethodId": "method.multitask",
+      "primaryTask": "多模态情感极性分析",
+      "primaryTaskId": "task.multimodal-sentiment",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Tsinghua University"
+      ],
+      "name": "Daiqing Wu"
+    },
+    {
+      "affiliations": [
+        "Tsinghua University"
+      ],
+      "name": "Junqiao Wang"
+    },
+    {
+      "affiliations": [
+        "Jiangxi University of Finance and Economics"
+      ],
+      "name": "Chengyang Fang"
+    },
+    {
+      "affiliations": [
+        "Shenzhen MSU-BIT University"
+      ],
+      "name": "Runhao Zeng"
+    },
+    {
+      "affiliations": [
+        "Guangming Laboratory"
+      ],
+      "name": "Fei Ma"
+    },
+    {
+      "affiliations": [
+        "Tsinghua University"
+      ],
+      "name": "Sicheng Zhao"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文要解决跨任务泛化、快速直接决策和容纳多种合理解释三件事，用自然语言指令加封闭选项映射到首个选项字母的概率分布来统一六类多模态情绪任务，在 41 个子集上取得更高的平均准确率和更低的校准误差，但结论只在统一指令加打乱选项的封闭选择评测条件下成立。",
+  "originalTitle": "UEmo-D1: An Efficient and Calibrated Decision Model for Unified Multimodal Emotion Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2611.24481v1.pdf",
+  "readerTitle": "一次只输出一个选项字母的情绪识别：UEmo-D1 如何统一六类任务",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

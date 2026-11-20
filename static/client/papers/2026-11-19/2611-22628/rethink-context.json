@@ -1,0 +1,80 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.22628v1",
+  "abstract": "Recent generative techniques have facilitated the rapid proliferation of speech enhancement approaches built upon learnable compact latent representations and large generative backbones. Nevertheless, it remains inherently challenging to balance between acoustic fidelity, perceptual quality, and processing efficiency. In this paper, we revisit the Mel spectrum as a structured acoustic representation and propose BAME, a flow-matching-based framework that exploits the complementary priors for generative speech enhancement task. First, leveraging the explicit hierarchical frequency distribution of Mel spectrum, we elaborately devise a subband-aware Transformer (SaT) for efficient generative modeling. Using only 2.9% of the parameters, the proposed SaT achieves superior enhancement performance compared with a 331 M DiT backbone. Second, motivated by range-null decomposition theory of Mel filtering in the magnitude-spectral domain, we introduce a phase-aware neural vocoder that incorporates degraded-phase prior, together with a quality-guided dual-phase strategy to adaptively mitigate the effects of unreliable phase information. Third, we devise a simple yet effective one-step fidelity-perception alignment strategy that fine-tunes the flow model with complementary constraints from fidelity and perception domains. Extensive experiments are conducted on DNS-Challenge, EARS, GSR, and URGENT benchmarks, and both objective and subjective results demonstrate promising performance on various intrusive and non-intrusive evaluation metrics. These results further advocate the potential of exploiting structured acoustic representations for reliable and efficient generative speech enhancement. Audio samples and codes are available at https://github.com/AndongLi-speech/BAME.",
+  "abstractSha256": "31d40cf6569ee113305fa14ed3f5e9ca5071f3c44bede22a5201d64697f2b0fc",
+  "arxivId": "2611.22628",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.22628v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "流匹配",
+    "primaryTask": "语音增强",
+    "rankBucket": "前50%",
+    "score": 7.4,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-enhancement",
+          "label": "语音增强"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "task",
+          "id": "task.dereverberation",
+          "label": "去混响"
+        },
+        {
+          "facet": "method",
+          "id": "method.subjective-evaluation",
+          "label": "主观评测"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "流匹配",
+      "primaryMethodId": "method.flow-matching",
+      "primaryTask": "语音增强",
+      "primaryTaskId": "task.speech-enhancement",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Andong Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kun Zhou"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xiaodong Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Chengshi Zheng"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对生成式增强难兼顾声学保真、感知质量与效率的问题，论文回到梅尔谱并提出 BaME，用子带 Transformer 做流匹配梅尔生成、用退化相位做相位感知声码重建、再用一步保真感知对齐微调，在多个基准上验证保真与感知的折中及单步推理代价。",
+  "originalTitle": "Back to Mel: Learning to Bridge Fidelity and Perception in Generative Speech Enhancement",
+  "pdfUrl": "https://arxiv.org/pdf/2611.22628v1.pdf",
+  "readerTitle": "回到梅尔谱：在生成式语音增强中兼顾保真与感知",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

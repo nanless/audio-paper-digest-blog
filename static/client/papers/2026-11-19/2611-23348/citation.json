@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.23348v1",
+  "arxivId": "2611.23348",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.23348v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Biostatistics and Health Informatics, King’s College London, London, UK",
+        "Department of Intelligence and Computing, School of Computer Software, Tianjin University, Tianjin, China"
+      ],
+      "name": "Zhuoyuan Tang"
+    },
+    {
+      "affiliations": [
+        "Department of Biostatistics and Health Informatics, King’s College London, London, UK"
+      ],
+      "name": "Tao Wang"
+    },
+    {
+      "affiliations": [
+        "College of Economics, Shenzhen University, Shenzhen, China"
+      ],
+      "name": "Kai Yang"
+    },
+    {
+      "affiliations": [
+        "School of Software Engineering, South China University of Technology, Guangzhou, China"
+      ],
+      "name": "Li Yuan"
+    },
+    {
+      "affiliations": [
+        "Department of Biostatistics and Health Informatics, King’s College London, London, UK"
+      ],
+      "name": "Yuezhou Zhang"
+    },
+    {
+      "affiliations": [
+        "Department of Biostatistics and Health Informatics, King’s College London, London, UK",
+        "Shanghai Mental Health Center, School of Medicine, Shanghai Jiao Tong University, Shanghai, China"
+      ],
+      "name": "Rongrong Zhong"
+    },
+    {
+      "affiliations": [
+        "School of Software Engineering, South China University of Technology, Guangzhou, China"
+      ],
+      "name": "Yi Cai"
+    },
+    {
+      "affiliations": [
+        "Department of Biostatistics and Health Informatics, King’s College London, London, UK"
+      ],
+      "name": "Saskia C. Sanderson"
+    },
+    {
+      "affiliations": [
+        "Department of Psychology, King’s College London, London, UK"
+      ],
+      "name": "Jaime Delgadillo"
+    },
+    {
+      "affiliations": [
+        "Department of Biostatistics and Health Informatics, King’s College London, London, UK",
+        "Institute of Health Informatics, University College London, Euston Road, London NW1 2DA, United Kingdom;",
+        "Health Data Research UK London, University College London, Euston Road, London NW1 2DA, United Kingdom;"
+      ],
+      "name": "Richard Dobson"
+    },
+    {
+      "affiliations": [
+        "Department of Biostatistics and Health Informatics, King’s College London, London, UK"
+      ],
+      "name": "Angus Roberts"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.23348v1",
+  "originalTitle": "SIGMA: speaker-isolated, symptom-structured multimodal estimation of depression severity from clinical interviews",
+  "pdfUrl": "https://arxiv.org/pdf/2611.23348v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

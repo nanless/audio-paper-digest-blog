@@ -1,0 +1,98 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.23115v1",
+  "abstract": "Identifying whom a person looks at is central to understanding multi-party conversations, yet gaze geometry alone becomes ambiguous as more people appear. Conversations offer cues that geometry lacks, such as who is speaking and what is said, but no gaze dataset provides them for many multi-party scenes. We introduce SORBET, a benchmark of 3,340 samples from 1,578 clips with synchronized speech, transcripts, and attended person labels, covering more multi-party scenes than existing gaze datasets. Prior gaze models struggle to use these cues, which come in different forms, must be linked to the right person, and can conflict with gaze geometry. We propose Nunchi, a framework that constructs a text prompt from the transcript and the outputs of gaze and speaker models, links every cue to the candidates with shared labels, and lets a vision-language model (VLM) weigh gaze geometry against conversational cues to identify the attended person. Nunchi outperforms the strongest existing method by 4.8 percentage points. On SORBET, conversational cues help whereas additional visual cues do not, and the gains hold across three VLMs, with automatic transcripts, and on two existing datasets.",
+  "abstractSha256": "8a39d13d4508f474cdffc1a501fb39f2d4f62b822f0af45f9298f646eac4bb75",
+  "arxivId": "2611.23115",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.23115v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "人类视觉注意预测",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.human-visual-attention-prediction",
+          "label": "人类视觉注意预测"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "人类视觉注意预测",
+      "primaryTaskId": "task.human-visual-attention-prediction",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Dankook University"
+      ],
+      "name": "JunYeong Park"
+    },
+    {
+      "affiliations": [
+        "Beijing Jiaotong University"
+      ],
+      "name": "Shijing Wang"
+    },
+    {
+      "affiliations": [
+        "NVIDIA"
+      ],
+      "name": "Seonwook Park"
+    },
+    {
+      "affiliations": [
+        "NVIDIA"
+      ],
+      "name": "Michael Stengel"
+    },
+    {
+      "affiliations": [
+        "NVIDIA"
+      ],
+      "name": "Shalini De Mello"
+    },
+    {
+      "affiliations": [
+        "Dankook University"
+      ],
+      "name": "Sang-Il Choi"
+    },
+    {
+      "affiliations": [
+        "University of Birmingham"
+      ],
+      "name": "Hyung Jin Chang"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "多人同框时仅靠视线方向难以确定观察者在看谁，Nunchi 把冻结注视模型的几何输出与说话人分数和对话文本写成同一套带编号的文本提示交给视觉语言模型权衡，在 SORBET 上达到 86.7% 并在多人条件下增益更大，但结论只在单关键帧且目标必为同框候选人的评测条件下成立。",
+  "originalTitle": "Nunchi: Ears Help Eyes in Multi-Party Conversations",
+  "pdfUrl": "https://arxiv.org/pdf/2611.23115v1.pdf",
+  "readerTitle": "听见再看清：Nunchi 如何用说话人和文本记录在多人对话中找注视对象",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.24410v1",
+  "abstract": "Multi-source audio-to-image generation exhibits consistent compositional failures when audio tokens occupy geometrically displaced, semantically unanchored positions in the CLIP text-token space, where the diffusion U-Net lacks the prior to reliably attend to them or ground them in distinct spatial regions. We formalize this as the geometric displacement phenomenon and expose it through a two-level clustering analysis comparing BEATs and CLAP embeddings at the raw encoder and projected CLIP token levels. Three geometric properties emerge as important: intra-class compactness, angular alignment with the CLIP text manifold, and inter-token spatial separation. We show that CLAP, whose contrastive language-audio pretraining aligns embeddings with natural language semantics, substantially outperforms BEATs on all three properties, improving the silhouette score by more than 3x and the Audio-Image Content score as well. Building on this analysis, we introduce a multi-token extension that requires no diffusion-backbone retraining and assigns each audio source to a distinct placeholder token in the CLIP tokenizer, complemented by a mixed inference-time objective that combines Attend-and-Excite with an A* spatial separation loss to resolve residual cross-token interference. For evaluation, we construct multi-audio compositional benchmarks from VGGSound (VGG2, VGG3, and VGGN) and extend six standard audio-image metrics to the multi-source setting. Across five benchmarks and four strong baselines, our method achieves strong results on the metrics most directly tied to compositional faithfulness, with AIC improvements of up to 2.25x over the strongest baseline and FID reduced by nearly 2x on two-source generation. We propose geometric displacement as a diagnostic framework for cross-modal generation systems that project learned embeddings into a pretrained contrastive space.",
+  "abstractSha256": "42760996bc58567937bc78b64ece9f73a934f6c134db665f9068de46ed840d53",
+  "arxivId": "2611.24410",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.24410v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "扩散模型",
+    "primaryTask": "音频驱动视频生成",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-driven-video",
+          "label": "音频驱动视频生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.diffusion",
+          "label": "扩散模型"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "method",
+          "id": "method.clustering",
+          "label": "聚类与类别匹配"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "扩散模型",
+      "primaryMethodId": "method.diffusion",
+      "primaryTask": "音频驱动视频生成",
+      "primaryTaskId": "task.audio-driven-video",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Anurag Singh"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Prajwal Singh"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shanmuganathan Raman"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文把多音频生成失败归因于音频词元在 CLIP 文本空间中的几何错位，用 BEATs 与 CLAP 的两层聚类对比定位原因，再以共享嵌入器加多占位符提示和去噪时的激活加分离混合目标修复组合性，代价是每张图约 2.8 到 3.1 倍的推理开销。",
+  "originalTitle": "Why Multi-Source Audio Fails to Compose: A Geometric Diagnosis and Its Remedy",
+  "pdfUrl": "https://arxiv.org/pdf/2611.24410v1.pdf",
+  "readerTitle": "多路声音为什么拼不成一张图：CLIP 空间里的几何错位与修复",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

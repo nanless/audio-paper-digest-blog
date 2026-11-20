@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.24086v1",
+  "abstract": "We present a novel approach to the problem of combining two voice-line channels of dyadic conversational audio into a unified conversation with controllable back-channeling and turn-taking dynamics. In voice performances for the game industry, the two tracks of voice-lines are typically recorded or synthesized in isolation. Our method takes two such unsynchronized tracks and uses a neural scheduler to sequence them into a single dynamic conversation, modifying both tracks by inserting or removing pauses and introducing voice overlap as appropriate. We further propose a back-channel predictor that is able to predict opportunity for back-channels for a given conversational turn's audio and content, which the scheduler can then incorporate. We evaluate our scheduler and predictor independently and in combination by: various quantitative comparison; a qualitative and perceptual comparison to prior art and naive baselines; a compelling set of results showing animator control over the diversity, extent and nature of back-channeling and turn dynamics.",
+  "abstractSha256": "38ed69ab83d400d48570dfea68322ff1d37351b65ae41119367548032d54e1d7",
+  "arxivId": "2611.24086",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.24086v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "自回归模型",
+    "primaryTask": "轮次切换",
+    "rankBucket": "前50%",
+    "score": 6.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.turn-taking",
+          "label": "轮次切换"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-dialogue",
+          "label": "语音对话系统"
+        },
+        {
+          "facet": "method",
+          "id": "method.autoregressive",
+          "label": "自回归模型"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "自回归模型",
+      "primaryMethodId": "method.autoregressive",
+      "primaryTask": "轮次切换",
+      "primaryTaskId": "task.turn-taking",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "University of Toronto, Toronto, Canada"
+      ],
+      "name": "Yifang Pan"
+    },
+    {
+      "affiliations": [
+        "JALI Research, Toronto, Canada"
+      ],
+      "name": "Chris Landreth"
+    },
+    {
+      "affiliations": [
+        "University of Toronto, Toronto, Canada"
+      ],
+      "name": "Karan Singh"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对游戏配音分轨录制后直接拼接显机械、缺少听者插话的问题，用先判是否需要应答再搜最自然时间点的两段式管线拼出对话，在保留原台词内容的前提下以时长统计和听感偏好为证据并付出需人工提供应答词表的代价。",
+  "originalTitle": "Constructing Dynamic Conversations with Neural Back-channel Generation and Voice-line Scheduling",
+  "pdfUrl": "https://arxiv.org/pdf/2611.24086v1.pdf",
+  "readerTitle": "把两条孤立配音拼成有应答、有停顿的双人对话",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

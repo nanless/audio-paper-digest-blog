@@ -1,0 +1,104 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.22704v1",
+  "abstract": "Recognizing social signals such as interest and hesitation requires interpreting context-dependent behaviors that may co-occur in conversation. Existing affective computing benchmarks rarely evaluate such co-occurring signals, and conventional multi-label F1 overlooks semantic relationships and annotator disagreement. We introduce Social Signal Bench, a 47-hour densely annotated benchmark for the evaluation of social signal recognition and engagement, comprising two datasets: Social Signal Bench Video (25 hours), covering ten social signals in audiovisual recordings, and Social Signal Bench Audio (22 hours), covering six signals in audio-only recordings. Each dataset pairs a public training set of online conversational video, of which 10 hours are expert-annotated and the remainder pseudo-labeled, with a private expert-labeled test set spanning four conversational domains. We also propose Evidence-Weighted F1 (EW-F1), which weights reference labels by annotator evidence and assigns graded credit to semantically related predictions through optimal per-clip matching. Controlled perturbations demonstrate that EW-F1 distinguishes semantically related errors from unrelated ones, unlike conventional F1. Under a shared evaluation protocol, 7B open models post-trained on Social Signal Bench outperform general-purpose frontier models on video and match them on audio.",
+  "abstractSha256": "5c9e13dba52fa105eb2dfbbdc304e117f8c9c999d051488231aa5fdf4e53fa98",
+  "arxivId": "2611.22704",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.22704v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "视频社会状态推理",
+    "rankBucket": "前50%",
+    "score": 6.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.video-social-reasoning",
+          "label": "视频社会状态推理"
+        },
+        {
+          "facet": "task",
+          "id": "task.emotion-recognition",
+          "label": "语音情感识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "视频社会状态推理",
+      "primaryTaskId": "task.video-social-reasoning",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Siddharth Ravi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Anders R. Bargum"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hugo Anselme"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Patrizio Cugia di Sant'Orsola"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Alberto Cardaci"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Flora Kincso Parragi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Vincent Borowiec"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Line H. Clemmensen"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文针对自然对话中多信号共现与标注者分歧难以评分的问题，构建 25 小时视频与 22 小时音频的双基准并提出按证据加权与按语义给部分分的 EW-F1，在共享评测下 7B 微调模型视频达 44.0、音频达 58.1，但结论只在英语单人可见、私有四领域测试与原分类体系内成立。",
+  "originalTitle": "Social Signal Bench: Evidence-Weighted Evaluation of Co-occurring Social Signals in Video and Audio",
+  "pdfUrl": "https://arxiv.org/pdf/2611.22704v1.pdf",
+  "readerTitle": "多人同时表达多种社交信号时如何建基准与评分",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

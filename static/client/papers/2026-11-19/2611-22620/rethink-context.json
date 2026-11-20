@@ -1,0 +1,103 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.22620v1",
+  "abstract": "Legacy low-bitrate speech codecs such as AMR-NB remain widely used in telephony, where they restrict speech bandwidth and degrade listening quality. Coded speech restoration (CSR) aims to restore the speech bandwidth while improving the overall quality of coded speech, but typically without adapting to different speakers. In this paper, we systematically investigate personalization for restoration of speech coded at low bitrates, using a causal, low-complexity Universal Bandwidth Extension Generative Adversarial Network (UBGAN) model as the basis. We propose two personalization methods based on speaker embeddings, which incur little additional computational cost at inference: (i) conditioning a single CSR model on speaker embeddings, and (ii) cluster-based model selection, where multiple personalized models are trained on clusters of acoustically similar speakers. Experiments are performed on AMR-NB coded speech at 4.75 kbps. Experimental results with disjoint seen- and unseen-speaker test sets show that cluster-based model selection does not consistently outperform the non-personalized UBGAN baseline, whereas embedding conditioning significantly improves ViSQOL and WB-PESQ scores for both seen and unseen speakers.",
+  "abstractSha256": "a250d65360eb7bca6479a8ed8130642209df2fded203f6ce122fa168e06a655f",
+  "arxivId": "2611.22620",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.22620v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "生成对抗网络",
+    "primaryTask": "带宽扩展",
+    "rankBucket": "前50%",
+    "score": 5.9,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.bandwidth-extension",
+          "label": "带宽扩展"
+        },
+        {
+          "facet": "method",
+          "id": "method.gan",
+          "label": "生成对抗网络"
+        },
+        {
+          "facet": "method",
+          "id": "method.clustering",
+          "label": "聚类与类别匹配"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "生成对抗网络",
+      "primaryMethodId": "method.gan",
+      "primaryTask": "带宽扩展",
+      "primaryTaskId": "task.bandwidth-extension",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Fraunhofer Institute for Digital Media Technology IDMT, Oldenburg Branch for Hearing, Speech and Audio Technology HSA, Germany",
+        "Carl von Ossietzky Universität Oldenburg, Dept. of Medical Physics and Acoustics and Cluster of Excellence Hearing4all, Germany",
+        "CEOTRONICS AG, Germany"
+      ],
+      "name": "Eray Özgünay"
+    },
+    {
+      "affiliations": [
+        "Fraunhofer Institute for Digital Media Technology IDMT, Oldenburg Branch for Hearing, Speech and Audio Technology HSA, Germany"
+      ],
+      "name": "Christian Rollwage"
+    },
+    {
+      "affiliations": [
+        "Fraunhofer IIS, Germany"
+      ],
+      "name": "Kishan Gupta"
+    },
+    {
+      "affiliations": [
+        "Fraunhofer IIS, Germany"
+      ],
+      "name": "Andreas Brendel"
+    },
+    {
+      "affiliations": [
+        "CEOTRONICS AG, Germany"
+      ],
+      "name": "Xavier Domont"
+    },
+    {
+      "affiliations": [
+        "Fraunhofer Institute for Digital Media Technology IDMT, Oldenburg Branch for Hearing, Speech and Audio Technology HSA, Germany"
+      ],
+      "name": "Mattes Ohlenbusch"
+    },
+    {
+      "affiliations": [
+        "Fraunhofer Institute for Digital Media Technology IDMT, Oldenburg Branch for Hearing, Speech and Audio Technology HSA, Germany",
+        "Carl von Ossietzky Universität Oldenburg, Dept. of Medical Physics and Acoustics and Cluster of Excellence Hearing4all, Germany"
+      ],
+      "name": "Jan Rennies"
+    },
+    {
+      "affiliations": [
+        "Fraunhofer Institute for Digital Media Technology IDMT, Oldenburg Branch for Hearing, Speech and Audio Technology HSA, Germany",
+        "Carl von Ossietzky Universität Oldenburg, Dept. of Medical Physics and Acoustics and Cluster of Excellence Hearing4all, Germany"
+      ],
+      "name": "Simon Doclo"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对 8 kHz AMR-NB 在 4.75 kbps 编码后恢复到 16 kHz 的问题，论文比较了在因果低复杂度 UBGAN 上加说话人嵌入条件与按嵌入聚类选模型两种做法，发现只有嵌入条件在已见和未见说话人上都稳定提升 ViSQOL 和 WB-PESQ，而聚类选模型不稳定且需存 4 个模型。",
+  "originalTitle": "Personalized Causal Low-Bitrate Coded Speech Restoration with Speaker Embeddings",
+  "pdfUrl": "https://arxiv.org/pdf/2611.22620v1.pdf",
+  "readerTitle": "低码率电话语音如何做个性化修复：因果 UBGAN 的两种说话人自适应做法",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

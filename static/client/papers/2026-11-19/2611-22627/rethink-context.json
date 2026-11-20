@@ -1,0 +1,92 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.22627v1",
+  "abstract": "Joint multi-talker ASR with speaker attribution and timestamps is particularly challenging when the speaker count is unknown and the output must follow a strict structure. We observe that Supervised Fine-Tuning (SFT)-only alignment of SpeechLLMs is brittle under dense overlaps, often leading to burst hallucinations and malformed speaker/timestamp tags. We propose a unified two-stage generative framework: (i) CoT-augmented SFT that infers the global speaker count before transcription, and (ii) GRPO-based constrained exploration guided by a Multi-dimensional Constraint-Aware Reward (MCAR) that directly optimizes permutation-invariant accuracy while enforcing counting, temporal, and structural constraints. On Libri3Mix and a Dynamic-Mix (2+3) set (speaker count unknown at test time), our model achieves 14.52%/9.24% cpWER and 1.95%/1.12% WDER, respectively, with GRPO yielding a 35%/54% relative cpWER reduction over SFT+CoT.",
+  "abstractSha256": "4be5d7d0c94f2730b3624e06b58d8f12425860559f5423c218c15bee3f293788",
+  "arxivId": "2611.22627",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.22627v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "强化学习",
+    "primaryTask": "多说话人语音识别",
+    "rankBucket": "前50%",
+    "score": 7.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.multi-talker-asr",
+          "label": "多说话人语音识别"
+        },
+        {
+          "facet": "task",
+          "id": "task.diarization",
+          "label": "说话人分离标注"
+        },
+        {
+          "facet": "method",
+          "id": "method.reinforcement",
+          "label": "强化学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.sft",
+          "label": "SFT"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "强化学习",
+      "primaryMethodId": "method.reinforcement",
+      "primaryTask": "多说话人语音识别",
+      "primaryTaskId": "task.multi-talker-asr",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yunrui Cai"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Dingdong Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Lingwei Meng"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xixin Wu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhiyong Wu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Helen Meng"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对重叠语音中说话人数未知且输出必须带人数、身份与时间戳的结构化要求，论文用先学格式再用约束探索的分组相对策略优化校准语音大模型，在 Libri3Mix 与混合人数测试上降低连接最小排列词错率，但结论只在短句混合诊断集与给定超参数下成立。",
+  "originalTitle": "Beyond Mimicry: Constrained Exploration with GRPO for Joint Multi-Talker ASR and Diarization under Unknown Speaker Counts",
+  "pdfUrl": "https://arxiv.org/pdf/2611.22627v1.pdf",
+  "readerTitle": "说话人数未知时如何让语音大模型同时转写与归属",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

@@ -1,0 +1,97 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.23768v1",
+  "abstract": "Accurate assessment of dysarthric speech is vital for clinical diagnosis and rehabilitation, yet existing automated methods rely heavily on isolated, single-task models or generic speech quality metrics that fail to disentangle heterogeneous neuromotor deficits. This work presents the first systematic investigation into adapting auditory large language models (ALLMs) for multi-dimensional dysarthric speech assessment under a unified, prompt-conditioned framework. Four representative ALLMs are benchmarked across five clinical perceptual dimensions from the Speech Accessibility Project (SAP): naturalness, monopitch, intelligibility, imprecise consonants, and inappropriate silences. To bridge generic perceptual quality and clinical evaluation, a two-stage training paradigm is explored, leveraging out-of-domain pre-training followed by in-domain clinical adaptation. Experimental results demonstrate that leading ALLMs reliably capture fine-grained pathological variations, exhibiting distinct and complementary strengths across prosodic and articulatory attributes. These findings establish ALLMs as a scalable foundation for clinical speech evaluation and provide practical insights into model selection and multi-task transfer potential.",
+  "abstractSha256": "eb7bc7ceb4ebcf05a0d3ce814a24311d3b017ed4b04640bf5f2182b29c0fd56b",
+  "arxivId": "2611.23768",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.23768v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "指令微调",
+    "primaryTask": "病理语音评估",
+    "rankBucket": "前50%",
+    "score": 5.9,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.pathological-speech",
+          "label": "病理语音评估"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-quality",
+          "label": "语音质量评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.instruction-tuning",
+          "label": "指令微调"
+        },
+        {
+          "facet": "method",
+          "id": "method.multitask",
+          "label": "多任务学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.lora",
+          "label": "LoRA"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "指令微调",
+      "primaryMethodId": "method.instruction-tuning",
+      "primaryTask": "病理语音评估",
+      "primaryTaskId": "task.pathological-speech",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Haotian Wei"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Can Long"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Wen Xian Jim"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Guangzhi Sun"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zengrui Jin"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Chao Zhang"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文把构音障碍评估定义为五个 1 至 7 分严重度维度的 utterance 级打分，用同一指令条件听觉大语言模型经 QualiSpeech 预训练再经 SAP 适配来完成，在 Qwen2.5-Omni 自然度上达到高相关而 video-SALMONN 2 Plus 在辅音与可懂度上占优，代价是仍需域内微调且重度样本稀少时误差指标易被误读。",
+  "originalTitle": "Beyond Intelligibility: Fine-Grained Perceptual Assessment of Dysarthric Speech with Auditory Large Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2611.23768v1.pdf",
+  "readerTitle": "用听觉大语言模型统一评估构音障碍语音的五个感知维度",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

@@ -1,0 +1,99 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.22456v1",
+  "abstract": "Omnimodal large language models (Omni-LLMs) integrate audio, video, and text for multimodal reasoning, yet remain vulnerable to cross-modal hallucinations, where one modality improperly influences predictions about another. Existing training-free decoding methods mitigate these errors through modality perturbation or relevance-based weighting. However, due to interference from irrelevant modality cues during fusion and difficulty detecting shared errors, these methods may suppress correct unimodal predictions and allow erroneous consensus to persist. To address these limitations, we propose Provenance-Aware Consensus Decoding (PACD), a training-free framework for mitigating cross-modal hallucinations. PACD comprises two complementary paths based on whether the branches reach consensus. For non-consensus cases, Relevance-Guided Candidate Arbitration identifies task-relevant unimodal evidence and selectively arbitrates between predictions using alternative candidates. For consensus cases, Provenance-Based Consensus Recovery leverages the outranking principle to evaluate the consistency and strength of layer-wise modality evidence for alternative answers, selectively resolving erroneous consensus under confidence constraints. Extensive experiments on four Omni-LLMs and five benchmarks across two tasks demonstrate the superiority of PACD. Compared to existing methods, PACD achieves up to 27.6% relative improvement over standard decoding across CMM, AVHBench, and SVHalluc for cross-modal hallucination mitigation, and an average relative improvement of 7.7% over best baseline across OmniVideoBench and FutureOmni for general audio-visual reasoning.",
+  "abstractSha256": "a4e3b3a5dc7af4a0b0256ea65e47bc914a514aea79b44021a8561139dbb4585e",
+  "arxivId": "2611.22456",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.22456v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "工具增强与约束解码",
+    "primaryTask": "音视频问答",
+    "rankBucket": "前50%",
+    "score": 6.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-question-answering",
+          "label": "音视频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.tool-augmentation",
+          "label": "工具增强与约束解码"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.hallucination-faithfulness",
+          "label": "幻觉与忠实度"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.multimodal",
+          "label": "多模态模型"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "工具增强与约束解码",
+      "primaryMethodId": "method.tool-augmentation",
+      "primaryTask": "音视频问答",
+      "primaryTaskId": "task.av-question-answering",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Xi’an Jiaotong University"
+      ],
+      "name": "Chang Sun"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yijun Tian"
+    },
+    {
+      "affiliations": [
+        "University of Toronto"
+      ],
+      "name": "Zhenwei Tang"
+    },
+    {
+      "affiliations": [
+        "Tsinghua University",
+        "Pengcheng Laboratory"
+      ],
+      "name": "Yuchen Deng"
+    },
+    {
+      "affiliations": [
+        "University of Toronto"
+      ],
+      "name": "Yifan Simon Liu"
+    },
+    {
+      "affiliations": [
+        "Xi’an Jiaotong University"
+      ],
+      "name": "Chenxu Wang"
+    },
+    {
+      "affiliations": [
+        "Xi’an Jiaotong University"
+      ],
+      "name": "Wei Wang"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对全模态问答中无关模态干扰与多分支错误一致问题，PACD 在不训练的情况下按是否共识分两路仲裁与恢复，在四个模型与五个基准上提升了幻觉基准准确率并保持了相近的推理开销。",
+  "originalTitle": "PACD: Provenance-Aware Consensus Decoding for Mitigating Cross-Modal Hallucinations in Omnimodal Large Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2611.22456v1.pdf",
+  "readerTitle": "当音频和视频互相干扰时如何保留可靠证据并修正错误共识",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

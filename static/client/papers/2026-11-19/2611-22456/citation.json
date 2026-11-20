@@ -1,0 +1,57 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.22456v1",
+  "arxivId": "2611.22456",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.22456v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Xi’an Jiaotong University"
+      ],
+      "name": "Chang Sun"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yijun Tian"
+    },
+    {
+      "affiliations": [
+        "University of Toronto"
+      ],
+      "name": "Zhenwei Tang"
+    },
+    {
+      "affiliations": [
+        "Tsinghua University",
+        "Pengcheng Laboratory"
+      ],
+      "name": "Yuchen Deng"
+    },
+    {
+      "affiliations": [
+        "University of Toronto"
+      ],
+      "name": "Yifan Simon Liu"
+    },
+    {
+      "affiliations": [
+        "Xi’an Jiaotong University"
+      ],
+      "name": "Chenxu Wang"
+    },
+    {
+      "affiliations": [
+        "Xi’an Jiaotong University"
+      ],
+      "name": "Wei Wang"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.22456v1",
+  "originalTitle": "PACD: Provenance-Aware Consensus Decoding for Mitigating Cross-Modal Hallucinations in Omnimodal Large Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2611.22456v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

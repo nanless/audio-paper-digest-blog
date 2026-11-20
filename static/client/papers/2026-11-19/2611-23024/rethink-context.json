@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.23024v1",
+  "abstract": "Blind source separation (BSS) is increasingly needed in sensing architectures where mixtures are acquired by multiple remote devices but the inference itself is carried out centrally. In such systems, the sensors often cannot transmit their raw observations since the communication links are rate-limited, energy-limited, or both. The fusion center therefore must recover the latent sources from compressed versions of the mixtures. This setting raises questions that classical BSS models do not address directly: whether source identifiability survives compression, how separation accuracy changes under a specified compression model, and how the separation procedure should be modified to account for the statistical model induced by the compression stage. In this work, we develop a framework for distributed BSS from compressed mixtures that addresses these issues at three levels. First, we formalize identifiability under compression and establish a data-processing viewpoint showing that compression cannot introduce distinguishability that is absent before compression. Second, for mixtures of Gaussian sources with general covariance structures, we derive an idealized Gaussian rate-distortion-based Cramér-Rao lower bound benchmark for the interference-to-source ratio. Third, we develop practical compression-aware separation schemes based on subtractively dithered quantization together with debiasing at the fusion center for both fourth-order-cumulant-based and second-order-statistics-based methods. Simulation experiments demonstrate the resulting tradeoffs between communication rate and separation performance and the gains obtained by compression-aware separation in representative distributed sensing scenarios.",
+  "abstractSha256": "1b639fc44d1c269498ee94398d1c5e1111eacfe78a0e491b3cb8e85482b0476e",
+  "arxivId": "2611.23024",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.23024v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "非声学信号源分离",
+    "rankBucket": "前50%",
+    "score": 6.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.non-acoustic-source-separation",
+          "label": "非声学信号源分离"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "method",
+          "id": "method.formal-analysis",
+          "label": "形式化分析"
+        },
+        {
+          "facet": "application",
+          "id": "application.industrial",
+          "label": "工业应用"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "非声学信号源分离",
+      "primaryTaskId": "task.non-acoustic-source-separation",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Amir Weiss"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文研究多个传感器只能把压缩后的混合发给融合中心时源是否还可分，用等可辨识性说明压缩不能创造可分性，用高斯率失真测试信道给出干扰源比的克拉美罗下界，并用减性抖动量化加去偏实现可运行的累积量与二阶分离，代价是低速率带来附加噪声与有限样本方差。",
+  "originalTitle": "Distributed Blind Source Separation from Compressed Mixtures",
+  "pdfUrl": "https://arxiv.org/pdf/2611.23024v1.pdf",
+  "readerTitle": "压缩混合还能做盲源分离吗：分布式压缩下的可辨识性、性能界与去偏分离",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

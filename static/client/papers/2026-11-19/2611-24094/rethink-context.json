@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.24094v1",
+  "abstract": "We propose 21Codec, a streaming codec model with reduced recoverable speaker information from the token stream and decoder-side speaker control. Existing codec models infer speaker identity from token stream. Making them streamable is not sufficiently robust to speaker drift, because each chunk re-infers the identity from the local chunk context alone. Our adversarial speaker classifier and NANSY-style formant-shift data augmentation pushes the model to rely on the provided speaker embedding while reducing the recoverable speaker information from the token stream. We show that 21Codec can control speaker identity through the conditioning vector, and that the speaker identity is maintained across chunks during streaming. With the ability to control speaker identity even in mid-stream, 21Codec is a promising candidate for streaming TTS systems for better controllability of speaker identity.",
+  "abstractSha256": "7e6c4f41f6c6b09396e013e9407955ea2fb9993193b18924b63422fe91b72604",
+  "arxivId": "2611.24094",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.24094v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "神经编解码与离散单元",
+    "primaryTask": "语音编码",
+    "rankBucket": "前50%",
+    "score": 6.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-coding",
+          "label": "语音编码"
+        },
+        {
+          "facet": "task",
+          "id": "task.voice-conversion",
+          "label": "语音转换"
+        },
+        {
+          "facet": "method",
+          "id": "method.neural-codec",
+          "label": "神经编解码与离散单元"
+        },
+        {
+          "facet": "method",
+          "id": "method.adversarial-training",
+          "label": "对抗训练"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "神经编解码与离散单元",
+      "primaryMethodId": "method.neural-codec",
+      "primaryTask": "语音编码",
+      "primaryTaskId": "task.speech-coding",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "David Lindevelt"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Suzan Verberne"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Joost Broekens"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对流式解码时按短块重推说话人身份会导致声音漂移的问题，21Codec 用对抗探针与共振峰偏移把身份信息从离散编码中压低，再用外部说话人嵌入在解码器侧统一控制身份，重配音与分块稳定性实验证明了可控性，代价是可懂度下降。",
+  "originalTitle": "21Codec: Decoder-side Speaker Control for Text-to-Speech",
+  "pdfUrl": "https://arxiv.org/pdf/2611.24094v1.pdf",
+  "readerTitle": "21Codec：把说话人身份从编码序列中拿掉放到解码器侧控制",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

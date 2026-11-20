@@ -1,0 +1,66 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.22620v1",
+  "arxivId": "2611.22620",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.22620v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Fraunhofer Institute for Digital Media Technology IDMT, Oldenburg Branch for Hearing, Speech and Audio Technology HSA, Germany",
+        "Carl von Ossietzky Universität Oldenburg, Dept. of Medical Physics and Acoustics and Cluster of Excellence Hearing4all, Germany",
+        "CEOTRONICS AG, Germany"
+      ],
+      "name": "Eray Özgünay"
+    },
+    {
+      "affiliations": [
+        "Fraunhofer Institute for Digital Media Technology IDMT, Oldenburg Branch for Hearing, Speech and Audio Technology HSA, Germany"
+      ],
+      "name": "Christian Rollwage"
+    },
+    {
+      "affiliations": [
+        "Fraunhofer IIS, Germany"
+      ],
+      "name": "Kishan Gupta"
+    },
+    {
+      "affiliations": [
+        "Fraunhofer IIS, Germany"
+      ],
+      "name": "Andreas Brendel"
+    },
+    {
+      "affiliations": [
+        "CEOTRONICS AG, Germany"
+      ],
+      "name": "Xavier Domont"
+    },
+    {
+      "affiliations": [
+        "Fraunhofer Institute for Digital Media Technology IDMT, Oldenburg Branch for Hearing, Speech and Audio Technology HSA, Germany"
+      ],
+      "name": "Mattes Ohlenbusch"
+    },
+    {
+      "affiliations": [
+        "Fraunhofer Institute for Digital Media Technology IDMT, Oldenburg Branch for Hearing, Speech and Audio Technology HSA, Germany",
+        "Carl von Ossietzky Universität Oldenburg, Dept. of Medical Physics and Acoustics and Cluster of Excellence Hearing4all, Germany"
+      ],
+      "name": "Jan Rennies"
+    },
+    {
+      "affiliations": [
+        "Fraunhofer Institute for Digital Media Technology IDMT, Oldenburg Branch for Hearing, Speech and Audio Technology HSA, Germany",
+        "Carl von Ossietzky Universität Oldenburg, Dept. of Medical Physics and Acoustics and Cluster of Excellence Hearing4all, Germany"
+      ],
+      "name": "Simon Doclo"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.22620v1",
+  "originalTitle": "Personalized Causal Low-Bitrate Coded Speech Restoration with Speaker Embeddings",
+  "pdfUrl": "https://arxiv.org/pdf/2611.22620v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

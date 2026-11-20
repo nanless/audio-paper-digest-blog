@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.22648v1",
+  "arxivId": "2611.22648",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.22648v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Changzeng Fu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ming Shang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xinyi Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jiadong Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Runhao Zeng"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shiqi Zhao"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.22648v1",
+  "originalTitle": "EDA: Observe, Verify, and Assess for Evidence-Grounded Multimodal Depression Analysis",
+  "pdfUrl": "https://arxiv.org/pdf/2611.22648v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

@@ -1,0 +1,86 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.22857v1",
+  "abstract": "Our aim is to advance the understanding of genuine audio-visual coordination in joint text-to-audio-video (T2AV) generation, with particular emphasis on semantic consistency. Evaluating audio-visual consistency in T2AV generation is nontrivial, as detailed text prompts obscure whether such consistency stems from genuine cross-modal coordination or merely from independent text following. To isolate the former, we introduce intrinsic jointness: the ability of audio and video to produce the same realization for details left underspecified by the prompt. Using semantically underspecified prompts (e.g., \"musical instrument playing\" rather than \"electric guitar playing\"), we investigate four recent models and reveal their limited intrinsic jointness. To address this limitation, we propose JointREPA, a simple representation alignment-based post-training method to facilitate cross-modal coordination. Since existing benchmarks use semantically detailed prompts, we introduce UNSAIDBench, a benchmark designed to evaluate intrinsic jointness under semantic underspecification. Experiments across two distinct models and three benchmarks, including UNSAIDBench, demonstrate that JointREPA consistently improves semantic consistency.",
+  "abstractSha256": "8009a88a47d8957808c71529f09ccf84da0d243d7d6453fffc089db77da781fe",
+  "arxivId": "2611.22857",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.22857v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "知识蒸馏",
+    "primaryTask": "音视频生成",
+    "rankBucket": "前50%",
+    "score": 6.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-generation",
+          "label": "音视频生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "method",
+          "id": "method.lora",
+          "label": "LoRA"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "知识蒸馏",
+      "primaryMethodId": "method.distillation",
+      "primaryTask": "音视频生成",
+      "primaryTaskId": "task.av-generation",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "KAIST"
+      ],
+      "name": "Jihoo Jung"
+    },
+    {
+      "affiliations": [
+        "Chung-Ang University"
+      ],
+      "name": "Ji-Hoon Kim"
+    },
+    {
+      "affiliations": [
+        "KAIST"
+      ],
+      "name": "Suyeon Lee"
+    },
+    {
+      "affiliations": [
+        "KAIST"
+      ],
+      "name": "Gia Thinh Pham"
+    },
+    {
+      "affiliations": [
+        "KAIST"
+      ],
+      "name": "Joon Son Chung"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文追问文本到音频视频生成中语义细节未指明时两模态能否自行选到同一实现，用三级抽象提示诊断四款模型并提出跨模态表征对齐的轻量后训练 JointREPA，在三个基准上提升音频视频语义一致性但文本一致性和单模态质量有涨有跌。",
+  "originalTitle": "Beyond Co-Generation: Rethinking Jointness in Joint Audio-Video Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2611.22857v1.pdf",
+  "readerTitle": "提示没说清时，声音和画面还能对上吗：联合音视频生成的内在协同",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

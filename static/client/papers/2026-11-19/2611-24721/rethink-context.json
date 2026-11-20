@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.24721v1",
+  "abstract": "What makes a small trained map from encoder states to the embedding space of a frozen language model sufficient for competitive speech recognition? The premise of the SLAM-ASR architecture is that a frozen language model possesses linguistic knowledge rich enough to perform the recognition task. This assumption, while reasonable, provides little insight into the mechanisms underlying these models. We therefore seek the concrete internal structures on which they rely. This work shows that SLAM-ASR models rely on induction heads of the frozen language model: the same heads that copy repeated token sequences in text are also important for mapping speech embeddings to transcript tokens. Moreover, we find pairs of heads that behave as a constrained form of differential attention, cancelling attention noise and sharpening attention onto the previously generated word. Finally, we show how induction heads could be used to improve transcription quality under noisy audio.",
+  "abstractSha256": "0efb87082dec4090f3355c83573f3792cae12c70f10b74bb4f036ab49309e07b",
+  "arxivId": "2611.24721",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.24721v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "激活因果干预",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.9,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.activation-intervention",
+          "label": "激活因果干预"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.interpretability",
+          "label": "可解释性"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.llm",
+          "label": "大语言模型"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "激活因果干预",
+      "primaryMethodId": "method.activation-intervention",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Artem Fedorchenko"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Tanel Alumäe"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文研究只训练语音投影器、冻结编码器和语言模型时识别为何可行，发现文本预训练形成的诱导头被用来读语音嵌入并在噪声下可通过放大来抑制插入，而同层反向头对能抵消冗余注意力，证据来自三款解码器上的阻塞与缩放对比，但增益只在特定数据与噪声条件下成立。",
+  "originalTitle": "Induction Head Origins of SLAM-ASR Speech Recognition Models",
+  "pdfUrl": "https://arxiv.org/pdf/2611.24721v1.pdf",
+  "readerTitle": "冻结语言模型的诱导头如何支撑语音识别",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

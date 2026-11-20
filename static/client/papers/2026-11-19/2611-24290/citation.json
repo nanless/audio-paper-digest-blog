@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.24290v1",
+  "arxivId": "2611.24290",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.24290v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Interdisciplinary Centre for Computer Music Research (ICCMR), University of Plymouth, Plymouth PL4 8AA, UK"
+      ],
+      "name": "Eduardo Reck Miranda"
+    },
+    {
+      "affiliations": [
+        "Interdisciplinary Centre for Computer Music Research (ICCMR), University of Plymouth, Plymouth PL4 8AA, UK"
+      ],
+      "name": "Moein Fahmideh Vatandoost"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.24290v1",
+  "originalTitle": "Beyond Corpus-Driven Imitation: Evolving Musical Mindsets in the Agentic Orchestra via Quantum Reinforcement Learning",
+  "pdfUrl": "https://arxiv.org/pdf/2611.24290v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

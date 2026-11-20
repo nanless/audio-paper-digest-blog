@@ -1,0 +1,92 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.22668",
+  "abstract": "Deep models often rely on spurious correlations that fail on underrepresented groups. Existing methods either correct human-specified bias attributes or infer unknown biases from the learned representation space. However, annotated attributes may differ from the shortcuts actually used by a model, while a single representation provides incomplete and potentially noisy evidence. Our key insight is that a bias obscured in one feature space may be clearer in another. In this work, we propose CHORD (Cross-view Harmonic Outlier Reversal for Debiasing), a multi-view framework that allows samples to \"sing in chorus\" across diverse representation spaces to achieve robust cross-view consensus. CHORD aggregates aggregates within-class partitions in each view, which is a proxy for specifying candidate biases, to debias the target representation and classifier without bias supervision. Experiments on seven benchmarks across vision, language, speech, and medical imaging show consistent improvements in worst-group accuracy. Code and checkpoints are available at https://github.com/davelee-uestc/chord_debiasing_public .",
+  "abstractSha256": "2dadcd4964689ec7a7339e4f92a2abfad588a93e89577182dce8682702583b07",
+  "arxivId": "2611.22668",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "聚类与类别匹配",
+    "primaryTask": "语音情感识别",
+    "rankBucket": "前50%",
+    "score": 7.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.emotion-recognition",
+          "label": "语音情感识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.clustering",
+          "label": "聚类与类别匹配"
+        },
+        {
+          "facet": "method",
+          "id": "method.model-combination",
+          "label": "模型融合"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.fairness",
+          "label": "公平性"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "聚类与类别匹配",
+      "primaryMethodId": "method.clustering",
+      "primaryTask": "语音情感识别",
+      "primaryTaskId": "task.emotion-recognition",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "University of Electronic Science and Technology of China"
+      ],
+      "name": "Weiwei Li"
+    },
+    {
+      "affiliations": [
+        "University of Electronic Science and Technology of China"
+      ],
+      "name": "Junzhuo Liu"
+    },
+    {
+      "affiliations": [
+        "University of Electronic Science and Technology of China"
+      ],
+      "name": "Tong Chu"
+    },
+    {
+      "affiliations": [
+        "University of Electronic Science and Technology of China"
+      ],
+      "name": "Hengfu Yu"
+    },
+    {
+      "affiliations": [
+        "Sichuan University"
+      ],
+      "name": "Yinjie Lei"
+    },
+    {
+      "affiliations": [
+        "University of Electronic Science and Technology of China"
+      ],
+      "name": "Wen Li"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对无偏见标注下去偏问题，CHORD 用多视角提候选划分并在目标特征中检验回正样本，再聚合为软采样权重重训分类头，在四项常用基准平均最差组准确率上从 NSF 的 82.01% 提升到 84.49%，代价是冻结编码器并只用验证集做去偏且依赖核心特征可恢复。",
+  "originalTitle": "Let Samples Sing in Chorus: Mitigating Spurious Correlations via Cross-view Consensus",
+  "pdfUrl": "https://arxiv.org/pdf/2611.22668.pdf",
+  "readerTitle": "让样本合唱找偏见：跨视角共识缓解虚假关联",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

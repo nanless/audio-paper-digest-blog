@@ -1,0 +1,80 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.24741v1",
+  "abstract": "Parkinson's disease (PD) is the second most common neurodegenerative disease in the world, and 70\\% to 75\\% of PD patients suffer from speech disorders at some stage. Since PD affects men more frequently than women, previous publications tend to rely on unbalanced datasets that potentially introduce sex biases into trained models. This study investigates sex differences in PD detection from speech using deep learning and traditional machine learning approaches. We evaluated speech-based PD detection using embeddings from three pre-trained speech models, combined with handcrafted acoustic features and different classifiers. Sex-specific experiments were conducted on balanced subsets of four sustained phonation datasets, controlling for sex, disease status, and, where possible, age. All recordings were obtained during a sustained phonation task. Results show that female speakers were more accurately classified than male speakers in the larger dataset. Sex-specific results show that when the models are trained on one sex, they fail to generalize to the other one. Our results highlight the importance of including sex as a variable in the development of PD detection systems.",
+  "abstractSha256": "c83efd14282ce07aeea95bc2a72c45ef3faa3abc05473f794d8f7cc6c479bcaf",
+  "arxivId": "2611.24741",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.24741v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "统计分析",
+    "primaryTask": "病理语音评估",
+    "rankBucket": "前50%",
+    "score": 5.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.pathological-speech",
+          "label": "病理语音评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        },
+        {
+          "facet": "method",
+          "id": "method.self-supervised",
+          "label": "自监督学习"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.fairness",
+          "label": "公平性"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "统计分析",
+      "primaryMethodId": "method.statistical-analysis",
+      "primaryTask": "病理语音评估",
+      "primaryTaskId": "task.pathological-speech",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hiba Akhaddar"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Peter Plantinga"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Mirco Ravanelli"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Tristan Glatard"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文用持续发元音/a/的录音做帕金森病和健康对照的二分类，在性别和年龄受控的子集上比较自监督表征与传统声学特征，发现较大数据上女性可分而男性接近随机，且只用一种性别训练难以泛化到另一种性别。",
+  "originalTitle": "Sex Differences in the Detection of Parkinson's Disease from Speech",
+  "pdfUrl": "https://arxiv.org/pdf/2611.24741v1.pdf",
+  "readerTitle": "从持续元音中检测帕金森病：为什么男女效果不一样",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

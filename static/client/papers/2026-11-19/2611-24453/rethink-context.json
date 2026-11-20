@@ -1,0 +1,63 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.24453v1",
+  "abstract": "Mechanistic Interpretability (MI) seeks to decode neural network computations into human-understandable logic. A core methodology in MI is circuit discovery: identifying the information flow in sub-networks that drive specific model behaviors. While circuit discovery has matured within Natural Language Processing (NLP), the interpretable circuits in music models remain largely unexplored. In this work, we identify a music-functional circuit within two symbolic music generative models: ChatMusician and MuPT. The music function we consider is the prediction of the terminal tonic root in a classical harmonic progression pattern $I \\ldots V \\rightarrow I$. We use the Auto-Emergence algorithm to extract a principal sparse sub-network as the identified circuit. Validation via causal intervention confirms that this identified circuit is a primary driver of harmonic progression behaviors in the symbolic music models. To our knowledge, this represents the first systematic circuit-discovery study conducted within the music domain. Our demo page is available at: https://ukiyo23rui.github.io/auto-emergence-demo/.",
+  "abstractSha256": "5b85c601c570d9f777a8b254561c56fa62b3236af1c95311d5ede76316d2c83c",
+  "arxivId": "2611.24453",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.24453v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "激活因果干预",
+    "primaryTask": "符号音乐生成",
+    "rankBucket": "前50%",
+    "score": 6.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.symbolic-music",
+          "label": "符号音乐生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.activation-intervention",
+          "label": "激活因果干预"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.interpretability",
+          "label": "可解释性"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "激活因果干预",
+      "primaryMethodId": "method.activation-intervention",
+      "primaryTask": "符号音乐生成",
+      "primaryTaskId": "task.symbolic-music",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Mohamed bin Zayed University of Artificial Intelligence"
+      ],
+      "name": "Ruiji Yu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Gus Xia"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文把终止主音根音预测作为和声收束的检验点，用信息流路由建图加自涌现算法递归抽取稀疏主干电路，再用同规模随机删边对照证明删掉主干会显著破坏预测，而结论只在西方调性语料与两个符号音乐模型上成立。",
+  "originalTitle": "Harmonic Circuit: Chord Progression Lies in a Sparse Principal Information Flow in Symbolic Music Models",
+  "pdfUrl": "https://arxiv.org/pdf/2611.24453v1.pdf",
+  "readerTitle": "和声进行藏在稀疏主干信息流里：符号音乐模型的电路发现解读",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}
