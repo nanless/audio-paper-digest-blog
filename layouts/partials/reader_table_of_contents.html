@@ -14,10 +14,13 @@
     {{- if not (reflect.IsMap .) -}}
       {{- with .Store.Get "reader_deep_dive_sections" -}}
         {{- range . -}}
-          {{- $openAnchor := printf `<a href="#%s">` .id -}}
-          {{- if eq (len (split $toc $openAnchor)) 2 -}}
-            {{- $badge := printf `%s<span class="toc-role-badge">%02d · %s</span> ` $openAnchor .num .role -}}
-            {{- $toc = replace $toc $openAnchor $badge 1 -}}
+          {{- if not (findRE `[\s<>'"\\]` .id 1) -}}
+            {{- $openAnchor := printf `<a href="#%s">` .id -}}
+            {{- if eq (len (split $toc $openAnchor)) 2 -}}
+              {{- $safeTocRole := replace (printf "%s" .role) "\\" "&#92;" -}}
+              {{- $badge := printf `%s<span class="toc-role-badge">%02d · %s</span> ` $openAnchor .num $safeTocRole -}}
+              {{- $toc = replace $toc $openAnchor $badge 1 -}}
+            {{- end -}}
           {{- end -}}
         {{- end -}}
       {{- end -}}

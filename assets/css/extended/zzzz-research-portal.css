@@ -212,6 +212,7 @@ input, select, textarea { min-width: 0; }
 .research-article .reader-roadmap-list > li:hover { background: var(--rw-brand-soft); border-color: color-mix(in srgb,var(--rw-brand) 28%,transparent); }
 .research-article .reader-roadmap-list > li > a { color: var(--rw-text); text-decoration: none; font-weight: 500; min-width: 0; overflow-wrap: anywhere; }
 .research-article .reader-roadmap-list > li > a:hover { color: var(--rw-brand); text-decoration: underline; text-underline-offset: 3px; }
+.research-article .reader-roadmap-list > li > a code { font-size: .88em; padding: 1px 5px; border-radius: 4px; background: var(--rw-surface-subtle); border: 1px solid color-mix(in srgb,var(--rw-border) 70%,transparent); }
 .research-article .reader-role-pill { display: inline-block; flex-shrink: 0; font-size: 11.5px; font-weight: 650; line-height: 1.35; padding: 2px 8px; border-radius: 999px; background: var(--rw-brand-soft); color: var(--rw-brand); border: 1px solid color-mix(in srgb,var(--rw-brand) 22%,transparent); white-space: nowrap; }
 .research-article .reader-section-kicker { margin: 2.35em 0 .35em !important; line-height: 1.4; }
 .research-article .reader-section-kicker .reader-role-pill { background: color-mix(in srgb,var(--rw-accent-soft) 75%,var(--rw-surface)); color: var(--rw-accent); border-color: color-mix(in srgb,var(--rw-accent) 28%,transparent); font-variant-numeric: tabular-nums; }

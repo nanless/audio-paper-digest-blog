@@ -127,7 +127,13 @@ test('P2 Blog UI enhances executive abstract, compact authors, collapsible third
   fs.copyFileSync(path.join(BLOG_ROOT, 'hugo.yaml'), path.join(repo, 'hugo.yaml'));
 
   // 1. Synthetic paper with explicit frontmatter `paper_digest_reader_sections` (camelCase `roleLabel` in YAML!),
+  //    inline code containing formula delimiters (`\[CLS\]`, `\(x`) & HTML chars (`<`, `>`, `&`, `"`) in `<h3>`,
   //    unbound authors (>= 2), mixed primary + third-party resources (`第三方资源：` + `论文所列链接：`), table, image, reading-path blockquote
+  const readerHeader = {
+    contract: 'beginner-researcher',
+    schemaFingerprint: 'cd8baf5b8bda3a49eec64f6005931af63de4e9a13148cba5f354c661ca6e9df2'
+  };
+  // Deliberately declare 3 entries for a 4-H3 paper to exercise BOTH exact-length/heading lookup AND Markdown-stripped `$declaredByHeading` matching!
   const declaredSectionsPaper = [
     '---',
     'title: "Structured Audio Representation with Explicit Reader Sections"',
@@ -142,6 +148,8 @@ test('P2 Blog UI enhances executive abstract, compact authors, collapsible third
     'paper_digest_reader_title: "显式章节导览：结构化音频表征解读"',
     'paper_digest_score: 8.2',
     'paper_digest_one_sentence: "用分层瓶颈解耦声学细节与语义上下文。"',
+    `paper_digest_api_reader_contract: ${JSON.stringify(readerHeader.contract)}`,
+    `paper_digest_api_reader_schema_fingerprint: ${JSON.stringify(readerHeader.schemaFingerprint)}`,
     'paper_digest_reader_sections:',
     '  - index: 1',
     '    kind: background',
@@ -150,7 +158,7 @@ test('P2 Blog UI enhances executive abstract, compact authors, collapsible third
     '  - index: 2',
     '    kind: method_overview',
     '    roleLabel: "核心架构"',
-    '    heading: "双速率瓶颈如何在帧级与句级之间分工"',
+    `    heading: ${JSON.stringify('门控网络如何处理 `\\[CLS\\]`、`\\(x` 与 `a < b && c > "d"` 边界')}`,
     '  - index: 3',
     '    kind: result',
     '    roleLabel: "关键实证"',
@@ -198,9 +206,9 @@ test('P2 Blog UI enhances executive abstract, compact authors, collapsible third
     '',
     '流式编码器每次仅观测有限右侧上下文，长句尾部的消歧线索无法回传给早期帧。',
     '',
-    '### 双速率瓶颈如何在帧级与句级之间分工',
+    '### 门控网络如何处理 `\\[CLS\\]`、`\\(x` 与 `a < b && c > "d"` 边界',
     '',
-    '**快通道 × 慢通道：** 快通道保留 50 Hz 音素边界，慢通道聚合 5 Hz 语义摘要，两者协同兼顾低延迟与上下文完整性。',
+    '**快通道 × 慢通道：** 快通道保留 50 Hz 音素边界，慢通道聚合 5 Hz 语义摘要，门控权重满足 \\(0 < g_t < 1\\)，两者协同兼顾低延迟与上下文完整性。',
     '',
     '> **看图路径：** 1. 先看左侧梅尔谱输入；2. 再追踪上下两条采样率分支；3. 对照右侧融合解码输出',
     '',
@@ -227,6 +235,46 @@ test('P2 Blog UI enhances executive abstract, compact authors, collapsible third
     ''
   ].join('\n');
   fs.writeFileSync(path.join(repo, 'content/posts/2026-11-19-explicit-sections-2611-90001.md'), declaredSectionsPaper, 'utf8');
+
+  // 1b. Partial `paper_digest_reader_sections` (length mismatch: 1 declared entry with Markdown backticks on a 2-H3 paper)
+  //     Exercises `$declaredByHeading` Markdown-stripped matching + backslash escaping in `roleLabel`!
+  const partialSectionsPaper = [
+    '---',
+    'title: "Partial Reader Sections Heading Match Paper"',
+    'date: 2026-11-19',
+    'draft: false',
+    'tags: [语音识别]',
+    'categories: [论文速递]',
+    'paper_digest_page_type: paper',
+    'paper_digest_arxiv_id: "2611.90003"',
+    'paper_digest_original_title: "Partial Reader Sections Heading Match Paper"',
+    `paper_digest_api_reader_contract: ${JSON.stringify(readerHeader.contract)}`,
+    `paper_digest_api_reader_schema_fingerprint: ${JSON.stringify(readerHeader.schemaFingerprint)}`,
+    'paper_digest_reader_sections:',
+    '  - index: 1',
+    '    kind: component',
+    '    roleLabel: "边界机制"',
+    `    heading: ${JSON.stringify('为什么 `\\[SEP\\]` 与 `\\(y` 标记需要单独掩码')}`,
+    '---',
+    '',
+    '# 📄 局部章节映射与代码定界符回归测试',
+    '',
+    '## 📌 核心摘要',
+    '',
+    '验证部分声明的章节标题在含反引号公式字面量时仍能按纯文本归一化命中角色标签。',
+    '',
+    '## 🧭 深度解读',
+    '',
+    '### 为什么 `\\[SEP\\]` 与 `\\(y` 标记需要单独掩码',
+    '',
+    '模型在编码段边界时将 `\\[SEP\\]` 视为控制词符。',
+    '',
+    '### 结论在什么条件下才成立',
+    '',
+    '仅在固定分块长度下验证。',
+    ''
+  ].join('\n');
+  fs.writeFileSync(path.join(repo, 'content/posts/2026-11-19-partial-sections-2611-90003.md'), partialSectionsPaper, 'utf8');
 
   // 2. Real paper with all-third-party resources (5 items, 0 primary) + mixed authors (1 bound + 1 unbound -> must NOT compact!)
   const allThirdPartyPaper = '2026-10-21-micla-mixture-to-constituent-latent-alignment-for-2610-27491.md';
@@ -272,6 +320,30 @@ test('P2 Blog UI enhances executive abstract, compact authors, collapsible third
     ''
   ].join('\n');
   fs.writeFileSync(path.join(repo, 'content/posts/2026-11-19-edge-guard-2611-90002.md'), edgeGuardPaper, 'utf8');
+
+  // 3b. Paper with malformed raw `<h3 id="bad id">` (whitespace/quote/backslash) -> `$validH3` fails closed (no broken roadmap!)
+  const badH3IdPaper = [
+    '---',
+    'title: "Malformed Raw H3 Id Fail Closed Paper"',
+    'date: 2026-11-19',
+    'draft: false',
+    'tags: [语音识别]',
+    'categories: [论文速递]',
+    'paper_digest_page_type: paper',
+    'paper_digest_arxiv_id: "2611.90004"',
+    'paper_digest_original_title: "Malformed Raw H3 Id Fail Closed Paper"',
+    '---',
+    '',
+    '# 📄 非法 H3 ID 保护测试',
+    '',
+    '## 🧭 深度解读',
+    '',
+    '<h3 id="bad space\\id">异常手写标题</h3>',
+    '',
+    '正文段落。',
+    ''
+  ].join('\n');
+  fs.writeFileSync(path.join(repo, 'content/posts/2026-11-19-bad-h3-id-2611-90004.md'), badH3IdPaper, 'utf8');
 
   // 4. Daily summary page (`paper_digest_page_type: index`) -> must NOT receive single-paper enhancements!
   const dailySummaryMd = [
@@ -350,9 +422,9 @@ test('P2 Blog UI enhances executive abstract, compact authors, collapsible third
 
   // Full navigation & desktop-details verification must pass 100%
   const navStats = verifyPageNavigation(buildDir);
-  assert.ok(navStats.htmlPages >= 4);
+  assert.ok(navStats.htmlPages >= 5);
   const desktopStats = verifyDesktopDetails(buildDir);
-  assert.equal(desktopStats.appearanceCount, 5);
+  assert.equal(desktopStats.appearanceCount, 7);
 
   // (a1) Verify explicit paper page: executive-abstract-card, compact-authors, mixed third-party folding, roadmap & TOC
   const explicitHtml = fs.readFileSync(path.join(buildDir, 'posts/2026-11-19-explicit-sections-2611-90001/index.html'), 'utf8');
@@ -360,6 +432,24 @@ test('P2 Blog UI enhances executive abstract, compact authors, collapsible third
   assert.match(explicitHtml, /<p class=["']?compact-authors-line["']?><strong>论文作者：<\/strong>Lin Chen · Mei Wang · Hao Zhou<\/p>/);
   assert.match(explicitHtml, /<p class=["']?compact-authors-note["']?>注：原论文 HTML 未提供可逐人可靠绑定的机构上标。<\/p>/);
   assert.doesNotMatch(explicitHtml, /Lin Chen：机构信息未能在本次解析中与作者逐人可靠绑定/);
+
+  // Inline code inside H3 is preserved inside `<code>...</code>` in `.reader-roadmap-list` (note: `hugo --minify`
+  // decodes `&#92;` back to `\`, which is why preserving the `<code>` element itself is essential for `markdown_hugo_gate.py`!)
+  const roadmapMatch = explicitHtml.match(/<div class=["']?reader-section-roadmap["']?>[\s\S]*?<\/div>/);
+  assert.ok(roadmapMatch, 'roadmap container must exist');
+  const roadmapHtml = roadmapMatch[0];
+  assert.match(roadmapHtml, /<code>(?:\\\[|&#92;\[)CLS(?:\\\]|&#92;\])<\/code>/);
+  assert.match(roadmapHtml, /<code>(?:\\\(|&#92;\()x<\/code>/);
+  assert.match(roadmapHtml, /<code>a &lt; b (?:&amp;&amp;|&&) c (?:&gt;|>) (?:"|&#34;|&quot;)d(?:"|&#34;|&quot;)<\/code>/);
+  const roadmapOutsideCode = roadmapHtml.replace(/<code\b[^>]*>[\s\S]*?<\/code>/gi, '');
+  assert.ok(!roadmapOutsideCode.includes('\\('), 'unpaired formula delimiter must never leak outside <code> in roadmap HTML');
+  assert.ok(!roadmapOutsideCode.includes('\\['), 'block formula delimiter must never leak outside <code> in roadmap HTML');
+
+  // Verify partial `paper_digest_reader_sections` Markdown-stripped `$declaredByHeading` lookup
+  const partialHtml = fs.readFileSync(path.join(buildDir, 'posts/2026-11-19-partial-sections-2611-90003/index.html'), 'utf8');
+  assert.match(partialHtml, /<span class=["']?reader-role-pill["']?>边界机制<\/span>/);
+  assert.match(partialHtml, /<code>(?:\\\[|&#92;\[)SEP(?:\\\]|&#92;\])<\/code>/);
+  assert.match(partialHtml, /<code>(?:\\\(|&#92;\()y<\/code>/);
 
   // Mixed resources: primary kept in .primary-resources-list, 3 third-party folded into details.third-party-resources
   assert.match(explicitHtml, /class=["']?primary-resources-list["']?/);
@@ -377,6 +467,53 @@ test('P2 Blog UI enhances executive abstract, compact authors, collapsible third
   assert.equal((explicitHtml.match(/<table\b/gi) || []).length, 1);
   assert.equal((explicitHtml.match(/看图路径：/g) || []).length, 1);
 
+  // Verify mathematical & emphasis delimiter pairing outside closed <code>/<pre> across rendered articles,
+  // AND invoke main-repo `markdown_hugo_gate.py:validate_hugo_rendered_html_gate` when co-located!
+  for (const html of [explicitHtml, partialHtml]) {
+    const bodyMatch = html.match(/<div[^>]*id=["']?article-body["']?[^>]*>([\s\S]*?)<\/div>\s*<\/div>/);
+    assert.ok(bodyMatch);
+    const codeMasked = bodyMatch[1]
+      .replace(/<pre\b[^>]*>[\s\S]*?<\/pre>/gi, ' ')
+      .replace(/<code\b[^>]*>[\s\S]*?<\/code>/gi, ' ');
+    const inlineOpens = (codeMasked.match(/(?<!\\)(?:\\\\)*\\\(/g) || []).length;
+    const inlineCloses = (codeMasked.match(/(?<!\\)(?:\\\\)*\\\)/g) || []).length;
+    const blockOpens = (codeMasked.match(/(?<!\\)(?:\\\\)*\\\[/g) || []).length;
+    const blockCloses = (codeMasked.match(/(?<!\\)(?:\\\\)*\\\]/g) || []).length;
+    assert.equal(inlineOpens, inlineCloses, 'paired \\(...\\) delimiters outside <code>');
+    assert.equal(blockOpens, blockCloses, 'paired \\[...\\] delimiters outside <code>');
+    assert.ok(!codeMasked.includes('**'), 'no raw ** emphasis residue');
+  }
+
+  const siblingGateScript = path.resolve(BLOG_ROOT, '..', 'audio-paper-digest', 'scripts', 'markdown_hugo_gate.py');
+  if (fs.existsSync(siblingGateScript)) {
+    const pyCheck = [
+      'import sys, json',
+      'from pathlib import Path',
+      'sys.path.insert(0, str(Path(sys.argv[1]).parent))',
+      'import markdown_hugo_gate as gate',
+      'build_dir = Path(sys.argv[2])',
+      'artifacts = []',
+      'for md_path in sys.argv[3:]:',
+      '    p = Path(md_path)',
+      '    fm, body = gate.load_frontmatter(p)',
+      '    artifacts.append({"path": str(p), "frontmatter": fm, "body": body})',
+      'issues = gate.validate_hugo_rendered_html_gate(build_dir, artifacts)',
+      'print(json.dumps({"checked": len(artifacts), "issues": issues}))',
+      'assert issues == [], f"markdown_hugo_gate failed: {issues}"'
+    ].join('\n');
+    const gateOut = JSON.parse(execFileSync('python3', [
+      '-c',
+      pyCheck,
+      siblingGateScript,
+      buildDir,
+      path.join(repo, 'content/posts/2026-11-19-explicit-sections-2611-90001.md'),
+      path.join(repo, 'content/posts/2026-11-19-partial-sections-2611-90003.md'),
+      path.join(repo, 'content/posts', allThirdPartyPaper)
+    ], { encoding: 'utf8' }));
+    assert.equal(gateOut.checked, 3);
+    assert.deepEqual(gateOut.issues, []);
+  }
+
   // (a2) Verify all-third-party resources + mixed authors paper (MiCLA, legacy without `paper_digest_reader_sections`)
   const miclaSlug = allThirdPartyPaper.replace(/\.md$/, '');
   const miclaHtml = fs.readFileSync(path.join(buildDir, 'posts', miclaSlug, 'index.html'), 'utf8');
@@ -386,10 +523,12 @@ test('P2 Blog UI enhances executive abstract, compact authors, collapsible third
   assert.match(miclaHtml, /class=["']?reader-section-roadmap["']?/, 'legacy paper without frontmatter sections still gets auto roadmap');
   assert.match(miclaHtml, /第 1\/\d+ 节 · 背景基础/);
 
-  // (a3) Verify edge-guard paper (`Rui Gong\$` author + only 1 third-party link)
+  // (a3) Verify edge-guard paper (`Rui Gong\$` author + only 1 third-party link) and malformed H3 id fail-closed guard
   const edgeHtml = fs.readFileSync(path.join(buildDir, 'posts/2026-11-19-edge-guard-2611-90002/index.html'), 'utf8');
   assert.doesNotMatch(edgeHtml, /compact-authors-line/, 'author list containing literal $ must stay untouched');
   assert.doesNotMatch(edgeHtml, /third-party-resources/, 'single third-party link (< 2) must stay unfolded');
+  const badH3Html = fs.readFileSync(path.join(buildDir, 'posts/2026-11-19-bad-h3-id-2611-90004/index.html'), 'utf8');
+  assert.doesNotMatch(badH3Html, /reader-section-roadmap|reader-section-kicker/, 'malformed H3 id with space/backslash must fail closed');
 
   // (a4) Verify daily summary (`index`) is 100% untouched by single-paper enhancements
   const dailyHtml = fs.readFileSync(path.join(buildDir, 'posts/2026-11-19/index.html'), 'utf8');
@@ -401,7 +540,7 @@ test('P2 Blog UI enhances executive abstract, compact authors, collapsible third
   //     zero comments, zero duplicate IDs, and 100% self-contained valid `#fragment` targets!
   const articlesDir = path.join(buildDir, 'client/details/articles');
   const articleFiles = fs.readdirSync(articlesDir).filter(f => f.endsWith('.html'));
-  assert.equal(articleFiles.length, 5);
+  assert.equal(articleFiles.length, 7);
 
   for (const file of articleFiles) {
     const html = fs.readFileSync(path.join(articlesDir, file), 'utf8');

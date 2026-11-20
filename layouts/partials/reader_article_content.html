@@ -210,15 +210,31 @@
               {{- $idAttr := findRE `\sid="[^"]+"` $openH3 1 -}}
               {{- if eq (len $idAttr) 1 -}}
                 {{- $h3Id := replaceRE `^\sid="([^"]+)"$` "$1" (index $idAttr 0) -}}
-                {{- if or (eq $h3Id "") (isset $seenH3Ids $h3Id) -}}
+                {{- if or (eq $h3Id "") (isset $seenH3Ids $h3Id) (findRE `[\s<>'"\\]` $h3Id 1) -}}
                   {{- $validH3 = false -}}
                 {{- else -}}
                   {{- $seenH3Ids = merge $seenH3Ids (dict $h3Id true) -}}
-                  {{- $h3Inner := replaceRE `(?s)^<h3\b[^>]*>|</h3>$` "" $h3 -}}
-                  {{- range $m, $b := $protected -}}{{- $h3Inner = replace $h3Inner $m $b -}}{{- end -}}
-                  {{- $h3Title := strings.TrimSpace ($h3Inner | plainify | htmlUnescape) -}}
-                  {{- if eq $h3Title "" -}}{{- $validH3 = false -}}{{- end -}}
-                  {{- $h3Meta = $h3Meta | append (dict "raw" $h3 "id" $h3Id "title" $h3Title) -}}
+                  {{- $h3RawInner := replaceRE `(?s)^<h3\b[^>]*>|</h3>$` "" $h3 -}}
+                  {{- $h3FullInner := $h3RawInner -}}
+                  {{- range $m, $b := $protected -}}{{- $h3FullInner = replace $h3FullInner $m $b -}}{{- end -}}
+                  {{- $h3Title := strings.TrimSpace ($h3FullInner | plainify | htmlUnescape) -}}
+                  {{- $safeTitle := strings.TrimSpace ($h3RawInner | plainify | htmlUnescape) | transform.HTMLEscape -}}
+                  {{- $safeTitle = replace (replace $safeTitle "$" "&#36;") "**" "&#42;&#42;" -}}
+                  {{- range $m, $b := $protected -}}
+                    {{- if in $safeTitle $m -}}
+                      {{- if findRE `(?i)^<code\b` $b 1 -}}
+                        {{- $codeInner := replaceRE `(?is)^<code\b[^>]*>|</code>$` "" $b | htmlUnescape | transform.HTMLEscape -}}
+                        {{- $codeInner = replace (replace (replace $codeInner "\\" "&#92;") "$" "&#36;") "*" "&#42;" -}}
+                        {{- $safeTitle = replace $safeTitle $m (printf "<code>%s</code>" $codeInner) -}}
+                      {{- else -}}
+                        {{- $plainProtected := ($b | plainify | htmlUnescape | transform.HTMLEscape) -}}
+                        {{- $plainProtected = replace (replace (replace $plainProtected "\\" "&#92;") "$" "&#36;") "*" "&#42;" -}}
+                        {{- $safeTitle = replace $safeTitle $m $plainProtected -}}
+                      {{- end -}}
+                    {{- end -}}
+                  {{- end -}}
+                  {{- if or (eq $h3Title "") (eq (strings.TrimSpace $safeTitle) "") -}}{{- $validH3 = false -}}{{- end -}}
+                  {{- $h3Meta = $h3Meta | append (dict "raw" $h3 "id" $h3Id "title" $h3Title "safeTitle" $safeTitle) -}}
                 {{- end -}}
               {{- else -}}
                 {{- $validH3 = false -}}
@@ -236,6 +252,10 @@
                   {{- end -}}
                   {{- if and (ne $declHeading "") (ne $declRole "") -}}
                     {{- $declaredByHeading = merge $declaredByHeading (dict $declHeading $declRole) -}}
+                    {{- $declHeadingPlain := strings.TrimSpace ($declHeading | markdownify | plainify | htmlUnescape) -}}
+                    {{- if ne $declHeadingPlain "" -}}
+                      {{- $declaredByHeading = merge $declaredByHeading (dict $declHeadingPlain $declRole) -}}
+                    {{- end -}}
                   {{- end -}}
                 {{- end -}}
               {{- end -}}
@@ -316,8 +336,8 @@
                     {{- $role = index $stageLabels $stage -}}
                   {{- end -}}
                 {{- end -}}
-                {{- $safeRole := replace (replace ($role | transform.HTMLEscape) "$" "&#36;") "**" "&#42;&#42;" -}}
-                {{- $safeTitle := replace (replace ($title | transform.HTMLEscape) "$" "&#36;") "**" "&#42;&#42;" -}}
+                {{- $safeRole := replace (replace (replace ($role | transform.HTMLEscape) "\\" "&#92;") "$" "&#36;") "**" "&#42;&#42;" -}}
+                {{- $safeTitle := $meta.safeTitle -}}
                 {{- $stepNum := add $sIdx 1 -}}
                 {{- $roadmapItems = $roadmapItems | append (printf "<li><span class=\"reader-role-pill\">%s</span> <a href=\"#%s\">%s</a></li>" $safeRole $meta.id $safeTitle) -}}
                 {{- $roadmapEntries = $roadmapEntries | append (dict "num" $stepNum "total" $totalH3 "id" $meta.id "role" $safeRole "title" $safeTitle) -}}
