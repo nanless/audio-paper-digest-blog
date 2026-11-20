@@ -1,6 +1,27 @@
 {{- /* Generated chapter navigation contains text, never heading thumbnails.
       Keep the original fragment destinations and inline textual formatting. */ -}}
-{{- $toc := printf "%s" . -}}
+{{- $isMap := reflect.IsMap . -}}
+{{- $toc := "" -}}
+{{- if $isMap -}}
+  {{- $toc = printf "%s" .toc -}}
+{{- else -}}
+  {{- $toc = printf "%s" . -}}
+{{- end -}}
 {{- $toc = replaceRE `(?is)<img(?:\s(?:[^>"']|"[^"]*"|'[^']*')*|/?)>` "" $toc -}}
 {{- $toc = replaceRE `(?is)(<a\b[^>]*>)\s*</a>` `${1}图示章节</a>` $toc -}}
+{{- if $isMap -}}
+  {{- with .page -}}
+    {{- if not (reflect.IsMap .) -}}
+      {{- with .Store.Get "reader_deep_dive_sections" -}}
+        {{- range . -}}
+          {{- $openAnchor := printf `<a href="#%s">` .id -}}
+          {{- if eq (len (split $toc $openAnchor)) 2 -}}
+            {{- $badge := printf `%s<span class="toc-role-badge">%02d · %s</span> ` $openAnchor .num .role -}}
+            {{- $toc = replace $toc $openAnchor $badge 1 -}}
+          {{- end -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
 {{- return ($toc | safeHTML) -}}

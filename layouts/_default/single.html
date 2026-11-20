@@ -68,6 +68,14 @@
     {{- if not $isDaily }}{{ partial "conference_page_navigation.html" . }}{{ end }}
   </header>
 
+  {{- $articleContent := "" }}
+  {{- if .Content }}
+  {{- $articleContent = partial "missing_image_presentations.html" (dict "page" . "content" .Content) }}
+  {{- $articleContent = partial "reader_article_content.html" (dict "page" . "content" $articleContent "headline" $headline "originalTitle" $metadata.originalTitle) }}
+  {{- $articleContent = partial "resource_verification_notice.html" (dict "page" . "content" $articleContent) }}
+  {{- $articleContent = partial "conference_caption_gloss.html" (dict "page" . "content" $articleContent) }}
+  {{- end }}
+
   {{- $layoutClass := "research-layout" }}
   {{- if not $isPaper }}{{ $layoutClass = "research-layout research-layout--digest" }}{{ end }}
   <div class="{{ $layoutClass }}">
@@ -75,7 +83,7 @@
     <aside class="workbench-toc" aria-label="文章目录">
       <details class="toc" open>
         <summary><span class="title">目录</span></summary>
-        <div class="inner">{{ partial "reader_table_of_contents.html" .TableOfContents }}</div>
+        <div class="inner">{{ partial "reader_table_of_contents.html" (dict "toc" .TableOfContents "page" .) }}</div>
       </details>
     </aside>
     {{- end }}
@@ -86,10 +94,6 @@
       {{- $isHidden := (.Param "cover.hiddenInSingle") | default (.Param "cover.hidden") | default false }}
       {{- partial "cover.html" (dict "cxt" . "IsSingle" true "isHidden" $isHidden) }}
       {{- if .Content }}
-      {{- $articleContent := partial "missing_image_presentations.html" (dict "page" . "content" .Content) }}
-      {{- $articleContent = partial "reader_article_content.html" (dict "page" . "content" $articleContent "headline" $headline "originalTitle" $metadata.originalTitle) }}
-      {{- $articleContent = partial "resource_verification_notice.html" (dict "page" . "content" $articleContent) }}
-      {{- $articleContent = partial "conference_caption_gloss.html" (dict "page" . "content" $articleContent) }}
       <div class="post-content md-content research-article" id="article-body" tabindex="-1">
         {{- if not (.Param "disableAnchoredHeadings") }}
           {{- partial "anchored_headings.html" $articleContent -}}

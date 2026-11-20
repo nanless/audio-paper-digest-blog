@@ -81,6 +81,272 @@
       {{- end -}}
     {{- end -}}
   {{- end -}}
+  {{- /* Progressive reading structure for individual paper pages only.
+        Emits strictly v1.4.6 client-allowlisted HTML5 elements and attributes
+        without altering heading counts, heading inner text, images or tables. */ -}}
+  {{- $pageType := "" -}}
+  {{- $rawReaderSections := slice -}}
+  {{- with $page.Params -}}
+    {{- $pageType = .paper_digest_page_type | default "" -}}
+    {{- with .paper_digest_reader_sections -}}
+      {{- if reflect.IsSlice . -}}
+        {{- $rawReaderSections = . -}}
+      {{- else if and (eq (printf "%T" .) "string") (hasPrefix (strings.TrimSpace .) "[") -}}
+        {{- $rawReaderSections = transform.Unmarshal . -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+  {{- if eq $pageType "paper" -}}
+    {{- $h2List := findRE `(?s)<h2\b[^>]*>.*?</h2>` $content -}}
+    {{- $h2Count := len $h2List -}}
+    {{- if gt $h2Count 0 -}}
+      {{- $kindRoleLabels := dict "background" "背景基础" "related_work" "相关路线" "problem" "核心问题" "method_overview" "方法总览" "component" "核心机制" "training" "训练设计" "experiment_setup" "实验设置" "result" "实验结果" "ablation" "消融分析" "limitation" "适用边界" "reproduction" "复现指南" "synthesis" "实践总结" -}}
+      {{- $stageLabels := slice "背景基础" "相关路线" "核心问题" "方法总览" "核心机制" "训练设计" "实验设置" "实验结果" "消融分析" "适用边界" "复现指南" "实践总结" -}}
+      {{- $rem := $content -}}
+      {{- $rebuilt := "" -}}
+      {{- range $h2Idx, $curH2 := $h2List -}}
+        {{- if eq $h2Idx 0 -}}
+          {{- $p0 := split $rem $curH2 -}}
+          {{- $before0 := index $p0 0 -}}
+          {{- $rebuilt = printf "%s%s" $before0 $curH2 -}}
+          {{- $rem = strings.TrimPrefix (printf "%s%s" $before0 $curH2) $rem -}}
+        {{- end -}}
+        {{- $secBody := "" -}}
+        {{- $hasNext := lt (add $h2Idx 1) $h2Count -}}
+        {{- $nextH2 := "" -}}
+        {{- if $hasNext -}}
+          {{- $nextH2 = index $h2List (add $h2Idx 1) -}}
+          {{- $np := split $rem $nextH2 -}}
+          {{- $secBody = index $np 0 -}}
+          {{- $rem = strings.TrimPrefix (printf "%s%s" $secBody $nextH2) $rem -}}
+        {{- else -}}
+          {{- $secBody = $rem -}}
+          {{- $rem = "" -}}
+        {{- end -}}
+        {{- $h2Plain := $curH2 -}}
+        {{- range $m, $b := $protected -}}{{- $h2Plain = replace $h2Plain $m $b -}}{{- end -}}
+        {{- $h2Plain = strings.TrimSpace ($h2Plain | plainify | htmlUnescape) -}}
+        {{- if eq $h2Plain "📌 核心摘要" -}}
+          {{- $trimmedAbstract := strings.TrimSpace $secBody -}}
+          {{- if and (ne $trimmedAbstract "") (not (in $secBody "executive-abstract-card")) -}}
+            {{- $secBody = printf "\n<div class=\"executive-abstract-card\">\n%s\n</div>\n" $trimmedAbstract -}}
+          {{- end -}}
+        {{- else if eq $h2Plain "👥 作者与机构" -}}
+          {{- $uls := findRE `(?s)<ul\b[^>]*>.*?</ul>` $secBody -}}
+          {{- if eq (len $uls) 1 -}}
+            {{- $ul := index $uls 0 -}}
+            {{- if and (eq (len (findRE `<ul\b` $ul)) 1) (eq (len (findRE `<ol\b` $ul)) 0) (not (in $ul "$")) (not (in $ul $prefix)) -}}
+              {{- $lis := findRE `(?s)<li\b[^>]*>.*?</li>` $ul -}}
+              {{- $ulLeftover := strings.TrimSpace (replaceRE `(?s)<li\b[^>]*>.*?</li>` "" (replaceRE `(?s)^<ul\b[^>]*>|</ul>$` "" $ul)) -}}
+              {{- if and (ge (len $lis) 2) (eq $ulLeftover "") -}}
+                {{- $authorNames := slice -}}
+                {{- $allUnbound := true -}}
+                {{- $unboundSuffix := "：机构信息未能在本次解析中与作者逐人可靠绑定" -}}
+                {{- range $li := $lis -}}
+                  {{- $liInner := strings.TrimSpace (replaceRE `(?s)^<li\b[^>]*>|</li>$` "" $li) -}}
+                  {{- if findRE `(?s)^<p>.*</p>$` $liInner 1 -}}
+                    {{- $liInner = strings.TrimSpace (strings.TrimSuffix "</p>" (strings.TrimPrefix "<p>" $liInner)) -}}
+                  {{- end -}}
+                  {{- if and (hasSuffix $liInner $unboundSuffix) (not (findRE `<[^>]+>` $liInner 1)) -}}
+                    {{- $authorName := strings.TrimSpace (strings.TrimSuffix $unboundSuffix $liInner) -}}
+                    {{- if and (ne $authorName "") (not (in $authorName "：")) (not (in $authorName "；")) -}}
+                      {{- $authorNames = $authorNames | append $authorName -}}
+                    {{- else -}}
+                      {{- $allUnbound = false -}}
+                    {{- end -}}
+                  {{- else -}}
+                    {{- $allUnbound = false -}}
+                  {{- end -}}
+                {{- end -}}
+                {{- if and $allUnbound (eq (len $authorNames) (len $lis)) -}}
+                  {{- $compactAuthors := printf "<p class=\"compact-authors-line\"><strong>论文作者：</strong>%s</p>\n<p class=\"compact-authors-note\">注：原论文 HTML 未提供可逐人可靠绑定的机构上标。</p>" (delimit $authorNames " · ") -}}
+                  {{- $secBody = replace $secBody $ul $compactAuthors 1 -}}
+                {{- end -}}
+              {{- end -}}
+            {{- end -}}
+          {{- end -}}
+        {{- else if eq $h2Plain "🔗 开源与复现资源" -}}
+          {{- $uls := findRE `(?s)<ul\b[^>]*>.*?</ul>` $secBody -}}
+          {{- if eq (len $uls) 1 -}}
+            {{- $ul := index $uls 0 -}}
+            {{- if and (eq (len (findRE `<ul\b` $ul)) 1) (eq (len (findRE `<ol\b` $ul)) 0) -}}
+              {{- $lis := findRE `(?s)<li\b[^>]*>.*?</li>` $ul -}}
+              {{- $ulLeftover := strings.TrimSpace (replaceRE `(?s)<li\b[^>]*>.*?</li>` "" (replaceRE `(?s)^<ul\b[^>]*>|</ul>$` "" $ul)) -}}
+              {{- if and (ge (len $lis) 2) (eq $ulLeftover "") -}}
+                {{- $primaryLis := slice -}}
+                {{- $thirdPartyLis := slice -}}
+                {{- range $li := $lis -}}
+                  {{- $liCopy := $li -}}
+                  {{- range $m, $b := $protected -}}{{- $liCopy = replace $liCopy $m $b -}}{{- end -}}
+                  {{- $liText := strings.TrimSpace ($liCopy | plainify | htmlUnescape) -}}
+                  {{- if or (hasPrefix $liText "第三方资源：") (hasPrefix $liText "论文所列链接：") -}}
+                    {{- $thirdPartyLis = $thirdPartyLis | append $li -}}
+                  {{- else -}}
+                    {{- $primaryLis = $primaryLis | append $li -}}
+                  {{- end -}}
+                {{- end -}}
+                {{- if ge (len $thirdPartyLis) 2 -}}
+                  {{- $detailsBlock := printf "<details class=\"third-party-resources\"><summary>论文提及的参考基线与第三方链接（共 %d 项）</summary>\n<ul>\n%s\n</ul>\n</details>" (len $thirdPartyLis) (delimit $thirdPartyLis "\n") -}}
+                  {{- $resourceOut := "" -}}
+                  {{- if gt (len $primaryLis) 0 -}}
+                    {{- $resourceOut = printf "<ul class=\"primary-resources-list\">\n%s\n</ul>\n%s" (delimit $primaryLis "\n") $detailsBlock -}}
+                  {{- else -}}
+                    {{- $resourceOut = printf "<p class=\"resource-primary-note\">正文中未单独标注作者自有代码仓库，以下为论文提及的参考或相关链接：</p>\n%s" $detailsBlock -}}
+                  {{- end -}}
+                  {{- $secBody = replace $secBody $ul $resourceOut 1 -}}
+                {{- end -}}
+              {{- end -}}
+            {{- end -}}
+          {{- end -}}
+        {{- else if eq $h2Plain "🧭 深度解读" -}}
+          {{- $h3List := findRE `(?s)<h3\b[^>]*>.*?</h3>` $secBody -}}
+          {{- $totalH3 := len $h3List -}}
+          {{- if and (gt $totalH3 0) (not (in $secBody "reader-section-roadmap")) -}}
+            {{- $h3Meta := slice -}}
+            {{- $seenH3Ids := dict -}}
+            {{- $validH3 := true -}}
+            {{- range $h3 := $h3List -}}
+              {{- $openH3 := index (findRE `^<h3\b[^>]*>` $h3 1) 0 -}}
+              {{- $idAttr := findRE `\sid="[^"]+"` $openH3 1 -}}
+              {{- if eq (len $idAttr) 1 -}}
+                {{- $h3Id := replaceRE `^\sid="([^"]+)"$` "$1" (index $idAttr 0) -}}
+                {{- if or (eq $h3Id "") (isset $seenH3Ids $h3Id) -}}
+                  {{- $validH3 = false -}}
+                {{- else -}}
+                  {{- $seenH3Ids = merge $seenH3Ids (dict $h3Id true) -}}
+                  {{- $h3Inner := replaceRE `(?s)^<h3\b[^>]*>|</h3>$` "" $h3 -}}
+                  {{- range $m, $b := $protected -}}{{- $h3Inner = replace $h3Inner $m $b -}}{{- end -}}
+                  {{- $h3Title := strings.TrimSpace ($h3Inner | plainify | htmlUnescape) -}}
+                  {{- if eq $h3Title "" -}}{{- $validH3 = false -}}{{- end -}}
+                  {{- $h3Meta = $h3Meta | append (dict "raw" $h3 "id" $h3Id "title" $h3Title) -}}
+                {{- end -}}
+              {{- else -}}
+                {{- $validH3 = false -}}
+              {{- end -}}
+            {{- end -}}
+            {{- if and $validH3 (eq (len $h3Meta) $totalH3) -}}
+              {{- $declaredByHeading := dict -}}
+              {{- range $decl := $rawReaderSections -}}
+                {{- if reflect.IsMap $decl -}}
+                  {{- $declHeading := strings.TrimSpace (printf "%v" (index $decl "heading" | default "")) -}}
+                  {{- $declRole := strings.TrimSpace (printf "%v" (or (index $decl "roleLabel") (index $decl "rolelabel") "")) -}}
+                  {{- if eq $declRole "" -}}
+                    {{- $declKind := strings.TrimSpace (printf "%v" (index $decl "kind" | default "")) -}}
+                    {{- $declRole = index $kindRoleLabels $declKind | default "" -}}
+                  {{- end -}}
+                  {{- if and (ne $declHeading "") (ne $declRole "") -}}
+                    {{- $declaredByHeading = merge $declaredByHeading (dict $declHeading $declRole) -}}
+                  {{- end -}}
+                {{- end -}}
+              {{- end -}}
+              {{- $stage := 0 -}}
+              {{- $roadmapItems := slice -}}
+              {{- $roadmapEntries := slice -}}
+              {{- $h3Rem := $secBody -}}
+              {{- $h3Rebuilt := "" -}}
+              {{- range $sIdx, $meta := $h3Meta -}}
+                {{- $title := $meta.title -}}
+                {{- $role := "" -}}
+                {{- if and (eq (len $rawReaderSections) $totalH3) (reflect.IsMap (index $rawReaderSections $sIdx)) -}}
+                  {{- $decl := index $rawReaderSections $sIdx -}}
+                  {{- $role = strings.TrimSpace (printf "%v" (or (index $decl "roleLabel") (index $decl "rolelabel") "")) -}}
+                  {{- if eq $role "" -}}
+                    {{- $declKind := strings.TrimSpace (printf "%v" (index $decl "kind" | default "")) -}}
+                    {{- $role = index $kindRoleLabels $declKind | default "" -}}
+                  {{- end -}}
+                {{- end -}}
+                {{- if eq $role "" -}}
+                  {{- $role = index $declaredByHeading $title | default "" -}}
+                {{- end -}}
+                {{- if eq $role "" -}}
+                  {{- if eq $totalH3 1 -}}
+                    {{- $role = "核心导读" -}}
+                  {{- else if lt $totalH3 6 -}}
+                    {{- if eq $sIdx 0 -}}
+                      {{- $role = "问题切入" -}}
+                    {{- else if eq $sIdx (sub $totalH3 1) -}}
+                      {{- $role = "核心结论" -}}
+                    {{- else if findRE `实验|结果|指标|数据|对比` $title 1 -}}
+                      {{- $role = "实验验证" -}}
+                    {{- else -}}
+                      {{- $role = "核心机制" -}}
+                    {{- end -}}
+                  {{- else -}}
+                    {{- $remCount := sub (sub $totalH3 1) $sIdx -}}
+                    {{- $nextStage := $stage -}}
+                    {{- if eq $sIdx 0 -}}
+                      {{- $nextStage = 0 -}}
+                    {{- else if eq $remCount 0 -}}
+                      {{- $nextStage = 11 -}}
+                    {{- else if and (eq $remCount 1) (ge $totalH3 9) -}}
+                      {{- $nextStage = 10 -}}
+                    {{- else if and (eq $remCount 2) (ge $totalH3 9) -}}
+                      {{- $nextStage = 9 -}}
+                    {{- else -}}
+                      {{- if and (le $stage 1) (le $sIdx 2) (findRE `已有|现有|前人|以往|相关|路线|妥协|传统` $title 1) -}}
+                        {{- $nextStage = 1 -}}
+                      {{- else if and (le $stage 2) (le $sIdx 3) (findRE `要解决|输入是什么|输出是什么|缺口|什么叫|形式化|痛点|难兼得|核心矛盾|为什么` $title 1) -}}
+                        {{- $nextStage = 2 -}}
+                      {{- else if and (le $stage 3) (le $sIdx 4) (findRE `全流程|整体流程|总体|工作流程|三步|两阶段|拆成|全景|总览|如何分工|框架` $title 1) -}}
+                        {{- $nextStage = 3 -}}
+                      {{- else if and (ge $stage 3) (le $stage 6) (ge (mul $sIdx 10) (mul $totalH3 4)) (findRE `评测集|数据集|数据、|数据模型与指标|基线|在哪些语言|用什么提示和指标|用什么条件比较|实验又按什么条件` $title 1) -}}
+                        {{- $nextStage = 6 -}}
+                      {{- else if and (ge $stage 6) (le $stage 8) (findRE `消融|代价|敏感|哪一路|哪些设计|哪类边最关键|失败说明什么|开销|权衡` $title 1) -}}
+                        {{- $nextStage = 8 -}}
+                      {{- else if and (ge $stage 6) (le $stage 7) -}}
+                        {{- $nextStage = 7 -}}
+                      {{- else if and (ge $stage 3) (le $stage 5) (ge $sIdx 4) (findRE `训练|损失|优化|总目标|后训练|微调|目标函数|更新参数|复用了什么` $title 1) (not (findRE `训练比随机|训练数据` $title 1)) -}}
+                        {{- $nextStage = 5 -}}
+                      {{- else if eq $stage 0 -}}
+                        {{- if and (eq $sIdx 1) (ge $totalH3 13) -}}{{- $nextStage = 1 -}}{{- else -}}{{- $nextStage = 2 -}}{{- end -}}
+                      {{- else if eq $stage 1 -}}
+                        {{- $nextStage = 2 -}}
+                      {{- else if eq $stage 2 -}}
+                        {{- $nextStage = 3 -}}
+                      {{- else if eq $stage 3 -}}
+                        {{- $nextStage = 4 -}}
+                      {{- else if eq $stage 4 -}}
+                        {{- if ge $sIdx (sub $totalH3 5) -}}{{- $nextStage = 6 -}}{{- else -}}{{- $nextStage = 4 -}}{{- end -}}
+                      {{- else if eq $stage 5 -}}
+                        {{- $nextStage = 6 -}}
+                      {{- end -}}
+                    {{- end -}}
+                    {{- if lt $nextStage $stage -}}{{- $nextStage = $stage -}}{{- end -}}
+                    {{- $stage = $nextStage -}}
+                    {{- $role = index $stageLabels $stage -}}
+                  {{- end -}}
+                {{- end -}}
+                {{- $safeRole := replace (replace ($role | transform.HTMLEscape) "$" "&#36;") "**" "&#42;&#42;" -}}
+                {{- $safeTitle := replace (replace ($title | transform.HTMLEscape) "$" "&#36;") "**" "&#42;&#42;" -}}
+                {{- $stepNum := add $sIdx 1 -}}
+                {{- $roadmapItems = $roadmapItems | append (printf "<li><span class=\"reader-role-pill\">%s</span> <a href=\"#%s\">%s</a></li>" $safeRole $meta.id $safeTitle) -}}
+                {{- $roadmapEntries = $roadmapEntries | append (dict "num" $stepNum "total" $totalH3 "id" $meta.id "role" $safeRole "title" $safeTitle) -}}
+                {{- $kicker := printf "<p class=\"reader-section-kicker\"><span class=\"reader-role-pill\">第 %d/%d 节 · %s</span></p>\n" $stepNum $totalH3 $safeRole -}}
+                {{- $hp := split $h3Rem $meta.raw -}}
+                {{- $hBefore := index $hp 0 -}}
+                {{- $sep := "\n" -}}
+                {{- if or (eq $hBefore "") (hasSuffix $hBefore "\n") -}}{{- $sep = "" -}}{{- end -}}
+                {{- $h3Rebuilt = printf "%s%s%s%s" $h3Rebuilt $hBefore $sep $kicker -}}
+                {{- $h3Rebuilt = printf "%s%s" $h3Rebuilt $meta.raw -}}
+                {{- $h3Rem = strings.TrimPrefix (printf "%s%s" $hBefore $meta.raw) $h3Rem -}}
+              {{- end -}}
+              {{- $roadmapCard := printf "\n<div class=\"reader-section-roadmap\">\n<p class=\"reader-roadmap-title\"><strong>长文导览（点击直达目标章节）</strong></p>\n<ol class=\"reader-roadmap-list\">\n%s\n</ol>\n</div>" (delimit $roadmapItems "\n") -}}
+              {{- $secBody = printf "%s%s%s" $roadmapCard $h3Rebuilt $h3Rem -}}
+              {{- if not (reflect.IsMap $page) -}}
+                {{- $page.Store.Set "reader_deep_dive_sections" $roadmapEntries -}}
+              {{- end -}}
+            {{- end -}}
+          {{- end -}}
+        {{- end -}}
+        {{- if $hasNext -}}
+          {{- $rebuilt = printf "%s%s%s" $rebuilt $secBody $nextH2 -}}
+        {{- else -}}
+          {{- $rebuilt = printf "%s%s" $rebuilt $secBody -}}
+        {{- end -}}
+      {{- end -}}
+      {{- $content = $rebuilt -}}
+    {{- end -}}
+  {{- end -}}
   {{- range $marker, $block := $protected -}}{{- $content = replace $content $marker $block -}}{{- end -}}
 {{- end -}}
 {{- return $content -}}

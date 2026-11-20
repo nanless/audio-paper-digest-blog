@@ -51,7 +51,14 @@ test('reader presentation preserves heading anchors and code, and repairs only t
     assert.equal(real.original.split(anchor).length, 3);
     expected = expected.replaceAll(anchor, `[${label}](${coords})`);
   }
-  assert.equal(real.displayed, expected);
+  assert.equal((real.displayed.match(/<div class="executive-abstract-card">/g) || []).length, 1);
+  assert.equal((real.displayed.match(/<div class="reader-section-roadmap">/g) || []).length, 1);
+  assert.equal((real.displayed.match(/<p class="reader-section-kicker">/g) || []).length, 14);
+  const unwrappedReal = real.displayed
+    .replace(/<div class="executive-abstract-card">\n([\s\S]*?)\n<\/div>/, '$1')
+    .replace(/\n<div class="reader-section-roadmap">\n[\s\S]*?\n<\/div>/, '')
+    .replace(/<p class="reader-section-kicker"><span class="reader-role-pill">[^<]+<\/span><\/p>\n/g, '');
+  assert.equal(unwrappedReal, expected);
   for (const file of ['posts/other.md', 'posts/drift.md']) {
     const r = read(file);
     assert.match(r.displayed, /href="0,0,0"/);
