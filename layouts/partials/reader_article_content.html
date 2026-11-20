@@ -219,7 +219,7 @@
                   {{- range $m, $b := $protected -}}{{- $h3FullInner = replace $h3FullInner $m $b -}}{{- end -}}
                   {{- $h3Title := strings.TrimSpace ($h3FullInner | plainify | htmlUnescape) -}}
                   {{- $safeTitle := strings.TrimSpace ($h3RawInner | plainify | htmlUnescape) | transform.HTMLEscape -}}
-                  {{- $safeTitle = replace (replace $safeTitle "$" "&#36;") "**" "&#42;&#42;" -}}
+                  {{- $safeTitle = replace (replace (replace $safeTitle "$" "＄") "**" "<span>*</span>*") "**" "<span>*</span>*" -}}
                   {{- range $m, $b := $protected -}}
                     {{- if in $safeTitle $m -}}
                       {{- if findRE `(?i)^<code\b` $b 1 -}}
@@ -228,7 +228,7 @@
                         {{- $safeTitle = replace $safeTitle $m (printf "<code>%s</code>" $codeInner) -}}
                       {{- else -}}
                         {{- $plainProtected := ($b | plainify | htmlUnescape | transform.HTMLEscape) -}}
-                        {{- $plainProtected = replace (replace (replace $plainProtected "\\" "&#92;") "$" "&#36;") "*" "&#42;" -}}
+                        {{- $plainProtected = replace (replace (replace (replace $plainProtected "\\" "＼") "$" "＄") "**" "<span>*</span>*") "**" "<span>*</span>*" -}}
                         {{- $safeTitle = replace $safeTitle $m $plainProtected -}}
                       {{- end -}}
                     {{- end -}}
@@ -336,7 +336,7 @@
                     {{- $role = index $stageLabels $stage -}}
                   {{- end -}}
                 {{- end -}}
-                {{- $safeRole := replace (replace (replace ($role | transform.HTMLEscape) "\\" "&#92;") "$" "&#36;") "**" "&#42;&#42;" -}}
+                {{- $safeRole := replace (replace (replace (replace ($role | transform.HTMLEscape) "\\" "＼") "$" "＄") "**" "<span>*</span>*") "**" "<span>*</span>*" -}}
                 {{- $safeTitle := $meta.safeTitle -}}
                 {{- $stepNum := add $sIdx 1 -}}
                 {{- $roadmapItems = $roadmapItems | append (printf "<li><span class=\"reader-role-pill\">%s</span> <a href=\"#%s\">%s</a></li>" $safeRole $meta.id $safeTitle) -}}

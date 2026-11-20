@@ -236,13 +236,15 @@ test('P2 Blog UI enhances executive abstract, compact authors, collapsible third
   ].join('\n');
   fs.writeFileSync(path.join(repo, 'content/posts/2026-11-19-explicit-sections-2611-90001.md'), declaredSectionsPaper, 'utf8');
 
-  // 1b. Partial `paper_digest_reader_sections` (length mismatch: 1 declared entry with Markdown backticks on a 2-H3 paper)
-  //     Exercises `$declaredByHeading` Markdown-stripped matching + backslash escaping in `roleLabel`!
+  // 1b. Partial `paper_digest_reader_sections` + source-escaped `\$100` & `\*\*` heading under `hugo --minify`!
+  //     (`disableAnchoredHeadings: true` lets `mask_source_bound_title_dollars` mask the single `<h3>` `$100`,
+  //      so if `.reader-section-roadmap` leaked `$100` or `**` after `hugo --minify`, `validate_hugo_rendered_html_gate` would fail!)
   const partialSectionsPaper = [
     '---',
     'title: "Partial Reader Sections Heading Match Paper"',
     'date: 2026-11-19',
     'draft: false',
+    'disableAnchoredHeadings: true',
     'tags: [语音识别]',
     'categories: [论文速递]',
     'paper_digest_page_type: paper',
@@ -253,7 +255,7 @@ test('P2 Blog UI enhances executive abstract, compact authors, collapsible third
     'paper_digest_reader_sections:',
     '  - index: 1',
     '    kind: component',
-    '    roleLabel: "边界机制"',
+    `    roleLabel: ${JSON.stringify('边界\\与$1**机制')}`,
     `    heading: ${JSON.stringify('为什么 `\\[SEP\\]` 与 `\\(y` 标记需要单独掩码')}`,
     '---',
     '',
@@ -261,7 +263,7 @@ test('P2 Blog UI enhances executive abstract, compact authors, collapsible third
     '',
     '## 📌 核心摘要',
     '',
-    '验证部分声明的章节标题在含反引号公式字面量时仍能按纯文本归一化命中角色标签。',
+    '验证部分声明的章节标题在含反引号公式字面量与转义美元符时仍能通过 `hugo --minify` 与门禁校验。',
     '',
     '## 🧭 深度解读',
     '',
@@ -269,9 +271,9 @@ test('P2 Blog UI enhances executive abstract, compact authors, collapsible third
     '',
     '模型在编码段边界时将 `\\[SEP\\]` 视为控制词符。',
     '',
-    '### 结论在什么条件下才成立',
+    '### 在 \\$100 预算与低延迟约束下识别词错率下降了多少',
     '',
-    '仅在固定分块长度下验证。',
+    '仅在固定分块长度与低成本推理条件下验证。',
     ''
   ].join('\n');
   fs.writeFileSync(path.join(repo, 'content/posts/2026-11-19-partial-sections-2611-90003.md'), partialSectionsPaper, 'utf8');
@@ -445,11 +447,17 @@ test('P2 Blog UI enhances executive abstract, compact authors, collapsible third
   assert.ok(!roadmapOutsideCode.includes('\\('), 'unpaired formula delimiter must never leak outside <code> in roadmap HTML');
   assert.ok(!roadmapOutsideCode.includes('\\['), 'block formula delimiter must never leak outside <code> in roadmap HTML');
 
-  // Verify partial `paper_digest_reader_sections` Markdown-stripped `$declaredByHeading` lookup
+  // Verify partial `paper_digest_reader_sections` Markdown-stripped `$declaredByHeading` lookup + `\$100` -> `＄100` & `\*\*` -> `<span>*</span>*` under `hugo --minify`
   const partialHtml = fs.readFileSync(path.join(buildDir, 'posts/2026-11-19-partial-sections-2611-90003/index.html'), 'utf8');
-  assert.match(partialHtml, /<span class=["']?reader-role-pill["']?>边界机制<\/span>/);
+  assert.match(partialHtml, /<span class=["']?reader-role-pill["']?>边界＼与＄1<span>\*<\/span>\*机制<\/span>/);
+  assert.match(partialHtml, /toc-role-badge["']?>01 · 边界＼与＄1<span>\*<\/span>\*机制<\/span>/);
   assert.match(partialHtml, /<code>(?:\\\[|&#92;\[)SEP(?:\\\]|&#92;\])<\/code>/);
   assert.match(partialHtml, /<code>(?:\\\(|&#92;\()y<\/code>/);
+  const partialRoadmap = partialHtml.match(/<div class=["']?reader-section-roadmap["']?>[\s\S]*?<\/div>/)?.[0] || '';
+  const partialRoadmapOutsideCode = partialRoadmap.replace(/<code\b[^>]*>[\s\S]*?<\/code>/gi, '');
+  assert.ok(!partialRoadmapOutsideCode.includes('$'), 'escaped title dollar must become fullwidth ＄ in roadmap link so hugo --minify never emits bare $');
+  assert.ok(!partialRoadmapOutsideCode.includes('**'), 'escaped double star must split via <span>*</span>* so hugo --minify never emits **');
+  assert.ok(partialRoadmapOutsideCode.includes('＄100'), 'roadmap link displays fullwidth ＄100 for source-escaped \\$100 heading');
 
   // Mixed resources: primary kept in .primary-resources-list, 3 third-party folded into details.third-party-resources
   assert.match(explicitHtml, /class=["']?primary-resources-list["']?/);

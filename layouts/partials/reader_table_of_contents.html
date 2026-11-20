@@ -17,7 +17,7 @@
           {{- if not (findRE `[\s<>'"\\]` .id 1) -}}
             {{- $openAnchor := printf `<a href="#%s">` .id -}}
             {{- if eq (len (split $toc $openAnchor)) 2 -}}
-              {{- $safeTocRole := replace (printf "%s" .role) "\\" "&#92;" -}}
+              {{- $safeTocRole := replace (replace (replace (replace (printf "%s" .role) "\\" "＼") "$" "＄") "**" "<span>*</span>*") "**" "<span>*</span>*" -}}
               {{- $badge := printf `%s<span class="toc-role-badge">%02d · %s</span> ` $openAnchor .num $safeTocRole -}}
               {{- $toc = replace $toc $openAnchor $badge 1 -}}
             {{- end -}}
