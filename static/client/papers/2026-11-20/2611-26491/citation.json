@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.26491v1",
+  "arxivId": "2611.26491",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.26491v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yunqi Zhao"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Run Peng"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ze Dong"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ryan Lu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yinpei Dai"
+    },
+    {
+      "affiliations": [
+        "University of Michigan"
+      ],
+      "name": "Joyce Chai"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.26491v1",
+  "originalTitle": "FLUID: Flexible, Evidence-Grounded Situated Task Guidance",
+  "pdfUrl": "https://arxiv.org/pdf/2611.26491v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

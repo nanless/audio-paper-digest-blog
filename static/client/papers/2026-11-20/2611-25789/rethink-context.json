@@ -1,0 +1,86 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.25789v1",
+  "abstract": "Large Audio-Language Models (LALMs) excel at diverse audio tasks, yet remain prone to hallucinating sound events absent from the input. Prior work links such hallucinations to insufficient audio attention. However, we find that real and hallucinated events can receive comparable audio attention mass while attending to different audio positions. To examine whether the attended representations support the generated events, we adapt LatentLens to retrieve neighboring contextualized text representations. The retrieved contexts reveal semantic support for real events, but a semantic mismatch between hallucinated events and their attended audio representations. Directly masking the corresponding audio regions can suppress hallucinated events at the cost of real content. We are motivated by these findings to introduce an explainable and training-free detect-then-mitigate framework for effectively hallucination detection and mitigation that aggregates semantic support and applies differential audio masking to protect regions associated with events predicted to be supported. Extensive experiments on three LALMs and two datasets demonstrate that our method significantly improves hallucination detection and hallucination mitigation performance.",
+  "abstractSha256": "59a862bdb2cb5770a40f3d5649c5c6e90ffed9d67ae7da190752fa3e6bf3169b",
+  "arxivId": "2611.25789",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.25789v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "检索增强",
+    "primaryTask": "音频字幕生成",
+    "rankBucket": "前50%",
+    "score": 7.4,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-captioning",
+          "label": "音频字幕生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.retrieval-augmented",
+          "label": "检索增强"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.hallucination-faithfulness",
+          "label": "幻觉与忠实度"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.audio-language",
+          "label": "音频大模型"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "检索增强",
+      "primaryMethodId": "method.retrieval-augmented",
+      "primaryTask": "音频字幕生成",
+      "primaryTaskId": "task.audio-captioning",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Tianyi Sun"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Minghao Lv"
+    },
+    {
+      "affiliations": [
+        "Guangdong OPPO Mobile Telecommunications Corp., Ltd."
+      ],
+      "name": "Chunyang Yu"
+    },
+    {
+      "affiliations": [
+        "Guangdong OPPO Mobile Telecommunications Corp., Ltd."
+      ],
+      "name": "Shenyue Wang"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Mengyue Wu"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文发现真实与幻觉事件可获得相当的音频注意力但关注位置与语义支撑不同，据此提出无需训练的先检测后差分掩蔽框架，在三个模型与两个数据集上提升事件级检测与再生时的幻觉压制，同时尽量保住已支撑内容。",
+  "originalTitle": "From Attention to Semantics: Detecting and Mitigating Sound Event Hallucinations in Large Audio-Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2611.25789v1.pdf",
+  "readerTitle": "注意力相当却语义不符：大音频语言模型的事件幻觉检测与差分掩蔽",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

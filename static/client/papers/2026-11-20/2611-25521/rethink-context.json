@@ -1,0 +1,63 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.25521v1",
+  "abstract": "We present DRVEXO-4B-Unified, a modular multimodal assistant built around a 4B language backbone. A self-contained checkpoint combines text, image, and speech inputs with reference-conditioned speech output and structured interaction. A temporal residual connector adapts acoustic sequences to the language interface; explicit text boundaries support incremental speech synthesis; and three task-conditioned scoring heads rank supplied action candidates alongside generative tool calls. These interfaces connect conversation to application-defined choices while leaving action authorization to the application. The system obtains 74.22% on all 900 MMMU validation questions, exceeding the published validation scores of Gemma 3 4B IT and InternVL3.5-4B without test-time scaling. Strict prompt-level IFEval accuracy is 82.26% and MATH-500 accuracy is 89.40%, above the original Qwen3-4B non-thinking report's 81.2% and 84.8%, respectively. On NVIDIA GB10, the model achieves a speech-synthesis first-chunk latency of 390 ms. For concurrent text generation, a growth-aware admission policy completes a 128-answer batch at 594.41 output tokens/s, including filling and draining, without preemptions. We plan to release the model weights and accompanying code under Apache License 2.0, retaining applicable third-party terms.",
+  "abstractSha256": "f5343a7e46a34a09aa6c5594d0774bff75c4526121ab05b0812ba3af89d83b2d",
+  "arxivId": "2611.25521",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.25521v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "工具增强与约束解码",
+    "primaryTask": "语音对话系统",
+    "rankBucket": "后50%",
+    "score": 5.4,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-dialogue",
+          "label": "语音对话系统"
+        },
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "task",
+          "id": "task.generic-multimodal-qa",
+          "label": "通用多模态问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.tool-augmentation",
+          "label": "工具增强与约束解码"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "工具增强与约束解码",
+      "primaryMethodId": "method.tool-augmentation",
+      "primaryTask": "语音对话系统",
+      "primaryTaskId": "task.speech-dialogue",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Yujie Intelligence",
+        "Hangzhou, China"
+      ],
+      "name": "Zeyuan Li"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "该文把继承来的视觉语言与语音部件用显式接口组装起来，用公开验证集检验问答与排序能力，并用单机实测说明语音首包与长回答吞吐在何种载荷下才成立。",
+  "originalTitle": "DRVEXO-4B-Unified: Design and Evaluation of a Modular Speech-Vision System",
+  "pdfUrl": "https://arxiv.org/pdf/2611.25521v1.pdf",
+  "readerTitle": "把说话、看图和选动作装进一个检查点：DRVEXO-4B-统一系统解读",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

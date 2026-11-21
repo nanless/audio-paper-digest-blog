@@ -1,0 +1,115 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.25835v1",
+  "abstract": "Learning latent states that support future evolution remains an open problem for multimodal interactive systems. Existing approaches typically optimize representations for current semantic understanding or direct prediction, without explicitly defining what information a latent state should preserve to remain predictive of future dynamics. In this work, we investigate this problem through the principle of predictive sufficiency, which defines a predictive state as a latent variable that retains future-relevant information from historical multimodal observations while reducing redundant dependence on the observed history. Based on this principle, we propose Predictively Sufficient Multimodal Social World Modeling (PSM-WM), a framework that jointly learns predictive latent states and their stochastic temporal evolution through probabilistic state inference, event-conditioned transitions, and multi-step consistency optimization. Beyond forecasting performance, we introduce state-centric evaluations to measure whether learned representations satisfy predictive state properties, including predictive closure, residual history gain, and future semantic alignment. Experiments on Hi-EF, IEMOCAP, MELD, and Ego4D show that PSM-WM improves future multimodal interaction modeling and learns latent states with stronger predictive properties and robustness. These results indicate that predictive sufficiency provides an effective principle for constructing future-oriented multimodal states and highlight the importance of state construction in multimodal world modeling.",
+  "abstractSha256": "1870ac392cccf6b525b79c46b9cf0ce4637ee429b9bdb7edcba397fa866a12f4",
+  "arxivId": "2611.25835",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.25835v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "状态空间模型",
+    "primaryTask": "多模态情感极性分析",
+    "rankBucket": "前50%",
+    "score": 5.7,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.multimodal-sentiment",
+          "label": "多模态情感极性分析"
+        },
+        {
+          "facet": "task",
+          "id": "task.video-action-recognition",
+          "label": "视频动作识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.state-space",
+          "label": "状态空间模型"
+        },
+        {
+          "facet": "method",
+          "id": "method.vae",
+          "label": "变分自编码器"
+        },
+        {
+          "facet": "method",
+          "id": "method.uncertainty-estimation",
+          "label": "不确定性估计与校准"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "状态空间模型",
+      "primaryMethodId": "method.state-space",
+      "primaryTask": "多模态情感极性分析",
+      "primaryTaskId": "task.multimodal-sentiment",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Chunlei Meng"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhenyu Yu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Pengbin Feng"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jacqueline J. Pang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jiabin Luo"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Chih-Ting Liao"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhaolu Kang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Chun Ouyang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhongxue Gan"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文针对当前语义相同但未来走向不同的社交交互，以预测充分性约束潜状态保留的未来相关信息，并用概率信念推断与事件条件随机转移实现长程滚出，在三个社交基准与自我中心视频基准上得到更小的预测闭合差距与残余历史增益，但结论只在原文划分与探测条件下才成立。",
+  "originalTitle": "PSM-WSM: Predictively Sufficient Multimodal World Social Modeling",
+  "pdfUrl": "https://arxiv.org/pdf/2611.25835v1.pdf",
+  "readerTitle": "面向未来演化的多模态社交状态如何构造与推进",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

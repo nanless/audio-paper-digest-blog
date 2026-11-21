@@ -1,0 +1,105 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.25773v1",
+  "arxivId": "2611.25773",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.25773v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University",
+        "Tencent"
+      ],
+      "name": "Chiyu Chen"
+    },
+    {
+      "affiliations": [
+        "Shanghai University"
+      ],
+      "name": "Pengzhou Cheng"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Yuezhao Ma"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Xiaocheng Li"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Can Liu"
+    },
+    {
+      "affiliations": [
+        "Tencent"
+      ],
+      "name": "Haonan Hu"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Yao Yao"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Yifei Yang"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Yijie Lu"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Taolei Wang"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Yansi Li"
+    },
+    {
+      "affiliations": [
+        "University of Bristol"
+      ],
+      "name": "Muhuan Wu"
+    },
+    {
+      "affiliations": [
+        "Tencent"
+      ],
+      "name": "Chenglu Sun"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Gongshen Liu"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Zhuosheng Zhang"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.25773v1",
+  "originalTitle": "Duopra: From Full-Duplex Conversation to Full-Duplex Agency",
+  "pdfUrl": "https://arxiv.org/pdf/2611.25773v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

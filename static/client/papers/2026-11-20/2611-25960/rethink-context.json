@@ -1,0 +1,75 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.25960v1",
+  "abstract": "Audio LLMs can know when a queried sound occurs but fail to say it. We find a few attention heads that track the queried sound: they shift when the query changes, follow the sound when it moves, and removing or blocking them often hurts the model's timestamps. Yet the answer does not express what they track. Intervals read directly from these heads outperform the model's original answer and recover events that its timestamps miss. To bring this timing into the answer, we introduce head-guided decoding, which needs no training. It keeps the model's decision on whether the sound is present and rescores its candidate timestamps with a prior from these heads. Heads selected on development data transfer unchanged to new recordings and free-text queries, where head-guided decoding improves the timestamps of three audio LLMs, scores above their head readout on every benchmark, and, in most settings, outperforms random-head guidance. On recordings released after the models were trained, head-guided decoding raises mIoU from 0.07-0.36 to 0.48-0.56. These results suggest that poor temporal answers in audio LLMs partly reflect a failure to say rather than to hear, and that the model's own attention can close part of this gap.",
+  "abstractSha256": "b2f927ab2c7681a1f638cc684935df7f00f4996854e81e5e91459dad726c74c2",
+  "arxivId": "2611.25960",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.25960v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "工具增强与约束解码",
+    "primaryTask": "音频时间定位",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.temporal-grounding",
+          "label": "音频时间定位"
+        },
+        {
+          "facet": "method",
+          "id": "method.tool-augmentation",
+          "label": "工具增强与约束解码"
+        },
+        {
+          "facet": "method",
+          "id": "method.activation-intervention",
+          "label": "激活因果干预"
+        },
+        {
+          "facet": "method",
+          "id": "method.representation-probing",
+          "label": "表示探测"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "工具增强与约束解码",
+      "primaryMethodId": "method.tool-augmentation",
+      "primaryTask": "音频时间定位",
+      "primaryTaskId": "task.temporal-grounding",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jongbhin Woo"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jaewook Jeong"
+    },
+    {
+      "affiliations": [
+        "KAIST",
+        "Equal contribution."
+      ],
+      "name": "Joon Son Chung"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文发现少数跟随查询的注意力头已定位声音却未进入回答，于是用无训练的头部时间图给完整候选区间重新打分，在新住家录音上把区间准确率从低位拉回可用范围，但代价是保留原模型的存在判断且需要注意力与开发集调参。",
+  "originalTitle": "When Sounds Turn Heads: Recovering Event Timing That Audio LLMs Fail to Say",
+  "pdfUrl": "https://arxiv.org/pdf/2611.25960v1.pdf",
+  "readerTitle": "听见却说不出：从注意力头里找回音频大模型漏掉的事件时间",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

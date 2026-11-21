@@ -1,0 +1,86 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.26540v1",
+  "abstract": "Current audio-driven video diffusion models can synthesize realistic talking-head videos but generally require dozens of diffusion denoising steps over multi-second video chunks, making them unsuitable for streaming applications such as voice assistants and virtual avatars, where low-latency and online causal generation are required properties. AURA generates video chunk by chunk with a rolling KV cache, requiring only the audio of the current chunk to start generating, rather than a multi-second audio look-ahead like bidirectional models. It comes in two sizes: AURA 1.3B streams 576p video in real time on a single GPU (20.7 fps for a 16 Hz playback rate), making it suited to interactive avatar applications, and AURA 5B streams 720p video at 9.7 fps. Our two-stage distillation pipeline first aligns the causal student with the teacher, by training it to match the teacher's trajectories with fewer diffusion steps and a chunk-wise sliding window causal attention mask, then applies Distribution Matching Distillation (DMD) with backward simulation to close the remaining quality gap. On standard talking-head benchmarks, AURA 1.3B runs 23x faster than its own bidirectional teacher and reaches a quality comparable to TalkVerse at a lower resolution, and AURA 5B matches its TalkVerse teacher at 720p while running 17x faster. To support reproducibility and further research on streaming avatar generation, we release the weights of both models along with a dataset of 30K synthetic videos and their precomputed teacher trajectories.",
+  "abstractSha256": "850b25be4222514508c29555450540252a1a22aa943feec145b142097bea8913",
+  "arxivId": "2611.26540",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.26540v1",
+  "assessment": {
+    "documentType": "模型报告",
+    "primaryMethod": "知识蒸馏",
+    "primaryTask": "语音驱动人像视频生成",
+    "rankBucket": "前50%",
+    "score": 6.7,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.talking-portrait",
+          "label": "语音驱动人像视频生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "知识蒸馏",
+      "primaryMethodId": "method.distillation",
+      "primaryTask": "语音驱动人像视频生成",
+      "primaryTaskId": "task.talking-portrait",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Nathaniel Cohen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Nicolas Dufour"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Amélie Royer"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Alasdair Newson"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Patrick Pérez"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对语音驱动头像需要随音频到达逐块生成而双向多步扩散太慢的问题，AURA 用分块因果注意力加滚动缓存把教师改为逐块生成，再经轨迹对齐和带反向仿真的分布匹配蒸馏把五十步压缩到四步，在保持质量的同时把吞吐提高一个数量级并实现单卡实时。",
+  "originalTitle": "AURA: AUdio-dRiven streaming Avatar",
+  "pdfUrl": "https://arxiv.org/pdf/2611.26540v1.pdf",
+  "readerTitle": "AURA：把双向说话人视频扩散模型蒸馏成可流式生成的因果少步学生",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

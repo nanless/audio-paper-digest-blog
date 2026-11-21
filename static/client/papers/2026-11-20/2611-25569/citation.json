@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.25569v1",
+  "arxivId": "2611.25569",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.25569v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hui-Peng Du"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yang Ai"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhen-Hua Ling"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.25569v1",
+  "originalTitle": "UMelCodec: An Ultra-Low-Bitrate and Lightweight Mel-Domain Neural Speech Codec",
+  "pdfUrl": "https://arxiv.org/pdf/2611.25569v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.25789v1",
+  "arxivId": "2611.25789",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.25789v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Tianyi Sun"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Minghao Lv"
+    },
+    {
+      "affiliations": [
+        "Guangdong OPPO Mobile Telecommunications Corp., Ltd."
+      ],
+      "name": "Chunyang Yu"
+    },
+    {
+      "affiliations": [
+        "Guangdong OPPO Mobile Telecommunications Corp., Ltd."
+      ],
+      "name": "Shenyue Wang"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Mengyue Wu"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.25789v1",
+  "originalTitle": "From Attention to Semantics: Detecting and Mitigating Sound Event Hallucinations in Large Audio-Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2611.25789v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

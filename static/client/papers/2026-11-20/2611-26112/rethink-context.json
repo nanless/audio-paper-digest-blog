@@ -1,0 +1,98 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.26112v1",
+  "abstract": "Crop raiding and village intrusion by elephants and large felids impose a recurring cost on communities along forest boundaries in southern India, and existing camera-based monitoring has proven difficult to sustain on the power budgets available at such sites. We present ZoionNET, a battery-powered sensing node that detects animal intrusion acoustically rather than visually. Audio from an onboard PDM microphone is sampled at 8 kHz, converted to mel-spectrograms on-device, and classified on an Arm Ethos-U55 microNPU by two int8-quantised YOLOv8 models arranged as a two-state machine: a lightweight always-on model runs in a dormant state and gates a four-class species classifier through exponential-moving-average thresholds, so the heavier model runs only when an intrusion is likely. A digital vibration sensor supplies a complementary seismic channel. Inferences leave the node as JSON over a cellular Notecard, reaching a web dashboard and SMS alerts to forest rangers without any local gateway. The two models reach reported accuracies of 0.974 and 0.946 on held-out audio, and a complete node costs USD 133.57 in parts. We report the system as built and deployed, and identify explicitly what has not yet been measured, most notably the energy behaviour that motivates the two-state design.",
+  "abstractSha256": "74b7d5904df1cecf932d02cf1aa3e96c1f1c43bde459a09aaa90c580910e74c7",
+  "arxivId": "2611.26112",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.26112v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "硬件系统设计与验证",
+    "primaryTask": "音频分类",
+    "rankBucket": "后50%",
+    "score": 5.4,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "application",
+          "id": "application.bioacoustics",
+          "label": "生物声学监测"
+        },
+        {
+          "facet": "method",
+          "id": "method.hardware-system-design",
+          "label": "硬件系统设计与验证"
+        },
+        {
+          "facet": "method",
+          "id": "method.quantization",
+          "label": "模型量化"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "硬件系统设计与验证",
+      "primaryMethodId": "method.hardware-system-design",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Prasanna Vijay"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Adarsh Gupta"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Vansh Panwar"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Vatsalya Singh"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Shubham Singhal"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Anubhav Saha"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Teena Sharma"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对南印度林村交界缺电缺网守不住的兽害预警问题，ZoionNET 用 8 千赫采样转梅尔频谱图加两级八位量化分类实现常开监听与按需细判，并经蜂窝链路直达看板与短信，但省电效果与实地精度尚未实测，单节点零件成本为 133.57 美元。",
+  "originalTitle": "ZoionNET: Low-Power Animal Intrusion Detection Using an Acoustic Deep-Learning Classifier for a Cellular Remote-Sensing System",
+  "pdfUrl": "https://arxiv.org/pdf/2611.26112v1.pdf",
+  "readerTitle": "听声辨兽的低功耗节点：ZoionNET 如何用两级声学分类守住林村边界",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

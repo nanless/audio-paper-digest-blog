@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.25781v1",
+  "abstract": "We present Sonic Palette, a music-driven framework for predicting time-varying color themes from audio. Rather than treating music-to-palette generation as a static problem, our method formulates music--color correspondence as a cross-modal sequence prediction task that models how palette-level visual attributes evolve over time in response to music. Specifically, Sonic Palette uses a music-conditioned autoregressive Transformer to predict frame-wise color themes, each represented by five dominant colors, from input audio features. To support this task, we curate a dataset of paired audio--color sequences derived from 265 full-length official music videos. We further visualize the predicted color themes through a palette-guided recoloring process that preserves image structure while revealing temporally varying color appearance associated with the music. Quantitative results show that Sonic Palette predicts color themes that more closely match the ground truth, while subjective results indicate more natural temporal color transitions and stronger perceived music--color atmosphere alignment, highlighting its potential for music-driven visual design, computational art, and creative visual authoring.",
+  "abstractSha256": "663db46ad5d130bb589c6661e4068a63e6a8df69d4c9f07d4f84cd9f93af44b3",
+  "arxivId": "2611.25781",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.25781v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "自回归模型",
+    "primaryTask": "音频驱动视频生成",
+    "rankBucket": "后50%",
+    "score": 5.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-driven-video",
+          "label": "音频驱动视频生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.autoregressive",
+          "label": "自回归模型"
+        },
+        {
+          "facet": "method",
+          "id": "method.transformer",
+          "label": "Transformer"
+        },
+        {
+          "facet": "method",
+          "id": "method.dataset-curation",
+          "label": "数据集构建"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "自回归模型",
+      "primaryMethodId": "method.autoregressive",
+      "primaryTask": "音频驱动视频生成",
+      "primaryTaskId": "task.audio-driven-video",
+      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Wen-Li Wei"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kenneth Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jen-Chun Lin"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "本文把音乐到配色的映射从单张静态调色板扩展为随时间变化的帧级五色序列，用音乐条件自回归变换器建模色彩演化，并在 265 支官方音乐视频上以更小的预测误差和更自然的主观过渡显示出优势，但结论只在官方视频帧颜色作为真实值时成立。",
+  "originalTitle": "Sonic Palette: Predicting Dynamic Color Themes from Music",
+  "pdfUrl": "https://arxiv.org/pdf/2611.25781v1.pdf",
+  "readerTitle": "音乐如何逐帧决定画面配色：动态色彩主题预测解读",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}
