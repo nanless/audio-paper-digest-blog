@@ -44,7 +44,7 @@ jobs:
           refresh=true
           if [ "$EVENT" = schedule ]; then
             expected="$(git -C portal rev-parse HEAD)"
-            current="$(curl -fsS --retry 2 --max-time 15 https://nanless.github.io/audio-paper-digest-blog/client/details/manifest.json | jq -r 'select(.basePath == "/audio-paper-digest-blog/") | .sourceCommit' || true)"
+            current="$(curl -fsS --retry 2 --max-time 15 https://nanless.github.io/audio-paper-digest-blog/legacy-source.txt || true)"
             if [ "$current" = "$expected" ]; then refresh=false; fi
           fi
           echo "refresh=$refresh" >> "$GITHUB_OUTPUT"
@@ -60,9 +60,20 @@ jobs:
       - name: Build and verify under the legacy base
         if: steps.freshness.outputs.refresh == 'true'
         run: |
+          upstream="$(git -C portal rev-parse HEAD)"
+          timestamp="$(git -C portal show -s --format=%cI HEAD)"
           python3 scripts/legacy_compat.py rebase portal
+          # Use a deterministic build-only commit so the exporter sees a clean
+          # checkout and records the actual input, without weakening its guard.
+          GIT_AUTHOR_DATE="$timestamp" GIT_COMMITTER_DATE="$timestamp" \
+            git -C portal -c user.name="Legacy Pages builder" \
+              -c user.email="pages-builder@users.noreply.github.com" \
+              commit -a -m "Build for legacy Pages URL"
+          test -z "$(git -C portal status --porcelain -uall)"
+          test "$(git -C portal rev-parse HEAD^)" = "$upstream"
           npm --prefix portal run build:verify
           python3 scripts/legacy_compat.py assemble portal/public
+          printf '%s\n' "$upstream" > portal/public/legacy-source.txt
       - uses: actions/upload-pages-artifact@v4
         if: steps.freshness.outputs.refresh == 'true' && github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
         with:
