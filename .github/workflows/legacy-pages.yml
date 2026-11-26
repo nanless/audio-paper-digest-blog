@@ -1,0 +1,94 @@
+name: Legacy RSS and Workbench compatibility
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+  schedule:
+    - cron: '23 2,5,8,11,14,17,20,23 * * *'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: legacy-pages-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 25
+    outputs:
+      refresh: ${{ steps.freshness.outputs.refresh }}
+    env:
+      GOMEMLIMIT: '6GiB'
+      GOMAXPROCS: '4'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          repository: nanless/audio-research-portal
+          ref: main
+          path: portal
+          submodules: recursive
+          persist-credentials: false
+      - name: Skip unchanged scheduled builds
+        id: freshness
+        env:
+          EVENT: ${{ github.event_name }}
+        run: |
+          refresh=true
+          if [ "$EVENT" = schedule ]; then
+            expected="$(git -C portal rev-parse HEAD)"
+            current="$(curl -fsS --retry 2 --max-time 15 https://nanless.github.io/audio-paper-digest-blog/legacy-source.txt || true)"
+            if [ "$current" = "$expected" ]; then refresh=false; fi
+          fi
+          echo "refresh=$refresh" >> "$GITHUB_OUTPUT"
+      - uses: peaceiris/actions-hugo@v3
+        if: steps.freshness.outputs.refresh == 'true'
+        with:
+          hugo-version: '0.160.1'
+          extended: true
+      - uses: actions/setup-node@v4
+        if: steps.freshness.outputs.refresh == 'true'
+        with:
+          node-version: '22'
+      - name: Build and verify under the legacy base
+        if: steps.freshness.outputs.refresh == 'true'
+        run: |
+          upstream="$(git -C portal rev-parse HEAD)"
+          timestamp="$(git -C portal show -s --format=%cI HEAD)"
+          python3 scripts/legacy_compat.py rebase portal
+          # Use a deterministic build-only commit so the exporter sees a clean
+          # checkout and records the actual input, without weakening its guard.
+          GIT_AUTHOR_DATE="$timestamp" GIT_COMMITTER_DATE="$timestamp" \
+            git -C portal -c user.name="Legacy Pages builder" \
+              -c user.email="pages-builder@users.noreply.github.com" \
+              commit -a -m "Build for legacy Pages URL"
+          test -z "$(git -C portal status --porcelain -uall)"
+          test "$(git -C portal rev-parse HEAD^)" = "$upstream"
+          npm --prefix portal run build:verify
+          python3 scripts/legacy_compat.py assemble portal/public
+          printf '%s\n' "$upstream" > portal/public/legacy-source.txt
+      - uses: actions/upload-pages-artifact@v4
+        if: steps.freshness.outputs.refresh == 'true' && github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        with:
+          path: portal/public
+
+  deploy:
+    if: needs.build.outputs.refresh == 'true' && github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-22.04
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/deploy-pages@v5.0.1
+        id: deployment
