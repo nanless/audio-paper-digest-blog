@@ -20,6 +20,8 @@ jobs:
   build:
     runs-on: ubuntu-22.04
     timeout-minutes: 25
+    outputs:
+      refresh: ${{ steps.freshness.outputs.refresh }}
     env:
       GOMEMLIMIT: '6GiB'
       GOMAXPROCS: '4'
@@ -34,25 +36,40 @@ jobs:
           path: portal
           submodules: recursive
           persist-credentials: false
+      - name: Skip unchanged scheduled builds
+        id: freshness
+        env:
+          EVENT: ${{ github.event_name }}
+        run: |
+          refresh=true
+          if [ "$EVENT" = schedule ]; then
+            expected="$(git -C portal rev-parse HEAD)"
+            current="$(curl -fsS --retry 2 --max-time 15 https://nanless.github.io/audio-paper-digest-blog/client/details/manifest.json | jq -r 'select(.basePath == "/audio-paper-digest-blog/") | .sourceCommit' || true)"
+            if [ "$current" = "$expected" ]; then refresh=false; fi
+          fi
+          echo "refresh=$refresh" >> "$GITHUB_OUTPUT"
       - uses: peaceiris/actions-hugo@v3
+        if: steps.freshness.outputs.refresh == 'true'
         with:
           hugo-version: '0.160.1'
           extended: true
       - uses: actions/setup-node@v4
+        if: steps.freshness.outputs.refresh == 'true'
         with:
           node-version: '22'
       - name: Build and verify under the legacy base
+        if: steps.freshness.outputs.refresh == 'true'
         run: |
           python3 scripts/legacy_compat.py rebase portal
           npm --prefix portal run build:verify
           python3 scripts/legacy_compat.py assemble portal/public
       - uses: actions/upload-pages-artifact@v4
-        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        if: steps.freshness.outputs.refresh == 'true' && github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
         with:
           path: portal/public
 
   deploy:
-    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    if: needs.build.outputs.refresh == 'true' && github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
     needs: build
     runs-on: ubuntu-22.04
     permissions:
