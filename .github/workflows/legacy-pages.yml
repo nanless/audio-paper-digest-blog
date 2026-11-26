@@ -1,0 +1,66 @@
+name: Legacy RSS and Workbench compatibility
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+  schedule:
+    - cron: '23 2,5,8,11,14,17,20,23 * * *'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: legacy-pages-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 25
+    env:
+      GOMEMLIMIT: '6GiB'
+      GOMAXPROCS: '4'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          repository: nanless/audio-research-portal
+          ref: main
+          path: portal
+          submodules: recursive
+          persist-credentials: false
+      - uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: '0.160.1'
+          extended: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Build and verify under the legacy base
+        run: |
+          python3 scripts/legacy_compat.py rebase portal
+          npm --prefix portal run build:verify
+          python3 scripts/legacy_compat.py assemble portal/public
+      - uses: actions/upload-pages-artifact@v4
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        with:
+          path: portal/public
+
+  deploy:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-22.04
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/deploy-pages@v5.0.1
+        id: deployment
