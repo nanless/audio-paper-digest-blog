@@ -52,8 +52,8 @@ def verify(public):
     def load(route):
         return json.loads(local(route).read_bytes())
 
-    def checked(entry):
-        raw = local(entry["url"]).read_bytes()
+    def checked(entry, directory=""):
+        raw = local(directory + entry["url"]).read_bytes()
         if len(raw) != entry["bytes"] or hashlib.sha256(raw).hexdigest() != entry["sha256"]:
             raise ValueError(f"Size or digest mismatch: {entry['url']}")
         return json.loads(raw)
@@ -77,11 +77,15 @@ def verify(public):
     search = load("client/index.json")
     if search["contract"] != "paper-search-index-manifest" or search["recordCount"] < 1:
         raise ValueError("Empty or unsupported native search manifest")
-    load("index.json")
+    fallback = load("index.json")
+    if fallback["recordCount"] < 1:
+        raise ValueError("Empty legacy fallback search manifest")
     for group in (snapshot["catalogShards"], snapshot["tombstoneShards"],
-                  snapshot["tagCatalogs"].values(), search["shards"]):
+                  snapshot["tagCatalogs"].values(), fallback["shards"]):
         for entry in group:
             checked(entry)
+    for entry in search["shards"]:
+        checked(entry, "client/")
     print(f"Verified {len(items)} daily RSS items, {snapshot['recordCount']} catalog records, "
           f"{search['recordCount']} search records, and their manifest references")
 
